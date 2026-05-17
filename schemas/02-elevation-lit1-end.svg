@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1055" font-family="-apple-system, Helvetica Neue, Arial, sans-serif">
+<rect width="900" height="1055" fill="#fdfaf3"/>
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><polygon points="0,0 8,4 0,8" fill="#333"/></marker>
+<marker id="arrR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="8,0 0,4 8,8" fill="#333"/></marker>
+<pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#a87a4e" stroke-width="0.8"/></pattern>
+<pattern id="hatchL" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#c79e63" stroke-width="0.6"/></pattern>
+</defs>
+<text x="450.0" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">LIT 1 — Vue d'extrémité (tête ou pied)   ·   Diagonale anti-basculement</text>
+<line x1="65.0" y1="935.0" x2="665.0" y2="935.0" stroke="#888" stroke-width="0.6"/>
+<line x1="70.0" y1="935.0" x2="62.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="82.5" y1="935.0" x2="75.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="95.0" y1="935.0" x2="87.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="107.5" y1="935.0" x2="100.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="120.0" y1="935.0" x2="112.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="132.5" y1="935.0" x2="125.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="145.0" y1="935.0" x2="137.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="157.5" y1="935.0" x2="150.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="170.0" y1="935.0" x2="162.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="182.5" y1="935.0" x2="175.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="195.0" y1="935.0" x2="187.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="207.5" y1="935.0" x2="200.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="220.0" y1="935.0" x2="212.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="232.5" y1="935.0" x2="225.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="245.0" y1="935.0" x2="237.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="257.5" y1="935.0" x2="250.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="270.0" y1="935.0" x2="262.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="282.5" y1="935.0" x2="275.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="295.0" y1="935.0" x2="287.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="307.5" y1="935.0" x2="300.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="320.0" y1="935.0" x2="312.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="332.5" y1="935.0" x2="325.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="345.0" y1="935.0" x2="337.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="357.5" y1="935.0" x2="350.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="370.0" y1="935.0" x2="362.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="382.5" y1="935.0" x2="375.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="395.0" y1="935.0" x2="387.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="407.5" y1="935.0" x2="400.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="420.0" y1="935.0" x2="412.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="432.5" y1="935.0" x2="425.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="445.0" y1="935.0" x2="437.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="457.5" y1="935.0" x2="450.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="470.0" y1="935.0" x2="462.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="482.5" y1="935.0" x2="475.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="495.0" y1="935.0" x2="487.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="507.5" y1="935.0" x2="500.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="520.0" y1="935.0" x2="512.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="532.5" y1="935.0" x2="525.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="545.0" y1="935.0" x2="537.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="557.5" y1="935.0" x2="550.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="570.0" y1="935.0" x2="562.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="582.5" y1="935.0" x2="575.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="595.0" y1="935.0" x2="587.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="607.5" y1="935.0" x2="600.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="620.0" y1="935.0" x2="612.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="632.5" y1="935.0" x2="625.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="645.0" y1="935.0" x2="637.5" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<line x1="657.5" y1="935.0" x2="650.0" y2="943.0" stroke="#aaa" stroke-width="0.4"/>
+<rect x="90.0" y="60.0" width="44.5" height="875.0" fill="#d4a373" stroke="#3a2a18" stroke-width="0.7"/>
+<rect x="595.5" y="60.0" width="44.5" height="875.0" fill="#d4a373" stroke="#3a2a18" stroke-width="0.7"/>
+<rect x="134.5" y="60.0" width="461.0" height="44.5" fill="#dcbb8a" stroke="#3a2a18" stroke-width="0.6"/>
+<rect x="134.5" y="285.0" width="461.0" height="44.5" fill="#dcbb8a" stroke="#3a2a18" stroke-width="0.6"/>
+<rect x="134.5" y="787.75" width="461.0" height="44.5" fill="#dcbb8a" stroke="#3a2a18" stroke-width="0.6"/>
+<line x1="595.5" y1="787.75" x2="134.5" y2="329.5" stroke="#a23a1f" stroke-width="9" stroke-linecap="round" opacity="0.92"/>
+<text x="380.0" y="550.625" text-anchor="start" font-size="10" fill="#8b3010" font-weight="bold">Diagonale 2×4 à plat</text>
+<text x="380.0" y="563.625" text-anchor="start" font-size="9" fill="#8b3010" font-weight="normal">L ≈ 1300 mm (brut, ajuster)</text>
+<text x="380.0" y="575.625" text-anchor="start" font-size="9" fill="#8b3010" font-weight="normal">vissée + collée aux 4 contacts</text>
+<rect x="168.45" y="104.5" width="13.5" height="180.5" fill="#e8c9a5" stroke="#a87a4e" stroke-width="0.3"/>
+<rect x="215.9" y="104.5" width="13.5" height="180.5" fill="#e8c9a5" stroke="#a87a4e" stroke-width="0.3"/>
+<rect x="263.35" y="104.5" width="13.5" height="180.5" fill="#e8c9a5" stroke="#a87a4e" stroke-width="0.3"/>
+<rect x="310.8" y="104.5" width="13.5" height="180.5" fill="#e8c9a5" stroke="#a87a4e" stroke-width="0.3"/>
+<rect x="358.25" y="104.5" width="13.5" height="180.5" fill="#e8c9a5" stroke="#a87a4e" stroke-width="0.3"/>
+<rect x="405.70000000000005" y="104.5" width="13.5" height="180.5" fill="#e8c9a5" stroke="#a87a4e" stroke-width="0.3"/>
+<rect x="453.15000000000003" y="104.5" width="13.5" height="180.5" fill="#e8c9a5" stroke="#a87a4e" stroke-width="0.3"/>
+<rect x="500.6" y="104.5" width="13.5" height="180.5" fill="#e8c9a5" stroke="#a87a4e" stroke-width="0.3"/>
+<rect x="548.05" y="104.5" width="13.5" height="180.5" fill="#e8c9a5" stroke="#a87a4e" stroke-width="0.3"/>
+<line x1="90.0" y1="970.0" x2="640.0" y2="970.0" stroke="#333" stroke-width="0.6" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<line x1="90.0" y1="966.0" x2="90.0" y2="974.0" stroke="#333" stroke-width="0.6"/>
+<line x1="640.0" y1="966.0" x2="640.0" y2="974.0" stroke="#333" stroke-width="0.6"/>
+<text x="365.0" y="966.0" text-anchor="middle" font-size="9" fill="#333">1100 (profondeur)</text>
+<line x1="690.0" y1="60.0" x2="690.0" y2="935.0" stroke="#333" stroke-width="0.6" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<line x1="686.0" y1="60.0" x2="694.0" y2="60.0" stroke="#333" stroke-width="0.6"/>
+<line x1="686.0" y1="935.0" x2="694.0" y2="935.0" stroke="#333" stroke-width="0.6"/>
+<text x="686.0" y="500.5" text-anchor="end" font-size="9" fill="#333">1750</text>
+<line x1="745.0" y1="285.0" x2="745.0" y2="935.0" stroke="#333" stroke-width="0.6" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<line x1="741.0" y1="285.0" x2="749.0" y2="285.0" stroke="#333" stroke-width="0.6"/>
+<line x1="741.0" y1="935.0" x2="749.0" y2="935.0" stroke="#333" stroke-width="0.6"/>
+<text x="741.0" y="613.0" text-anchor="end" font-size="9" fill="#333">1300 (sommier)</text>
+<line x1="745.0" y1="60.0" x2="745.0" y2="285.0" stroke="#333" stroke-width="0.6" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<line x1="741.0" y1="60.0" x2="749.0" y2="60.0" stroke="#333" stroke-width="0.6"/>
+<line x1="741.0" y1="285.0" x2="749.0" y2="285.0" stroke="#333" stroke-width="0.6"/>
+<text x="741.0" y="175.5" text-anchor="end" font-size="9" fill="#333">450</text>
+<line x1="690.0" y1="787.75" x2="690.0" y2="935.0" stroke="#333" stroke-width="0.6" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<line x1="686.0" y1="787.75" x2="694.0" y2="787.75" stroke="#333" stroke-width="0.6"/>
+<line x1="686.0" y1="935.0" x2="694.0" y2="935.0" stroke="#333" stroke-width="0.6"/>
+<text x="694.0" y="864.375" text-anchor="start" font-size="9" fill="#333">294</text>
+<line x1="75.0" y1="810.0" x2="87.5" y2="810.0" stroke="#888" stroke-width="0.5"/>
+<text x="74.0" y="813.0" text-anchor="end" font-size="8" fill="#666" font-weight="normal">traverse basse 250</text>
+<line x1="75.0" y1="285.0" x2="87.5" y2="285.0" stroke="#888" stroke-width="0.5"/>
+<text x="74.0" y="288.0" text-anchor="end" font-size="8" fill="#666" font-weight="normal">sommier 1300</text>
+<line x1="75.0" y1="60.0" x2="87.5" y2="60.0" stroke="#888" stroke-width="0.5"/>
+<text x="74.0" y="63.0" text-anchor="end" font-size="8" fill="#666" font-weight="normal">haut 1750</text>
+<line x1="112.25" y1="110.0" x2="112.25" y2="85.0" stroke="#666" stroke-width="0.4" stroke-dasharray="2,2"/>
+<circle cx="112.25" cy="85.0" r="1.5" fill="#444"/>
+<text x="112.25" y="98.0" text-anchor="middle" font-size="8" fill="#222" font-weight="bold">Montant 76×89</text>
+<line x1="365.0" y1="82.25" x2="375.0" y2="30.0" stroke="#666" stroke-width="0.4" stroke-dasharray="2,2"/>
+<circle cx="375.0" cy="30.0" r="1.5" fill="#444"/>
+<text x="377.0" y="30.0" text-anchor="start" font-size="8" fill="#222" font-weight="bold">Traverse haute (cadre fermé)</text>
+<line x1="365.0" y1="307.25" x2="375.0" y2="260.0" stroke="#666" stroke-width="0.4" stroke-dasharray="2,2"/>
+<circle cx="375.0" cy="260.0" r="1.5" fill="#444"/>
+<text x="377.0" y="260.0" text-anchor="start" font-size="8" fill="#222" font-weight="bold">Traverse sommier</text>
+<line x1="365.0" y1="787.75" x2="375.0" y2="805.75" stroke="#666" stroke-width="0.4" stroke-dasharray="2,2"/>
+<circle cx="375.0" cy="805.75" r="1.5" fill="#444"/>
+<text x="377.0" y="809.75" text-anchor="start" font-size="8" fill="#222" font-weight="bold">Traverse basse (Z=250)</text>
+</svg>

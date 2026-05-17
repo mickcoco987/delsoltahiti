@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="-apple-system, Helvetica Neue, Arial, sans-serif">
+<rect width="720" height="420" fill="#fdfaf3"/>
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><polygon points="0,0 8,4 0,8" fill="#333"/></marker>
+<marker id="arrR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="8,0 0,4 8,8" fill="#333"/></marker>
+<pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#a87a4e" stroke-width="0.8"/></pattern>
+<pattern id="hatchL" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#c79e63" stroke-width="0.6"/></pattern>
+</defs>
+<text x="360.0" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">Détail — Connexion boulon traversant M8 + écrou barillet</text>
+<rect x="8.799999999999997" y="139.2" width="142.4" height="121.60000000000001" fill="url(#hatch)" stroke="#3a2a18" stroke-width="1"/>
+<rect x="8.799999999999997" y="139.2" width="142.4" height="121.60000000000001" fill="#d4a373" stroke="#3a2a18" stroke-width="1" opacity="0.4"/>
+<text x="80" y="131.2" text-anchor="middle" font-size="10" fill="#222" font-weight="bold">Montant (section horizontale)</text>
+<text x="80" y="278.8" text-anchor="middle" font-size="9" fill="#666" font-weight="normal">76 × 89 mm</text>
+<circle cx="80" cy="200" r="7.2" fill="#fdfaf3" stroke="#3a2a18" stroke-width="0.8"/>
+<path d="M 7.799999999999997 180.0 L 21.599999999999998 180.0 L 21.599999999999998 220.0 L 7.799999999999997 220.0 Z" fill="#fdfaf3" stroke="#3a2a18" stroke-width="0.8"/>
+<line x1="-11.200000000000003" y1="180.0" x2="-11.200000000000003" y2="220.0" stroke="#333" stroke-width="0.6" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<line x1="-15.200000000000003" y1="180.0" x2="-7.200000000000003" y2="180.0" stroke="#333" stroke-width="0.6"/>
+<line x1="-15.200000000000003" y1="220.0" x2="-7.200000000000003" y2="220.0" stroke="#333" stroke-width="0.6"/>
+<text x="-13.200000000000003" y="203.0" text-anchor="end" font-size="9" fill="#333">Ø25 lamage</text>
+<rect x="168.39999999999998" y="190.4" width="12.8" height="19.200000000000003" fill="#888" stroke="#222" stroke-width="0.5"/>
+<text x="174.79999999999998" y="186.4" text-anchor="middle" font-size="8" fill="#444" font-weight="normal">tête bombée 6 pans creux</text>
+<rect x="181.2" y="185.6" width="2.4000000000000004" height="28.8" fill="#aaa" stroke="#222" stroke-width="0.4"/>
+<text x="182.79999999999998" y="224.4" text-anchor="middle" font-size="8" fill="#444" font-weight="normal">rondelle</text>
+<rect x="183.6" y="193.6" width="160.0" height="12.8" fill="#bbb" stroke="#222" stroke-width="0.5"/>
+<line x1="183" y1="193.6" x2="186" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="188" y1="193.6" x2="191" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="193" y1="193.6" x2="196" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="198" y1="193.6" x2="201" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="203" y1="193.6" x2="206" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="208" y1="193.6" x2="211" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="213" y1="193.6" x2="216" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="218" y1="193.6" x2="221" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="223" y1="193.6" x2="226" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="228" y1="193.6" x2="231" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="233" y1="193.6" x2="236" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="238" y1="193.6" x2="241" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="243" y1="193.6" x2="246" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="248" y1="193.6" x2="251" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="253" y1="193.6" x2="256" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="258" y1="193.6" x2="261" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="263" y1="193.6" x2="266" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="268" y1="193.6" x2="271" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="273" y1="193.6" x2="276" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="278" y1="193.6" x2="281" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="283" y1="193.6" x2="286" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="288" y1="193.6" x2="291" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="293" y1="193.6" x2="296" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="298" y1="193.6" x2="301" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="303" y1="193.6" x2="306" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="308" y1="193.6" x2="311" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="313" y1="193.6" x2="316" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="318" y1="193.6" x2="321" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="323" y1="193.6" x2="326" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="328" y1="193.6" x2="331" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="333" y1="193.6" x2="336" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<line x1="338" y1="193.6" x2="341" y2="206.4" stroke="#666" stroke-width="0.3"/>
+<text x="263.6" y="220.4" text-anchor="middle" font-size="9" fill="#222" font-weight="bold">tige filetée M8 × 100</text>
+<rect x="263.6" y="169.6" width="320.0" height="60.800000000000004" fill="url(#hatchL)" stroke="#3a2a18" stroke-width="1"/>
+<rect x="263.6" y="169.6" width="320.0" height="60.800000000000004" fill="#dcbb8a" stroke="#3a2a18" stroke-width="1" opacity="0.4"/>
+<text x="423.6" y="161.6" text-anchor="middle" font-size="10" fill="#222" font-weight="bold">Longeron 2×4 (section partielle)</text>
+<text x="423.6" y="248.4" text-anchor="middle" font-size="9" fill="#666" font-weight="normal">38 × 89 mm</text>
+<circle cx="303.6" cy="200" r="10.4" fill="#666" stroke="#222" stroke-width="0.6"/>
+<text x="303.6" y="203" text-anchor="middle" font-size="8" fill="white">Ø13</text>
+<line x1="263.6" y1="265.4" x2="303.6" y2="265.4" stroke="#333" stroke-width="0.6" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<line x1="263.6" y1="261.4" x2="263.6" y2="269.4" stroke="#333" stroke-width="0.6"/>
+<line x1="303.6" y1="261.4" x2="303.6" y2="269.4" stroke="#333" stroke-width="0.6"/>
+<text x="283.6" y="261.4" text-anchor="middle" font-size="9" fill="#333">25 mm</text>
+<circle cx="460" cy="350" r="39" fill="#888" stroke="#222" stroke-width="1.5"/>
+<rect x="421" y="345.5" width="78" height="9" fill="#222"/>
+<text x="460" y="407" text-anchor="middle" font-size="9" font-weight="bold" fill="#222">Écrou barillet (filetage M8 transversal)</text>
+<text x="460" y="303" text-anchor="middle" font-size="9" fill="#444" font-weight="normal">Ø13 × 14 mm</text>
+<line x1="303.6" y1="200" x2="421" y2="350" stroke="#888" stroke-width="0.5" stroke-dasharray="3,2"/>
+<line x1="263.6" y1="200" x2="311.0" y2="200" stroke="#fdfaf3" stroke-width="5"/>
+<line x1="263.6" y1="200" x2="311.0" y2="200" stroke="#222" stroke-width="0.5" stroke-dasharray="2,2"/>
+<text x="40" y="360" text-anchor="start" font-size="9" fill="#333" font-weight="normal">1. Percer Ø9 traversant le montant (depuis l'extérieur).  2. Percer Ø9 en bout du longeron, axé.</text>
+<text x="40" y="374" text-anchor="start" font-size="9" fill="#333" font-weight="normal">3. Percer Ø13 transversal dans le longeron, à 25 mm du bout, coupant l'axe du Ø9.</text>
+<text x="40" y="388" text-anchor="start" font-size="9" fill="#333" font-weight="normal">4. Insérer le barillet (fente alignée avec l'axe du boulon).  5. Engager le boulon + rondelle, serrer à la clé 13.</text>
+</svg>

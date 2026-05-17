@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="-apple-system, Helvetica Neue, Arial, sans-serif">
+<rect width="760" height="440" fill="#fdfaf3"/>
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><polygon points="0,0 8,4 0,8" fill="#333"/></marker>
+<marker id="arrR" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><polygon points="8,0 0,4 8,8" fill="#333"/></marker>
+<pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#a87a4e" stroke-width="0.8"/></pattern>
+<pattern id="hatchL" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#c79e63" stroke-width="0.6"/></pattern>
+</defs>
+<text x="380.0" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">Détail — Coupe transversale du sommier (longeron + tasseau + latte)</text>
+<rect x="245.8" y="189.89999999999998" width="68.4" height="160.20000000000002" fill="#d4a373" stroke="#3a2a18" stroke-width="1.2"/>
+<line x1="227.8" y1="189.89999999999998" x2="227.8" y2="350.1" stroke="#333" stroke-width="0.6" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<line x1="223.8" y1="189.89999999999998" x2="231.8" y2="189.89999999999998" stroke="#333" stroke-width="0.6"/>
+<line x1="223.8" y1="350.1" x2="231.8" y2="350.1" stroke="#333" stroke-width="0.6"/>
+<text x="223.8" y="273.0" text-anchor="end" font-size="9" fill="#333">89</text>
+<line x1="245.8" y1="380.1" x2="314.20000000000005" y2="380.1" stroke="#333" stroke-width="0.6" marker-start="url(#arrR)" marker-end="url(#arr)"/>
+<line x1="245.8" y1="376.1" x2="245.8" y2="384.1" stroke="#333" stroke-width="0.6"/>
+<line x1="314.20000000000005" y1="376.1" x2="314.20000000000005" y2="384.1" stroke="#333" stroke-width="0.6"/>
+<text x="280.0" y="376.1" text-anchor="middle" font-size="9" fill="#333">38</text>
+<rect x="314.20000000000005" y="224.09999999999997" width="34.2" height="77.4" fill="#dcbb8a" stroke="#3a2a18" stroke-width="0.8"/>
+<rect x="314.20000000000005" y="189.89999999999998" width="160.20000000000002" height="34.2" fill="#efd9b4" stroke="#3a2a18" stroke-width="0.8"/>
+<line x1="344.20000000000005" y1="186.89999999999998" x2="344.20000000000005" y2="297.5" stroke="#444" stroke-width="0.8"/>
+<polygon points="341.20000000000005,186.89999999999998 347.20000000000005,186.89999999999998 344.20000000000005,192.89999999999998" fill="#444"/>
+<line x1="349.30000000000007" y1="262.79999999999995" x2="310.20000000000005" y2="262.79999999999995" stroke="#444" stroke-width="0.8"/>
+<rect x="334.20000000000005" y="81.89999999999998" width="130.20000000000005" height="108.0" fill="#f5e8d3" stroke="#c79e63" stroke-width="0.6"/>
+<line x1="334.20000000000005" y1="81.89999999999998" x2="344.20000000000005" y2="85.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="89.89999999999998" x2="344.20000000000005" y2="93.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="97.89999999999998" x2="344.20000000000005" y2="101.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="105.89999999999998" x2="344.20000000000005" y2="109.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="113.89999999999998" x2="344.20000000000005" y2="117.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="121.89999999999998" x2="344.20000000000005" y2="125.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="129.89999999999998" x2="344.20000000000005" y2="133.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="137.89999999999998" x2="344.20000000000005" y2="141.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="145.89999999999998" x2="344.20000000000005" y2="149.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="153.89999999999998" x2="344.20000000000005" y2="157.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="161.89999999999998" x2="344.20000000000005" y2="165.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="169.89999999999998" x2="344.20000000000005" y2="173.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="177.89999999999998" x2="344.20000000000005" y2="181.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<line x1="334.20000000000005" y1="185.89999999999998" x2="344.20000000000005" y2="189.89999999999998" stroke="#c79e63" stroke-width="0.4"/>
+<text x="399.30000000000007" y="138.89999999999998" text-anchor="middle" font-size="9" fill="#a87a4e" font-weight="bold">Matelas (90×190)</text>
+<text x="399.30000000000007" y="76.89999999999998" text-anchor="middle" font-size="8" fill="#a87a4e" font-weight="normal">(ép. max 150 mm)</text>
+<line x1="50" y1="189.89999999999998" x2="225.8" y2="189.89999999999998" stroke="#3a5810" stroke-width="0.4" stroke-dasharray="3,2"/>
+<text x="55" y="185.89999999999998" text-anchor="start" font-size="9" fill="#3a5810" font-weight="normal">Z = 1300 (Lit 1) ou Z = 1500 (Lit 2) — top des lattes</text>
+<line x1="394.30000000000007" y1="206.99999999999997" x2="499.4000000000001" y2="100" stroke="#666" stroke-width="0.4" stroke-dasharray="2,2"/>
+<circle cx="499.4000000000001" cy="100" r="1.5" fill="#444"/>
+<text x="504.4000000000001" y="103" text-anchor="start" font-size="10" fill="#222" font-weight="bold">Latte 1×4 (19 × 89)</text>
+<text x="504.4000000000001" y="116" text-anchor="start" font-size="9" fill="#666" font-weight="normal">espacement 40 mm entre lattes</text>
+<text x="504.4000000000001" y="128" text-anchor="start" font-size="9" fill="#666" font-weight="normal">vissée sur tasseau (2 vis 4×40)</text>
+<line x1="331.30000000000007" y1="262.79999999999995" x2="499.4000000000001" y2="170" stroke="#666" stroke-width="0.4" stroke-dasharray="2,2"/>
+<circle cx="499.4000000000001" cy="170" r="1.5" fill="#444"/>
+<text x="504.4000000000001" y="173" text-anchor="start" font-size="10" fill="#222" font-weight="bold">Tasseau 19 × 43</text>
+<text x="504.4000000000001" y="186" text-anchor="start" font-size="9" fill="#666" font-weight="normal">(refente 1×4 en 2)</text>
+<text x="504.4000000000001" y="198" text-anchor="start" font-size="9" fill="#666" font-weight="normal">vissé inside longeron / 20 cm</text>
+<line x1="280.0" y1="270" x2="499.4000000000001" y2="250" stroke="#666" stroke-width="0.4" stroke-dasharray="2,2"/>
+<circle cx="499.4000000000001" cy="250" r="1.5" fill="#444"/>
+<text x="504.4000000000001" y="253" text-anchor="start" font-size="10" fill="#222" font-weight="bold">Longeron 2×4 sur chant</text>
+<text x="504.4000000000001" y="266" text-anchor="start" font-size="9" fill="#666" font-weight="normal">38 × 89 mm, longueur 1928</text>
+<text x="60" y="372" text-anchor="start" font-size="10" fill="#444" font-weight="bold">Tasseau vu de côté (longueur 1928 mm) :</text>
+<rect x="60" y="380" width="200" height="14" fill="#dcbb8a" stroke="#3a2a18" stroke-width="0.6"/>
+<circle cx="75" cy="387" r="1.5" fill="#444"/>
+<circle cx="97" cy="387" r="1.5" fill="#444"/>
+<circle cx="119" cy="387" r="1.5" fill="#444"/>
+<circle cx="141" cy="387" r="1.5" fill="#444"/>
+<circle cx="163" cy="387" r="1.5" fill="#444"/>
+<circle cx="185" cy="387" r="1.5" fill="#444"/>
+<circle cx="207" cy="387" r="1.5" fill="#444"/>
+<circle cx="229" cy="387" r="1.5" fill="#444"/>
+<circle cx="251" cy="387" r="1.5" fill="#444"/>
+<text x="280" y="391" text-anchor="start" font-size="9" fill="#666" font-weight="normal">vis 4×40 tous les 20 cm dans le longeron</text>
+</svg>

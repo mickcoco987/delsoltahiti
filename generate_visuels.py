@@ -137,7 +137,7 @@ def build_bed(ox, oy, height, sommier, with_desk=False, label="Lit"):
     # 5. Balusters on BACK side (between Z_S and z_top_bot)
     # 27 mm wide balusters, gap ~70 mm
     bal_w = 27
-    n_bal = 11
+    n_bal = 20
     avail = W - 2 * POST_X
     gap_b = (avail - n_bal * bal_w) / (n_bal + 1)
     for i in range(n_bal):
@@ -145,8 +145,9 @@ def build_bed(ox, oy, height, sommier, with_desk=False, label="Lit"):
         parts += box(xs, D - POST_Y - 19, Z_S, xs + bal_w, D - POST_Y, z_top_bot, ox, oy, palette="pin-l")
 
     # 6. Balusters at head and foot (between low rail and top rail), for safety
-    for i in range(5):
-        gap_h = (D - 2 * POST_Y - 5 * bal_w) / 6
+    n_bb = 9
+    for i in range(n_bb):
+        gap_h = (D - 2 * POST_Y - n_bb * bal_w) / (n_bb + 1)
         ys = POST_Y + gap_h * (i + 1) + bal_w * i
         # Left end balusters
         parts += box(POST_X - 38, ys, z_low + RAIL_H/2, POST_X, ys + bal_w, z_top_bot, ox, oy, palette="pin-l")

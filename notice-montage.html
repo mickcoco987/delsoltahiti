@@ -124,6 +124,30 @@
   .check { color: #3a5810; font-weight: 600; }
   .meta { color: #777; font-size: 9pt; }
   .pagebreak { page-break-before: always; }
+  .schema {
+    text-align: center;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+  }
+  .schema img {
+    max-width: 100%;
+    height: auto;
+    border: 0.5pt solid #ddd;
+    border-radius: 3pt;
+  }
+  .schema .caption {
+    font-size: 9pt;
+    color: #777;
+    margin-top: 3pt;
+    font-style: italic;
+  }
+  .schema-row {
+    display: flex;
+    gap: 8pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+  }
+  .schema-row .schema { flex: 1; margin: 0; }
   .toc { font-size: 10pt; }
   .toc li { list-style: none; margin: 3pt 0; }
   .toc .tnum { display: inline-block; width: 20pt; color: #888; }
@@ -214,6 +238,11 @@
   Ce n'est pas une marge de confort, c'est de la statique. Le LIT 2 bénéficie en bonus du <strong>bloc bureau + étagères</strong> sur sa face arrière qui agit comme un raidisseur supplémentaire — mais ne dispense pas des éléments A, B, C.
 </div>
 
+<div class="schema">
+  <img src="schemas/02-elevation-lit1-end.png" alt="Vue d'extrémité avec diagonale anti-basculement"/>
+  <div class="caption">Schéma 1 — Le cadre fermé tête/pied (Lit 1) : montants doublés + 3 traverses + diagonale rouge à plat. La diagonale est l'élément structurel central.</div>
+</div>
+
 <h2>4. Préparation des bois (refente du 1×4)</h2>
 <p>Plusieurs pièces sont obtenues en <strong>refendant</strong> (sciage longitudinal) le 1×4 (89 mm de large) à la scie sur table ou à la scie circulaire guidée :</p>
 <table>
@@ -225,6 +254,16 @@
 
 <h2>5. LIT 1 — Liste de débit</h2>
 <p class="meta">Dimensions externes : 2080 × 1100 × 1750 mm. Sous-sommier 1300 mm. Couchage 90 × 190 mm.</p>
+
+<div class="schema">
+  <img src="schemas/01-elevation-lit1-face.png" alt="Vue de face Lit 1"/>
+  <div class="caption">Schéma 2 — Vue de face cotée du Lit 1 (côté garde-corps, avec échelle).</div>
+</div>
+
+<div class="schema">
+  <img src="schemas/10-plan-sommier.png" alt="Plan du sommier"/>
+  <div class="caption">Schéma 3 — Plan du sommier vu de dessus : montants, longerons, traverses, tasseaux et lattes.</div>
+</div>
 
 <h3>5.1 Pièces en 2×4 (38 × 89)</h3>
 <table>
@@ -244,12 +283,12 @@
 <tr><th>Repère</th><th>Désignation</th><th class="num">Qté</th><th class="num">Long. (mm)</th><th>Observations</th></tr>
 <tr><td>La</td><td>Lattes sommier</td><td class="num">14</td><td class="num">922</td><td>Posées chant, vissées sur tasseaux</td></tr>
 <tr><td>Ta</td><td>Tasseaux supports lattes (refendre 1×4 en 2)</td><td class="num">2</td><td class="num">1928</td><td>19 × 43 mm. Vissés à l'intérieur des longerons L1, top affleurant à Z=1300 - 32</td></tr>
-<tr><td>Ba</td><td>Balustres arrière (refendre 1×4 en 3)</td><td class="num">11</td><td class="num">361</td><td>19 × 27 mm. Entre L1 (haut) et L2 (bas), espacement ≤ 75 mm</td></tr>
-<tr><td>Bb</td><td>Balustres tête + pied (refendre 1×4 en 3)</td><td class="num">10</td><td class="num">1367</td><td>5 par extrémité. Entre T0 (haut) et T2 (bas)</td></tr>
+<tr><td>Ba</td><td>Balustres arrière (refendre 1×4 en 3)</td><td class="num">20</td><td class="num">361</td><td>19 × 27 mm. Entre L1 (haut) et L2 (bas), gap final 66 mm (&lt; 75 mm — norme)</td></tr>
+<tr><td>Bb</td><td>Balustres tête + pied (refendre 1×4 en 3)</td><td class="num">18</td><td class="num">1367</td><td>9 par extrémité. Entre T0 (haut) et T2 (bas), gap 68 mm</td></tr>
 <tr><td>Ec</td><td>Limons échelle</td><td class="num">2</td><td class="num">1400</td><td>Coupes biaises 75° en haut et en bas</td></tr>
 <tr><td>Eb</td><td>Barreaux échelle</td><td class="num">5</td><td class="num">320</td><td>Embrevés dans entailles 10 mm dans les limons</td></tr>
 </table>
-<p class="meta">Sous-total 1×4 : ~27 m linéaires. Acheter <strong>~32 m</strong>.</p>
+<p class="meta">Sous-total 1×4 : <strong>~37 m linéaires</strong> (lattes 13 m + tasseaux 4 m + balustres arrière 2,5 m de 1×4 entier (refente en 3) + balustres tête/pied 8,2 m de 1×4 entier + échelle 4,4 m). Acheter <strong>~45 m</strong> pour les chutes.</p>
 
 <h3>5.3 Pièces en 1×8 (19 × 184)</h3>
 <p>Aucune pour le LIT 1.</p>
@@ -257,6 +296,11 @@
 <div class="pagebreak"></div>
 
 <h2>6. LIT 1 — Étapes de montage</h2>
+
+<div class="schema">
+  <img src="schemas/05-detail-montant.png" alt="Détail montant doublé"/>
+  <div class="caption">Schéma 4 — Section horizontale du montant doublé : 2 lamelles 2×4 collées face contre face.</div>
+</div>
 
 <div class="step">
   <div class="step-title"><span class="step-num">1</span> Collage des 4 montants</div>
@@ -269,6 +313,11 @@
     <li><strong>Laisser sécher 12 h</strong> avant manipulation lourde.</li>
     <li>Une fois sec, raboter / poncer les arêtes pour égaliser le bloc.</li>
   </ul>
+</div>
+
+<div class="schema">
+  <img src="schemas/06-detail-barillet.png" alt="Détail connexion barillet"/>
+  <div class="caption">Schéma 5 — Connexion boulon traversant M8 + écrou barillet : la liaison démontable standard des lits superposés.</div>
 </div>
 
 <div class="step">
@@ -315,6 +364,11 @@
   </ul>
 </div>
 
+<div class="schema">
+  <img src="schemas/07-detail-sommier.png" alt="Coupe transversale sommier"/>
+  <div class="caption">Schéma 6 — Coupe transversale du sommier : longeron + tasseau + latte + matelas.</div>
+</div>
+
 <div class="step">
   <div class="step-title"><span class="step-num">6</span> Pose des tasseaux et lattes</div>
   <ul>
@@ -327,10 +381,15 @@
 <div class="step">
   <div class="step-title"><span class="step-num">7</span> Pose des balustres</div>
   <ul>
-    <li><strong>Côté arrière (long) :</strong> 11 balustres Ba verticaux entre L1 (top) et L2 (bottom). Tracer les espacements (~70 mm centre à centre). Visser/clouer en haut et en bas.</li>
-    <li><strong>Tête et pied :</strong> 5 balustres Bb par extrémité, entre T0 (top) et T2 (bottom), espacement ≤ 75 mm.</li>
+    <li><strong>Côté arrière (long) :</strong> 20 balustres Ba verticaux entre L1 (top) et L2 (bottom). Tracer les espacements à 96 mm centre à centre (gap 66 mm). Visser/clouer en haut et en bas.</li>
+    <li><strong>Tête et pied :</strong> 9 balustres Bb par extrémité, entre T0 (top) et T2 (bottom), espacement 96 mm c/c (gap 68 mm — &lt; 75 mm).</li>
     <li>Vérifier au passage : <strong>aucune ouverture &gt; 75 mm</strong> sur tout le périmètre haut.</li>
   </ul>
+</div>
+
+<div class="schema">
+  <img src="schemas/09-detail-echelle.png" alt="Détail échelle"/>
+  <div class="caption">Schéma 7 — Échelle : limons inclinés à 78°, barreaux 1×4 embrevés dans entailles 19 × 10 mm.</div>
 </div>
 
 <div class="step">
@@ -354,6 +413,16 @@
 <h2>7. LIT 2 — Liste de débit (delta vs Lit 1)</h2>
 <p class="meta">Dimensions externes : 2080 × 1100 × 1950 mm. Sous-sommier 1500 mm. Couchage 90 × 190 mm. Bureau intégré sous le lit.</p>
 
+<div class="schema">
+  <img src="schemas/03-elevation-lit2-face.png" alt="Vue de face Lit 2"/>
+  <div class="caption">Schéma 8 — Vue de face cotée du Lit 2 : sommier à 1500, plan de travail à 680, étagères à 1050 et 1300.</div>
+</div>
+
+<div class="schema">
+  <img src="schemas/04-elevation-lit2-end.png" alt="Vue d'extrémité Lit 2"/>
+  <div class="caption">Schéma 9 — Vue d'extrémité du Lit 2 : même principe que Lit 1, diagonale plus longue (~1500 mm).</div>
+</div>
+
 <h3>7.1 Pièces en 2×4 — modifications</h3>
 <table>
 <tr><th>Repère</th><th>Désignation</th><th class="num">Qté</th><th class="num">Long. (mm)</th><th>Observations</th></tr>
@@ -365,8 +434,8 @@
 <h3>7.2 Pièces en 1×4 — identiques au Lit 1 sauf :</h3>
 <table>
 <tr><th>Repère</th><th>Désignation</th><th class="num">Qté</th><th class="num">Long. (mm)</th><th>Observations</th></tr>
-<tr><td>Ba'</td><td>Balustres arrière (entre L1 top Z=1500 et L2 bottom Z=1861)</td><td class="num">11</td><td class="num">361</td><td>Identique</td></tr>
-<tr><td>Bb'</td><td>Balustres tête + pied</td><td class="num">10</td><td class="num">1567</td><td>200 mm de plus que Lit 1</td></tr>
+<tr><td>Ba'</td><td>Balustres arrière (entre L1 top Z=1500 et L2 bottom Z=1861)</td><td class="num">20</td><td class="num">361</td><td>Identique au Lit 1</td></tr>
+<tr><td>Bb'</td><td>Balustres tête + pied</td><td class="num">18</td><td class="num">1567</td><td>200 mm de plus que Lit 1, 9 par extrémité</td></tr>
 <tr><td>Ec'</td><td>Limons échelle</td><td class="num">2</td><td class="num">1600</td><td>Pour atteindre Z=1500</td></tr>
 <tr><td>Eb'</td><td>Barreaux échelle</td><td class="num">6</td><td class="num">320</td><td>1 barreau de plus</td></tr>
 <tr><td>Ts</td><td>Tasseaux supports d'étagères + plan travail (refendre 1×4 en 2)</td><td class="num">8</td><td class="num">~200</td><td>4 tasseaux courts par étagère, fixés sur les montants</td></tr>
@@ -382,6 +451,11 @@
 
 <h2>8. LIT 2 — Étapes de montage</h2>
 <p>Identique aux étapes 1 à 7 du Lit 1 (avec les longueurs et niveaux ajustés), puis ajouter :</p>
+
+<div class="schema">
+  <img src="schemas/08-detail-collage.png" alt="Détail collage chant à chant"/>
+  <div class="caption">Schéma 10 — Collage chant-à-chant de 3 lames 1×8 avec chevilles Ø8 pour former le plan de travail.</div>
+</div>
 
 <div class="step">
   <div class="step-title"><span class="step-num">8a</span> Collage du plan de travail</div>
