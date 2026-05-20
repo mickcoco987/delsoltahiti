@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cote Ferrari 458 Italia — Marché US</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <div>
+        <h1>Cote Ferrari 458 Italia</h1>
+        <p class="brand-sub">Suivi de valeur — marché des États-Unis</p>
+      </div>
+    </div>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <main>
+    <section id="kpis" class="kpi-grid" aria-label="Indicateurs de cote"></section>
+
+    <nav id="variant-filter" class="pills" aria-label="Filtre par version"></nav>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Évolution de la cote</h2>
+        <span class="card-hint" id="history-hint"></span>
+      </div>
+      <div id="chart-history" class="chart-box"></div>
+    </section>
+
+    <div class="grid-2">
+      <section class="card">
+        <div class="card-head"><h2>Prix moyen par millésime</h2></div>
+        <div id="chart-year" class="chart-box"></div>
+      </section>
+      <section class="card">
+        <div class="card-head">
+          <h2>Prix vs kilométrage</h2>
+        </div>
+        <div id="scatter-legend" class="legend"></div>
+        <div id="chart-scatter" class="chart-box"></div>
+      </section>
+    </div>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Annonces suivies</h2>
+        <span class="card-hint" id="table-count"></span>
+      </div>
+      <div id="listings-table" class="table-box"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Sources de cote : classic.com, Edmunds, cars.com, Hagerty.
+      Les prix sont indicatifs et dépendent de l'état, des options et de l'historique d'entretien.
+    </p>
+    <p id="footer-meta"></p>
+  </footer>
+
+  <script src="data/dashboard.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
