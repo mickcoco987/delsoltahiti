@@ -1,11 +1,12 @@
 /* Genere automatiquement par le scraper - ne pas editer a la main. */
 window.COTE = {
-  "generated_at": "2026-05-22T17:52:08Z",
+  "generated_at": "2026-05-22T19:06:33Z",
   "sources": [
     "marketcheck"
   ],
   "valuation": {
-    "method": "regression log-lineaire (millesime + kilometrage + version)"
+    "method": "regression log-lineaire (millesime + kilometrage + version)",
+    "residual_pct": 21.9
   },
   "market": {
     "overall": {
@@ -129,7 +130,7 @@ window.COTE = {
       "location": "Marina, CA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "3a61370957d2",
       "estimated_value": 336904,
       "deal_pct": -18.4
@@ -145,7 +146,7 @@ window.COTE = {
       "location": "Momence, IL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "498e890de093",
       "estimated_value": 236837,
       "deal_pct": -0.6
@@ -161,7 +162,7 @@ window.COTE = {
       "location": "Paramus, NJ",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "cf44a8df2d44",
       "estimated_value": 242262,
       "deal_pct": 4.6
@@ -177,7 +178,7 @@ window.COTE = {
       "location": "Charlotte, NC",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "abc8e6ff4ed2",
       "estimated_value": 319738,
       "deal_pct": -6.6
@@ -193,7 +194,7 @@ window.COTE = {
       "location": "Orlando, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "9d5ef2859b2f",
       "estimated_value": 177027,
       "deal_pct": 15.3
@@ -209,7 +210,7 @@ window.COTE = {
       "location": "Hollywood, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "578319dc7199",
       "estimated_value": 352763,
       "deal_pct": -14.0
@@ -225,7 +226,7 @@ window.COTE = {
       "location": "West Palm Beach, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "21f7ce9bde9d",
       "estimated_value": 326635,
       "deal_pct": -38.3
@@ -241,7 +242,7 @@ window.COTE = {
       "location": "West Palm Beach, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "5176de09ff8a",
       "estimated_value": 317975,
       "deal_pct": -26.3
@@ -257,7 +258,7 @@ window.COTE = {
       "location": "West Palm Beach, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "5ac130c6cb51",
       "estimated_value": 327836,
       "deal_pct": -18.0
@@ -273,7 +274,7 @@ window.COTE = {
       "location": "Ewing Township, NJ",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "fa01f7c05f15",
       "estimated_value": 292232,
       "deal_pct": -2.7
@@ -289,7 +290,7 @@ window.COTE = {
       "location": "Ewing Township, NJ",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "616a9d411562",
       "estimated_value": 297061,
       "deal_pct": -1.0
@@ -305,7 +306,7 @@ window.COTE = {
       "location": "Murrieta, CA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "f8bfa11f1cb9",
       "estimated_value": 321895,
       "deal_pct": -11.8
@@ -321,7 +322,7 @@ window.COTE = {
       "location": "Boca Raton, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "6bc09fcd113d",
       "estimated_value": 281109,
       "deal_pct": 0.4
@@ -337,7 +338,7 @@ window.COTE = {
       "location": "Hinsdale, IL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "4c2a7ae1c99c",
       "estimated_value": 315187,
       "deal_pct": -14.2
@@ -353,7 +354,7 @@ window.COTE = {
       "location": "West Hollywood, CA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "e124c7bd6be3",
       "estimated_value": 224112,
       "deal_pct": -7.1
@@ -369,7 +370,7 @@ window.COTE = {
       "location": "Bonita Springs, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "8ab04ed17dd2",
       "estimated_value": 298341,
       "deal_pct": -0.6
@@ -385,7 +386,7 @@ window.COTE = {
       "location": "Doral, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "7ff59bcb92ee",
       "estimated_value": 279678,
       "deal_pct": 11.0
@@ -401,7 +402,7 @@ window.COTE = {
       "location": "Nebraska City, NE",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "1c73e12f824b",
       "estimated_value": 346523,
       "deal_pct": 13.5
@@ -417,7 +418,7 @@ window.COTE = {
       "location": "Fair Lawn, NJ",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "c278971f2473",
       "estimated_value": 298341,
       "deal_pct": 22.9
@@ -433,7 +434,7 @@ window.COTE = {
       "location": "Fort Lauderdale, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "52926e14e635",
       "estimated_value": 245291,
       "deal_pct": 2.2
@@ -449,7 +450,7 @@ window.COTE = {
       "location": "Hayward, CA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "45fc8e94a189",
       "estimated_value": 310889,
       "deal_pct": 11.5
@@ -465,7 +466,7 @@ window.COTE = {
       "location": "Naples, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "c8cca4dba09f",
       "estimated_value": 295208,
       "deal_pct": -5.0
@@ -481,7 +482,7 @@ window.COTE = {
       "location": "Hatfield, PA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "4909c3924a6d",
       "estimated_value": 366953,
       "deal_pct": 18.3
@@ -497,7 +498,7 @@ window.COTE = {
       "location": "Hatfield, PA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "df2eb978bb62",
       "estimated_value": 329333,
       "deal_pct": 36.8
@@ -513,7 +514,7 @@ window.COTE = {
       "location": "Joliet, IL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "214b425f61bd",
       "estimated_value": 196510,
       "deal_pct": -22.1
@@ -529,7 +530,7 @@ window.COTE = {
       "location": "Liberty Hill, TX",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "e606f340d41a",
       "estimated_value": 226075,
       "deal_pct": -3.9
@@ -545,7 +546,7 @@ window.COTE = {
       "location": "Liberty Hill, TX",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "98e4cfc0ad4e",
       "estimated_value": 307054,
       "deal_pct": 10.5
@@ -561,7 +562,7 @@ window.COTE = {
       "location": "Austin, TX",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "1e553f16db03",
       "estimated_value": 349995,
       "deal_pct": 28.9
@@ -577,7 +578,7 @@ window.COTE = {
       "location": "Torrance, CA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "a8252a0fca8a",
       "estimated_value": 381199,
       "deal_pct": 30.5
@@ -593,7 +594,7 @@ window.COTE = {
       "location": "Irvington, NJ",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "1a79fd34f9cc",
       "estimated_value": 281887,
       "deal_pct": 11.3
@@ -609,7 +610,7 @@ window.COTE = {
       "location": "Renton, WA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "b7b06d925f47",
       "estimated_value": 336162,
       "deal_pct": -48.7
@@ -625,7 +626,7 @@ window.COTE = {
       "location": "Scottsdale, AZ",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "c4f7adb7e018",
       "estimated_value": 308341,
       "deal_pct": 1.1
@@ -641,7 +642,7 @@ window.COTE = {
       "location": "Las Vegas, NV",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "69104db6fd95",
       "estimated_value": 314388,
       "deal_pct": -1.1
@@ -657,7 +658,7 @@ window.COTE = {
       "location": "Costa Mesa, CA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "dc603880cfe6",
       "estimated_value": 294039,
       "deal_pct": -12.2
@@ -673,7 +674,7 @@ window.COTE = {
       "location": "Costa Mesa, CA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "ed8f060ed97f",
       "estimated_value": 311401,
       "deal_pct": -21.7
@@ -689,7 +690,7 @@ window.COTE = {
       "location": "New Albany, IN",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "dd52e1b9239e",
       "estimated_value": 327306,
       "deal_pct": 8.3
@@ -705,7 +706,7 @@ window.COTE = {
       "location": "Orlando, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "2f30059696f5",
       "estimated_value": 328617,
       "deal_pct": -52.1
@@ -721,7 +722,7 @@ window.COTE = {
       "location": "Mill Valley, CA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "8c35c07707a5",
       "estimated_value": 268895,
       "deal_pct": -7.5
@@ -737,7 +738,7 @@ window.COTE = {
       "location": "Spring Valley, NY",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "840cc8b01292",
       "estimated_value": 375462,
       "deal_pct": -19.9
@@ -753,7 +754,7 @@ window.COTE = {
       "location": "Wellington, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "fdb4542786cd",
       "estimated_value": 315634,
       "deal_pct": 33.5
@@ -769,7 +770,7 @@ window.COTE = {
       "location": "Lisle, IL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "a93a4b5c0c66",
       "estimated_value": 325025,
       "deal_pct": 8.1
@@ -785,7 +786,7 @@ window.COTE = {
       "location": "Albuquerque, NM",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "c5f804b8becb",
       "estimated_value": 368753,
       "deal_pct": 15.4
@@ -801,7 +802,7 @@ window.COTE = {
       "location": "Boca Raton, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "22c1ad08fea9",
       "estimated_value": 327571,
       "deal_pct": -20.6
@@ -817,7 +818,7 @@ window.COTE = {
       "location": "Englewood, CO",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "def29b46eb63",
       "estimated_value": 355846,
       "deal_pct": 10.1
@@ -833,7 +834,7 @@ window.COTE = {
       "location": "Las Vegas, NV",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "c2260b2c4265",
       "estimated_value": 345018,
       "deal_pct": -7.2
@@ -849,7 +850,7 @@ window.COTE = {
       "location": "Bonita Springs, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "22e4737c69ce",
       "estimated_value": 355328,
       "deal_pct": -18.2
@@ -865,7 +866,7 @@ window.COTE = {
       "location": "Bonita Springs, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "996975776ec5",
       "estimated_value": 368553,
       "deal_pct": -19.4
@@ -881,7 +882,7 @@ window.COTE = {
       "location": "Bonita Springs, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "f49f330a1514",
       "estimated_value": 354518,
       "deal_pct": -24.1
@@ -897,7 +898,7 @@ window.COTE = {
       "location": "Orlando, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "dd30d118bba6",
       "estimated_value": 262996,
       "deal_pct": 12.6
@@ -913,7 +914,7 @@ window.COTE = {
       "location": "San Clemente, CA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "eeb29e6685cf",
       "estimated_value": 313717,
       "deal_pct": -22.4
@@ -929,7 +930,7 @@ window.COTE = {
       "location": "Tampa, FL",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "0ead53aeb872",
       "estimated_value": 276486,
       "deal_pct": -4.9
@@ -945,7 +946,7 @@ window.COTE = {
       "location": "Hatfield, PA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "8ed43453ca20",
       "estimated_value": 373559,
       "deal_pct": 25.1
@@ -961,7 +962,7 @@ window.COTE = {
       "location": "Hatfield, PA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "c0cacb97008b",
       "estimated_value": 251096,
       "deal_pct": 31.9
@@ -977,7 +978,7 @@ window.COTE = {
       "location": "Hatfield, PA",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "16d8617bc911",
       "estimated_value": 352268,
       "deal_pct": 23.4
@@ -993,7 +994,7 @@ window.COTE = {
       "location": "Austin, TX",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "66569dec98d8",
       "estimated_value": 339772,
       "deal_pct": 11.7
@@ -1009,7 +1010,7 @@ window.COTE = {
       "location": "Edison, NJ",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "e5efa77c8c04",
       "estimated_value": 986952,
       "deal_pct": 3.8
@@ -1025,7 +1026,7 @@ window.COTE = {
       "location": "Glen Cove, NY",
       "status": "for_sale",
       "sale_date": null,
-      "scraped_at": "2026-05-22T17:52:08Z",
+      "scraped_at": "2026-05-22T19:06:33Z",
       "id": "42d4e30df0a2",
       "estimated_value": 962136,
       "deal_pct": -3.9
