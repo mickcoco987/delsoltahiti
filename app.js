@@ -182,12 +182,14 @@
     return m ? m[0].toUpperCase() : "";
   }
 
-  // VIN cliquable vers stat.vin : decodage du VIN et historique du vehicule.
+  // VIN cliquable vers epicvin : rapport d'historique du vehicule par VIN.
   function vinLink(vin) {
     if (!vin) return "—";
-    return '<a href="https://stat.vin/fr/vin-decoding/ferrari/458/' +
-      encodeURIComponent(vin) + '" target="_blank" rel="noopener noreferrer" ' +
-      'title="Décoder le VIN et consulter l\'historique du véhicule (stat.vin)">' +
+    return '<a href="https://epicvin.com/fr/' +
+      'check-vin-number-and-get-the-vehicle-history-report/checkout/' +
+      encodeURIComponent(vin.toLowerCase()) +
+      '" target="_blank" rel="noopener noreferrer" ' +
+      'title="Rapport d\'historique du véhicule par VIN (epicvin)">' +
       esc(vin) + "</a>";
   }
 
