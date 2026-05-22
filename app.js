@@ -182,20 +182,28 @@
     return m ? m[0].toUpperCase() : "";
   }
 
-  // VIN cliquable vers la verification des rappels constructeur (NHTSA).
-  // Lien officiel qui fonctionne pour tout VIN valide.
+  // VIN cliquable vers epicvin : rapport d'historique du vehicule par VIN.
   function vinLink(vin) {
     if (!vin) return "—";
-    return '<a href="https://www.nhtsa.gov/recalls?vin=' +
-      encodeURIComponent(vin) + '" target="_blank" rel="noopener noreferrer" ' +
-      'title="Vérifier les rappels constructeur du véhicule (NHTSA)">' +
+    return '<a href="https://epicvin.com/fr/' +
+      'check-vin-number-and-get-the-vehicle-history-report/checkout/' +
+      encodeURIComponent(vin.toLowerCase()) +
+      '" target="_blank" rel="noopener noreferrer" ' +
+      'title="Rapport d\'historique du véhicule par VIN (epicvin)">' +
       esc(vin) + "</a>";
+  }
+
+  // Cellule "Titre" : statut de titre propre fourni par la source.
+  function titleCell(l) {
+    if (l.clean_title === true) return '<span class="avis good">Propre</span>';
+    if (l.clean_title === false) return '<span class="avis over">⚠ Non propre</span>';
+    return "—";
   }
 
   // Avis automatique : drapeaux modification/titre puis position vs cote.
   function avisFor(l) {
     const text = ((l.url || "") + " " + (l.title || "")).toLowerCase();
-    if (/\b(salvage|rebuilt|flood)\b/.test(text)) {
+    if (l.clean_title === false || /\b(salvage|rebuilt|flood)\b/.test(text)) {
       return { txt: "Titre à risque", cls: "over" };
     }
     if (/liberty.?walk|widebody|wide.?body|novitec|misha|prior.?design|replica/.test(text)) {
@@ -486,6 +494,7 @@
       { key: "mileage", label: "Kilométrage", num: true },
       { key: "location", label: "Localisation", num: false },
       { key: "vin", label: "VIN", num: false, sortable: false },
+      { key: "clean_title", label: "Titre", num: false, sortable: false },
       { key: "avis", label: "Avis", num: false, sortable: false },
     ];
 
@@ -530,6 +539,7 @@
         (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
         "<td>" + esc(l.location || "—") + "</td>" +
         '<td class="vin">' + vinLink(vin) + "</td>" +
+        "<td>" + titleCell(l) + "</td>" +
         '<td><span class="avis ' + avis.cls + '">' + avis.txt + "</span></td>" +
         "</tr>";
     }).join("");

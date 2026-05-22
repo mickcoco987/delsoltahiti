@@ -132,6 +132,9 @@ class MarketcheckSource(ListingSource):
             part for part in (dealer.get("city"), dealer.get("state")) if part
         )
 
+        # Statut de titre si Marketcheck le renvoie (champ Carfax).
+        clean = raw.get("carfax_clean_title")
+
         return Listing(
             year=year,
             variant=variant,
@@ -143,4 +146,5 @@ class MarketcheckSource(ListingSource):
             location=location,
             status="for_sale",
             vin=str(raw.get("vin") or ""),
+            clean_title=clean if isinstance(clean, bool) else None,
         )
