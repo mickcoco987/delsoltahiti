@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les Runes Anciennes</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <div id="bandeau-equipe" class="bandeau-equipe" style="display:none;"></div>
+
+  <div class="container">
+
+    <h1>📜 Les Runes Anciennes</h1>
+    <p class="subtitle">Épreuve 2 sur 5</p>
+
+    <div id="zone-jeu">
+
+      <div class="parchment">
+        <p>Un vieux parchemin couvert de <strong>runes magiques</strong> a été retrouvé.
+        Il cache un mot, mais il faut le <strong>déchiffrer</strong> à l'aide
+        de la clé des Anciens.</p>
+
+        <p class="indice">💡 Chaque rune correspond à une lettre. Trouve le mot caché et tape-le ci-dessous.</p>
+      </div>
+
+      <div class="parchment">
+        <h3 class="center">Le message en runes</h3>
+        <div class="runes" id="message-rune"></div>
+
+        <h3 class="center mt-3">La clé des Anciens</h3>
+        <div id="cle" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(60px,1fr));gap:0.4rem;font-family:'Courier New',monospace;color:#2b1810;"></div>
+      </div>
+
+      <div class="parchment">
+        <h3>Ta réponse</h3>
+        <input type="text" id="reponse" placeholder="Écris le mot déchiffré..." autocomplete="off" style="text-transform:uppercase;">
+        <div id="message" style="text-align:center;font-weight:bold;min-height:1.5em;margin-top:0.5rem;"></div>
+        <div class="btn-row">
+          <button class="btn" onclick="verifier()">🔮 Déchiffrer</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="zone-victoire"></div>
+
+  </div>
+
+  <script src="../config.js"></script>
+  <script src="../app.js"></script>
+  <script>
+    // Mot à deviner
+    const MOT_SECRET = "GRIMOIRE";
+
+    // Clé de substitution : chaque lettre → un symbole runique
+    const RUNES = {
+      A: "Δ", B: "β", C: "Ↄ", D: "ð", E: "Σ", F: "ϟ",
+      G: "ψ", H: "Ϟ", I: "ϊ", J: "ʝ", K: "Ϗ", L: "ʆ",
+      M: "ϻ", N: "Π", O: "Ø", P: "Ϸ", Q: "ϙ", R: "Ɽ",
+      S: "Ϛ", T: "Ͳ", U: "Ц", V: "ν", W: "ѡ", X: "χ",
+      Y: "Ϥ", Z: "Ϡ"
+    };
+
+    function chiffrer(mot) {
+      return mot.toUpperCase().split('').map(l => RUNES[l] || l).join(' ');
+    }
+
+    // Affichage du message en runes
+    document.getElementById('message-rune').textContent = chiffrer(MOT_SECRET);
+
+    // Affichage de la clé (uniquement les lettres présentes dans le mot + quelques autres pour rendre plus dur)
+    // Pour aider, on affiche TOUTES les lettres utiles : celles du mot + quelques bruit pour 11 ans
+    const lettresUtiles = new Set(MOT_SECRET.split(''));
+    // On ajoute un peu de "bruit" — quelques lettres en plus pour que ce soit un peu plus challenge
+    const bruit = ['A', 'L', 'P', 'N'];
+    bruit.forEach(l => lettresUtiles.add(l));
+
+    const lettresOrdonnees = Array.from(lettresUtiles).sort();
+
+    document.getElementById('cle').innerHTML = lettresOrdonnees.map(l => `
+      <div style="background:rgba(13,27,42,0.85);color:#f5c842;border:1px solid #d4a017;
+                  border-radius:6px;padding:0.4rem;text-align:center;">
+        <div style="font-size:1.3rem;">${RUNES[l]}</div>
+        <div style="font-size:0.85rem;color:#fff;">= ${l}</div>
+      </div>
+    `).join('');
+
+    function verifier() {
+      const reponse = document.getElementById('reponse').value.trim().toUpperCase();
+      const m = document.getElementById('message');
+      if (!reponse) {
+        m.textContent = "Écris ta réponse !";
+        m.style.color = "#ef5350";
+        return;
+      }
+      if (reponse === MOT_SECRET) {
+        gagne();
+      } else {
+        m.textContent = "❌ Ce n'est pas le bon mot. Regarde mieux les runes !";
+        m.style.color = "#ef5350";
+      }
+    }
+
+    function gagne() {
+      MM.marquerGagnee('runes');
+      document.getElementById('zone-jeu').classList.add('hidden');
+      MM.afficherMotGagne('runes', 'zone-victoire');
+    }
+
+    // Si déjà gagnée
+    if (MM.getEtat().epreuvesGagnees['runes']) {
+      document.getElementById('zone-jeu').classList.add('hidden');
+      MM.afficherMotGagne('runes', 'zone-victoire');
+    }
+
+    // Entrée clavier = valider
+    document.getElementById('reponse').addEventListener('keydown', e => {
+      if (e.key === 'Enter') verifier();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le Grimoire — Académie des Sorciers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="bandeau-equipe" class="bandeau-equipe" style="display:none;"></div>
+
+  <div class="container">
+
+    <h1>Le Grimoire Sacré</h1>
+    <p class="subtitle">5 pages à retrouver — 5 épreuves à vaincre</p>
+
+    <div id="progression" class="progression"></div>
+
+    <div class="parchment">
+      <p id="intro-dashboard">
+        Bienvenue dans le couloir des épreuves. Chaque salle protège une page
+        du Grimoire et te donnera un <strong>mot magique</strong> à noter.
+        Quand tu auras les 5 mots, le sortilège final révèlera le trésor !
+      </p>
+
+      <div class="liste-epreuves" id="liste-epreuves"></div>
+
+      <div id="zone-final" class="hidden">
+        <hr style="margin:2rem 0;border:none;border-top:2px solid #d4a017;">
+        <div class="victoire">
+          <h2>🌟 Le Grimoire est complet !</h2>
+          <p>Tu as récupéré toutes les pages. Il est temps de lancer le sortilège final.</p>
+          <div class="btn-row">
+            <a href="epreuves/final.html" class="btn">🪄 Lancer le sortilège</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="center" style="font-size:0.85rem;opacity:0.6;">
+      <a href="#" onclick="reset();return false;" style="color:#c9b87a;">↺ Tout recommencer (nouvelle équipe)</a>
+    </p>
+
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script>
+    const etat = MM.getEtat();
+
+    // Si pas d'équipe → retour accueil
+    if (!etat.equipeNom || !etat.maison) {
+      window.location.href = 'index.html';
+    }
+
+    // Intro personnalisée
+    if (etat.equipeNom) {
+      document.getElementById('intro-dashboard').innerHTML =
+        `Bienvenue <strong>${etat.equipeNom}</strong>, sorciers de la Maison ${MM.MAISONS[etat.maison].nom} ${MM.MAISONS[etat.maison].emoji} !<br><br>
+        Chaque salle protège une page du Grimoire et te donnera un <strong>mot magique</strong>
+        à noter sur ton parchemin. Quand tu auras les 5 mots, le sortilège final révèlera la cachette du trésor !`;
+    }
+
+    // Liste des épreuves
+    const liste = document.getElementById('liste-epreuves');
+    liste.innerHTML = MM.EPREUVES.map((ep, i) => {
+      const gagnee = etat.epreuvesGagnees[ep.id];
+      // Toutes débloquées : ordre libre, ils peuvent choisir
+      return `
+        <a href="${ep.fichier}" class="lien-epreuve ${gagnee ? 'gagnee' : ''}">
+          <span class="num">${ep.num}.</span>
+          <span style="font-size:1.4rem;">${ep.emoji}</span>
+          <strong style="margin-left:0.5rem;">${ep.titre}</strong>
+          ${gagnee ? '<span class="check">✓</span>' : ''}
+        </a>
+      `;
+    }).join('');
+
+    // Toutes épreuves gagnées → activer le final
+    const toutesGagnees = MM.EPREUVES.every(ep => etat.epreuvesGagnees[ep.id]);
+    if (toutesGagnees) {
+      document.getElementById('zone-final').classList.remove('hidden');
+    }
+
+    function reset() {
+      if (confirm("Effacer toute la progression et créer une nouvelle équipe ?")) {
+        MM.resetEtat();
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+
+</body>
+</html>

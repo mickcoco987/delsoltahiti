@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Diplômes de Sorcier</title>
+  <style>
+    @page { size: A4 landscape; margin: 0; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, serif;
+      color: #2b1810;
+      background: #ddd;
+      padding: 1rem;
+    }
+
+    .controls {
+      background: #2b1810;
+      color: #f5c842;
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    .controls button {
+      background: #d4a017; color: #2b1810; border: none;
+      padding: 0.6rem 1.2rem; border-radius: 4px;
+      font-weight: bold; cursor: pointer; font-size: 1rem;
+    }
+    .controls p { margin: 0.4rem 0; }
+
+    .diplome {
+      width: 29.7cm;
+      height: 21cm;
+      margin: 0 auto 2cm;
+      background:
+        radial-gradient(ellipse at center, #f4e9c8 0%, #d9c084 100%);
+      border: 10px double #4a148c;
+      padding: 2cm;
+      position: relative;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    }
+
+    .diplome::before, .diplome::after {
+      content: '';
+      position: absolute;
+      width: 80px; height: 80px;
+      border: 3px solid #d4a017;
+    }
+    .diplome::before { top: 30px; left: 30px; border-right: none; border-bottom: none; }
+    .diplome::after  { bottom: 30px; right: 30px; border-left: none; border-top: none; }
+
+    .sceau-top {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
+      color: #4a148c;
+      font-size: 2.6rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5rem;
+    }
+
+    .academie {
+      font-style: italic;
+      color: #5a4a2a;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    .corps {
+      font-size: 1.3rem;
+      line-height: 2;
+      max-width: 22cm;
+    }
+
+    .nom-sorcier {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 2.4rem;
+      color: #4a148c;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      padding: 0.5rem 2rem;
+      border-bottom: 3px solid #d4a017;
+      display: inline-block;
+      margin: 1rem 0 1.5rem;
+      min-width: 60%;
+    }
+
+    .signature-bloc {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      max-width: 22cm;
+    }
+
+    .signature-item {
+      text-align: center;
+    }
+
+    .signature-item .ligne {
+      width: 8cm;
+      border-bottom: 2px solid #4a148c;
+      margin-bottom: 0.4rem;
+      height: 1.5rem;
+    }
+
+    .signature-item .label {
+      font-style: italic;
+      color: #5a4a2a;
+      font-size: 0.9rem;
+    }
+
+    .ruban {
+      position: absolute;
+      bottom: 2cm;
+      right: 2cm;
+      font-size: 3rem;
+    }
+
+    @media print {
+      .controls { display: none; }
+      body { background: white; padding: 0; }
+      .diplome { box-shadow: none; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <p>🏆 <strong>Diplôme de Sorcier</strong> à remettre à chaque enfant à la fin du jeu</p>
+    <p style="font-size:0.9rem;opacity:0.85;">
+      Imprimer une copie par enfant (format paysage). Tu écris le prénom à la main sur la grande ligne, et tu signes.
+    </p>
+    <button onclick="window.print()">🖨️ Imprimer le diplôme</button>
+    <button onclick="ajouterDiplome()" style="margin-left:0.5rem;">➕ Ajouter une copie</button>
+  </div>
+
+  <div id="diplomes">
+    <!-- Premier diplôme -->
+    <div class="diplome">
+      <div class="sceau-top">🪄 ✨ 🧙‍♂️</div>
+      <h1>Diplôme de Sorcier</h1>
+      <p class="academie">— Académie des Sorciers de Tahiti —</p>
+
+      <div class="corps">
+        <p>Nous certifions par la présente que</p>
+        <div class="nom-sorcier">_______________________</div>
+        <p>a brillamment réussi les <strong>5 Épreuves de l'Initiation</strong>,<br>
+        a reconstitué le <strong>Grimoire Sacré</strong><br>
+        et a vaincu le maléfique <strong>Taʻaroa l'Ombre</strong>.</p>
+        <p style="margin-top:1rem;">Il/elle est désormais <strong>Sorcier(e) du Lagon</strong>,<br>
+        avec tous les pouvoirs et privilèges qui s'y rattachent.</p>
+      </div>
+
+      <div class="signature-bloc">
+        <div class="signature-item">
+          <div class="ligne"></div>
+          <div class="label">La Directrice de l'Académie</div>
+        </div>
+        <div class="signature-item">
+          <div class="ligne"></div>
+          <div class="label">Date</div>
+        </div>
+      </div>
+
+      <div class="ruban">🎖️</div>
+    </div>
+  </div>
+
+  <script>
+    function ajouterDiplome() {
+      const original = document.querySelector('.diplome');
+      const copie = original.cloneNode(true);
+      document.getElementById('diplomes').appendChild(copie);
+    }
+  </script>
+
+</body>
+</html>

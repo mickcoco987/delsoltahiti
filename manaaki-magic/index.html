@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L'Académie des Sorciers de Tahiti</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- ================================
+         ÉCRAN 1 : LETTRE D'ADMISSION
+         ================================ -->
+    <div id="ecran-lettre" class="ecran">
+
+      <h1>L'Académie des Sorciers de Tahiti</h1>
+      <p class="subtitle">~ Fondée par les Anciens du Lagon ~</p>
+
+      <div class="parchment">
+        <p class="center" style="font-style:italic;color:#7b1fa2;font-size:0.9rem;">
+          ✦ Lettre d'Admission ✦
+        </p>
+
+        <p>Cher <strong id="nom-heros">Manaaki</strong>,</p>
+
+        <p>Nous avons le plaisir et l'honneur de t'annoncer que tu as été
+        <strong>admis(e) à l'Académie des Sorciers de Tahiti</strong>.</p>
+
+        <p>Comme tu le sais sûrement, <strong>la magie se réveille à 11 ans</strong>.
+        Aujourd'hui marque donc le début de ton initiation, en compagnie
+        de tes plus fidèles amis.</p>
+
+        <p>Mais une terrible nouvelle vient de nous parvenir : le sorcier maléfique
+        <strong>Taʻaroa l'Ombre</strong> s'est introduit dans notre Académie cette nuit
+        et a <strong>volé les 5 pages du Grimoire Sacré</strong>. Sans ces pages,
+        aucun jeune sorcier ne peut être intronisé.</p>
+
+        <p>Les pages sont maintenant éparpillées dans ta demeure, gardées par
+        5 épreuves magiques. <strong>À toi et tes compagnons de les retrouver</strong>
+        et de reconstituer le Grimoire avant la fin de la fête !</p>
+
+        <p class="center" style="margin-top:1.5rem;">
+          <em>Que la magie du lagon te guide,</em><br>
+          <strong>La Directrice de l'Académie</strong>
+        </p>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn" onclick="passerARepartition()">⚡ Je suis prêt(e), commencer !</button>
+      </div>
+    </div>
+
+    <!-- ================================
+         ÉCRAN 2 : CHOIXPEAU / RÉPARTITION
+         ================================ -->
+    <div id="ecran-repartition" class="ecran hidden">
+
+      <h1>La Cérémonie du Choixpeau</h1>
+      <p class="subtitle">Chaque équipe doit choisir sa Maison</p>
+
+      <div class="parchment">
+        <h3>Quel est le nom de votre équipe ?</h3>
+        <input type="text" id="input-equipe" placeholder="Ex: Les Dragons Bleus" maxlength="30">
+
+        <h3 class="mt-2">Quels sorciers la composent ?</h3>
+        <p style="font-size:0.9rem;color:#5a4a2a;">Sépare les prénoms par des virgules.</p>
+        <input type="text" id="input-sorciers" placeholder="Manaaki, Léa, Tom...">
+
+        <h3 class="mt-3">Choisissez votre Maison</h3>
+        <p style="font-size:0.9rem;color:#5a4a2a;">Le Choixpeau parle à votre cœur...</p>
+
+        <div class="maisons">
+          <div class="maison lava"   data-maison="lava"   onclick="choisirMaison('lava')">
+            <span class="maison-emoji">🌋</span>
+            <div class="maison-nom">Lava</div>
+            <div class="maison-devise">Courage et feu</div>
+          </div>
+          <div class="maison lagon"  data-maison="lagon"  onclick="choisirMaison('lagon')">
+            <span class="maison-emoji">🌊</span>
+            <div class="maison-nom">Lagon</div>
+            <div class="maison-devise">Sagesse et calme</div>
+          </div>
+          <div class="maison foret"  data-maison="foret"  onclick="choisirMaison('foret')">
+            <span class="maison-emoji">🌴</span>
+            <div class="maison-nom">Forêt</div>
+            <div class="maison-devise">Loyauté et patience</div>
+          </div>
+          <div class="maison etoile" data-maison="etoile" onclick="choisirMaison('etoile')">
+            <span class="maison-emoji">⭐</span>
+            <div class="maison-nom">Étoile</div>
+            <div class="maison-devise">Ruse et lumière</div>
+          </div>
+        </div>
+
+        <div id="erreur" style="color:#c62828;text-align:center;font-weight:bold;display:none;"></div>
+
+        <div class="btn-row">
+          <button class="btn" onclick="validerEquipe()">🪄 Sceller mon serment</button>
+        </div>
+      </div>
+
+      <p class="center" style="font-size:0.85rem;opacity:0.7;">
+        <a href="#" onclick="reset();return false;" style="color:#c9b87a;">↺ Recommencer depuis le début</a>
+      </p>
+
+    </div>
+
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  <script>
+    let maisonChoisie = null;
+
+    // Personnalisation du prénom dans la lettre
+    if (window.MANAAKI_CONFIG && window.MANAAKI_CONFIG.prenomHeros) {
+      document.getElementById('nom-heros').textContent = window.MANAAKI_CONFIG.prenomHeros;
+    }
+
+    // Si une équipe existe déjà → on saute directement au dashboard
+    const etatActuel = MM.getEtat();
+    if (etatActuel.equipeNom && etatActuel.maison) {
+      window.location.href = 'dashboard.html';
+    }
+
+    function passerARepartition() {
+      document.getElementById('ecran-lettre').classList.add('hidden');
+      document.getElementById('ecran-repartition').classList.remove('hidden');
+      window.scrollTo(0, 0);
+    }
+
+    function choisirMaison(m) {
+      maisonChoisie = m;
+      document.querySelectorAll('.maison').forEach(el => el.classList.remove('selected'));
+      document.querySelector('.maison[data-maison="' + m + '"]').classList.add('selected');
+    }
+
+    function validerEquipe() {
+      const erreur = document.getElementById('erreur');
+      const nomEquipe = document.getElementById('input-equipe').value.trim();
+      const sorciersStr = document.getElementById('input-sorciers').value.trim();
+
+      if (!nomEquipe) {
+        erreur.textContent = "Donnez un nom à votre équipe !";
+        erreur.style.display = 'block';
+        return;
+      }
+      if (!sorciersStr) {
+        erreur.textContent = "Inscrivez les prénoms des sorciers !";
+        erreur.style.display = 'block';
+        return;
+      }
+      if (!maisonChoisie) {
+        erreur.textContent = "Choisissez votre Maison !";
+        erreur.style.display = 'block';
+        return;
+      }
+
+      const sorciers = sorciersStr.split(/[,;]/).map(s => s.trim()).filter(Boolean);
+
+      const etat = MM.getEtat();
+      etat.equipeNom = nomEquipe;
+      etat.maison = maisonChoisie;
+      etat.sorciers = sorciers;
+      MM.setEtat(etat);
+
+      window.location.href = 'dashboard.html';
+    }
+
+    function reset() {
+      if (confirm("Tout effacer et recommencer ?")) {
+        MM.resetEtat();
+        location.reload();
+      }
+    }
+  </script>
+
+</body>
+</html>

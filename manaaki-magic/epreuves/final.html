@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le Sortilège Final</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <div id="bandeau-equipe" class="bandeau-equipe" style="display:none;"></div>
+
+  <div class="container">
+
+    <h1>🪄 Le Sortilège Final</h1>
+    <p class="subtitle">L'heure de vérité</p>
+
+    <!-- Étape 1 : reconstituer la phrase -->
+    <div id="zone-jeu">
+
+      <div class="parchment">
+        <p>Tu as collecté <strong>5 mots magiques</strong> au cours de tes épreuves.
+        Réunis-les <strong>dans l'ordre des épreuves</strong> (1 à 5) et tu découvriras
+        où Taʻaroa a caché le vrai trésor !</p>
+
+        <p class="indice">💡 Touche tes mots dans le bon ordre :
+        <strong>1.</strong> Potions → <strong>2.</strong> Runes →
+        <strong>3.</strong> Sortilèges → <strong>4.</strong> Bestiaire →
+        <strong>5.</strong> Constellation</p>
+      </div>
+
+      <div class="parchment">
+        <h3 class="center">Ton sortilège</h3>
+        <div id="phrase" style="text-align:center;min-height:60px;font-family:'Cinzel',serif;font-size:1.3rem;color:#7b1fa2;letter-spacing:0.05em;padding:1rem;background:rgba(13,27,42,0.1);border-radius:6px;"></div>
+
+        <h3 class="center mt-3">Tes mots magiques</h3>
+        <div id="mots" class="grille"></div>
+
+        <div id="message" style="text-align:center;font-weight:bold;min-height:1.5em;margin-top:1rem;"></div>
+
+        <div class="btn-row">
+          <button class="btn btn-secondary" onclick="reset()">↺ Recommencer</button>
+          <button class="btn" onclick="verifier()">🌟 Lancer le sortilège</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Étape 2 : révélation -->
+    <div id="zone-revelation" class="hidden">
+
+      <div class="victoire">
+        <h1 style="margin-top:0;">🎉 Bravo !</h1>
+        <h2>Le Grimoire est reconstitué !</h2>
+        <p id="phrase-intro" style="font-size:1.1rem;"></p>
+        <div class="mot-magique" id="phrase-finale"></div>
+        <p style="font-size:1.05rem;">Cours, vole, sorcier ! Le trésor t'attend là-bas ! 🪄✨</p>
+      </div>
+
+      <div class="parchment">
+        <h3>🆘 Tu cherches encore ?</h3>
+        <p>Un dernier indice murmuré par le Grimoire :</p>
+        <p id="indice-bonus" style="font-style:italic;text-align:center;font-size:1.05rem;color:#7b1fa2;"></p>
+      </div>
+
+      <p class="center mt-3">
+        <a href="../dashboard.html" class="btn">📖 Retour au Grimoire</a>
+      </p>
+    </div>
+
+  </div>
+
+  <script src="../config.js"></script>
+  <script src="../app.js"></script>
+  <script>
+    const etat = MM.getEtat();
+
+    // Vérifie qu'on a bien fait toutes les épreuves
+    const toutesGagnees = MM.EPREUVES.every(ep => etat.epreuvesGagnees[ep.id]);
+    if (!toutesGagnees) {
+      alert("Tu dois d'abord terminer toutes les épreuves !");
+      window.location.href = '../dashboard.html';
+    }
+
+    const ORDRE_EPREUVES = ['potions', 'runes', 'sortileges', 'bestiaire', 'constellation'];
+    const CONFIG = window.MANAAKI_CONFIG || {};
+    const MOTS_CONFIG = CONFIG.motsDuSortilege || {};
+
+    // Liste des mots disponibles avec leur épreuve d'origine
+    function getMots() {
+      return ORDRE_EPREUVES.map(id => ({
+        epreuve: id,
+        mot: (MOTS_CONFIG[id] || '???').replace(/_/g, ' ')
+      }));
+    }
+
+    let ordreChoisi = []; // tableau d'ids d'épreuves dans l'ordre choisi
+
+    function render() {
+      // Phrase en cours
+      const phraseEl = document.getElementById('phrase');
+      if (ordreChoisi.length === 0) {
+        phraseEl.innerHTML = '<span style="color:#999;font-style:italic;">Choisis le premier mot...</span>';
+      } else {
+        const mots = getMots();
+        phraseEl.textContent = ordreChoisi.map(id => mots.find(m => m.epreuve === id).mot).join(' ');
+      }
+
+      // Mots disponibles
+      const motsEl = document.getElementById('mots');
+      const mots = getMots();
+      motsEl.innerHTML = mots.map((m, i) => {
+        const utilise = ordreChoisi.includes(m.epreuve);
+        const ep = MM.EPREUVES.find(e => e.id === m.epreuve);
+        return `<div class="case"
+                     onclick="${utilise ? 'retirerMot(\'' + m.epreuve + '\')' : 'ajouterMot(\'' + m.epreuve + '\')'}"
+                     style="opacity:${utilise ? '0.4' : '1'};">
+                  <div style="font-size:1.5rem;">${ep.emoji}</div>
+                  <div style="margin-top:0.3rem;font-weight:bold;">${m.mot}</div>
+                  <div style="font-size:0.75rem;opacity:0.7;margin-top:0.2rem;">(Épreuve ${ep.num})</div>
+                </div>`;
+      }).join('');
+    }
+
+    function ajouterMot(epreuve) {
+      if (ordreChoisi.includes(epreuve)) return;
+      ordreChoisi.push(epreuve);
+      afficherMessage("", true);
+      render();
+    }
+
+    function retirerMot(epreuve) {
+      ordreChoisi = ordreChoisi.filter(e => e !== epreuve);
+      afficherMessage("", true);
+      render();
+    }
+
+    function reset() {
+      ordreChoisi = [];
+      afficherMessage("", true);
+      render();
+    }
+
+    function afficherMessage(txt, ok) {
+      const m = document.getElementById('message');
+      m.textContent = txt;
+      m.style.color = ok ? '#a5d6a7' : '#ef5350';
+    }
+
+    function verifier() {
+      if (ordreChoisi.length < 5) {
+        afficherMessage("Tu n'as pas placé tous les mots !", false);
+        return;
+      }
+      const correct = ordreChoisi.every((id, i) => id === ORDRE_EPREUVES[i]);
+      if (correct) {
+        reveler();
+      } else {
+        afficherMessage("❌ L'ordre n'est pas bon. Rappelle-toi : Potions → Runes → Sortilèges → Bestiaire → Constellation", false);
+        if (navigator.vibrate) navigator.vibrate(150);
+      }
+    }
+
+    function reveler() {
+      const mots = getMots();
+      const phrase = mots.map(m => m.mot).join(' ');
+
+      document.getElementById('phrase-intro').textContent = CONFIG.phraseFinale || "Le secret est révélé !";
+      document.getElementById('phrase-finale').textContent = phrase;
+      document.getElementById('indice-bonus').textContent = CONFIG.indiceBonusFinal || "Cherche bien !";
+
+      // Marque le final comme réussi
+      const e = MM.getEtat();
+      e.finalReussi = true;
+      MM.setEtat(e);
+
+      document.getElementById('zone-jeu').classList.add('hidden');
+      document.getElementById('zone-revelation').classList.remove('hidden');
+      window.scrollTo(0, 0);
+
+      // Petit effet sonore visuel : confetti d'étoiles ? juste l'animation CSS suffit
+    }
+
+    render();
+
+    // Déjà résolu ?
+    if (etat.finalReussi) {
+      reveler();
+    }
+  </script>
+
+</body>
+</html>
