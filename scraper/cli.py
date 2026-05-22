@@ -116,7 +116,8 @@ def main(argv=None) -> int:
     history = store.append_history(history, market)
 
     store.save(listings, history, sources=responded,
-               valuation_method=model.method)
+               valuation={"method": model.method,
+                          "residual_pct": model.residual_pct})
 
     overall = market["overall"]
     deals = [l for l in listings if l.status == "for_sale"

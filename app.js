@@ -29,17 +29,35 @@
     { style: "currency", currency: "USD", maximumFractionDigits: 0 });
   const fmtInt = new Intl.NumberFormat("fr-FR");
 
+  // Imprecision du modele de valeur (en %). Les seuils de bonne affaire en
+  // sont des multiples : on ne signale que les ecarts sortant du bruit.
+  const RESIDUAL = (data.valuation && data.valuation.residual_pct > 0)
+    ? data.valuation.residual_pct : 20;
+  const DEAL_STRONG = 1.3 * RESIDUAL;   // "bonne affaire"
+  const DEAL_MILD = 0.6 * RESIDUAL;     // "sous la cote"
+
   let activeVariant = "Toutes";
   let sortKey = "deal_pct";
   let sortDir = -1;
 
   /* ---------- utilitaires ---------- */
 
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;",
+        "'": "&#39;" }[c];
+    });
+  }
+
   function compact(v) {
     if (v == null) return "—";
     if (v >= 1e6) return (v / 1e6).toFixed(2).replace(".", ",") + " M$";
     if (v >= 1e3) return Math.round(v / 1e3) + " k$";
     return Math.round(v) + " $";
+  }
+
+  function pctText(v) {
+    return (v >= 0 ? "+" : "") + v.toFixed(1).replace(".", ",") + " %";
   }
 
   function monthLabel(iso) {
@@ -54,8 +72,23 @@
       " " + d.getFullYear();
   }
 
-  function pctText(v) {
-    return (v >= 0 ? "+" : "") + v.toFixed(1).replace(".", ",") + " %";
+  function isHttpUrl(u) {
+    return /^https?:\/\//i.test(String(u || ""));
+  }
+
+  // Cellule millesime cliquable vers l'annonce d'origine si l'URL est valide.
+  function linkedYear(l) {
+    if (isHttpUrl(l.url)) {
+      return '<a href="' + esc(l.url) + '" target="_blank" ' +
+        'rel="noopener noreferrer">' + l.year + " ↗</a>";
+    }
+    return String(l.year);
+  }
+
+  function bandTitle(est) {
+    if (!est) return "";
+    const f = 1 + RESIDUAL / 100;
+    return "Fourchette du modèle : " + compact(est / f) + " – " + compact(est * f);
   }
 
   function filteredListings() {
@@ -114,21 +147,21 @@
     return (db[0] - da[0]) * 12 + (db[1] - da[1]);
   }
 
-  /* ---------- score de bonne affaire ---------- */
+  /* ---------- score de bonne affaire (calibre sur le bruit du modele) ------ */
 
   function dealClass(pct) {
     if (pct == null) return "neutral";
-    if (pct >= 7) return "good";
-    if (pct >= 2) return "mid";
-    if (pct > -2) return "neutral";
+    if (pct >= DEAL_STRONG) return "good";
+    if (pct >= DEAL_MILD) return "mid";
+    if (pct > -DEAL_MILD) return "neutral";
     return "over";
   }
 
   function dealLabel(pct) {
     if (pct == null) return "—";
-    if (pct >= 7) return "Bonne affaire";
-    if (pct >= 2) return "Sous la cote";
-    if (pct > -2) return "Dans le marché";
+    if (pct >= DEAL_STRONG) return "Bonne affaire";
+    if (pct >= DEAL_MILD) return "Sous la cote";
+    if (pct > -DEAL_MILD) return "Dans le marché";
     return "Au-dessus";
   }
 
@@ -169,9 +202,9 @@
     }
 
     const dealCount = list.filter((l) => l.status === "for_sale"
-      && l.deal_pct != null && l.deal_pct >= 7).length;
+      && l.deal_pct != null && l.deal_pct >= DEAL_STRONG).length;
     cards.push(kpi("Bonnes affaires", String(dealCount),
-      "≥ 7 % sous la cote", dealCount ? "up" : ""));
+      "≥ " + Math.round(DEAL_STRONG) + " % sous la cote", dealCount ? "up" : ""));
 
     document.getElementById("kpis").innerHTML = cards.join("");
   }
@@ -188,7 +221,7 @@
   function renderDeals() {
     const deals = filteredListings()
       .filter((l) => l.status === "for_sale" && l.deal_pct != null
-        && l.deal_pct >= 2 && l.price > 0)
+        && l.deal_pct >= DEAL_MILD && l.price > 0)
       .sort((a, b) => b.deal_pct - a.deal_pct)
       .slice(0, 12);
 
@@ -196,9 +229,14 @@
     const method = (data.valuation && data.valuation.method)
       || "régression sur millésime, kilométrage et version";
     const scored = filteredListings().filter((l) => l.deal_pct != null).length;
-    note.textContent = "Valeur estimée par " + method +
-      ". Écart positif = prix demandé sous la cote estimée. " +
-      deals.length + " annonce(s) sous la cote sur " + scored + " évaluées.";
+    note.innerHTML = "Valeur estimée par " + esc(method) +
+      ". Imprécision du modèle ≈ <strong>±" + Math.round(RESIDUAL) +
+      "&nbsp;%</strong> — " +
+      "le millésime, le kilométrage et la version ne capturent ni les options, " +
+      "ni l'état, ni la certification. Un écart fort est une <em>piste à " +
+      "investiguer</em> : bonne affaire possible, ou voiture à vérifier " +
+      "(accident, entretien…). " + deals.length + " annonce(s) sous la cote " +
+      "sur " + scored + " évaluées.";
 
     if (!deals.length) {
       document.getElementById("deals-list").innerHTML =
@@ -208,14 +246,15 @@
 
     const rows = deals.map((l) => {
       return "<tr>" +
-        '<td class="num">' + l.year + "</td>" +
+        '<td class="num">' + linkedYear(l) + "</td>" +
         "<td>" + variantTag(l.variant) + "</td>" +
         '<td class="num">' + fmtUSD.format(l.price) + "</td>" +
-        '<td class="num">' + fmtUSD.format(l.estimated_value) + "</td>" +
+        '<td class="num" title="' + esc(bandTitle(l.estimated_value)) + '">' +
+        fmtUSD.format(l.estimated_value) + "</td>" +
         '<td class="num">' + dealBadge(l.deal_pct) + "</td>" +
         '<td class="num">' +
         (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
-        "<td>" + (l.location || l.source || "—") + "</td>" +
+        "<td>" + esc(l.location || l.source || "—") + "</td>" +
         "</tr>";
     }).join("");
 
@@ -387,7 +426,7 @@
       dots += '<circle class="point" r="5" cx="' + X(l.mileage).toFixed(1) +
         '" cy="' + Y(l.price).toFixed(1) + '" fill="' +
         VARIANT_COLORS[l.variant] + '" fill-opacity="0.85"><title>' +
-        l.title + "\n" + fmtUSD.format(l.price) + " — " +
+        esc(l.title) + "\n" + fmtUSD.format(l.price) + " — " +
         fmtInt.format(l.mileage) + " mi</title></circle>";
     });
 
@@ -435,15 +474,15 @@
 
     const rows = list.map((l) => {
       return "<tr>" +
-        '<td class="num">' + l.year + "</td>" +
+        '<td class="num">' + linkedYear(l) + "</td>" +
         "<td>" + variantTag(l.variant) + "</td>" +
         '<td class="num">' + fmtUSD.format(l.price) + "</td>" +
-        '<td class="num">' +
+        '<td class="num" title="' + esc(bandTitle(l.estimated_value)) + '">' +
         (l.estimated_value ? fmtUSD.format(l.estimated_value) : "—") + "</td>" +
         '<td class="num">' + dealBadge(l.deal_pct) + "</td>" +
         '<td class="num">' +
         (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
-        "<td>" + (l.location || "—") + "</td>" +
+        "<td>" + esc(l.location || "—") + "</td>" +
         "</tr>";
     }).join("");
 
@@ -467,7 +506,7 @@
 
   function variantTag(v) {
     return '<span class="tag" style="background:' + VARIANT_COLORS[v] +
-      '">' + v + "</span>";
+      '">' + esc(v) + "</span>";
   }
 
   /* ---------- filtre par version ---------- */
@@ -497,13 +536,13 @@
 
   function renderMeta() {
     const gen = dateLabel(data.generated_at);
-    const sources = (data.sources || []).join(", ") || "—";
+    const sources = esc((data.sources || []).join(", ") || "—");
     document.getElementById("meta").innerHTML =
-      "Mise à jour&nbsp;: " + gen + "<br>Sources&nbsp;: " + sources +
+      "Mise à jour&nbsp;: " + esc(gen) + "<br>Sources&nbsp;: " + sources +
       "<br>" + data.listings.length + " annonces suivies";
     document.getElementById("footer-meta").textContent =
       "Données générées le " + gen + " — " + data.listings.length +
-      " annonces (" + sources + ").";
+      " annonces (" + ((data.sources || []).join(", ") || "—") + ").";
   }
 
   /* ---------- rendu global ---------- */
