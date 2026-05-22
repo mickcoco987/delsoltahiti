@@ -75,6 +75,7 @@ class Listing:
     location: str = ""
     status: str = "for_sale"  # for_sale | sold
     sale_date: Optional[str] = None
+    kind: str = "dealer"  # dealer | auction (= type de circuit de vente)
     scraped_at: str = field(default_factory=utc_now_iso)
     id: str = ""
     vin: str = ""

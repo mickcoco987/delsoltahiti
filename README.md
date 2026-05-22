@@ -49,13 +49,19 @@ daté à l'historique de cote.
 
 ### Sources de données
 
-| Source        | Type    | Description                                          |
-|---------------|---------|------------------------------------------------------|
-| `classic`     | scrape  | classic.com — agrégateur de cote du marché US.       |
-| `bat`         | scrape  | Bring a Trailer — enchères et résultats de ventes.   |
-| `marketcheck` | **API** | Marketcheck — inventaire US (fiable, clé requise).   |
-| `all`         | —       | Enchaîne les trois sources live ci-dessus (défaut).  |
-| `sample`      | local   | Relevés de marché curés (échantillon de démarrage).  |
+| Source        | Type    | Canal | Description                                          |
+|---------------|---------|-------|------------------------------------------------------|
+| `classic`     | scrape  | dealer | classic.com — agrégateur de cote du marché US.      |
+| `bat`         | scrape  | auction | Bring a Trailer — enchères et résultats de ventes. |
+| `marketcheck` | **API** | dealer | Marketcheck — inventaire US (clé requise).         |
+| `ebay`        | **API** | auction | eBay Motors Browse API — enchères + Buy-It-Now.   |
+| `dupont`      | scrape  | auction | DuPont Registry Live — enchères live US (best-effort). |
+| `sothebys`    | scrape  | auction | RM Sotheby's — résultats d'enchères collectionneurs (best-effort). |
+| `all`         | —       | —     | Enchaîne toutes les sources live ci-dessus (défaut). |
+| `sample`      | local   | dealer | Relevés de marché curés (échantillon de démarrage). |
+
+Chaque annonce porte un champ `kind` (`dealer` / `auction`). Le tableau de bord
+sépare les deux dans deux **onglets** distincts.
 
 Les sources `classic` et `bat` partagent la base `HtmlJsonSource` : elle
 extrait le JSON embarqué des pages (JSON-LD, données Next.js…) et le parcourt
@@ -80,6 +86,23 @@ structurées, sans blocage. Elle a besoin d'une clé :
 
 Sans clé, la source `marketcheck` est simplement ignorée (le scraper ne
 plante pas). La clé n'est jamais stockée dans le dépôt.
+
+### Clés API eBay Motors
+
+La source `ebay` interroge la **Browse API** d'eBay — enchères et Buy-It-Now
+filtrés sur les 458. Elle a besoin de deux identifiants (OAuth Client
+Credentials) :
+
+1. Crée une app sur [developer.ebay.com/my/keys](https://developer.ebay.com/my/keys)
+   (compte développeur gratuit). Utilise le keyset **Production** :
+   *App ID* = `EBAY_CLIENT_ID`, *Cert ID* = `EBAY_CLIENT_SECRET`.
+2. **En local** : `export EBAY_CLIENT_ID="…"` et `export EBAY_CLIENT_SECRET="…"`.
+3. **En CI** : ajoute deux secrets `EBAY_CLIENT_ID` et `EBAY_CLIENT_SECRET`
+   dans *Settings → Secrets and variables → Actions*. Le workflow les injecte
+   automatiquement.
+
+Sans ces identifiants, la source `ebay` est ignorée silencieusement. Aucun
+secret n'est stocké dans le dépôt.
 
 L'endpoint REST par défaut (`mc-api.marketcheck.com/v2/search/car/active`) peut
 être surchargé sans toucher au code via la variable `MARKETCHECK_ENDPOINT`,
@@ -140,8 +163,9 @@ scraper/
   sources/
     base.py          Interface ListingSource
     html_json.py     Base de scraping (extraction du JSON embarqué)
-    classic_com.py · bring_a_trailer.py   Sources scrapées
-    marketcheck.py   Source API Marketcheck (clé requise)
+    classic_com.py · bring_a_trailer.py   Sources scrapées (dealer/auction)
+    dupont_registry.py · rm_sothebys.py   Sources scrapées enchères
+    marketcheck.py · ebay.py   Sources API (clés requises)
     sample.py        Échantillon de marché curé
 worker/
   update-cote-worker.js   Cloudflare Worker : déclenche le workflow en un clic

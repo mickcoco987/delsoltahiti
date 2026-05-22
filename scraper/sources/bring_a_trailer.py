@@ -13,6 +13,7 @@ from .html_json import HtmlJsonSource
 class BringATrailerSource(HtmlJsonSource):
     name = "bringatrailer.com"
     base_url = "https://bringatrailer.com"
+    kind = "auction"
     pages = [
         "https://bringatrailer.com/ferrari/458-italia/",
         "https://bringatrailer.com/ferrari/458-spider/",

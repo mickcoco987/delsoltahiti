@@ -36,6 +36,7 @@
   const DEAL_STRONG = 1.3 * RESIDUAL;   // "bonne affaire"
   const DEAL_MILD = 0.6 * RESIDUAL;     // "sous la cote"
 
+  let activeKind = "dealer";
   let activeVariant = "Toutes";
   let sortKey = "deal_pct";
   let sortDir = -1;
@@ -92,9 +93,11 @@
   }
 
   function filteredListings() {
-    return activeVariant === "Toutes"
-      ? data.listings
-      : data.listings.filter((l) => l.variant === activeVariant);
+    return data.listings.filter(function (l) {
+      const kindOk = (l.kind || "dealer") === activeKind;
+      const variantOk = activeVariant === "Toutes" || l.variant === activeVariant;
+      return kindOk && variantOk;
+    });
   }
 
   function computeStats(list) {
@@ -568,14 +571,44 @@
       '">' + esc(v) + "</span>";
   }
 
-  /* ---------- filtre par version ---------- */
+  /* ---------- onglets (kind) et filtre par version ---------- */
+
+  const KINDS = [
+    { kind: "dealer", label: "Annonces concessionnaires" },
+    { kind: "auction", label: "Ventes aux enchères" },
+  ];
+
+  function renderTabs() {
+    const container = document.getElementById("kind-tabs");
+    container.innerHTML = KINDS.map(function (t) {
+      const n = data.listings.filter(function (l) {
+        return (l.kind || "dealer") === t.kind;
+      }).length;
+      return '<button class="kind-tab' +
+        (t.kind === activeKind ? " active" : "") +
+        '" data-kind="' + t.kind + '">' + t.label +
+        ' <span class="tab-count">(' + n + ")</span></button>";
+    }).join("");
+    container.querySelectorAll(".kind-tab").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        activeKind = btn.getAttribute("data-kind");
+        activeVariant = "Toutes";  // reset du filtre version au changement d'onglet
+        renderTabs();
+        renderPills();
+        renderAll();
+      });
+    });
+  }
 
   function renderPills() {
+    const inKind = data.listings.filter(function (l) {
+      return (l.kind || "dealer") === activeKind;
+    });
     const options = ["Toutes"].concat(VARIANTS);
     document.getElementById("variant-filter").innerHTML = options.map((v) => {
       const count = v === "Toutes"
-        ? data.listings.length
-        : data.listings.filter((l) => l.variant === v).length;
+        ? inKind.length
+        : inKind.filter((l) => l.variant === v).length;
       return '<button class="pill' + (v === activeVariant ? " active" : "") +
         '" data-variant="' + v + '"' + (count ? "" : " disabled") + ">" +
         v + " (" + count + ")</button>";
@@ -720,6 +753,7 @@
   }
 
   renderMeta();
+  renderTabs();
   renderPills();
   renderAll();
   setupUpdateButton();

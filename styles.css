@@ -164,6 +164,41 @@ main {
   font-weight: 600;
 }
 
+.kind-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin: -8px 0 4px;
+  flex-wrap: wrap;
+}
+
+.kind-tab {
+  background: transparent;
+  border: 0;
+  color: var(--text-dim);
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.kind-tab:hover { color: var(--text); }
+
+.kind-tab.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.kind-tab .tab-count {
+  color: var(--text-faint);
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-left: 4px;
+}
+
 .card {
   background: var(--bg-elev);
   border: 1px solid var(--border);

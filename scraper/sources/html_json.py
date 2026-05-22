@@ -90,6 +90,7 @@ class HtmlJsonSource(ListingSource):
     base_url = ""
     pages: List[str] = []
     timeout = 25
+    kind = "dealer"  # surcharge par les sources d'encheres
 
     def fetch(self) -> List[Listing]:
         listings: List[Listing] = []
@@ -193,4 +194,5 @@ class HtmlJsonSource(ListingSource):
             source=self.name,
             status=status,
             sale_date=str(sold_marker) if sold_marker else None,
+            kind=self.kind,
         )

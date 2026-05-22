@@ -17,7 +17,10 @@ from .aggregate import build_market
 from .models import Listing
 from .sources.bring_a_trailer import BringATrailerSource
 from .sources.classic_com import ClassicComSource
+from .sources.dupont_registry import DupontRegistryLiveSource
+from .sources.ebay import EbayMotorsSource
 from .sources.marketcheck import MarketcheckSource
+from .sources.rm_sothebys import RmSothebysSource
 from .sources.sample import SampleSource
 from .valuation import fit_model, score_listings
 from . import store
@@ -29,6 +32,9 @@ LIVE_SOURCES = {
     "classic": ClassicComSource,
     "bat": BringATrailerSource,
     "marketcheck": MarketcheckSource,
+    "ebay": EbayMotorsSource,
+    "dupont": DupontRegistryLiveSource,
+    "sothebys": RmSothebysSource,
 }
 SOURCES = {**LIVE_SOURCES, "sample": SampleSource}
 
