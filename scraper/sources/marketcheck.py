@@ -142,4 +142,5 @@ class MarketcheckSource(ListingSource):
             source="marketcheck",
             location=location,
             status="for_sale",
+            vin=str(raw.get("vin") or ""),
         )

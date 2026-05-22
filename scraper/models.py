@@ -11,6 +11,15 @@ from typing import Optional
 # Versions reconnues du modele 458 sur le marche US (millesimes 2010-2015).
 VARIANTS = ["Italia", "Spider", "Speciale", "Speciale A"]
 
+# VIN Ferrari : code constructeur "ZFF" + 14 caracteres (I, O, Q exclus).
+_VIN_RE = re.compile(r"ZFF[0-9A-HJ-NPR-Z]{14}", re.IGNORECASE)
+
+
+def extract_vin(text: str) -> str:
+    """Extrait un VIN Ferrari d'un texte libre (URL, titre). Vide si absent."""
+    match = _VIN_RE.search(str(text or ""))
+    return match.group(0).upper() if match else ""
+
 
 def utc_now_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -68,6 +77,7 @@ class Listing:
     sale_date: Optional[str] = None
     scraped_at: str = field(default_factory=utc_now_iso)
     id: str = ""
+    vin: str = ""
     # Champs calcules par le moteur de valuation (voir scraper/valuation.py).
     estimated_value: Optional[int] = None
     deal_pct: Optional[float] = None
@@ -79,6 +89,9 @@ class Listing:
             self.title = f"{self.year} Ferrari 458 {self.variant}"
         if not self.id:
             self.id = self._compute_id()
+        # VIN fourni par la source, sinon extrait de l'URL ou du titre.
+        self.vin = self.vin.strip().upper() if self.vin \
+            else extract_vin(f"{self.url} {self.title}")
 
     def _compute_id(self) -> str:
         basis = self.url or f"{self.source}|{self.title}|{self.year}|{self.price}|{self.mileage}"

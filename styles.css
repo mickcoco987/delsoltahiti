@@ -308,6 +308,26 @@ tbody td a:hover { text-decoration: underline; }
 .deal.neutral { background: rgba(179, 168, 156, 0.14); color: var(--text-dim); }
 .deal.over { background: rgba(255, 91, 91, 0.15); color: #ff8b8b; }
 
+tbody td.vin {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.74rem;
+  color: var(--text-dim);
+  letter-spacing: 0.3px;
+}
+
+.avis {
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.avis.good { color: #4ade80; }
+.avis.mid { color: #86c98f; }
+.avis.neutral { color: var(--text-dim); }
+.avis.over { color: #ff8b8b; }
+
+thead th.nosort { cursor: default; }
+
 #deals-card { border-left: 3px solid var(--up); }
 
 .method-note {
