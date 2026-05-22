@@ -182,6 +182,15 @@
     return m ? m[0].toUpperCase() : "";
   }
 
+  // VIN cliquable vers la fiche historique Carfax.
+  function vinLink(vin) {
+    if (!vin) return "—";
+    return '<a href="https://www.carfax.com/vehicle/' +
+      encodeURIComponent(vin) + '" target="_blank" rel="noopener noreferrer" ' +
+      'title="Vérifier l\'historique du véhicule sur Carfax">' +
+      esc(vin) + "</a>";
+  }
+
   // Avis automatique : drapeaux modification/titre puis position vs cote.
   function avisFor(l) {
     const text = ((l.url || "") + " " + (l.title || "")).toLowerCase();
@@ -519,7 +528,7 @@
         '<td class="num">' +
         (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
         "<td>" + esc(l.location || "—") + "</td>" +
-        '<td class="vin">' + (esc(vin) || "—") + "</td>" +
+        '<td class="vin">' + vinLink(vin) + "</td>" +
         '<td><span class="avis ' + avis.cls + '">' + avis.txt + "</span></td>" +
         "</tr>";
     }).join("");
