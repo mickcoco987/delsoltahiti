@@ -182,13 +182,13 @@
     return m ? m[0].toUpperCase() : "";
   }
 
-  // VIN cliquable vers la verification des rappels constructeur (NHTSA).
-  // Lien officiel qui fonctionne pour tout VIN valide.
+  // VIN cliquable vers une recherche web : fonctionne pour tout VIN et fait
+  // remonter les traces publiques (annonces, ventes salvage, forums).
   function vinLink(vin) {
     if (!vin) return "—";
-    return '<a href="https://www.nhtsa.gov/recalls?vin=' +
+    return '<a href="https://www.google.com/search?q=' +
       encodeURIComponent(vin) + '" target="_blank" rel="noopener noreferrer" ' +
-      'title="Vérifier les rappels constructeur du véhicule (NHTSA)">' +
+      'title="Rechercher l\'historique public de ce VIN sur le web">' +
       esc(vin) + "</a>";
   }
 
