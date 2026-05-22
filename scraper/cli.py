@@ -112,11 +112,14 @@ def main(argv=None) -> int:
 
     market = build_market(listings)
 
-    history = SampleSource().history() if args.seed else store.load_history()
+    # L'historique de cote ne se construit que sur des mesures reelles ;
+    # `--seed` repart donc d'un historique vide.
+    history = [] if args.seed else store.load_history()
     history = store.append_history(history, market)
 
     store.save(listings, history, sources=responded,
-               valuation_method=model.method)
+               valuation={"method": model.method,
+                          "residual_pct": model.residual_pct})
 
     overall = market["overall"]
     deals = [l for l in listings if l.status == "for_sale"

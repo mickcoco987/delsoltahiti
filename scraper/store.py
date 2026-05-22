@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from datetime import date
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 from .aggregate import build_market
 from .models import Listing, utc_now_iso
@@ -59,7 +59,7 @@ def append_history(history: list, market: dict) -> list:
 
 
 def save(listings: List[Listing], history: list, sources: List[str],
-         valuation_method: str = "") -> dict:
+         valuation: Optional[dict] = None) -> dict:
     """Ecrit listings.json, history.json et le bundle dashboard.js."""
     DATA_DIR.mkdir(exist_ok=True)
     market = build_market(listings)
@@ -79,7 +79,7 @@ def save(listings: List[Listing], history: list, sources: List[str],
     bundle = {
         "generated_at": generated_at,
         "sources": sources,
-        "valuation": {"method": valuation_method},
+        "valuation": valuation or {},
         "market": market,
         "history": history,
         "listings": [l.to_dict() for l in listings],

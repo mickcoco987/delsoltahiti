@@ -252,6 +252,15 @@ tbody td {
 tbody td.num { text-align: right; font-variant-numeric: tabular-nums; }
 tbody tr:hover { background: var(--bg-elev-2); }
 
+tbody td a {
+  color: var(--accent-soft);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+tbody td a:hover { text-decoration: underline; }
+
 .tag {
   display: inline-block;
   padding: 2px 9px;

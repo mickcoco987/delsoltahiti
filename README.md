@@ -87,11 +87,19 @@ si ton offre Marketcheck expose un hôte différent.
 
 ### Détection des bonnes affaires
 
-`scraper/valuation.py` ajuste une **régression log-linéaire** sur le corpus
-d'annonces — `ln(prix) ~ millésime + kilométrage + version` — pour estimer la
-valeur de marché de chaque voiture. L'écart entre le prix demandé et cette
-estimation donne le score : une annonce nettement sous la valeur estimée est
-mise en avant dans la section « Bonnes affaires » du tableau de bord.
+`scraper/valuation.py` ajuste une **régression log-linéaire robuste** sur le
+corpus — `ln(prix) ~ millésime + kilométrage + version` — pour estimer la
+valeur de marché de chaque voiture. Les annonces aberrantes (prix d'appel
+fantaisistes, erreurs de saisie) sont écartées de l'ajustement via un seuil
+basé sur l'écart médian absolu, puis le modèle est ré-ajusté sur le cœur de
+marché.
+
+Le modèle expose son **imprécision** (`residual_pct`) : millésime, kilométrage
+et version n'expliquent qu'une partie du prix — options, état et certification
+lui échappent. Le tableau de bord calibre ses seuils sur cette marge : seuls
+les écarts qui sortent nettement du bruit sont signalés « bonne affaire ». Un
+écart fort reste une **piste à investiguer** (bonne affaire *ou* voiture à
+vérifier), pas un verdict.
 
 ## Mise à jour automatique
 
