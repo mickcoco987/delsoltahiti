@@ -78,6 +78,7 @@ class Listing:
     scraped_at: str = field(default_factory=utc_now_iso)
     id: str = ""
     vin: str = ""
+    clean_title: Optional[bool] = None  # titre propre (si la source le fournit)
     # Champs calcules par le moteur de valuation (voir scraper/valuation.py).
     estimated_value: Optional[int] = None
     deal_pct: Optional[float] = None
