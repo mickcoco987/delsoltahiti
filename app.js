@@ -171,6 +171,34 @@
       dealLabel(pct) + '">' + pctText(pct) + "</span>";
   }
 
+  /* ---------- VIN et avis ---------- */
+
+  const VIN_RE = /ZFF[0-9A-HJ-NPR-Z]{14}/i;
+
+  // VIN fourni par la source, sinon extrait de l'URL de l'annonce.
+  function vinOf(l) {
+    if (l.vin) return String(l.vin).toUpperCase();
+    const m = VIN_RE.exec(l.url || "");
+    return m ? m[0].toUpperCase() : "";
+  }
+
+  // Avis automatique : drapeaux modification/titre puis position vs cote.
+  function avisFor(l) {
+    const text = ((l.url || "") + " " + (l.title || "")).toLowerCase();
+    if (/\b(salvage|rebuilt|flood)\b/.test(text)) {
+      return { txt: "Titre à risque", cls: "over" };
+    }
+    if (/liberty.?walk|widebody|wide.?body|novitec|misha|prior.?design|replica/.test(text)) {
+      return { txt: "Modifiée — décote", cls: "over" };
+    }
+    const p = l.deal_pct;
+    if (p == null) return { txt: "—", cls: "neutral" };
+    if (p >= DEAL_STRONG) return { txt: "Écart fort — à vérifier", cls: "good" };
+    if (p >= DEAL_MILD) return { txt: "Sous la cote — à étudier", cls: "mid" };
+    if (p > -DEAL_MILD) return { txt: "Au prix du marché", cls: "neutral" };
+    return { txt: "Au-dessus du marché", cls: "over" };
+  }
+
   /* ---------- indicateurs (KPI) ---------- */
 
   function renderKpis() {
@@ -447,6 +475,8 @@
       { key: "deal_pct", label: "Écart cote", num: true },
       { key: "mileage", label: "Kilométrage", num: true },
       { key: "location", label: "Localisation", num: false },
+      { key: "vin", label: "VIN", num: false, sortable: false },
+      { key: "avis", label: "Avis", num: false, sortable: false },
     ];
 
     list.sort((a, b) => {
@@ -467,12 +497,18 @@
     }
 
     const head = cols.map((c) => {
-      const mark = c.key === sortKey ? (sortDir < 0 ? " ↓" : " ↑") : "";
-      return '<th class="' + (c.num ? "num" : "") + '" data-key="' + c.key +
-        '">' + c.label + mark + "</th>";
+      const sortable = c.sortable !== false;
+      const mark = sortable && c.key === sortKey
+        ? (sortDir < 0 ? " ↓" : " ↑") : "";
+      const cls = ((c.num ? "num " : "") + (sortable ? "" : "nosort")).trim();
+      return "<th" + (cls ? ' class="' + cls + '"' : "") +
+        (sortable ? ' data-key="' + c.key + '"' : "") + ">" + c.label +
+        mark + "</th>";
     }).join("");
 
     const rows = list.map((l) => {
+      const vin = vinOf(l);
+      const avis = avisFor(l);
       return "<tr>" +
         '<td class="num">' + linkedYear(l) + "</td>" +
         "<td>" + variantTag(l.variant) + "</td>" +
@@ -483,6 +519,8 @@
         '<td class="num">' +
         (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
         "<td>" + esc(l.location || "—") + "</td>" +
+        '<td class="vin">' + (esc(vin) || "—") + "</td>" +
+        '<td><span class="avis ' + avis.cls + '">' + avis.txt + "</span></td>" +
         "</tr>";
     }).join("");
 
@@ -493,6 +531,7 @@
     document.querySelectorAll("#listings-table thead th").forEach((th) => {
       th.addEventListener("click", () => {
         const key = th.getAttribute("data-key");
+        if (!key) return;
         if (key === sortKey) {
           sortDir = -sortDir;
         } else {
