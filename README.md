@@ -55,7 +55,9 @@ daté à l'historique de cote.
 | `bat`         | scrape  | auction | Bring a Trailer — enchères et résultats de ventes. |
 | `marketcheck` | **API** | dealer | Marketcheck — inventaire US (clé requise).         |
 | `ebay`        | **API** | auction | eBay Motors Browse API — enchères + Buy-It-Now.   |
-| `all`         | —       | —     | Enchaîne les quatre sources live ci-dessus (défaut). |
+| `dupont`      | scrape  | auction | DuPont Registry Live — enchères live US (best-effort). |
+| `sothebys`    | scrape  | auction | RM Sotheby's — résultats d'enchères collectionneurs (best-effort). |
+| `all`         | —       | —     | Enchaîne toutes les sources live ci-dessus (défaut). |
 | `sample`      | local   | dealer | Relevés de marché curés (échantillon de démarrage). |
 
 Chaque annonce porte un champ `kind` (`dealer` / `auction`). Le tableau de bord
@@ -161,7 +163,8 @@ scraper/
   sources/
     base.py          Interface ListingSource
     html_json.py     Base de scraping (extraction du JSON embarqué)
-    classic_com.py · bring_a_trailer.py   Sources scrapées
+    classic_com.py · bring_a_trailer.py   Sources scrapées (dealer/auction)
+    dupont_registry.py · rm_sothebys.py   Sources scrapées enchères
     marketcheck.py · ebay.py   Sources API (clés requises)
     sample.py        Échantillon de marché curé
 worker/
