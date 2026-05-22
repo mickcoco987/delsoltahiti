@@ -58,7 +58,8 @@ def append_history(history: list, market: dict) -> list:
     return history
 
 
-def save(listings: List[Listing], history: list, sources: List[str]) -> dict:
+def save(listings: List[Listing], history: list, sources: List[str],
+         valuation_method: str = "") -> dict:
     """Ecrit listings.json, history.json et le bundle dashboard.js."""
     DATA_DIR.mkdir(exist_ok=True)
     market = build_market(listings)
@@ -78,6 +79,7 @@ def save(listings: List[Listing], history: list, sources: List[str]) -> dict:
     bundle = {
         "generated_at": generated_at,
         "sources": sources,
+        "valuation": {"method": valuation_method},
         "market": market,
         "history": history,
         "listings": [l.to_dict() for l in listings],

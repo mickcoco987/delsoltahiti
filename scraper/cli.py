@@ -2,7 +2,8 @@
 
 Exemples :
     python -m scraper --seed              # amorce les donnees (echantillon cure)
-    python -m scraper --source classic    # scrape la cote live sur classic.com
+    python -m scraper --source all        # scrape classic.com + BaT + cars.com
+    python -m scraper --source bat        # une seule source live
     python -m scraper --source sample     # regenere a partir de l'echantillon
 """
 
@@ -14,16 +15,22 @@ from typing import List
 
 from .aggregate import build_market
 from .models import Listing
+from .sources.bring_a_trailer import BringATrailerSource
+from .sources.cars_com import CarsComSource
 from .sources.classic_com import ClassicComSource
 from .sources.sample import SampleSource
+from .valuation import fit_model, score_listings
 from . import store
 
 log = logging.getLogger("scraper")
 
-SOURCES = {
+# Sources live (sites reels). `all` les enchaine toutes.
+LIVE_SOURCES = {
     "classic": ClassicComSource,
-    "sample": SampleSource,
+    "bat": BringATrailerSource,
+    "cars": CarsComSource,
 }
+SOURCES = {**LIVE_SOURCES, "sample": SampleSource}
 
 
 def _merge(existing: List[Listing], scraped: List[Listing]) -> List[Listing]:
@@ -34,14 +41,34 @@ def _merge(existing: List[Listing], scraped: List[Listing]) -> List[Listing]:
     return list(by_id.values())
 
 
+def _collect(source_arg: str):
+    """Renvoie (annonces, noms des sources ayant repondu)."""
+    if source_arg == "all":
+        instances = [cls() for cls in LIVE_SOURCES.values()]
+    else:
+        instances = [SOURCES[source_arg]()]
+
+    scraped: List[Listing] = []
+    responded: List[str] = []
+    for source in instances:
+        log.info("Collecte de la cote depuis : %s", source.name)
+        items = source.fetch()
+        if items:
+            responded.append(source.name)
+            scraped.extend(items)
+        else:
+            log.warning("Aucune annonce recuperee depuis %s.", source.name)
+    return scraped, responded
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(
         prog="scraper",
         description="Suivi de la cote des Ferrari 458 Italia sur le marche US.",
     )
     parser.add_argument(
-        "--source", choices=list(SOURCES), default="classic",
-        help="Source de donnees (defaut : classic).",
+        "--source", choices=list(SOURCES) + ["all"], default="all",
+        help="Source de donnees (defaut : all = toutes les sources live).",
     )
     parser.add_argument(
         "--replace", action="store_true",
@@ -63,16 +90,14 @@ def main(argv=None) -> int:
         args.source = "sample"
         args.replace = True
 
-    source = SOURCES[args.source]()
-    log.info("Collecte de la cote depuis : %s", source.name)
-    scraped = source.fetch()
+    scraped, responded = _collect(args.source)
 
     if not scraped:
-        log.warning("Aucune annonce recuperee depuis %s.", source.name)
-        if args.source == "classic":
+        log.warning("Aucune annonce recuperee.")
+        if args.source != "sample":
             log.warning(
-                "La source live n'a rien renvoye (blocage anti-bot ou changement "
-                "de structure du site). Donnees existantes conservees. "
+                "Les sources live n'ont rien renvoye (blocage anti-bot ou "
+                "changement de structure). Donnees existantes conservees. "
                 "Repli possible : python -m scraper --source sample"
             )
         return 1
@@ -80,24 +105,26 @@ def main(argv=None) -> int:
     existing = [] if args.replace else store.load_listings()
     listings = scraped if args.replace else _merge(existing, scraped)
 
+    # Estimation de valeur et detection des bonnes affaires.
+    model = fit_model(listings)
+    score_listings(listings, model)
+    log.info("Modele de valeur : %s", model.method)
+
     market = build_market(listings)
 
-    if args.seed and isinstance(source, SampleSource):
-        history = source.history()
-    else:
-        history = store.load_history()
+    history = SampleSource().history() if args.seed else store.load_history()
     history = store.append_history(history, market)
 
-    store.save(listings, history, sources=[source.name])
+    store.save(listings, history, sources=responded,
+               valuation_method=model.method)
 
     overall = market["overall"]
+    deals = [l for l in listings if l.status == "for_sale"
+             and l.deal_pct is not None and l.deal_pct >= 7]
     log.info(
-        "Cote mise a jour : %d annonces | prix moyen %s $ | mediane %s $ | "
-        "fourchette %s - %s $",
+        "Cote mise a jour : %d annonces | prix moyen %s $ | %d bonne(s) affaire(s)",
         overall["count"],
         f"{overall['avg_price']:,}".replace(",", " "),
-        f"{overall['median_price']:,}".replace(",", " "),
-        f"{overall['min_price']:,}".replace(",", " "),
-        f"{overall['max_price']:,}".replace(",", " "),
+        len(deals),
     )
     return 0

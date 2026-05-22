@@ -46,6 +46,12 @@ _RAW_LISTINGS = [
     (2015, "Speciale", 498_000, 4_500, "Paramus, NJ"),
     (2015, "Speciale A", 925_000, 1_200, "Miami, FL"),
     (2015, "Speciale A", 1_050_000, 620, "Beverly Hills, CA"),
+    (2013, "Italia", 176_000, 22_400, "Phoenix, AZ"),
+    (2014, "Italia", 251_000, 9_400, "Las Vegas, NV"),
+    (2011, "Italia", 151_000, 34_500, "Sacramento, CA"),
+    (2012, "Spider", 231_000, 9_800, "Aspen, CO"),
+    (2015, "Spider", 268_000, 8_900, "Austin, TX"),
+    (2014, "Speciale", 372_000, 12_800, "San Jose, CA"),
 ]
 
 # Mois couverts par l'historique de cote amorce (15 points mensuels).

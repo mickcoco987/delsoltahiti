@@ -6,12 +6,14 @@ tableau de bord web affiche l'évolution de la valeur.
 
 ## Aperçu
 
-- **Tableau de bord** (`index.html`) : indicateurs de cote, évolution dans le
-  temps, prix par millésime, prix vs kilométrage et liste des annonces. 100 %
-  HTML/CSS/JS, graphiques en SVG, sans dépendance externe.
+- **Tableau de bord** (`index.html`) : section **bonnes affaires**, indicateurs
+  de cote, évolution dans le temps, prix par millésime, prix vs kilométrage et
+  liste des annonces. 100 % HTML/CSS/JS, graphiques en SVG, sans dépendance.
 - **Scraper** (`scraper/`) : outil Python (bibliothèque standard uniquement,
-  aucune installation requise) qui agrège les annonces et tient à jour un
-  historique de cote.
+  aucune installation requise) qui agrège les annonces de plusieurs sources
+  (classic.com, Bring a Trailer, cars.com) et tient à jour un historique de cote.
+- **Moteur de valeur** (`scraper/valuation.py`) : estime la valeur de marché de
+  chaque annonce et repère celles **sous la cote** (outil de sourcing).
 - **Données** (`data/`) : `listings.json`, `history.json` et `dashboard.js`
   (le bundle lu par le tableau de bord), régénérés par le scraper.
 
@@ -32,32 +34,46 @@ python3 -m http.server 8000
 ## Le scraper
 
 ```sh
-python3 -m scraper --source classic    # cote live depuis classic.com
+python3 -m scraper --source all        # toutes les sources live (défaut)
+python3 -m scraper --source bat        # une seule source : Bring a Trailer
 python3 -m scraper --source sample     # données d'échantillon curées
 python3 -m scraper --seed              # réinitialise tout depuis l'échantillon
-python3 -m scraper --source classic --replace -v
+python3 -m scraper --source all --replace -v
 ```
 
-À chaque exécution, le scraper met à jour les annonces, recalcule les
-statistiques (moyenne, médiane, fourchette, par version, par millésime) et
-ajoute un point daté à l'historique de cote.
+À chaque exécution, le scraper agrège les annonces, **estime la valeur de
+marché de chacune** et détecte les bonnes affaires, recalcule les statistiques
+(moyenne, médiane, fourchette, par version, par millésime) et ajoute un point
+daté à l'historique de cote.
 
 ### Sources de données
 
-| Source     | Description                                                        |
-|------------|--------------------------------------------------------------------|
-| `classic`  | Scrape classic.com (agrégateur de cote du marché US).              |
-| `sample`   | Relevés de marché curés (classic.com, Edmunds, cars.com, Hagerty). |
+| Source    | Description                                                        |
+|-----------|--------------------------------------------------------------------|
+| `classic` | classic.com — agrégateur de cote du marché US.                     |
+| `bat`     | Bring a Trailer — enchères et résultats de ventes réels.           |
+| `cars`    | cars.com — annonces de concessionnaires et de particuliers.        |
+| `all`     | Enchaîne les trois sources live ci-dessus (défaut).                |
+| `sample`  | Relevés de marché curés (classic.com, Edmunds, cars.com, Hagerty). |
 
-Le scraper `classic.com` extrait le JSON embarqué des pages (JSON-LD puis
-données Next.js) et le parcourt récursivement : tant que les données restent
-dans un JSON de la page, il résiste aux changements de mise en page.
+Les sources live partagent la base `HtmlJsonSource` : elle extrait le JSON
+embarqué des pages (JSON-LD, données Next.js, autres blocs `application/json`)
+et le parcourt récursivement. Tant que les données restent dans un JSON de la
+page, le scraper résiste aux changements de mise en page. Ajouter une source =
+sous-classer `HtmlJsonSource` (`name`, `base_url`, `pages`).
 
 **Limite connue** : les sites d'annonces appliquent des protections anti-bot.
-Si la source live renvoie un blocage (HTTP 403) ou aucun résultat, le scraper
-conserve les données existantes sans les écraser — utilisez alors
-`--source sample`. Ajouter une source = sous-classer `ListingSource`
-(`scraper/sources/base.py`).
+Si les sources live renvoient un blocage (HTTP 403) ou aucun résultat, le
+scraper conserve les données existantes sans les écraser — utilisez alors
+`--source sample`.
+
+### Détection des bonnes affaires
+
+`scraper/valuation.py` ajuste une **régression log-linéaire** sur le corpus
+d'annonces — `ln(prix) ~ millésime + kilométrage + version` — pour estimer la
+valeur de marché de chaque voiture. L'écart entre le prix demandé et cette
+estimation donne le score : une annonce nettement sous la valeur estimée est
+mise en avant dans la section « Bonnes affaires » du tableau de bord.
 
 ## Mise à jour automatique
 
@@ -74,9 +90,14 @@ data/                            listings.json · history.json · dashboard.js
 scraper/
   models.py        Modèle Listing + utilitaires
   aggregate.py     Calcul des statistiques de cote
+  valuation.py     Estimation de valeur + détection des bonnes affaires
   store.py         Lecture/écriture des données et du bundle
   cli.py           Point d'entrée `python -m scraper`
-  sources/         Sources de données (classic.com, échantillon)
+  sources/
+    base.py          Interface ListingSource
+    html_json.py     Base de scraping (extraction du JSON embarqué)
+    classic_com.py · bring_a_trailer.py · cars_com.py   Sources live
+    sample.py        Échantillon de marché curé
 .github/workflows/update-cote.yml  Mise à jour quotidienne automatique
 ```
 

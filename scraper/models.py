@@ -68,6 +68,9 @@ class Listing:
     sale_date: Optional[str] = None
     scraped_at: str = field(default_factory=utc_now_iso)
     id: str = ""
+    # Champs calcules par le moteur de valuation (voir scraper/valuation.py).
+    estimated_value: Optional[int] = None
+    deal_pct: Optional[float] = None
 
     def __post_init__(self) -> None:
         if self.variant not in VARIANTS:

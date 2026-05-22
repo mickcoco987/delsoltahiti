@@ -81,7 +81,7 @@ main {
 
 .kpi-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 14px;
 }
 
@@ -259,6 +259,29 @@ tbody tr:hover { background: var(--bg-elev-2); }
   font-size: 0.73rem;
   font-weight: 600;
   color: #14110f;
+}
+
+.deal {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.deal.good { background: rgba(52, 199, 89, 0.18); color: #4ade80; }
+.deal.mid { background: rgba(52, 199, 89, 0.10); color: #86c98f; }
+.deal.neutral { background: rgba(179, 168, 156, 0.14); color: var(--text-dim); }
+.deal.over { background: rgba(255, 91, 91, 0.15); color: #ff8b8b; }
+
+#deals-card { border-left: 3px solid var(--up); }
+
+.method-note {
+  margin: 12px 0 0;
+  color: var(--text-faint);
+  font-size: 0.76rem;
+  line-height: 1.5;
 }
 
 .site-footer {

@@ -30,7 +30,7 @@
   const fmtInt = new Intl.NumberFormat("fr-FR");
 
   let activeVariant = "Toutes";
-  let sortKey = "price";
+  let sortKey = "deal_pct";
   let sortDir = -1;
 
   /* ---------- utilitaires ---------- */
@@ -52,6 +52,10 @@
     if (isNaN(d)) return iso;
     return d.getDate() + " " + MONTHS_FR[d.getMonth()].replace(".", "") +
       " " + d.getFullYear();
+  }
+
+  function pctText(v) {
+    return (v >= 0 ? "+" : "") + v.toFixed(1).replace(".", ",") + " %";
   }
 
   function filteredListings() {
@@ -99,7 +103,10 @@
     const from = historyValue(prev);
     const to = historyValue(last);
     if (!from || !to) return null;
-    return { pct: ((to - from) / from) * 100, months: monthsBetween(prev.date, last.date) };
+    return {
+      pct: ((to - from) / from) * 100,
+      months: monthsBetween(prev.date, last.date),
+    };
   }
 
   function monthsBetween(a, b) {
@@ -107,10 +114,35 @@
     return (db[0] - da[0]) * 12 + (db[1] - da[1]);
   }
 
+  /* ---------- score de bonne affaire ---------- */
+
+  function dealClass(pct) {
+    if (pct == null) return "neutral";
+    if (pct >= 7) return "good";
+    if (pct >= 2) return "mid";
+    if (pct > -2) return "neutral";
+    return "over";
+  }
+
+  function dealLabel(pct) {
+    if (pct == null) return "—";
+    if (pct >= 7) return "Bonne affaire";
+    if (pct >= 2) return "Sous la cote";
+    if (pct > -2) return "Dans le marché";
+    return "Au-dessus";
+  }
+
+  function dealBadge(pct) {
+    if (pct == null) return '<span class="deal neutral">—</span>';
+    return '<span class="deal ' + dealClass(pct) + '" title="' +
+      dealLabel(pct) + '">' + pctText(pct) + "</span>";
+  }
+
   /* ---------- indicateurs (KPI) ---------- */
 
   function renderKpis() {
-    const s = computeStats(filteredListings());
+    const list = filteredListings();
+    const s = computeStats(list);
     const trend = computeTrend();
     const cards = [];
 
@@ -128,17 +160,18 @@
     cards.push(kpi("Annonces suivies", String(s.count)));
 
     if (trend) {
-      const sign = trend.pct >= 0 ? "+" : "";
       const arrow = trend.pct >= 0 ? "▲" : "▼";
       const cls = trend.pct >= 0 ? "up" : "down";
-      cards.push(kpi(
-        "Tendance " + (trend.months || 12) + " mois",
-        arrow + " " + sign + trend.pct.toFixed(1).replace(".", ",") + " %",
-        "cote moyenne",
-        cls));
+      cards.push(kpi("Tendance " + (trend.months || 12) + " mois",
+        arrow + " " + pctText(trend.pct), "cote moyenne", cls));
     } else {
       cards.push(kpi("Tendance", "—"));
     }
+
+    const dealCount = list.filter((l) => l.status === "for_sale"
+      && l.deal_pct != null && l.deal_pct >= 7).length;
+    cards.push(kpi("Bonnes affaires", String(dealCount),
+      "≥ 7 % sous la cote", dealCount ? "up" : ""));
 
     document.getElementById("kpis").innerHTML = cards.join("");
   }
@@ -150,16 +183,60 @@
       "</div>";
   }
 
+  /* ---------- section bonnes affaires ---------- */
+
+  function renderDeals() {
+    const deals = filteredListings()
+      .filter((l) => l.status === "for_sale" && l.deal_pct != null
+        && l.deal_pct >= 2 && l.price > 0)
+      .sort((a, b) => b.deal_pct - a.deal_pct)
+      .slice(0, 12);
+
+    const note = document.getElementById("valuation-note");
+    const method = (data.valuation && data.valuation.method)
+      || "régression sur millésime, kilométrage et version";
+    const scored = filteredListings().filter((l) => l.deal_pct != null).length;
+    note.textContent = "Valeur estimée par " + method +
+      ". Écart positif = prix demandé sous la cote estimée. " +
+      deals.length + " annonce(s) sous la cote sur " + scored + " évaluées.";
+
+    if (!deals.length) {
+      document.getElementById("deals-list").innerHTML =
+        '<p class="empty">Aucune annonce sous la cote pour cette sélection.</p>';
+      return;
+    }
+
+    const rows = deals.map((l) => {
+      return "<tr>" +
+        '<td class="num">' + l.year + "</td>" +
+        "<td>" + variantTag(l.variant) + "</td>" +
+        '<td class="num">' + fmtUSD.format(l.price) + "</td>" +
+        '<td class="num">' + fmtUSD.format(l.estimated_value) + "</td>" +
+        '<td class="num">' + dealBadge(l.deal_pct) + "</td>" +
+        '<td class="num">' +
+        (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
+        "<td>" + (l.location || l.source || "—") + "</td>" +
+        "</tr>";
+    }).join("");
+
+    document.getElementById("deals-list").innerHTML =
+      "<table><thead><tr>" +
+      '<th class="num">Millésime</th><th>Version</th>' +
+      '<th class="num">Prix demandé</th><th class="num">Valeur estimée</th>' +
+      '<th class="num">Écart</th><th class="num">Kilométrage</th>' +
+      "<th>Localisation</th></tr></thead><tbody>" + rows + "</tbody></table>";
+  }
+
   /* ---------- graphique : evolution de la cote ---------- */
 
   function renderHistory() {
     const series = (data.history || [])
       .map((p) => ({ label: monthLabel(p.date), y: historyValue(p) }))
       .filter((p) => p.y != null);
-    const hint = document.getElementById("history-hint");
-    hint.textContent = activeVariant === "Toutes"
-      ? "toutes versions confondues"
-      : "version " + activeVariant;
+    document.getElementById("history-hint").textContent =
+      activeVariant === "Toutes"
+        ? "toutes versions confondues"
+        : "version " + activeVariant;
     document.getElementById("chart-history").innerHTML = lineChart(series);
   }
 
@@ -327,6 +404,8 @@
       { key: "year", label: "Millésime", num: true },
       { key: "variant", label: "Version", num: false },
       { key: "price", label: "Prix", num: true },
+      { key: "estimated_value", label: "Valeur est.", num: true },
+      { key: "deal_pct", label: "Écart cote", num: true },
       { key: "mileage", label: "Kilométrage", num: true },
       { key: "location", label: "Localisation", num: false },
     ];
@@ -360,6 +439,9 @@
         "<td>" + variantTag(l.variant) + "</td>" +
         '<td class="num">' + fmtUSD.format(l.price) + "</td>" +
         '<td class="num">' +
+        (l.estimated_value ? fmtUSD.format(l.estimated_value) : "—") + "</td>" +
+        '<td class="num">' + dealBadge(l.deal_pct) + "</td>" +
+        '<td class="num">' +
         (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
         "<td>" + (l.location || "—") + "</td>" +
         "</tr>";
@@ -369,7 +451,7 @@
       "<table><thead><tr>" + head + "</tr></thead><tbody>" + rows +
       "</tbody></table>";
 
-    document.querySelectorAll("thead th").forEach((th) => {
+    document.querySelectorAll("#listings-table thead th").forEach((th) => {
       th.addEventListener("click", () => {
         const key = th.getAttribute("data-key");
         if (key === sortKey) {
@@ -417,7 +499,7 @@
     const gen = dateLabel(data.generated_at);
     const sources = (data.sources || []).join(", ") || "—";
     document.getElementById("meta").innerHTML =
-      "Mise à jour&nbsp;: " + gen + "<br>Source&nbsp;: " + sources +
+      "Mise à jour&nbsp;: " + gen + "<br>Sources&nbsp;: " + sources +
       "<br>" + data.listings.length + " annonces suivies";
     document.getElementById("footer-meta").textContent =
       "Données générées le " + gen + " — " + data.listings.length +
@@ -428,6 +510,7 @@
 
   function renderAll() {
     renderKpis();
+    renderDeals();
     renderHistory();
     renderYearChart();
     renderScatter();
