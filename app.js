@@ -606,6 +606,65 @@
 
   /* ---------- bouton "Mettre a jour" en un clic ---------- */
 
+  function pad2(n) { return String(n).padStart(2, "0"); }
+  function hhmm() {
+    const d = new Date();
+    return pad2(d.getHours()) + ":" + pad2(d.getMinutes());
+  }
+
+  // Banniere de retour visible au-dessus du tableau, mise a jour selon l'etat
+  // (lancement / succes / rafraichies / erreur). Reutilisable et fermable.
+  function showUpdateBanner(state, message, actionsHref) {
+    let banner = document.getElementById("update-banner");
+    if (!banner) {
+      banner = document.createElement("div");
+      banner.id = "update-banner";
+      const main = document.querySelector("main");
+      main.insertBefore(banner, main.firstChild);
+    }
+    banner.className = "update-banner " + state;
+    const seeRun = actionsHref
+      ? '<a href="' + esc(actionsHref) + '" target="_blank" ' +
+        'rel="noopener noreferrer">Voir le run ↗</a>'
+      : "";
+    const reload = state === "refreshed"
+      ? '<button class="update-banner-reload">↻ Recharger</button>' : "";
+    banner.innerHTML =
+      '<span>' + esc(message) + '</span>' +
+      '<div class="update-banner-actions">' + seeRun + reload +
+      '<button class="update-banner-close" aria-label="Fermer">×</button>' +
+      '</div>';
+    const r = banner.querySelector(".update-banner-reload");
+    if (r) r.addEventListener("click", function () { location.reload(); });
+    banner.querySelector(".update-banner-close")
+      .addEventListener("click", function () { banner.remove(); });
+  }
+
+  // Surveille data/listings.json : quand `generated_at` change, on sait que
+  // le workflow a livre des donnees fraiches et on bascule la banniere en
+  // mode "rafraichies".
+  function pollForRefresh(initialGeneratedAt, actionsHref) {
+    const start = Date.now();
+    const timer = setInterval(function () {
+      if (Date.now() - start > 6 * 60 * 1000) {  // abandon apres 6 min
+        clearInterval(timer);
+        return;
+      }
+      fetch("data/listings.json?ts=" + Date.now(), { cache: "no-store" })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (j) {
+          if (j && j.generated_at && j.generated_at !== initialGeneratedAt) {
+            clearInterval(timer);
+            showUpdateBanner("refreshed",
+              "✓ Données rafraîchies (générées à " +
+              j.generated_at.slice(11, 16) + " UTC) — recharge la page " +
+              "pour les voir.", actionsHref);
+          }
+        })
+        .catch(function () { /* ignore les erreurs reseau temporaires */ });
+    }, 15000);
+  }
+
   // Si COTE_CONFIG.updateEndpoint est defini, le bouton declenche le workflow
   // via le Worker Cloudflare au lieu d'ouvrir la page GitHub Actions.
   function setupUpdateButton() {
@@ -613,27 +672,38 @@
     const btn = document.querySelector(".update-btn");
     if (!btn || !cfg.updateEndpoint) return;
     const original = btn.textContent.trim();
+    const actionsHref = btn.getAttribute("href");
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       if (btn.dataset.busy) return;
       btn.dataset.busy = "1";
       btn.textContent = "⏳ Lancement…";
+      showUpdateBanner("running",
+        "Demande de mise à jour en cours…", actionsHref);
       fetch(cfg.updateEndpoint, { method: "POST" })
         .then(function (r) { return r.json().catch(function () { return {}; }); })
         .then(function (d) {
           if (d && d.ok) {
-            btn.textContent = "✓ Mise à jour lancée";
+            showUpdateBanner("launched",
+              "✓ Mise à jour lancée à " + hhmm() +
+              ". Les nouvelles données apparaîtront ici dans environ 1 à 2 minutes.",
+              actionsHref);
+            pollForRefresh(
+              (window.COTE && window.COTE.generated_at) || "", actionsHref);
           } else {
             const msg = (d && (d.message || d.error)) || "Échec";
-            btn.textContent = "⚠ " + msg;
+            showUpdateBanner("warn", "⚠ " + msg, actionsHref);
           }
         })
-        .catch(function () { btn.textContent = "⚠ Échec — réessaie"; })
+        .catch(function () {
+          showUpdateBanner("warn",
+            "⚠ Échec réseau — réessaie.", actionsHref);
+        })
         .finally(function () {
           setTimeout(function () {
             btn.textContent = original;
             delete btn.dataset.busy;
-          }, 6000);
+          }, 3000);
         });
     });
   }
