@@ -182,13 +182,12 @@
     return m ? m[0].toUpperCase() : "";
   }
 
-  // VIN cliquable vers une recherche web : fonctionne pour tout VIN et fait
-  // remonter les traces publiques (annonces, ventes salvage, forums).
+  // VIN cliquable vers stat.vin : decodage du VIN et historique du vehicule.
   function vinLink(vin) {
     if (!vin) return "—";
-    return '<a href="https://www.google.com/search?q=' +
+    return '<a href="https://stat.vin/fr/vin-decoding/ferrari/458/' +
       encodeURIComponent(vin) + '" target="_blank" rel="noopener noreferrer" ' +
-      'title="Rechercher l\'historique public de ce VIN sur le web">' +
+      'title="Décoder le VIN et consulter l\'historique du véhicule (stat.vin)">' +
       esc(vin) + "</a>";
   }
 
