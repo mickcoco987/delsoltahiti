@@ -28,7 +28,10 @@ jobs:
           # Absente = la source Marketcheck est simplement ignoree.
           MARKETCHECK_API_KEY: ${{ secrets.MARKETCHECK_API_KEY }}
         run: |
-          python -m scraper --source all --verbose \
+          # --replace : chaque run = instantane reel du jour (purge l'echantillon).
+          # Si toutes les sources echouent, le scraper s'arrete avant l'ecriture
+          # (exit 1) et les donnees existantes sont conservees.
+          python -m scraper --source all --replace --verbose \
             || echo "Sources live indisponibles — donnees existantes conservees."
 
       - name: Publier les donnees actualisees
