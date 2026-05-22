@@ -2,8 +2,8 @@
 
 Exemples :
     python -m scraper --seed              # amorce les donnees (echantillon cure)
-    python -m scraper --source all        # scrape classic.com + BaT + cars.com
-    python -m scraper --source bat        # une seule source live
+    python -m scraper --source all        # classic.com + BaT + Marketcheck
+    python -m scraper --source marketcheck  # une seule source (API, cle requise)
     python -m scraper --source sample     # regenere a partir de l'echantillon
 """
 
@@ -16,8 +16,8 @@ from typing import List
 from .aggregate import build_market
 from .models import Listing
 from .sources.bring_a_trailer import BringATrailerSource
-from .sources.cars_com import CarsComSource
 from .sources.classic_com import ClassicComSource
+from .sources.marketcheck import MarketcheckSource
 from .sources.sample import SampleSource
 from .valuation import fit_model, score_listings
 from . import store
@@ -28,7 +28,7 @@ log = logging.getLogger("scraper")
 LIVE_SOURCES = {
     "classic": ClassicComSource,
     "bat": BringATrailerSource,
-    "cars": CarsComSource,
+    "marketcheck": MarketcheckSource,
 }
 SOURCES = {**LIVE_SOURCES, "sample": SampleSource}
 

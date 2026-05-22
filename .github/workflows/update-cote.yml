@@ -21,7 +21,12 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Scraper la cote (classic.com + Bring a Trailer + cars.com)
+      - name: Scraper la cote (classic.com + Bring a Trailer + Marketcheck)
+        env:
+          # Cle API Marketcheck. A definir dans :
+          # Settings > Secrets and variables > Actions > New repository secret.
+          # Absente = la source Marketcheck est simplement ignoree.
+          MARKETCHECK_API_KEY: ${{ secrets.MARKETCHECK_API_KEY }}
         run: |
           python -m scraper --source all --verbose \
             || echo "Sources live indisponibles — donnees existantes conservees."

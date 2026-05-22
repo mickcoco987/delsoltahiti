@@ -11,7 +11,8 @@ tableau de bord web affiche l'évolution de la valeur.
   liste des annonces. 100 % HTML/CSS/JS, graphiques en SVG, sans dépendance.
 - **Scraper** (`scraper/`) : outil Python (bibliothèque standard uniquement,
   aucune installation requise) qui agrège les annonces de plusieurs sources
-  (classic.com, Bring a Trailer, cars.com) et tient à jour un historique de cote.
+  (classic.com, Bring a Trailer, API Marketcheck) et tient à jour un historique
+  de cote.
 - **Moteur de valeur** (`scraper/valuation.py`) : estime la valeur de marché de
   chaque annonce et repère celles **sous la cote** (outil de sourcing).
 - **Données** (`data/`) : `listings.json`, `history.json` et `dashboard.js`
@@ -34,10 +35,10 @@ python3 -m http.server 8000
 ## Le scraper
 
 ```sh
-python3 -m scraper --source all        # toutes les sources live (défaut)
-python3 -m scraper --source bat        # une seule source : Bring a Trailer
-python3 -m scraper --source sample     # données d'échantillon curées
-python3 -m scraper --seed              # réinitialise tout depuis l'échantillon
+python3 -m scraper --source all          # toutes les sources live (défaut)
+python3 -m scraper --source marketcheck  # source API seule (clé requise)
+python3 -m scraper --source sample       # données d'échantillon curées
+python3 -m scraper --seed                # réinitialise depuis l'échantillon
 python3 -m scraper --source all --replace -v
 ```
 
@@ -48,24 +49,37 @@ daté à l'historique de cote.
 
 ### Sources de données
 
-| Source    | Description                                                        |
-|-----------|--------------------------------------------------------------------|
-| `classic` | classic.com — agrégateur de cote du marché US.                     |
-| `bat`     | Bring a Trailer — enchères et résultats de ventes réels.           |
-| `cars`    | cars.com — annonces de concessionnaires et de particuliers.        |
-| `all`     | Enchaîne les trois sources live ci-dessus (défaut).                |
-| `sample`  | Relevés de marché curés (classic.com, Edmunds, cars.com, Hagerty). |
+| Source        | Type    | Description                                          |
+|---------------|---------|------------------------------------------------------|
+| `classic`     | scrape  | classic.com — agrégateur de cote du marché US.       |
+| `bat`         | scrape  | Bring a Trailer — enchères et résultats de ventes.   |
+| `marketcheck` | **API** | Marketcheck — inventaire US (fiable, clé requise).   |
+| `all`         | —       | Enchaîne les trois sources live ci-dessus (défaut).  |
+| `sample`      | local   | Relevés de marché curés (échantillon de démarrage).  |
 
-Les sources live partagent la base `HtmlJsonSource` : elle extrait le JSON
-embarqué des pages (JSON-LD, données Next.js, autres blocs `application/json`)
-et le parcourt récursivement. Tant que les données restent dans un JSON de la
-page, le scraper résiste aux changements de mise en page. Ajouter une source =
-sous-classer `HtmlJsonSource` (`name`, `base_url`, `pages`).
+Les sources `classic` et `bat` partagent la base `HtmlJsonSource` : elle
+extrait le JSON embarqué des pages (JSON-LD, données Next.js…) et le parcourt
+récursivement, ce qui la rend résistante aux changements de mise en page.
 
-**Limite connue** : les sites d'annonces appliquent des protections anti-bot.
-Si les sources live renvoient un blocage (HTTP 403) ou aucun résultat, le
-scraper conserve les données existantes sans les écraser — utilisez alors
-`--source sample`.
+**Limite du scraping** : les sites d'annonces appliquent des protections
+anti-bot. Si une source scrapée renvoie un blocage (HTTP 403) ou aucun
+résultat, le scraper conserve les données existantes sans les écraser. La
+source **`marketcheck` (API) est la voie fiable** pour des données réelles.
+
+### Clé API Marketcheck
+
+La source `marketcheck` interroge l'API REST de Marketcheck — données
+structurées, sans blocage. Elle a besoin d'une clé :
+
+1. Crée un compte développeur sur [marketcheck.com](https://www.marketcheck.com)
+   et récupère ta clé API.
+2. **En local** : `export MARKETCHECK_API_KEY="ta_clé"` avant de lancer le scraper.
+3. **En CI** : dépôt → *Settings → Secrets and variables → Actions → New
+   repository secret*, nom `MARKETCHECK_API_KEY`. Le workflow l'injecte
+   automatiquement.
+
+Sans clé, la source `marketcheck` est simplement ignorée (le scraper ne
+plante pas). La clé n'est jamais stockée dans le dépôt.
 
 ### Détection des bonnes affaires
 
@@ -96,7 +110,8 @@ scraper/
   sources/
     base.py          Interface ListingSource
     html_json.py     Base de scraping (extraction du JSON embarqué)
-    classic_com.py · bring_a_trailer.py · cars_com.py   Sources live
+    classic_com.py · bring_a_trailer.py   Sources scrapées
+    marketcheck.py   Source API Marketcheck (clé requise)
     sample.py        Échantillon de marché curé
 .github/workflows/update-cote.yml  Mise à jour quotidienne automatique
 ```
