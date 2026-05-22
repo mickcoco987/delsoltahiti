@@ -4,11 +4,13 @@ Ces donnees servent a amorcer le projet et de repli quand la source live est
 indisponible (blocage anti-bot, environnement sans reseau...). Les fourchettes
 de prix proviennent de releves agreges du marche US (classic.com, Edmunds,
 cars.com, Hagerty) au printemps 2026.
+
+Cette source ne fournit que des annonces : l'historique de cote se construit
+uniquement a partir de mesures reelles, au fil des executions du scraper.
 """
 
 from __future__ import annotations
 
-import math
 from typing import List
 
 from ..models import Listing
@@ -54,22 +56,6 @@ _RAW_LISTINGS = [
     (2014, "Speciale", 372_000, 12_800, "San Jose, CA"),
 ]
 
-# Mois couverts par l'historique de cote amorce (15 points mensuels).
-_HISTORY_MONTHS = [
-    "2025-03-01", "2025-04-01", "2025-05-01", "2025-06-01", "2025-07-01",
-    "2025-08-01", "2025-09-01", "2025-10-01", "2025-11-01", "2025-12-01",
-    "2026-01-01", "2026-02-01", "2026-03-01", "2026-04-01", "2026-05-01",
-]
-
-# Cote moyenne par version : (valeur debut periode -> valeur actuelle).
-_HISTORY_ANCHORS = {
-    "overall": (286_000, 314_700),
-    "Italia": (196_000, 202_600),
-    "Spider": (214_000, 230_700),
-    "Speciale": (358_000, 459_200),
-    "Speciale A": (855_000, 987_500),
-}
-
 
 class SampleSource(ListingSource):
     name = "echantillon"
@@ -91,38 +77,3 @@ class SampleSource(ListingSource):
                 )
             )
         return listings
-
-    def history(self) -> list:
-        """Historique de cote mensuel amorce (tendance haussiere 2025-2026)."""
-        points = []
-        last = len(_HISTORY_MONTHS) - 1
-        for index, month in enumerate(_HISTORY_MONTHS):
-            # Progression non lineaire : hausse plus marquee sur la periode recente.
-            frac = (index / last) ** 1.25
-            # Ondulation deterministe pour un rendu de courbe realiste.
-            wobble = math.sin(index * 1.3) * 0.012
-
-            def value(key: str) -> int:
-                start, end = _HISTORY_ANCHORS[key]
-                base = start + (end - start) * frac
-                return round(base * (1 + wobble))
-
-            overall = value("overall")
-            count = round(24 + (30 - 24) * frac)
-            points.append(
-                {
-                    "date": month,
-                    "overall": {
-                        "avg_price": overall,
-                        "median_price": round(overall * 0.70),
-                        "count": count,
-                    },
-                    "by_variant": {
-                        "Italia": value("Italia"),
-                        "Spider": value("Spider"),
-                        "Speciale": value("Speciale"),
-                        "Speciale A": value("Speciale A"),
-                    },
-                }
-            )
-        return points

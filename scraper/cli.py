@@ -112,7 +112,9 @@ def main(argv=None) -> int:
 
     market = build_market(listings)
 
-    history = SampleSource().history() if args.seed else store.load_history()
+    # L'historique de cote ne se construit que sur des mesures reelles ;
+    # `--seed` repart donc d'un historique vide.
+    history = [] if args.seed else store.load_history()
     history = store.append_history(history, market)
 
     store.save(listings, history, sources=responded,
