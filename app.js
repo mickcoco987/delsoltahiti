@@ -182,12 +182,13 @@
     return m ? m[0].toUpperCase() : "";
   }
 
-  // VIN cliquable vers la fiche historique Carfax.
+  // VIN cliquable vers la verification des rappels constructeur (NHTSA).
+  // Lien officiel qui fonctionne pour tout VIN valide.
   function vinLink(vin) {
     if (!vin) return "—";
-    return '<a href="https://www.carfax.com/vehicle/' +
+    return '<a href="https://www.nhtsa.gov/recalls?vin=' +
       encodeURIComponent(vin) + '" target="_blank" rel="noopener noreferrer" ' +
-      'title="Vérifier l\'historique du véhicule sur Carfax">' +
+      'title="Vérifier les rappels constructeur du véhicule (NHTSA)">' +
       esc(vin) + "</a>";
   }
 
