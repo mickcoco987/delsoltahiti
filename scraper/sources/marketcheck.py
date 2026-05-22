@@ -8,8 +8,9 @@ Necessite une cle API (inscription developpeur sur https://www.marketcheck.com),
 fournie via la variable d'environnement MARKETCHECK_API_KEY. Sans cle, la
 source est simplement ignoree (elle ne fait pas echouer le scraper).
 
-Endpoint utilise : API v2 `search/car/active`. Si Marketcheck modifie son
-endpoint, ajustez `_ENDPOINT` ci-dessous.
+Endpoint par defaut : API v2 `search/car/active`. Surchargeable sans toucher
+au code via la variable d'environnement MARKETCHECK_ENDPOINT (utile si votre
+offre Marketcheck expose un hote different).
 """
 
 from __future__ import annotations
@@ -27,7 +28,7 @@ from .base import ListingSource
 
 log = logging.getLogger(__name__)
 
-_ENDPOINT = "https://mc-api.marketcheck.com/v2/search/car/active"
+_DEFAULT_ENDPOINT = "https://mc-api.marketcheck.com/v2/search/car/active"
 _MODELS = ["458 Italia", "458 Spider", "458 Speciale"]
 _ROWS = 50            # maximum de resultats par requete
 _MAX_PER_MODEL = 200  # plafond d'annonces collectees par modele
@@ -40,8 +41,11 @@ MAX_MILEAGE = 200_000
 class MarketcheckSource(ListingSource):
     name = "marketcheck"
 
-    def __init__(self, api_key: Optional[str] = None, timeout: int = 25):
+    def __init__(self, api_key: Optional[str] = None,
+                 endpoint: Optional[str] = None, timeout: int = 25):
         self.api_key = api_key or os.environ.get("MARKETCHECK_API_KEY", "")
+        self.endpoint = endpoint or os.environ.get(
+            "MARKETCHECK_ENDPOINT", _DEFAULT_ENDPOINT)
         self.timeout = timeout
 
     def fetch(self) -> List[Listing]:
@@ -73,7 +77,7 @@ class MarketcheckSource(ListingSource):
                 "start": start,
             }
             try:
-                payload = self._get_json(_ENDPOINT + "?" + urlencode(params))
+                payload = self._get_json(self.endpoint + "?" + urlencode(params))
             except (HTTPError, URLError, OSError, ValueError) as exc:
                 log.warning("marketcheck : echec de la requete '%s' (%s)",
                             model, exc)

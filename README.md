@@ -81,6 +81,10 @@ structurées, sans blocage. Elle a besoin d'une clé :
 Sans clé, la source `marketcheck` est simplement ignorée (le scraper ne
 plante pas). La clé n'est jamais stockée dans le dépôt.
 
+L'endpoint REST par défaut (`mc-api.marketcheck.com/v2/search/car/active`) peut
+être surchargé sans toucher au code via la variable `MARKETCHECK_ENDPOINT`,
+si ton offre Marketcheck expose un hôte différent.
+
 ### Détection des bonnes affaires
 
 `scraper/valuation.py` ajuste une **régression log-linéaire** sur le corpus
