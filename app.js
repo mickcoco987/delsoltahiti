@@ -604,6 +604,40 @@
       " annonces (" + ((data.sources || []).join(", ") || "—") + ").";
   }
 
+  /* ---------- bouton "Mettre a jour" en un clic ---------- */
+
+  // Si COTE_CONFIG.updateEndpoint est defini, le bouton declenche le workflow
+  // via le Worker Cloudflare au lieu d'ouvrir la page GitHub Actions.
+  function setupUpdateButton() {
+    const cfg = window.COTE_CONFIG || {};
+    const btn = document.querySelector(".update-btn");
+    if (!btn || !cfg.updateEndpoint) return;
+    const original = btn.textContent.trim();
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (btn.dataset.busy) return;
+      btn.dataset.busy = "1";
+      btn.textContent = "⏳ Lancement…";
+      fetch(cfg.updateEndpoint, { method: "POST" })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (d) {
+          if (d && d.ok) {
+            btn.textContent = "✓ Mise à jour lancée";
+          } else {
+            const msg = (d && (d.message || d.error)) || "Échec";
+            btn.textContent = "⚠ " + msg;
+          }
+        })
+        .catch(function () { btn.textContent = "⚠ Échec — réessaie"; })
+        .finally(function () {
+          setTimeout(function () {
+            btn.textContent = original;
+            delete btn.dataset.busy;
+          }, 6000);
+        });
+    });
+  }
+
   /* ---------- rendu global ---------- */
 
   function renderAll() {
@@ -618,4 +652,5 @@
   renderMeta();
   renderPills();
   renderAll();
+  setupUpdateButton();
 })();

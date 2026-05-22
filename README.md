@@ -108,10 +108,28 @@ Le workflow `.github/workflows/update-cote.yml` lance le scraper chaque jour
 GitHub Actions disposent d'un accès réseau, contrairement à certains
 environnements de développement.
 
+### Bouton « Mettre à jour » en un clic (optionnel)
+
+Le tableau de bord affiche un bouton **« ↻ Mettre à jour les données »**. Par
+défaut, il ouvre la page GitHub Actions du workflow (un clic là-bas suffit
+pour lancer). Pour un vrai déclenchement *depuis* la page, un petit
+**Cloudflare Worker** (`worker/update-cote-worker.js`) sert d'intermédiaire :
+
+1. Crée un jeton GitHub *fine-grained* limité à `mickcoco987/delsoltahiti`
+   avec la permission **Actions : Read and write**.
+2. Déploie le Worker (tableau de bord Cloudflare → coller le fichier, ou
+   `wrangler deploy` depuis `worker/`) et ajoute un **secret** `GH_TOKEN`
+   avec ton jeton.
+3. Recopie l'URL publique du Worker dans `config.js` (`updateEndpoint`).
+
+Le bouton lance alors le workflow en un clic via `fetch()`. Un garde-fou
+serveur refuse une relance si un run est déjà en cours ou date de moins de
+5 min. Sans configuration, le bouton garde son comportement de lien.
+
 ## Structure
 
 ```
-index.html, styles.css, app.js   Tableau de bord web
+index.html, styles.css, app.js · config.js   Tableau de bord web
 data/                            listings.json · history.json · dashboard.js
 scraper/
   models.py        Modèle Listing + utilitaires
@@ -125,6 +143,9 @@ scraper/
     classic_com.py · bring_a_trailer.py   Sources scrapées
     marketcheck.py   Source API Marketcheck (clé requise)
     sample.py        Échantillon de marché curé
+worker/
+  update-cote-worker.js   Cloudflare Worker : déclenche le workflow en un clic
+  wrangler.toml           Config minimale pour `wrangler deploy`
 .github/workflows/update-cote.yml  Mise à jour quotidienne automatique
 ```
 
