@@ -358,6 +358,22 @@ tbody td a:hover { text-decoration: underline; }
 .deal.neutral { background: rgba(179, 168, 156, 0.14); color: var(--text-dim); }
 .deal.over { background: rgba(255, 91, 91, 0.15); color: #ff8b8b; }
 
+tbody td.thumb {
+  width: 84px;
+  padding: 4px 6px;
+  text-align: center;
+  color: var(--text-faint);
+}
+
+tbody td.thumb img {
+  width: 76px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  background: var(--bg-elev-2);
+}
+
 tbody td.vin {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   font-size: 0.74rem;

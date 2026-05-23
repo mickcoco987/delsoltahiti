@@ -199,6 +199,15 @@
       dealLabel(pct) + '">' + pctText(pct) + "</span>";
   }
 
+  /* ---------- vignette photo ---------- */
+
+  // Petite cellule image au debut des tableaux. "—" si pas d'URL.
+  function thumbCell(l) {
+    if (!l.image_url) return '<td class="thumb">—</td>';
+    return '<td class="thumb"><img src="' + esc(l.image_url) +
+      '" loading="lazy" alt="' + esc(l.title || "") + '" /></td>';
+  }
+
   /* ---------- VIN et avis ---------- */
 
   const VIN_RE = /ZFF[0-9A-HJ-NPR-Z]{14}/i;
@@ -324,6 +333,7 @@
 
     const rows = deals.map((l) => {
       return "<tr>" +
+        thumbCell(l) +
         '<td class="num">' + linkedYear(l) + "</td>" +
         "<td>" + variantTag(l.variant) +
         (isNew(l.posted_at) ? " " + newBadge() : "") + "</td>" +
@@ -339,6 +349,7 @@
 
     document.getElementById("deals-list").innerHTML =
       "<table><thead><tr>" +
+      "<th></th>" +
       '<th class="num">Millésime</th><th>Version</th>' +
       '<th class="num">Prix demandé</th><th class="num">Valeur estimée</th>' +
       '<th class="num">Écart</th><th class="num">Kilométrage</th>' +
@@ -519,6 +530,7 @@
   function renderTable() {
     const list = filteredListings().slice();
     const cols = [
+      { key: "image_url", label: "", num: false, sortable: false },
       { key: "year", label: "Millésime", num: true },
       { key: "variant", label: "Version", num: false },
       { key: "price", label: "Prix", num: true },
@@ -563,6 +575,7 @@
       const vin = vinOf(l);
       const avis = avisFor(l);
       return "<tr>" +
+        thumbCell(l) +
         '<td class="num">' + linkedYear(l) + "</td>" +
         "<td>" + variantTag(l.variant) + "</td>" +
         '<td class="num">' + fmtUSD.format(l.price) + "</td>" +

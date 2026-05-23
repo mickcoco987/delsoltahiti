@@ -193,6 +193,12 @@ class EbayMotorsSource(ListingSource):
                     mileage = m
 
         location = (raw.get("itemLocation") or {}).get("country") or ""
+
+        image_url = ""
+        img = raw.get("image")
+        if isinstance(img, dict):
+            image_url = str(img.get("imageUrl") or "")
+
         return Listing(
             year=year,
             variant=classify_variant(title),
@@ -204,5 +210,6 @@ class EbayMotorsSource(ListingSource):
             location=location,
             status="for_sale",
             vin=vin,
+            image_url=image_url,
             kind="auction",
         )
