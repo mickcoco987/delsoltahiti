@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Le Grimoire — Académie des Sorciers</title>
+  <title>Mon Profil — Snap Academy</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,34 +12,34 @@
 
   <div class="container">
 
-    <h1>Le Grimoire Sacré</h1>
-    <p class="subtitle">5 pages à retrouver — 5 épreuves à vaincre</p>
+    <h1>📱 Mon Profil</h1>
+    <p class="subtitle">5 Memories à restaurer — 5 épreuves à réussir</p>
 
     <div id="progression" class="progression"></div>
 
     <div class="parchment">
       <p id="intro-dashboard">
-        Bienvenue dans le couloir des épreuves. Chaque salle protège une page
-        du Grimoire et te donnera un <strong>mot magique</strong> à noter.
-        Quand tu auras les 5 mots, le sortilège final révèlera le trésor !
+        Bienvenue sur ton profil. Chaque épreuve te rend une <strong>Memory perdue</strong>
+        et te donne un <strong>mot-clé</strong> à noter. Quand tu auras les 5,
+        la Story Finale révélera le trésor !
       </p>
 
       <div class="liste-epreuves" id="liste-epreuves"></div>
 
       <div id="zone-final" class="hidden">
-        <hr style="margin:2rem 0;border:none;border-top:2px solid #d4a017;">
+        <hr style="margin:1.5rem 0;border:none;border-top:2px solid var(--snap-yellow);">
         <div class="victoire">
-          <h2>🌟 Le Grimoire est complet !</h2>
-          <p>Tu as récupéré toutes les pages. Il est temps de lancer le sortilège final.</p>
+          <h2>🌟 Toutes tes Memories sont là !</h2>
+          <p>Tu as récupéré tout ce que Le Ghoster avait effacé. Lance ta Story Finale !</p>
           <div class="btn-row">
-            <a href="epreuves/final.html" class="btn">🪄 Lancer le sortilège</a>
+            <a href="epreuves/final.html" class="btn">📸 Publier ma Story Finale</a>
           </div>
         </div>
       </div>
     </div>
 
     <p class="center" style="font-size:0.85rem;opacity:0.6;">
-      <a href="#" onclick="reset();return false;" style="color:#c9b87a;">↺ Tout recommencer (nouvelle équipe)</a>
+      <a href="#" onclick="reset();return false;" style="color:var(--ink-soft);">↺ Tout recommencer (nouvelle team)</a>
     </p>
 
   </div>
@@ -50,16 +50,17 @@
     const etat = MM.getEtat();
 
     // Si pas d'équipe → retour accueil
-    if (!etat.equipeNom || !etat.maison) {
+    if (!etat.equipeNom || !etat.team) {
       window.location.href = 'index.html';
     }
 
     // Intro personnalisée
     if (etat.equipeNom) {
       document.getElementById('intro-dashboard').innerHTML =
-        `Bienvenue <strong>${etat.equipeNom}</strong>, sorciers de la Maison ${MM.MAISONS[etat.maison].nom} ${MM.MAISONS[etat.maison].emoji} !<br><br>
-        Chaque salle protège une page du Grimoire et te donnera un <strong>mot magique</strong>
-        à noter sur ton parchemin. Quand tu auras les 5 mots, le sortilège final révèlera la cachette du trésor !`;
+        `Bienvenue <strong>${etat.equipeNom}</strong>, Team ${MM.TEAMS[etat.team].nom} ${MM.TEAMS[etat.team].emoji} !<br><br>
+        Chaque épreuve te rend une <strong>Memory perdue</strong> et te donne un
+        <strong>mot-clé</strong> à noter sur ton snap-indice. Quand tu auras les 5,
+        la Story Finale révélera la cachette du trésor !`;
     }
 
     // Liste des épreuves
@@ -84,7 +85,7 @@
     }
 
     function reset() {
-      if (confirm("Effacer toute la progression et créer une nouvelle équipe ?")) {
+      if (confirm("Effacer toute la progression et créer une nouvelle team ?")) {
         MM.resetEtat();
         window.location.href = 'index.html';
       }
