@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Fiches des 5 énigmes — Le Mystère du Compte Piraté</title>
+  <style>
+    @page { size: A4 portrait; margin: 1.2cm; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1A1A1A;
+      background: #ddd;
+      padding: 1rem;
+    }
+
+    .controls {
+      background: linear-gradient(135deg, #DD2A7B, #8134AF);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      margin: 0 auto 2rem;
+      border-radius: 12px;
+      max-width: 800px;
+    }
+    .controls button {
+      background: #fff;
+      color: #DD2A7B;
+      border: none;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .controls p { margin: 0.4rem 0; }
+
+    /* Chaque fiche occupe une page A4 */
+    .fiche {
+      max-width: 19cm;
+      margin: 0 auto 1cm;
+      background: #fff;
+      padding: 1.4cm 1.5cm;
+      page-break-after: always;
+      page-break-inside: avoid;
+      min-height: 26cm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .fiche:last-child { page-break-after: auto; }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .badge.insta  { background: linear-gradient(135deg, #F58529, #DD2A7B 50%, #8134AF); color:#fff; }
+    .badge.snap   { background: #FFFC00; color: #1A1A1A; border: 2px solid #1A1A1A; }
+    .badge.tiktok { background: #000; color: #fff; border: 2px solid #25F4EE; box-shadow: 2px 2px 0 #FE2C55; }
+    .badge.x      { background: #000; color: #fff; }
+    .badge.yt     { background: #000; color: #fff; border-left: 8px solid #FF0000; }
+
+    .head-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+    .e-num {
+      color: #888;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+      line-height: 1.15;
+    }
+    .sous {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 1.3rem;
+      font-weight: 600;
+    }
+
+    h2 { font-size: 1.15rem; font-weight: 800; margin: 1rem 0 0.4rem; }
+    p, li { line-height: 1.55; }
+
+    .consigne {
+      background: #FAFAFA;
+      border-left: 4px solid #DD2A7B;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+
+    .indice {
+      background: rgba(255,215,0,0.18);
+      border-left: 4px solid #FFD700;
+      padding: 0.65rem 0.9rem;
+      border-radius: 8px;
+      margin: 0.8rem 0;
+      font-size: 0.92rem;
+      font-style: italic;
+    }
+
+    /* Réponse ligne */
+    .answer-line {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin: 0.8rem 0;
+      font-size: 1.05rem;
+    }
+    .answer-line .label {
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .answer-line .line {
+      flex: 1;
+      border-bottom: 2.5px solid #1A1A1A;
+      min-height: 1.6rem;
+    }
+
+    /* Récompense en bas de fiche */
+    .reward {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 2px dashed #aaa;
+      text-align: center;
+    }
+    .reward .gift {
+      display: inline-block;
+      padding: 0.7rem 1.4rem;
+      background: linear-gradient(135deg, #FFD700, #FF9F1C);
+      border-radius: 999px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 14px rgba(255,215,0,0.4);
+      color: #1A1A1A;
+    }
+    .reward .pis {
+      color: #555;
+      font-size: 0.85rem;
+      margin-top: 0.4rem;
+    }
+
+    /* ========== ÉNIGME 1 : devinettes ========== */
+    .devinette {
+      border: 1.5px solid #ddd;
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      margin: 0.7rem 0;
+      background: #FAFAFA;
+    }
+    .devinette .lettre {
+      display: inline-block;
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, #F58529, #DD2A7B);
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-right: 0.6rem;
+    }
+    .devinette p { margin: 0.4rem 0; }
+    .devinette .answer-line { margin: 0.6rem 0 0; }
+
+    /* ========== ÉNIGME 2 : emojis ========== */
+    .emoji-line {
+      background: #FFFC00;
+      color: #1A1A1A;
+      border: 3px solid #1A1A1A;
+      border-radius: 16px;
+      padding: 1.1rem;
+      text-align: center;
+      font-size: 2.4rem;
+      letter-spacing: 0.4rem;
+      margin: 1rem 0;
+    }
+    .legende {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem;
+      margin: 0.6rem 0 1rem;
+    }
+    .legende div {
+      background: #FAFAFA;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 0.55rem 0.7rem;
+      text-align: center;
+      font-size: 0.92rem;
+    }
+    .legende strong { display: block; font-size: 1.4rem; margin-bottom: 0.2rem; }
+
+    /* ========== ÉNIGME 3 : tuiles hashtag ========== */
+    .tuiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .tuile {
+      width: 1.5cm;
+      height: 1.8cm;
+      background: #000;
+      color: #25F4EE;
+      border: 2.5px solid #25F4EE;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.5rem;
+      box-shadow: 3px 3px 0 #FE2C55;
+    }
+    .zones-essai {
+      display: flex;
+      justify-content: center;
+      gap: 0.35rem;
+      margin: 0.6rem 0 1rem;
+      flex-wrap: wrap;
+    }
+    .zones-essai .case {
+      width: 1.2cm;
+      height: 1.5cm;
+      border: 2px dashed #888;
+      border-radius: 8px;
+    }
+
+    /* ========== ÉNIGME 4 : profil ========== */
+    .profil {
+      background: linear-gradient(180deg, #FAFAFA, #fff);
+      border: 1.5px solid #ddd;
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+      margin: 0.9rem 0;
+    }
+    .profil-head {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 0.5rem;
+    }
+    .avatar {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #F58529, #8134AF);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      color: #fff;
+    }
+    .handle { font-weight: 800; font-size: 1.05rem; }
+    .stats { color: #888; font-size: 0.82rem; }
+    .bio {
+      margin-top: 0.5rem;
+      padding: 0.6rem 0.8rem;
+      background: rgba(0,0,0,0.04);
+      border-radius: 10px;
+      font-size: 0.95rem;
+      white-space: pre-wrap;
+      line-height: 1.55;
+    }
+    .choix-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin: 0.6rem 0 1rem;
+    }
+    .choix-row .opt {
+      border: 1.5px solid #aaa;
+      border-radius: 10px;
+      padding: 0.5rem 0.7rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: #fff;
+    }
+    .checkbox {
+      display: inline-block;
+      width: 14px; height: 14px;
+      border: 2px solid #1A1A1A;
+      border-radius: 3px;
+      vertical-align: -2px;
+      margin-right: 0.35rem;
+    }
+
+    /* ========== ÉNIGME 5 : quiz ========== */
+    .question {
+      border-left: 4px solid #DD2A7B;
+      padding-left: 0.9rem;
+      margin: 0.9rem 0;
+    }
+    .question .q {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .question .options { padding-left: 1rem; font-size: 0.95rem; }
+    .question .options div { margin: 0.35rem 0; }
+
+    @media print {
+      .controls { display: none; }
+      body { background: white; padding: 0; }
+      .fiche { box-shadow: none; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <p>🧩 <strong>Fiches des 5 énigmes</strong></p>
+    <p style="font-size:0.9rem;opacity:0.92;">1 page A4 par énigme — imprime tout (5 pages) puis pose-les sur la table au fur et à mesure.</p>
+    <button onclick="window.print()">🖨️ Imprimer les 5 fiches</button>
+  </div>
+
+  <!-- ====================== ÉNIGME 1 ====================== -->
+  <div class="fiche">
+    <div class="head-row">
+      <span class="badge insta">📸 Instagram</span>
+      <span class="e-num">Énigme 1 / 5</span>
+    </div>
+
+    <h1>Les Logos cachés</h1>
+    <p class="sous">~ Devine le réseau social qui se cache derrière chaque indice ~</p>
+
+    <div class="consigne">
+      Le pirate a effacé les noms de 3 réseaux sociaux. Lis chaque devinette
+      et <strong>écris le nom du réseau</strong> dans la case.
+    </div>
+
+    <div class="devinette">
+      <p><span class="lettre">A</span><strong>Mon logo est un fantôme blanc</strong> sur fond jaune.
+      Mes photos s'autodétruisent au bout de quelques secondes.</p>
+      <div class="answer-line">
+        <span class="label">Réponse :</span>
+        <span class="line"></span>
+      </div>
+    </div>
+
+    <div class="devinette">
+      <p><span class="lettre">B</span>J'étais un petit <strong>oiseau bleu</strong> nommé d'après
+      un gazouillis... mais un certain Elon m'a transformé en lettre noire.</p>
+      <div class="answer-line">
+        <span class="label">Réponse :</span>
+        <span class="line"></span>
+      </div>
+    </div>
+
+    <div class="devinette">
+      <p><span class="lettre">C</span>Une <strong>note de musique blanche</strong>, des vidéos courtes
+      qui défilent à l'infini, et un FYP qui te connaît mieux que ta meilleure amie.</p>
+      <div class="answer-line">
+        <span class="label">Réponse :</span>
+        <span class="line"></span>
+      </div>
+    </div>
+
+    <div class="indice">
+      💡 Pas besoin de majuscules ni d'accents. Les 3 réseaux à trouver font partie des plus connus au monde.
+    </div>
+
+    <div class="reward">
+      <div class="gift">🎁 Récompense : la carte-lettre &nbsp; V</div>
+      <div class="pis">Quand les 3 devinettes sont trouvées, l'animateur·rice remet la carte.</div>
+    </div>
+  </div>
+
+  <!-- ====================== ÉNIGME 2 ====================== -->
+  <div class="fiche">
+    <div class="head-row">
+      <span class="badge snap">👻 Snapchat</span>
+      <span class="e-num">Énigme 2 / 5</span>
+    </div>
+
+    <h1>Le Message en emojis</h1>
+    <p class="sous">~ Décode le dernier Snap mystérieux de @LunaStar ~</p>
+
+    <div class="consigne">
+      Un dernier Snap de <strong>@LunaStar</strong> contient un indice — mais le pirate
+      l'a écrit uniquement en emojis. Décode-le pour trouver <strong>le mot caché</strong>.
+    </div>
+
+    <div class="emoji-line">🎬 &nbsp; + &nbsp; 🎵 &nbsp; + &nbsp; 🚀 &nbsp; = &nbsp; ❓</div>
+
+    <h2>La légende des emojis</h2>
+    <div class="legende">
+      <div><strong>🎬</strong>vidéo</div>
+      <div><strong>🎵</strong>musique</div>
+      <div><strong>🚀</strong>cartonne /<br>explose</div>
+    </div>
+
+    <p style="margin-top:0.4rem;">Quand une <strong>vidéo</strong> avec de la <strong>musique cartonne</strong>
+    et qu'elle est partagée des millions de fois sur les réseaux, on dit qu'elle devient...</p>
+
+    <div class="answer-line">
+      <span class="label">Mot caché (5 lettres) :</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="indice">
+      💡 Ça commence par <strong>V</strong> et finit par <strong>L</strong>.
+      Pense au mot qu'on utilise pour décrire les vidéos vues par des millions de personnes en quelques heures.
+    </div>
+
+    <div class="reward">
+      <div class="gift">🎁 Récompense : la carte-lettre &nbsp; I</div>
+      <div class="pis">À remettre quand le bon mot est trouvé.</div>
+    </div>
+  </div>
+
+  <!-- ====================== ÉNIGME 3 ====================== -->
+  <div class="fiche">
+    <div class="head-row">
+      <span class="badge tiktok">🎵 TikTok</span>
+      <span class="e-num">Énigme 3 / 5</span>
+    </div>
+
+    <h1>Le Hashtag brisé</h1>
+    <p class="sous">~ Reconstitue le hashtag-signature de @LunaStar ~</p>
+
+    <div class="consigne">
+      Le pirate a mélangé les 8 lettres du <strong>hashtag-signature</strong> de @LunaStar.
+      Remets-les dans l'ordre — c'est un mot anglais bien connu des accros à TikTok.
+    </div>
+
+    <h2>Les 8 lettres mélangées</h2>
+
+    <div class="tuiles">
+      <div class="tuile">N</div>
+      <div class="tuile">D</div>
+      <div class="tuile">I</div>
+      <div class="tuile">N</div>
+      <div class="tuile">G</div>
+      <div class="tuile">T</div>
+      <div class="tuile">R</div>
+      <div class="tuile">E</div>
+    </div>
+
+    <h2>Ta tentative</h2>
+    <div class="zones-essai">
+      <div class="case"></div>
+      <div class="case"></div>
+      <div class="case"></div>
+      <div class="case"></div>
+      <div class="case"></div>
+      <div class="case"></div>
+      <div class="case"></div>
+      <div class="case"></div>
+    </div>
+
+    <div class="answer-line">
+      <span class="label">Réponse finale (avec le #) :</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="indice">
+      💡 En français, ça veut dire « <strong>tendance</strong> ». Quand une vidéo est partout sur
+      TikTok, on dit qu'elle est en... Le <strong>#</strong> est optionnel pour la réponse.
+    </div>
+
+    <div class="reward">
+      <div class="gift">🎁 Récompense : la carte-lettre &nbsp; R</div>
+      <div class="pis">À remettre quand le hashtag est reconstitué.</div>
+    </div>
+  </div>
+
+  <!-- ====================== ÉNIGME 4 ====================== -->
+  <div class="fiche">
+    <div class="head-row">
+      <span class="badge insta">📷 Instagram</span>
+      <span class="e-num">Énigme 4 / 5</span>
+    </div>
+
+    <h1>Le Profil mystère</h1>
+    <p class="sous">~ Démasque @ghost_404, le compte louche que suit le pirate ~</p>
+
+    <div class="consigne">
+      Le pirate utilise un compte avec une bio cryptique. Lis la bio puis <strong>devine
+      quel est son réseau social préféré</strong>. Coche une seule case.
+    </div>
+
+    <div class="profil">
+      <div class="profil-head">
+        <div class="avatar">🥷</div>
+        <div>
+          <div class="handle">@ghost_404 &nbsp;✓</div>
+          <div class="stats">∞ followers · 0 abonnement · 0 post</div>
+        </div>
+      </div>
+      <div class="bio">📍 Quelque part dans le cloud
+🔒 Mes photos disparaissent en 10 secondes
+👻 Mon emblème est jaune et flotte
+🔥 Je ne rate jamais un streak
+📸 Mes amis savent où je suis grâce à la Map</div>
+    </div>
+
+    <h2>Sur quel réseau passe-t-il le plus clair de son temps ?</h2>
+
+    <div class="choix-row">
+      <div class="opt"><span class="checkbox"></span>📷 Instagram</div>
+      <div class="opt"><span class="checkbox"></span>👻 Snapchat</div>
+      <div class="opt"><span class="checkbox"></span>🎵 TikTok</div>
+      <div class="opt"><span class="checkbox"></span>📘 Facebook</div>
+    </div>
+
+    <div class="indice">
+      💡 <strong>3 indices</strong> de la bio pointent vers le même réseau :
+      le <em>fantôme</em>, le <em>streak</em>, la <em>Map</em>.
+    </div>
+
+    <div class="reward">
+      <div class="gift">🎁 Récompense : la carte-lettre &nbsp; A</div>
+      <div class="pis">À remettre quand le bon réseau est coché.</div>
+    </div>
+  </div>
+
+  <!-- ====================== ÉNIGME 5 ====================== -->
+  <div class="fiche">
+    <div class="head-row">
+      <span class="badge x">𝕏 Twitter / X</span>
+      <span class="e-num">Énigme 5 / 5</span>
+    </div>
+
+    <h1>Quiz culture social</h1>
+    <p class="sous">~ La dernière épreuve du pirate : 3 questions, sans faute ! ~</p>
+
+    <div class="consigne">
+      Trois questions sur la culture des réseaux sociaux.
+      <strong>Sans faute</strong>, le pirate t'offre la dernière lettre.
+      Entoure la bonne réponse.
+    </div>
+
+    <div class="question">
+      <div class="q">1. Quel réseau social a inventé le concept de « story »
+        qui s'efface au bout de 24h ?</div>
+      <div class="options">
+        <div>A) &nbsp;Instagram</div>
+        <div>B) &nbsp;Snapchat</div>
+        <div>C) &nbsp;Facebook</div>
+        <div>D) &nbsp;TikTok</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q">2. Avant de passer à 280, combien de caractères maximum
+        un tweet pouvait-il contenir ?</div>
+      <div class="options">
+        <div>A) &nbsp;100</div>
+        <div>B) &nbsp;140</div>
+        <div>C) &nbsp;160</div>
+        <div>D) &nbsp;200</div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="q">3. Que désigne le sigle « FYP » sur TikTok ?</div>
+      <div class="options">
+        <div>A) &nbsp;Find Your People</div>
+        <div>B) &nbsp;Followers Yearly Plan</div>
+        <div>C) &nbsp;For You Page</div>
+        <div>D) &nbsp;Free Your Phone</div>
+      </div>
+    </div>
+
+    <div class="indice">
+      💡 Une seule erreur ? Le quiz se rejoue ! Mais l'animateur·rice peut t'autoriser
+      <strong>un indice gratuit</strong> si tu sèches vraiment.
+    </div>
+
+    <div class="reward">
+      <div class="gift">🎁 Récompense : la carte-lettre &nbsp; L</div>
+      <div class="pis">La dernière lettre — il ne reste plus qu'à former le mot magique !</div>
+    </div>
+  </div>
+
+</body>
+</html>

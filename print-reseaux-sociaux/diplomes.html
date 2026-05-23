@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Diplômes Détective des Réseaux Sociaux</title>
+  <style>
+    @page { size: A4 landscape; margin: 1cm; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1A1A1A;
+      background: #ddd;
+      padding: 1rem;
+    }
+
+    .controls {
+      background: linear-gradient(135deg, #F58529, #DD2A7B 50%, #8134AF);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      margin: 0 auto 1.5rem;
+      border-radius: 12px;
+      max-width: 1000px;
+    }
+    .controls button {
+      background: #fff;
+      color: #DD2A7B;
+      border: none;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .controls p { margin: 0.4rem 0; }
+
+    .diplome {
+      width: 27cm;
+      height: 19cm;
+      max-width: 100%;
+      margin: 0 auto 1cm;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(245,133,41,0.15) 0%, transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(129,52,175,0.15) 0%, transparent 40%),
+        #FFFCF5;
+      border: 8px solid;
+      border-image: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF, #515BD4) 1;
+      padding: 1.5cm 2cm;
+      position: relative;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .diplome:last-child { page-break-after: auto; }
+
+    /* Coins déco */
+    .corner {
+      position: absolute;
+      width: 80px; height: 80px;
+      font-size: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.85;
+    }
+    .corner.tl { top: 0.6cm; left: 0.6cm; }
+    .corner.tr { top: 0.6cm; right: 0.6cm; }
+    .corner.bl { bottom: 0.6cm; left: 0.6cm; }
+    .corner.br { bottom: 0.6cm; right: 0.6cm; }
+
+    .pretitle {
+      color: #8134AF;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      margin-top: 0.5cm;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      color: #1A1A1A;
+      margin: 0.3cm 0 0.2cm;
+      text-align: center;
+      line-height: 1.1;
+    }
+
+    .accroche {
+      text-align: center;
+      color: #555;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.6cm;
+    }
+
+    .est-decerne {
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      margin-top: 0.4cm;
+      font-size: 1rem;
+    }
+
+    .nom-line {
+      margin: 0.5cm 0;
+      width: 80%;
+      border-bottom: 3px solid #1A1A1A;
+      min-height: 2.2cm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+      font-size: 2.6rem;
+      color: #1A1A1A;
+    }
+    .nom-line .placeholder {
+      color: #ccc;
+      font-style: italic;
+    }
+
+    .pourquoi {
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 22cm;
+      margin: 0.3cm auto 0.4cm;
+      color: #1A1A1A;
+    }
+    .pourquoi strong { color: #DD2A7B; }
+
+    .badges-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.5cm;
+      margin: 0.3cm 0;
+    }
+    .mini-badge {
+      background: linear-gradient(135deg, #FFD700, #FF9F1C);
+      color: #1A1A1A;
+      width: 1.4cm;
+      height: 1.4cm;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.2rem;
+      border: 2px solid #1A1A1A;
+    }
+
+    .footer-row {
+      margin-top: auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1cm;
+    }
+
+    .sig-block {
+      flex: 1;
+      text-align: center;
+    }
+    .sig-block .line {
+      border-bottom: 2px solid #1A1A1A;
+      height: 1.4cm;
+      margin-bottom: 0.2cm;
+    }
+    .sig-block .label {
+      font-size: 0.82rem;
+      color: #555;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .seal {
+      width: 3.2cm;
+      height: 3.2cm;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #F58529, #DD2A7B 50%, #8134AF);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+      transform: rotate(-8deg);
+    }
+    .seal .big {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      margin: 0.1cm 0;
+    }
+
+    @media print {
+      .controls { display: none; }
+      body { padding: 0; background: white; }
+      .diplome { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <p>🏆 <strong>Diplôme Détective des Réseaux Sociaux</strong></p>
+    <p style="font-size:0.9rem;opacity:0.92;">Une page A4 paysage par enfant — écris le prénom à la main ou édite avant impression.<br>Cette page contient un diplôme. Duplique-la (Ctrl+P → plusieurs copies) ou clique pour modifier le prénom de chacun.</p>
+    <button onclick="window.print()">🖨️ Imprimer ce diplôme</button>
+  </div>
+
+  <div class="diplome" contenteditable="true">
+    <div class="corner tl">🕵️</div>
+    <div class="corner tr">📸</div>
+    <div class="corner bl">🎵</div>
+    <div class="corner br">👻</div>
+
+    <div class="pretitle">★ Académie des Réseaux Sociaux ★</div>
+    <h1>Diplôme de Détective<br>des Réseaux Sociaux</h1>
+    <p class="accroche">~ Décerné le jour où le mystère a été résolu ~</p>
+
+    <p class="est-decerne">Ce diplôme est officiellement décerné à</p>
+
+    <div class="nom-line">
+      <span class="placeholder">[ Prénom de l'enfant ]</span>
+    </div>
+
+    <p class="pourquoi">
+      Pour avoir, avec brio et perspicacité, démasqué le pirate du compte de
+      <strong>@LunaStar</strong> en résolvant les <strong>5 énigmes</strong>
+      des réseaux sociaux et en reconstituant le mot magique
+      <strong>VIRAL</strong>.
+    </p>
+
+    <div class="badges-row">
+      <div class="mini-badge">V</div>
+      <div class="mini-badge">I</div>
+      <div class="mini-badge">R</div>
+      <div class="mini-badge">A</div>
+      <div class="mini-badge">L</div>
+    </div>
+
+    <div class="footer-row">
+
+      <div class="sig-block">
+        <div class="line"></div>
+        <div class="label">Date</div>
+      </div>
+
+      <div class="seal">
+        <div>★ OFFICIEL ★</div>
+        <div class="big">VIRAL</div>
+        <div>Académie RS</div>
+      </div>
+
+      <div class="sig-block">
+        <div class="line"></div>
+        <div class="label">Signature de l'animateur·rice</div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
