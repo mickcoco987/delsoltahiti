@@ -1,0 +1,454 @@
+/* ===========================================================
+   Snap Academy — L'anniversaire de Manaaki
+   Style : Snapchat (jaune ghost, cartes rondes, sans-serif)
+   =========================================================== */
+
+:root {
+  --snap-yellow: #FFFC00;
+  --snap-yellow-soft: #FFF59D;
+  --snap-yellow-dark: #FFD600;
+  --snap-bg: #FAFAFA;
+  --snap-card: #FFFFFF;
+  --ink: #1A1A1A;
+  --ink-soft: #555555;
+  --ink-light: #888888;
+  --line: #E0E0E0;
+  --line-soft: #F0F0F0;
+  --pink: #E91E63;
+  --purple: #A569BD;
+  --cyan: #00BCD4;
+  --orange: #FF6B35;
+  --green: #4CAF50;
+  --red: #F44336;
+  --team-ghost: #FFFC00;
+  --team-streak: #FF6B35;
+  --team-story: #A569BD;
+  --team-map: #00BCD4;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir,
+               'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255,252,0,0.10) 0%, transparent 35%),
+    radial-gradient(circle at 90% 80%, rgba(165,105,189,0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(0,188,212,0.06) 0%, transparent 50%),
+    var(--snap-bg);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Titres */
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  text-align: center;
+  margin: 1rem 0 0.5rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+  margin: 1.5rem 0 1rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  font-weight: 500;
+}
+
+/* Carte snap : conteneur principal des contenus */
+.parchment {
+  background: var(--snap-card);
+  color: var(--ink);
+  padding: 1.5rem;
+  border-radius: 18px;
+  box-shadow:
+    0 1px 0 rgba(0,0,0,0.04),
+    0 4px 14px rgba(0,0,0,0.06),
+    0 12px 32px rgba(0,0,0,0.04);
+  margin: 1rem 0;
+  position: relative;
+  border: 1px solid var(--line-soft);
+}
+
+.parchment p { margin: 0.7rem 0; line-height: 1.55; }
+.parchment strong { color: var(--ink); font-weight: 700; }
+
+/* Boutons style Snap */
+.btn {
+  display: inline-block;
+  background: var(--snap-yellow);
+  color: var(--ink);
+  border: none;
+  padding: 0.85rem 1.6rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 6px 18px rgba(255,214,0,0.25);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background: var(--snap-yellow-dark);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12), 0 10px 28px rgba(255,214,0,0.35);
+}
+
+.btn:active { transform: translateY(0); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: none;
+}
+.btn-secondary:hover {
+  background: var(--ink);
+  color: var(--snap-yellow);
+}
+
+.btn-block { display: block; width: 100%; }
+
+.btn-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+
+/* Teams (équipes) */
+.teams {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.team {
+  background: var(--snap-card);
+  border: 3px solid var(--line);
+  border-radius: 16px;
+  padding: 1.2rem 0.8rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.team:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+.team.ghost  { border-color: var(--team-ghost);  }
+.team.streak { border-color: var(--team-streak); }
+.team.story  { border-color: var(--team-story);  }
+.team.map    { border-color: var(--team-map);    }
+
+.team-emoji { font-size: 2.6rem; display: block; margin-bottom: 0.3rem; }
+.team-nom {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+.team-devise { font-size: 0.82rem; color: var(--ink-soft); margin-top: 0.25rem; }
+
+.team.selected { transform: scale(1.03); }
+.team.selected.ghost  { background: rgba(255,252,0,0.18); }
+.team.selected.streak { background: rgba(255,107,53,0.12); }
+.team.selected.story  { background: rgba(165,105,189,0.12); }
+.team.selected.map    { background: rgba(0,188,212,0.12); }
+
+/* Progression : Memories restaurées (petites pastilles) */
+.progression {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+  flex-wrap: wrap;
+}
+
+.page-grimoire {
+  width: 44px;
+  height: 44px;
+  background: var(--snap-card);
+  border: 2px dashed var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--ink-light);
+  transition: all 0.35s ease;
+}
+
+.page-grimoire.gagnee {
+  background: var(--snap-yellow);
+  border: 2px solid var(--ink);
+  border-style: solid;
+  color: var(--ink);
+  box-shadow: 0 4px 12px rgba(255,214,0,0.45);
+  animation: pageGagnee 0.55s ease;
+}
+
+@keyframes pageGagnee {
+  0%   { transform: scale(0.4) rotate(-25deg); }
+  50%  { transform: scale(1.25) rotate(8deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+/* Inputs */
+input[type="text"], select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-family: inherit;
+  font-size: 1.05rem;
+  background: var(--snap-card);
+  color: var(--ink);
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  margin: 0.5rem 0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus, select:focus {
+  outline: none;
+  border-color: var(--snap-yellow-dark);
+  box-shadow: 0 0 0 4px rgba(255,214,0,0.18);
+}
+
+/* Grilles d'épreuves */
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.65rem;
+  margin: 1.2rem 0;
+}
+
+.case {
+  background: var(--snap-card);
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  padding: 0.9rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+  font-size: 0.95rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.case:hover { border-color: var(--snap-yellow-dark); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.case.selected { background: var(--snap-yellow); border-color: var(--ink); transform: scale(1.03); }
+.case.correct {
+  background: rgba(76,175,80,0.18);
+  border-color: var(--green);
+  color: var(--ink);
+  animation: correct 0.5s ease;
+}
+.case.wrong {
+  background: rgba(244,67,54,0.15);
+  border-color: var(--red);
+  animation: shake 0.4s ease;
+}
+
+@keyframes correct {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+/* Paires (filtres) */
+.paires {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.2rem 0;
+}
+
+.col-paires { display: flex; flex-direction: column; gap: 0.65rem; }
+.col-paires h4 { text-align: center; color: var(--ink); font-size: 1rem; margin-bottom: 0.3rem; }
+
+/* Message de victoire */
+.victoire {
+  text-align: center;
+  padding: 1.8rem 1.2rem;
+  background: linear-gradient(135deg, var(--snap-yellow) 0%, var(--snap-yellow-soft) 100%);
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  margin: 1.5rem 0;
+  box-shadow: 0 8px 28px rgba(255,214,0,0.4);
+  animation: victoirePulse 2.2s ease-in-out infinite;
+}
+
+.victoire h1, .victoire h2 { color: var(--ink); }
+
+@keyframes victoirePulse {
+  0%, 100% { box-shadow: 0 8px 28px rgba(255,214,0,0.4); }
+  50%      { box-shadow: 0 12px 40px rgba(255,214,0,0.65); }
+}
+
+.mot-magique {
+  font-size: 2rem;
+  color: var(--ink);
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  margin: 1rem 0;
+  text-shadow: 0 2px 0 var(--snap-yellow-dark);
+}
+
+/* Bandeau équipe (header sticky) */
+.bandeau-equipe {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  padding: 0.6rem 1rem;
+  border-bottom: 3px solid var(--snap-yellow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  color: var(--ink);
+}
+
+.bandeau-equipe .equipe-nom {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+/* Liste des épreuves (Mon Profil) */
+.liste-epreuves { display: grid; gap: 0.75rem; margin: 1.2rem 0; }
+
+.lien-epreuve {
+  display: block;
+  background: var(--snap-card);
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  color: var(--ink);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.lien-epreuve:hover {
+  border-color: var(--snap-yellow-dark);
+  transform: translateX(4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.lien-epreuve.bloquee {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.lien-epreuve.gagnee {
+  background: linear-gradient(135deg, var(--snap-yellow) 0%, var(--snap-yellow-soft) 100%);
+  border-color: var(--ink);
+}
+
+.lien-epreuve .num {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-right: 0.4rem;
+}
+
+.lien-epreuve .check {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: var(--ink);
+}
+
+/* Indices/aides */
+.indice {
+  background: rgba(255,252,0,0.20);
+  border-left: 4px solid var(--snap-yellow-dark);
+  padding: 0.7rem 0.95rem;
+  margin: 0.9rem 0;
+  border-radius: 8px;
+  font-style: normal;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+/* Snap code (anciennement runes) */
+.runes {
+  font-family: 'SF Mono', 'Menlo', 'Courier New', monospace;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  background: var(--snap-yellow);
+  color: var(--ink);
+  padding: 1.3rem;
+  border-radius: 16px;
+  margin: 1.3rem 0;
+  word-break: break-word;
+  border: 2px solid var(--ink);
+}
+
+/* Petits utilitaires */
+.center { text-align: center; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.hidden { display: none !important; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container { padding: 0.8rem; }
+  .parchment { padding: 1.1rem; }
+  .btn-row { flex-direction: column; }
+  .btn { width: 100%; }
+  .paires { grid-template-columns: 1fr; }
+}
+
+/* Print styles */
+@media print {
+  body { background: white !important; color: black; }
+  .no-print { display: none !important; }
+  .parchment { box-shadow: none; border: 2px solid #ccc; page-break-inside: avoid; }
+}

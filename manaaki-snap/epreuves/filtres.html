@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>La Salle des Potions</title>
+  <title>Les Filtres Magiques</title>
   <link rel="stylesheet" href="../styles.css">
   <style>
     /* Couleurs distinctes par paire (1 à 6) */
-    .case.paire-1 { background: #6a1b9a !important; border-color: #ba68c8 !important; box-shadow: 0 0 12px rgba(186,104,200,0.5); }
-    .case.paire-2 { background: #1565c0 !important; border-color: #64b5f6 !important; box-shadow: 0 0 12px rgba(100,181,246,0.5); }
-    .case.paire-3 { background: #2e7d32 !important; border-color: #81c784 !important; box-shadow: 0 0 12px rgba(129,199,132,0.5); }
-    .case.paire-4 { background: #ef6c00 !important; border-color: #ffb74d !important; box-shadow: 0 0 12px rgba(255,183,77,0.5); }
-    .case.paire-5 { background: #c2185b !important; border-color: #f06292 !important; box-shadow: 0 0 12px rgba(240,98,146,0.5); }
-    .case.paire-6 { background: #00838f !important; border-color: #4dd0e1 !important; box-shadow: 0 0 12px rgba(77,208,225,0.5); }
+    .case.paire-1 { background: #FFFC00 !important; border-color: #FFD600 !important; box-shadow: 0 0 12px rgba(255,214,0,0.5); color:#1A1A1A !important; }
+    .case.paire-2 { background: #FF6B35 !important; border-color: #FF8A65 !important; box-shadow: 0 0 12px rgba(255,138,101,0.5); color:#fff !important; }
+    .case.paire-3 { background: #A569BD !important; border-color: #CE93D8 !important; box-shadow: 0 0 12px rgba(206,147,216,0.5); color:#fff !important; }
+    .case.paire-4 { background: #00BCD4 !important; border-color: #4DD0E1 !important; box-shadow: 0 0 12px rgba(77,208,225,0.5); color:#fff !important; }
+    .case.paire-5 { background: #E91E63 !important; border-color: #F06292 !important; box-shadow: 0 0 12px rgba(240,98,146,0.5); color:#fff !important; }
+    .case.paire-6 { background: #4CAF50 !important; border-color: #81C784 !important; box-shadow: 0 0 12px rgba(129,199,132,0.5); color:#fff !important; }
 
-    /* Case verrouillée (paire validée) */
+    /* Case verrouillée (paire en attente de vérification) */
     .case.verrouillee {
       cursor: default !important;
       transform: none !important;
-      color: #fff !important;
       position: relative;
       padding-right: 2rem !important;
+      font-weight: 700;
     }
     .case.verrouillee::before {
       content: attr(data-num);
@@ -31,13 +31,12 @@
       height: 22px;
       border-radius: 50%;
       background: rgba(255,255,255,0.95);
-      color: #2b1810;
+      color: #1A1A1A;
       font-weight: bold;
       font-size: 0.85rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Cinzel', serif;
     }
     .case.verrouillee::after {
       content: '🔒';
@@ -48,15 +47,15 @@
     }
     .case.verrouillee:hover { transform: none !important; background: inherit; }
 
-    /* Case VALIDÉE (vérifiée correcte) — figée, verte/dorée avec ✓ et ✨ */
+    /* Case VALIDÉE (vérifiée correcte) */
     .case.validee {
-      background: linear-gradient(135deg, #1b5e20 0%, #43a047 100%) !important;
-      border: 2px solid #ffd700 !important;
-      box-shadow: 0 0 20px rgba(255,215,0,0.7), inset 0 0 10px rgba(255,255,255,0.1) !important;
+      background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%) !important;
+      border: 2px solid #1A1A1A !important;
+      box-shadow: 0 4px 16px rgba(76,175,80,0.5) !important;
       color: #fff !important;
       cursor: default !important;
       position: relative;
-      padding: 1rem 2.2rem 1rem 2.2rem !important;
+      padding: 0.9rem 2.2rem 0.9rem 2.2rem !important;
       transform: none !important;
       font-weight: bold;
     }
@@ -66,11 +65,11 @@
       top: 50%;
       left: 8px;
       transform: translateY(-50%);
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
-      background: #ffd700;
-      color: #1b5e20;
+      background: #FFFC00;
+      color: #1A1A1A;
       font-weight: bold;
       font-size: 1.1rem;
       display: flex;
@@ -92,23 +91,22 @@
       50%      { opacity: 1; }
     }
 
-    /* En attente (ingrédient sélectionné, pas encore d'effet choisi) */
+    /* En attente (filtre sélectionné, pas encore d'effet choisi) */
     .case.en-attente {
-      background: #f5c842 !important;
-      border-color: #fff !important;
-      color: #2b1810 !important;
+      background: #FFFC00 !important;
+      border-color: #1A1A1A !important;
+      color: #1A1A1A !important;
       animation: pulse 1s ease-in-out infinite;
     }
     @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 8px rgba(245,200,66,0.6); }
-      50%      { box-shadow: 0 0 20px rgba(245,200,66,1); }
+      0%, 100% { box-shadow: 0 0 8px rgba(255,214,0,0.6); }
+      50%      { box-shadow: 0 0 22px rgba(255,214,0,1); }
     }
 
-    /* Petite légende au-dessus pour indiquer où on en est */
     .statut-paires {
       text-align: center;
-      font-family: 'Cinzel', serif;
-      color: #f5c842;
+      color: #1A1A1A;
+      font-weight: 700;
       font-size: 1rem;
       margin: 0.5rem 0 1rem;
     }
@@ -120,16 +118,16 @@
 
   <div class="container">
 
-    <h1>🧪 La Salle des Potions</h1>
+    <h1>🎭 Les Filtres Magiques</h1>
     <p class="subtitle">Épreuve 1 sur 5</p>
 
     <div id="zone-jeu">
 
       <div class="parchment">
-        <p>Le Maître des Potions a tout renversé ! Pour récupérer la page du Grimoire,
-        tu dois <strong>retrouver à quoi sert chaque ingrédient</strong>.</p>
+        <p>Le Ghoster a tout mélangé ! Pour récupérer ta première Memory,
+        tu dois <strong>associer chaque filtre Snap à son effet</strong>.</p>
 
-        <p class="indice">💡 Touche un <strong>ingrédient</strong> à gauche, puis son <strong>effet</strong> à droite.
+        <p class="indice">💡 Touche un <strong>filtre</strong> à gauche, puis son <strong>effet</strong> à droite.
         Quand tu as fait tes 6 paires, clique sur <strong>Vérifier</strong> :
         les bonnes paires sont <strong>figées en vert ✓</strong>, les mauvaises sont libérées pour que tu puisses les refaire.</p>
       </div>
@@ -138,7 +136,7 @@
 
       <div class="paires">
         <div class="col-paires">
-          <h4>🌿 Ingrédients</h4>
+          <h4>📸 Filtres</h4>
           <div id="col-ingredients"></div>
         </div>
         <div class="col-paires">
@@ -150,8 +148,8 @@
       <div id="message" style="text-align:center;font-weight:bold;min-height:1.5em;"></div>
 
       <div class="btn-row">
-        <button class="btn btn-secondary" onclick="reset()">↺ Recommencer la potion</button>
-        <button class="btn" onclick="verifier()">🔮 Vérifier ma potion</button>
+        <button class="btn btn-secondary" onclick="reset()">↺ Recommencer</button>
+        <button class="btn" onclick="verifier()">📸 Vérifier mes filtres</button>
       </div>
 
     </div>
@@ -164,12 +162,12 @@
   <script src="../app.js"></script>
   <script>
     const PAIRES = [
-      { ingredient: "Aile de chauve-souris",  effet: "Voler dans les airs" },
-      { ingredient: "Écaille de dragon",       effet: "Résister au feu" },
-      { ingredient: "Larme de sirène",         effet: "Respirer sous l'eau" },
-      { ingredient: "Poil de licorne",         effet: "Soigner les blessures" },
-      { ingredient: "Œil de triton",           effet: "Voir dans le noir" },
-      { ingredient: "Poudre d'étoile",         effet: "Devenir invisible" }
+      { ingredient: "🐶 Filtre Chien",         effet: "Oreilles de chiot et langue qui pend" },
+      { ingredient: "🌸 Filtre Couronne",      effet: "Diadème de fleurs roses sur la tête" },
+      { ingredient: "🔄 Filtre Face Swap",     effet: "Échange ton visage avec un copain" },
+      { ingredient: "👶 Filtre Baby",          effet: "Visage tout rond et joues de bébé" },
+      { ingredient: "👴 Filtre Old Age",       effet: "Toi avec 60 ans en plus et des rides" },
+      { ingredient: "🌈 Filtre Arc-en-ciel",   effet: "Vomi d'arc-en-ciel quand tu ouvres la bouche" }
     ];
 
     function shuffle(arr) {
@@ -184,10 +182,6 @@
     const ingredients = PAIRES.map((p, i) => ({ texte: p.ingredient, idx: i }));
     const effets = shuffle(PAIRES.map((p, i) => ({ texte: p.effet, idx: i })));
 
-    // Etat
-    // - associations : paires non encore vérifiées (provisoires)
-    // - validees     : paires vérifiées et correctes (figées définitivement)
-    // - ordrePaires  : ordre des paires non validées (pour la couleur)
     let associations = {};
     let validees = {};
     let ordrePaires = [];
@@ -205,33 +199,26 @@
         `Paires validées ✓ : <strong>${nbValidees}</strong> / ${PAIRES.length}` +
         (nbProvisoires > 0 ? `   •   Paires à vérifier : ${nbProvisoires}` : '');
 
-      // Colonne ingrédients
       const colIng = document.getElementById('col-ingredients');
       colIng.innerHTML = ingredients.map(ing => {
-        // 1. Déjà validée définitivement ?
         if (validees[ing.idx] !== undefined) {
           return `<div class="case validee">${ing.texte}</div>`;
         }
-        // 2. Dans une paire provisoire ?
         const numero = numeroPaire(ing.idx);
         if (numero) {
           return `<div class="case verrouillee paire-${numero}" data-num="${numero}">${ing.texte}</div>`;
         }
-        // 3. Libre
         const enAttente = selectionIngredient === ing.idx;
         return `<div class="case ${enAttente ? 'en-attente' : ''}" onclick="selectIngredient(${ing.idx})">${ing.texte}</div>`;
       }).join('');
 
-      // Colonne effets
       const colEff = document.getElementById('col-effets');
       colEff.innerHTML = effets.map(eff => {
-        // 1. Cet effet appartient à une paire validée ?
         for (const ingIdxStr of Object.keys(validees)) {
           if (validees[ingIdxStr] === eff.idx) {
             return `<div class="case validee">${eff.texte}</div>`;
           }
         }
-        // 2. Cet effet est-il dans une paire provisoire ?
         let ingredientLie = null;
         for (const ingIdxStr of Object.keys(associations)) {
           if (associations[ingIdxStr] === eff.idx) {
@@ -243,13 +230,11 @@
           const numero = numeroPaire(ingredientLie);
           return `<div class="case verrouillee paire-${numero}" data-num="${numero}">${eff.texte}</div>`;
         }
-        // 3. Libre
         return `<div class="case" onclick="selectEffet(${eff.idx})">${eff.texte}</div>`;
       }).join('');
     }
 
     function selectIngredient(idx) {
-      // Si on re-clique sur l'ingrédient déjà sélectionné, on désélectionne
       if (selectionIngredient === idx) {
         selectionIngredient = null;
       } else {
@@ -261,10 +246,9 @@
 
     function selectEffet(idx) {
       if (selectionIngredient === null) {
-        msg("⚠️ Choisis d'abord un ingrédient à gauche !", false);
+        msg("⚠️ Choisis d'abord un filtre à gauche !", false);
         return;
       }
-      // Crée la paire (l'ingrédient + effet sont libres puisqu'on a filtré côté affichage)
       associations[selectionIngredient] = idx;
       ordrePaires.push(selectionIngredient);
       selectionIngredient = null;
@@ -275,7 +259,7 @@
     function msg(texte, ok) {
       const m = document.getElementById('message');
       m.textContent = texte;
-      m.style.color = ok ? '#a5d6a7' : '#ef5350';
+      m.style.color = ok ? '#2e7d32' : '#c62828';
     }
 
     function verifier() {
@@ -285,7 +269,6 @@
         return;
       }
 
-      // Pour chaque paire provisoire, on regarde si elle est correcte
       const nouvellesCorrectes = [];
       for (const ingIdxStr of Object.keys(associations)) {
         const ingIdx = parseInt(ingIdxStr);
@@ -295,28 +278,24 @@
         }
       }
 
-      // Retire les nouvelles correctes de associations + ordrePaires
       for (const ingIdx of nouvellesCorrectes) {
         delete associations[ingIdx];
         const pos = ordrePaires.indexOf(ingIdx);
         if (pos >= 0) ordrePaires.splice(pos, 1);
       }
 
-      // Libère TOUTES les paires fausses restantes (l'enfant doit les refaire)
       const fausses = Object.keys(associations).length;
       if (fausses > 0) {
         associations = {};
         ordrePaires = [];
       }
 
-      // Victoire ?
       if (Object.keys(validees).length === PAIRES.length) {
         render();
         setTimeout(gagne, 600);
         return;
       }
 
-      // Message de feedback
       const nC = nouvellesCorrectes.length;
       if (nC > 0) {
         msg(`✓ ${nC} bonne${nC>1?'s':''} paire${nC>1?'s':''} figée${nC>1?'s':''} ! Refais les ${fausses} autre${fausses>1?'s':''}.`, true);
@@ -337,16 +316,16 @@
     }
 
     function gagne() {
-      MM.marquerGagnee('potions');
+      MM.marquerGagnee('filtres');
       document.getElementById('zone-jeu').classList.add('hidden');
-      MM.afficherMotGagne('potions', 'zone-victoire');
+      MM.afficherMotGagne('filtres', 'zone-victoire');
     }
 
     render();
 
-    if (MM.getEtat().epreuvesGagnees['potions']) {
+    if (MM.getEtat().epreuvesGagnees['filtres']) {
       document.getElementById('zone-jeu').classList.add('hidden');
-      MM.afficherMotGagne('potions', 'zone-victoire');
+      MM.afficherMotGagne('filtres', 'zone-victoire');
     }
   </script>
 

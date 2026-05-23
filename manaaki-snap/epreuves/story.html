@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>La Constellation Perdue</title>
+  <title>La Story Mélangée</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -12,40 +12,40 @@
 
   <div class="container">
 
-    <h1>🌟 La Constellation Perdue</h1>
+    <h1>🌈 La Story Mélangée</h1>
     <p class="subtitle">Épreuve 5 sur 5 — la dernière !</p>
 
     <div id="zone-jeu">
 
       <div class="parchment">
-        <p>Cinq étoiles magiques de Tahiti dansent dans le ciel.
-        Tu dois les <strong>placer dans le bon ordre</strong> pour reformer
-        la constellation des Anciens.</p>
-        <p class="indice">💡 Lis les indices, puis touche les étoiles dans le bon ordre.</p>
+        <p>Cinq moments d'une fête d'anniversaire ont été mélangés par
+        Le Ghoster. Tu dois les <strong>remettre dans le bon ordre</strong>
+        pour reconstituer la Story.</p>
+        <p class="indice">💡 Lis les indices, puis touche les moments dans le bon ordre.</p>
       </div>
 
       <div class="parchment">
-        <h3>📜 Les indices des Anciens</h3>
+        <h3>📜 Les indices</h3>
         <ol style="margin-left:1.2rem;line-height:1.8;">
-          <li><strong>Tiki</strong>, le gardien, ouvre toujours le chemin. Il est <strong>en premier</strong>.</li>
-          <li><strong>Tāne</strong>, l'esprit de la forêt, ferme la marche. Il est <strong>en dernier</strong>.</li>
-          <li><strong>Hina</strong>, la lune, brille juste <strong>avant</strong> Mata.</li>
-          <li><strong>Maui</strong>, le héros, se trouve <strong>entre</strong> Tiki et Hina.</li>
+          <li><strong>L'invitation</strong> arrive avant tout le reste. C'est <strong>le premier</strong> moment.</li>
+          <li><strong>Au revoir</strong> ferme toujours la fête. C'est <strong>le dernier</strong>.</li>
+          <li><strong>Le gâteau</strong> arrive juste <strong>avant</strong> les cadeaux.</li>
+          <li><strong>Les ballons</strong> sont gonflés <strong>entre</strong> l'invitation et le gâteau.</li>
         </ol>
       </div>
 
       <div class="parchment">
-        <h3 class="center">Ta constellation</h3>
+        <h3 class="center">Ta story</h3>
         <div id="sequence" style="display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;margin:1rem 0;"></div>
 
-        <h3 class="center mt-3">Les étoiles à placer</h3>
+        <h3 class="center mt-3">Les moments à placer</h3>
         <div id="etoiles" class="grille"></div>
 
         <div id="message" style="text-align:center;font-weight:bold;min-height:1.5em;margin-top:1rem;"></div>
 
         <div class="btn-row">
           <button class="btn btn-secondary" onclick="reset()">↺ Effacer</button>
-          <button class="btn" onclick="verifier()">🔮 Vérifier la constellation</button>
+          <button class="btn" onclick="verifier()">🌈 Vérifier la story</button>
         </div>
       </div>
 
@@ -59,40 +59,38 @@
   <script src="../app.js"></script>
   <script>
     const ETOILES = [
-      { nom: "Tiki", emoji: "🗿" },
-      { nom: "Hina", emoji: "🌙" },
-      { nom: "Tāne", emoji: "🌳" },
-      { nom: "Maui", emoji: "⚓" },
-      { nom: "Mata", emoji: "👁️" }
+      { nom: "Invitation", emoji: "📨" },
+      { nom: "Ballons",    emoji: "🎈" },
+      { nom: "Gâteau",     emoji: "🍰" },
+      { nom: "Cadeaux",    emoji: "🎁" },
+      { nom: "Au revoir",  emoji: "👋" }
     ];
 
-    const SOLUTION = ["Tiki", "Maui", "Hina", "Mata", "Tāne"];
+    const SOLUTION = ["Invitation", "Ballons", "Gâteau", "Cadeaux", "Au revoir"];
 
-    let sequence = []; // noms dans l'ordre choisi
+    let sequence = [];
 
     function render() {
-      // Slots
       const seq = document.getElementById('sequence');
       seq.innerHTML = Array.from({length: 5}).map((_, i) => {
         const nom = sequence[i];
         const et = nom ? ETOILES.find(e => e.nom === nom) : null;
         return `<div onclick="retirer(${i})"
-                     style="width:80px;height:90px;border:2px solid #d4a017;border-radius:8px;
-                            background:${et ? 'rgba(74,20,140,0.6)' : 'rgba(13,27,42,0.5)'};
+                     style="width:90px;height:100px;border:2px solid #1A1A1A;border-radius:14px;
+                            background:${et ? '#FFFC00' : '#FAFAFA'};
                             display:flex;flex-direction:column;align-items:center;justify-content:center;
                             cursor:${et ? 'pointer' : 'default'};">
-                  <div style="font-size:0.75rem;color:#c9b87a;">#${i+1}</div>
+                  <div style="font-size:0.78rem;color:#555;font-weight:700;">#${i+1}</div>
                   ${et ? `<div style="font-size:1.8rem;">${et.emoji}</div>
-                          <div style="font-size:0.85rem;color:#f5c842;font-weight:bold;">${et.nom}</div>` :
+                          <div style="font-size:0.85rem;color:#1A1A1A;font-weight:700;">${et.nom}</div>` :
                          '<div style="font-size:2rem;opacity:0.3;">?</div>'}
                 </div>`;
       }).join('');
 
-      // Étoiles disponibles
       const etoiles = document.getElementById('etoiles');
       etoiles.innerHTML = ETOILES.map(et => {
         const utilisee = sequence.includes(et.nom);
-        return `<div class="case ${utilisee ? '' : ''}"
+        return `<div class="case"
                      onclick="ajouter('${et.nom}')"
                      style="opacity:${utilisee ? '0.3' : '1'};
                             cursor:${utilisee ? 'default' : 'pointer'};">
@@ -127,37 +125,36 @@
     function afficherMessage(txt, ok) {
       const m = document.getElementById('message');
       m.textContent = txt;
-      m.style.color = ok ? '#a5d6a7' : '#ef5350';
+      m.style.color = ok ? '#2e7d32' : '#c62828';
     }
 
     function verifier() {
       if (sequence.length < 5) {
-        afficherMessage("Tu n'as pas placé toutes les étoiles !", false);
+        afficherMessage("Tu n'as pas placé tous les moments !", false);
         return;
       }
       const correct = sequence.every((nom, i) => nom === SOLUTION[i]);
       if (correct) {
         gagne();
       } else {
-        // Compte combien sont à la bonne place
         let bonnes = 0;
         sequence.forEach((nom, i) => { if (nom === SOLUTION[i]) bonnes++; });
-        afficherMessage(`❌ Seulement ${bonnes} étoile(s) au bon endroit. Relis les indices !`, false);
+        afficherMessage(`❌ Seulement ${bonnes} moment(s) au bon endroit. Relis les indices !`, false);
         if (navigator.vibrate) navigator.vibrate(150);
       }
     }
 
     function gagne() {
-      MM.marquerGagnee('constellation');
+      MM.marquerGagnee('story');
       document.getElementById('zone-jeu').classList.add('hidden');
-      MM.afficherMotGagne('constellation', 'zone-victoire');
+      MM.afficherMotGagne('story', 'zone-victoire');
     }
 
     render();
 
-    if (MM.getEtat().epreuvesGagnees['constellation']) {
+    if (MM.getEtat().epreuvesGagnees['story']) {
       document.getElementById('zone-jeu').classList.add('hidden');
-      MM.afficherMotGagne('constellation', 'zone-victoire');
+      MM.afficherMotGagne('story', 'zone-victoire');
     }
   </script>
 

@@ -2,32 +2,32 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Diplômes de Sorcier</title>
+  <title>Diplômes de fin</title>
   <style>
     @page { size: A4 landscape; margin: 0; }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: Georgia, serif;
-      color: #2b1810;
+      font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1A1A1A;
       background: #ddd;
       padding: 1rem;
     }
 
     .controls {
-      background: #2b1810;
-      color: #f5c842;
+      background: #1A1A1A;
+      color: #FFFC00;
       padding: 1rem;
       text-align: center;
       margin-bottom: 1rem;
-      border-radius: 8px;
+      border-radius: 12px;
       max-width: 800px;
       margin: 0 auto 2rem;
     }
     .controls button {
-      background: #d4a017; color: #2b1810; border: none;
-      padding: 0.6rem 1.2rem; border-radius: 4px;
+      background: #FFFC00; color: #1A1A1A; border: none;
+      padding: 0.7rem 1.3rem; border-radius: 999px;
       font-weight: bold; cursor: pointer; font-size: 1rem;
     }
     .controls p { margin: 0.4rem 0; }
@@ -36,9 +36,9 @@
       width: 29.7cm;
       height: 21cm;
       margin: 0 auto 2cm;
-      background:
-        radial-gradient(ellipse at center, #f4e9c8 0%, #d9c084 100%);
-      border: 10px double #4a148c;
+      background: linear-gradient(135deg, #FFF59D 0%, #FFFC00 100%);
+      border: 10px solid #1A1A1A;
+      border-radius: 24px;
       padding: 2cm;
       position: relative;
       page-break-after: always;
@@ -50,34 +50,24 @@
       box-shadow: 0 0 30px rgba(0,0,0,0.3);
     }
 
-    .diplome::before, .diplome::after {
-      content: '';
-      position: absolute;
-      width: 80px; height: 80px;
-      border: 3px solid #d4a017;
-    }
-    .diplome::before { top: 30px; left: 30px; border-right: none; border-bottom: none; }
-    .diplome::after  { bottom: 30px; right: 30px; border-left: none; border-top: none; }
-
-    .sceau-top {
+    .ghost-top {
       font-size: 4rem;
       margin-bottom: 1rem;
     }
 
     h1 {
-      font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
-      color: #4a148c;
+      color: #1A1A1A;
       font-size: 2.6rem;
-      letter-spacing: 0.15em;
+      font-weight: 900;
+      letter-spacing: 0.04em;
       margin-bottom: 0.5rem;
     }
 
     .academie {
-      font-style: italic;
-      color: #5a4a2a;
+      color: #555;
       font-size: 1.1rem;
       margin-bottom: 2rem;
-      letter-spacing: 0.05em;
+      font-weight: 600;
     }
 
     .corps {
@@ -86,14 +76,12 @@
       max-width: 22cm;
     }
 
-    .nom-sorcier {
-      font-family: 'Cinzel', Georgia, serif;
+    .nom-snapper {
       font-size: 2.4rem;
-      color: #4a148c;
-      font-weight: bold;
-      letter-spacing: 0.1em;
+      color: #1A1A1A;
+      font-weight: 900;
       padding: 0.5rem 2rem;
-      border-bottom: 3px solid #d4a017;
+      border-bottom: 4px solid #1A1A1A;
       display: inline-block;
       margin: 1rem 0 1.5rem;
       min-width: 60%;
@@ -113,14 +101,14 @@
 
     .signature-item .ligne {
       width: 8cm;
-      border-bottom: 2px solid #4a148c;
+      border-bottom: 2px solid #1A1A1A;
       margin-bottom: 0.4rem;
       height: 1.5rem;
     }
 
     .signature-item .label {
       font-style: italic;
-      color: #5a4a2a;
+      color: #555;
       font-size: 0.9rem;
     }
 
@@ -141,7 +129,7 @@
 <body>
 
   <div class="controls">
-    <p>🏆 <strong>Diplôme de Sorcier</strong> à remettre à chaque enfant à la fin du jeu</p>
+    <p>🏆 <strong>Diplôme</strong> à remettre à chaque enfant à la fin du jeu</p>
     <p style="font-size:0.9rem;opacity:0.85;">
       Imprimer une copie par enfant (format paysage). Tu écris le prénom à la main sur la grande ligne, et tu signes.
     </p>
@@ -150,26 +138,25 @@
   </div>
 
   <div id="diplomes">
-    <!-- Premier diplôme -->
     <div class="diplome">
-      <div class="sceau-top">🪄 ✨ 🧙‍♂️</div>
-      <h1>Diplôme de Sorcier</h1>
-      <p class="academie">— Académie des Sorciers de Tahiti —</p>
+      <div class="ghost-top">👻 ✨ 📸</div>
+      <h1>Diplôme de Maître des Memories</h1>
+      <p class="academie">— Le Jeu Magique des Memories —</p>
 
       <div class="corps">
         <p>Nous certifions par la présente que</p>
-        <div class="nom-sorcier">_______________________</div>
-        <p>a brillamment réussi les <strong>5 Épreuves de l'Initiation</strong>,<br>
-        a reconstitué le <strong>Grimoire Sacré</strong><br>
-        et a vaincu le maléfique <strong>Taʻaroa l'Ombre</strong>.</p>
-        <p style="margin-top:1rem;">Il/elle est désormais <strong>Sorcier(e) du Lagon</strong>,<br>
+        <div class="nom-snapper">_______________________</div>
+        <p>a brillamment réussi les <strong>5 Épreuves Magiques</strong>,<br>
+        a récupéré les <strong>5 Memories</strong> chipées<br>
+        et a vaincu le farceur <strong>Le Ghoster Anonyme</strong>.</p>
+        <p style="margin-top:1rem;">Il/elle est désormais <strong>Maître des Memories</strong>,<br>
         avec tous les pouvoirs et privilèges qui s'y rattachent.</p>
       </div>
 
       <div class="signature-bloc">
         <div class="signature-item">
           <div class="ligne"></div>
-          <div class="label">La Directrice de l'Académie</div>
+          <div class="label">Le Maître du Jeu</div>
         </div>
         <div class="signature-item">
           <div class="ligne"></div>

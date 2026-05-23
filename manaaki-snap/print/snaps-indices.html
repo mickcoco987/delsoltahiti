@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Indices à cacher</title>
+  <style>
+    @page { size: A4 portrait; margin: 1cm; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1A1A1A;
+      background: #ddd;
+      padding: 1rem;
+    }
+
+    .controls {
+      background: #1A1A1A;
+      color: #FFFC00;
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    .controls button {
+      background: #FFFC00; color: #1A1A1A; border: none;
+      padding: 0.7rem 1.3rem; border-radius: 999px;
+      font-weight: bold; cursor: pointer; font-size: 1rem;
+    }
+
+    .indice-carte {
+      background: linear-gradient(135deg, #FFF59D 0%, #FFFC00 100%);
+      border: 3px solid #1A1A1A;
+      border-radius: 24px;
+      padding: 2rem;
+      margin: 0 auto 2rem;
+      max-width: 700px;
+      page-break-after: always;
+      position: relative;
+      min-height: 14cm;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .indice-carte h2 {
+      text-align: center;
+      color: #1A1A1A;
+      font-size: 1.7rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .indice-carte .emoji {
+      text-align: center;
+      font-size: 4rem;
+      margin: 1rem 0;
+    }
+
+    .indice-carte p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 0.8rem 0;
+    }
+
+    .indice-carte .enigme {
+      background: rgba(255,255,255,0.7);
+      border-left: 5px solid #1A1A1A;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      font-style: italic;
+      border-radius: 8px;
+    }
+
+    .indice-carte .signature {
+      text-align: right;
+      margin-top: 2rem;
+      font-style: italic;
+      color: #1A1A1A;
+      font-weight: 700;
+    }
+
+    .numero {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 1.3rem;
+      color: #1A1A1A;
+      font-weight: 900;
+      background: #fff;
+      padding: 0.2rem 0.8rem;
+      border-radius: 999px;
+      border: 2px solid #1A1A1A;
+    }
+
+    @media print {
+      .controls { display: none; }
+      body { background: white; padding: 0; }
+      .indice-carte { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <p style="margin-bottom:0.7rem;">📜 <strong>5 indices à cacher dans la maison</strong></p>
+    <p style="font-size:0.9rem;margin-bottom:0.7rem;opacity:0.85;">
+      Chaque indice est une devinette qui pointe vers la cachette du SUIVANT.
+      Le dernier mène à la tablette/téléphone qui lance le jeu sur écran.
+    </p>
+    <button onclick="window.print()">🖨️ Imprimer les 5 indices</button>
+  </div>
+
+  <!-- INDICE 1 — À donner à Manaaki au début -->
+  <div class="indice-carte">
+    <div class="numero">№ 1</div>
+    <h2>~ Le Premier Indice ~</h2>
+    <div class="emoji">👻</div>
+
+    <p>Salut sorcier ! Voici la première devinette du Ghoster.
+    Pour trouver le second indice, écoute bien :</p>
+
+    <div class="enigme">
+      « Je suis froid quand on m'ouvre,<br>
+      je garde mille trésors gourmands,<br>
+      au lait, au fromage, au beurre, au jus...<br>
+      <strong>Où vais-je donc ?</strong> »
+    </div>
+
+    <p>(Réponse attendue : le <strong>réfrigérateur</strong>. À cacher dedans, ou sur la porte.)</p>
+
+    <p class="signature">— Le Ghoster Anonyme 👻</p>
+  </div>
+
+  <!-- INDICE 2 — Caché au réfrigérateur -->
+  <div class="indice-carte">
+    <div class="numero">№ 2</div>
+    <h2>~ Le Second Indice ~</h2>
+    <div class="emoji">📚</div>
+
+    <p>Bravo ! Tu as trouvé le second indice. Continuons l'aventure...</p>
+
+    <div class="enigme">
+      « Sur mes étagères se reposent<br>
+      des centaines d'histoires de héros,<br>
+      de dragons, de magie et de roses.<br>
+      <strong>Où se cache le prochain indice ?</strong> »
+    </div>
+
+    <p>(Réponse attendue : la <strong>bibliothèque</strong> ou une <strong>étagère à livres</strong>.
+    À glisser dans un livre.)</p>
+
+    <p class="signature">— Le Ghoster Anonyme 👻</p>
+  </div>
+
+  <!-- INDICE 3 — Caché dans un livre -->
+  <div class="indice-carte">
+    <div class="numero">№ 3</div>
+    <h2>~ Le Troisième Indice ~</h2>
+    <div class="emoji">🛏️</div>
+
+    <p>Tu progresses ! Sois patient, l'épreuve continue.</p>
+
+    <div class="enigme">
+      « C'est là que tu rêves la nuit,<br>
+      avec des oreillers tout doux,<br>
+      cachés sous toi quand tu dors.<br>
+      <strong>Vise sous le matelas ou l'oreiller du héros !</strong> »
+    </div>
+
+    <p>(Réponse attendue : sous l'<strong>oreiller</strong> ou le <strong>matelas du lit de Manaaki</strong>.)</p>
+
+    <p class="signature">— Le Ghoster Anonyme 👻</p>
+  </div>
+
+  <!-- INDICE 4 — Caché sous l'oreiller -->
+  <div class="indice-carte">
+    <div class="numero">№ 4</div>
+    <h2>~ Le Quatrième Indice ~</h2>
+    <div class="emoji">🌿</div>
+
+    <p>Plus que deux et tu auras tout trouvé !</p>
+
+    <div class="enigme">
+      « Je suis verte ou colorée,<br>
+      je bois de l'eau pour grandir,<br>
+      parfois on me parle, parfois on m'oublie.<br>
+      <strong>Cherche-moi près de la fenêtre !</strong> »
+    </div>
+
+    <p>(Réponse attendue : une <strong>plante d'intérieur</strong> près d'une fenêtre.
+    À cacher sous le pot ou dans les feuilles.)</p>
+
+    <p class="signature">— Le Ghoster Anonyme 👻</p>
+  </div>
+
+  <!-- INDICE 5 — Caché près d'une plante -->
+  <div class="indice-carte">
+    <div class="numero">№ 5</div>
+    <h2>~ Le Cinquième Indice ~</h2>
+    <div class="emoji">📱</div>
+
+    <p>C'est le dernier indice avant la <strong>Grande Épreuve</strong> !</p>
+
+    <div class="enigme">
+      « Le jeu t'attend désormais<br>
+      sur un écran qui s'allume comme une étoile.<br>
+      Cherche la tablette ou le téléphone<br>
+      laissé à ton intention sur la <strong>table à manger</strong>.<br><br>
+      Tu y trouveras les <strong>5 épreuves magiques</strong>.<br>
+      À toi de récupérer les Memories chipées par Le Ghoster... »
+    </div>
+
+    <p>(L'animateur doit avoir préparé la tablette/téléphone ouvert sur la page d'accueil
+    du jeu.)</p>
+
+    <p class="signature">— Le Ghoster Anonyme 👻</p>
+  </div>
+
+</body>
+</html>

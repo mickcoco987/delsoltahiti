@@ -1,32 +1,32 @@
 // ===========================================================
-// L'Académie des Sorciers de Tahiti
+// Snap Academy — L'anniversaire de Manaaki
 // Logique partagée : équipes, progression, navigation
 // ===========================================================
 
 (function() {
   'use strict';
 
-  const STORAGE_KEY = 'manaaki-magic-v1';
+  const STORAGE_KEY = 'manaaki-snap-v1';
 
   // -------------------------------------------------------
-  // Maisons
+  // Teams (équipes)
   // -------------------------------------------------------
-  const MAISONS = {
-    lava:   { nom: 'Lava',   emoji: '🌋', devise: 'Courage et feu',     couleur: '#c62828' },
-    lagon:  { nom: 'Lagon',  emoji: '🌊', devise: 'Sagesse et calme',   couleur: '#0288d1' },
-    foret:  { nom: 'Forêt',  emoji: '🌴', devise: 'Loyauté et patience',couleur: '#2e7d32' },
-    etoile: { nom: 'Étoile', emoji: '⭐', devise: 'Ruse et lumière',    couleur: '#f9a825' }
+  const TEAMS = {
+    ghost:  { nom: 'Ghost',  emoji: '👻', devise: 'Discrets comme un fantôme', couleur: '#FFFC00' },
+    streak: { nom: 'Streak', emoji: '🔥', devise: 'Ardents comme une flamme',  couleur: '#FF6B35' },
+    story:  { nom: 'Story',  emoji: '🌈', devise: 'Une histoire à raconter',   couleur: '#A569BD' },
+    map:    { nom: 'Map',    emoji: '📍', devise: 'Toujours là où ça compte',  couleur: '#00BCD4' }
   };
 
   // -------------------------------------------------------
   // Épreuves
   // -------------------------------------------------------
   const EPREUVES = [
-    { id: 'potions',       num: 1, titre: 'La Salle des Potions',    emoji: '🧪', fichier: 'epreuves/potions.html' },
-    { id: 'runes',         num: 2, titre: 'Les Runes Anciennes',     emoji: '📜', fichier: 'epreuves/runes.html' },
-    { id: 'sortileges',    num: 3, titre: 'Le Sortilège Oublié',     emoji: '✨', fichier: 'epreuves/sortileges.html' },
-    { id: 'bestiaire',     num: 4, titre: 'Le Bestiaire Magique',    emoji: '🐉', fichier: 'epreuves/bestiaire.html' },
-    { id: 'constellation', num: 5, titre: 'La Constellation Perdue', emoji: '🌟', fichier: 'epreuves/constellation.html' }
+    { id: 'filtres',   num: 1, titre: 'Les Filtres Magiques',  emoji: '🎭', fichier: 'epreuves/filtres.html' },
+    { id: 'snapcodes', num: 2, titre: 'Le Snap Code Secret',   emoji: '👻', fichier: 'epreuves/snapcodes.html' },
+    { id: 'hashtags',  num: 3, titre: 'Les Hashtags Brisés',   emoji: '#️⃣', fichier: 'epreuves/hashtags.html' },
+    { id: 'quiz',      num: 4, titre: 'Le Quiz des Lenses',    emoji: '📸', fichier: 'epreuves/quiz.html' },
+    { id: 'story',     num: 5, titre: 'La Story Mélangée',     emoji: '🌈', fichier: 'epreuves/story.html' }
   ];
 
   // -------------------------------------------------------
@@ -37,7 +37,6 @@
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return etatVide();
       const parsed = JSON.parse(raw);
-      // Garantit la structure
       return Object.assign(etatVide(), parsed);
     } catch (e) {
       return etatVide();
@@ -47,9 +46,9 @@
   function etatVide() {
     return {
       equipeNom: null,
-      maison: null,           // 'lava' | 'lagon' | 'foret' | 'etoile'
-      sorciers: [],           // liste des prénoms
-      epreuvesGagnees: {},    // { potions: true, runes: true, ... }
+      team: null,             // 'ghost' | 'streak' | 'story' | 'map'
+      snappers: [],           // liste des prénoms
+      epreuvesGagnees: {},    // { filtres: true, snapcodes: true, ... }
       finalReussi: false
     };
   }
@@ -82,20 +81,20 @@
   // -------------------------------------------------------
   function renderBandeau() {
     const etat = getEtat();
-    if (!etat.equipeNom || !etat.maison) return;
+    if (!etat.equipeNom || !etat.team) return;
     const elt = document.getElementById('bandeau-equipe');
     if (!elt) return;
-    const maison = MAISONS[etat.maison];
+    const team = TEAMS[etat.team];
     elt.innerHTML = `
-      <span>${maison.emoji} <span class="equipe-nom">${etat.equipeNom}</span></span>
-      <span>Maison ${maison.nom}</span>
-      <a href="${prefixe('dashboard.html')}" class="btn btn-secondary" style="padding:0.3rem 0.8rem;font-size:0.85rem;">📖 Grimoire</a>
+      <span>${team.emoji} <span class="equipe-nom">${etat.equipeNom}</span></span>
+      <span>Team ${team.nom}</span>
+      <a href="${prefixe('dashboard.html')}" class="btn btn-secondary" style="padding:0.3rem 0.8rem;font-size:0.85rem;">📱 Mon Profil</a>
     `;
     elt.style.display = 'flex';
   }
 
   // -------------------------------------------------------
-  // Progression (pages du grimoire)
+  // Progression (Memories restaurées)
   // -------------------------------------------------------
   function renderProgression(targetId) {
     const etat = getEtat();
@@ -117,7 +116,7 @@
   }
 
   // -------------------------------------------------------
-  // Affichage du mot magique gagné
+  // Affichage du mot-clé gagné
   // -------------------------------------------------------
   function afficherMotGagne(epreuveId, conteneurId) {
     const config = window.MANAAKI_CONFIG;
@@ -130,13 +129,13 @@
 
     cible.innerHTML = `
       <div class="victoire">
-        <h2>${ep.emoji} Épreuve réussie !</h2>
-        <p>Une page du Grimoire vient d'être restaurée.<br>
-        Le mot magique que tu viens de gagner est :</p>
+        <h2>${ep.emoji} Memory restaurée !</h2>
+        <p>Une Memory du profil vient d'être récupérée.<br>
+        Le mot-clé caché dans cette Memory est :</p>
         <div class="mot-magique">${motAffiche}</div>
-        <p style="font-style:italic;font-size:0.95rem;">Note-le bien sur ton parchemin ! Tu en auras besoin à la fin.</p>
+        <p style="font-style:italic;font-size:0.95rem;">Note-le bien ! Tu en auras besoin pour la Story Finale.</p>
         <div class="btn-row">
-          <a href="${prefixe('dashboard.html')}" class="btn">📖 Retour au Grimoire</a>
+          <a href="${prefixe('dashboard.html')}" class="btn">📱 Retour au Profil</a>
         </div>
       </div>
     `;
@@ -146,7 +145,7 @@
   // API publique
   // -------------------------------------------------------
   window.MM = {
-    MAISONS,
+    TEAMS,
     EPREUVES,
     getEtat,
     setEtat,

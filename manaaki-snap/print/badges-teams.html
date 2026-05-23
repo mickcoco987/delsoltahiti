@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Badges des Teams</title>
+  <style>
+    @page { size: A4 portrait; margin: 1cm; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1A1A1A;
+      background: #ddd;
+      padding: 1rem;
+    }
+
+    .controls {
+      background: #1A1A1A;
+      color: #FFFC00;
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    .controls button {
+      background: #FFFC00; color: #1A1A1A; border: none;
+      padding: 0.7rem 1.3rem; border-radius: 999px;
+      font-weight: bold; cursor: pointer; font-size: 1rem;
+    }
+    .controls p { margin: 0.4rem 0; }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 1cm;
+    }
+
+    .grille {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1cm;
+    }
+
+    .badge {
+      border: 4px solid;
+      border-radius: 20px;
+      padding: 1cm 0.8cm;
+      text-align: center;
+      page-break-inside: avoid;
+      position: relative;
+    }
+
+    .badge.ghost  { border-color: #FFD600; background: linear-gradient(135deg, #FFFDE7 0%, #FFFC00 100%); }
+    .badge.streak { border-color: #FF6B35; background: linear-gradient(135deg, #FFF3E0 0%, #FFCCBC 100%); }
+    .badge.story  { border-color: #A569BD; background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%); }
+    .badge.map    { border-color: #00BCD4; background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%); }
+
+    .badge .emoji {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge .nom {
+      font-size: 1.7rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.3rem;
+      color: #1A1A1A;
+    }
+
+    .badge .devise {
+      font-style: italic;
+      color: #1A1A1A;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge .nom-snapper {
+      border-top: 2px dashed #1A1A1A;
+      padding-top: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .badge .nom-snapper .ligne {
+      border-bottom: 1.5px solid #1A1A1A;
+      min-height: 1.2rem;
+      margin-top: 0.3rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1A1A1A;
+      margin-bottom: 0.5rem;
+      font-weight: 900;
+    }
+
+    p.intro {
+      text-align: center;
+      color: #555;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    @media print {
+      .controls { display: none; }
+      body { background: white; padding: 0; }
+      .page { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <p>🏅 <strong>Badges des 4 Teams</strong> — un par enfant (à découper et porter)</p>
+    <p style="font-size:0.9rem;opacity:0.85;">Imprimer la page autant de fois qu'il faut. À découper et fixer avec une épingle ou de la ficelle.</p>
+    <button onclick="window.print()">🖨️ Imprimer</button>
+  </div>
+
+  <div class="page">
+    <h1>Badges des Teams</h1>
+    <p class="intro">À découper et à distribuer en début de fête</p>
+
+    <div class="grille">
+
+      <div class="badge ghost">
+        <div class="emoji">👻</div>
+        <div class="nom">GHOST</div>
+        <div class="devise">« Discrets comme un fantôme »</div>
+        <div class="nom-snapper">
+          Joueur :
+          <div class="ligne"></div>
+        </div>
+      </div>
+
+      <div class="badge streak">
+        <div class="emoji">🔥</div>
+        <div class="nom">STREAK</div>
+        <div class="devise">« Ardents comme une flamme »</div>
+        <div class="nom-snapper">
+          Joueur :
+          <div class="ligne"></div>
+        </div>
+      </div>
+
+      <div class="badge story">
+        <div class="emoji">🌈</div>
+        <div class="nom">STORY</div>
+        <div class="devise">« Une histoire à raconter »</div>
+        <div class="nom-snapper">
+          Joueur :
+          <div class="ligne"></div>
+        </div>
+      </div>
+
+      <div class="badge map">
+        <div class="emoji">📍</div>
+        <div class="nom">MAP</div>
+        <div class="devise">« Toujours là où ça compte »</div>
+        <div class="nom-snapper">
+          Joueur :
+          <div class="ligne"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

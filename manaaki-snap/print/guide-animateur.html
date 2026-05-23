@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Guide de l'Animateur — Le Jeu Magique</title>
+  <style>
+    @page { size: A4 portrait; margin: 1.5cm; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1A1A1A;
+      background: #FAFAFA;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .controls {
+      background: #1A1A1A;
+      color: #FFFC00;
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+    }
+    .controls button {
+      background: #FFFC00; color: #1A1A1A; border: none;
+      padding: 0.7rem 1.3rem; border-radius: 999px;
+      font-weight: bold; cursor: pointer; font-size: 1rem;
+    }
+    .controls p { margin: 0.4rem 0; }
+
+    h1 {
+      color: #1A1A1A;
+      font-size: 2rem;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 0.3rem;
+    }
+
+    .sous-titre {
+      text-align: center;
+      color: #555;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      color: #1A1A1A;
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin-top: 2rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 3px solid #FFFC00;
+      page-break-after: avoid;
+    }
+
+    h3 {
+      color: #FF6B35;
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-top: 1.2rem;
+    }
+
+    p, li { margin: 0.6rem 0; }
+    ul, ol { margin-left: 1.5rem; margin-top: 0.5rem; }
+
+    code {
+      background: #FFFC00;
+      color: #1A1A1A;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
+    }
+
+    .encart {
+      background: rgba(255,252,0,0.20);
+      border-left: 5px solid #FFD600;
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+
+    .attention {
+      background: rgba(255,107,53,0.15);
+      border-left: 5px solid #FF6B35;
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+
+    .solution {
+      background: rgba(76,175,80,0.12);
+      border-left: 5px solid #4CAF50;
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      padding: 0.55rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #FFFC00;
+      font-weight: 800;
+    }
+
+    .checklist li {
+      list-style: none;
+      margin: 0.4rem 0;
+      padding-left: 1.8rem;
+      position: relative;
+    }
+    .checklist li::before {
+      content: '☐';
+      position: absolute;
+      left: 0;
+      font-size: 1.3rem;
+      color: #1A1A1A;
+    }
+
+    .timing-table th { background: #FFFC00; }
+
+    .section {
+      page-break-inside: avoid;
+    }
+
+    .saut-page { page-break-before: always; }
+
+    @media print {
+      .controls { display: none; }
+      body { background: white; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <p>📖 <strong>Guide de l'Animateur</strong> — à lire AVANT la fête</p>
+    <p style="font-size:0.9rem;opacity:0.85;">Imprime-le ou garde-le sur ton téléphone le jour J. Toutes les solutions sont à l'intérieur.</p>
+    <button onclick="window.print()">🖨️ Imprimer le guide</button>
+  </div>
+
+  <h1>👻 Guide de l'Animateur</h1>
+  <p class="sous-titre">Le Jeu Magique des Memories — Les 11 ans de Manaaki</p>
+
+  <!-- 1. PRÉSENTATION -->
+  <div class="section">
+    <h2>1. Le concept en 30 secondes</h2>
+
+    <p>Un fantôme farceur, <strong>Le Ghoster Anonyme</strong>, a chipé les 5
+    Memories préférées de Manaaki et les a éparpillées dans la maison. Avec ses
+    amis, il doit les retrouver en réussissant 5 épreuves magiques.</p>
+
+    <p>Le jeu mélange :</p>
+    <ul>
+      <li><strong>Une chasse au trésor physique</strong> dans la maison (5 indices cachés)</li>
+      <li><strong>5 mini-épreuves sur tablette/ordi</strong> (filtres, code emoji, hashtags, quiz, story)</li>
+      <li><strong>Une révélation finale</strong> qui dévoile la cachette du vrai trésor</li>
+    </ul>
+
+    <div class="encart">
+      <strong>Durée estimée :</strong> 1h à 1h30 selon l'âge et la motivation des enfants.<br>
+      <strong>Nombre d'enfants :</strong> 6 à 12, répartis en 2 à 4 teams.<br>
+      <strong>Matériel :</strong> 1 à 2 tablettes/téléphones (une par team c'est l'idéal), indices imprimés, le trésor final.
+    </div>
+  </div>
+
+  <!-- 2. PRÉPARATION -->
+  <div class="section">
+    <h2>2. Préparation (la veille / le matin)</h2>
+
+    <h3>2.1. Personnaliser la Story Finale</h3>
+    <p>Ouvre le fichier <code>config.js</code> dans le dossier <code>manaaki-snap/</code>.
+    Tu y trouveras les <strong>5 mots-clés</strong>. Modifie-les pour qu'ils forment
+    une phrase pointant vers <strong>l'endroit où tu vas cacher le vrai trésor</strong>.</p>
+
+    <p>Exemple par défaut : <code>CHERCHE LE COFFRE DANS LA_CUISINE</code><br>
+    (le <code>_</code> dans <code>LA_CUISINE</code> sera transformé en espace dans le jeu)</p>
+
+    <div class="attention">
+      ⚠️ <strong>Le trésor doit vraiment être là.</strong> Choisis une cachette physique
+      (sous le canapé, dans le four éteint, sur l'armoire...) et écris ta Story Finale pour y mener.
+      Modifie aussi l'<strong>indice bonus</strong> en cas de blocage.
+    </div>
+
+    <h3>2.2. Imprimer le kit</h3>
+    <ul class="checklist">
+      <li><strong>Invitations</strong> (<code>print/invitation.html</code>) — une par enfant invité, à envoyer 1 à 2 semaines avant.</li>
+      <li><strong>Badges des 4 Teams</strong> (<code>print/badges-teams.html</code>) — autant que d'enfants, à découper.</li>
+      <li><strong>Les 5 indices</strong> (<code>print/snaps-indices.html</code>) — à cacher dans la maison le jour J.</li>
+      <li><strong>Diplômes</strong> (<code>print/diplomes.html</code>) — un par enfant pour la fin.</li>
+    </ul>
+
+    <h3>2.3. Cacher les indices (30 min avant la fête)</h3>
+    <p>Les 5 indices forment une <strong>chaîne</strong>. Chaque indice guide vers le suivant.</p>
+
+    <table>
+      <tr>
+        <th>Indice</th>
+        <th>Où le cacher</th>
+        <th>Devinette guide vers...</th>
+      </tr>
+      <tr>
+        <td><strong>№ 1</strong></td>
+        <td>À donner directement à Manaaki au début</td>
+        <td>Le réfrigérateur</td>
+      </tr>
+      <tr>
+        <td><strong>№ 2</strong></td>
+        <td>Sur ou dans le réfrigérateur</td>
+        <td>La bibliothèque / une étagère à livres</td>
+      </tr>
+      <tr>
+        <td><strong>№ 3</strong></td>
+        <td>Dans un livre</td>
+        <td>Sous l'oreiller / le matelas de Manaaki</td>
+      </tr>
+      <tr>
+        <td><strong>№ 4</strong></td>
+        <td>Sous l'oreiller du lit de Manaaki</td>
+        <td>Une plante d'intérieur</td>
+      </tr>
+      <tr>
+        <td><strong>№ 5</strong></td>
+        <td>Près d'une plante</td>
+        <td>La table à manger (pour démarrer le jeu sur écran)</td>
+      </tr>
+    </table>
+
+    <div class="encart">
+      💡 <strong>Astuce :</strong> tu peux modifier les devinettes des indices
+      (dans <code>print/snaps-indices.html</code>) pour les adapter à TA maison !
+    </div>
+
+    <h3>2.4. Préparer le jeu sur écran</h3>
+    <ul>
+      <li>Ouvre <code>manaaki-snap/index.html</code> sur la tablette/téléphone.</li>
+      <li>Pose-le sur la table à manger (où mène l'indice № 5).</li>
+      <li>Si plusieurs teams : prévois une tablette/téléphone par team, chacune ouvre la page indépendamment.</li>
+      <li>Vérifie que l'écran ne se met pas en veille (mode "Veille → Jamais").</li>
+    </ul>
+
+    <h3>2.5. Cacher le vrai trésor</h3>
+    <p>Place le <strong>trésor final</strong> (gâteau, sac de cadeaux, coffre rempli de bonbons...)
+    à l'endroit indiqué par ta <strong>Story personnalisée</strong> dans <code>config.js</code>.</p>
+  </div>
+
+  <!-- 3. DÉROULÉ -->
+  <div class="section saut-page">
+    <h2>3. Déroulé de la fête</h2>
+
+    <table class="timing-table">
+      <tr><th>Temps</th><th>Étape</th><th>Action animateur</th></tr>
+
+      <tr>
+        <td>0-10 min</td>
+        <td>Accueil</td>
+        <td>Chaque enfant reçoit son badge de Team (à toi de répartir,
+        ou laisse-les choisir leur Team préférée).</td>
+      </tr>
+
+      <tr>
+        <td>10-15 min</td>
+        <td>Briefing théâtral</td>
+        <td>Raconte avec un peu de mise en scène : « Le Ghoster Anonyme a chipé les 5 Memories... »
+        Remets l'<strong>indice № 1</strong> à Manaaki.</td>
+      </tr>
+
+      <tr>
+        <td>15-30 min</td>
+        <td>Chasse aux indices</td>
+        <td>Les teams suivent la chaîne 1 → 2 → 3 → 4 → 5 jusqu'à la table avec la tablette.</td>
+      </tr>
+
+      <tr>
+        <td>30-75 min</td>
+        <td>Les 5 épreuves magiques</td>
+        <td>Sur la tablette : ils créent leur team et résolvent les 5 épreuves.
+        Tu peux aider discrètement (voir solutions plus bas).</td>
+      </tr>
+
+      <tr>
+        <td>75-85 min</td>
+        <td>Story Finale</td>
+        <td>L'écran révèle la Story. Les enfants courent à la cachette du trésor !</td>
+      </tr>
+
+      <tr>
+        <td>85-90 min</td>
+        <td>Cérémonie de remise des diplômes</td>
+        <td>Chaque enfant reçoit son <strong>Diplôme de Maître des Memories</strong>. Photo de groupe !</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 4. SOLUTIONS DES ÉPREUVES -->
+  <div class="section saut-page">
+    <h2>4. Solutions (en cas de blocage)</h2>
+
+    <div class="solution">
+      <h3>🎭 Épreuve 1 : Les Filtres Magiques</h3>
+      <p>Associations correctes :</p>
+      <ul>
+        <li>🐶 Filtre Chien → Oreilles de chiot et langue qui pend</li>
+        <li>🌸 Filtre Couronne → Diadème de fleurs roses sur la tête</li>
+        <li>🔄 Filtre Face Swap → Échange ton visage avec un copain</li>
+        <li>👶 Filtre Baby → Visage tout rond et joues de bébé</li>
+        <li>👴 Filtre Old Age → Toi avec 60 ans en plus et des rides</li>
+        <li>🌈 Filtre Arc-en-ciel → Vomi d'arc-en-ciel quand tu ouvres la bouche</li>
+      </ul>
+    </div>
+
+    <div class="solution">
+      <h3>👻 Épreuve 2 : Le Code Mystère</h3>
+      <p>La devinette en emojis se lit : <strong>« AVEC MOI LES PHOTOS SONT MAGIQUES »</strong></p>
+      <p>Réponse à taper : <strong>FILTRE</strong></p>
+      <p style="font-size:0.9rem;font-style:italic;">
+        Le bouton « 💡 Aide » donne des indices progressifs (catégorie, nombre de lettres, première lettre).
+        La phrase complète est aussi acceptée comme bonne réponse.
+      </p>
+    </div>
+
+    <div class="solution">
+      <h3>#️⃣ Épreuve 3 : Les Hashtags Brisés</h3>
+      <ul>
+        <li>« Photo que tu prends de toi-même » → <strong>SELFIE</strong></li>
+        <li>« Petite image souriante 🙂 dans un texte » → <strong>EMOJI</strong></li>
+        <li>« La mascotte jaune du jeu — 👻 ! » → <strong>FANTOME</strong></li>
+      </ul>
+    </div>
+
+    <div class="solution">
+      <h3>📸 Épreuve 4 : Le Quiz des Lenses</h3>
+      <ol>
+        <li>Emoji « mort de rire » → <strong>😂</strong></li>
+        <li>Filtre qui transforme en chiot → <strong>Filtre Chien</strong></li>
+        <li>Couleur de la mascotte fantôme → <strong>Jaune</strong></li>
+        <li>Couleurs principales dans un arc-en-ciel → <strong>7</strong></li>
+        <li>Signification de « LOL » → <strong>Je ris très fort</strong></li>
+      </ol>
+    </div>
+
+    <div class="solution">
+      <h3>🌈 Épreuve 5 : La Story Mélangée</h3>
+      <p>Ordre correct des moments :</p>
+      <ol>
+        <li><strong>📨 Invitation</strong> (le premier)</li>
+        <li><strong>🎈 Ballons</strong> (entre invitation et gâteau)</li>
+        <li><strong>🍰 Gâteau</strong> (juste avant les cadeaux)</li>
+        <li><strong>🎁 Cadeaux</strong></li>
+        <li><strong>👋 Au revoir</strong> (le dernier)</li>
+      </ol>
+    </div>
+
+    <div class="solution">
+      <h3>📸 Épreuve Finale : La Story Finale</h3>
+      <p>Les enfants doivent placer leurs 5 mots-clés dans
+      <strong>l'ordre des épreuves</strong> (1 à 5) : Filtres, Code Mystère, Hashtags, Quiz, Story Mélangée.</p>
+      <p>L'indice à l'écran est volontairement vague (« l'ordre dans lequel tu as restauré tes Memories »)
+      et les cartes sont mélangées. Si les enfants bloquent, ils peuvent revenir au 📱 Profil qui liste
+      les épreuves dans l'ordre 1-5.</p>
+      <p>La phrase obtenue est celle que tu as définie dans <code>config.js</code>.</p>
+    </div>
+  </div>
+
+  <!-- 5. ASTUCES -->
+  <div class="section">
+    <h2>5. Astuces d'animation</h2>
+
+    <ul>
+      <li>🎭 <strong>Joue le jeu à fond.</strong> Plus tu mises sur le théâtre (« Chuuut, j'ai senti Le Ghoster par ici ! »), plus les enfants y croient.</li>
+      <li>👻 <strong>Petits accessoires :</strong> une déco jaune et fantôme, des ballons, et l'ambiance est lancée.</li>
+      <li>🎵 <strong>Musique d'ambiance :</strong> une playlist pop/fun en fond, ça aide énormément.</li>
+      <li>⏰ <strong>Si ça traîne :</strong> donne un petit indice (« Le fantôme chuchote : regarde mieux ces emojis ») plutôt que la solution directe.</li>
+      <li>🤝 <strong>Plusieurs teams :</strong> chacune sur sa tablette, en parallèle. La 1ʳᵉ qui trouve le trésor le partage !</li>
+      <li>🍰 <strong>Le « trésor » :</strong> idéalement le <strong>gâteau d'anniversaire</strong>, qu'on amène en chantant à la fin.</li>
+      <li>📱 <strong>Sauvegarde :</strong> les progrès sont enregistrés dans le navigateur. Si une team veut recommencer, le lien « Tout recommencer » est en bas du Profil.</li>
+    </ul>
+  </div>
+
+  <!-- 6. EN CAS DE PÉPIN -->
+  <div class="section">
+    <h2>6. Plan B (en cas de pépin)</h2>
+
+    <ul>
+      <li><strong>Pas de wifi / pas d'écran ?</strong> Tu peux jouer uniquement avec les indices papier.
+      Chacun des 5 indices peut donner directement un mot-clé au lieu d'un lieu de cachette.</li>
+      <li><strong>Trop facile / fini trop vite ?</strong> Cache le trésor plus loin, ajoute une 6ᵉ énigme physique entre la révélation et la cachette.</li>
+      <li><strong>Trop difficile ?</strong> Les épreuves 4 (Quiz) et 5 (Story) sont les plus accessibles ;
+      l'épreuve 2 (Code emoji) peut bloquer les plus jeunes. Aide-les en montrant la clé des emojis.</li>
+    </ul>
+  </div>
+
+  <p style="text-align:center;margin-top:3rem;color:#1A1A1A;font-size:1.1rem;font-weight:700;">
+    ✨ Très belle fête à Manaaki et à toute la bande ! ✨
+  </p>
+
+</body>
+</html>
