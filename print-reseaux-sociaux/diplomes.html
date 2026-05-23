@@ -13,6 +13,8 @@
       color: #1A1A1A;
       background: #ddd;
       padding: 1rem;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
     .controls {
@@ -40,83 +42,96 @@
       width: 27cm;
       height: 19cm;
       max-width: 100%;
-      margin: 0 auto 1cm;
+      margin: 0 auto;
       background:
         radial-gradient(circle at 15% 20%, rgba(245,133,41,0.15) 0%, transparent 35%),
         radial-gradient(circle at 85% 80%, rgba(129,52,175,0.15) 0%, transparent 40%),
         #FFFCF5;
       border: 8px solid;
       border-image: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF, #515BD4) 1;
-      padding: 1.5cm 2cm;
+      padding: 1.1cm 2.5cm 1.3cm;
       position: relative;
       page-break-after: always;
       display: flex;
       flex-direction: column;
       align-items: center;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
     .diplome:last-child { page-break-after: auto; }
 
     /* Coins déco */
     .corner {
       position: absolute;
-      width: 80px; height: 80px;
-      font-size: 3rem;
+      width: 60px; height: 60px;
+      font-size: 2.2rem;
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0.85;
+      z-index: 0;
     }
-    .corner.tl { top: 0.6cm; left: 0.6cm; }
-    .corner.tr { top: 0.6cm; right: 0.6cm; }
-    .corner.bl { bottom: 0.6cm; left: 0.6cm; }
-    .corner.br { bottom: 0.6cm; right: 0.6cm; }
+    .corner.tl { top: 0.4cm; left: 0.4cm; }
+    .corner.tr { top: 0.4cm; right: 0.4cm; }
+    .corner.bl { bottom: 0.4cm; left: 0.4cm; }
+    .corner.br { bottom: 0.4cm; right: 0.4cm; }
 
     .pretitle {
       color: #8134AF;
       font-weight: 800;
       letter-spacing: 0.3em;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       text-transform: uppercase;
-      margin-top: 0.5cm;
+      margin-top: 0.2cm;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
-      font-size: 2.6rem;
+      font-size: 2.1rem;
       font-weight: 900;
       letter-spacing: -0.01em;
       color: #1A1A1A;
-      margin: 0.3cm 0 0.2cm;
+      margin: 0.2cm 0 0.15cm;
       text-align: center;
       line-height: 1.1;
+      position: relative;
+      z-index: 1;
     }
 
     .accroche {
       text-align: center;
       color: #555;
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 600;
-      margin-bottom: 0.6cm;
+      margin-bottom: 0.35cm;
+      position: relative;
+      z-index: 1;
     }
 
     .est-decerne {
       text-align: center;
       font-style: italic;
       color: #555;
-      margin-top: 0.4cm;
-      font-size: 1rem;
+      margin-top: 0.2cm;
+      font-size: 0.95rem;
+      position: relative;
+      z-index: 1;
     }
 
     .nom-line {
-      margin: 0.5cm 0;
-      width: 80%;
+      margin: 0.25cm 0 0.3cm;
+      width: 70%;
       border-bottom: 3px solid #1A1A1A;
-      min-height: 2.2cm;
+      min-height: 1.6cm;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
-      font-size: 2.6rem;
+      font-size: 2.4rem;
       color: #1A1A1A;
+      position: relative;
+      z-index: 1;
     }
     .nom-line .placeholder {
       color: #ccc;
@@ -125,54 +140,62 @@
 
     .pourquoi {
       text-align: center;
-      font-size: 1rem;
-      line-height: 1.6;
-      max-width: 22cm;
-      margin: 0.3cm auto 0.4cm;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      max-width: 21cm;
+      margin: 0.25cm auto 0.3cm;
       color: #1A1A1A;
+      position: relative;
+      z-index: 1;
     }
     .pourquoi strong { color: #DD2A7B; }
 
     .badges-row {
       display: flex;
       justify-content: center;
-      gap: 0.5cm;
-      margin: 0.3cm 0;
+      gap: 0.4cm;
+      margin: 0.2cm 0;
+      position: relative;
+      z-index: 1;
     }
     .mini-badge {
       background: linear-gradient(135deg, #FFD700, #FF9F1C);
       color: #1A1A1A;
-      width: 1.4cm;
-      height: 1.4cm;
+      width: 1.2cm;
+      height: 1.2cm;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 1.2rem;
+      font-size: 1rem;
       border: 2px solid #1A1A1A;
     }
 
     .footer-row {
       margin-top: auto;
       width: 100%;
+      max-width: 22cm;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       gap: 1cm;
+      position: relative;
+      z-index: 1;
     }
 
     .sig-block {
       flex: 1;
       text-align: center;
+      min-width: 0;
     }
     .sig-block .line {
       border-bottom: 2px solid #1A1A1A;
-      height: 1.4cm;
-      margin-bottom: 0.2cm;
+      height: 1.1cm;
+      margin-bottom: 0.15cm;
     }
     .sig-block .label {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       color: #555;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -180,8 +203,9 @@
     }
 
     .seal {
-      width: 3.2cm;
-      height: 3.2cm;
+      flex-shrink: 0;
+      width: 2.5cm;
+      height: 2.5cm;
       border-radius: 50%;
       background: linear-gradient(135deg, #F58529, #DD2A7B 50%, #8134AF);
       color: #fff;
@@ -191,22 +215,22 @@
       justify-content: center;
       font-weight: 800;
       text-align: center;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
+      font-size: 0.6rem;
+      letter-spacing: 0.06em;
       box-shadow: 0 4px 12px rgba(0,0,0,0.18);
       transform: rotate(-8deg);
     }
     .seal .big {
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       font-weight: 900;
-      letter-spacing: 0.15em;
-      margin: 0.1cm 0;
+      letter-spacing: 0.12em;
+      margin: 0.08cm 0;
     }
 
     @media print {
       .controls { display: none; }
       body { padding: 0; background: white; }
-      .diplome { box-shadow: none; }
+      .diplome { box-shadow: none; margin: 0 auto; }
     }
   </style>
 </head>
