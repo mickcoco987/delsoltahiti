@@ -61,6 +61,18 @@
     return (v >= 0 ? "+" : "") + v.toFixed(1).replace(".", ",") + " %";
   }
 
+  // "il y a 12 j" / "hier" / "aujourd'hui", a partir d'une date ISO.
+  function relativeDays(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (isNaN(d)) return "";
+    const days = Math.floor((Date.now() - d.getTime()) / 86400000);
+    if (days < 0) return "";
+    if (days === 0) return "aujourd'hui";
+    if (days === 1) return "hier";
+    return "il y a " + days + " j";
+  }
+
   function monthLabel(iso) {
     const parts = String(iso).split("-");
     return MONTHS_FR[(+parts[1] || 1) - 1] + " " + parts[0].slice(2);
@@ -496,6 +508,7 @@
       { key: "deal_pct", label: "Écart cote", num: true },
       { key: "mileage", label: "Kilométrage", num: true },
       { key: "location", label: "Localisation", num: false },
+      { key: "posted_at", label: "Postée", num: false },
       { key: "vin", label: "VIN", num: false, sortable: false },
       { key: "clean_title", label: "Titre", num: false, sortable: false },
       { key: "avis", label: "Avis", num: false, sortable: false },
@@ -541,6 +554,8 @@
         '<td class="num">' +
         (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
         "<td>" + esc(l.location || "—") + "</td>" +
+        '<td title="' + esc(l.posted_at || "") + '">' +
+        (relativeDays(l.posted_at) || "—") + "</td>" +
         '<td class="vin">' + vinLink(vin) + "</td>" +
         "<td>" + titleCell(l) + "</td>" +
         '<td><span class="avis ' + avis.cls + '">' + avis.txt + "</span></td>" +
