@@ -9,12 +9,18 @@ DEPLOIEMENT
 1. Cree une app gratuite sur https://developer.ebay.com/my/keys
    - Utilise les credentials "Production" (App ID = Client ID, Cert ID =
      Client Secret).
+   - Demande l'exemption "Marketplace Account Deletion" (motif : application
+     consomme uniquement l'API Browse publique, ne stocke aucune donnee
+     utilisateur).
 2. Expose les deux comme secrets GitHub Actions :
      EBAY_CLIENT_ID
      EBAY_CLIENT_SECRET
    Le workflow les injecte automatiquement.
 
-L'API ne fournit pas le kilometrage en structure ; il est extrait du titre.
+Strategie : la recherche `item_summary/search` donne le titre/prix/URL mais
+n'expose ni kilometrage ni VIN. On enrichit chaque annonce par un appel a
+`/v1/item/{itemId}` qui retourne les `localizedAspects` (specifications
+detaillees du vehicule) -> on y trouve typiquement "Mileage" et "VIN".
 """
 
 from __future__ import annotations
@@ -35,7 +41,8 @@ from .base import ListingSource
 log = logging.getLogger(__name__)
 
 OAUTH_URL = "https://api.ebay.com/identity/v1/oauth2/token"
-BROWSE_URL = "https://api.ebay.com/buy/browse/v1/item_summary/search"
+BROWSE_SEARCH_URL = "https://api.ebay.com/buy/browse/v1/item_summary/search"
+BROWSE_ITEM_URL = "https://api.ebay.com/buy/browse/v1/item"
 SCOPE = "https://api.ebay.com/oauth/api_scope"
 MARKETPLACE = "EBAY_US"
 CATEGORY_CARS_TRUCKS = "6001"
@@ -81,12 +88,17 @@ class EbayMotorsSource(ListingSource):
 
         listings: List[Listing] = []
         seen: set[str] = set()
+        enriched = 0
         for raw in payload.get("itemSummaries") or []:
-            listing = self._to_listing(raw)
+            detail = self._fetch_item_detail(raw.get("itemId"), token)
+            if detail:
+                enriched += 1
+            listing = self._to_listing(raw, detail)
             if listing and listing.id not in seen:
                 seen.add(listing.id)
                 listings.append(listing)
-        log.info("ebay : %d annonces", len(listings))
+        log.info("ebay : %d annonces (%d enrichies via /item)",
+                 len(listings), enriched)
         return listings
 
     def _get_token(self) -> str:
@@ -113,7 +125,7 @@ class EbayMotorsSource(ListingSource):
             "filter": "buyingOptions:{AUCTION|AUCTION_WITH_BIN}",
             "limit": "200",
         }
-        url = f"{BROWSE_URL}?{urlencode(params)}"
+        url = f"{BROWSE_SEARCH_URL}?{urlencode(params)}"
         request = Request(url, headers={
             "Authorization": f"Bearer {token}",
             "X-EBAY-C-MARKETPLACE-ID": MARKETPLACE,
@@ -122,8 +134,29 @@ class EbayMotorsSource(ListingSource):
         with urlopen(request, timeout=self.timeout) as response:
             return json.loads(response.read().decode("utf-8", errors="replace"))
 
+    def _fetch_item_detail(self, item_id: Optional[str], token: str) -> dict:
+        """Recupere les specifications detaillees d'un item (mileage, VIN...).
+
+        Renvoie un dict vide en cas d'erreur ; la source continue avec les
+        donnees du resume.
+        """
+        if not item_id:
+            return {}
+        url = f"{BROWSE_ITEM_URL}/{item_id}"
+        request = Request(url, headers={
+            "Authorization": f"Bearer {token}",
+            "X-EBAY-C-MARKETPLACE-ID": MARKETPLACE,
+            "Accept": "application/json",
+        })
+        try:
+            with urlopen(request, timeout=self.timeout) as response:
+                return json.loads(response.read().decode("utf-8", errors="replace"))
+        except (HTTPError, URLError, OSError, ValueError) as exc:
+            log.warning("ebay : echec /item/%s (%s)", item_id, exc)
+            return {}
+
     @staticmethod
-    def _to_listing(raw: dict) -> Optional[Listing]:
+    def _to_listing(raw: dict, detail: Optional[dict] = None) -> Optional[Listing]:
         if not isinstance(raw, dict):
             return None
         title = str(raw.get("title") or "")
@@ -137,10 +170,27 @@ class EbayMotorsSource(ListingSource):
         if not price or not (MIN_PRICE <= price <= MAX_PRICE):
             return None
 
-        match = _MILEAGE_RE.search(title)
-        mileage = parse_int(match.group(1)) if match else None
-        if mileage is not None and mileage > MAX_MILEAGE:
-            mileage = None
+        # Kilometrage et VIN : prio aux itemSpecifics (localizedAspects) du
+        # detail item, fallback sur le titre pour le mileage.
+        mileage = None
+        vin = ""
+        for aspect in ((detail or {}).get("localizedAspects") or []):
+            name = (aspect.get("name") or "").lower()
+            value = str(aspect.get("value") or "").strip()
+            if not value:
+                continue
+            if not mileage and ("mileage" in name or "odometer" in name):
+                m = parse_int(value)
+                if m and m <= MAX_MILEAGE:
+                    mileage = m
+            elif not vin and (name == "vin" or "vehicle identification" in name):
+                vin = value.upper()
+        if not mileage:
+            match = _MILEAGE_RE.search(title)
+            if match:
+                m = parse_int(match.group(1))
+                if m and m <= MAX_MILEAGE:
+                    mileage = m
 
         location = (raw.get("itemLocation") or {}).get("country") or ""
         return Listing(
@@ -153,5 +203,6 @@ class EbayMotorsSource(ListingSource):
             source="ebay",
             location=location,
             status="for_sale",
+            vin=vin,
             kind="auction",
         )
