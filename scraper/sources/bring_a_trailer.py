@@ -4,9 +4,9 @@ Bring a Trailer publie des resultats d'encheres detailles (prix reellement
 atteints), une reference precieuse pour un investisseur. L'extraction du JSON
 embarque est assuree par `HtmlJsonSource`.
 
-BaT regroupe les trois variantes du 458 (Italia, Spider, Speciale) sous une
-seule page modele /ferrari/458/. Le filtre 458 sur le titre evite de
-recuperer des annonces voisines qui pourraient apparaitre sur la page.
+URL utilisee : la recherche d'encheres actives filtree sur "Ferrari 458". Le
+filtre 458 sur le titre evite les voitures voisines qui pourraient apparaitre
+dans des sections "vous aimerez aussi".
 """
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ class BringATrailerSource(HtmlJsonSource):
     base_url = "https://bringatrailer.com"
     kind = "auction"
     pages = [
-        "https://bringatrailer.com/ferrari/458/",
+        "https://bringatrailer.com/auctions/?search=Ferrari+458",
     ]
 
     def _to_listing(self, obj: dict) -> Optional[Listing]:
