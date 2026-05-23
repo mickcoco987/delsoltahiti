@@ -2,35 +2,35 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Invitation — Académie des Sorciers</title>
+  <title>Invitation — L'anniversaire de Manaaki</title>
   <style>
     @page { size: A4 portrait; margin: 1.5cm; }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: Georgia, 'Times New Roman', serif;
-      color: #2b1810;
-      background: #f4e9c8;
+      font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1A1A1A;
+      background: #FAFAFA;
       padding: 2rem;
       max-width: 800px;
       margin: 0 auto;
     }
 
     .controls {
-      background: #2b1810;
-      color: #f5c842;
+      background: #1A1A1A;
+      color: #FFFC00;
       padding: 1rem;
       text-align: center;
       margin-bottom: 2rem;
-      border-radius: 8px;
+      border-radius: 12px;
     }
     .controls button {
-      background: #d4a017;
-      color: #2b1810;
+      background: #FFFC00;
+      color: #1A1A1A;
       border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 4px;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
       font-weight: bold;
       cursor: pointer;
       font-size: 1rem;
@@ -38,46 +38,36 @@
 
     .lettre {
       background:
-        linear-gradient(rgba(244,233,200,0.6), rgba(230,212,160,0.6)),
-        radial-gradient(circle at 20% 30%, transparent 0%, transparent 30%, rgba(139,92,46,0.1) 100%);
-      border: 4px double #5a4a2a;
+        linear-gradient(135deg, #FFF59D 0%, #FFFC00 100%);
+      border: 4px solid #1A1A1A;
+      border-radius: 24px;
       padding: 2.5cm 2cm;
       position: relative;
       page-break-after: always;
       min-height: 24cm;
     }
 
-    .lettre::before, .lettre::after {
-      content: '';
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      border: 3px solid #d4a017;
+    .ghost-deco {
+      text-align: center;
+      font-size: 4rem;
+      margin: 1.5rem 0 0.5rem;
     }
-    .lettre::before { top: 15px; left: 15px; border-right: none; border-bottom: none; }
-    .lettre::after { bottom: 15px; right: 15px; border-left: none; border-top: none; }
 
     h1 {
-      font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
       text-align: center;
-      color: #4a148c;
-      font-size: 2rem;
-      letter-spacing: 0.1em;
+      color: #1A1A1A;
+      font-size: 2.4rem;
+      font-weight: 900;
+      letter-spacing: -0.01em;
       margin-bottom: 0.3rem;
     }
 
     .sous-titre {
       text-align: center;
-      font-style: italic;
-      color: #5a4a2a;
+      color: #555;
       margin-bottom: 2rem;
       font-size: 1rem;
-    }
-
-    .sceau {
-      text-align: center;
-      font-size: 4rem;
-      margin: 1.5rem 0;
+      font-weight: 600;
     }
 
     p { line-height: 1.7; margin: 0.8rem 0; font-size: 1.05rem; }
@@ -89,23 +79,21 @@
     }
 
     .signature .nom {
-      font-family: 'Cinzel', Georgia, serif;
-      font-size: 1.2rem;
-      color: #4a148c;
-      font-weight: bold;
-      letter-spacing: 0.05em;
+      font-size: 1.15rem;
+      color: #1A1A1A;
+      font-weight: 700;
     }
 
     .infos-fete {
       margin-top: 2rem;
       padding: 1rem 1.5rem;
-      background: rgba(74, 20, 140, 0.08);
-      border-left: 4px solid #4a148c;
-      border-radius: 4px;
+      background: rgba(255,255,255,0.7);
+      border-left: 5px solid #1A1A1A;
+      border-radius: 8px;
     }
     .infos-fete h3 {
-      font-family: 'Cinzel', serif;
-      color: #4a148c;
+      color: #1A1A1A;
+      font-weight: 800;
       margin-bottom: 0.5rem;
     }
     .infos-fete p { margin: 0.3rem 0; }
@@ -113,7 +101,6 @@
     @media print {
       .controls { display: none; }
       body { padding: 0; background: white; }
-      .lettre { border-color: #2b1810; }
     }
   </style>
 </head>
@@ -121,55 +108,44 @@
 
   <div class="controls">
     <p style="margin-bottom:0.7rem;">📝 <strong>Personnalise puis imprime cette invitation</strong> pour chaque invité</p>
-    <p style="font-size:0.9rem;margin-bottom:0.7rem;opacity:0.85;">Modifie les champs (date, lieu, heure) avant l'impression. Imprime sur du papier épais beige/parchemin pour l'effet maximum !</p>
+    <p style="font-size:0.9rem;margin-bottom:0.7rem;opacity:0.85;">Modifie les champs (date, lieu, heure) avant l'impression. Le contenu est éditable directement au survol !</p>
     <button onclick="window.print()">🖨️ Imprimer cette invitation</button>
   </div>
 
   <div class="lettre" contenteditable="true">
 
-    <div class="sceau">🪄✨🧙‍♂️</div>
+    <div class="ghost-deco">👻 🎉 📸</div>
 
-    <h1>L'Académie des Sorciers de Tahiti</h1>
-    <p class="sous-titre">~ Fondée par les Anciens du Lagon ~</p>
+    <h1>Le Jeu Magique des Memories</h1>
+    <p class="sous-titre">~ Une chasse au trésor pour l'anniversaire de Manaaki ~</p>
 
-    <p style="text-align:center;font-style:italic;color:#4a148c;font-size:0.95rem;margin-bottom:1.5rem;">
-      ✦ Lettre d'Admission ✦
-    </p>
+    <p>Salut <strong>[Prénom de l'invité]</strong>,</p>
 
-    <p>Cher(e) <strong>[Prénom de l'invité]</strong>,</p>
+    <p>Tu es invité(e) à venir fêter les <strong>11 ans de Manaaki</strong> !
+    Au programme : un grand jeu d'aventure où Le Ghoster Anonyme, un fantôme
+    farceur, a caché 5 Memories magiques dans la maison.</p>
 
-    <p>Par la présente, nous avons l'honneur de t'annoncer que tu as été
-    officiellement <strong>admis(e) à l'Académie des Sorciers de Tahiti</strong>.</p>
-
-    <p>Tu es convoqué(e) à la <strong>Cérémonie d'Initiation</strong> de notre nouveau
-    sorcier, <strong>Manaaki</strong>, qui fêtera ses 11 ans —
-    l'âge sacré où la magie s'éveille.</p>
-
-    <p>Le sorcier maléfique <strong>Taʻaroa l'Ombre</strong> a volé les pages du Grimoire Sacré.
-    Avec tes camarades, tu devras <strong>relever 5 épreuves</strong>
-    pour les retrouver et faire renaître la magie.</p>
+    <p>Avec ta team, tu devras <strong>relever 5 défis</strong> (filtres, code
+    mystère, hashtags, quiz, story) pour récupérer les Memories et démasquer
+    où le fantôme a caché le vrai trésor 🎁.</p>
 
     <div class="infos-fete">
-      <h3>📅 Informations pratiques</h3>
+      <h3>📅 Infos pratiques</h3>
       <p><strong>Date :</strong> [JJ / MM / AAAA]</p>
       <p><strong>Heure :</strong> de [__h__] à [__h__]</p>
-      <p><strong>Lieu :</strong> [Adresse de l'Académie]</p>
-      <p><strong>Tenue :</strong> Cape, baguette ou chapeau pointu bienvenus !</p>
+      <p><strong>Lieu :</strong> [Adresse]</p>
+      <p><strong>Tenue :</strong> Confortable (et coloré si tu veux faire la team Rainbow !)</p>
       <p><strong>Confirmation :</strong> [téléphone des parents]</p>
     </div>
 
-    <p style="margin-top:2rem;">Que la magie du lagon te guide jusqu'à nous,</p>
+    <p style="margin-top:2rem;">Viens prêt(e) à relever les défis et à passer un super moment !</p>
 
     <div class="signature">
-      <p>Au nom des Anciens,</p>
-      <p class="nom">La Directrice de l'Académie</p>
+      <p>À très bientôt,</p>
+      <p class="nom">Les parents de Manaaki 👻</p>
     </div>
 
   </div>
-
-  <script>
-    // Permet à l'animateur de modifier directement le contenu avant impression
-  </script>
 
 </body>
 </html>

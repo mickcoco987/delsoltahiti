@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Le Sortilège Final</title>
+  <title>La Story Finale</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -12,35 +12,35 @@
 
   <div class="container">
 
-    <h1>🪄 Le Sortilège Final</h1>
+    <h1>📸 La Story Finale</h1>
     <p class="subtitle">L'heure de vérité</p>
 
     <!-- Étape 1 : reconstituer la phrase -->
     <div id="zone-jeu">
 
       <div class="parchment">
-        <p>Tu as collecté <strong>5 mots magiques</strong> au cours de tes épreuves.
+        <p>Tu as collecté <strong>5 mots-clés</strong> en restaurant tes Memories.
         Réunis-les <strong>dans le bon ordre</strong> et tu découvriras où
-        Taʻaroa a caché le vrai trésor !</p>
+        Le Ghoster a caché le vrai trésor !</p>
 
-        <p class="indice">💡 Le Grimoire chuchote : « L'ordre du sortilège est
-        celui dans lequel tu as restauré mes pages... » Si ta mémoire vacille,
-        retourne consulter le <strong>📖 Grimoire</strong> : il garde la trace
+        <p class="indice">💡 Le fantôme chuchote : « L'ordre de la Story est
+        celui dans lequel tu as restauré tes Memories... » Si ta mémoire vacille,
+        retourne consulter ton <strong>📱 Profil</strong> : il garde la trace
         des épreuves dans l'ordre.</p>
       </div>
 
       <div class="parchment">
-        <h3 class="center">Ton sortilège</h3>
-        <div id="phrase" style="text-align:center;min-height:60px;font-family:'Cinzel',serif;font-size:1.3rem;color:#7b1fa2;letter-spacing:0.05em;padding:1rem;background:rgba(13,27,42,0.1);border-radius:6px;"></div>
+        <h3 class="center">Ta story</h3>
+        <div id="phrase" style="text-align:center;min-height:60px;font-size:1.3rem;color:#1A1A1A;font-weight:800;letter-spacing:0.05em;padding:1rem;background:#FFFC00;border-radius:14px;border:2px solid #1A1A1A;"></div>
 
-        <h3 class="center mt-3">Tes mots magiques</h3>
+        <h3 class="center mt-3">Tes mots-clés</h3>
         <div id="mots" class="grille"></div>
 
         <div id="message" style="text-align:center;font-weight:bold;min-height:1.5em;margin-top:1rem;"></div>
 
         <div class="btn-row">
           <button class="btn btn-secondary" onclick="reset()">↺ Recommencer</button>
-          <button class="btn" onclick="verifier()">🌟 Lancer le sortilège</button>
+          <button class="btn" onclick="verifier()">🌟 Publier la story</button>
         </div>
       </div>
 
@@ -51,20 +51,20 @@
 
       <div class="victoire">
         <h1 style="margin-top:0;">🎉 Bravo !</h1>
-        <h2>Le Grimoire est reconstitué !</h2>
+        <h2>Toutes tes Memories sont là !</h2>
         <p id="phrase-intro" style="font-size:1.1rem;"></p>
         <div class="mot-magique" id="phrase-finale"></div>
-        <p style="font-size:1.05rem;">Cours, vole, sorcier ! Le trésor t'attend là-bas ! 🪄✨</p>
+        <p style="font-size:1.05rem;">Cours, vole, sorcier ! Le trésor t'attend là-bas ! 🎁✨</p>
       </div>
 
       <div class="parchment">
         <h3>🆘 Tu cherches encore ?</h3>
-        <p>Un dernier indice murmuré par le Grimoire :</p>
-        <p id="indice-bonus" style="font-style:italic;text-align:center;font-size:1.05rem;color:#7b1fa2;"></p>
+        <p>Un dernier indice murmuré par le fantôme :</p>
+        <p id="indice-bonus" style="font-style:italic;text-align:center;font-size:1.05rem;color:#1A1A1A;font-weight:600;"></p>
       </div>
 
       <p class="center mt-3">
-        <a href="../dashboard.html" class="btn">📖 Retour au Grimoire</a>
+        <a href="../dashboard.html" class="btn">📱 Retour au Profil</a>
       </p>
     </div>
 
@@ -82,11 +82,10 @@
       window.location.href = '../dashboard.html';
     }
 
-    const ORDRE_EPREUVES = ['potions', 'runes', 'sortileges', 'bestiaire', 'constellation'];
+    const ORDRE_EPREUVES = ['filtres', 'snapcodes', 'hashtags', 'quiz', 'story'];
     const CONFIG = window.MANAAKI_CONFIG || {};
     const MOTS_CONFIG = CONFIG.motsDuSortilege || {};
 
-    // Liste des mots disponibles avec leur épreuve d'origine
     function getMots() {
       return ORDRE_EPREUVES.map(id => ({
         epreuve: id,
@@ -94,8 +93,7 @@
       }));
     }
 
-    // Ordre d'affichage mélangé (figé pour la session, pour ne pas
-    // déstabiliser l'enfant à chaque clic)
+    // Ordre d'affichage mélangé (figé pour la session)
     function melanger(arr) {
       const a = arr.slice();
       for (let i = a.length - 1; i > 0; i--) {
@@ -106,19 +104,17 @@
     }
     const ORDRE_AFFICHAGE = melanger(ORDRE_EPREUVES);
 
-    let ordreChoisi = []; // tableau d'ids d'épreuves dans l'ordre choisi
+    let ordreChoisi = [];
 
     function render() {
-      // Phrase en cours
       const phraseEl = document.getElementById('phrase');
       if (ordreChoisi.length === 0) {
-        phraseEl.innerHTML = '<span style="color:#999;font-style:italic;">Choisis le premier mot...</span>';
+        phraseEl.innerHTML = '<span style="color:#888;font-style:italic;font-weight:500;">Choisis le premier mot...</span>';
       } else {
         const mots = getMots();
         phraseEl.textContent = ordreChoisi.map(id => mots.find(m => m.epreuve === id).mot).join(' ');
       }
 
-      // Mots disponibles (affichés dans un ordre mélangé)
       const motsEl = document.getElementById('mots');
       const mots = getMots();
       const motsAffichage = ORDRE_AFFICHAGE.map(id => mots.find(m => m.epreuve === id));
@@ -156,7 +152,7 @@
     function afficherMessage(txt, ok) {
       const m = document.getElementById('message');
       m.textContent = txt;
-      m.style.color = ok ? '#a5d6a7' : '#ef5350';
+      m.style.color = ok ? '#2e7d32' : '#c62828';
     }
 
     function verifier() {
@@ -168,7 +164,7 @@
       if (correct) {
         reveler();
       } else {
-        afficherMessage("❌ L'ordre n'est pas bon. Retourne au 📖 Grimoire pour vérifier l'ordre des épreuves.", false);
+        afficherMessage("❌ L'ordre n'est pas bon. Retourne au 📱 Profil pour vérifier l'ordre des épreuves.", false);
         if (navigator.vibrate) navigator.vibrate(150);
       }
     }
@@ -181,7 +177,6 @@
       document.getElementById('phrase-finale').textContent = phrase;
       document.getElementById('indice-bonus').textContent = CONFIG.indiceBonusFinal || "Cherche bien !";
 
-      // Marque le final comme réussi
       const e = MM.getEtat();
       e.finalReussi = true;
       MM.setEtat(e);
@@ -189,13 +184,10 @@
       document.getElementById('zone-jeu').classList.add('hidden');
       document.getElementById('zone-revelation').classList.remove('hidden');
       window.scrollTo(0, 0);
-
-      // Petit effet sonore visuel : confetti d'étoiles ? juste l'animation CSS suffit
     }
 
     render();
 
-    // Déjà résolu ?
     if (etat.finalReussi) {
       reveler();
     }

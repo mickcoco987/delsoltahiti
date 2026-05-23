@@ -3,72 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Snap Academy — L'anniversaire de Manaaki</title>
+  <title>Le Jeu Magique — L'anniversaire de Manaaki</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="container">
 
-    <!-- ================================
-         ÉCRAN 1 : MESSAGE D'INVITATION
-         ================================ -->
     <div id="ecran-lettre" class="ecran">
 
-      <h1>👻 Snap Academy</h1>
-      <p class="subtitle">~ L'académie secrète des futurs Snappers ~</p>
+      <h1>👻 Le Jeu Magique des Memories</h1>
+      <p class="subtitle">~ Une chasse au trésor pour l'anniversaire de Manaaki ~</p>
 
       <div class="parchment">
         <p class="center" style="color:var(--ink-soft);font-size:0.9rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">
-          ✦ Notification officielle ✦
+          ✦ Message d'ouverture ✦
         </p>
 
         <p style="margin-top:1rem;">Salut <strong id="nom-heros">Manaaki</strong> 👋,</p>
 
-        <p>Bienvenue dans la <strong>Snap Academy</strong>, l'académie qui forme
-        les futurs maîtres du Snap ! Aujourd'hui tu as <strong>11 ans</strong>,
-        l'âge où tout commence : filtres, stories, snap codes, lenses... tu vas
-        tout apprendre.</p>
+        <p>Bienvenue dans le grand jeu d'anniversaire ! 🎉 Un mystérieux fantôme
+        farceur, <strong>Le Ghoster Anonyme</strong>, est passé par là cette nuit
+        et a <strong>chipé 5 Memories magiques</strong> — des souvenirs spéciaux —
+        qu'il a éparpillés dans la maison.</p>
 
-        <p>Sauf que... 😱 Une mauvaise nouvelle vient de tomber. Un mystérieux
-        troll, <strong>Le Ghoster Anonyme</strong>, s'est introduit dans le système
-        cette nuit et a <strong>effacé tes 5 Memories</strong> — les souvenirs les
-        plus précieux de ton futur profil.</p>
-
-        <p>Sans ces Memories, ta Story Finale ne pourra jamais être publiée, et
-        l'Académie ne pourra pas te diplômer. Avec ta team, <strong>tu dois récupérer
-        les 5 Memories</strong> en réussissant les 5 épreuves de l'Académie avant
-        la fin de la fête !</p>
+        <p>Avec ta team, à toi de <strong>retrouver les 5 Memories</strong> en
+        réussissant les 5 défis magiques. Quand tu les auras toutes, un dernier
+        sortilège te révélera où Le Ghoster a caché le vrai trésor ! 🎁</p>
 
         <p class="center" style="margin-top:1.5rem;color:var(--ink-soft);">
-          <em>Bonne chance, Snapper.</em><br>
-          <strong style="color:var(--ink);">— L'équipe de la Snap Academy</strong>
+          <em>Bonne chasse !</em><br>
+          <strong style="color:var(--ink);">— L'équipe du jeu</strong>
         </p>
       </div>
 
       <div class="btn-row">
-        <button class="btn" onclick="passerARepartition()">📸 Je suis prêt(e), c'est parti !</button>
+        <button class="btn" onclick="passerARepartition()">🎮 C'est parti !</button>
       </div>
     </div>
 
-    <!-- ================================
-         ÉCRAN 2 : CRÉATION DU PROFIL D'ÉQUIPE
-         ================================ -->
     <div id="ecran-repartition" class="ecran hidden">
 
-      <h1>Crée ton profil de team</h1>
+      <h1>Crée ton équipe</h1>
       <p class="subtitle">Chaque équipe choisit son nom et sa Team</p>
 
       <div class="parchment">
-        <h3>Le nom de votre team ?</h3>
-        <input type="text" id="input-equipe" placeholder="Ex: Les Snap Stars" maxlength="30">
+        <h3>Le nom de votre équipe ?</h3>
+        <input type="text" id="input-equipe" placeholder="Ex: Les Étoiles" maxlength="30">
 
-        <h3 class="mt-2">Les snappers qui la composent ?</h3>
+        <h3 class="mt-2">Les prénoms de l'équipe ?</h3>
         <p style="font-size:0.9rem;color:var(--ink-soft);">Sépare les prénoms par des virgules.</p>
         <input type="text" id="input-sorciers" placeholder="Manaaki, Léa, Tom...">
 
         <h3 class="mt-3">Choisissez votre Team</h3>
-        <p style="font-size:0.9rem;color:var(--ink-soft);">Chaque Team a sa vibe — choisis celle qui vous ressemble.</p>
+        <p style="font-size:0.9rem;color:var(--ink-soft);">Chaque Team a sa couleur — choisis celle qui vous ressemble.</p>
 
         <div class="teams">
           <div class="team ghost"  data-team="ghost"  onclick="choisirTeam('ghost')">
@@ -96,7 +84,7 @@
         <div id="erreur" style="color:var(--red);text-align:center;font-weight:bold;display:none;"></div>
 
         <div class="btn-row">
-          <button class="btn" onclick="validerEquipe()">✓ Valider notre profil</button>
+          <button class="btn" onclick="validerEquipe()">✓ Valider notre équipe</button>
         </div>
       </div>
 
@@ -113,12 +101,10 @@
   <script>
     let teamChoisie = null;
 
-    // Personnalisation du prénom
     if (window.MANAAKI_CONFIG && window.MANAAKI_CONFIG.prenomHeros) {
       document.getElementById('nom-heros').textContent = window.MANAAKI_CONFIG.prenomHeros;
     }
 
-    // Si une équipe existe déjà → on saute directement au profil
     const etatActuel = MM.getEtat();
     if (etatActuel.equipeNom && etatActuel.team) {
       window.location.href = 'dashboard.html';
@@ -142,12 +128,12 @@
       const snappersStr = document.getElementById('input-sorciers').value.trim();
 
       if (!nomEquipe) {
-        erreur.textContent = "Donnez un nom à votre team !";
+        erreur.textContent = "Donnez un nom à votre équipe !";
         erreur.style.display = 'block';
         return;
       }
       if (!snappersStr) {
-        erreur.textContent = "Inscrivez les prénoms des snappers !";
+        erreur.textContent = "Inscrivez les prénoms des enfants !";
         erreur.style.display = 'block';
         return;
       }

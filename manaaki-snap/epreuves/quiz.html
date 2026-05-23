@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Le Bestiaire Magique</title>
+  <title>Le Quiz des Lenses</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -12,19 +12,18 @@
 
   <div class="container">
 
-    <h1>🐉 Le Bestiaire Magique</h1>
+    <h1>📸 Le Quiz des Lenses</h1>
     <p class="subtitle">Épreuve 4 sur 5</p>
 
     <div id="zone-jeu">
 
       <div class="parchment">
-        <p>Le Bestiaire des Anciens recense toutes les créatures magiques.
-        Pour récupérer cette page, tu dois <strong>identifier 5 créatures</strong>
-        à partir des indices.</p>
-        <p class="indice">💡 Lis bien la description... puis choisis la bonne créature !</p>
+        <p>Le Ghoster te défie sur ta culture photo et emoji.
+        Pour récupérer cette Memory, tu dois <strong>répondre à 5 questions</strong>.</p>
+        <p class="indice">💡 Lis bien la question... puis choisis la bonne réponse !</p>
       </div>
 
-      <div id="progres-quiz" style="text-align:center;font-family:'Cinzel',serif;color:#f5c842;font-size:1.1rem;margin-bottom:1rem;"></div>
+      <div id="progres-quiz" style="text-align:center;font-weight:700;color:#1A1A1A;font-size:1.1rem;margin-bottom:1rem;"></div>
 
       <div id="zone-question"></div>
 
@@ -39,48 +38,48 @@
   <script>
     const QUESTIONS = [
       {
-        description: "Je suis un cheval blanc avec une corne dorée sur le front. On dit que mes larmes guérissent.",
+        description: "Quel emoji veut dire « mort de rire » ?",
         choix: [
-          { emoji: "🐴", nom: "Pégase",   correct: false },
-          { emoji: "🦄", nom: "Licorne",  correct: true  },
-          { emoji: "🐲", nom: "Dragon",   correct: false },
-          { emoji: "🐺", nom: "Loup-garou",correct: false }
+          { emoji: "😂", nom: "Larmes de joie",  correct: true  },
+          { emoji: "🙃", nom: "Tête à l'envers", correct: false },
+          { emoji: "😴", nom: "Endormi",         correct: false },
+          { emoji: "😤", nom: "Fumée du nez",    correct: false }
         ]
       },
       {
-        description: "Je crache du feu, je vole, et je dors sur un tas d'or. Mes écailles sont aussi dures que la pierre.",
+        description: "Quel filtre te transforme en chiot avec les oreilles et la langue qui pendouille ?",
         choix: [
-          { emoji: "🐉", nom: "Dragon",       correct: true  },
-          { emoji: "🦅", nom: "Aigle royal",  correct: false },
-          { emoji: "🦎", nom: "Salamandre",   correct: false },
-          { emoji: "🐍", nom: "Serpent géant",correct: false }
+          { emoji: "🐱", nom: "Filtre Chat",     correct: false },
+          { emoji: "🐶", nom: "Filtre Chien",    correct: true  },
+          { emoji: "🐰", nom: "Filtre Lapin",    correct: false },
+          { emoji: "🦊", nom: "Filtre Renard",   correct: false }
         ]
       },
       {
-        description: "Mi-aigle, mi-lion. Je porte les héros sur mon dos et je suis le gardien des trésors.",
+        description: "De quelle couleur est la mascotte fantôme de ce jeu ?",
         choix: [
-          { emoji: "🦁", nom: "Lion magique", correct: false },
-          { emoji: "🦉", nom: "Hibou royal",  correct: false },
-          { emoji: "🦅", nom: "Phénix",       correct: false },
-          { emoji: "🦁🦅", nom: "Griffon",     correct: true  }
+          { emoji: "🟣", nom: "Violette",  correct: false },
+          { emoji: "🔵", nom: "Bleue",     correct: false },
+          { emoji: "🟡", nom: "Jaune",     correct: true  },
+          { emoji: "🟢", nom: "Verte",     correct: false }
         ]
       },
       {
-        description: "Je vis dans les océans. Mi-humain, mi-poisson, mon chant peut hypnotiser les marins.",
+        description: "Combien de couleurs principales y a-t-il dans un arc-en-ciel ?",
         choix: [
-          { emoji: "🐬", nom: "Dauphin",    correct: false },
-          { emoji: "🧜", nom: "Sirène",     correct: true  },
-          { emoji: "🐙", nom: "Kraken",     correct: false },
-          { emoji: "🐢", nom: "Tortue mère",correct: false }
+          { emoji: "5️⃣", nom: "5 couleurs", correct: false },
+          { emoji: "6️⃣", nom: "6 couleurs", correct: false },
+          { emoji: "7️⃣", nom: "7 couleurs", correct: true  },
+          { emoji: "8️⃣", nom: "8 couleurs", correct: false }
         ]
       },
       {
-        description: "Quand je meurs, je brûle... puis je renais de mes cendres. Mes plumes sont rouges et or.",
+        description: "Que veut dire « LOL » dans un message ?",
         choix: [
-          { emoji: "🦜", nom: "Perroquet",  correct: false },
-          { emoji: "🔥", nom: "Phénix",     correct: true  },
-          { emoji: "🦢", nom: "Cygne royal",correct: false },
-          { emoji: "🕊️", nom: "Colombe",    correct: false }
+          { emoji: "💤", nom: "Je dors",            correct: false },
+          { emoji: "😂", nom: "Je ris très fort",   correct: true  },
+          { emoji: "🍕", nom: "J'ai faim",          correct: false },
+          { emoji: "👋", nom: "Bonjour",            correct: false }
         ]
       }
     ];
@@ -123,7 +122,6 @@
       const q = QUESTIONS[questionActuelle];
       const correct = q.choix[idxOriginal].correct;
 
-      // Désactive tous les choix
       document.querySelectorAll('#choix .case').forEach(c => c.style.pointerEvents = 'none');
 
       if (correct) {
@@ -141,24 +139,22 @@
         erreurs++;
         if (navigator.vibrate) navigator.vibrate(150);
         setTimeout(() => {
-          // On laisse rejouer la même question
           render();
         }, 1000);
       }
     }
 
     function gagne() {
-      MM.marquerGagnee('bestiaire');
+      MM.marquerGagnee('quiz');
       document.getElementById('zone-jeu').classList.add('hidden');
-      MM.afficherMotGagne('bestiaire', 'zone-victoire');
+      MM.afficherMotGagne('quiz', 'zone-victoire');
     }
 
     render();
 
-    // Si déjà gagnée
-    if (MM.getEtat().epreuvesGagnees['bestiaire']) {
+    if (MM.getEtat().epreuvesGagnees['quiz']) {
       document.getElementById('zone-jeu').classList.add('hidden');
-      MM.afficherMotGagne('bestiaire', 'zone-victoire');
+      MM.afficherMotGagne('quiz', 'zone-victoire');
     }
   </script>
 

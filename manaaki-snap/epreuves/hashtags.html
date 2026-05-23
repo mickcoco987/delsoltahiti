@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Le Sortilège Oublié</title>
+  <title>Les Hashtags Brisés</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -12,15 +12,15 @@
 
   <div class="container">
 
-    <h1>✨ Le Sortilège Oublié</h1>
+    <h1>#️⃣ Les Hashtags Brisés</h1>
     <p class="subtitle">Épreuve 3 sur 5</p>
 
     <div id="zone-jeu">
 
       <div class="parchment">
-        <p>Trois grandes formules magiques ont été <strong>brisées en lettres</strong> par
-        Taʻaroa l'Ombre. Reconstitue-les pour libérer la page du Grimoire.</p>
-        <p class="indice">💡 Touche les lettres dans le bon ordre pour former le mot. Touche une lettre placée pour la retirer. <strong>Indice :</strong> ce sont 3 mots du monde de la magie !</p>
+        <p>Trois hashtags ont été <strong>cassés en lettres</strong> par
+        Le Ghoster. Reconstitue-les pour récupérer cette Memory.</p>
+        <p class="indice">💡 Touche les lettres dans le bon ordre pour former le mot. Touche une lettre placée pour la retirer. <strong>Indice :</strong> ce sont 3 mots du monde de la photo !</p>
       </div>
 
       <div id="liste-mots"></div>
@@ -36,11 +36,10 @@
   <script src="../config.js"></script>
   <script src="../app.js"></script>
   <script>
-    // Les 3 mots à reconstituer (avec un petit "indice" optionnel)
     const MOTS = [
-      { mot: "BAGUETTE", indice: "L'outil du sorcier" },
-      { mot: "FANTOME",  indice: "Esprit qui hante les châteaux" },
-      { mot: "POTION",   indice: "Boisson magique préparée par un sorcier" }
+      { mot: "SELFIE",  indice: "Photo que tu prends de toi-même" },
+      { mot: "EMOJI",   indice: "Petite image souriante 🙂 dans un texte" },
+      { mot: "FANTOME", indice: "La mascotte jaune du jeu — 👻 !" }
     ];
 
     function shuffle(arr) {
@@ -52,10 +51,8 @@
       return a;
     }
 
-    // État : pour chaque mot, l'ordre des lettres choisies
     const etatMots = MOTS.map(m => {
       const lettresSource = m.mot.split('');
-      // S'assure qu'au moins une lettre n'est pas à sa place
       let melange;
       do {
         melange = shuffle(lettresSource);
@@ -63,9 +60,8 @@
       return {
         mot: m.mot,
         indice: m.indice,
-        // Disponibles : les lettres avec leur position d'origine pour avoir des indices uniques
         disponibles: melange.map((l, i) => ({ lettre: l, id: i })),
-        choisies: [], // ids choisis dans l'ordre
+        choisies: [],
         resolu: false
       };
     });
@@ -74,34 +70,34 @@
       const conteneur = document.getElementById('liste-mots');
       conteneur.innerHTML = etatMots.map((m, i) => `
         <div class="parchment" data-mot="${i}">
-          <h3>Sortilège ${i+1} : <span style="font-weight:normal;font-style:italic;">${m.indice}</span></h3>
+          <h3>Hashtag #${i+1} : <span style="font-weight:normal;font-style:italic;color:#555;">${m.indice}</span></h3>
 
           <div style="display:flex;justify-content:center;gap:0.4rem;margin:1rem 0;flex-wrap:wrap;">
             ${Array.from({length: m.mot.length}).map((_, slotIdx) => {
               const id = m.choisies[slotIdx];
               const lettre = id !== undefined ? m.disponibles.find(d => d.id === id).lettre : '';
               return `<div onclick="retirerLettre(${i}, ${slotIdx})"
-                           style="width:42px;height:42px;border:2px solid #d4a017;border-radius:4px;
-                                  background:${lettre ? 'rgba(74,20,140,0.6)' : 'rgba(13,27,42,0.5)'};
+                           style="width:42px;height:42px;border:2px solid #1A1A1A;border-radius:8px;
+                                  background:${lettre ? '#FFFC00' : '#FAFAFA'};
                                   display:flex;align-items:center;justify-content:center;
-                                  font-family:'Cinzel',serif;font-size:1.4rem;font-weight:bold;
-                                  color:#f5c842;cursor:${lettre ? 'pointer' : 'default'};">
+                                  font-size:1.4rem;font-weight:bold;
+                                  color:#1A1A1A;cursor:${lettre ? 'pointer' : 'default'};">
                         ${lettre || '_'}
                       </div>`;
             }).join('')}
           </div>
 
-          <p class="center" style="font-size:0.9rem;color:#5a4a2a;">Lettres disponibles :</p>
+          <p class="center" style="font-size:0.9rem;color:#555;">Lettres disponibles :</p>
 
           <div style="display:flex;justify-content:center;gap:0.4rem;flex-wrap:wrap;">
             ${m.disponibles.map(d => {
               const utilisee = m.choisies.includes(d.id);
               return `<div onclick="ajouterLettre(${i}, ${d.id})"
-                           style="width:42px;height:42px;border:2px solid #d4a017;border-radius:4px;
-                                  background:${utilisee ? 'rgba(13,27,42,0.3)' : 'rgba(244,233,200,0.95)'};
+                           style="width:42px;height:42px;border:2px solid ${utilisee ? '#E0E0E0' : '#1A1A1A'};border-radius:8px;
+                                  background:${utilisee ? '#F0F0F0' : '#fff'};
                                   display:flex;align-items:center;justify-content:center;
-                                  font-family:'Cinzel',serif;font-size:1.4rem;font-weight:bold;
-                                  color:${utilisee ? '#5a4a2a' : '#2b1810'};
+                                  font-size:1.4rem;font-weight:bold;
+                                  color:${utilisee ? '#999' : '#1A1A1A'};
                                   opacity:${utilisee ? '0.3' : '1'};
                                   cursor:${utilisee ? 'default' : 'pointer'};">
                         ${d.lettre}
@@ -109,7 +105,7 @@
             }).join('')}
           </div>
 
-          ${m.resolu ? '<p class="center mt-2" style="color:#2e7d32;font-weight:bold;font-size:1.1rem;">✓ Sortilège lancé !</p>' : ''}
+          ${m.resolu ? '<p class="center mt-2" style="color:#2e7d32;font-weight:bold;font-size:1.1rem;">✓ Hashtag reconstitué !</p>' : ''}
         </div>
       `).join('');
     }
@@ -121,16 +117,14 @@
       if (m.choisies.length >= m.mot.length) return;
       m.choisies.push(lettreId);
 
-      // Si le mot est complet : check
       if (m.choisies.length === m.mot.length) {
         const motActuel = m.choisies.map(id => m.disponibles.find(d => d.id === id).lettre).join('');
         if (motActuel === m.mot) {
           m.resolu = true;
-          afficherMessage("✓ Sortilège " + (motIdx+1) + " lancé !", true);
+          afficherMessage("✓ Hashtag " + (motIdx+1) + " reconstitué !", true);
           checkVictoire();
         } else {
-          afficherMessage("❌ Ce sortilège ne fonctionne pas... Réessaie !", false);
-          // Optionnel : vibration sur mobile
+          afficherMessage("❌ Ce hashtag ne fonctionne pas... Réessaie !", false);
           if (navigator.vibrate) navigator.vibrate(150);
         }
       } else {
@@ -152,25 +146,24 @@
     function afficherMessage(txt, ok) {
       const el = document.getElementById('message');
       el.textContent = txt;
-      el.style.color = ok ? '#a5d6a7' : '#ef5350';
+      el.style.color = ok ? '#2e7d32' : '#c62828';
     }
 
     function checkVictoire() {
       if (etatMots.every(m => m.resolu)) {
         setTimeout(() => {
-          MM.marquerGagnee('sortileges');
+          MM.marquerGagnee('hashtags');
           document.getElementById('zone-jeu').classList.add('hidden');
-          MM.afficherMotGagne('sortileges', 'zone-victoire');
+          MM.afficherMotGagne('hashtags', 'zone-victoire');
         }, 800);
       }
     }
 
     render();
 
-    // Si déjà gagnée
-    if (MM.getEtat().epreuvesGagnees['sortileges']) {
+    if (MM.getEtat().epreuvesGagnees['hashtags']) {
       document.getElementById('zone-jeu').classList.add('hidden');
-      MM.afficherMotGagne('sortileges', 'zone-victoire');
+      MM.afficherMotGagne('hashtags', 'zone-victoire');
     }
   </script>
 
