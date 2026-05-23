@@ -359,19 +359,24 @@ tbody td a:hover { text-decoration: underline; }
 .deal.over { background: rgba(255, 91, 91, 0.15); color: #ff8b8b; }
 
 tbody td.thumb {
-  width: 84px;
+  width: 96px;
   padding: 4px 6px;
-  text-align: center;
-  color: var(--text-faint);
 }
 
-tbody td.thumb img {
-  width: 76px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 4px;
+.thumb-img {
+  width: 88px;
+  height: 56px;
+  border-radius: 6px;
+  background-color: var(--bg-elev-2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: block;
-  background: var(--bg-elev-2);
+}
+
+tbody td.thumb a:hover .thumb-img {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
 tbody td.vin {

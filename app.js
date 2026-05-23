@@ -201,11 +201,18 @@
 
   /* ---------- vignette photo ---------- */
 
-  // Petite cellule image au debut des tableaux. "—" si pas d'URL.
+  // Vignette de taille strictement uniforme (fond gris quand pas d'image),
+  // cliquable vers l'annonce d'origine si l'URL est http(s).
   function thumbCell(l) {
-    if (!l.image_url) return '<td class="thumb">—</td>';
-    return '<td class="thumb"><img src="' + esc(l.image_url) +
-      '" loading="lazy" alt="' + esc(l.title || "") + '" /></td>';
+    const bg = l.image_url
+      ? 'background-image:url(\'' + esc(l.image_url) + '\')'
+      : "";
+    const box = '<div class="thumb-img" style="' + bg + '"></div>';
+    const inner = (l.url && /^https?:\/\//i.test(l.url))
+      ? '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">'
+        + box + "</a>"
+      : box;
+    return '<td class="thumb">' + inner + "</td>";
   }
 
   /* ---------- VIN et avis ---------- */
