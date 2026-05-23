@@ -17,7 +17,9 @@ from .aggregate import build_market
 from .models import Listing
 from .sources.classic_com import ClassicComSource
 from .sources.dupont_registry import DupontRegistryLiveSource
+from .sources.dupont_registry_autos import DupontRegistryAutosSource
 from .sources.ebay import EbayMotorsSource
+from .sources.hemmings import HemmingsSource
 from .sources.marketcheck import MarketcheckSource
 from .sources.rm_sothebys import RmSothebysSource
 from .sources.sample import SampleSource
@@ -32,6 +34,8 @@ LIVE_SOURCES = {
     "marketcheck": MarketcheckSource,
     "ebay": EbayMotorsSource,
     "dupont": DupontRegistryLiveSource,
+    "dupont-autos": DupontRegistryAutosSource,
+    "hemmings": HemmingsSource,
     "sothebys": RmSothebysSource,
 }
 SOURCES = {**LIVE_SOURCES, "sample": SampleSource}
