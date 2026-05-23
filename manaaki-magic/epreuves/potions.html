@@ -5,6 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Salle des Potions</title>
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* Couleurs distinctes par paire (1 à 6) */
+    .case.paire-1 { background: #6a1b9a !important; border-color: #ba68c8 !important; box-shadow: 0 0 12px rgba(186,104,200,0.5); }
+    .case.paire-2 { background: #1565c0 !important; border-color: #64b5f6 !important; box-shadow: 0 0 12px rgba(100,181,246,0.5); }
+    .case.paire-3 { background: #2e7d32 !important; border-color: #81c784 !important; box-shadow: 0 0 12px rgba(129,199,132,0.5); }
+    .case.paire-4 { background: #ef6c00 !important; border-color: #ffb74d !important; box-shadow: 0 0 12px rgba(255,183,77,0.5); }
+    .case.paire-5 { background: #c2185b !important; border-color: #f06292 !important; box-shadow: 0 0 12px rgba(240,98,146,0.5); }
+    .case.paire-6 { background: #00838f !important; border-color: #4dd0e1 !important; box-shadow: 0 0 12px rgba(77,208,225,0.5); }
+
+    /* Case verrouillée (paire validée) */
+    .case.verrouillee {
+      cursor: default !important;
+      transform: none !important;
+      color: #fff !important;
+      position: relative;
+      padding-right: 2rem !important;
+    }
+    .case.verrouillee::before {
+      content: attr(data-num);
+      position: absolute;
+      top: 4px;
+      left: 6px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.95);
+      color: #2b1810;
+      font-weight: bold;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+    }
+    .case.verrouillee::after {
+      content: '🔒';
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      font-size: 0.95rem;
+    }
+    .case.verrouillee:hover { transform: none !important; background: inherit; }
+
+    /* En attente (ingrédient sélectionné, pas encore d'effet choisi) */
+    .case.en-attente {
+      background: #f5c842 !important;
+      border-color: #fff !important;
+      color: #2b1810 !important;
+      animation: pulse 1s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 8px rgba(245,200,66,0.6); }
+      50%      { box-shadow: 0 0 20px rgba(245,200,66,1); }
+    }
+
+    /* Petite légende au-dessus pour indiquer où on en est */
+    .statut-paires {
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      color: #f5c842;
+      font-size: 1rem;
+      margin: 0.5rem 0 1rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,8 +85,12 @@
         <p>Le Maître des Potions a tout renversé ! Pour récupérer la page du Grimoire,
         tu dois <strong>retrouver à quoi sert chaque ingrédient</strong>.</p>
 
-        <p class="indice">💡 Touche un <strong>ingrédient</strong> à gauche, puis touche son <strong>effet</strong> à droite pour les associer.</p>
+        <p class="indice">💡 Touche un <strong>ingrédient</strong> à gauche, puis touche son <strong>effet</strong> à droite.
+        Les paires validées prennent une <strong>couleur</strong> et sont <strong>verrouillées</strong> 🔒.
+        Le bouton <em>Recommencer</em> remet tout à zéro.</p>
       </div>
+
+      <div class="statut-paires" id="statut-paires"></div>
 
       <div class="paires">
         <div class="col-paires">
@@ -56,11 +124,10 @@
       { ingredient: "Écaille de dragon",       effet: "Résister au feu" },
       { ingredient: "Larme de sirène",         effet: "Respirer sous l'eau" },
       { ingredient: "Poil de licorne",         effet: "Soigner les blessures" },
-      { ingredient: "Œil de tritón",            effet: "Voir dans le noir" },
+      { ingredient: "Œil de triton",           effet: "Voir dans le noir" },
       { ingredient: "Poudre d'étoile",         effet: "Devenir invisible" }
     ];
 
-    // Mélange les effets pour ne pas qu'ils soient déjà en ordre
     function shuffle(arr) {
       const a = arr.slice();
       for (let i = a.length - 1; i > 0; i--) {
@@ -73,40 +140,63 @@
     const ingredients = PAIRES.map((p, i) => ({ texte: p.ingredient, idx: i }));
     const effets = shuffle(PAIRES.map((p, i) => ({ texte: p.effet, idx: i })));
 
-    // État : ingredient idx -> effet idx
+    // Etat
+    // - associations : { ingredientIdx: effetIdx } (l'ingredient idx est la cle)
+    // - ordrePaires  : tableau d'ingredientIdx dans l'ordre ou la paire a ete creee
+    //                  permet d'attribuer un n° et une couleur stable a chaque paire
     let associations = {};
+    let ordrePaires = [];
     let selectionIngredient = null;
 
+    function numeroPaire(ingredientIdx) {
+      const pos = ordrePaires.indexOf(ingredientIdx);
+      return pos >= 0 ? pos + 1 : null;
+    }
+
     function render() {
+      // Statut global
+      const nbPaires = ordrePaires.length;
+      document.getElementById('statut-paires').textContent =
+        `Paires validées : ${nbPaires} / ${PAIRES.length}`;
+
+      // Colonne ingrédients
       const colIng = document.getElementById('col-ingredients');
       colIng.innerHTML = ingredients.map(ing => {
-        const associe = associations[ing.idx] !== undefined;
-        const selectionne = selectionIngredient === ing.idx;
-        return `<div class="case ${selectionne ? 'selected' : ''} ${associe ? 'correct' : ''}"
-                     onclick="selectIngredient(${ing.idx})">${ing.texte}</div>`;
+        const numero = numeroPaire(ing.idx);
+        if (numero) {
+          return `<div class="case verrouillee paire-${numero}" data-num="${numero}">${ing.texte}</div>`;
+        }
+        const enAttente = selectionIngredient === ing.idx;
+        return `<div class="case ${enAttente ? 'en-attente' : ''}" onclick="selectIngredient(${ing.idx})">${ing.texte}</div>`;
       }).join('');
 
+      // Colonne effets
       const colEff = document.getElementById('col-effets');
       colEff.innerHTML = effets.map(eff => {
-        // Cet effet est-il déjà associé à un ingrédient ?
-        let liéA = null;
-        for (const [ingIdx, effIdx] of Object.entries(associations)) {
-          if (effIdx === eff.idx) liéA = ingIdx;
+        // Trouver l'ingrédient associé à cet effet (s'il y en a un)
+        let ingredientLie = null;
+        for (const ingIdxStr of Object.keys(associations)) {
+          if (associations[ingIdxStr] === eff.idx) {
+            ingredientLie = parseInt(ingIdxStr);
+            break;
+          }
         }
-        return `<div class="case ${liéA !== null ? 'correct' : ''}"
-                     onclick="selectEffet(${eff.idx})">
-                  ${eff.texte}
-                  ${liéA !== null ? '<br><small>→ ' + ingredients[liéA].texte + '</small>' : ''}
-                </div>`;
+        if (ingredientLie !== null) {
+          const numero = numeroPaire(ingredientLie);
+          return `<div class="case verrouillee paire-${numero}" data-num="${numero}">${eff.texte}</div>`;
+        }
+        return `<div class="case" onclick="selectEffet(${eff.idx})">${eff.texte}</div>`;
       }).join('');
     }
 
     function selectIngredient(idx) {
-      selectionIngredient = idx;
-      // Si déjà associé, on retire l'association
-      if (associations[idx] !== undefined) {
-        delete associations[idx];
+      // Si on re-clique sur l'ingrédient déjà sélectionné, on désélectionne
+      if (selectionIngredient === idx) {
+        selectionIngredient = null;
+      } else {
+        selectionIngredient = idx;
       }
+      msg("", true);
       render();
     }
 
@@ -115,14 +205,12 @@
         msg("⚠️ Choisis d'abord un ingrédient à gauche !", false);
         return;
       }
-      // Si cet effet est déjà associé à un autre ingrédient, on retire l'ancienne assoc
-      for (const ingIdx of Object.keys(associations)) {
-        if (associations[ingIdx] === idx) delete associations[ingIdx];
-      }
+      // Crée la paire (l'ingrédient + effet sont libres puisqu'on a filtré côté affichage)
       associations[selectionIngredient] = idx;
+      ordrePaires.push(selectionIngredient);
       selectionIngredient = null;
+      msg("", true);
       render();
-      msg("");
     }
 
     function msg(texte, ok) {
@@ -132,11 +220,11 @@
     }
 
     function verifier() {
-      if (Object.keys(associations).length < PAIRES.length) {
-        msg("Il manque des associations ! " + Object.keys(associations).length + " / " + PAIRES.length, false);
+      const total = Object.keys(associations).length;
+      if (total < PAIRES.length) {
+        msg(`Il manque des paires ! ${total} / ${PAIRES.length}`, false);
         return;
       }
-      // Vérification : chaque ingrédient idx doit pointer vers le même idx d'effet
       let bons = 0;
       for (const ingIdx in associations) {
         if (parseInt(ingIdx) === associations[ingIdx]) bons++;
@@ -144,14 +232,16 @@
       if (bons === PAIRES.length) {
         gagne();
       } else {
-        msg("❌ " + bons + " sur " + PAIRES.length + " bonnes. Réessaie !", false);
+        msg(`❌ ${bons} sur ${PAIRES.length} bonnes. Touche "Recommencer" et réessaie !`, false);
+        if (navigator.vibrate) navigator.vibrate(150);
       }
     }
 
     function reset() {
       associations = {};
+      ordrePaires = [];
       selectionIngredient = null;
-      msg("");
+      msg("", true);
       render();
     }
 
@@ -161,10 +251,8 @@
       MM.afficherMotGagne('potions', 'zone-victoire');
     }
 
-    // Init
     render();
 
-    // Si déjà gagnée
     if (MM.getEtat().epreuvesGagnees['potions']) {
       document.getElementById('zone-jeu').classList.add('hidden');
       MM.afficherMotGagne('potions', 'zone-victoire');
