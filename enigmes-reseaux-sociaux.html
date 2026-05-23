@@ -694,28 +694,28 @@
         l'a écrit uniquement en emojis. Décode l'équation pour trouver
         <strong>le mot caché</strong>.</p>
 
-        <div class="emoji-line">🎬 + 🎵 + 🦠 + 🌍 = ❓</div>
+        <div class="emoji-line">📸 + ⏰ + 💨 = ❓</div>
 
         <p>Voici la légende — attention, <strong>deux emojis sont des leurres</strong> :</p>
         <div class="legend">
-          <div>🎬 = vidéo</div>
-          <div>🎵 = musique</div>
-          <div>🦠 = se propage<br>comme un microbe</div>
-          <div>🌍 = partout dans<br>le monde</div>
+          <div>📸 = photo /<br>instantané</div>
+          <div>⏰ = 24 heures<br>chrono</div>
+          <div>💨 = qui s'envole /<br>disparaît</div>
           <div style="opacity:0.5;">🍕 = pizza <em>(leurre)</em></div>
           <div style="opacity:0.5;">💤 = sommeil <em>(leurre)</em></div>
         </div>
 
-        <p>Une vidéo musicale qui <strong>se propage partout dans le monde</strong>
-        comme un microbe... c'est exactement le mot qu'on cherche.</p>
+        <p>Une <strong>photo</strong> qui ne reste visible que <strong>24 heures</strong>
+        avant de <strong>s'envoler</strong>... c'est le format star de Snap et d'Insta
+        (et aussi de Facebook, WhatsApp, YouTube...).</p>
 
         <div class="row" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.8rem;">
-          <input class="text-input" type="text" id="input-2" placeholder="Un seul mot — 5 lettres" maxlength="20">
+          <input class="text-input" type="text" id="input-2" placeholder="Un mot anglais — 5 lettres" maxlength="20">
           <button class="btn" onclick="verifEnigme2()">📤 Envoyer</button>
         </div>
 
-        <div class="hint">💡 Indice : le 🦠 est la grosse piste — pense à comment on
-        décrit ce qui se propage <em>comme une maladie</em> sur les réseaux.</div>
+        <div class="hint">💡 Indice : c'est un mot anglais qui veut dire « <em>histoire</em> ».
+        Il commence par <strong>S</strong>.</div>
       </div>
 
       <div class="message" id="msg-2"></div>
@@ -1067,13 +1067,13 @@
     function verifEnigme2() {
       const v = document.getElementById('input-2').value;
       const msg = document.getElementById('msg-2');
-      if (matchAny(v, 'viral|virale')) {
+      if (matchAny(v, 'story|stories|storys')) {
         msg.className = 'message ok';
-        msg.textContent = '✓ Exact ! Le mot caché est VIRAL. Tu gagnes la lettre I.';
+        msg.textContent = '✓ Exact ! Le mot caché est STORY. Tu gagnes la lettre I.';
         finishEnigme(2, 'I');
       } else {
         msg.className = 'message ko';
-        msg.textContent = '❌ Pas ce mot-là. Indice : pense aux vidéos que tout le monde partage...';
+        msg.textContent = '❌ Pas ce mot-là. Indice : un mot anglais qui veut dire « histoire »...';
         if (navigator.vibrate) navigator.vibrate(120);
       }
     }
