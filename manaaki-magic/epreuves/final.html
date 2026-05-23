@@ -20,13 +20,13 @@
 
       <div class="parchment">
         <p>Tu as collecté <strong>5 mots magiques</strong> au cours de tes épreuves.
-        Réunis-les <strong>dans l'ordre des épreuves</strong> (1 à 5) et tu découvriras
-        où Taʻaroa a caché le vrai trésor !</p>
+        Réunis-les <strong>dans le bon ordre</strong> et tu découvriras où
+        Taʻaroa a caché le vrai trésor !</p>
 
-        <p class="indice">💡 Touche tes mots dans le bon ordre :
-        <strong>1.</strong> Potions → <strong>2.</strong> Runes →
-        <strong>3.</strong> Sortilèges → <strong>4.</strong> Bestiaire →
-        <strong>5.</strong> Constellation</p>
+        <p class="indice">💡 Le Grimoire chuchote : « L'ordre du sortilège est
+        celui dans lequel tu as restauré mes pages... » Si ta mémoire vacille,
+        retourne consulter le <strong>📖 Grimoire</strong> : il garde la trace
+        des épreuves dans l'ordre.</p>
       </div>
 
       <div class="parchment">
@@ -94,6 +94,18 @@
       }));
     }
 
+    // Ordre d'affichage mélangé (figé pour la session, pour ne pas
+    // déstabiliser l'enfant à chaque clic)
+    function melanger(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+    const ORDRE_AFFICHAGE = melanger(ORDRE_EPREUVES);
+
     let ordreChoisi = []; // tableau d'ids d'épreuves dans l'ordre choisi
 
     function render() {
@@ -106,10 +118,11 @@
         phraseEl.textContent = ordreChoisi.map(id => mots.find(m => m.epreuve === id).mot).join(' ');
       }
 
-      // Mots disponibles
+      // Mots disponibles (affichés dans un ordre mélangé)
       const motsEl = document.getElementById('mots');
       const mots = getMots();
-      motsEl.innerHTML = mots.map((m, i) => {
+      const motsAffichage = ORDRE_AFFICHAGE.map(id => mots.find(m => m.epreuve === id));
+      motsEl.innerHTML = motsAffichage.map(m => {
         const utilise = ordreChoisi.includes(m.epreuve);
         const ep = MM.EPREUVES.find(e => e.id === m.epreuve);
         return `<div class="case"
@@ -117,7 +130,6 @@
                      style="opacity:${utilise ? '0.4' : '1'};">
                   <div style="font-size:1.5rem;">${ep.emoji}</div>
                   <div style="margin-top:0.3rem;font-weight:bold;">${m.mot}</div>
-                  <div style="font-size:0.75rem;opacity:0.7;margin-top:0.2rem;">(Épreuve ${ep.num})</div>
                 </div>`;
       }).join('');
     }
@@ -156,7 +168,7 @@
       if (correct) {
         reveler();
       } else {
-        afficherMessage("❌ L'ordre n'est pas bon. Rappelle-toi : Potions → Runes → Sortilèges → Bestiaire → Constellation", false);
+        afficherMessage("❌ L'ordre n'est pas bon. Retourne au 📖 Grimoire pour vérifier l'ordre des épreuves.", false);
         if (navigator.vibrate) navigator.vibrate(150);
       }
     }
