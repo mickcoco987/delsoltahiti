@@ -621,15 +621,17 @@
       <h1>Les Logos Cachés</h1>
 
       <div class="card">
-        <p>Le pirate a effacé les noms de 3 réseaux sociaux.
-        Lis les descriptions et <strong>tape le nom du réseau</strong> qui correspond.</p>
-        <div class="hint">💡 Une seule réponse par devinette. Pas besoin de majuscules ni d'accents.</div>
+        <p>Le pirate a effacé les noms de <strong>4 réseaux sociaux</strong>.
+        Lis chaque description et <strong>tape le nom du réseau</strong> qui correspond.</p>
+        <div class="hint">💡 Une seule réponse par devinette. Pas besoin de majuscules ni d'accents.
+        Les 4 réseaux à trouver sont tous différents.</div>
       </div>
 
       <div class="sub-puzzle" data-key="snapchat">
         <span class="solved-mark">✓</span>
-        <p><strong>Devinette A.</strong> Mon logo est un <strong>fantôme blanc</strong> sur fond jaune.
-        Mes photos s'autodétruisent au bout de quelques secondes.</p>
+        <p><strong>Devinette A.</strong> Une <strong>silhouette ronde aux bras en l'air</strong>
+        sur fond ensoleillé. Mes meilleurs souvenirs ne durent
+        que quelques secondes avant de disparaître.</p>
         <div class="row">
           <input class="text-input" type="text" placeholder="Tape le nom du réseau..." data-answer="snapchat">
           <button class="btn btn-ghost" onclick="verifSub(this)">Valider</button>
@@ -638,8 +640,9 @@
 
       <div class="sub-puzzle" data-key="twitter">
         <span class="solved-mark">✓</span>
-        <p><strong>Devinette B.</strong> J'étais un petit <strong>oiseau bleu</strong>
-        nommé d'après un gazouillis... mais Elon m'a transformé en lettre noire.</p>
+        <p><strong>Devinette B.</strong> Pendant des années, mes utilisateurs ont
+        <strong>gazouillé en 140 caractères</strong>. Aujourd'hui, je porte
+        le nom d'une seule lettre — choisie par un milliardaire.</p>
         <div class="row">
           <input class="text-input" type="text" placeholder="Tape le nom du réseau..." data-answer="twitter|x">
           <button class="btn btn-ghost" onclick="verifSub(this)">Valider</button>
@@ -648,11 +651,23 @@
 
       <div class="sub-puzzle" data-key="tiktok">
         <span class="solved-mark">✓</span>
-        <p><strong>Devinette C.</strong> Une <strong>note de musique</strong> blanche,
-        des vidéos courtes qui défilent à l'infini, et un FYP qui te connaît
-        mieux que ta meilleure amie.</p>
+        <p><strong>Devinette C.</strong> Mon nom <strong>répète deux fois la même
+        syllabe</strong>, comme le bruit d'une horloge. On me scrolle à l'infini
+        et mon algorithme te connaît parfois mieux que tes parents.</p>
         <div class="row">
           <input class="text-input" type="text" placeholder="Tape le nom du réseau..." data-answer="tiktok">
+          <button class="btn btn-ghost" onclick="verifSub(this)">Valider</button>
+        </div>
+      </div>
+
+      <div class="sub-puzzle" data-key="linkedin">
+        <span class="solved-mark">✓</span>
+        <p><strong>Devinette D.</strong> Pas de filtres, pas de danses,
+        pas de chats. Mes utilisateurs <strong>cherchent du travail</strong> ou
+        racontent leur dernière promotion. Mon logo : un carré bleu avec deux
+        lettres blanches.</p>
+        <div class="row">
+          <input class="text-input" type="text" placeholder="Tape le nom du réseau..." data-answer="linkedin">
           <button class="btn btn-ghost" onclick="verifSub(this)">Valider</button>
         </div>
       </div>
@@ -676,29 +691,31 @@
 
       <div class="card">
         <p>Un dernier Snap de <strong>@LunaStar</strong> contient un indice — mais le pirate
-        l'a écrit uniquement en emojis. Décode-le pour trouver
+        l'a écrit uniquement en emojis. Décode l'équation pour trouver
         <strong>le mot caché</strong>.</p>
 
-        <div class="emoji-line">🎬 + 🎵 + 🚀 = ❓</div>
+        <div class="emoji-line">🎬 + 🎵 + 🦠 + 🌍 = ❓</div>
 
-        <p>Voici la légende des emojis :</p>
+        <p>Voici la légende — attention, <strong>deux emojis sont des leurres</strong> :</p>
         <div class="legend">
-          <div>🎬 = <strong>vidéo</strong></div>
-          <div>🎵 = <strong>musique</strong></div>
-          <div>🚀 = <strong>cartonne / explose</strong></div>
+          <div>🎬 = vidéo</div>
+          <div>🎵 = musique</div>
+          <div>🦠 = se propage<br>comme un microbe</div>
+          <div>🌍 = partout dans<br>le monde</div>
+          <div style="opacity:0.5;">🍕 = pizza <em>(leurre)</em></div>
+          <div style="opacity:0.5;">💤 = sommeil <em>(leurre)</em></div>
         </div>
 
-        <p>Quand une <strong>vidéo</strong> avec de la <strong>musique cartonne</strong>
-        et qu'elle est partagée des millions de fois sur les réseaux,
-        on dit qu'elle devient...</p>
+        <p>Une vidéo musicale qui <strong>se propage partout dans le monde</strong>
+        comme un microbe... c'est exactement le mot qu'on cherche.</p>
 
         <div class="row" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.8rem;">
-          <input class="text-input" type="text" id="input-2" placeholder="Un mot — 5 lettres" maxlength="20">
+          <input class="text-input" type="text" id="input-2" placeholder="Un seul mot — 5 lettres" maxlength="20">
           <button class="btn" onclick="verifEnigme2()">📤 Envoyer</button>
         </div>
 
-        <div class="hint">💡 Indice : ça commence par <strong>V</strong> et finit par <strong>L</strong>.
-        Pense au mot qu'on utilise pour parler des vidéos vues par tout le monde.</div>
+        <div class="hint">💡 Indice : le 🦠 est la grosse piste — pense à comment on
+        décrit ce qui se propage <em>comme une maladie</em> sur les réseaux.</div>
       </div>
 
       <div class="message" id="msg-2"></div>
@@ -714,31 +731,34 @@
 
       <div class="card">
         <p>Le pirate a mélangé les lettres du <strong>hashtag-signature</strong>
-        de @LunaStar. Remets-les dans l'ordre — c'est un mot anglais bien connu
-        des accros à TikTok.</p>
+        de @LunaStar — et il a glissé <strong>2 lettres-leurres</strong> dans le tas
+        pour t'embrouiller. Trouve le mot caché.</p>
 
         <div class="scramble">
+          <div class="letter-tile">Z</div>
           <div class="letter-tile">N</div>
           <div class="letter-tile">D</div>
           <div class="letter-tile">I</div>
           <div class="letter-tile">N</div>
           <div class="letter-tile">G</div>
+          <div class="letter-tile">X</div>
           <div class="letter-tile">T</div>
           <div class="letter-tile">R</div>
           <div class="letter-tile">E</div>
         </div>
 
         <p style="text-align:center;color:var(--ink-soft);font-size:0.9rem;">
-          ↑ 8 lettres mélangées
+          ↑ 10 lettres mélangées — <strong>2 sont des leurres</strong>, 8 forment le mot
         </p>
 
         <div class="row" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.8rem;">
-          <input class="text-input" type="text" id="input-3" placeholder="#?????????" maxlength="20" style="text-transform:uppercase;">
+          <input class="text-input" type="text" id="input-3" placeholder="Le hashtag (8 lettres)" maxlength="20" style="text-transform:uppercase;">
           <button class="btn" onclick="verifEnigme3()">🔥 C'est ça !</button>
         </div>
 
-        <div class="hint">💡 Quand une vidéo est partout sur TikTok, on dit qu'elle est en...
-        <em>(en français : « tendance »)</em>. Le # est optionnel.</div>
+        <div class="hint">💡 C'est un mot anglais de 8 lettres lié à TikTok et aux modes
+        du moment. Le <strong>#</strong> est optionnel. Repère vite les 2 lettres
+        qui n'apparaissent jamais dans des mots courants.</div>
       </div>
 
       <div class="message" id="msg-3"></div>
@@ -754,7 +774,9 @@
 
       <div class="card">
         <p>Le pirate utilise un compte avec une bio cryptique.
-        Démasque-le en devinant <strong>quel est son réseau social préféré</strong>.</p>
+        Démasque-le en devinant <strong>quel est son réseau social préféré</strong>.
+        Attention : <strong>plusieurs lignes sont des leurres</strong> qui pourraient
+        pointer vers d'autres réseaux !</p>
 
         <div class="profile-card">
           <div class="profile-head">
@@ -764,15 +786,17 @@
               <div class="stats">∞ followers · 0 abonnement · 0 post</div>
             </div>
           </div>
-          <div class="bio">📍 Quelque part dans le cloud
-🔒 Mes photos disparaissent en 10 secondes
-👻 Mon emblème est jaune et flotte
-🔥 Je ne rate jamais un streak
-📸 Mes amis savent où je suis grâce à la Map</div>
+          <div class="bio">📍 Localisé en temps réel sur une carte interactive
+📷 Photos qui s'auto-détruisent en 10 secondes
+⏰ Tout ce qui dure plus de 24h n'est pas pour moi
+🔥 Plus de 200 jours consécutifs sans rater une seule fois
+🎨 Mon Bitmoji est ma signature
+🎬 Je poste aussi des Reels et des Shorts, parfois
+🎵 J'adore les danses tendance — pour les regarder seulement</div>
         </div>
 
         <p>D'après cette bio, sur quel réseau social <strong>@ghost_404</strong>
-        passe-t-il le plus clair de son temps ?</p>
+        passe-t-il <em>le plus clair</em> de son temps ?</p>
 
         <div class="choices" id="choices-4">
           <div class="choice" data-correct="false" onclick="verifChoice4(this)">📷 Instagram</div>
@@ -781,8 +805,9 @@
           <div class="choice" data-correct="false" onclick="verifChoice4(this)">📘 Facebook</div>
         </div>
 
-        <div class="hint">💡 Trois indices pointent vers le même réseau : le fantôme,
-        le streak et la Map.</div>
+        <div class="hint">💡 Sois prudent·e : les <em>Reels</em> et les <em>danses</em>
+        sont des distractions. Cherche les indices uniques à <strong>UN seul réseau</strong>
+        (Bitmoji, photos qui s'auto-détruisent, streak, carte des amis…).</div>
       </div>
 
       <div class="message" id="msg-4"></div>
@@ -797,8 +822,9 @@
       <h1>L'épreuve finale du pirate</h1>
 
       <div class="card">
-        <p>Trois questions sur la culture des réseaux sociaux.
-        <strong>Sans faute</strong>, le pirate t'offre la dernière lettre.</p>
+        <p><strong>5 questions</strong> sur la culture des réseaux sociaux.
+        <strong>Sans faute</strong>, le pirate t'offre la dernière lettre — sinon,
+        le quiz repart à zéro !</p>
         <div class="progress-quiz" id="progress-quiz"></div>
         <div id="quiz-zone"></div>
       </div>
@@ -868,7 +894,7 @@
     // ===============================================================
     // ÉTAT DU JEU
     // ===============================================================
-    const STORAGE_KEY = 'enigmes-rs-v1';
+    const STORAGE_KEY = 'enigmes-rs-v2';
     const TOTAL_ENIGMES = 5;
     const LETTERS_ORDER = ['V', 'I', 'R', 'A', 'L']; // ordre d'obtention
     const MOT_FINAL = 'VIRAL';
@@ -1027,10 +1053,10 @@
       }
     }
     function checkEnigme1Done() {
-      const done = ['snapchat', 'twitter', 'tiktok'].every(k => state.sub1[k]);
+      const done = ['snapchat', 'twitter', 'tiktok', 'linkedin'].every(k => state.sub1[k]);
       if (done) {
         document.getElementById('btn-finish-1').disabled = false;
-        document.getElementById('msg-1').textContent = '🎉 Toutes les devinettes trouvées ! Récupère ta lettre.';
+        document.getElementById('msg-1').textContent = '🎉 Les 4 devinettes sont trouvées ! Récupère ta lettre.';
         document.getElementById('msg-1').className = 'message ok';
       }
     }
@@ -1115,12 +1141,30 @@
         ]
       },
       {
-        q: 'Que désigne le « FYP » sur TikTok ?',
+        q: 'Que désigne le sigle « FYP » sur TikTok ?',
         choix: [
           { t: 'Find Your People',         ok: false },
           { t: 'Followers Yearly Plan',    ok: false },
           { t: 'For You Page',             ok: true  },
           { t: 'Free Your Phone',          ok: false }
+        ]
+      },
+      {
+        q: 'Parmi ces réseaux, lequel a été créé en PREMIER ?',
+        choix: [
+          { t: 'Facebook (2004)', ok: false },
+          { t: 'MySpace (2003)',  ok: false },
+          { t: 'LinkedIn (2002)', ok: true  },
+          { t: 'Twitter (2006)',  ok: false }
+        ]
+      },
+      {
+        q: 'En quelle année Instagram a-t-il été racheté par Facebook (aujourd\'hui Meta) ?',
+        choix: [
+          { t: '2010', ok: false },
+          { t: '2012', ok: true  },
+          { t: '2015', ok: false },
+          { t: '2018', ok: false }
         ]
       }
     ];
