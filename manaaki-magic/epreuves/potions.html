@@ -48,6 +48,50 @@
     }
     .case.verrouillee:hover { transform: none !important; background: inherit; }
 
+    /* Case VALIDÉE (vérifiée correcte) — figée, verte/dorée avec ✓ et ✨ */
+    .case.validee {
+      background: linear-gradient(135deg, #1b5e20 0%, #43a047 100%) !important;
+      border: 2px solid #ffd700 !important;
+      box-shadow: 0 0 20px rgba(255,215,0,0.7), inset 0 0 10px rgba(255,255,255,0.1) !important;
+      color: #fff !important;
+      cursor: default !important;
+      position: relative;
+      padding: 1rem 2.2rem 1rem 2.2rem !important;
+      transform: none !important;
+      font-weight: bold;
+    }
+    .case.validee::before {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #ffd700;
+      color: #1b5e20;
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .case.validee::after {
+      content: '✨';
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      animation: sparkle 1.5s ease-in-out infinite;
+    }
+    .case.validee:hover { transform: none !important; }
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.6; }
+      50%      { opacity: 1; }
+    }
+
     /* En attente (ingrédient sélectionné, pas encore d'effet choisi) */
     .case.en-attente {
       background: #f5c842 !important;
@@ -85,9 +129,9 @@
         <p>Le Maître des Potions a tout renversé ! Pour récupérer la page du Grimoire,
         tu dois <strong>retrouver à quoi sert chaque ingrédient</strong>.</p>
 
-        <p class="indice">💡 Touche un <strong>ingrédient</strong> à gauche, puis touche son <strong>effet</strong> à droite.
-        Les paires validées prennent une <strong>couleur</strong> et sont <strong>verrouillées</strong> 🔒.
-        Le bouton <em>Recommencer</em> remet tout à zéro.</p>
+        <p class="indice">💡 Touche un <strong>ingrédient</strong> à gauche, puis son <strong>effet</strong> à droite.
+        Quand tu as fait tes 6 paires, clique sur <strong>Vérifier</strong> :
+        les bonnes paires sont <strong>figées en vert ✓</strong>, les mauvaises sont libérées pour que tu puisses les refaire.</p>
       </div>
 
       <div class="statut-paires" id="statut-paires"></div>
@@ -141,10 +185,11 @@
     const effets = shuffle(PAIRES.map((p, i) => ({ texte: p.effet, idx: i })));
 
     // Etat
-    // - associations : { ingredientIdx: effetIdx } (l'ingredient idx est la cle)
-    // - ordrePaires  : tableau d'ingredientIdx dans l'ordre ou la paire a ete creee
-    //                  permet d'attribuer un n° et une couleur stable a chaque paire
+    // - associations : paires non encore vérifiées (provisoires)
+    // - validees     : paires vérifiées et correctes (figées définitivement)
+    // - ordrePaires  : ordre des paires non validées (pour la couleur)
     let associations = {};
+    let validees = {};
     let ordrePaires = [];
     let selectionIngredient = null;
 
@@ -154,18 +199,25 @@
     }
 
     function render() {
-      // Statut global
-      const nbPaires = ordrePaires.length;
-      document.getElementById('statut-paires').textContent =
-        `Paires validées : ${nbPaires} / ${PAIRES.length}`;
+      const nbValidees = Object.keys(validees).length;
+      const nbProvisoires = ordrePaires.length;
+      document.getElementById('statut-paires').innerHTML =
+        `Paires validées ✓ : <strong>${nbValidees}</strong> / ${PAIRES.length}` +
+        (nbProvisoires > 0 ? `   •   Paires à vérifier : ${nbProvisoires}` : '');
 
       // Colonne ingrédients
       const colIng = document.getElementById('col-ingredients');
       colIng.innerHTML = ingredients.map(ing => {
+        // 1. Déjà validée définitivement ?
+        if (validees[ing.idx] !== undefined) {
+          return `<div class="case validee">${ing.texte}</div>`;
+        }
+        // 2. Dans une paire provisoire ?
         const numero = numeroPaire(ing.idx);
         if (numero) {
           return `<div class="case verrouillee paire-${numero}" data-num="${numero}">${ing.texte}</div>`;
         }
+        // 3. Libre
         const enAttente = selectionIngredient === ing.idx;
         return `<div class="case ${enAttente ? 'en-attente' : ''}" onclick="selectIngredient(${ing.idx})">${ing.texte}</div>`;
       }).join('');
@@ -173,7 +225,13 @@
       // Colonne effets
       const colEff = document.getElementById('col-effets');
       colEff.innerHTML = effets.map(eff => {
-        // Trouver l'ingrédient associé à cet effet (s'il y en a un)
+        // 1. Cet effet appartient à une paire validée ?
+        for (const ingIdxStr of Object.keys(validees)) {
+          if (validees[ingIdxStr] === eff.idx) {
+            return `<div class="case validee">${eff.texte}</div>`;
+          }
+        }
+        // 2. Cet effet est-il dans une paire provisoire ?
         let ingredientLie = null;
         for (const ingIdxStr of Object.keys(associations)) {
           if (associations[ingIdxStr] === eff.idx) {
@@ -185,6 +243,7 @@
           const numero = numeroPaire(ingredientLie);
           return `<div class="case verrouillee paire-${numero}" data-num="${numero}">${eff.texte}</div>`;
         }
+        // 3. Libre
         return `<div class="case" onclick="selectEffet(${eff.idx})">${eff.texte}</div>`;
       }).join('');
     }
@@ -220,25 +279,57 @@
     }
 
     function verifier() {
-      const total = Object.keys(associations).length;
+      const total = Object.keys(associations).length + Object.keys(validees).length;
       if (total < PAIRES.length) {
         msg(`Il manque des paires ! ${total} / ${PAIRES.length}`, false);
         return;
       }
-      let bons = 0;
-      for (const ingIdx in associations) {
-        if (parseInt(ingIdx) === associations[ingIdx]) bons++;
+
+      // Pour chaque paire provisoire, on regarde si elle est correcte
+      const nouvellesCorrectes = [];
+      for (const ingIdxStr of Object.keys(associations)) {
+        const ingIdx = parseInt(ingIdxStr);
+        if (ingIdx === associations[ingIdx]) {
+          validees[ingIdx] = associations[ingIdx];
+          nouvellesCorrectes.push(ingIdx);
+        }
       }
-      if (bons === PAIRES.length) {
-        gagne();
+
+      // Retire les nouvelles correctes de associations + ordrePaires
+      for (const ingIdx of nouvellesCorrectes) {
+        delete associations[ingIdx];
+        const pos = ordrePaires.indexOf(ingIdx);
+        if (pos >= 0) ordrePaires.splice(pos, 1);
+      }
+
+      // Libère TOUTES les paires fausses restantes (l'enfant doit les refaire)
+      const fausses = Object.keys(associations).length;
+      if (fausses > 0) {
+        associations = {};
+        ordrePaires = [];
+      }
+
+      // Victoire ?
+      if (Object.keys(validees).length === PAIRES.length) {
+        render();
+        setTimeout(gagne, 600);
+        return;
+      }
+
+      // Message de feedback
+      const nC = nouvellesCorrectes.length;
+      if (nC > 0) {
+        msg(`✓ ${nC} bonne${nC>1?'s':''} paire${nC>1?'s':''} figée${nC>1?'s':''} ! Refais les ${fausses} autre${fausses>1?'s':''}.`, true);
       } else {
-        msg(`❌ ${bons} sur ${PAIRES.length} bonnes. Touche "Recommencer" et réessaie !`, false);
+        msg(`❌ Aucune bonne paire... Réfléchis bien et recommence !`, false);
         if (navigator.vibrate) navigator.vibrate(150);
       }
+      render();
     }
 
     function reset() {
       associations = {};
+      validees = {};
       ordrePaires = [];
       selectionIngredient = null;
       msg("", true);
