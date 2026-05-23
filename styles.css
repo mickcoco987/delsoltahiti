@@ -70,6 +70,12 @@ a { color: var(--accent-soft); }
   line-height: 1.5;
 }
 
+.meta-relative {
+  color: var(--accent-soft);
+  font-weight: 600;
+  margin-left: 4px;
+}
+
 .header-right {
   display: flex;
   align-items: center;

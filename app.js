@@ -98,6 +98,30 @@
       " " + d.getFullYear();
   }
 
+  // Date + heure (HH:MM) en fuseau local.
+  function dateTimeLabel(iso) {
+    const d = new Date(iso);
+    if (isNaN(d)) return iso;
+    const h = String(d.getHours()).padStart(2, "0");
+    const m = String(d.getMinutes()).padStart(2, "0");
+    return dateLabel(iso) + " à " + h + ":" + m;
+  }
+
+  // "il y a X min/h/j" / "a l'instant".
+  function relativeShort(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (isNaN(d)) return "";
+    const sec = Math.floor((Date.now() - d.getTime()) / 1000);
+    if (sec < 60) return "à l'instant";
+    const min = Math.floor(sec / 60);
+    if (min < 60) return "il y a " + min + " min";
+    const h = Math.floor(min / 60);
+    if (h < 24) return "il y a " + h + " h";
+    const days = Math.floor(h / 24);
+    return "il y a " + days + " j";
+  }
+
   function isHttpUrl(u) {
     return /^https?:\/\//i.test(String(u || ""));
   }
@@ -681,14 +705,26 @@
   /* ---------- en-tete / pied de page ---------- */
 
   function renderMeta() {
-    const gen = dateLabel(data.generated_at);
+    const iso = data.generated_at;
     const sources = esc((data.sources || []).join(", ") || "—");
-    document.getElementById("meta").innerHTML =
-      "Mise à jour&nbsp;: " + esc(gen) + "<br>Sources&nbsp;: " + sources +
-      "<br>" + data.listings.length + " annonces suivies";
+    const meta = document.getElementById("meta");
+
+    function paint() {
+      meta.innerHTML =
+        'Mise à jour&nbsp;: <span title="' + esc(iso) + '">' +
+        esc(dateTimeLabel(iso)) + ' <span class="meta-relative">' +
+        esc(relativeShort(iso)) + "</span></span>" +
+        "<br>Sources&nbsp;: " + sources +
+        "<br>" + data.listings.length + " annonces suivies";
+    }
+    paint();
+    // Rafraichit le "il y a X min" toutes les 60 secondes.
+    setInterval(paint, 60 * 1000);
+
     document.getElementById("footer-meta").textContent =
-      "Données générées le " + gen + " — " + data.listings.length +
-      " annonces (" + ((data.sources || []).join(", ") || "—") + ").";
+      "Données générées le " + dateTimeLabel(iso) + " — " +
+      data.listings.length + " annonces (" +
+      ((data.sources || []).join(", ") || "—") + ").";
   }
 
   /* ---------- bouton "Mettre a jour" en un clic ---------- */
