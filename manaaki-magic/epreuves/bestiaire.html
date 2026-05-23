@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le Bestiaire Magique</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <div id="bandeau-equipe" class="bandeau-equipe" style="display:none;"></div>
+
+  <div class="container">
+
+    <h1>🐉 Le Bestiaire Magique</h1>
+    <p class="subtitle">Épreuve 4 sur 5</p>
+
+    <div id="zone-jeu">
+
+      <div class="parchment">
+        <p>Le Bestiaire des Anciens recense toutes les créatures magiques.
+        Pour récupérer cette page, tu dois <strong>identifier 5 créatures</strong>
+        à partir des indices.</p>
+        <p class="indice">💡 Lis bien la description... puis choisis la bonne créature !</p>
+      </div>
+
+      <div id="progres-quiz" style="text-align:center;font-family:'Cinzel',serif;color:#f5c842;font-size:1.1rem;margin-bottom:1rem;"></div>
+
+      <div id="zone-question"></div>
+
+    </div>
+
+    <div id="zone-victoire"></div>
+
+  </div>
+
+  <script src="../config.js"></script>
+  <script src="../app.js"></script>
+  <script>
+    const QUESTIONS = [
+      {
+        description: "Je suis un cheval blanc avec une corne dorée sur le front. On dit que mes larmes guérissent.",
+        choix: [
+          { emoji: "🐴", nom: "Pégase",   correct: false },
+          { emoji: "🦄", nom: "Licorne",  correct: true  },
+          { emoji: "🐲", nom: "Dragon",   correct: false },
+          { emoji: "🐺", nom: "Loup-garou",correct: false }
+        ]
+      },
+      {
+        description: "Je crache du feu, je vole, et je dors sur un tas d'or. Mes écailles sont aussi dures que la pierre.",
+        choix: [
+          { emoji: "🐉", nom: "Dragon",       correct: true  },
+          { emoji: "🦅", nom: "Aigle royal",  correct: false },
+          { emoji: "🦎", nom: "Salamandre",   correct: false },
+          { emoji: "🐍", nom: "Serpent géant",correct: false }
+        ]
+      },
+      {
+        description: "Mi-aigle, mi-lion. Je porte les héros sur mon dos et je suis le gardien des trésors.",
+        choix: [
+          { emoji: "🦁", nom: "Lion magique", correct: false },
+          { emoji: "🦉", nom: "Hibou royal",  correct: false },
+          { emoji: "🦅", nom: "Phénix",       correct: false },
+          { emoji: "🦁🦅", nom: "Griffon",     correct: true  }
+        ]
+      },
+      {
+        description: "Je vis dans les océans. Mi-humain, mi-poisson, mon chant peut hypnotiser les marins.",
+        choix: [
+          { emoji: "🐬", nom: "Dauphin",    correct: false },
+          { emoji: "🧜", nom: "Sirène",     correct: true  },
+          { emoji: "🐙", nom: "Kraken",     correct: false },
+          { emoji: "🐢", nom: "Tortue mère",correct: false }
+        ]
+      },
+      {
+        description: "Quand je meurs, je brûle... puis je renais de mes cendres. Mes plumes sont rouges et or.",
+        choix: [
+          { emoji: "🦜", nom: "Perroquet",  correct: false },
+          { emoji: "🔥", nom: "Phénix",     correct: true  },
+          { emoji: "🦢", nom: "Cygne royal",correct: false },
+          { emoji: "🕊️", nom: "Colombe",    correct: false }
+        ]
+      }
+    ];
+
+    let questionActuelle = 0;
+    let erreurs = 0;
+
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function render() {
+      document.getElementById('progres-quiz').textContent =
+        `Question ${questionActuelle + 1} / ${QUESTIONS.length}`;
+
+      const q = QUESTIONS[questionActuelle];
+      const choixMelanges = shuffle(q.choix);
+
+      document.getElementById('zone-question').innerHTML = `
+        <div class="parchment">
+          <p style="font-size:1.05rem;">${q.description}</p>
+        </div>
+        <div class="grille" id="choix">
+          ${choixMelanges.map((c, i) => `
+            <div class="case" onclick="repondre(${q.choix.indexOf(c)}, this)" style="font-size:1rem;">
+              <div style="font-size:2.5rem;">${c.emoji}</div>
+              <div style="margin-top:0.3rem;">${c.nom}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function repondre(idxOriginal, elt) {
+      const q = QUESTIONS[questionActuelle];
+      const correct = q.choix[idxOriginal].correct;
+
+      // Désactive tous les choix
+      document.querySelectorAll('#choix .case').forEach(c => c.style.pointerEvents = 'none');
+
+      if (correct) {
+        elt.classList.add('correct');
+        setTimeout(() => {
+          questionActuelle++;
+          if (questionActuelle >= QUESTIONS.length) {
+            gagne();
+          } else {
+            render();
+          }
+        }, 900);
+      } else {
+        elt.classList.add('wrong');
+        erreurs++;
+        if (navigator.vibrate) navigator.vibrate(150);
+        setTimeout(() => {
+          // On laisse rejouer la même question
+          render();
+        }, 1000);
+      }
+    }
+
+    function gagne() {
+      MM.marquerGagnee('bestiaire');
+      document.getElementById('zone-jeu').classList.add('hidden');
+      MM.afficherMotGagne('bestiaire', 'zone-victoire');
+    }
+
+    render();
+
+    // Si déjà gagnée
+    if (MM.getEtat().epreuvesGagnees['bestiaire']) {
+      document.getElementById('zone-jeu').classList.add('hidden');
+      MM.afficherMotGagne('bestiaire', 'zone-victoire');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Insignes des Maisons</title>
+  <style>
+    @page { size: A4 portrait; margin: 1cm; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, serif;
+      color: #2b1810;
+      background: #ddd;
+      padding: 1rem;
+    }
+
+    .controls {
+      background: #2b1810;
+      color: #f5c842;
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    .controls button {
+      background: #d4a017; color: #2b1810; border: none;
+      padding: 0.6rem 1.2rem; border-radius: 4px;
+      font-weight: bold; cursor: pointer; font-size: 1rem;
+    }
+    .controls p { margin: 0.4rem 0; }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 1cm;
+    }
+
+    .grille {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1cm;
+    }
+
+    .badge {
+      border: 3px solid;
+      border-radius: 12px;
+      padding: 1cm 0.8cm;
+      text-align: center;
+      page-break-inside: avoid;
+      position: relative;
+    }
+
+    .badge.lava   { border-color: #c62828; background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); }
+    .badge.lagon  { border-color: #0288d1; background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); }
+    .badge.foret  { border-color: #2e7d32; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); }
+    .badge.etoile { border-color: #f9a825; background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%); }
+
+    .badge .emoji {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge .nom {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.3rem;
+    }
+
+    .badge.lava .nom { color: #c62828; }
+    .badge.lagon .nom { color: #0288d1; }
+    .badge.foret .nom { color: #2e7d32; }
+    .badge.etoile .nom { color: #f57f17; }
+
+    .badge .devise {
+      font-style: italic;
+      color: #2b1810;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge .nom-sorcier {
+      border-top: 1px dashed #2b1810;
+      padding-top: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #5a4a2a;
+    }
+
+    .badge .nom-sorcier .ligne {
+      border-bottom: 1.5px solid #2b1810;
+      min-height: 1.2rem;
+      margin-top: 0.3rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Cinzel', Georgia, serif;
+      color: #4a148c;
+      margin-bottom: 0.5rem;
+    }
+
+    p.intro {
+      text-align: center;
+      font-style: italic;
+      color: #5a4a2a;
+      margin-bottom: 1rem;
+    }
+
+    @media print {
+      .controls { display: none; }
+      body { background: white; padding: 0; }
+      .page { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <p>🏅 <strong>Insignes des 4 Maisons</strong> — un par enfant (à découper et porter)</p>
+    <p style="font-size:0.9rem;opacity:0.85;">Imprimer la page autant de fois qu'il faut. À découper et fixer avec une épingle ou de la ficelle.</p>
+    <button onclick="window.print()">🖨️ Imprimer</button>
+  </div>
+
+  <div class="page">
+    <h1>Insignes des Maisons</h1>
+    <p class="intro">À découper et à attribuer lors de la cérémonie du Choixpeau</p>
+
+    <div class="grille">
+
+      <div class="badge lava">
+        <div class="emoji">🌋</div>
+        <div class="nom">LAVA</div>
+        <div class="devise">« Courage et feu »</div>
+        <div class="nom-sorcier">
+          Sorcier :
+          <div class="ligne"></div>
+        </div>
+      </div>
+
+      <div class="badge lagon">
+        <div class="emoji">🌊</div>
+        <div class="nom">LAGON</div>
+        <div class="devise">« Sagesse et calme »</div>
+        <div class="nom-sorcier">
+          Sorcier :
+          <div class="ligne"></div>
+        </div>
+      </div>
+
+      <div class="badge foret">
+        <div class="emoji">🌴</div>
+        <div class="nom">FORÊT</div>
+        <div class="devise">« Loyauté et patience »</div>
+        <div class="nom-sorcier">
+          Sorcier :
+          <div class="ligne"></div>
+        </div>
+      </div>
+
+      <div class="badge etoile">
+        <div class="emoji">⭐</div>
+        <div class="nom">ÉTOILE</div>
+        <div class="devise">« Ruse et lumière »</div>
+        <div class="nom-sorcier">
+          Sorcier :
+          <div class="ligne"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

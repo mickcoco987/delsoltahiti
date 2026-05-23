@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Salle des Potions</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <div id="bandeau-equipe" class="bandeau-equipe" style="display:none;"></div>
+
+  <div class="container">
+
+    <h1>🧪 La Salle des Potions</h1>
+    <p class="subtitle">Épreuve 1 sur 5</p>
+
+    <div id="zone-jeu">
+
+      <div class="parchment">
+        <p>Le Maître des Potions a tout renversé ! Pour récupérer la page du Grimoire,
+        tu dois <strong>retrouver à quoi sert chaque ingrédient</strong>.</p>
+
+        <p class="indice">💡 Touche un <strong>ingrédient</strong> à gauche, puis touche son <strong>effet</strong> à droite pour les associer.</p>
+      </div>
+
+      <div class="paires">
+        <div class="col-paires">
+          <h4>🌿 Ingrédients</h4>
+          <div id="col-ingredients"></div>
+        </div>
+        <div class="col-paires">
+          <h4>✨ Effets</h4>
+          <div id="col-effets"></div>
+        </div>
+      </div>
+
+      <div id="message" style="text-align:center;font-weight:bold;min-height:1.5em;"></div>
+
+      <div class="btn-row">
+        <button class="btn btn-secondary" onclick="reset()">↺ Recommencer la potion</button>
+        <button class="btn" onclick="verifier()">🔮 Vérifier ma potion</button>
+      </div>
+
+    </div>
+
+    <div id="zone-victoire"></div>
+
+  </div>
+
+  <script src="../config.js"></script>
+  <script src="../app.js"></script>
+  <script>
+    const PAIRES = [
+      { ingredient: "Aile de chauve-souris",  effet: "Voler dans les airs" },
+      { ingredient: "Écaille de dragon",       effet: "Résister au feu" },
+      { ingredient: "Larme de sirène",         effet: "Respirer sous l'eau" },
+      { ingredient: "Poil de licorne",         effet: "Soigner les blessures" },
+      { ingredient: "Œil de tritón",            effet: "Voir dans le noir" },
+      { ingredient: "Poudre d'étoile",         effet: "Devenir invisible" }
+    ];
+
+    // Mélange les effets pour ne pas qu'ils soient déjà en ordre
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    const ingredients = PAIRES.map((p, i) => ({ texte: p.ingredient, idx: i }));
+    const effets = shuffle(PAIRES.map((p, i) => ({ texte: p.effet, idx: i })));
+
+    // État : ingredient idx -> effet idx
+    let associations = {};
+    let selectionIngredient = null;
+
+    function render() {
+      const colIng = document.getElementById('col-ingredients');
+      colIng.innerHTML = ingredients.map(ing => {
+        const associe = associations[ing.idx] !== undefined;
+        const selectionne = selectionIngredient === ing.idx;
+        return `<div class="case ${selectionne ? 'selected' : ''} ${associe ? 'correct' : ''}"
+                     onclick="selectIngredient(${ing.idx})">${ing.texte}</div>`;
+      }).join('');
+
+      const colEff = document.getElementById('col-effets');
+      colEff.innerHTML = effets.map(eff => {
+        // Cet effet est-il déjà associé à un ingrédient ?
+        let liéA = null;
+        for (const [ingIdx, effIdx] of Object.entries(associations)) {
+          if (effIdx === eff.idx) liéA = ingIdx;
+        }
+        return `<div class="case ${liéA !== null ? 'correct' : ''}"
+                     onclick="selectEffet(${eff.idx})">
+                  ${eff.texte}
+                  ${liéA !== null ? '<br><small>→ ' + ingredients[liéA].texte + '</small>' : ''}
+                </div>`;
+      }).join('');
+    }
+
+    function selectIngredient(idx) {
+      selectionIngredient = idx;
+      // Si déjà associé, on retire l'association
+      if (associations[idx] !== undefined) {
+        delete associations[idx];
+      }
+      render();
+    }
+
+    function selectEffet(idx) {
+      if (selectionIngredient === null) {
+        msg("⚠️ Choisis d'abord un ingrédient à gauche !", false);
+        return;
+      }
+      // Si cet effet est déjà associé à un autre ingrédient, on retire l'ancienne assoc
+      for (const ingIdx of Object.keys(associations)) {
+        if (associations[ingIdx] === idx) delete associations[ingIdx];
+      }
+      associations[selectionIngredient] = idx;
+      selectionIngredient = null;
+      render();
+      msg("");
+    }
+
+    function msg(texte, ok) {
+      const m = document.getElementById('message');
+      m.textContent = texte;
+      m.style.color = ok ? '#a5d6a7' : '#ef5350';
+    }
+
+    function verifier() {
+      if (Object.keys(associations).length < PAIRES.length) {
+        msg("Il manque des associations ! " + Object.keys(associations).length + " / " + PAIRES.length, false);
+        return;
+      }
+      // Vérification : chaque ingrédient idx doit pointer vers le même idx d'effet
+      let bons = 0;
+      for (const ingIdx in associations) {
+        if (parseInt(ingIdx) === associations[ingIdx]) bons++;
+      }
+      if (bons === PAIRES.length) {
+        gagne();
+      } else {
+        msg("❌ " + bons + " sur " + PAIRES.length + " bonnes. Réessaie !", false);
+      }
+    }
+
+    function reset() {
+      associations = {};
+      selectionIngredient = null;
+      msg("");
+      render();
+    }
+
+    function gagne() {
+      MM.marquerGagnee('potions');
+      document.getElementById('zone-jeu').classList.add('hidden');
+      MM.afficherMotGagne('potions', 'zone-victoire');
+    }
+
+    // Init
+    render();
+
+    // Si déjà gagnée
+    if (MM.getEtat().epreuvesGagnees['potions']) {
+      document.getElementById('zone-jeu').classList.add('hidden');
+      MM.afficherMotGagne('potions', 'zone-victoire');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+name: Deploy GitHub Pages
+
+# Publie le site (Ferrari tracker + jeu d'anniversaire de Manaaki)
+# sur GitHub Pages.
+#
+# Apres le premier deploiement, l'URL sera :
+#   - Tracker Ferrari :        https://<user>.github.io/<repo>/
+#   - Jeu de Manaaki :         https://<user>.github.io/<repo>/manaaki-magic/
+#   - Kit imprimable :         https://<user>.github.io/<repo>/manaaki-magic/print/
+#
+# Cote GitHub : Settings -> Pages -> Source : "GitHub Actions"
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:   # permet de declencher le deploiement manuellement
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Une seule execution en cours a la fois
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # On publie tout le repo (sauf .git et .github)
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
