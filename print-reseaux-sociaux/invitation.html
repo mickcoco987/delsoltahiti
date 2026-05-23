@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Invitation — Le Mystère du Compte Piraté</title>
+  <style>
+    @page { size: A4 portrait; margin: 1.5cm; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1A1A1A;
+      background: #FAFAFA;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .controls {
+      background: linear-gradient(135deg, #F58529, #DD2A7B 50%, #8134AF);
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+    }
+    .controls button {
+      background: #fff;
+      color: #DD2A7B;
+      border: none;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .controls p { margin: 0.4rem 0; }
+
+    /* L'invitation = un "écran de téléphone" stylisé */
+    .phone {
+      width: 100%;
+      max-width: 16cm;
+      margin: 0 auto;
+      background: #000;
+      border-radius: 36px;
+      padding: 18px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+      page-break-after: always;
+    }
+
+    .screen {
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      min-height: 24cm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Bandeau notification (style iOS) */
+    .notif {
+      background: linear-gradient(135deg, #F58529, #DD2A7B 55%, #8134AF);
+      color: #fff;
+      padding: 1rem 1.2rem 1.3rem;
+      border-bottom: 2px solid #000;
+    }
+    .notif .top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.6rem;
+      opacity: 0.92;
+    }
+    .notif .titre-app {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.45rem;
+    }
+    .notif .titre-app .app-icon {
+      width: 22px; height: 22px;
+      background: #fff;
+      color: #DD2A7B;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+    .notif .heading {
+      font-size: 1.2rem;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .content {
+      padding: 1.4cm 1.2cm;
+      flex: 1;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1A1A1A;
+      font-size: 1.9rem;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.3rem;
+      line-height: 1.15;
+    }
+    .accroche {
+      text-align: center;
+      color: #DD2A7B;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.04em;
+    }
+
+    p { line-height: 1.65; margin: 0.7rem 0; font-size: 1rem; }
+
+    .infos {
+      margin: 1.4rem 0 1rem;
+      padding: 1rem 1.2rem;
+      background: linear-gradient(135deg, rgba(245,133,41,0.08), rgba(221,42,123,0.08), rgba(129,52,175,0.08));
+      border: 2px dashed #8134AF;
+      border-radius: 14px;
+    }
+    .infos h3 {
+      color: #8134AF;
+      font-weight: 800;
+      margin-bottom: 0.55rem;
+      font-size: 1.05rem;
+    }
+    .infos p { margin: 0.32rem 0; font-size: 0.95rem; }
+
+    .hashtags {
+      text-align: center;
+      margin: 1rem 0 0.5rem;
+      font-size: 0.92rem;
+      color: #1DA1F2;
+      font-weight: 600;
+    }
+
+    .signature {
+      text-align: right;
+      margin-top: 1.4rem;
+      font-style: italic;
+    }
+    .signature .nom {
+      font-size: 1.05rem;
+      color: #1A1A1A;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .tip {
+      text-align: center;
+      margin-top: 0.8rem;
+      font-size: 0.78rem;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* Boutons réactions style insta/like */
+    .reactions {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin: 0.8rem 0 0.3rem;
+      font-size: 1.3rem;
+    }
+
+    @media print {
+      .controls { display: none; }
+      body { padding: 0; background: white; }
+      .phone { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <p style="margin-bottom:0.6rem;">📝 <strong>Personnalise puis imprime cette invitation</strong> pour chaque invité</p>
+    <p style="font-size:0.9rem;margin-bottom:0.7rem;opacity:0.92;">Le texte est éditable directement : clique dans la zone et modifie. Imprime ensuite en couleur.</p>
+    <button onclick="window.print()">🖨️ Imprimer l'invitation</button>
+  </div>
+
+  <div class="phone">
+    <div class="screen" contenteditable="true">
+
+      <div class="notif">
+        <div class="top">
+          <span>📡 4G</span>
+          <span>📅 [JOUR / MOIS]</span>
+          <span>🔋 100%</span>
+        </div>
+        <div class="titre-app">
+          <span class="app-icon">📸</span>
+          <span>Notification — il y a 2 min</span>
+        </div>
+        <div class="heading">🚨 BREAKING : @LunaStar a été piratée !</div>
+      </div>
+
+      <div class="content">
+
+        <h1>🕵️ Tu es invité(e) à mener<br>l'enquête !</h1>
+        <p class="accroche">~ Le Mystère du Compte Piraté ~</p>
+
+        <p>Salut <strong>[Prénom de l'invité]</strong>,</p>
+
+        <p>La célèbre <strong>@LunaStar</strong> vient d'être piratée en pleine nuit.
+        Son compte est bloqué et son mot de passe a été éclaté en
+        <strong>5 énigmes des réseaux sociaux</strong>.</p>
+
+        <p>Viens avec ta team mener l'enquête : 5 défis (logos, emojis, hashtags,
+        profils mystères, quiz culture) pour récupérer les <strong>5 cartes-lettres</strong>
+        et reconstituer le mot magique qui ouvre le coffre 🎁.</p>
+
+        <div class="infos">
+          <h3>📅 Infos pratiques</h3>
+          <p><strong>Date :</strong> [JJ / MM / AAAA]</p>
+          <p><strong>Heure :</strong> de [__h__] à [__h__]</p>
+          <p><strong>Lieu :</strong> [Adresse]</p>
+          <p><strong>Tenue :</strong> Confortable (et stylée pour les photos 📷)</p>
+          <p><strong>Confirmation :</strong> [téléphone / SMS des parents]</p>
+        </div>
+
+        <div class="hashtags">
+          #Enquête · #VIRAL · #Détectives · #Anniversaire
+        </div>
+
+        <p style="margin-top:1.2rem;">Viens prêt(e) à scroller, décoder et démasquer ! 🕵️📱</p>
+
+        <div class="reactions">❤️ &nbsp; 🔥 &nbsp; 😂 &nbsp; 😮</div>
+
+        <div class="signature">
+          <p>À très vite,</p>
+          <p class="nom">— Les parents de [Prénom du fêté] 🎉</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <p class="tip">💡 Astuce : duplique cette page (Ctrl+P → plusieurs copies) ou modifie le prénom avant chaque impression.</p>
+
+</body>
+</html>

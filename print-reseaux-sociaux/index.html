@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kit Imprimable — Le Mystère du Compte Piraté</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0E0B1A;
+      --bg-soft: #161226;
+      --card: #1E1830;
+      --card-hover: #2A2240;
+      --border: #332952;
+      --ink: #F2EEFF;
+      --ink-soft: #A097C2;
+      --insta-1: #F58529;
+      --insta-2: #DD2A7B;
+      --insta-3: #8134AF;
+      --gold: #FFD700;
+    }
+
+    body {
+      font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(254,44,85,0.10) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(129,52,175,0.10) 0%, transparent 45%),
+        var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      line-height: 1.55;
+    }
+
+    .container { max-width: 820px; margin: 0 auto; }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      color: var(--ink-soft);
+      font-size: 1rem;
+    }
+
+    .intro {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.2rem 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+    .intro p { margin: 0.5rem 0; }
+
+    .hint {
+      background: rgba(255,215,0,0.10);
+      border-left: 3px solid var(--gold);
+      padding: 0.7rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      margin: 0.8rem 0 0;
+    }
+    .hint strong { color: var(--ink); }
+
+    .liste { display: grid; gap: 0.8rem; margin-bottom: 2rem; }
+
+    .lien {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.2rem;
+      text-decoration: none;
+      color: var(--ink);
+      transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+      position: relative;
+    }
+    .lien:hover {
+      background: var(--card-hover);
+      transform: translateX(4px);
+      border-color: var(--insta-2);
+    }
+    .lien .num {
+      flex-shrink: 0;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--insta-1), var(--insta-3));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+    .lien .body { flex: 1; }
+    .lien .titre {
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+    }
+    .lien .desc {
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+    .lien .arrow {
+      color: var(--ink-soft);
+      font-size: 1.3rem;
+      align-self: center;
+    }
+
+    .lien.priority {
+      border-color: var(--gold);
+      background: linear-gradient(135deg, var(--card), rgba(255,215,0,0.07));
+    }
+    .lien.priority .num {
+      background: linear-gradient(135deg, var(--gold), #FF9F1C);
+      color: #1A1A1A;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .back a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .back a:hover { color: var(--ink); border-color: var(--ink-soft); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>🖨️ Kit Imprimable</h1>
+      <p class="subtitle">Le Mystère du Compte Piraté — version « fête à la maison »</p>
+    </header>
+
+    <div class="intro">
+      <p>Voici tous les documents à imprimer pour faire vivre <strong>Le Mystère du Compte Piraté</strong>
+      en vrai, autour d'une table — sans écran obligatoire.</p>
+      <p>Le principe : un compte de TikTok-star a été piraté. Les enfants résolvent <strong>5 énigmes</strong>,
+      gagnent <strong>5 cartes-lettres</strong> (V · I · R · A · L) et reconstituent le mot magique
+      pour ouvrir le « coffre » et découvrir le trésor.</p>
+
+      <div class="hint">
+        💡 <strong>Conseil :</strong> imprime sur du papier blanc épais (160 g si possible).
+        Pour les cartes-lettres et les badges, du carton léger tient mieux dans les mains des enfants.
+      </div>
+    </div>
+
+    <div class="liste">
+
+      <a href="guide-animateur.html" class="lien priority">
+        <span class="num">1</span>
+        <div class="body">
+          <div class="titre">📖 Guide de l'animateur <span style="color:var(--gold);font-size:0.78rem;font-weight:700;margin-left:0.4rem;">À LIRE EN PREMIER</span></div>
+          <div class="desc">Préparation, déroulé, toutes les solutions des énigmes et le plan B en cas de blocage.</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="invitation.html" class="lien">
+        <span class="num">2</span>
+        <div class="body">
+          <div class="titre">✉️ Invitation</div>
+          <div class="desc">À envoyer 1 à 2 semaines avant. Une par enfant invité. Champs personnalisables (date, lieu, heure).</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="fiches-enigmes.html" class="lien">
+        <span class="num">3</span>
+        <div class="body">
+          <div class="titre">🧩 Fiches des 5 énigmes</div>
+          <div class="desc">Une page A4 par énigme (logos, message emoji, hashtag, profil mystère, quiz). À poser sur la table au fur et à mesure.</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="cartes-lettres.html" class="lien">
+        <span class="num">4</span>
+        <div class="body">
+          <div class="titre">🔤 Cartes-lettres V · I · R · A · L</div>
+          <div class="desc">5 grandes cartes à découper, remises comme récompense après chaque énigme réussie. À assembler à la fin pour révéler le mot magique.</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="diplomes.html" class="lien">
+        <span class="num">5</span>
+        <div class="body">
+          <div class="titre">🏆 Diplômes Détective</div>
+          <div class="desc">Un par enfant pour la cérémonie finale. Format paysage. À remettre après la révélation.</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+    </div>
+
+    <div class="back">
+      <a href="../enigmes-reseaux-sociaux.html">← Retour au jeu numérique</a>
+      &nbsp;&nbsp;
+      <a href="../main.html">🏠 Hub</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

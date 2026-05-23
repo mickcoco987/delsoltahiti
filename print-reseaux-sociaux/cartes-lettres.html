@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Cartes-lettres V · I · R · A · L</title>
+  <style>
+    @page { size: A4 portrait; margin: 1cm; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1A1A1A;
+      background: #ddd;
+      padding: 1rem;
+    }
+
+    .controls {
+      background: linear-gradient(135deg, #FFD700, #FF9F1C);
+      color: #1A1A1A;
+      padding: 1rem;
+      text-align: center;
+      margin: 0 auto 1.5rem;
+      border-radius: 12px;
+      max-width: 800px;
+    }
+    .controls button {
+      background: #1A1A1A;
+      color: #FFD700;
+      border: none;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .controls p { margin: 0.4rem 0; }
+
+    .page {
+      max-width: 19cm;
+      margin: 0 auto 1cm;
+      background: white;
+      padding: 1cm;
+      page-break-after: always;
+    }
+    .page:last-child { page-break-after: auto; }
+
+    h2.page-title {
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Grille 2x3 (6 emplacements, 5 utilisés + 1 carte "VIRAL" en bonus) */
+    .grille {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6cm;
+    }
+
+    .carte {
+      aspect-ratio: 5 / 7;
+      border: 3px solid #1A1A1A;
+      border-radius: 18px;
+      padding: 0.6cm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      page-break-inside: avoid;
+      position: relative;
+      text-align: center;
+    }
+
+    .carte::before, .carte::after {
+      content: '';
+      position: absolute;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: #1A1A1A;
+      opacity: 0.12;
+    }
+    .carte::before { top: 0.5cm; left: 0.5cm; }
+    .carte::after  { bottom: 0.5cm; right: 0.5cm; }
+
+    .carte .badge {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      font-weight: 800;
+      color: #fff;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .carte .grande-lettre {
+      font-size: 8rem;
+      font-weight: 900;
+      line-height: 1;
+      margin: 0.4rem 0;
+    }
+    .carte .num {
+      font-size: 0.78rem;
+      color: #555;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+    .carte .energie {
+      font-size: 0.78rem;
+      font-style: italic;
+      color: #888;
+    }
+
+    /* Thèmes par lettre (couleur = réseau associé à l'énigme) */
+    .carte.v { background: linear-gradient(135deg, #FFE8D6, #FFD1A6); border-color: #DD2A7B; }
+    .carte.v .badge { background: linear-gradient(135deg, #F58529, #DD2A7B); }
+    .carte.v .grande-lettre { color: #8134AF; text-shadow: 3px 3px 0 rgba(221,42,123,0.18); }
+
+    .carte.i { background: #FFFC00; border-color: #1A1A1A; }
+    .carte.i .badge { background: #1A1A1A; }
+    .carte.i .grande-lettre { color: #1A1A1A; }
+
+    .carte.r { background: #000; color: #fff; border-color: #25F4EE; box-shadow: 6px 6px 0 #FE2C55; }
+    .carte.r .badge { background: #FE2C55; }
+    .carte.r .grande-lettre { color: #25F4EE; text-shadow: 3px 3px 0 #FE2C55; }
+    .carte.r .num { color: #ccc; }
+    .carte.r .energie { color: #aaa; }
+    .carte.r::before, .carte.r::after { background: #FE2C55; opacity: 0.35; }
+
+    .carte.a { background: linear-gradient(135deg, #F3E5F5, #E1BEE7); border-color: #8134AF; }
+    .carte.a .badge { background: linear-gradient(135deg, #DD2A7B, #8134AF); }
+    .carte.a .grande-lettre { color: #8134AF; text-shadow: 3px 3px 0 rgba(129,52,175,0.20); }
+
+    .carte.l { background: #000; color: #fff; border-color: #fff; }
+    .carte.l .badge { background: #fff; color: #1A1A1A; }
+    .carte.l .grande-lettre { color: #fff; }
+    .carte.l .num { color: #aaa; }
+    .carte.l .energie { color: #888; }
+    .carte.l::before, .carte.l::after { background: #fff; opacity: 0.3; }
+
+    /* Carte bonus : aperçu du mot final */
+    .carte.bonus {
+      background: linear-gradient(135deg, #FFD700, #FF9F1C);
+      border-color: #1A1A1A;
+      border-style: dashed;
+    }
+    .carte.bonus .badge { background: #1A1A1A; color: #FFD700; }
+    .carte.bonus .grande-lettre { font-size: 2.4rem; letter-spacing: 0.35em; color: #1A1A1A; }
+    .carte.bonus .help {
+      font-size: 0.78rem;
+      color: #1A1A1A;
+      font-weight: 600;
+      padding: 0 0.3rem;
+      line-height: 1.3;
+    }
+
+    .note-decoupe {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #555;
+      margin-top: 1cm;
+      font-style: italic;
+    }
+
+    @media print {
+      .controls { display: none; }
+      body { padding: 0; background: white; }
+      .page { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <p>🔤 <strong>Cartes-lettres V · I · R · A · L</strong></p>
+    <p style="font-size:0.9rem;">Une page = les 5 cartes-récompense + 1 carte « coffre » bonus. À découper et coller sur carton léger si possible.</p>
+    <button onclick="window.print()">🖨️ Imprimer les cartes</button>
+  </div>
+
+  <div class="page">
+    <h2 class="page-title">✂️ À découper le long des bordures</h2>
+
+    <div class="grille">
+
+      <!-- V (Énigme 1) -->
+      <div class="carte v">
+        <span class="badge">Énigme 1 · Insta</span>
+        <div class="grande-lettre">V</div>
+        <div class="num">Lettre 1/5</div>
+        <div class="energie">~ Logos cachés ~</div>
+      </div>
+
+      <!-- I (Énigme 2) -->
+      <div class="carte i">
+        <span class="badge">Énigme 2 · Snap</span>
+        <div class="grande-lettre">I</div>
+        <div class="num">Lettre 2/5</div>
+        <div class="energie">~ Message en emojis ~</div>
+      </div>
+
+      <!-- R (Énigme 3) -->
+      <div class="carte r">
+        <span class="badge">Énigme 3 · TikTok</span>
+        <div class="grande-lettre">R</div>
+        <div class="num">Lettre 3/5</div>
+        <div class="energie">~ Hashtag brisé ~</div>
+      </div>
+
+      <!-- A (Énigme 4) -->
+      <div class="carte a">
+        <span class="badge">Énigme 4 · Profil</span>
+        <div class="grande-lettre">A</div>
+        <div class="num">Lettre 4/5</div>
+        <div class="energie">~ Profil mystère ~</div>
+      </div>
+
+      <!-- L (Énigme 5) -->
+      <div class="carte l">
+        <span class="badge">Énigme 5 · X</span>
+        <div class="grande-lettre">L</div>
+        <div class="num">Lettre 5/5</div>
+        <div class="energie">~ Quiz culture ~</div>
+      </div>
+
+      <!-- Carte bonus "coffre" -->
+      <div class="carte bonus">
+        <span class="badge">🗝️ Carte Coffre</span>
+        <div class="grande-lettre">V·I·R·A·L</div>
+        <div class="help">Assemble les 5 lettres dans cet ordre<br>pour ouvrir le coffre.</div>
+        <div class="num">Anti-spoiler : à donner à la fin !</div>
+      </div>
+
+    </div>
+
+    <p class="note-decoupe">
+      💡 Pour les enfants plus jeunes : tu peux distribuer la carte « Coffre » dès le début
+      pour qu'ils sachent qu'ils cherchent 5 lettres. Pour plus de mystère, garde-la pour la révélation finale.
+    </p>
+  </div>
+
+</body>
+</html>
