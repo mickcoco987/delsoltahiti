@@ -55,8 +55,6 @@ daté à l'historique de cote.
 | `marketcheck` | **API** | dealer | Marketcheck — inventaire US (clé requise).         |
 | `ebay`        | **API** | auction | eBay Motors Browse API — enchères + Buy-It-Now.   |
 | `dupont`      | scrape  | auction | DuPont Registry Live — enchères live US (best-effort). |
-| `dupont-autos`| scrape  | dealer | DuPont Registry (site principal) — classifieds exotiques (best-effort). |
-| `hemmings`    | scrape  | dealer | Hemmings — classifieds collection/exotiques US (best-effort). |
 | `sothebys`    | scrape  | auction | RM Sotheby's — résultats d'enchères collectionneurs (best-effort). |
 | `all`         | —       | —     | Enchaîne toutes les sources live ci-dessus (défaut). |
 | `sample`      | local   | dealer | Relevés de marché curés (échantillon de démarrage). |
