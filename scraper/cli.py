@@ -15,7 +15,6 @@ from typing import List
 
 from .aggregate import build_market
 from .models import Listing
-from .sources.bring_a_trailer import BringATrailerSource
 from .sources.classic_com import ClassicComSource
 from .sources.dupont_registry import DupontRegistryLiveSource
 from .sources.ebay import EbayMotorsSource
@@ -30,7 +29,6 @@ log = logging.getLogger("scraper")
 # Sources live (sites reels). `all` les enchaine toutes.
 LIVE_SOURCES = {
     "classic": ClassicComSource,
-    "bat": BringATrailerSource,
     "marketcheck": MarketcheckSource,
     "ebay": EbayMotorsSource,
     "dupont": DupontRegistryLiveSource,

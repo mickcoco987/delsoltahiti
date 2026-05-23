@@ -52,7 +52,6 @@ daté à l'historique de cote.
 | Source        | Type    | Canal | Description                                          |
 |---------------|---------|-------|------------------------------------------------------|
 | `classic`     | scrape  | dealer | classic.com — agrégateur de cote du marché US.      |
-| `bat`         | scrape  | auction | Bring a Trailer — enchères et résultats de ventes. |
 | `marketcheck` | **API** | dealer | Marketcheck — inventaire US (clé requise).         |
 | `ebay`        | **API** | auction | eBay Motors Browse API — enchères + Buy-It-Now.   |
 | `dupont`      | scrape  | auction | DuPont Registry Live — enchères live US (best-effort). |
@@ -163,8 +162,8 @@ scraper/
   sources/
     base.py          Interface ListingSource
     html_json.py     Base de scraping (extraction du JSON embarqué)
-    classic_com.py · bring_a_trailer.py   Sources scrapées (dealer/auction)
-    dupont_registry.py · rm_sothebys.py   Sources scrapées enchères
+    classic_com.py   Source scrapée (dealer)
+    dupont_registry.py · rm_sothebys.py   Sources scrapées enchères (best-effort)
     marketcheck.py · ebay.py   Sources API (clés requises)
     sample.py        Échantillon de marché curé
 worker/
