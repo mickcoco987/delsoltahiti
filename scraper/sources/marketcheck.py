@@ -139,6 +139,17 @@ class MarketcheckSource(ListingSource):
         # Date de mise en ligne : `first_seen_at` est un timestamp Unix UTC.
         posted_at = _to_iso_date(raw.get("first_seen_at"))
 
+        # Premiere photo si disponible (Marketcheck : media.photo_links).
+        media = raw.get("media") if isinstance(raw.get("media"), dict) else {}
+        photos = media.get("photo_links")
+        image_url = ""
+        if isinstance(photos, list) and photos:
+            first = photos[0]
+            if isinstance(first, str):
+                image_url = first
+            elif isinstance(first, dict):
+                image_url = str(first.get("url") or first.get("href") or "")
+
         return Listing(
             year=year,
             variant=variant,
@@ -150,6 +161,7 @@ class MarketcheckSource(ListingSource):
             location=location,
             status="for_sale",
             vin=str(raw.get("vin") or ""),
+            image_url=image_url,
             clean_title=clean if isinstance(clean, bool) else None,
             posted_at=posted_at,
         )
