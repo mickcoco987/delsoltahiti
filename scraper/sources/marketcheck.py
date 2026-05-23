@@ -18,6 +18,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+from datetime import datetime, timezone
 from typing import List, Optional
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
@@ -135,6 +136,9 @@ class MarketcheckSource(ListingSource):
         # Statut de titre si Marketcheck le renvoie (champ Carfax).
         clean = raw.get("carfax_clean_title")
 
+        # Date de mise en ligne : `first_seen_at` est un timestamp Unix UTC.
+        posted_at = _to_iso_date(raw.get("first_seen_at"))
+
         return Listing(
             year=year,
             variant=variant,
@@ -147,4 +151,15 @@ class MarketcheckSource(ListingSource):
             status="for_sale",
             vin=str(raw.get("vin") or ""),
             clean_title=clean if isinstance(clean, bool) else None,
+            posted_at=posted_at,
         )
+
+
+def _to_iso_date(value) -> Optional[str]:
+    """Convertit un timestamp Marketcheck (Unix ou ISO) en date YYYY-MM-DD."""
+    if isinstance(value, (int, float)) and value > 0:
+        return datetime.fromtimestamp(value, tz=timezone.utc).strftime("%Y-%m-%d")
+    if isinstance(value, str) and len(value) >= 10:
+        # Accepte deja un ISO type "2026-05-10T..." -> prend la portion date.
+        return value[:10]
+    return None

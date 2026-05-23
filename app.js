@@ -61,6 +61,31 @@
     return (v >= 0 ? "+" : "") + v.toFixed(1).replace(".", ",") + " %";
   }
 
+  // "il y a 12 j" / "hier" / "aujourd'hui", a partir d'une date ISO.
+  function relativeDays(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (isNaN(d)) return "";
+    const days = Math.floor((Date.now() - d.getTime()) / 86400000);
+    if (days < 0) return "";
+    if (days === 0) return "aujourd'hui";
+    if (days === 1) return "hier";
+    return "il y a " + days + " j";
+  }
+
+  // Une annonce est consideree "nouvelle" si elle date de 7 jours ou moins.
+  const NEW_THRESHOLD_DAYS = 7;
+  function isNew(iso) {
+    if (!iso) return false;
+    const d = new Date(iso);
+    if (isNaN(d)) return false;
+    const days = (Date.now() - d.getTime()) / 86400000;
+    return days >= 0 && days <= NEW_THRESHOLD_DAYS;
+  }
+  function newBadge() {
+    return '<span class="new-badge">Nouveau</span>';
+  }
+
   function monthLabel(iso) {
     const parts = String(iso).split("-");
     return MONTHS_FR[(+parts[1] || 1) - 1] + " " + parts[0].slice(2);
@@ -241,6 +266,10 @@
       s.avgMileage != null ? fmtInt.format(s.avgMileage) + " mi" : "—"));
     cards.push(kpi("Annonces suivies", String(s.count)));
 
+    const newCount = list.filter((l) => isNew(l.posted_at)).length;
+    cards.push(kpi("Nouvelles (≤ 7 j)", String(newCount),
+      "récentes sur le marché", newCount ? "up" : ""));
+
     if (trend) {
       const arrow = trend.pct >= 0 ? "▲" : "▼";
       const cls = trend.pct >= 0 ? "up" : "down";
@@ -296,7 +325,8 @@
     const rows = deals.map((l) => {
       return "<tr>" +
         '<td class="num">' + linkedYear(l) + "</td>" +
-        "<td>" + variantTag(l.variant) + "</td>" +
+        "<td>" + variantTag(l.variant) +
+        (isNew(l.posted_at) ? " " + newBadge() : "") + "</td>" +
         '<td class="num">' + fmtUSD.format(l.price) + "</td>" +
         '<td class="num" title="' + esc(bandTitle(l.estimated_value)) + '">' +
         fmtUSD.format(l.estimated_value) + "</td>" +
@@ -496,6 +526,7 @@
       { key: "deal_pct", label: "Écart cote", num: true },
       { key: "mileage", label: "Kilométrage", num: true },
       { key: "location", label: "Localisation", num: false },
+      { key: "posted_at", label: "Postée", num: false },
       { key: "vin", label: "VIN", num: false, sortable: false },
       { key: "clean_title", label: "Titre", num: false, sortable: false },
       { key: "avis", label: "Avis", num: false, sortable: false },
@@ -541,6 +572,9 @@
         '<td class="num">' +
         (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
         "<td>" + esc(l.location || "—") + "</td>" +
+        '<td title="' + esc(l.posted_at || "") + '">' +
+        (relativeDays(l.posted_at) || "—") +
+        (isNew(l.posted_at) ? " " + newBadge() : "") + "</td>" +
         '<td class="vin">' + vinLink(vin) + "</td>" +
         "<td>" + titleCell(l) + "</td>" +
         '<td><span class="avis ' + avis.cls + '">' + avis.txt + "</span></td>" +

@@ -1,0 +1,25 @@
+{
+  "name": "Ferrari458Catcher",
+  "tree": {
+    "$className": "DataModel",
+    "ServerScriptService": {
+      "Main": {
+        "$path": "src/server/Main.server.lua"
+      }
+    },
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/shared"
+      },
+      "Events": {
+        "$className": "Folder",
+        "ScoreChanged": { "$className": "RemoteEvent" }
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Main": { "$path": "src/client/Main.client.lua" }
+      }
+    }
+  }
+}
