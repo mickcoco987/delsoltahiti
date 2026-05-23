@@ -5,6 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Les Runes Anciennes</title>
   <link rel="stylesheet" href="../styles.css">
+  <style>
+    .rune-msg {
+      font-family: 'Courier New', monospace;
+      font-size: 1.4rem;
+      letter-spacing: 0.15em;
+      text-align: center;
+      background: linear-gradient(135deg, #f4e9c8, #e6d4a0);
+      color: #2b1810;
+      padding: 1.4rem 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+      line-height: 2;
+      word-break: keep-all;
+      box-shadow: inset 0 0 30px rgba(43,24,16,0.1);
+    }
+    .rune-msg .sep {
+      color: #4a148c;
+      font-weight: bold;
+      margin: 0 0.25em;
+      opacity: 0.7;
+    }
+    .cle-grille {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+      gap: 0.4rem;
+      font-family: 'Courier New', monospace;
+    }
+    .cle-case {
+      background: rgba(13,27,42,0.85);
+      color: #f5c842;
+      border: 1px solid #d4a017;
+      border-radius: 6px;
+      padding: 0.4rem 0.2rem;
+      text-align: center;
+    }
+    .cle-case .rune-sym {
+      font-size: 1.3rem;
+      line-height: 1.2;
+    }
+    .cle-case .lettre {
+      font-size: 0.85rem;
+      color: #fff;
+      margin-top: 0.1rem;
+    }
+    .indices-utilises {
+      font-size: 0.85rem;
+      color: #c9b87a;
+      text-align: center;
+      margin-top: 0.3rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -19,27 +70,29 @@
 
       <div class="parchment">
         <p>Un vieux parchemin couvert de <strong>runes magiques</strong> a été retrouvé.
-        Il cache un mot, mais il faut le <strong>déchiffrer</strong> à l'aide
-        de la clé des Anciens.</p>
-
-        <p class="indice">💡 Chaque rune correspond à une lettre. Trouve le mot caché et tape-le ci-dessous.</p>
+        Il cache une <strong>devinette</strong> écrite par les Anciens.</p>
+        <p class="indice">💡 1) Déchiffre la phrase en runes grâce à la clé.
+        2) Trouve la <strong>réponse à la devinette</strong> (un seul mot) et tape-la.
+        <br>Le symbole <strong>·</strong> sépare les mots.</p>
       </div>
 
       <div class="parchment">
-        <h3 class="center">Le message en runes</h3>
-        <div class="runes" id="message-rune"></div>
+        <h3 class="center">📜 La devinette des Anciens</h3>
+        <div class="rune-msg" id="message-rune"></div>
 
-        <h3 class="center mt-3">La clé des Anciens</h3>
-        <div id="cle" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(60px,1fr));gap:0.4rem;font-family:'Courier New',monospace;color:#2b1810;"></div>
+        <h3 class="center mt-3">🔑 La clé des runes (alphabet complet)</h3>
+        <div id="cle" class="cle-grille"></div>
       </div>
 
       <div class="parchment">
         <h3>Ta réponse</h3>
-        <input type="text" id="reponse" placeholder="Écris le mot déchiffré..." autocomplete="off" style="text-transform:uppercase;">
+        <input type="text" id="reponse" placeholder="Réponse à la devinette..." autocomplete="off" style="text-transform:uppercase;">
         <div id="message" style="text-align:center;font-weight:bold;min-height:1.5em;margin-top:0.5rem;"></div>
         <div class="btn-row">
+          <button class="btn btn-secondary" onclick="aide()">💡 Aide</button>
           <button class="btn" onclick="verifier()">🔮 Déchiffrer</button>
         </div>
+        <div class="indices-utilises" id="aide-utilisees"></div>
       </div>
 
     </div>
@@ -51,10 +104,12 @@
   <script src="../config.js"></script>
   <script src="../app.js"></script>
   <script>
-    // Mot à deviner
-    const MOT_SECRET = "GRIMOIRE";
+    // La devinette à déchiffrer
+    const PHRASE = "AVEC MOI LE SORCIER VOLE";
+    // La réponse à taper après déchiffrement
+    const REPONSE = "BALAI";
 
-    // Clé de substitution : chaque lettre → un symbole runique
+    // Alphabet runique COMPLET (26 lettres)
     const RUNES = {
       A: "Δ", B: "β", C: "Ↄ", D: "ð", E: "Σ", F: "ϟ",
       G: "ψ", H: "Ϟ", I: "ϊ", J: "ʝ", K: "Ϗ", L: "ʆ",
@@ -63,43 +118,61 @@
       Y: "Ϥ", Z: "Ϡ"
     };
 
-    function chiffrer(mot) {
-      return mot.toUpperCase().split('').map(l => RUNES[l] || l).join(' ');
+    function chiffrer(phrase) {
+      return phrase.toUpperCase().split(' ').map(mot =>
+        mot.split('').map(l => RUNES[l] || l).join(' ')
+      ).join('<span class="sep">·</span>');
     }
 
-    // Affichage du message en runes
-    document.getElementById('message-rune').textContent = chiffrer(MOT_SECRET);
+    // Affichage du message en runes (en HTML pour le séparateur stylé)
+    document.getElementById('message-rune').innerHTML = chiffrer(PHRASE);
 
-    // Affichage de la clé (uniquement les lettres présentes dans le mot + quelques autres pour rendre plus dur)
-    // Pour aider, on affiche TOUTES les lettres utiles : celles du mot + quelques bruit pour 11 ans
-    const lettresUtiles = new Set(MOT_SECRET.split(''));
-    // On ajoute un peu de "bruit" — quelques lettres en plus pour que ce soit un peu plus challenge
-    const bruit = ['A', 'L', 'P', 'N'];
-    bruit.forEach(l => lettresUtiles.add(l));
-
-    const lettresOrdonnees = Array.from(lettresUtiles).sort();
-
-    document.getElementById('cle').innerHTML = lettresOrdonnees.map(l => `
-      <div style="background:rgba(13,27,42,0.85);color:#f5c842;border:1px solid #d4a017;
-                  border-radius:6px;padding:0.4rem;text-align:center;">
-        <div style="font-size:1.3rem;">${RUNES[l]}</div>
-        <div style="font-size:0.85rem;color:#fff;">= ${l}</div>
+    // Affichage de la clé complète A à Z
+    const toutes = Object.keys(RUNES).sort();
+    document.getElementById('cle').innerHTML = toutes.map(l => `
+      <div class="cle-case">
+        <div class="rune-sym">${RUNES[l]}</div>
+        <div class="lettre">= ${l}</div>
       </div>
     `).join('');
 
-    function verifier() {
-      const reponse = document.getElementById('reponse').value.trim().toUpperCase();
-      const m = document.getElementById('message');
-      if (!reponse) {
-        m.textContent = "Écris ta réponse !";
-        m.style.color = "#ef5350";
+    // Système d'aides progressives
+    const AIDES = [
+      `🔍 La devinette parle d'un objet utilisé par le sorcier.`,
+      `🔍 La réponse a <strong>${REPONSE.length} lettres</strong>.`,
+      `🔍 La 1ʳᵉ lettre est <strong>${REPONSE[0]}</strong>.`
+    ];
+    let nbAides = 0;
+
+    function aide() {
+      if (nbAides >= AIDES.length) {
+        msg("Tu as déjà toutes les aides ! Trouve la réponse !", false);
         return;
       }
-      if (reponse === MOT_SECRET) {
+      const a = AIDES[nbAides];
+      document.getElementById('aide-utilisees').innerHTML = AIDES.slice(0, nbAides + 1).map(x => '✓ ' + x).join('<br>');
+      msg(a, true);
+      nbAides++;
+    }
+
+    function msg(texte, ok) {
+      const m = document.getElementById('message');
+      m.innerHTML = texte;
+      m.style.color = ok ? '#a5d6a7' : '#ef5350';
+    }
+
+    function verifier() {
+      const reponse = document.getElementById('reponse').value.trim().toUpperCase();
+      if (!reponse) {
+        msg("Écris ta réponse !", false);
+        return;
+      }
+      // Tolérance : accepte la réponse seule OU la phrase complète déchiffrée
+      if (reponse === REPONSE || reponse === PHRASE.toUpperCase()) {
         gagne();
       } else {
-        m.textContent = "❌ Ce n'est pas le bon mot. Regarde mieux les runes !";
-        m.style.color = "#ef5350";
+        msg("❌ Ce n'est pas ça. Relis bien la devinette en runes !", false);
+        if (navigator.vibrate) navigator.vibrate(150);
       }
     }
 
@@ -109,13 +182,11 @@
       MM.afficherMotGagne('runes', 'zone-victoire');
     }
 
-    // Si déjà gagnée
     if (MM.getEtat().epreuvesGagnees['runes']) {
       document.getElementById('zone-jeu').classList.add('hidden');
       MM.afficherMotGagne('runes', 'zone-victoire');
     }
 
-    // Entrée clavier = valider
     document.getElementById('reponse').addEventListener('keydown', e => {
       if (e.key === 'Enter') verifier();
     });
