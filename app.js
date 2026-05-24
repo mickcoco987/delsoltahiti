@@ -1376,8 +1376,8 @@
       '<label>Année max <input id="amm-year_max" type="number" min="1970" max="2030" placeholder="' + (new Date().getFullYear() + 1) + '"></label>' +
       '</div>' +
       '<div class="row-2">' +
-      '<label>Prix min ($) <input id="amm-price_min" type="number" required min="0" placeholder="60000"></label>' +
-      '<label>Prix max ($) <input id="amm-price_max" type="number" required min="0" placeholder="500000"></label>' +
+      '<label>Prix min ($) <input id="amm-price_min" type="number" min="0" placeholder="0"></label>' +
+      '<label>Prix max ($) <input id="amm-price_max" type="number" min="0" placeholder="9 999 999"></label>' +
       '</div>' +
       '<label>Kilométrage max (mi) <input id="amm-max_mileage" type="number" min="1000" placeholder="999999 = aucun filtre"></label>' +
       '</fieldset>' +
@@ -1425,6 +1425,8 @@
     const currentYear = new Date().getFullYear();
     const yearMin = v("year_min") ? parseInt(v("year_min"), 10) : 1970;
     const yearMax = v("year_max") ? parseInt(v("year_max"), 10) : currentYear + 1;
+    const priceMin = v("price_min") ? parseInt(v("price_min"), 10) : 0;
+    const priceMax = v("price_max") ? parseInt(v("price_max"), 10) : 9999999;
     const maxMileage = v("max_mileage") ? parseInt(v("max_mileage"), 10) : 999999;
     const variants = csvList(v("variants"));
     if (!variants.length) variants.push("Standard");
@@ -1435,7 +1437,7 @@
       name: v("name"),
       short_name: v("short_name") || v("name"),
       year_range: [yearMin, yearMax],
-      price_range: [parseInt(v("price_min"), 10), parseInt(v("price_max"), 10)],
+      price_range: [priceMin, priceMax],
       max_mileage: maxMileage,
       variants: variants,
       title_filter: csvList(v("title_filter")),
