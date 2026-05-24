@@ -1,0 +1,17 @@
+{
+  "model": "ferrari-f8",
+  "points": [
+    {
+      "date": "2026-05-24",
+      "overall": {
+        "avg_price": 394557,
+        "median_price": 389996,
+        "count": 13
+      },
+      "by_variant": {
+        "Tributo": 371926,
+        "Spider": 469997
+      }
+    }
+  ]
+}

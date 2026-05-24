@@ -1,0 +1,21 @@
+{
+  "model": "lamborghini-huracan",
+  "points": [
+    {
+      "date": "2026-05-24",
+      "overall": {
+        "avg_price": 294224,
+        "median_price": 282000,
+        "count": 237
+      },
+      "by_variant": {
+        "LP610-4": 243133,
+        "Spyder": 248476,
+        "Performante": 355070,
+        "EVO": 296402,
+        "STO": 423664,
+        "Tecnica": 343391
+      }
+    }
+  ]
+}
