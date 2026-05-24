@@ -1179,8 +1179,21 @@
 
   /* ---------- bootstrap ---------- */
 
+  function renderVersionBadge(catalog) {
+    const badge = document.getElementById("version-badge");
+    if (!badge) return;
+    const v = catalog && catalog.version;
+    if (!v || !v.sha) return;
+    badge.textContent = (v.branch ? v.branch + " · " : "") + v.sha;
+    badge.title = "Commit " + (v.sha_full || v.sha) +
+      (v.built_at ? " — généré le " + v.built_at : "") +
+      "\nCliquer pour ouvrir l'historique sur GitHub";
+    badge.hidden = false;
+  }
+
   function bootstrap() {
     const catalog = window.COTE_CATALOG;
+    renderVersionBadge(catalog);
     if (!catalog || !Array.isArray(catalog.models)) {
       renderPicker();
       return;

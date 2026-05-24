@@ -8,7 +8,9 @@ selecteur du tableau de bord.
 from __future__ import annotations
 
 import json
-from datetime import date
+import os
+import subprocess
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import List, Optional, Sequence
 
@@ -122,6 +124,39 @@ def save(model: Model, listings: List[Listing], history: list,
     return market
 
 
+def _current_version() -> dict:
+    """Renvoie SHA court + horodatage pour affichage debug dans le header.
+
+    Sur GitHub Actions, $GITHUB_SHA est defini ; en local, on appelle git.
+    """
+    sha = os.environ.get("GITHUB_SHA", "")
+    if not sha:
+        try:
+            sha = subprocess.check_output(
+                ["git", "rev-parse", "HEAD"],
+                cwd=Path(__file__).resolve().parent.parent,
+                stderr=subprocess.DEVNULL,
+            ).decode().strip()
+        except (subprocess.CalledProcessError, FileNotFoundError, OSError):
+            sha = ""
+    branch = os.environ.get("GITHUB_REF_NAME", "")
+    if not branch:
+        try:
+            branch = subprocess.check_output(
+                ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+                cwd=Path(__file__).resolve().parent.parent,
+                stderr=subprocess.DEVNULL,
+            ).decode().strip()
+        except (subprocess.CalledProcessError, FileNotFoundError, OSError):
+            branch = ""
+    return {
+        "sha": sha[:7],
+        "sha_full": sha,
+        "branch": branch,
+        "built_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    }
+
+
 def write_catalog(models: Sequence[Model]) -> None:
     """Ecrit data/catalog.js : metadata de tous les modeles pour le selecteur."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -150,7 +185,7 @@ def write_catalog(models: Sequence[Model]) -> None:
             except (json.JSONDecodeError, OSError):
                 pass
         entries.append(entry)
-    payload = {"models": entries}
+    payload = {"models": entries, "version": _current_version()}
     CATALOG_BUNDLE.write_text(
         "/* Genere automatiquement - ne pas editer a la main. */\n"
         "window.COTE_CATALOG = " + json.dumps(
