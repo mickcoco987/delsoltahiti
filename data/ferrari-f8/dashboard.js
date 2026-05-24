@@ -14,22 +14,22 @@ window.COTE = {
       2025
     ]
   },
-  "generated_at": "2026-05-24T02:05:42Z",
+  "generated_at": "2026-05-24T02:14:49Z",
   "sources": [
     "ebay"
   ],
   "valuation": {
-    "method": "regression log-lineaire (millesime + kilometrage + version)",
+    "method": "regression log-lineaire robuste (millesime + kilometrage + version)",
     "residual_pct": 9.2
   },
   "market": {
     "overall": {
-      "count": 13,
-      "avg_price": 394557,
-      "median_price": 389996,
+      "count": 14,
+      "avg_price": 416373,
+      "median_price": 392448,
       "min_price": 315000,
-      "max_price": 580000,
-      "avg_mileage": 8316
+      "max_price": 699980,
+      "avg_mileage": 8089
     },
     "by_variant": {
       "Tributo": {
@@ -41,12 +41,12 @@ window.COTE = {
         "avg_mileage": 8266
       },
       "Spider": {
-        "count": 3,
-        "avg_price": 469997,
-        "median_price": 439995,
+        "count": 4,
+        "avg_price": 527493,
+        "median_price": 509998,
         "min_price": 389996,
-        "max_price": 580000,
-        "avg_mileage": 8483
+        "max_price": 699980,
+        "avg_mileage": 7646
       }
     },
     "by_year": {
@@ -75,12 +75,12 @@ window.COTE = {
         "avg_mileage": 9033
       },
       "2023": {
-        "count": 1,
-        "avg_price": 580000,
-        "median_price": 580000,
+        "count": 2,
+        "avg_price": 639990,
+        "median_price": 639990,
         "min_price": 580000,
-        "max_price": 580000,
-        "avg_mileage": 75
+        "max_price": 699980,
+        "avg_mileage": 2606
       }
     }
   },
@@ -88,13 +88,13 @@ window.COTE = {
     {
       "date": "2026-05-24",
       "overall": {
-        "avg_price": 394557,
-        "median_price": 389996,
-        "count": 13
+        "avg_price": 416373,
+        "median_price": 392448,
+        "count": 14
       },
       "by_variant": {
         "Tributo": 371926,
-        "Spider": 469997
+        "Spider": 527493
       }
     }
   ],
@@ -112,13 +112,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:38Z",
+      "scraped_at": "2026-05-24T02:14:44Z",
       "id": "7f4c0bf66ed5",
       "vin": "ZFF93LMA7P0293426",
       "image_url": "https://i.ebayimg.com/images/g/QesAAeSwTctqCEEA/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 493315,
       "deal_pct": -17.6
+    },
+    {
+      "year": 2021,
+      "variant": "Tributo",
+      "price": 384895,
+      "mileage": 9623,
+      "title": "2021 Ferrari F8 Tributo Base",
+      "url": "https://www.ebay.com/itm/157933267402?_skw=Ferrari+F8&hash=item24c58e69ca:g:avUAAeSwvb1qELsQ",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-24T02:14:44Z",
+      "id": "8f0ebd023583",
+      "vin": "ZFF92LLA3M0259144",
+      "image_url": "https://i.ebayimg.com/images/g/avUAAeSwvb1qELsQ/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 361839,
+      "deal_pct": -6.4
     },
     {
       "year": 2022,
@@ -133,7 +154,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:38Z",
+      "scraped_at": "2026-05-24T02:14:45Z",
       "id": "24df26477f1f",
       "vin": "ZFF92LLA9N0275561",
       "image_url": "https://i.ebayimg.com/images/g/f8EAAeSw6oxqBUDu/s-l225.jpg",
@@ -154,34 +175,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:39Z",
+      "scraped_at": "2026-05-24T02:14:45Z",
       "id": "f956479d2814",
       "vin": "ZFF92LLA7M0259423",
       "image_url": "https://i.ebayimg.com/images/g/OwQAAeSwKnpqC0rD/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 389882,
       "deal_pct": -1.3
-    },
-    {
-      "year": 2021,
-      "variant": "Tributo",
-      "price": 384895,
-      "mileage": 9623,
-      "title": "2021 Ferrari F8 Tributo Base",
-      "url": "https://www.ebay.com/itm/157933267402?_skw=Ferrari+F8&hash=item24c58e69ca:g:avUAAeSwvb1qELsQ",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:39Z",
-      "id": "8f0ebd023583",
-      "vin": "ZFF92LLA3M0259144",
-      "image_url": "https://i.ebayimg.com/images/g/avUAAeSwvb1qELsQ/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 361839,
-      "deal_pct": -6.4
     },
     {
       "year": 2021,
@@ -196,34 +196,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:39Z",
+      "scraped_at": "2026-05-24T02:14:45Z",
       "id": "392303262785",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/X7kAAeSwvPRqDszy/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 377207,
       "deal_pct": 4.6
-    },
-    {
-      "year": 2021,
-      "variant": "Tributo",
-      "price": 349900,
-      "mileage": 14509,
-      "title": "2021 Ferrari F8 Tributo ",
-      "url": "https://www.ebay.com/itm/377205497920?_skw=Ferrari+F8&hash=item57d3332040:g:TPcAAeSws11qEZ7f",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:40Z",
-      "id": "02c5dca50099",
-      "vin": "ZFF92LLA3M0261086",
-      "image_url": "https://i.ebayimg.com/images/g/TPcAAeSws11qEZ7f/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 338566,
-      "deal_pct": -3.3
     },
     {
       "year": 2020,
@@ -238,13 +217,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:40Z",
+      "scraped_at": "2026-05-24T02:14:46Z",
       "id": "849d6d22f2fc",
       "vin": "ZFF92LLA8L0254195",
       "image_url": "https://i.ebayimg.com/images/g/90wAAeSwB7dqBZva/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 378853,
       "deal_pct": -5.6
+    },
+    {
+      "year": 2021,
+      "variant": "Tributo",
+      "price": 349900,
+      "mileage": 14509,
+      "title": "2021 Ferrari F8 Tributo ",
+      "url": "https://www.ebay.com/itm/377205497920?_skw=Ferrari+F8&hash=item57d3332040:g:TPcAAeSws11qEZ7f",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-24T02:14:46Z",
+      "id": "02c5dca50099",
+      "vin": "ZFF92LLA3M0261086",
+      "image_url": "https://i.ebayimg.com/images/g/TPcAAeSws11qEZ7f/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 338566,
+      "deal_pct": -3.3
     },
     {
       "year": 2020,
@@ -259,7 +259,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:41Z",
+      "scraped_at": "2026-05-24T02:14:47Z",
       "id": "13dcb66f5dd0",
       "vin": "ZFF92LLA5L0254848",
       "image_url": "https://i.ebayimg.com/images/g/kAAAAeSwqg1puoKU/s-l225.jpg",
@@ -280,7 +280,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:41Z",
+      "scraped_at": "2026-05-24T02:14:47Z",
       "id": "cdfd14b1f8d2",
       "vin": "ZFF93LMA1M0261101",
       "image_url": "https://i.ebayimg.com/images/g/9ZIAAeSwGnFpxflj/s-l225.jpg",
@@ -301,7 +301,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:41Z",
+      "scraped_at": "2026-05-24T02:14:48Z",
       "id": "d9aede6302ac",
       "vin": "ZFF92LLA8L0256979",
       "image_url": "https://i.ebayimg.com/images/g/bhQAAeSw3cFqDkbI/s-l225.jpg",
@@ -322,7 +322,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:42Z",
+      "scraped_at": "2026-05-24T02:14:48Z",
       "id": "10dd8f7a3d9a",
       "vin": "ZFF92LLA0M0260686",
       "image_url": "https://i.ebayimg.com/images/g/N48AAeSwUvhqB1aY/s-l225.jpg",
@@ -343,13 +343,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:42Z",
+      "scraped_at": "2026-05-24T02:14:48Z",
       "id": "e3b9ef6edb52",
       "vin": "ZFF92LLAXN0276105",
       "image_url": "https://i.ebayimg.com/images/g/hcsAAeSwDe5qENtG/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 384472,
       "deal_pct": 18.1
+    },
+    {
+      "year": 2023,
+      "variant": "Spider",
+      "price": 699980,
+      "mileage": 5136,
+      "title": "2023 Ferrari F8 Spider Mansory",
+      "url": "https://www.ebay.com/itm/366430240608?_skw=Ferrari+F8&hash=item5550f1bf60:g:JZgAAeSwZU5qEl3J",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-24T02:14:49Z",
+      "id": "f9436d984a90",
+      "vin": "00000000000000000",
+      "image_url": "https://i.ebayimg.com/images/g/JZgAAeSwZU5qEl3J/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 460487,
+      "deal_pct": -52.0
     },
     {
       "year": 2022,
@@ -364,7 +385,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T02:05:42Z",
+      "scraped_at": "2026-05-24T02:14:49Z",
       "id": "b41a37aae8da",
       "vin": "ZFF93LMA3N0273798",
       "image_url": "https://i.ebayimg.com/images/g/BdcAAeSwM4ZqAvhV/s-l225.jpg",
