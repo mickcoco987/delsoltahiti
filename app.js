@@ -952,7 +952,16 @@
       return;
     }
 
-    activeKind = "dealer";
+    // Choisit l'onglet par defaut sur celui qui contient au moins une annonce
+    // (sinon le modele type "tout-encheres" comme F8 affiche 0 par defaut).
+    const dealerCount = data.listings.filter(function (l) {
+      return (l.kind || "dealer") === "dealer";
+    }).length;
+    const auctionCount = data.listings.filter(function (l) {
+      return l.kind === "auction";
+    }).length;
+    activeKind = dealerCount > 0 ? "dealer"
+      : (auctionCount > 0 ? "auction" : "dealer");
     activeVariant = "Toutes";
     sortKey = "deal_pct";
     sortDir = -1;

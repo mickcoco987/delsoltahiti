@@ -110,7 +110,9 @@ _CATALOG: Dict[str, Model] = {
         vin_prefixes=("ZFF",),
         ebay_query="Ferrari F8",
         marketcheck_make="Ferrari",
-        marketcheck_models=("F8 Tributo", "F8 Spider"),
+        # Requete large : "F8" suffit, le title_filter ecarte le bruit.
+        # ("F8 Tributo" et "F8 Spider" en exact match renvoyaient 0.)
+        marketcheck_models=("F8",),
         classic_pages=(
             "https://www.classic.com/m/ferrari/f8/coupe/",
             "https://www.classic.com/m/ferrari/f8/spider/",
