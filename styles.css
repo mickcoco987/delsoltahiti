@@ -594,7 +594,7 @@ thead th.nosort { cursor: default; }
 .model-card.no-data { opacity: 0.6; }
 .model-card.no-data .model-sub { color: var(--text-faint); }
 
-/* ---------- toggle "Grouper par version" + en-tetes de groupe ---------- */
+/* ---------- menu "Trier par" + en-tetes de groupe ---------- */
 
 .card-head-actions {
   display: flex;
@@ -603,27 +603,37 @@ thead th.nosort { cursor: default; }
   flex-wrap: wrap;
 }
 
-.group-toggle {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-dim);
+.sort-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.8rem;
+  color: var(--text-faint);
   font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.group-toggle:hover:not(:disabled) {
-  border-color: var(--accent);
+.sort-control select {
+  background: var(--bg-elev-2);
   color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: border-color 0.15s, background 0.15s;
 }
 
-.group-toggle.active {
-  background: var(--accent);
+.sort-control select:hover { border-color: var(--accent); }
+.sort-control select:focus {
+  outline: none;
   border-color: var(--accent);
-  color: #fff;
+  box-shadow: 0 0 0 2px rgba(255, 40, 0, 0.18);
 }
 
 tr.group-header td {
