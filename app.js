@@ -563,6 +563,18 @@
     ];
 
     list.sort((a, b) => {
+      // Tri sur "variant" : on suit l'ordre du catalogue (base -> top de gamme)
+      // plutot que l'alphabetique, sinon "Spider" arrive apres "Speciale A"
+      // et "GT3 RS" avant "GT3 Touring" — pas l'ordre naturel.
+      if (sortKey === "variant") {
+        const ia = VARIANTS.indexOf(a.variant);
+        const ib = VARIANTS.indexOf(b.variant);
+        const ra = ia < 0 ? VARIANTS.length : ia;
+        const rb = ib < 0 ? VARIANTS.length : ib;
+        if (ra !== rb) return sortDir * (ra - rb);
+        // Au sein d'une meme version : meilleure affaire d'abord.
+        return (b.deal_pct || -Infinity) - (a.deal_pct || -Infinity);
+      }
       const va = a[sortKey], vb = b[sortKey];
       if (va == null) return 1;
       if (vb == null) return -1;
@@ -629,7 +641,7 @@
           sortKey = key;
           sortDir = key === "variant" || key === "location" ? 1 : -1;
         }
-        renderGroupToggle();
+        renderSortControl();
         renderTable();
       });
     });
@@ -663,35 +675,62 @@
       (VARIANT_COLORS[v] || PALETTE[0]) + '">' + esc(v) + "</span>";
   }
 
-  /* Le toggle "Grouper par version" force sortKey=variant. Active/inactif
-     suit l'etat actuel : on lie le bouton a la valeur de sortKey. */
-  function renderGroupToggle() {
-    const btn = document.getElementById("group-toggle");
-    if (!btn) return;
-    const grouped = sortKey === "variant" && activeVariant === "Toutes";
-    btn.setAttribute("aria-pressed", grouped ? "true" : "false");
-    btn.textContent = grouped ? "✓ Groupé par version" : "Grouper par version";
-    btn.classList.toggle("active", grouped);
-    // Desactive le toggle quand on filtre deja sur une version unique
-    // (le groupage n'aurait alors qu'un seul groupe = sans interet).
-    btn.disabled = activeVariant !== "Toutes";
-    btn.style.opacity = btn.disabled ? "0.4" : "";
-    btn.style.cursor = btn.disabled ? "not-allowed" : "";
-    if (!btn.dataset.bound) {
-      btn.addEventListener("click", function () {
-        if (btn.disabled) return;
-        if (sortKey === "variant") {
-          // Toggle off : retour au tri par defaut (deal_pct desc).
-          sortKey = "deal_pct";
-          sortDir = -1;
-        } else {
-          sortKey = "variant";
-          sortDir = 1;
-        }
-        renderGroupToggle();
+  /* Menu deroulant "Trier par" : pilote sortKey/sortDir. L'option "Version
+     (groupé)" est desactivee quand le filtre version est deja sur une seule
+     variante (le groupage n'aurait alors qu'un groupe). Si l'utilisateur trie
+     en cliquant sur une autre colonne du tableau, le select affiche
+     "(personnalisé)" pour ne pas mentir sur l'etat reel. */
+  const SORT_OPTIONS = [
+    { value: "deal_pct:desc", label: "Bonne affaire ↓",
+      key: "deal_pct", dir: -1 },
+    { value: "price:desc", label: "Prix ↓ (cher → bas)",
+      key: "price", dir: -1 },
+    { value: "price:asc", label: "Prix ↑ (bas → cher)",
+      key: "price", dir: 1 },
+    { value: "year:desc", label: "Millésime ↓ (récent)",
+      key: "year", dir: -1 },
+    { value: "year:asc", label: "Millésime ↑ (ancien)",
+      key: "year", dir: 1 },
+    { value: "variant:asc", label: "Version (groupé)",
+      key: "variant", dir: 1 },
+  ];
+
+  function renderSortControl() {
+    const select = document.getElementById("sort-select");
+    if (!select) return;
+    const groupingDisabled = activeVariant !== "Toutes";
+    // Si on etait en tri groupe et que le filtre vient de cibler une seule
+    // version, on retombe sur le tri par defaut (le groupage n'a plus de sens).
+    if (groupingDisabled && sortKey === "variant") {
+      sortKey = "deal_pct";
+      sortDir = -1;
+    }
+    const current = sortKey + ":" + (sortDir < 0 ? "desc" : "asc");
+    const match = SORT_OPTIONS.find(function (o) { return o.value === current; });
+    let html = "";
+    if (!match) {
+      html += '<option value="__custom" selected disabled>(personnalisé)</option>';
+    }
+    html += SORT_OPTIONS.map(function (opt) {
+      const sel = match && opt.value === current ? " selected" : "";
+      const dis = (opt.value === "variant:asc" && groupingDisabled)
+        ? " disabled" : "";
+      return '<option value="' + opt.value + '"' + sel + dis + '>' +
+        esc(opt.label) + '</option>';
+    }).join("");
+    select.innerHTML = html;
+    if (!select.dataset.bound) {
+      select.addEventListener("change", function () {
+        const opt = SORT_OPTIONS.find(function (o) {
+          return o.value === select.value;
+        });
+        if (!opt) return;
+        sortKey = opt.key;
+        sortDir = opt.dir;
+        renderSortControl();
         renderTable();
       });
-      btn.dataset.bound = "1";
+      select.dataset.bound = "1";
     }
   }
 
@@ -873,7 +912,7 @@
     renderHistory();
     renderYearChart();
     renderScatter();
-    renderGroupToggle();
+    renderSortControl();
     renderTable();
   }
 
@@ -941,7 +980,32 @@
     let html = '<div class="picker-inner">' +
       '<h2>Quelle voiture veux-tu suivre&nbsp;?</h2>' +
       '<p class="picker-sub">Sélectionne la marque puis le modèle. ' +
-      'Tu pourras changer à tout moment depuis le bouton en haut.</p>';
+      'Tu pourras changer à tout moment depuis le bouton en haut.</p>' +
+      '<section class="howto">' +
+      '<h3>Comment ça marche</h3>' +
+      '<ol class="howto-steps">' +
+      '<li><strong>Choisis ta voiture</strong> dans la liste ci-dessous. ' +
+      'Chaque modèle porte un verdict d\'investissement ' +
+      '(<span class="verdict-pill good">Excellent</span> ' +
+      '<span class="verdict-pill mid">Mou</span>) ' +
+      'visible avant même de cliquer.</li>' +
+      '<li><strong>Le tableau de bord</strong> du modèle s\'ouvre : ' +
+      'indicateurs de cote (prix moyen, fourchette, tendance 12 mois), ' +
+      'thèse d\'investissement détaillée, bonnes affaires détectées ' +
+      'sous la cote, évolution dans le temps et liste complète des ' +
+      'annonces suivies.</li>' +
+      '<li><strong>Filtre et trie</strong> les annonces : onglets ' +
+      'concessionnaires&nbsp;/ enchères, pills par version, et menu ' +
+      '« Trier par » (bonne affaire, prix, millésime, version groupée).</li>' +
+      '<li><strong>Mise à jour quotidienne</strong> automatique depuis ' +
+      'Marketcheck (concessionnaires US) et eBay Motors (enchères). ' +
+      'Le bouton ↻ en haut force un rafraîchissement immédiat.</li>' +
+      '</ol>' +
+      '<p class="howto-footnote">Les écarts à la cote sont calculés par ' +
+      'une régression robuste sur millésime, kilométrage et version. ' +
+      'Un écart fort est une <em>piste à investiguer</em>, pas un verdict ' +
+      '(options, état et historique d\'entretien échappent au modèle).</p>' +
+      '</section>';
 
     if (opts.warning) {
       html += '<div class="picker-warning">⚠ ' + esc(opts.warning) + '</div>';

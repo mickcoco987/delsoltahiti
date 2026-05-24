@@ -523,6 +523,49 @@ thead th.nosort { cursor: default; }
   font-size: 0.95rem;
 }
 
+/* Bloc "Comment ça marche" sur l'ecran d'accueil. */
+.howto {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 18px 22px 20px;
+  margin: 0 0 32px;
+}
+
+.howto h3 {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-faint);
+}
+
+.howto-steps {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.howto-steps li { margin-bottom: 8px; }
+.howto-steps li:last-child { margin-bottom: 0; }
+.howto-steps strong { color: var(--text); }
+.howto-steps .verdict-pill {
+  margin: 0 2px;
+  vertical-align: 1px;
+}
+
+.howto-footnote {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--text-faint);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 .picker-warning {
   background: rgba(255, 90, 60, 0.12);
   border: 1px solid rgba(255, 90, 60, 0.35);
@@ -594,7 +637,7 @@ thead th.nosort { cursor: default; }
 .model-card.no-data { opacity: 0.6; }
 .model-card.no-data .model-sub { color: var(--text-faint); }
 
-/* ---------- toggle "Grouper par version" + en-tetes de groupe ---------- */
+/* ---------- menu "Trier par" + en-tetes de groupe ---------- */
 
 .card-head-actions {
   display: flex;
@@ -603,27 +646,37 @@ thead th.nosort { cursor: default; }
   flex-wrap: wrap;
 }
 
-.group-toggle {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-dim);
+.sort-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.8rem;
+  color: var(--text-faint);
   font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.group-toggle:hover:not(:disabled) {
-  border-color: var(--accent);
+.sort-control select {
+  background: var(--bg-elev-2);
   color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: border-color 0.15s, background 0.15s;
 }
 
-.group-toggle.active {
-  background: var(--accent);
+.sort-control select:hover { border-color: var(--accent); }
+.sort-control select:focus {
+  outline: none;
   border-color: var(--accent);
-  color: #fff;
+  box-shadow: 0 0 0 2px rgba(255, 40, 0, 0.18);
 }
 
 tr.group-header td {
