@@ -12,9 +12,16 @@
     "year_range": [
       2014,
       2025
-    ]
+    ],
+    "investment": {
+      "verdict": "Excellent",
+      "class": "good",
+      "summary": "Reference collection moderne. La GT3 Touring (boite manuelle, sans aileron) et la GT3 RS sont devenues des valeurs sures, tirees par les allocations limitees Porsche.",
+      "focus": "Touring boite manuelle (991.2 / 992) ou RS. La GT3 standard 992 est plus diffusee, sa cote depend des allocations futures.",
+      "risk": "Achat sans allocation = paiement plein tarif sur le marche secondaire. Verifier l'historique track : les GT3 sortent souvent en circuit."
+    }
   },
-  "generated_at": "2026-05-24T02:25:14Z",
+  "generated_at": "2026-05-24T02:28:00Z",
   "sources": [
     "marketcheck",
     "ebay"

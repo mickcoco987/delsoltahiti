@@ -40,6 +40,13 @@ class Model:
     classic_pages: Tuple[str, ...] = ()
     dupont_live_pages: Tuple[str, ...] = ()
     rm_sothebys_pages: Tuple[str, ...] = ()
+    # These d'investissement : verdict synthetique + 2-3 lignes d'analyse.
+    # `investment_class` : good | mid | neutral | over (drive la couleur UI).
+    investment_verdict: str = ""
+    investment_class: str = "neutral"
+    investment_summary: str = ""
+    investment_focus: str = ""
+    investment_risk: str = ""
 
     @property
     def default_variant(self) -> str:
@@ -93,6 +100,22 @@ _CATALOG: Dict[str, Model] = {
             "https://live.dupontregistry.com/listings/live/filter:sort=ending_soon",
         ),
         rm_sothebys_pages=("https://rmsothebys.com/results/",),
+        investment_verdict="Excellent",
+        investment_class="good",
+        investment_summary=(
+            "Derniere Ferrari V8 atmospherique largement diffusee. Le marche "
+            "US est oriente a la hausse, particulierement sur la Speciale "
+            "(track + collection) et la Speciale A (tres rare, deja en mode "
+            "investissement pur)."
+        ),
+        investment_focus=(
+            "Speciale ou Spider bien optionnee a faible kilometrage. Italia "
+            "standard interessante uniquement sous la cote."
+        ),
+        investment_risk=(
+            "La cote est deja haute sur les Italia standard : payer le prix "
+            "fort sur un exemplaire moyen plafonne le potentiel d'upside."
+        ),
     ),
     "ferrari-f8": Model(
         slug="ferrari-f8",
@@ -116,6 +139,23 @@ _CATALOG: Dict[str, Model] = {
         classic_pages=(
             "https://www.classic.com/m/ferrari/f8/coupe/",
             "https://www.classic.com/m/ferrari/f8/spider/",
+        ),
+        investment_verdict="Mou",
+        investment_class="mid",
+        investment_summary=(
+            "V8 biturbo, version intermediaire entre 488 et 296. La cote "
+            "reste molle a baissiere sur le Tributo (production large, "
+            "demande tiede). Le Spider tient mieux grace a sa rarete "
+            "relative."
+        ),
+        investment_focus=(
+            "Spider plutot que Tributo. Ou attendre la depreciation pour "
+            "entrer bas."
+        ),
+        investment_risk=(
+            "La transition vers le V6 hybride (296) cree de l'incertitude "
+            "sur la cote moyen terme. Pas le placement le plus dynamique du "
+            "catalogue."
         ),
     ),
     "lamborghini-huracan": Model(
@@ -143,6 +183,21 @@ _CATALOG: Dict[str, Model] = {
             "https://www.classic.com/m/lamborghini/huracan/coupe/",
             "https://www.classic.com/m/lamborghini/huracan/spyder/",
         ),
+        investment_verdict="Solide",
+        investment_class="good",
+        investment_summary=(
+            "Dernier V10 atmospherique du groupe VAG, fin de production "
+            "confirmee. Les versions track (STO, Performante, Tecnica) "
+            "sont deja recherchees et resistent bien a la depreciation."
+        ),
+        investment_focus=(
+            "STO ou Performante (rarete + identite track). Eviter la "
+            "LP610-4 standard qui se deprecie encore."
+        ),
+        investment_risk=(
+            "L'acceleration du marche electrifie peut tirer vers le bas la "
+            "cote des thermiques d'entree de gamme (LP610-4, EVO base)."
+        ),
     ),
     "porsche-911-gt3": Model(
         slug="porsche-911-gt3",
@@ -165,6 +220,22 @@ _CATALOG: Dict[str, Model] = {
         classic_pages=(
             "https://www.classic.com/m/porsche/911/991/gt3/",
             "https://www.classic.com/m/porsche/911/992/gt3/",
+        ),
+        investment_verdict="Excellent",
+        investment_class="good",
+        investment_summary=(
+            "Reference collection moderne. La GT3 Touring (boite manuelle, "
+            "sans aileron) et la GT3 RS sont devenues des valeurs sures, "
+            "tirees par les allocations limitees Porsche."
+        ),
+        investment_focus=(
+            "Touring boite manuelle (991.2 / 992) ou RS. La GT3 standard "
+            "992 est plus diffusee, sa cote depend des allocations futures."
+        ),
+        investment_risk=(
+            "Achat sans allocation = paiement plein tarif sur le marche "
+            "secondaire. Verifier l'historique track : les GT3 sortent "
+            "souvent en circuit."
         ),
     ),
 }

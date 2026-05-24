@@ -14,9 +14,16 @@ window.COTE = {
     "year_range": [
       2009,
       2016
-    ]
+    ],
+    "investment": {
+      "verdict": "Excellent",
+      "class": "good",
+      "summary": "Derniere Ferrari V8 atmospherique largement diffusee. Le marche US est oriente a la hausse, particulierement sur la Speciale (track + collection) et la Speciale A (tres rare, deja en mode investissement pur).",
+      "focus": "Speciale ou Spider bien optionnee a faible kilometrage. Italia standard interessante uniquement sous la cote.",
+      "risk": "La cote est deja haute sur les Italia standard : payer le prix fort sur un exemplaire moyen plafonne le potentiel d'upside."
+    }
   },
-  "generated_at": "2026-05-24T02:24:10Z",
+  "generated_at": "2026-05-24T02:27:59Z",
   "sources": [
     "marketcheck",
     "ebay"

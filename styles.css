@@ -594,6 +594,86 @@ thead th.nosort { cursor: default; }
 .model-card.no-data { opacity: 0.6; }
 .model-card.no-data .model-sub { color: var(--text-faint); }
 
+/* ---------- carte "verdict investissement" ---------- */
+
+.investment-card {
+  border-left: 3px solid var(--accent);
+}
+
+.invest-summary {
+  margin: 4px 0 14px;
+  color: var(--text);
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.invest-line {
+  margin: 6px 0;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.invest-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-right: 6px;
+  vertical-align: 1px;
+}
+
+.invest-tag.focus {
+  background: rgba(52, 199, 89, 0.16);
+  color: #6fdc8c;
+}
+
+.invest-tag.risk {
+  background: rgba(255, 91, 91, 0.16);
+  color: #ff7a7a;
+}
+
+.verdict-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-left: 8px;
+  vertical-align: 3px;
+}
+
+.verdict-pill.good {
+  background: rgba(52, 199, 89, 0.18);
+  color: #6fdc8c;
+}
+.verdict-pill.mid {
+  background: rgba(240, 162, 2, 0.18);
+  color: #f0c75e;
+}
+.verdict-pill.neutral {
+  background: var(--bg-elev-2);
+  color: var(--text-dim);
+}
+.verdict-pill.over {
+  background: rgba(255, 91, 91, 0.18);
+  color: #ff7a7a;
+}
+
+/* sur les cards du selecteur, verdict en haut a droite */
+.model-card .card-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.model-card .verdict-pill { margin-left: 0; }
+
 .change-car-btn {
   background: transparent;
   border: 1px solid var(--border);
