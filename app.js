@@ -1213,6 +1213,69 @@
     }).filter(Boolean);
   }
 
+  /* ---------- autocomplete marque/modele via NHTSA vPIC (public) ----------
+   * https://vpic.nhtsa.dot.gov/api/Home/Index/LanguageSpecific
+   * Pas d'authentification, CORS ouvert, donnees exhaustives pour le marche US.
+   * Resultat mis en cache pour eviter de rejouer le fetch.
+   */
+  let _brandCache = null;
+  const _modelCache = new Map();
+
+  function fetchBrands() {
+    if (_brandCache) return Promise.resolve(_brandCache);
+    return fetch("https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json")
+      .then(function (r) { return r.ok ? r.json() : { Results: [] }; })
+      .then(function (j) {
+        _brandCache = (j.Results || [])
+          .map(function (m) { return titleCase(m.MakeName || ""); })
+          .filter(Boolean)
+          .sort();
+        return _brandCache;
+      })
+      .catch(function () { _brandCache = []; return []; });
+  }
+
+  function fetchModelsForBrand(brand) {
+    const key = String(brand || "").trim().toLowerCase();
+    if (!key) return Promise.resolve([]);
+    if (_modelCache.has(key)) return Promise.resolve(_modelCache.get(key));
+    const url = "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/" +
+      encodeURIComponent(brand) + "?format=json";
+    return fetch(url)
+      .then(function (r) { return r.ok ? r.json() : { Results: [] }; })
+      .then(function (j) {
+        const models = Array.from(new Set((j.Results || [])
+          .map(function (m) { return titleCase(m.Model_Name || ""); })
+          .filter(Boolean))).sort();
+        _modelCache.set(key, models);
+        return models;
+      })
+      .catch(function () { _modelCache.set(key, []); return []; });
+  }
+
+  function titleCase(s) {
+    return String(s).toLowerCase().replace(/\b([a-z])/g, function (m, c) {
+      return c.toUpperCase();
+    });
+  }
+
+  function fillDatalist(dl, values) {
+    if (!dl) return;
+    dl.innerHTML = values.map(function (v) {
+      return '<option value="' + esc(v) + '">';
+    }).join("");
+  }
+
+  function debounce(fn, ms) {
+    let t = null;
+    return function () {
+      const args = arguments;
+      const ctx = this;
+      clearTimeout(t);
+      t = setTimeout(function () { fn.apply(ctx, args); }, ms);
+    };
+  }
+
   function openAddModelModal() {
     let backdrop = document.getElementById("add-model-modal");
     if (backdrop) { backdrop.remove(); }
@@ -1272,6 +1335,22 @@
       $(k).addEventListener("input", function () { $(k).dataset.touched = "1"; });
     });
 
+    // Autocomplete : peuple la datalist des marques au chargement ; les modeles
+    // se rechargent (debounce 300ms) chaque fois que la marque change.
+    const brandList = backdrop.querySelector("#amm-brand-list");
+    const nameList = backdrop.querySelector("#amm-name-list");
+    fetchBrands().then(function (brands) { fillDatalist(brandList, brands); });
+
+    const refreshModels = debounce(function () {
+      const brand = $("brand").value.trim();
+      if (!brand) { fillDatalist(nameList, []); return; }
+      fetchModelsForBrand(brand).then(function (models) {
+        fillDatalist(nameList, models);
+      });
+    }, 300);
+    $("brand").addEventListener("input", refreshModels);
+    $("brand").addEventListener("change", refreshModels);
+
     backdrop.querySelector("#add-model-form").addEventListener("submit", function (e) {
       e.preventDefault();
       submitAddModel(backdrop);
@@ -1283,8 +1362,10 @@
     const cls = ["neutral", "good", "mid", "over"];
     return '' +
       '<fieldset><legend>Identité</legend>' +
-      '<label>Marque <input id="amm-brand" required maxlength="40" placeholder="Ferrari, Porsche…"></label>' +
-      '<label>Nom du modèle <input id="amm-name" required maxlength="60" placeholder="488 Pista"></label>' +
+      '<label>Marque <input id="amm-brand" list="amm-brand-list" required maxlength="40" placeholder="Ferrari, Porsche…" autocomplete="off"></label>' +
+      '<datalist id="amm-brand-list"></datalist>' +
+      '<label>Nom du modèle <input id="amm-name" list="amm-name-list" required maxlength="60" placeholder="488 Pista" autocomplete="off"></label>' +
+      '<datalist id="amm-name-list"></datalist>' +
       '<label>Nom court <input id="amm-short_name" maxlength="40" placeholder="488"></label>' +
       '<label>Slug <input id="amm-slug" required maxlength="40" pattern="[a-z0-9-]{3,40}" placeholder="ferrari-488-pista"></label>' +
       '</fieldset>' +
