@@ -809,11 +809,44 @@
 
   function renderAll() {
     renderKpis();
+    renderInvestment();
     renderDeals();
     renderHistory();
     renderYearChart();
     renderScatter();
     renderTable();
+  }
+
+  /* ---------- carte these d'investissement ---------- */
+
+  function renderInvestment() {
+    const card = document.getElementById("investment-card");
+    if (!card) return;
+    const inv = data.model && data.model.investment;
+    if (!inv || !inv.summary) {
+      card.hidden = true;
+      return;
+    }
+    const verdict = inv.verdict
+      ? '<span class="verdict-pill ' + esc(inv.class || "neutral") + '">' +
+        esc(inv.verdict) + '</span>'
+      : "";
+    const focus = inv.focus
+      ? '<p class="invest-line"><span class="invest-tag focus">➜ À privilégier</span> ' +
+        esc(inv.focus) + '</p>'
+      : "";
+    const risk = inv.risk
+      ? '<p class="invest-line"><span class="invest-tag risk">⚠ Risque</span> ' +
+        esc(inv.risk) + '</p>'
+      : "";
+    card.hidden = false;
+    card.innerHTML =
+      '<div class="card-head">' +
+      '<h2>Verdict investissement ' + verdict + '</h2>' +
+      '<span class="card-hint">lecture marché US, à pondérer selon ton profil</span>' +
+      '</div>' +
+      '<p class="invest-summary">' + esc(inv.summary) + '</p>' +
+      focus + risk;
   }
 
   /* ---------- selecteur marque / modele ---------- */
@@ -862,9 +895,17 @@
         const sub = m.has_data
           ? (m.count != null ? m.count + " annonces suivies" : "Données disponibles")
           : "Données à venir";
+        const inv = m.investment || {};
+        const verdictPill = inv.verdict
+          ? '<span class="verdict-pill ' + esc(inv.class || "neutral") +
+            '" title="Verdict d\'investissement">' + esc(inv.verdict) + '</span>'
+          : "";
         html += '<button class="model-card' + cls +
           '" data-slug="' + esc(m.slug) + '">' +
+          '<span class="card-row">' +
           '<span class="model-name">' + esc(m.name) + '</span>' +
+          verdictPill +
+          '</span>' +
           '<span class="model-years">' + m.year_range[0] + " – " +
           m.year_range[1] + '</span>' +
           '<span class="model-sub">' + esc(sub) + '</span>' +

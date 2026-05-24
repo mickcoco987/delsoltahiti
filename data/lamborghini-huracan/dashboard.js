@@ -16,9 +16,16 @@ window.COTE = {
     "year_range": [
       2014,
       2025
-    ]
+    ],
+    "investment": {
+      "verdict": "Solide",
+      "class": "good",
+      "summary": "Dernier V10 atmospherique du groupe VAG, fin de production confirmee. Les versions track (STO, Performante, Tecnica) sont deja recherchees et resistent bien a la depreciation.",
+      "focus": "STO ou Performante (rarete + identite track). Eviter la LP610-4 standard qui se deprecie encore.",
+      "risk": "L'acceleration du marche electrifie peut tirer vers le bas la cote des thermiques d'entree de gamme (LP610-4, EVO base)."
+    }
   },
-  "generated_at": "2026-05-24T02:24:45Z",
+  "generated_at": "2026-05-24T02:27:59Z",
   "sources": [
     "marketcheck",
     "ebay"

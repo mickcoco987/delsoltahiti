@@ -84,6 +84,13 @@ def save(model: Model, listings: List[Listing], history: list,
         "short_name": model.short_name,
         "variants": list(model.variants),
         "year_range": list(model.year_range),
+        "investment": {
+            "verdict": model.investment_verdict,
+            "class": model.investment_class,
+            "summary": model.investment_summary,
+            "focus": model.investment_focus,
+            "risk": model.investment_risk,
+        },
     }
 
     _write_json(md / "listings.json", {
@@ -130,6 +137,10 @@ def write_catalog(models: Sequence[Model]) -> None:
             "variants": list(m.variants),
             "year_range": list(m.year_range),
             "has_data": bundle.exists(),
+            "investment": {
+                "verdict": m.investment_verdict,
+                "class": m.investment_class,
+            },
         }
         if listings.exists():
             try:
