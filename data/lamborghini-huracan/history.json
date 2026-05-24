@@ -4,15 +4,15 @@
     {
       "date": "2026-05-24",
       "overall": {
-        "avg_price": 294224,
+        "avg_price": 294311,
         "median_price": 282000,
-        "count": 237
+        "count": 235
       },
       "by_variant": {
-        "LP610-4": 243133,
+        "LP610-4": 243187,
         "Spyder": 248476,
         "Performante": 355070,
-        "EVO": 296402,
+        "EVO": 295923,
         "STO": 423664,
         "Tecnica": 343391
       }
