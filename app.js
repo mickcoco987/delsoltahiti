@@ -1476,11 +1476,8 @@
       .then(function (r) { return r.json().catch(function () { return {}; }); })
       .then(function (d) {
         if (d && d.ok) {
-          showModalStatus(backdrop, "ok",
-            "✓ Modèle ajouté. Le scrape s'exécute, les données arriveront " +
-            "dans 1-2 min. Tu peux fermer cette fenêtre.");
-          submitBtn.textContent = "✓ Ajouté";
-          // Recharge le catalog au prochain reload pour voir le nouveau modele.
+          submitBtn.textContent = "✓ Ajouté — scrape en cours";
+          waitForScrapeAndRedirect(backdrop, model);
         } else {
           const msg = (d && (d.error || d.message)) || "Échec";
           const detail = d && d.details ? " (" + d.details.join("; ") + ")" : "";
@@ -1494,6 +1491,54 @@
         submitBtn.disabled = false;
         submitBtn.textContent = "Ajouter et scraper";
       });
+  }
+
+  /* Polle data/<slug>/listings.json jusqu'a ce qu'il apparaisse (max ~5 min),
+   * puis ferme la modale et bascule sur le tableau de bord du modele. */
+  function waitForScrapeAndRedirect(backdrop, model) {
+    const slug = model.slug;
+    const start = Date.now();
+    const maxMs = 6 * 60 * 1000;
+    const tick = function () {
+      const elapsed = Math.floor((Date.now() - start) / 1000);
+      const mm = String(Math.floor(elapsed / 60)).padStart(2, "0");
+      const ss = String(elapsed % 60).padStart(2, "0");
+      showModalStatus(backdrop, "running",
+        "⏳ Scrape en cours (" + mm + ":" + ss + ") — redirection automatique " +
+        "vers le tableau de bord dès que les données arrivent.");
+    };
+    tick();
+    const counter = setInterval(tick, 1000);
+
+    const poll = function () {
+      if (Date.now() - start > maxMs) {
+        clearInterval(counter);
+        clearInterval(polling);
+        showModalStatus(backdrop, "warn",
+          "⚠ Le scrape met plus de temps que prévu. Recharge la page dans " +
+          "quelques minutes pour voir le modèle.");
+        return;
+      }
+      fetch("data/" + encodeURIComponent(slug) + "/listings.json?ts=" + Date.now(),
+        { cache: "no-store" })
+        .then(function (r) {
+          if (!r.ok) return null;
+          return r.json().catch(function () { return null; });
+        })
+        .then(function (j) {
+          if (!j || !Array.isArray(j.listings)) return;
+          clearInterval(counter);
+          clearInterval(polling);
+          backdrop.remove();
+          // Force un reload pour reprendre le catalog.js a jour ET charger
+          // le bundle data/<slug>/dashboard.js, et selectionne le nouveau modele.
+          localStorage.setItem(STORAGE_KEY, slug);
+          window.location.reload();
+        })
+        .catch(function () { /* tente au prochain tick */ });
+    };
+    const polling = setInterval(poll, 8000);
+    setTimeout(poll, 1500);  // premier essai rapide
   }
 
   function showModalStatus(backdrop, state, message) {
