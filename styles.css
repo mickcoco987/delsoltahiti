@@ -637,6 +637,176 @@ thead th.nosort { cursor: default; }
 .model-card.no-data { opacity: 0.6; }
 .model-card.no-data .model-sub { color: var(--text-faint); }
 
+.model-card.add-model-card {
+  border-style: dashed;
+  background: transparent;
+}
+.model-card.add-model-card .model-name { color: var(--accent-soft); }
+.model-card.add-model-card .model-sub { color: var(--text-dim); }
+.model-card.add-model-card:hover {
+  border-color: var(--accent);
+  background: rgba(255, 40, 0, 0.06);
+}
+
+/* ---------- modale "Ajouter une voiture" ---------- */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 640px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-head h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.modal-close {
+  background: transparent;
+  border: 0;
+  color: var(--text-faint);
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0 8px;
+  line-height: 1;
+}
+.modal-close:hover { color: var(--text); }
+
+.modal-body {
+  padding: 14px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-body fieldset {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px 14px;
+  margin: 0;
+}
+
+.modal-body legend {
+  padding: 0 6px;
+  color: var(--text-faint);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  font-weight: 700;
+}
+
+.modal-body label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.modal-body input,
+.modal-body select,
+.modal-body textarea {
+  background: var(--bg-elev-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 8px 10px;
+  font-size: 0.88rem;
+  font-family: inherit;
+}
+
+.modal-body textarea { resize: vertical; min-height: 60px; }
+
+.modal-body input:focus,
+.modal-body select:focus,
+.modal-body textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(255, 40, 0, 0.18);
+}
+
+.modal-body .row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.modal-status {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+.modal-status.running { background: var(--bg-elev-2); color: var(--text-dim); }
+.modal-status.ok {
+  background: rgba(52, 199, 89, 0.14);
+  color: #7fe09c;
+  border: 1px solid rgba(52, 199, 89, 0.4);
+}
+.modal-status.warn {
+  background: rgba(255, 91, 91, 0.14);
+  color: #ff8d8d;
+  border: 1px solid rgba(255, 91, 91, 0.4);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-actions .btn-primary,
+.modal-actions .btn-secondary {
+  border: 0;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+.modal-actions .btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.modal-actions .btn-primary:hover:not(:disabled) { background: var(--accent-soft); }
+.modal-actions .btn-primary:disabled { opacity: 0.6; cursor: wait; }
+.modal-actions .btn-secondary {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+.modal-actions .btn-secondary:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
 /* ---------- menu "Trier par" + en-tetes de groupe ---------- */
 
 .card-head-actions {

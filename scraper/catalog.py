@@ -11,8 +11,13 @@ Ajouter un modele = ajouter une entree dans `_CATALOG` ci-dessous.
 
 from __future__ import annotations
 
+import json
+import logging
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Dict, List, Sequence, Tuple
+
+log = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -241,17 +246,99 @@ _CATALOG: Dict[str, Model] = {
 }
 
 
+CUSTOM_MODELS_PATH = (
+    Path(__file__).resolve().parent.parent / "data" / "custom-models.json"
+)
+
+
+def _model_from_dict(d: dict) -> Model:
+    """Construit un Model depuis un dict JSON (data/custom-models.json).
+
+    Champs requis : slug, brand, name, year_range, price_range, max_mileage,
+    variants. Tous les autres sont optionnels.
+    """
+    required = ("slug", "brand", "name", "year_range", "price_range",
+                "max_mileage", "variants")
+    missing = [k for k in required if k not in d]
+    if missing:
+        raise ValueError(f"champs manquants : {missing}")
+    return Model(
+        slug=str(d["slug"]),
+        brand=str(d["brand"]),
+        name=str(d["name"]),
+        short_name=str(d.get("short_name") or d["name"]),
+        year_range=(int(d["year_range"][0]), int(d["year_range"][1])),
+        price_range=(int(d["price_range"][0]), int(d["price_range"][1])),
+        max_mileage=int(d["max_mileage"]),
+        variants=tuple(d["variants"]),
+        variant_rules=tuple(
+            (tuple(rule.get("keywords", [])), str(rule["variant"]))
+            for rule in d.get("variant_rules", [])
+            if isinstance(rule, dict) and rule.get("variant")
+        ),
+        title_filter=tuple(d.get("title_filter", [])),
+        vin_prefixes=tuple(d.get("vin_prefixes", [])),
+        ebay_query=str(d.get("ebay_query", "")),
+        marketcheck_make=str(d.get("marketcheck_make", "")),
+        marketcheck_models=tuple(d.get("marketcheck_models", [])),
+        classic_pages=tuple(d.get("classic_pages", [])),
+        dupont_live_pages=tuple(d.get("dupont_live_pages", [])),
+        rm_sothebys_pages=tuple(d.get("rm_sothebys_pages", [])),
+        investment_verdict=str(d.get("investment_verdict", "")),
+        investment_class=str(d.get("investment_class", "neutral")),
+        investment_summary=str(d.get("investment_summary", "")),
+        investment_focus=str(d.get("investment_focus", "")),
+        investment_risk=str(d.get("investment_risk", "")),
+    )
+
+
+def _load_custom_models() -> Dict[str, Model]:
+    """Charge les modeles ajoutes par l'utilisateur depuis l'UI.
+
+    Le fichier `data/custom-models.json` est ecrit par le Cloudflare Worker
+    (endpoint `/add-model`). Format attendu : `{"models": [Model, ...]}`.
+    Les modeles invalides sont ignores avec un warning, jamais bloquants.
+    """
+    if not CUSTOM_MODELS_PATH.exists():
+        return {}
+    try:
+        data = json.loads(CUSTOM_MODELS_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        log.warning("custom-models.json illisible (%s)", exc)
+        return {}
+    result: Dict[str, Model] = {}
+    for entry in data.get("models", []):
+        try:
+            model = _model_from_dict(entry)
+        except (ValueError, KeyError, TypeError) as exc:
+            log.warning("modele personnalise invalide (slug=%s) : %s",
+                        entry.get("slug", "?"), exc)
+            continue
+        if model.slug in _CATALOG:
+            log.warning("modele personnalise '%s' masque par un modele du "
+                        "catalogue Python (ignore)", model.slug)
+            continue
+        result[model.slug] = model
+    return result
+
+
+def _full_catalog() -> Dict[str, Model]:
+    """Catalogue effectif : built-in + custom (les built-in gagnent)."""
+    return {**_load_custom_models(), **_CATALOG}
+
+
 def get_model(slug: str) -> Model:
-    if slug not in _CATALOG:
+    catalog = _full_catalog()
+    if slug not in catalog:
         raise KeyError(
-            f"Modele inconnu : {slug!r}. Modeles disponibles : {list(_CATALOG)}"
+            f"Modele inconnu : {slug!r}. Modeles disponibles : {list(catalog)}"
         )
-    return _CATALOG[slug]
+    return catalog[slug]
 
 
 def all_models() -> List[Model]:
-    return list(_CATALOG.values())
+    return list(_full_catalog().values())
 
 
 def all_slugs() -> List[str]:
-    return list(_CATALOG.keys())
+    return list(_full_catalog().keys())
