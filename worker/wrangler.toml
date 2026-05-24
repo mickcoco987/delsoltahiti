@@ -1,6 +1,0 @@
-name = "delsoltahiti-update"
-main = "update-cote-worker.js"
-compatibility_date = "2026-05-01"
-
-# Le jeton GitHub n'est PAS stocke ici. Apres `wrangler deploy`, executer :
-#   wrangler secret put GH_TOKEN
