@@ -98,7 +98,14 @@
   </footer>
 
   <script src="config.js"></script>
-  <script src="data/catalog.js"></script>
+  <script>
+    /* Cache-buster sur catalog.js : sans ca le badge de version peut
+     * afficher un SHA obsolete pendant que le navigateur sert un
+     * catalog.js cache. document.write garantit l'execution synchrone
+     * avant app.js (qui depend de window.COTE_CATALOG). */
+    document.write('<script src="data/catalog.js?ts=' + Date.now() +
+      '"></scr' + 'ipt>');
+  </script>
   <script src="app.js"></script>
 </body>
 </html>
