@@ -14,6 +14,14 @@ on:
   push:
     branches: [ "main" ]
   workflow_dispatch:   # permet de declencher le deploiement manuellement
+  # Les commits faits par github-actions[bot] (chore: mise a jour
+  # automatique) ne declenchent pas le trigger `push` ci-dessus
+  # (anti-boucle GitHub Actions). On chaine donc explicitement apres
+  # le workflow de scrape pour que GitHub Pages soit toujours a jour.
+  workflow_run:
+    workflows: ["Mise a jour de la cote supercars"]
+    types: [completed]
+    branches: [main]
 
 permissions:
   contents: read
