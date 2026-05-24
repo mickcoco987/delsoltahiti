@@ -1475,13 +1475,31 @@
     })
       .then(function (r) { return r.json().catch(function () { return {}; }); })
       .then(function (d) {
-        if (d && d.ok) {
+        // Le NOUVEAU Worker renvoie d.slug en plus de d.ok. L'ancien Worker
+        // accepte tout POST sans rien faire de specifique et repond {ok: true,
+        // message: "Mise a jour lancee..."} — sans champ slug. On le detecte
+        // pour ne pas faire poireauter l'utilisateur 6 min pour rien.
+        if (d && d.ok && d.slug) {
           submitBtn.textContent = "✓ Ajouté — scrape en cours";
           waitForScrapeAndRedirect(backdrop, model);
+        } else if (d && d.ok && !d.slug) {
+          showModalStatus(backdrop, "warn",
+            "⚠ Le Worker Cloudflare n'a pas l'endpoint /add-model — c'est " +
+            "l'ancienne version. Le modèle n'a PAS été ajouté. Il faut " +
+            "redéployer le Worker (copier worker/update-cote-worker.js du " +
+            "repo dans Cloudflare → Edit code → Save and Deploy).");
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Ajouter et scraper";
         } else {
           const msg = (d && (d.error || d.message)) || "Échec";
           const detail = d && d.details ? " (" + d.details.join("; ") + ")" : "";
-          showModalStatus(backdrop, "warn", "⚠ " + msg + detail);
+          // Hint specifique si l'erreur ressemble a un probleme de permission.
+          const isPermErr = /403|écriture|github a refusé/i.test(msg + " " + (d && d.status));
+          const hint = isPermErr
+            ? " Le jeton GitHub du Worker n'a peut-être pas la permission " +
+              "Contents: Read and write."
+            : "";
+          showModalStatus(backdrop, "warn", "⚠ " + msg + detail + hint);
           submitBtn.disabled = false;
           submitBtn.textContent = "Ajouter et scraper";
         }
