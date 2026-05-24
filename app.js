@@ -865,17 +865,23 @@
   }
 
   /* Resout l'URL de base du Worker.
-   * - COTE_CONFIG.updateEndpoint vide ou absent => meme origine (cas Worker
-   *   avec Static Assets qui sert AUSSI le dashboard : preview appelle
-   *   preview, prod appelle prod, plus de CORS).
-   * - URL explicite => utilisee telle quelle.
-   * - null ou false explicite => Worker desactive (renvoie null, masque la
-   *   card "+ Ajouter une voiture" et neutralise le bouton de refresh).
+   * - null/false explicite => Worker desactive (renvoie null, masque la card
+   *   "+ Ajouter une voiture" et neutralise le bouton de refresh).
+   * - Si on est servi par le Worker lui-meme (host *.workers.dev ou
+   *   localhost), on prend systematiquement window.location.origin :
+   *   meme origine => pas de CORS, preview Worker auto-suffisant, prod
+   *   tape sur la prod automatiquement.
+   * - Sinon (GitHub Pages, Cloudflare Pages, domaine custom), on utilise
+   *   cfg.updateEndpoint (URL explicite du Worker).
    */
   function getApiBase() {
     const cfg = window.COTE_CONFIG || {};
     if (cfg.updateEndpoint === null || cfg.updateEndpoint === false) return null;
-    return (cfg.updateEndpoint || window.location.origin).replace(/\/$/, "");
+    const host = window.location.hostname;
+    const servedByWorker = host.endsWith(".workers.dev") || host === "localhost"
+      || host === "127.0.0.1";
+    if (servedByWorker) return window.location.origin;
+    return (cfg.updateEndpoint || "").replace(/\/$/, "") || null;
   }
 
   function setupUpdateButton() {
