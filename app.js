@@ -1037,6 +1037,8 @@
       });
       html += '</div></div>';
     });
+    // Carte d'ajout d'un modele personnalise (necessite COTE_CONFIG.updateEndpoint).
+    html += renderAddModelCard();
     html += '</div>';
     picker.innerHTML = html;
 
@@ -1049,6 +1051,23 @@
         loadModel(m);
       });
     });
+    const addBtn = picker.querySelector(".add-model-card");
+    if (addBtn) addBtn.addEventListener("click", openAddModelModal);
+  }
+
+  function renderAddModelCard() {
+    const cfg = window.COTE_CONFIG || {};
+    if (!cfg.updateEndpoint) {
+      // Sans Worker configure, l'ajout depuis l'UI ne peut pas commit.
+      return '';
+    }
+    return '<div class="brand-block"><h3>Personnalisé</h3>' +
+      '<div class="models">' +
+      '<button class="model-card add-model-card" type="button">' +
+      '<span class="model-name">+ Ajouter une voiture</span>' +
+      '<span class="model-sub">Suivre n\'importe quel modèle</span>' +
+      '</button>' +
+      '</div></div>';
   }
 
   function applyBrandAccent(brand) {
@@ -1175,6 +1194,227 @@
       return;
     }
     loadModel(model);
+  }
+
+  /* ---------- modale "Ajouter une voiture" ---------- */
+
+  // Genere un slug kebab-case a partir d'un texte (marque + modele).
+  function slugify(s) {
+    return String(s || "").toLowerCase()
+      .normalize("NFD").replace(/[̀-ͯ]/g, "")  // accents
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 40);
+  }
+
+  function csvList(s) {
+    return String(s || "").split(/[,\n]/).map(function (x) {
+      return x.trim();
+    }).filter(Boolean);
+  }
+
+  function openAddModelModal() {
+    let backdrop = document.getElementById("add-model-modal");
+    if (backdrop) { backdrop.remove(); }
+    backdrop = document.createElement("div");
+    backdrop.id = "add-model-modal";
+    backdrop.className = "modal-backdrop";
+    backdrop.innerHTML =
+      '<div class="modal-card" role="dialog" aria-labelledby="amm-title">' +
+      '<div class="modal-head">' +
+      '<h2 id="amm-title">Ajouter une voiture</h2>' +
+      '<button class="modal-close" type="button" aria-label="Fermer">×</button>' +
+      '</div>' +
+      '<form class="modal-body" id="add-model-form">' +
+      buildModalForm() +
+      '<div class="modal-status" id="amm-status" hidden></div>' +
+      '<div class="modal-actions">' +
+      '<button type="button" class="btn-secondary" id="amm-cancel">Annuler</button>' +
+      '<button type="submit" class="btn-primary">Ajouter et scraper</button>' +
+      '</div>' +
+      '</form>' +
+      '</div>';
+    document.body.appendChild(backdrop);
+
+    const close = function () { backdrop.remove(); };
+    backdrop.querySelector(".modal-close").addEventListener("click", close);
+    backdrop.querySelector("#amm-cancel").addEventListener("click", close);
+    backdrop.addEventListener("click", function (e) {
+      if (e.target === backdrop) close();
+    });
+
+    // Auto-fill : short_name <- name, slug <- brand-shortname,
+    // ebay_query <- "brand name", marketcheck_make <- brand, title_filter <- short_name.
+    const $ = function (id) { return backdrop.querySelector("#amm-" + id); };
+    const autofill = function () {
+      const brand = $("brand").value.trim();
+      const name = $("name").value.trim();
+      if (!$("short_name").dataset.touched) {
+        $("short_name").value = name;
+      }
+      if (!$("slug").dataset.touched) {
+        $("slug").value = slugify(brand + "-" + ($("short_name").value || name));
+      }
+      if (!$("ebay_query").dataset.touched) {
+        $("ebay_query").value = (brand + " " + ($("short_name").value || name)).trim();
+      }
+      if (!$("marketcheck_make").dataset.touched) {
+        $("marketcheck_make").value = brand;
+      }
+      if (!$("title_filter").dataset.touched) {
+        $("title_filter").value = ($("short_name").value || name).toLowerCase();
+      }
+    };
+    ["brand", "name", "short_name"].forEach(function (k) {
+      $(k).addEventListener("input", autofill);
+    });
+    ["short_name", "slug", "ebay_query", "marketcheck_make", "title_filter"].forEach(function (k) {
+      $(k).addEventListener("input", function () { $(k).dataset.touched = "1"; });
+    });
+
+    backdrop.querySelector("#add-model-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      submitAddModel(backdrop);
+    });
+  }
+
+  function buildModalForm() {
+    const inv = ["", "Excellent", "Solide", "Mou", "Risqué"];
+    const cls = ["neutral", "good", "mid", "over"];
+    return '' +
+      '<fieldset><legend>Identité</legend>' +
+      '<label>Marque <input id="amm-brand" required maxlength="40" placeholder="Ferrari, Porsche…"></label>' +
+      '<label>Nom du modèle <input id="amm-name" required maxlength="60" placeholder="488 Pista"></label>' +
+      '<label>Nom court <input id="amm-short_name" maxlength="40" placeholder="488"></label>' +
+      '<label>Slug <input id="amm-slug" required maxlength="40" pattern="[a-z0-9-]{3,40}" placeholder="ferrari-488-pista"></label>' +
+      '</fieldset>' +
+
+      '<fieldset><legend>Plages de scoring</legend>' +
+      '<div class="row-2">' +
+      '<label>Année min <input id="amm-year_min" type="number" required min="1970" max="2030"></label>' +
+      '<label>Année max <input id="amm-year_max" type="number" required min="1970" max="2030"></label>' +
+      '</div>' +
+      '<div class="row-2">' +
+      '<label>Prix min ($) <input id="amm-price_min" type="number" required min="0" placeholder="60000"></label>' +
+      '<label>Prix max ($) <input id="amm-price_max" type="number" required min="0" placeholder="500000"></label>' +
+      '</div>' +
+      '<label>Kilométrage max (mi) <input id="amm-max_mileage" type="number" required min="1000" value="150000"></label>' +
+      '</fieldset>' +
+
+      '<fieldset><legend>Versions</legend>' +
+      '<label>Versions (une par ligne, la première = défaut) ' +
+      '<textarea id="amm-variants" required rows="4" placeholder="Pista&#10;Spider"></textarea></label>' +
+      '</fieldset>' +
+
+      '<fieldset><legend>Sources de données</legend>' +
+      '<label>Requête eBay <input id="amm-ebay_query" placeholder="Ferrari 488"></label>' +
+      '<div class="row-2">' +
+      '<label>Marketcheck — Marque <input id="amm-marketcheck_make" placeholder="Ferrari"></label>' +
+      '<label>Marketcheck — Modèles <input id="amm-marketcheck_models" placeholder="488, 488 Pista"></label>' +
+      '</div>' +
+      '<label>Filtre de titre (mot-clé requis dans les annonces) <input id="amm-title_filter" placeholder="488"></label>' +
+      '<label>Préfixes VIN (ex: ZFF) <input id="amm-vin_prefixes" placeholder="ZFF"></label>' +
+      '</fieldset>' +
+
+      '<fieldset><legend>Thèse d\'investissement (optionnel)</legend>' +
+      '<div class="row-2">' +
+      '<label>Verdict <select id="amm-investment_verdict">' +
+        inv.map(function (v) { return '<option value="' + esc(v) + '">' + (v || '— aucun —') + '</option>'; }).join("") +
+      '</select></label>' +
+      '<label>Couleur <select id="amm-investment_class">' +
+        cls.map(function (c) { return '<option value="' + c + '">' + c + '</option>'; }).join("") +
+      '</select></label>' +
+      '</div>' +
+      '<label>Résumé <textarea id="amm-investment_summary" rows="2"></textarea></label>' +
+      '<label>À privilégier <textarea id="amm-investment_focus" rows="2"></textarea></label>' +
+      '<label>Risque <textarea id="amm-investment_risk" rows="2"></textarea></label>' +
+      '</fieldset>';
+  }
+
+  function submitAddModel(backdrop) {
+    const cfg = window.COTE_CONFIG || {};
+    if (!cfg.updateEndpoint) {
+      showModalStatus(backdrop, "warn",
+        "Worker non configuré (COTE_CONFIG.updateEndpoint manquant).");
+      return;
+    }
+    const v = function (id) {
+      return backdrop.querySelector("#amm-" + id).value.trim();
+    };
+    const model = {
+      slug: v("slug"),
+      brand: v("brand"),
+      name: v("name"),
+      short_name: v("short_name") || v("name"),
+      year_range: [parseInt(v("year_min"), 10), parseInt(v("year_max"), 10)],
+      price_range: [parseInt(v("price_min"), 10), parseInt(v("price_max"), 10)],
+      max_mileage: parseInt(v("max_mileage"), 10),
+      variants: csvList(v("variants")),
+      title_filter: csvList(v("title_filter")),
+      vin_prefixes: csvList(v("vin_prefixes")).map(function (p) {
+        return p.toUpperCase();
+      }),
+      ebay_query: v("ebay_query"),
+      marketcheck_make: v("marketcheck_make"),
+      marketcheck_models: csvList(v("marketcheck_models")),
+      investment_verdict: v("investment_verdict"),
+      investment_class: v("investment_class") || "neutral",
+      investment_summary: v("investment_summary"),
+      investment_focus: v("investment_focus"),
+      investment_risk: v("investment_risk"),
+    };
+
+    if (model.year_range[0] >= model.year_range[1]) {
+      showModalStatus(backdrop, "warn", "Année min doit être < année max.");
+      return;
+    }
+    if (model.price_range[0] >= model.price_range[1]) {
+      showModalStatus(backdrop, "warn", "Prix min doit être < prix max.");
+      return;
+    }
+    if (!model.variants.length) {
+      showModalStatus(backdrop, "warn", "Renseigne au moins une version.");
+      return;
+    }
+
+    const submitBtn = backdrop.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = "⏳ Envoi…";
+    showModalStatus(backdrop, "running", "Création en cours…");
+
+    fetch(cfg.updateEndpoint.replace(/\/$/, "") + "/add-model", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(model),
+    })
+      .then(function (r) { return r.json().catch(function () { return {}; }); })
+      .then(function (d) {
+        if (d && d.ok) {
+          showModalStatus(backdrop, "ok",
+            "✓ Modèle ajouté. Le scrape s'exécute, les données arriveront " +
+            "dans 1-2 min. Tu peux fermer cette fenêtre.");
+          submitBtn.textContent = "✓ Ajouté";
+          // Recharge le catalog au prochain reload pour voir le nouveau modele.
+        } else {
+          const msg = (d && (d.error || d.message)) || "Échec";
+          const detail = d && d.details ? " (" + d.details.join("; ") + ")" : "";
+          showModalStatus(backdrop, "warn", "⚠ " + msg + detail);
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Ajouter et scraper";
+        }
+      })
+      .catch(function () {
+        showModalStatus(backdrop, "warn", "⚠ Échec réseau — réessaie.");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Ajouter et scraper";
+      });
+  }
+
+  function showModalStatus(backdrop, state, message) {
+    const el = backdrop.querySelector("#amm-status");
+    el.className = "modal-status " + state;
+    el.textContent = message;
+    el.hidden = false;
   }
 
   bootstrap();
