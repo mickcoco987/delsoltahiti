@@ -1,0 +1,34 @@
+{
+  "models": [
+    {
+      "slug": "audi-rs-6",
+      "brand": "Audi",
+      "name": "Rs 6",
+      "short_name": "Rs 6",
+      "year_range": [
+        1970,
+        2027
+      ],
+      "price_range": [
+        0,
+        9999999
+      ],
+      "max_mileage": 999999,
+      "variants": [
+        "Standard"
+      ],
+      "title_filter": [
+        "rs 6"
+      ],
+      "vin_prefixes": [],
+      "ebay_query": "Audi Rs 6",
+      "marketcheck_make": "Audi",
+      "marketcheck_models": [],
+      "investment_verdict": "",
+      "investment_class": "neutral",
+      "investment_summary": "",
+      "investment_focus": "",
+      "investment_risk": ""
+    }
+  ]
+}
