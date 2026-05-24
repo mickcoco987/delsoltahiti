@@ -17,8 +17,8 @@ window.COTE_CATALOG = {
         2016
       ],
       "has_data": true,
-      "count": 36,
-      "generated_at": "2026-05-24T01:27:07Z"
+      "count": 68,
+      "generated_at": "2026-05-24T02:02:21Z"
     },
     {
       "slug": "ferrari-f8",

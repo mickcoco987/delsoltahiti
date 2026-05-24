@@ -13,6 +13,8 @@
       color: #1A1A1A;
       background: #ddd;
       padding: 1rem;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
     .controls {
@@ -55,18 +57,18 @@
       margin-bottom: 0.8rem;
     }
 
-    /* Grille 2x3 (6 emplacements, 5 utilisés + 1 carte "VIRAL" en bonus) */
+    /* Grille 3x2 — 6 cartes sur 1 page A4 (5 cartes-lettres + 1 carte coffre) */
     .grille {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.6cm;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5cm;
     }
 
     .carte {
       aspect-ratio: 5 / 7;
       border: 3px solid #1A1A1A;
-      border-radius: 18px;
-      padding: 0.6cm;
+      border-radius: 16px;
+      padding: 0.4cm;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -74,42 +76,48 @@
       page-break-inside: avoid;
       position: relative;
       text-align: center;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
     .carte::before, .carte::after {
       content: '';
       position: absolute;
-      width: 14px; height: 14px;
+      width: 10px; height: 10px;
       border-radius: 50%;
       background: #1A1A1A;
       opacity: 0.12;
     }
-    .carte::before { top: 0.5cm; left: 0.5cm; }
-    .carte::after  { bottom: 0.5cm; right: 0.5cm; }
+    .carte::before { top: 0.3cm; left: 0.3cm; }
+    .carte::after  { bottom: 0.3cm; right: 0.3cm; }
 
     .carte .badge {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
+      font-size: 0.58rem;
+      letter-spacing: 0.06em;
       font-weight: 800;
       color: #fff;
-      padding: 0.25rem 0.7rem;
+      padding: 0.18rem 0.5rem;
       border-radius: 999px;
       text-transform: uppercase;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .carte .grande-lettre {
-      font-size: 8rem;
+      font-size: 5.5rem;
       font-weight: 900;
       line-height: 1;
-      margin: 0.4rem 0;
+      margin: 0.1rem 0;
     }
     .carte .num {
-      font-size: 0.78rem;
+      font-size: 0.65rem;
       color: #555;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       font-weight: 700;
     }
     .carte .energie {
-      font-size: 0.78rem;
+      font-size: 0.65rem;
       font-style: italic;
       color: #888;
     }
@@ -148,12 +156,12 @@
       border-style: dashed;
     }
     .carte.bonus .badge { background: #1A1A1A; color: #FFD700; }
-    .carte.bonus .grande-lettre { font-size: 2.4rem; letter-spacing: 0.35em; color: #1A1A1A; }
+    .carte.bonus .grande-lettre { font-size: 1.4rem; letter-spacing: 0.25em; color: #1A1A1A; }
     .carte.bonus .help {
-      font-size: 0.78rem;
+      font-size: 0.62rem;
       color: #1A1A1A;
       font-weight: 600;
-      padding: 0 0.3rem;
+      padding: 0 0.15rem;
       line-height: 1.3;
     }
 

@@ -6,7 +6,13 @@
   <style>
     @page { size: A4 portrait; margin: 1.5cm; }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
 
     body {
       font-family: -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -111,18 +117,25 @@
       width: 100%;
       border-collapse: collapse;
       margin: 1rem 0;
+      table-layout: fixed;
     }
     th, td {
       padding: 0.55rem;
       border: 1px solid #ddd;
       text-align: left;
       vertical-align: top;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     th {
       background: linear-gradient(135deg, #DD2A7B, #8134AF);
       color: #fff;
       font-weight: 800;
     }
+    /* Colonnes pour la table du déroulé : Temps | Étape | Action */
+    table tr > *:nth-child(1) { width: 13%; }
+    table tr > *:nth-child(2) { width: 22%; }
+    table tr > *:nth-child(3) { width: 65%; }
 
     .checklist li {
       list-style: none;
@@ -150,12 +163,28 @@
       letter-spacing: 0.04em;
     }
 
-    .section { page-break-inside: avoid; }
+    .section { page-break-inside: auto; }
     .saut-page { page-break-before: always; }
 
     @media print {
       .controls { display: none; }
-      body { background: white; padding: 0; }
+      body {
+        background: white;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        font-size: 10.5pt;
+      }
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.2rem; page-break-after: avoid; }
+      h3 { font-size: 1rem; page-break-after: avoid; }
+      /* On garde les blocs colorés ensemble, mais on laisse les longues
+         sections couper entre paragraphes */
+      .encart, .attention, .solution { page-break-inside: avoid; }
+      tr { page-break-inside: avoid; }
+      table { page-break-inside: auto; }
+      ul, ol { page-break-inside: auto; }
+      img, table { max-width: 100%; }
     }
   </style>
 </head>
@@ -174,7 +203,7 @@
   <div class="section">
     <h2>1. Le concept en 30 secondes</h2>
 
-    <p>Le compte de <strong>@LunaStar</strong>, une star imaginaire de TikTok, a été piraté
+    <p>Le compte de <strong>@Man@@kiStar</strong>, une star imaginaire de TikTok, a été piraté
     en pleine nuit. Pour récupérer son mot de passe et débloquer son compte, les enfants
     doivent résoudre <strong>5 énigmes</strong> inspirées des réseaux sociaux.</p>
 
@@ -239,7 +268,7 @@
       <tr>
         <td>0-5 min</td>
         <td>Briefing théâtral</td>
-        <td>Raconte avec mystère : <em>« Il est 2h47 du matin. Une notification réveille votre téléphone. @LunaStar, la plus grande star de TikTok, a été <strong>piratée</strong>... »</em> Lance le défi : retrouver le mot de passe en 5 énigmes.</td>
+        <td>Raconte avec mystère : <em>« Il est 2h47 du matin. Une notification réveille votre téléphone. @Man@@kiStar, la plus grande star de TikTok, a été <strong>piratée</strong>... »</em> Lance le défi : retrouver le mot de passe en 5 énigmes.</td>
       </tr>
 
       <tr>
@@ -251,7 +280,7 @@
       <tr>
         <td>15-25 min</td>
         <td>Énigme 2 — Message emoji</td>
-        <td>Pose la <strong>fiche 2</strong>. Ils décodent « 🎬+🎵+🦠+🌍 » en ignorant les leurres (🍕, 💤) et trouvent <strong>VIRAL</strong>. Carte-lettre <strong>I</strong>.</td>
+        <td>Pose la <strong>fiche 2</strong>. Ils décodent « 📸+⏰+💨 » en ignorant les leurres (🍕, 💤) et trouvent <strong>STORY</strong>. Carte-lettre <strong>I</strong>.</td>
       </tr>
 
       <tr>
@@ -309,12 +338,13 @@
 
     <div class="solution">
       <h3>👻 Énigme 2 — Le Message en Emojis <span class="badge-pin">Lettre I</span></h3>
-      <p>Équation : 🎬 + 🎵 + 🦠 + 🌍 = ?</p>
-      <p>Légende utile : 🎬 = vidéo · 🎵 = musique · 🦠 = se propage comme un microbe · 🌍 = partout dans le monde<br>
+      <p>Équation : 📸 + ⏰ + 💨 = ?</p>
+      <p>Légende utile : 📸 = photo · ⏰ = 24 heures · 💨 = qui s'envole / disparaît<br>
       Leurres (à ignorer) : 🍕 et 💤.</p>
-      <p>Une vidéo musicale qui se propage partout dans le monde comme un microbe...
-      c'est exactement le mot <strong>VIRAL</strong>.</p>
-      <p style="font-size:0.92rem;font-style:italic;">Indice oral si blocage : « comme une maladie qui se répand ».</p>
+      <p>Une photo qui ne reste visible que 24 heures avant de s'envoler...
+      c'est le format <strong>STORY</strong> (5 lettres, mot anglais qui veut dire « histoire »).</p>
+      <p style="font-size:0.92rem;font-style:italic;">Indice oral si blocage : « ça commence par S, et ça veut dire histoire en anglais ».
+      <strong>Important :</strong> ce mot n'est PAS le mot magique final (VIRAL) — c'est juste le mot caché qui rapporte la lettre I.</p>
     </div>
 
     <div class="solution">
@@ -359,8 +389,9 @@
       <h3>🔓 Final — Le coffre <span class="badge-pin">Mot VIRAL</span></h3>
       <p>Les 5 cartes-lettres assemblées dans le bon ordre forment :
       <strong style="font-size:1.3rem;letter-spacing:0.3rem;">V I R A L</strong></p>
-      <p>Astuce mémo : c'est exactement le mot caché de l'énigme 2 ! Si les enfants bloquent,
-      rappelle-leur cette énigme.</p>
+      <p>Astuce : si les enfants bloquent, rappelle-leur que VIRAL est un adjectif
+      anglais qui décrit ce qui se propage très vite — comme une vidéo vue par
+      des millions de personnes.</p>
     </div>
   </div>
 
@@ -370,7 +401,7 @@
 
     <ul>
       <li>🎭 <strong>Joue le jeu.</strong> Plus tu mets de mystère (voix grave, regards inquiets vers la fenêtre), plus les enfants accrochent.</li>
-      <li>📱 <strong>Mise en scène :</strong> commence par lire à voix haute une fausse notification depuis ton téléphone (« BREAKING : @LunaStar piratée ! »).</li>
+      <li>📱 <strong>Mise en scène :</strong> commence par lire à voix haute une fausse notification depuis ton téléphone (« BREAKING : @Man@@kiStar piratée ! »).</li>
       <li>🎵 <strong>Musique d'ambiance :</strong> une playlist pop / TikTok hits en fond.</li>
       <li>⏰ <strong>Rythme :</strong> si une énigme prend plus de 10 min, donne un indice gratuit plutôt que la solution complète.</li>
       <li>👥 <strong>Plusieurs équipes :</strong> donne à chaque équipe son propre jeu de fiches et de cartes-lettres. La première qui forme VIRAL gagne.</li>
@@ -382,7 +413,7 @@
 
     <ul>
       <li><strong>Trop facile / fini trop vite ?</strong> Cache les cartes-lettres dans la maison après chaque énigme : ils doivent les trouver avant de passer à la suivante. Tu peux aussi imposer un temps limite (timer visible).</li>
-      <li><strong>Trop difficile ?</strong> Les énigmes les plus accessibles sont la <strong>2</strong> (mot caché — révèle juste que 🦠 = « comme un virus ») et le début de la <strong>1</strong> (Snapchat, TikTok). Les plus dures pour les jeunes : <strong>3</strong> (anagramme avec leurres — indique alors que Z et X sont les leurres) et <strong>4</strong> (profil — indique alors « cherche Bitmoji et streak »).</li>
+      <li><strong>Trop difficile ?</strong> Les énigmes les plus accessibles sont la <strong>2</strong> (mot caché — souffle juste « ça veut dire histoire en anglais ») et le début de la <strong>1</strong> (Snapchat, TikTok). Les plus dures pour les jeunes : <strong>3</strong> (anagramme avec leurres — indique alors que Z et X sont les leurres) et <strong>4</strong> (profil — indique alors « cherche Bitmoji et streak »).</li>
       <li><strong>Quiz trop dur ?</strong> Autorise <strong>1 seule erreur</strong> au lieu de zéro, ou donne gratuitement la première option de chaque question comme indice.</li>
       <li><strong>Un enfant timide ou plus jeune ?</strong> Donne-lui le rôle de <strong>« gardien des cartes-lettres »</strong> : c'est lui qui annonce et présente chaque nouvelle lettre gagnée.</li>
       <li><strong>Sans imprimante ?</strong> Tu peux jouer directement avec la version numérique sur tablette (<code>enigmes-reseaux-sociaux.html</code>). Garde juste les cartes-lettres et le coffre pour le côté physique.</li>

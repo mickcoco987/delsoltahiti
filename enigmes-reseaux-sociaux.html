@@ -593,7 +593,7 @@
 
       <div class="card">
         <p><strong>02h47 du matin.</strong> Une notification réveille ton téléphone.</p>
-        <p>« 🚨 <strong>@LunaStar</strong>, la plus grande star de TikTok, vient de poster
+        <p>« 🚨 <strong>@Man@@kiStar</strong>, la plus grande star de TikTok, vient de poster
         une story très étrange — puis son compte a été <em>bloqué</em>. »</p>
         <p>Des rumeurs circulent : son compte aurait été <strong>piraté</strong>.
         Pour le récupérer, il faut trouver le <strong>mot de passe secret</strong>,
@@ -690,32 +690,32 @@
       <h1>Décode le Snap secret</h1>
 
       <div class="card">
-        <p>Un dernier Snap de <strong>@LunaStar</strong> contient un indice — mais le pirate
+        <p>Un dernier Snap de <strong>@Man@@kiStar</strong> contient un indice — mais le pirate
         l'a écrit uniquement en emojis. Décode l'équation pour trouver
         <strong>le mot caché</strong>.</p>
 
-        <div class="emoji-line">🎬 + 🎵 + 🦠 + 🌍 = ❓</div>
+        <div class="emoji-line">📸 + ⏰ + 💨 = ❓</div>
 
         <p>Voici la légende — attention, <strong>deux emojis sont des leurres</strong> :</p>
         <div class="legend">
-          <div>🎬 = vidéo</div>
-          <div>🎵 = musique</div>
-          <div>🦠 = se propage<br>comme un microbe</div>
-          <div>🌍 = partout dans<br>le monde</div>
+          <div>📸 = photo /<br>instantané</div>
+          <div>⏰ = 24 heures<br>chrono</div>
+          <div>💨 = qui s'envole /<br>disparaît</div>
           <div style="opacity:0.5;">🍕 = pizza <em>(leurre)</em></div>
           <div style="opacity:0.5;">💤 = sommeil <em>(leurre)</em></div>
         </div>
 
-        <p>Une vidéo musicale qui <strong>se propage partout dans le monde</strong>
-        comme un microbe... c'est exactement le mot qu'on cherche.</p>
+        <p>Une <strong>photo</strong> qui ne reste visible que <strong>24 heures</strong>
+        avant de <strong>s'envoler</strong>... c'est le format star de Snap et d'Insta
+        (et aussi de Facebook, WhatsApp, YouTube...).</p>
 
         <div class="row" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.8rem;">
-          <input class="text-input" type="text" id="input-2" placeholder="Un seul mot — 5 lettres" maxlength="20">
+          <input class="text-input" type="text" id="input-2" placeholder="Un mot anglais — 5 lettres" maxlength="20">
           <button class="btn" onclick="verifEnigme2()">📤 Envoyer</button>
         </div>
 
-        <div class="hint">💡 Indice : le 🦠 est la grosse piste — pense à comment on
-        décrit ce qui se propage <em>comme une maladie</em> sur les réseaux.</div>
+        <div class="hint">💡 Indice : c'est un mot anglais qui veut dire « <em>histoire</em> ».
+        Il commence par <strong>S</strong>.</div>
       </div>
 
       <div class="message" id="msg-2"></div>
@@ -731,7 +731,7 @@
 
       <div class="card">
         <p>Le pirate a mélangé les lettres du <strong>hashtag-signature</strong>
-        de @LunaStar — et il a glissé <strong>2 lettres-leurres</strong> dans le tas
+        de @Man@@kiStar — et il a glissé <strong>2 lettres-leurres</strong> dans le tas
         pour t'embrouiller. Trouve le mot caché.</p>
 
         <div class="scramble">
@@ -847,7 +847,7 @@
         <div class="vault-big" id="vault-big"></div>
 
         <p>Mais elles sont dans le désordre ! Réorganise-les pour former
-        le <strong>mot magique</strong> qui débloque le compte de @LunaStar.</p>
+        le <strong>mot magique</strong> qui débloque le compte de @Man@@kiStar.</p>
 
         <div class="hint">💡 Un mot qui décrit une vidéo vue par des millions
         de personnes en quelques heures.</div>
@@ -867,12 +867,12 @@
     <section class="screen" id="screen-win">
       <div class="victory">
         <h1>🎉 Compte débloqué !</h1>
-        <p>Le mot magique de @LunaStar était :</p>
+        <p>Le mot magique de @Man@@kiStar était :</p>
         <div class="password">V I R A L</div>
 
         <div class="reveal">
           <p><strong>🕵️ Révélation :</strong> Le « pirate » n'était autre que...
-          <strong>@LunaStar elle-même</strong> ! 😮</p>
+          <strong>@Man@@kiStar elle-même</strong> ! 😮</p>
           <p>Elle avait organisé toute cette mise en scène pour lancer
           son nouveau challenge <strong>#TrendingViral</strong>. Sa story mystérieuse
           a explosé en quelques heures — elle est devenue, justement,
@@ -1067,13 +1067,13 @@
     function verifEnigme2() {
       const v = document.getElementById('input-2').value;
       const msg = document.getElementById('msg-2');
-      if (matchAny(v, 'viral|virale')) {
+      if (matchAny(v, 'story|stories|storys')) {
         msg.className = 'message ok';
-        msg.textContent = '✓ Exact ! Le mot caché est VIRAL. Tu gagnes la lettre I.';
+        msg.textContent = '✓ Exact ! Le mot caché est STORY. Tu gagnes la lettre I.';
         finishEnigme(2, 'I');
       } else {
         msg.className = 'message ko';
-        msg.textContent = '❌ Pas ce mot-là. Indice : pense aux vidéos que tout le monde partage...';
+        msg.textContent = '❌ Pas ce mot-là. Indice : un mot anglais qui veut dire « histoire »...';
         if (navigator.vibrate) navigator.vibrate(120);
       }
     }
@@ -1152,10 +1152,10 @@
       {
         q: 'Parmi ces réseaux, lequel a été créé en PREMIER ?',
         choix: [
-          { t: 'Facebook (2004)', ok: false },
-          { t: 'MySpace (2003)',  ok: false },
-          { t: 'LinkedIn (2002)', ok: true  },
-          { t: 'Twitter (2006)',  ok: false }
+          { t: 'Facebook', ok: false },
+          { t: 'MySpace',  ok: false },
+          { t: 'LinkedIn', ok: true  },
+          { t: 'Twitter',  ok: false }
         ]
       },
       {
