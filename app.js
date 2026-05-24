@@ -563,6 +563,18 @@
     ];
 
     list.sort((a, b) => {
+      // Tri sur "variant" : on suit l'ordre du catalogue (base -> top de gamme)
+      // plutot que l'alphabetique, sinon "Spider" arrive apres "Speciale A"
+      // et "GT3 RS" avant "GT3 Touring" — pas l'ordre naturel.
+      if (sortKey === "variant") {
+        const ia = VARIANTS.indexOf(a.variant);
+        const ib = VARIANTS.indexOf(b.variant);
+        const ra = ia < 0 ? VARIANTS.length : ia;
+        const rb = ib < 0 ? VARIANTS.length : ib;
+        if (ra !== rb) return sortDir * (ra - rb);
+        // Departage au sein d'une meme version : meilleure affaire d'abord.
+        return (b.deal_pct || -Infinity) - (a.deal_pct || -Infinity);
+      }
       const va = a[sortKey], vb = b[sortKey];
       if (va == null) return 1;
       if (vb == null) return -1;
