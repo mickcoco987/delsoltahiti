@@ -4,14 +4,14 @@
     {
       "date": "2026-05-24",
       "overall": {
-        "avg_price": 210752,
+        "avg_price": 212099,
         "median_price": 199000,
-        "count": 172
+        "count": 173
       },
       "by_variant": {
         "GT3": 191776,
         "GT3 Touring": 306737,
-        "GT3 RS": 316726
+        "GT3 RS": 324207
       }
     }
   ]
