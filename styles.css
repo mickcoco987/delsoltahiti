@@ -720,6 +720,14 @@ thead th.nosort { cursor: default; }
   font-weight: 700;
 }
 
+.modal-body legend .legend-opt {
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+  color: var(--text-dim);
+  margin-left: 4px;
+}
+
 .modal-body label {
   display: flex;
   flex-direction: column;
