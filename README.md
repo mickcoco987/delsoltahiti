@@ -1,27 +1,39 @@
-# Cote Ferrari 458 Italia — marché US
+# Cote supercars — marché US
 
-Suivi de la **cote des Ferrari 458** (Italia, Spider, Speciale, Speciale A) sur
-le marché des États-Unis : un scraper automatisé collecte les annonces et un
-tableau de bord web affiche l'évolution de la valeur.
+Suivi de la **cote de plusieurs supercars** sur le marché des États-Unis :
+un scraper automatisé collecte les annonces et un tableau de bord web affiche
+l'évolution de la valeur. Au démarrage, l'utilisateur choisit la voiture à
+suivre dans un sélecteur **marque → modèle**.
+
+**Modèles suivis** : Ferrari 458, Ferrari F8, Lamborghini Huracán, Porsche 911
+GT3. (Ajouter un modèle = ajouter une entrée dans `scraper/catalog.py`.)
 
 ## Aperçu
 
-- **Tableau de bord** (`index.html`) : section **bonnes affaires**, indicateurs
+- **Sélecteur** (`index.html` + `app.js`) : écran d'accueil avec liste des
+  marques et modèles disponibles. La sélection est persistée dans
+  `localStorage`. Bouton **« ← Changer de voiture »** dans l'en-tête pour
+  revenir au sélecteur.
+- **Tableau de bord** (par modèle) : section **bonnes affaires**, indicateurs
   de cote, évolution dans le temps, prix par millésime, prix vs kilométrage et
   liste des annonces. 100 % HTML/CSS/JS, graphiques en SVG, sans dépendance.
+- **Catalogue** (`scraper/catalog.py`) : source de vérité — chaque modèle y
+  déclare ses bornes (millésimes, prix, kilométrage), ses versions, la règle
+  de classification et les requêtes à passer à chaque source.
 - **Scraper** (`scraper/`) : outil Python (bibliothèque standard uniquement,
   aucune installation requise) qui agrège les annonces de plusieurs sources
-  (classic.com, Bring a Trailer, API Marketcheck) et tient à jour un historique
-  de cote.
-- **Moteur de valeur** (`scraper/valuation.py`) : estime la valeur de marché de
-  chaque annonce et repère celles **sous la cote** (outil de sourcing).
-- **Données** (`data/`) : `listings.json`, `history.json` et `dashboard.js`
-  (le bundle lu par le tableau de bord), régénérés par le scraper.
+  (classic.com, API Marketcheck, eBay Motors) et tient à jour un historique
+  de cote, par modèle.
+- **Moteur de valeur** (`scraper/valuation.py`) : régression log-linéaire
+  robuste, ajustée séparément pour chaque modèle.
+- **Données** (`data/`) : un fichier `catalog.js` à la racine + un dossier
+  par modèle (`data/<slug>/{listings,history,dashboard}.json|.js`), tous
+  régénérés par le scraper.
 
 ## Démarrage rapide
 
 ```sh
-# 1. Amorcer les données (échantillon de marché curé)
+# 1. Amorcer les données Ferrari 458 (échantillon de marché curé)
 python3 -m scraper --seed
 
 # 2. Servir le tableau de bord
@@ -29,23 +41,28 @@ python3 -m http.server 8000
 # puis ouvrir http://localhost:8000
 ```
 
-> Le tableau de bord lit `data/dashboard.js` via une balise `<script>`, il
-> fonctionne donc aussi en ouvrant `index.html` directement (sans serveur).
-
 ## Le scraper
 
 ```sh
-python3 -m scraper --source all          # toutes les sources live (défaut)
-python3 -m scraper --source marketcheck  # source API seule (clé requise)
-python3 -m scraper --source sample       # données d'échantillon curées
-python3 -m scraper --seed                # réinitialise depuis l'échantillon
-python3 -m scraper --source all --replace -v
+# Un modèle, toutes les sources (par défaut --model ferrari-458)
+python3 -m scraper --model ferrari-458 --source all
+
+# Tous les modèles du catalogue, en une commande
+python3 -m scraper --model all --source all --replace
+
+# Une seule source (clé requise pour les APIs)
+python3 -m scraper --model lamborghini-huracan --source marketcheck
+
+# Réinitialise Ferrari 458 depuis l'échantillon curé
+python3 -m scraper --seed
 ```
 
-À chaque exécution, le scraper agrège les annonces, **estime la valeur de
-marché de chacune** et détecte les bonnes affaires, recalcule les statistiques
-(moyenne, médiane, fourchette, par version, par millésime) et ajoute un point
-daté à l'historique de cote.
+À chaque exécution, le scraper agrège les annonces du modèle ciblé, **estime
+la valeur de marché de chacune** et détecte les bonnes affaires, recalcule
+les statistiques (moyenne, médiane, fourchette, par version, par millésime)
+et ajoute un point daté à l'historique de cote du modèle. Le bundle
+`data/<slug>/dashboard.js` et le catalogue `data/catalog.js` (état de tous
+les modèles) sont régénérés à chaque run.
 
 ### Sources de données
 
@@ -55,8 +72,6 @@ daté à l'historique de cote.
 | `marketcheck` | **API** | dealer | Marketcheck — inventaire US (clé requise).         |
 | `ebay`        | **API** | auction | eBay Motors Browse API — enchères + Buy-It-Now.   |
 | `dupont`      | scrape  | auction | DuPont Registry Live — enchères live US (best-effort). |
-| `dupont-autos`| scrape  | dealer | DuPont Registry (site principal) — classifieds exotiques (best-effort). |
-| `hemmings`    | scrape  | dealer | Hemmings — classifieds collection/exotiques US (best-effort). |
 | `sothebys`    | scrape  | auction | RM Sotheby's — résultats d'enchères collectionneurs (best-effort). |
 | `all`         | —       | —     | Enchaîne toutes les sources live ci-dessus (défaut). |
 | `sample`      | local   | dealer | Relevés de marché curés (échantillon de démarrage). |
@@ -153,9 +168,15 @@ serveur refuse une relance si un run est déjà en cours ou date de moins de
 ## Structure
 
 ```
-index.html, styles.css, app.js · config.js   Tableau de bord web
-data/                            listings.json · history.json · dashboard.js
+index.html, styles.css, app.js · config.js   Tableau de bord web + sélecteur
+data/
+  catalog.js                      Métadata multi-modèles pour le sélecteur
+  <slug>/
+    listings.json                 Annonces brutes du modèle
+    history.json                  Points datés de la cote
+    dashboard.js                  Bundle lu par le tableau de bord
 scraper/
+  catalog.py       Catalogue des modèles suivis (source de vérité)
   models.py        Modèle Listing + utilitaires
   aggregate.py     Calcul des statistiques de cote
   valuation.py     Estimation de valeur + détection des bonnes affaires
@@ -167,12 +188,20 @@ scraper/
     classic_com.py   Source scrapée (dealer)
     dupont_registry.py · rm_sothebys.py   Sources scrapées enchères (best-effort)
     marketcheck.py · ebay.py   Sources API (clés requises)
-    sample.py        Échantillon de marché curé
+    sample.py        Échantillon de marché curé (Ferrari 458)
 worker/
   update-cote-worker.js   Cloudflare Worker : déclenche le workflow en un clic
   wrangler.toml           Config minimale pour `wrangler deploy`
-.github/workflows/update-cote.yml  Mise à jour quotidienne automatique
+.github/workflows/update-cote.yml  Mise à jour quotidienne automatique (tous modèles)
 ```
+
+### Ajouter un modèle
+
+Ajouter une entrée dans `_CATALOG` du fichier `scraper/catalog.py` :
+slug, marque, nom, plage de millésimes/prix/km, versions et règles de
+classification, requêtes pour chaque source supportée. Aucune autre
+modification n'est nécessaire — le sélecteur du tableau de bord et le workflow
+CI prendront automatiquement le nouveau modèle en compte au prochain run.
 
 ## Repères de cote (marché US, printemps 2026)
 

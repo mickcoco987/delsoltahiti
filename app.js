@@ -1,45 +1,55 @@
-/* Tableau de bord de la cote Ferrari 458 Italia (marche US).
-   Lit les donnees produites par le scraper dans window.COTE (data/dashboard.js).
-   Graphiques en SVG, sans dependance externe. */
+/* Tableau de bord multi-modeles (cote supercars - marche US).
+   Lit le catalogue (data/catalog.js -> window.COTE_CATALOG) pour proposer un
+   selecteur marque/modele. Une fois un modele choisi, le bundle dedie
+   (data/<slug>/dashboard.js -> window.COTE) est charge a la demande. */
 "use strict";
 
 (function () {
-  const data = window.COTE;
-  const main = document.querySelector("main");
+  /* ---------- constantes ---------- */
 
-  if (!data || !Array.isArray(data.listings)) {
-    main.innerHTML =
-      '<div class="banner">Donnees indisponibles. Lancez le scraper pour ' +
-      "les generer&nbsp;: <code>python -m scraper --seed</code>, puis " +
-      "servez le dossier&nbsp;: <code>python -m http.server</code>.</div>";
-    return;
-  }
-
-  const VARIANTS = ["Italia", "Spider", "Speciale", "Speciale A"];
-  const VARIANT_COLORS = {
-    Italia: "var(--c-italia)",
-    Spider: "var(--c-spider)",
-    Speciale: "var(--c-speciale)",
-    "Speciale A": "var(--c-speciale-a)",
-  };
+  const STORAGE_KEY = "cote.model.slug";
   const MONTHS_FR = ["janv.", "fevr.", "mars", "avr.", "mai", "juin",
     "juil.", "aout", "sept.", "oct.", "nov.", "dec."];
+  const PALETTE = ["#e63329", "#f0a202", "#3a9bdc", "#34c759",
+    "#a280ff", "#ff8857", "#ec4899", "#10b981"];
+  const KNOWN_VARIANT_COLORS = {
+    "Italia": "#e63329", "Spider": "#f0a202",
+    "Speciale": "#3a9bdc", "Speciale A": "#34c759",
+    "Tributo": "#e63329",
+    "LP610-4": "#f0a202", "Spyder": "#f0a202",
+    "Performante": "#3a9bdc", "EVO": "#a280ff",
+    "STO": "#e63329", "Tecnica": "#34c759",
+    "GT3": "#e63329", "GT3 Touring": "#34c759", "GT3 RS": "#a280ff",
+  };
+  const BRAND_ACCENTS = {
+    "Ferrari": { accent: "#ff2800", soft: "#ff5a3c" },
+    "Lamborghini": { accent: "#f47b00", soft: "#ffa64d" },
+    "Porsche": { accent: "#d5001c", soft: "#ff5a3c" },
+    "default": { accent: "#ff2800", soft: "#ff5a3c" },
+  };
+  const NEW_THRESHOLD_DAYS = 7;
+  const KINDS = [
+    { kind: "dealer", label: "Annonces concessionnaires" },
+    { kind: "auction", label: "Ventes aux enchères" },
+  ];
 
-  const fmtUSD = new Intl.NumberFormat("fr-FR",
-    { style: "currency", currency: "USD", maximumFractionDigits: 0 });
-  const fmtInt = new Intl.NumberFormat("fr-FR");
+  /* ---------- etat global du dashboard (rempli apres chargement) ---------- */
 
-  // Imprecision du modele de valeur (en %). Les seuils de bonne affaire en
-  // sont des multiples : on ne signale que les ecarts sortant du bruit.
-  const RESIDUAL = (data.valuation && data.valuation.residual_pct > 0)
-    ? data.valuation.residual_pct : 20;
-  const DEAL_STRONG = 1.3 * RESIDUAL;   // "bonne affaire"
-  const DEAL_MILD = 0.6 * RESIDUAL;     // "sous la cote"
-
+  let data = null;          // window.COTE pour le modele charge
+  let activeModelSlug = null;
   let activeKind = "dealer";
   let activeVariant = "Toutes";
   let sortKey = "deal_pct";
   let sortDir = -1;
+  let VARIANTS = [];
+  let VARIANT_COLORS = {};
+  let RESIDUAL = 20;
+  let DEAL_STRONG = 26;
+  let DEAL_MILD = 12;
+
+  const fmtUSD = new Intl.NumberFormat("fr-FR",
+    { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+  const fmtInt = new Intl.NumberFormat("fr-FR");
 
   /* ---------- utilitaires ---------- */
 
@@ -61,7 +71,6 @@
     return (v >= 0 ? "+" : "") + v.toFixed(1).replace(".", ",") + " %";
   }
 
-  // "il y a 12 j" / "hier" / "aujourd'hui", a partir d'une date ISO.
   function relativeDays(iso) {
     if (!iso) return "";
     const d = new Date(iso);
@@ -73,8 +82,6 @@
     return "il y a " + days + " j";
   }
 
-  // Une annonce est consideree "nouvelle" si elle date de 7 jours ou moins.
-  const NEW_THRESHOLD_DAYS = 7;
   function isNew(iso) {
     if (!iso) return false;
     const d = new Date(iso);
@@ -98,7 +105,6 @@
       " " + d.getFullYear();
   }
 
-  // Date + heure (HH:MM) en fuseau local.
   function dateTimeLabel(iso) {
     const d = new Date(iso);
     if (isNaN(d)) return iso;
@@ -107,7 +113,6 @@
     return dateLabel(iso) + " à " + h + ":" + m;
   }
 
-  // "il y a X min/h/j" / "a l'instant".
   function relativeShort(iso) {
     if (!iso) return "";
     const d = new Date(iso);
@@ -126,7 +131,6 @@
     return /^https?:\/\//i.test(String(u || ""));
   }
 
-  // Cellule millesime cliquable vers l'annonce d'origine si l'URL est valide.
   function linkedYear(l) {
     if (isHttpUrl(l.url)) {
       return '<a href="' + esc(l.url) + '" target="_blank" ' +
@@ -199,8 +203,6 @@
     return (db[0] - da[0]) * 12 + (db[1] - da[1]);
   }
 
-  /* ---------- score de bonne affaire (calibre sur le bruit du modele) ------ */
-
   function dealClass(pct) {
     if (pct == null) return "neutral";
     if (pct >= DEAL_STRONG) return "good";
@@ -208,7 +210,6 @@
     if (pct > -DEAL_MILD) return "neutral";
     return "over";
   }
-
   function dealLabel(pct) {
     if (pct == null) return "—";
     if (pct >= DEAL_STRONG) return "Bonne affaire";
@@ -216,41 +217,30 @@
     if (pct > -DEAL_MILD) return "Dans le marché";
     return "Au-dessus";
   }
-
   function dealBadge(pct) {
     if (pct == null) return '<span class="deal neutral">—</span>';
     return '<span class="deal ' + dealClass(pct) + '" title="' +
       dealLabel(pct) + '">' + pctText(pct) + "</span>";
   }
 
-  /* ---------- vignette photo ---------- */
-
-  // Vignette de taille strictement uniforme (fond gris quand pas d'image),
-  // cliquable vers l'annonce d'origine si l'URL est http(s).
   function thumbCell(l) {
     const bg = l.image_url
       ? 'background-image:url(\'' + esc(l.image_url) + '\')'
       : "";
     const box = '<div class="thumb-img" style="' + bg + '"></div>';
-    const inner = (l.url && /^https?:\/\//i.test(l.url))
+    const inner = isHttpUrl(l.url)
       ? '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">'
         + box + "</a>"
       : box;
     return '<td class="thumb">' + inner + "</td>";
   }
 
-  /* ---------- VIN et avis ---------- */
-
-  const VIN_RE = /ZFF[0-9A-HJ-NPR-Z]{14}/i;
-
-  // VIN fourni par la source, sinon extrait de l'URL de l'annonce.
+  const VIN_RE = /[A-HJ-NPR-Z0-9]{17}/i;
   function vinOf(l) {
     if (l.vin) return String(l.vin).toUpperCase();
     const m = VIN_RE.exec(l.url || "");
     return m ? m[0].toUpperCase() : "";
   }
-
-  // VIN cliquable vers epicvin : rapport d'historique du vehicule par VIN.
   function vinLink(vin) {
     if (!vin) return "—";
     return '<a href="https://epicvin.com/fr/' +
@@ -260,15 +250,11 @@
       'title="Rapport d\'historique du véhicule par VIN (epicvin)">' +
       esc(vin) + "</a>";
   }
-
-  // Cellule "Titre" : statut de titre propre fourni par la source.
   function titleCell(l) {
     if (l.clean_title === true) return '<span class="avis good">Propre</span>';
     if (l.clean_title === false) return '<span class="avis over">⚠ Non propre</span>';
     return "—";
   }
-
-  // Avis automatique : drapeaux modification/titre puis position vs cote.
   function avisFor(l) {
     const text = ((l.url || "") + " " + (l.title || "")).toLowerCase();
     if (l.clean_title === false || /\b(salvage|rebuilt|flood)\b/.test(text)) {
@@ -334,7 +320,7 @@
       "</div>";
   }
 
-  /* ---------- section bonnes affaires ---------- */
+  /* ---------- bonnes affaires ---------- */
 
   function renderDeals() {
     const deals = filteredListings()
@@ -387,7 +373,7 @@
       "<th>Localisation</th></tr></thead><tbody>" + rows + "</tbody></table>";
   }
 
-  /* ---------- graphique : evolution de la cote ---------- */
+  /* ---------- evolution de la cote ---------- */
 
   function renderHistory() {
     const series = (data.history || [])
@@ -452,7 +438,7 @@
       dots + yLabels + xLabels + "</svg>";
   }
 
-  /* ---------- graphique : prix moyen par millesime ---------- */
+  /* ---------- prix moyen par millesime ---------- */
 
   function renderYearChart() {
     const list = filteredListings();
@@ -509,7 +495,7 @@
       grid + bars + yLabels + "</svg>";
   }
 
-  /* ---------- graphique : prix vs kilometrage ---------- */
+  /* ---------- scatter prix vs km ---------- */
 
   function renderScatter() {
     const list = filteredListings().filter((l) => l.price > 0 && l.mileage > 0);
@@ -517,7 +503,7 @@
     document.getElementById("scatter-legend").innerHTML = variants
       .filter((v) => list.some((l) => l.variant === v))
       .map((v) => '<span><i style="background:' + VARIANT_COLORS[v] +
-        '"></i>' + v + "</span>").join("");
+        '"></i>' + esc(v) + "</span>").join("");
     document.getElementById("chart-scatter").innerHTML = scatterChart(list);
   }
 
@@ -546,7 +532,8 @@
     list.forEach((l) => {
       dots += '<circle class="point" r="5" cx="' + X(l.mileage).toFixed(1) +
         '" cy="' + Y(l.price).toFixed(1) + '" fill="' +
-        VARIANT_COLORS[l.variant] + '" fill-opacity="0.85"><title>' +
+        (VARIANT_COLORS[l.variant] || PALETTE[0]) +
+        '" fill-opacity="0.85"><title>' +
         esc(l.title) + "\n" + fmtUSD.format(l.price) + " — " +
         fmtInt.format(l.mileage) + " mi</title></circle>";
     });
@@ -645,16 +632,11 @@
   }
 
   function variantTag(v) {
-    return '<span class="tag" style="background:' + VARIANT_COLORS[v] +
-      '">' + esc(v) + "</span>";
+    return '<span class="tag" style="background:' +
+      (VARIANT_COLORS[v] || PALETTE[0]) + '">' + esc(v) + "</span>";
   }
 
-  /* ---------- onglets (kind) et filtre par version ---------- */
-
-  const KINDS = [
-    { kind: "dealer", label: "Annonces concessionnaires" },
-    { kind: "auction", label: "Ventes aux enchères" },
-  ];
+  /* ---------- onglets et filtre par version ---------- */
 
   function renderTabs() {
     const container = document.getElementById("kind-tabs");
@@ -670,7 +652,7 @@
     container.querySelectorAll(".kind-tab").forEach(function (btn) {
       btn.addEventListener("click", function () {
         activeKind = btn.getAttribute("data-kind");
-        activeVariant = "Toutes";  // reset du filtre version au changement d'onglet
+        activeVariant = "Toutes";
         renderTabs();
         renderPills();
         renderAll();
@@ -688,8 +670,8 @@
         ? inKind.length
         : inKind.filter((l) => l.variant === v).length;
       return '<button class="pill' + (v === activeVariant ? " active" : "") +
-        '" data-variant="' + v + '"' + (count ? "" : " disabled") + ">" +
-        v + " (" + count + ")</button>";
+        '" data-variant="' + esc(v) + '"' + (count ? "" : " disabled") + ">" +
+        esc(v) + " (" + count + ")</button>";
     }).join("");
 
     document.querySelectorAll(".pill").forEach((btn) => {
@@ -718,7 +700,6 @@
         "<br>" + data.listings.length + " annonces suivies";
     }
     paint();
-    // Rafraichit le "il y a X min" toutes les 60 secondes.
     setInterval(paint, 60 * 1000);
 
     document.getElementById("footer-meta").textContent =
@@ -735,8 +716,6 @@
     return pad2(d.getHours()) + ":" + pad2(d.getMinutes());
   }
 
-  // Banniere de retour visible au-dessus du tableau, mise a jour selon l'etat
-  // (lancement / succes / rafraichies / erreur). Reutilisable et fermable.
   function showUpdateBanner(state, message, actionsHref) {
     let banner = document.getElementById("update-banner");
     if (!banner) {
@@ -763,17 +742,16 @@
       .addEventListener("click", function () { banner.remove(); });
   }
 
-  // Surveille data/listings.json : quand `generated_at` change, on sait que
-  // le workflow a livre des donnees fraiches et on bascule la banniere en
-  // mode "rafraichies".
   function pollForRefresh(initialGeneratedAt, actionsHref) {
     const start = Date.now();
+    const slug = activeModelSlug;
     const timer = setInterval(function () {
-      if (Date.now() - start > 6 * 60 * 1000) {  // abandon apres 6 min
+      if (Date.now() - start > 6 * 60 * 1000) {
         clearInterval(timer);
         return;
       }
-      fetch("data/listings.json?ts=" + Date.now(), { cache: "no-store" })
+      fetch("data/" + encodeURIComponent(slug) + "/listings.json?ts=" + Date.now(),
+        { cache: "no-store" })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (j) {
           if (j && j.generated_at && j.generated_at !== initialGeneratedAt) {
@@ -784,12 +762,10 @@
               "pour les voir.", actionsHref);
           }
         })
-        .catch(function () { /* ignore les erreurs reseau temporaires */ });
+        .catch(function () { /* ignore */ });
     }, 15000);
   }
 
-  // Si COTE_CONFIG.updateEndpoint est defini, le bouton declenche le workflow
-  // via le Worker Cloudflare au lieu d'ouvrir la page GitHub Actions.
   function setupUpdateButton() {
     const cfg = window.COTE_CONFIG || {};
     const btn = document.querySelector(".update-btn");
@@ -831,8 +807,6 @@
     });
   }
 
-  /* ---------- rendu global ---------- */
-
   function renderAll() {
     renderKpis();
     renderDeals();
@@ -842,9 +816,192 @@
     renderTable();
   }
 
-  renderMeta();
-  renderTabs();
-  renderPills();
-  renderAll();
-  setupUpdateButton();
+  /* ---------- selecteur marque / modele ---------- */
+
+  function renderPicker(opts) {
+    opts = opts || {};
+    document.getElementById("dashboard-main").hidden = true;
+    document.getElementById("change-car-btn").hidden = true;
+    document.getElementById("model-title").textContent = "Cote supercars";
+    document.getElementById("model-subtitle").textContent =
+      "Choisis une voiture à suivre";
+    applyBrandAccent("default");
+
+    const catalog = window.COTE_CATALOG;
+    const picker = document.getElementById("car-picker");
+    picker.hidden = false;
+
+    if (!catalog || !Array.isArray(catalog.models) || !catalog.models.length) {
+      picker.innerHTML = '<div class="picker-inner">' +
+        '<h2>Catalogue indisponible</h2>' +
+        '<p class="picker-sub">Lance le scraper pour générer ' +
+        '<code>data/catalog.js</code>&nbsp;: ' +
+        '<code>python3 -m scraper --seed</code>.</p></div>';
+      return;
+    }
+
+    const brands = {};
+    catalog.models.forEach(function (m) {
+      (brands[m.brand] = brands[m.brand] || []).push(m);
+    });
+
+    let html = '<div class="picker-inner">' +
+      '<h2>Quelle voiture veux-tu suivre&nbsp;?</h2>' +
+      '<p class="picker-sub">Sélectionne la marque puis le modèle. ' +
+      'Tu pourras changer à tout moment depuis le bouton en haut.</p>';
+
+    if (opts.warning) {
+      html += '<div class="picker-warning">⚠ ' + esc(opts.warning) + '</div>';
+    }
+
+    Object.keys(brands).sort().forEach(function (brand) {
+      html += '<div class="brand-block"><h3>' + esc(brand) + '</h3>' +
+        '<div class="models">';
+      brands[brand].forEach(function (m) {
+        const cls = m.has_data ? "" : " no-data";
+        const sub = m.has_data
+          ? (m.count != null ? m.count + " annonces suivies" : "Données disponibles")
+          : "Données à venir";
+        html += '<button class="model-card' + cls +
+          '" data-slug="' + esc(m.slug) + '">' +
+          '<span class="model-name">' + esc(m.name) + '</span>' +
+          '<span class="model-years">' + m.year_range[0] + " – " +
+          m.year_range[1] + '</span>' +
+          '<span class="model-sub">' + esc(sub) + '</span>' +
+          '</button>';
+      });
+      html += '</div></div>';
+    });
+    html += '</div>';
+    picker.innerHTML = html;
+
+    picker.querySelectorAll(".model-card").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const slug = btn.dataset.slug;
+        const m = catalog.models.find(function (x) { return x.slug === slug; });
+        if (!m) return;
+        localStorage.setItem(STORAGE_KEY, slug);
+        loadModel(m);
+      });
+    });
+  }
+
+  function applyBrandAccent(brand) {
+    const a = BRAND_ACCENTS[brand] || BRAND_ACCENTS.default;
+    document.documentElement.style.setProperty("--accent", a.accent);
+    document.documentElement.style.setProperty("--accent-soft", a.soft);
+  }
+
+  function changeCar() {
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  }
+
+  function bindChangeCar() {
+    const btn = document.getElementById("change-car-btn");
+    if (btn && !btn.dataset.bound) {
+      btn.addEventListener("click", changeCar);
+      btn.dataset.bound = "1";
+    }
+  }
+
+  /* ---------- chargement d'un modele ---------- */
+
+  function loadModel(model) {
+    if (!model.has_data) {
+      localStorage.removeItem(STORAGE_KEY);
+      renderPicker({
+        warning: "Pas encore de données pour " + model.brand + " " +
+          model.name + ". Le scraper les ajoutera au prochain run. " +
+          "Choisis un autre modèle en attendant.",
+      });
+      return;
+    }
+
+    activeModelSlug = model.slug;
+    applyBrandAccent(model.brand);
+
+    if (window.COTE && window.COTE.model
+        && window.COTE.model.slug === model.slug) {
+      onBundleLoaded(model);
+      return;
+    }
+
+    const url = "data/" + encodeURIComponent(model.slug) +
+      "/dashboard.js?ts=" + Date.now();
+    const script = document.createElement("script");
+    script.src = url;
+    script.onload = function () { onBundleLoaded(model); };
+    script.onerror = function () {
+      localStorage.removeItem(STORAGE_KEY);
+      renderPicker({
+        warning: "Bundle de données introuvable pour " + model.brand + " " +
+          model.name + " (data/" + model.slug + "/dashboard.js).",
+      });
+    };
+    document.body.appendChild(script);
+  }
+
+  function onBundleLoaded(model) {
+    data = window.COTE;
+    if (!data || !Array.isArray(data.listings)) {
+      localStorage.removeItem(STORAGE_KEY);
+      renderPicker({
+        warning: "Bundle invalide pour " + model.brand + " " + model.name + ".",
+      });
+      return;
+    }
+
+    activeKind = "dealer";
+    activeVariant = "Toutes";
+    sortKey = "deal_pct";
+    sortDir = -1;
+
+    VARIANTS = (data.model && data.model.variants) || model.variants || [];
+    VARIANT_COLORS = {};
+    VARIANTS.forEach(function (v, i) {
+      VARIANT_COLORS[v] = KNOWN_VARIANT_COLORS[v] || PALETTE[i % PALETTE.length];
+    });
+
+    RESIDUAL = (data.valuation && data.valuation.residual_pct > 0)
+      ? data.valuation.residual_pct : 20;
+    DEAL_STRONG = 1.3 * RESIDUAL;
+    DEAL_MILD = 0.6 * RESIDUAL;
+
+    document.getElementById("car-picker").hidden = true;
+    document.getElementById("dashboard-main").hidden = false;
+    document.getElementById("change-car-btn").hidden = false;
+    document.getElementById("model-title").textContent =
+      "Cote " + data.model.brand + " " + data.model.name;
+    document.getElementById("model-subtitle").textContent =
+      "Suivi de valeur — marché des États-Unis";
+
+    bindChangeCar();
+    renderMeta();
+    renderTabs();
+    renderPills();
+    renderAll();
+    setupUpdateButton();
+  }
+
+  /* ---------- bootstrap ---------- */
+
+  function bootstrap() {
+    const catalog = window.COTE_CATALOG;
+    if (!catalog || !Array.isArray(catalog.models)) {
+      renderPicker();
+      return;
+    }
+    const slug = localStorage.getItem(STORAGE_KEY);
+    const model = slug
+      ? catalog.models.find(function (m) { return m.slug === slug; })
+      : null;
+    if (!model) {
+      renderPicker();
+      return;
+    }
+    loadModel(model);
+  }
+
+  bootstrap();
 })();

@@ -1,12 +1,13 @@
-"""Source d'echantillon : cote du marche US figee a partir de releves reels.
+"""Source d'echantillon : cote du marche US figee pour amorcer Ferrari 458.
 
 Ces donnees servent a amorcer le projet et de repli quand la source live est
 indisponible (blocage anti-bot, environnement sans reseau...). Les fourchettes
 de prix proviennent de releves agreges du marche US (classic.com, Edmunds,
 cars.com, Hagerty) au printemps 2026.
 
-Cette source ne fournit que des annonces : l'historique de cote se construit
-uniquement a partir de mesures reelles, au fil des executions du scraper.
+L'echantillon ne couvre que Ferrari 458 ; pour les autres modeles du
+catalogue, la source renvoie une liste vide (l'historique se construit alors
+uniquement a partir des mesures live).
 """
 
 from __future__ import annotations
@@ -17,7 +18,7 @@ from ..models import Listing
 from .base import ListingSource
 
 # (millesime, version, prix USD, kilometrage en miles, localisation)
-_RAW_LISTINGS = [
+_FERRARI_458 = [
     (2010, "Italia", 158_000, 28_400, "Miami, FL"),
     (2010, "Italia", 172_500, 19_100, "Dallas, TX"),
     (2011, "Italia", 179_900, 16_529, "Costa Mesa, CA"),
@@ -56,21 +57,28 @@ _RAW_LISTINGS = [
     (2014, "Speciale", 372_000, 12_800, "San Jose, CA"),
 ]
 
+_BY_SLUG = {
+    "ferrari-458": _FERRARI_458,
+}
+
 
 class SampleSource(ListingSource):
     name = "echantillon"
 
     def fetch(self) -> List[Listing]:
+        raw = _BY_SLUG.get(self.model.slug)
+        if not raw:
+            return []
         listings: List[Listing] = []
-        for index, (year, variant, price, mileage, location) in enumerate(_RAW_LISTINGS):
+        for index, (year, variant, price, mileage, location) in enumerate(raw):
             listings.append(
                 Listing(
                     year=year,
                     variant=variant,
                     price=price,
                     mileage=mileage,
-                    title=f"{year} Ferrari 458 {variant}",
-                    url=f"sample://458/{index:03d}",
+                    title=self.model.title_for(year, variant),
+                    url=f"sample://{self.model.slug}/{index:03d}",
                     source=self.name,
                     location=location,
                     status="for_sale",

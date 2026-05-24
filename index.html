@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cote Ferrari 458 Italia — Marché US</title>
+  <title>Cote supercars — Marché US</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,11 +11,12 @@
     <div class="brand">
       <span class="brand-mark"></span>
       <div>
-        <h1>Cote Ferrari 458 Italia</h1>
-        <p class="brand-sub">Suivi de valeur — marché des États-Unis</p>
+        <h1 id="model-title">Cote supercars</h1>
+        <p class="brand-sub" id="model-subtitle">Suivi de valeur — marché des États-Unis</p>
       </div>
     </div>
     <div class="header-right">
+      <button class="change-car-btn" id="change-car-btn" hidden>← Changer de voiture</button>
       <a class="update-btn"
          href="https://github.com/mickcoco987/delsoltahiti/actions/workflows/update-cote.yml"
          target="_blank" rel="noopener noreferrer"
@@ -26,7 +27,9 @@
     </div>
   </header>
 
-  <main>
+  <section id="car-picker" class="car-picker" hidden></section>
+
+  <main id="dashboard-main" hidden>
     <nav id="kind-tabs" class="kind-tabs" aria-label="Type d'annonces"></nav>
 
     <section id="kpis" class="kpi-grid" aria-label="Indicateurs de cote"></section>
@@ -75,14 +78,14 @@
 
   <footer class="site-footer">
     <p>
-      Sources de cote : classic.com, Edmunds, cars.com, Hagerty.
-      Les prix sont indicatifs et dépendent de l'état, des options et de l'historique d'entretien.
+      Sources de cote : classic.com, Marketcheck, eBay Motors. Les prix sont
+      indicatifs et dépendent de l'état, des options et de l'historique d'entretien.
     </p>
     <p id="footer-meta"></p>
   </footer>
 
   <script src="config.js"></script>
-  <script src="data/dashboard.js"></script>
+  <script src="data/catalog.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -5,10 +5,9 @@ avec les donnees vehicule dans un bloc JSON : JSON-LD schema.org, donnees
 Next.js `__NEXT_DATA__`, ou autre `<script type="application/json">`.
 
 Cette base telecharge les pages, extrait tous les blocs JSON et les parcourt
-recursivement pour en retirer les objets ressemblant a une annonce. Tant que
-les donnees restent dans un JSON de la page, le scraper resiste aux
-changements de mise en page. Une sous-classe n'a qu'a definir `name`,
-`base_url` et `pages`.
+recursivement pour en retirer les objets ressemblant a une annonce. Le filtre
+de modele (annee, prix, kilometrage, version, titre) est applique a partir
+du `Model` courant ; chaque source n'a qu'a fournir la liste des `pages`.
 """
 
 from __future__ import annotations
@@ -20,7 +19,7 @@ from typing import Iterable, Iterator, List, Optional
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from ..models import Listing, classify_variant, parse_int, parse_year
+from ..models import Listing, extract_vin, parse_int, parse_year
 from .base import ListingSource
 
 log = logging.getLogger(__name__)
@@ -42,11 +41,6 @@ YEAR_KEYS = (
 TITLE_KEYS = ("title", "name", "headline", "full_name", "fullName", "label")
 URL_KEYS = ("url", "permalink", "link", "slug", "href", "path")
 SOLD_KEYS = ("sold_date", "soldDate", "sale_date", "saleDate")
-
-# Bornes de plausibilite pour ecarter le bruit (accessoires, autres modeles).
-MIN_PRICE = 40_000
-MAX_PRICE = 3_000_000
-MAX_MILEAGE = 200_000
 
 
 def _first(obj: dict, keys: Iterable[str]):
@@ -88,14 +82,23 @@ class HtmlJsonSource(ListingSource):
 
     name = "html-json"
     base_url = ""
-    pages: List[str] = []
     timeout = 25
     kind = "dealer"  # surcharge par les sources d'encheres
 
+    @property
+    def pages(self) -> List[str]:
+        """Override dans les sous-classes pour lire l'URL adaptee au modele."""
+        return []
+
     def fetch(self) -> List[Listing]:
+        pages = self.pages
+        if not pages:
+            log.info("%s : modele '%s' non configure pour cette source",
+                     self.name, self.model.slug)
+            return []
         listings: List[Listing] = []
         seen: set[str] = set()
-        for url in self.pages:
+        for url in pages:
             try:
                 html = self._get(url)
             except (HTTPError, URLError, OSError) as exc:
@@ -158,41 +161,53 @@ class HtmlJsonSource(ListingSource):
     def _looks_like_listing(obj: dict) -> bool:
         has_price = _extract_price(obj) is not None
         title = str(_first(obj, TITLE_KEYS) or "")
-        has_year = _first(obj, YEAR_KEYS) is not None or parse_year(title) is not None
+        has_year = (
+            _first(obj, YEAR_KEYS) is not None or parse_year(title) is not None
+        )
         has_identity = _first(obj, URL_KEYS) is not None or bool(title)
         return has_price and has_year and has_identity
 
     def _to_listing(self, obj: dict) -> Optional[Listing]:
         title = str(_first(obj, TITLE_KEYS) or "").strip()
-        year = parse_int(_unwrap(_first(obj, YEAR_KEYS))) or parse_year(title)
-        if not year or not (2009 <= year <= 2016):
+        year = parse_int(_unwrap(_first(obj, YEAR_KEYS))) or parse_year(
+            title, self.model.year_range,
+        )
+        lo_y, hi_y = self.model.year_range
+        if not year or not (lo_y <= year <= hi_y):
             return None
 
         price = _extract_price(obj)
-        if not price or not (MIN_PRICE <= price <= MAX_PRICE):
+        lo_p, hi_p = self.model.price_range
+        if not price or not (lo_p <= price <= hi_p):
             return None
 
         mileage = parse_int(_unwrap(_first(obj, MILEAGE_KEYS)))
-        if mileage is not None and mileage > MAX_MILEAGE:
+        if mileage is not None and mileage > self.model.max_mileage:
             mileage = None
 
         url = str(_first(obj, URL_KEYS) or "")
         if url.startswith("/") and self.base_url:
             url = self.base_url + url
 
-        variant = classify_variant(f"{title} {url}")
+        # Filtre anti-bruit : le titre/URL doit mentionner le modele.
+        if not self.model.matches_title(f"{title} {url}"):
+            return None
+
+        variant = self.model.classify_variant(f"{title} {url}")
         sold_marker = _first(obj, SOLD_KEYS)
         status = "sold" if sold_marker else "for_sale"
+        vin = extract_vin(f"{url} {title}", self.model.vin_prefixes)
 
         return Listing(
             year=year,
             variant=variant,
             price=price,
             mileage=mileage,
-            title=title or f"{year} Ferrari 458 {variant}",
+            title=title or self.model.title_for(year, variant),
             url=url,
             source=self.name,
             status=status,
             sale_date=str(sold_marker) if sold_marker else None,
             kind=self.kind,
+            vin=vin,
         )

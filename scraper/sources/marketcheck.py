@@ -8,9 +8,8 @@ Necessite une cle API (inscription developpeur sur https://www.marketcheck.com),
 fournie via la variable d'environnement MARKETCHECK_API_KEY. Sans cle, la
 source est simplement ignoree (elle ne fait pas echouer le scraper).
 
-Endpoint par defaut : API v2 `search/car/active`. Surchargeable sans toucher
-au code via la variable d'environnement MARKETCHECK_ENDPOINT (utile si votre
-offre Marketcheck expose un hote different).
+Endpoint par defaut : API v2 `search/car/active`. Surchargeable via
+MARKETCHECK_ENDPOINT.
 """
 
 from __future__ import annotations
@@ -24,26 +23,23 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-from ..models import Listing, classify_variant, parse_int
+from ..catalog import Model
+from ..models import Listing, parse_int
 from .base import ListingSource
 
 log = logging.getLogger(__name__)
 
 _DEFAULT_ENDPOINT = "https://mc-api.marketcheck.com/v2/search/car/active"
-_MODELS = ["458 Italia", "458 Spider", "458 Speciale"]
 _ROWS = 50            # maximum de resultats par requete
 _MAX_PER_MODEL = 200  # plafond d'annonces collectees par modele
-
-MIN_PRICE = 40_000
-MAX_PRICE = 3_000_000
-MAX_MILEAGE = 200_000
 
 
 class MarketcheckSource(ListingSource):
     name = "marketcheck"
 
-    def __init__(self, api_key: Optional[str] = None,
+    def __init__(self, model: Model, api_key: Optional[str] = None,
                  endpoint: Optional[str] = None, timeout: int = 25):
+        super().__init__(model)
         self.api_key = api_key or os.environ.get("MARKETCHECK_API_KEY", "")
         self.endpoint = endpoint or os.environ.get(
             "MARKETCHECK_ENDPOINT", _DEFAULT_ENDPOINT)
@@ -57,21 +53,27 @@ class MarketcheckSource(ListingSource):
                 "(ou ajoutez-la en secret GitHub Actions)."
             )
             return []
+        if not (self.model.marketcheck_make and self.model.marketcheck_models):
+            log.info(
+                "marketcheck : modele '%s' non configure pour Marketcheck",
+                self.model.slug,
+            )
+            return []
         listings: List[Listing] = []
         seen: set[str] = set()
-        for model in _MODELS:
-            listings.extend(self._fetch_model(model, seen))
+        for mc_model in self.model.marketcheck_models:
+            listings.extend(self._fetch_model(mc_model, seen))
         log.info("marketcheck : %d annonces au total", len(listings))
         return listings
 
-    def _fetch_model(self, model: str, seen: set) -> List[Listing]:
+    def _fetch_model(self, mc_model: str, seen: set) -> List[Listing]:
         collected: List[Listing] = []
         start = 0
         while start < _MAX_PER_MODEL:
             params = {
                 "api_key": self.api_key,
-                "make": "Ferrari",
-                "model": model,
+                "make": self.model.marketcheck_make,
+                "model": mc_model,
                 "car_type": "used",
                 "country": "US",
                 "rows": _ROWS,
@@ -81,7 +83,7 @@ class MarketcheckSource(ListingSource):
                 payload = self._get_json(self.endpoint + "?" + urlencode(params))
             except (HTTPError, URLError, OSError, ValueError) as exc:
                 log.warning("marketcheck : echec de la requete '%s' (%s)",
-                            model, exc)
+                            mc_model, exc)
                 break
             rows = payload.get("listings") or []
             if not rows:
@@ -94,7 +96,7 @@ class MarketcheckSource(ListingSource):
             if len(rows) < _ROWS:
                 break
             start += _ROWS
-        log.info("marketcheck : '%s' -> %d annonces", model, len(collected))
+        log.info("marketcheck : '%s' -> %d annonces", mc_model, len(collected))
         return collected
 
     def _get_json(self, url: str) -> dict:
@@ -108,38 +110,36 @@ class MarketcheckSource(ListingSource):
         with urlopen(request, timeout=self.timeout) as response:
             return json.loads(response.read().decode("utf-8", errors="replace"))
 
-    @staticmethod
-    def _to_listing(raw: dict) -> Optional[Listing]:
+    def _to_listing(self, raw: dict) -> Optional[Listing]:
         if not isinstance(raw, dict):
             return None
         build = raw.get("build") or {}
         year = parse_int(build.get("year"))
-        if not year or not (2009 <= year <= 2016):
+        lo_y, hi_y = self.model.year_range
+        if not year or not (lo_y <= year <= hi_y):
             return None
 
         price = parse_int(raw.get("price"))
-        if not price or not (MIN_PRICE <= price <= MAX_PRICE):
+        lo_p, hi_p = self.model.price_range
+        if not price or not (lo_p <= price <= hi_p):
             return None
 
         mileage = parse_int(raw.get("miles"))
-        if mileage is not None and mileage > MAX_MILEAGE:
+        if mileage is not None and mileage > self.model.max_mileage:
             mileage = None
 
         trim = build.get("trim") or ""
-        variant = classify_variant(f"{build.get('model', '')} {trim}")
+        model_label = build.get("model") or ""
+        variant = self.model.classify_variant(f"{model_label} {trim}")
 
         dealer = raw.get("dealer") or {}
         location = ", ".join(
             part for part in (dealer.get("city"), dealer.get("state")) if part
         )
 
-        # Statut de titre si Marketcheck le renvoie (champ Carfax).
         clean = raw.get("carfax_clean_title")
-
-        # Date de mise en ligne : `first_seen_at` est un timestamp Unix UTC.
         posted_at = _to_iso_date(raw.get("first_seen_at"))
 
-        # Premiere photo si disponible (Marketcheck : media.photo_links).
         media = raw.get("media") if isinstance(raw.get("media"), dict) else {}
         photos = media.get("photo_links")
         image_url = ""
@@ -155,7 +155,7 @@ class MarketcheckSource(ListingSource):
             variant=variant,
             price=price,
             mileage=mileage,
-            title=f"{year} Ferrari 458 {variant}",
+            title=self.model.title_for(year, variant),
             url=raw.get("vdp_url") or "",
             source="marketcheck",
             location=location,
@@ -168,10 +168,8 @@ class MarketcheckSource(ListingSource):
 
 
 def _to_iso_date(value) -> Optional[str]:
-    """Convertit un timestamp Marketcheck (Unix ou ISO) en date YYYY-MM-DD."""
     if isinstance(value, (int, float)) and value > 0:
         return datetime.fromtimestamp(value, tz=timezone.utc).strftime("%Y-%m-%d")
     if isinstance(value, str) and len(value) >= 10:
-        # Accepte deja un ISO type "2026-05-10T..." -> prend la portion date.
         return value[:10]
     return None

@@ -1,10 +1,167 @@
-{
-  "generated_at": "2026-05-24T01:59:00Z",
+/* Genere automatiquement par le scraper - ne pas editer a la main. */
+window.COTE = {
+  "model": {
+    "slug": "ferrari-458",
+    "brand": "Ferrari",
+    "name": "458 Italia",
+    "short_name": "458",
+    "variants": [
+      "Italia",
+      "Spider",
+      "Speciale",
+      "Speciale A"
+    ],
+    "year_range": [
+      2009,
+      2016
+    ]
+  },
+  "generated_at": "2026-05-24T02:02:21Z",
   "sources": [
-    "marketcheck",
-    "ebay"
+    "marketcheck"
   ],
-  "count": 68,
+  "valuation": {
+    "method": "regression log-lineaire robuste (millesime + kilometrage + version)",
+    "residual_pct": 19.5
+  },
+  "market": {
+    "overall": {
+      "count": 68,
+      "avg_price": 358042,
+      "median_price": 309995,
+      "min_price": 149998,
+      "max_price": 1399999,
+      "avg_mileage": 16334
+    },
+    "by_variant": {
+      "Italia": {
+        "count": 31,
+        "avg_price": 299088,
+        "median_price": 299977,
+        "min_price": 149998,
+        "max_price": 451689,
+        "avg_mileage": 17785
+      },
+      "Spider": {
+        "count": 34,
+        "avg_price": 344868,
+        "median_price": 329999,
+        "min_price": 170977,
+        "max_price": 501231,
+        "avg_mileage": 15664
+      },
+      "Speciale": {
+        "count": 3,
+        "avg_price": 1116527,
+        "median_price": 999995,
+        "min_price": 949588,
+        "max_price": 1399999,
+        "avg_mileage": 9199
+      },
+      "Speciale A": {
+        "count": 0,
+        "avg_price": null,
+        "median_price": null,
+        "min_price": null,
+        "max_price": null,
+        "avg_mileage": null
+      }
+    },
+    "by_year": {
+      "2010": {
+        "count": 5,
+        "avg_price": 235652,
+        "median_price": 238365,
+        "min_price": 149998,
+        "max_price": 309900,
+        "avg_mileage": 28368
+      },
+      "2011": {
+        "count": 13,
+        "avg_price": 304736,
+        "median_price": 280000,
+        "min_price": 229888,
+        "max_price": 451689,
+        "avg_mileage": 18498
+      },
+      "2012": {
+        "count": 7,
+        "avg_price": 272989,
+        "median_price": 269977,
+        "min_price": 170977,
+        "max_price": 439995,
+        "avg_mileage": 21221
+      },
+      "2013": {
+        "count": 14,
+        "avg_price": 352708,
+        "median_price": 349990,
+        "min_price": 229990,
+        "max_price": 499999,
+        "avg_mileage": 15944
+      },
+      "2014": {
+        "count": 17,
+        "avg_price": 374557,
+        "median_price": 329999,
+        "min_price": 207977,
+        "max_price": 999995,
+        "avg_mileage": 13359
+      },
+      "2015": {
+        "count": 12,
+        "avg_price": 499225,
+        "median_price": 407498,
+        "min_price": 249000,
+        "max_price": 1399999,
+        "avg_mileage": 10942
+      }
+    }
+  },
+  "history": [
+    {
+      "date": "2026-05-22",
+      "overall": {
+        "avg_price": 337152,
+        "median_price": 299995,
+        "count": 57
+      },
+      "by_variant": {
+        "Italia": 294702,
+        "Spider": 333942,
+        "Speciale": 974792,
+        "Speciale A": null
+      }
+    },
+    {
+      "date": "2026-05-23",
+      "overall": {
+        "avg_price": 358042,
+        "median_price": 309995,
+        "count": 68
+      },
+      "by_variant": {
+        "Italia": 299088,
+        "Spider": 344868,
+        "Speciale": 1116527,
+        "Speciale A": null
+      }
+    },
+    {
+      "date": "2026-05-24",
+      "overall": {
+        "avg_price": 358042,
+        "median_price": 309995,
+        "count": 68
+      },
+      "by_variant": {
+        "Italia": 299088,
+        "Spider": 344868,
+        "Speciale": 1116527,
+        "Speciale A": null
+      }
+    }
+  ],
   "listings": [
     {
       "year": 2014,
@@ -1435,4 +1592,4 @@
       "deal_pct": -16.5
     }
   ]
-}
+};
