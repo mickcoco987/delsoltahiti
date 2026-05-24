@@ -2,6 +2,26 @@
 window.COTE_CATALOG = {
   "models": [
     {
+      "slug": "audi-rs-6",
+      "brand": "Audi",
+      "name": "Rs 6",
+      "short_name": "Rs 6",
+      "variants": [
+        "Standard"
+      ],
+      "year_range": [
+        1970,
+        2027
+      ],
+      "has_data": true,
+      "investment": {
+        "verdict": "",
+        "class": "neutral"
+      },
+      "count": 3,
+      "generated_at": "2026-05-24T09:36:05Z"
+    },
+    {
       "slug": "ferrari-458",
       "brand": "Ferrari",
       "name": "458 Italia",
@@ -22,7 +42,7 @@ window.COTE_CATALOG = {
         "class": "good"
       },
       "count": 71,
-      "generated_at": "2026-05-24T08:44:31Z"
+      "generated_at": "2026-05-24T09:36:12Z"
     },
     {
       "slug": "ferrari-f8",
@@ -42,8 +62,8 @@ window.COTE_CATALOG = {
         "verdict": "Mou",
         "class": "mid"
       },
-      "count": 119,
-      "generated_at": "2026-05-24T08:44:39Z"
+      "count": 118,
+      "generated_at": "2026-05-24T09:36:17Z"
     },
     {
       "slug": "lamborghini-huracan",
@@ -68,7 +88,7 @@ window.COTE_CATALOG = {
         "class": "good"
       },
       "count": 234,
-      "generated_at": "2026-05-24T08:45:07Z"
+      "generated_at": "2026-05-24T09:36:38Z"
     },
     {
       "slug": "porsche-911-gt3",
@@ -89,14 +109,14 @@ window.COTE_CATALOG = {
         "verdict": "Excellent",
         "class": "good"
       },
-      "count": 171,
-      "generated_at": "2026-05-24T08:45:43Z"
+      "count": 170,
+      "generated_at": "2026-05-24T09:37:04Z"
     }
   ],
   "version": {
-    "sha": "c48f79c",
-    "sha_full": "c48f79ce89335d5c0d53eb630f3ea989851f0fc7",
+    "sha": "5c6d627",
+    "sha_full": "5c6d627c46ceebb7e00774a2d8b1b6bd5e1a16f4",
     "branch": "main",
-    "built_at": "2026-05-24T08:45:43Z"
+    "built_at": "2026-05-24T09:37:04Z"
   }
 };

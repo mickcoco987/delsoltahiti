@@ -1,0 +1,16 @@
+{
+  "model": "audi-rs-6",
+  "points": [
+    {
+      "date": "2026-05-24",
+      "overall": {
+        "avg_price": 155330,
+        "median_price": 155999,
+        "count": 3
+      },
+      "by_variant": {
+        "Standard": 155330
+      }
+    }
+  ]
+}

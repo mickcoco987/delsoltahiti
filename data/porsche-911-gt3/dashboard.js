@@ -22,7 +22,7 @@ window.COTE = {
       "risk": "Achat sans allocation = paiement plein tarif sur le marche secondaire. Verifier l'historique track : les GT3 sortent souvent en circuit."
     }
   },
-  "generated_at": "2026-05-24T08:45:43Z",
+  "generated_at": "2026-05-24T09:37:04Z",
   "sources": [
     "marketcheck",
     "ebay"
@@ -33,12 +33,12 @@ window.COTE = {
   },
   "market": {
     "overall": {
-      "count": 171,
-      "avg_price": 212328,
-      "median_price": 199000,
+      "count": 170,
+      "avg_price": 210966,
+      "median_price": 196975,
       "min_price": 120171,
       "max_price": 549996,
-      "avg_mileage": 13024
+      "avg_mileage": 13097
     },
     "by_variant": {
       "GT3": {
@@ -58,12 +58,12 @@ window.COTE = {
         "avg_mileage": 5578
       },
       "GT3 RS": {
-        "count": 18,
-        "avg_price": 323972,
+        "count": 17,
+        "avg_price": 316918,
         "median_price": 279995,
         "min_price": 189500,
         "max_price": 549996,
-        "avg_mileage": 12155
+        "avg_mileage": 12835
       }
     },
     "by_year": {
@@ -156,12 +156,12 @@ window.COTE = {
         "avg_mileage": 4425
       },
       "2025": {
-        "count": 21,
-        "avg_price": 204820,
-        "median_price": 155000,
+        "count": 20,
+        "avg_price": 192866,
+        "median_price": 151995,
         "min_price": 127500,
-        "max_price": 443900,
-        "avg_mileage": 3310
+        "max_price": 406990,
+        "avg_mileage": 3446
       }
     }
   },
@@ -169,14 +169,14 @@ window.COTE = {
     {
       "date": "2026-05-24",
       "overall": {
-        "avg_price": 212328,
-        "median_price": 199000,
-        "count": 171
+        "avg_price": 210966,
+        "median_price": 196975,
+        "count": 170
       },
       "by_variant": {
         "GT3": 190863,
         "GT3 Touring": 306737,
-        "GT3 RS": 323972
+        "GT3 RS": 316918
       }
     }
   ],
@@ -194,13 +194,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "8632de8724c7",
       "vin": "WP0AC2A98NS268763",
       "image_url": "https://pictures.dealer.com/h/hawksubarusoa/0713/9123c37b6508b83242420ba917df3e6ex.jpg",
       "clean_title": false,
-      "estimated_value": 202165,
-      "deal_pct": -28.8
+      "estimated_value": 202043,
+      "deal_pct": -28.9
     },
     {
       "year": 2023,
@@ -215,13 +215,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-10",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "ae8efa2bd6a7",
       "vin": "WP0AD2A9XPS258137",
       "image_url": "https://pictures.dealer.com/h/hawksubarusoa/1821/f7b349e30214d4c6ef4ce11904471413x.jpg",
       "clean_title": false,
-      "estimated_value": 201006,
-      "deal_pct": -28.0
+      "estimated_value": 200745,
+      "deal_pct": -28.2
     },
     {
       "year": 2015,
@@ -236,13 +236,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-16",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "ca37f8b9085e",
       "vin": "WP0CD2A90FS178546",
       "image_url": "https://images.dealer.com/autodata/us/large_stockphoto-color/2015/USC50PRC012B0/A1.jpg",
       "clean_title": false,
-      "estimated_value": 167199,
-      "deal_pct": 13.1
+      "estimated_value": 167895,
+      "deal_pct": 13.5
     },
     {
       "year": 2021,
@@ -257,12 +257,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "8f262ba85ae3",
       "vin": "WP0AB2A97MS223251",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/d55af0d5e1bf4156a589f1a7b6939efe.jpg",
       "clean_title": null,
-      "estimated_value": 192999,
+      "estimated_value": 193012,
       "deal_pct": 25.7
     },
     {
@@ -278,13 +278,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-13",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "00c11a77db13",
       "vin": "WP0AH2A98SS229877",
       "image_url": "https://pictures.dealer.com/h/holmanmbofraleigh/1526/eddd9aad6577ff25d2c7f7f54d7277d4x.jpg",
       "clean_title": false,
-      "estimated_value": 211457,
-      "deal_pct": 14.6
+      "estimated_value": 210895,
+      "deal_pct": 14.4
     },
     {
       "year": 2024,
@@ -299,13 +299,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-10",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "01e66c13b883",
       "vin": "WP0CB2A90RS245768",
       "image_url": "https://content.homenetiol.com/2003378/2257861/0x0/d51ca99349424341946c84028b735382.jpg",
       "clean_title": null,
-      "estimated_value": 193568,
-      "deal_pct": 19.3
+      "estimated_value": 193179,
+      "deal_pct": 19.1
     },
     {
       "year": 2021,
@@ -320,12 +320,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-19",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "76c1b3a22ea2",
       "vin": "WP0CD2A90MS263691",
       "image_url": "https://pictures.dealer.com/d/dpatrickporsche/0680/7ca1e39469ec5a67b5a56d1252457f9ex.jpg",
       "clean_title": false,
-      "estimated_value": 175381,
+      "estimated_value": 175385,
       "deal_pct": -22.0
     },
     {
@@ -341,13 +341,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "29e5f98b9715",
       "vin": "WP0AB2A99RS279005",
       "image_url": "https://pictures.dealer.com/d/dpatrickporsche/0981/1e3006c1429689719757293344656373x.jpg",
       "clean_title": false,
-      "estimated_value": 207662,
-      "deal_pct": 21.8
+      "estimated_value": 207251,
+      "deal_pct": 21.6
     },
     {
       "year": 2025,
@@ -362,13 +362,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-04",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "c1e75820478f",
       "vin": "WP0AA2A9XSS208047",
       "image_url": "https://pictures.dealer.com/p/porschestrathamnh/0186/bfe6f5427a4405de5988142b0e9715cfx.jpg",
       "clean_title": false,
-      "estimated_value": 198426,
-      "deal_pct": 21.4
+      "estimated_value": 197892,
+      "deal_pct": 21.2
     },
     {
       "year": 2015,
@@ -383,13 +383,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-03-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "6b7f3651a48c",
       "vin": "WP0AC2A99FS183903",
       "image_url": "https://pictures.dealer.com/p/porschestrathamnh/0629/b7f6adea2699a2f960665f303fd02134x.jpg",
       "clean_title": false,
-      "estimated_value": 164516,
-      "deal_pct": -0.3
+      "estimated_value": 165200,
+      "deal_pct": 0.1
     },
     {
       "year": 2019,
@@ -404,13 +404,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-08",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "aa0df7b21193",
       "vin": "WP0BB2A90KS125678",
       "image_url": "https://pictures.dealer.com/p/porschestrathamnh/0374/4533933abf49c1e3d86c9be89cb3e63cx.jpg",
       "clean_title": false,
-      "estimated_value": 154202,
-      "deal_pct": 5.3
+      "estimated_value": 154411,
+      "deal_pct": 5.5
     },
     {
       "year": 2020,
@@ -425,12 +425,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "aa57ab90fceb",
       "vin": "WP0CB2A92LS264068",
       "image_url": "https://images.dealer.com/unavailable_stockphoto.png",
       "clean_title": false,
-      "estimated_value": 186011,
+      "estimated_value": 186149,
       "deal_pct": 22.3
     },
     {
@@ -446,13 +446,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "ae3fbdcc8d06",
       "vin": "WP0AC2A95ES183394",
       "image_url": "https://images.dealer.com/autodata/us/large_stockphoto-color/2014/USC40PRC017A0/A1.jpg",
       "clean_title": false,
-      "estimated_value": 144569,
-      "deal_pct": -4.3
+      "estimated_value": 145263,
+      "deal_pct": -3.8
     },
     {
       "year": 2018,
@@ -467,13 +467,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-12",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "14d500f348c8",
       "vin": "WP0AD2A91JS156877",
       "image_url": "https://pictures.dealer.com/s/springsautomotivegroupcoloradosprin/0732/fa010324d017be493a336534b1b2231bx.jpg",
       "clean_title": false,
-      "estimated_value": 165542,
-      "deal_pct": -9.2
+      "estimated_value": 165886,
+      "deal_pct": -9.0
     },
     {
       "year": 2015,
@@ -488,13 +488,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-19",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "d81bbf2c58d3",
       "vin": "WP0CD2A91FS178085",
       "image_url": "https://pictures.dealer.com/s/springsautomotivegroupcoloradosprin/1105/e8e8db542e12abc7d29106daf5b9b80dx.jpg",
       "clean_title": false,
-      "estimated_value": 109114,
-      "deal_pct": -10.7
+      "estimated_value": 109547,
+      "deal_pct": -10.3
     },
     {
       "year": 2024,
@@ -509,13 +509,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-16",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "701600be2569",
       "vin": "WP0AD2A93RS253655",
       "image_url": "https://content.homenetiol.com/2003378/2245179/0x0/2510c49fa91c4e9e81c2c8d039f7e74d.jpg",
       "clean_title": null,
-      "estimated_value": 213664,
-      "deal_pct": -47.9
+      "estimated_value": 213245,
+      "deal_pct": -48.2
     },
     {
       "year": 2023,
@@ -530,13 +530,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "63f6611880e8",
       "vin": "WP0AD2A94PS258490",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/776c39aaba9b4ecf9f58dd703c96989d.jpg",
       "clean_title": null,
-      "estimated_value": 181118,
-      "deal_pct": -41.2
+      "estimated_value": 180874,
+      "deal_pct": -41.4
     },
     {
       "year": 2018,
@@ -551,13 +551,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "15dfe5de5f5f",
       "vin": "WP0AC2A9XJS175026",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/69ebf077c97e41889bd9e1d2442d1a9d.jpg",
       "clean_title": null,
-      "estimated_value": 183875,
-      "deal_pct": -19.5
+      "estimated_value": 184266,
+      "deal_pct": -19.3
     },
     {
       "year": 2023,
@@ -572,13 +572,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-03",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "63fb5a64c0a4",
       "vin": "WP0CD2A94PS263391",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/6d28cd4e15f649ed98d525bcd91ea2f6.jpg",
       "clean_title": null,
-      "estimated_value": 190169,
-      "deal_pct": -41.9
+      "estimated_value": 189917,
+      "deal_pct": -42.1
     },
     {
       "year": 2017,
@@ -593,13 +593,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-17",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "e874ba29380e",
       "vin": "WP0BB2A95HS137043",
       "image_url": "https://pictures.dealer.com/b/bellevueporsche/1337/c453f9a0ecc12de0c74cfbec508c0db9x.jpg",
       "clean_title": false,
-      "estimated_value": 158157,
-      "deal_pct": 1.9
+      "estimated_value": 158592,
+      "deal_pct": 2.1
     },
     {
       "year": 2024,
@@ -614,13 +614,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "b672d4635220",
       "vin": "WP0AB2A98RS219510",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/stock_images/5/2024PRC01_640/2024PRC010057_640_01.jpg",
       "clean_title": null,
-      "estimated_value": 207647,
-      "deal_pct": 13.4
+      "estimated_value": 207237,
+      "deal_pct": 13.2
     },
     {
       "year": 2020,
@@ -635,13 +635,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "0a5dcc0ebc76",
       "vin": "WP0AB2A98LS227601",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/46e2e685e616433d9af05cc9178d29a4.jpg",
       "clean_title": null,
-      "estimated_value": 171263,
-      "deal_pct": 24.2
+      "estimated_value": 171384,
+      "deal_pct": 24.3
     },
     {
       "year": 2020,
@@ -656,12 +656,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-02-02",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "04ff2f20bf42",
       "vin": "WP0AA2A97LS206676",
       "image_url": "https://pictures.dealer.com/j/johnsonporsche/1607/f976dadade2432779064d632ae7e6dcdx.jpg",
       "clean_title": false,
-      "estimated_value": 153698,
+      "estimated_value": 153799,
       "deal_pct": 17.4
     },
     {
@@ -677,13 +677,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-02-02",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "7dd3b2a5276a",
       "vin": "WP0CB2A92PS247843",
       "image_url": "https://pictures.dealer.com/j/johnsonporsche/0826/15e0aefbb5da4e158fd85074f996bae6x.jpg",
       "clean_title": false,
-      "estimated_value": 182373,
-      "deal_pct": 8.5
+      "estimated_value": 182128,
+      "deal_pct": 8.4
     },
     {
       "year": 2024,
@@ -698,13 +698,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:07Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "fe46c0e05b4b",
       "vin": "WP0AA2A9XRS207992",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/3df45423a42d4a69ad1d5a291e52d4c1.jpg",
       "clean_title": null,
-      "estimated_value": 203771,
-      "deal_pct": 32.6
+      "estimated_value": 203366,
+      "deal_pct": 32.5
     },
     {
       "year": 2024,
@@ -719,13 +719,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "8fadacc718af",
       "vin": "WP0BB2A91RS234435",
       "image_url": "https://pictures.dealer.com/b/bramanmiamifl/1045/717e4497250c79f0f0ca9836eebc9f11x.jpg",
       "clean_title": false,
-      "estimated_value": 209670,
-      "deal_pct": 3.7
+      "estimated_value": 209256,
+      "deal_pct": 3.6
     },
     {
       "year": 2018,
@@ -740,13 +740,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "3290d2bb4551",
       "vin": "WP0CD2A9XJS162377",
       "image_url": "https://pictures.dealer.com/h/hurstmitsubishipreowned/1117/309b9b41644f338140ed62e4eccbc867x.jpg",
       "clean_title": false,
-      "estimated_value": 171718,
-      "deal_pct": 9.2
+      "estimated_value": 172077,
+      "deal_pct": 9.3
     },
     {
       "year": 2019,
@@ -761,13 +761,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-08",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "5d5629637689",
       "vin": "WP0AD2A94KS140142",
       "image_url": "https://pictures.dealer.com/b/bramanmiamifl/1144/3ea2429c119e6a3e0903c3e7a6b78cabx.jpg",
       "clean_title": false,
-      "estimated_value": 171875,
-      "deal_pct": -0.6
+      "estimated_value": 172116,
+      "deal_pct": -0.5
     },
     {
       "year": 2015,
@@ -782,13 +782,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "1c604825b26e",
       "vin": "WP0AC2A93FS184173",
       "image_url": "https://pictures.dealer.com/h/hurstmitsubishipreowned/0886/3333be4652b1b1f52e3ae7ffd50a137ax.jpg",
       "clean_title": false,
-      "estimated_value": 146840,
-      "deal_pct": 5.5
+      "estimated_value": 147443,
+      "deal_pct": 5.9
     },
     {
       "year": 2024,
@@ -803,13 +803,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-19",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "4ca1beb125d7",
       "vin": "WP0CB2A97RS246447",
       "image_url": "https://pictures.dealer.com/m/mercedesbenzofhoustongreenwaymb/1400/fa614aaab80847e5e63b938ce4b7d3d9x.jpg",
       "clean_title": false,
-      "estimated_value": 193407,
-      "deal_pct": 19.8
+      "estimated_value": 193018,
+      "deal_pct": 19.6
     },
     {
       "year": 2025,
@@ -824,13 +824,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-18",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "662e34bc962e",
       "vin": "WP0CA2A94SS236189",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/dbc5300804ca4758ab057da68131f007.jpg",
       "clean_title": null,
-      "estimated_value": 199590,
-      "deal_pct": 29.9
+      "estimated_value": 199054,
+      "deal_pct": 29.7
     },
     {
       "year": 2016,
@@ -845,13 +845,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-19",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "b92077303734",
       "vin": "WP0BB2A95GS136845",
       "image_url": "https://pictures.dealer.com/o/odanielporsche/0384/3bd1126f6f6b678c74630c1743875f70x.jpg",
       "clean_title": false,
-      "estimated_value": 197085,
-      "deal_pct": 14.9
+      "estimated_value": 197784,
+      "deal_pct": 15.2
     },
     {
       "year": 2016,
@@ -866,13 +866,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "87de2f7dbfea",
       "vin": "WP0CB2A95GS154718",
       "image_url": "https://pictures.dealer.com/o/odanielporsche/0137/ef8b3aabf0801c62dff9b221e18093e0x.jpg",
       "clean_title": false,
-      "estimated_value": 198693,
-      "deal_pct": 9.8
+      "estimated_value": 199399,
+      "deal_pct": 10.1
     },
     {
       "year": 2025,
@@ -887,13 +887,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-12",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "b040bb9e4750",
       "vin": "WP0AD2A96SS265031",
       "image_url": "https://pictures.dealer.com/o/odanielporsche/1485/615e5fc574a26f8ad857997a5a5fa769x.jpg",
       "clean_title": false,
-      "estimated_value": 211446,
-      "deal_pct": -51.2
+      "estimated_value": 210884,
+      "deal_pct": -51.6
     },
     {
       "year": 2024,
@@ -908,13 +908,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-08",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "a187be6ab700",
       "vin": "WP0AA2A99RS207658",
       "image_url": "https://pictures.dealer.com/o/odanielporsche/1774/7bc78cc3a1c789af9af7fca4e99aa807x.jpg",
       "clean_title": false,
-      "estimated_value": 196536,
-      "deal_pct": 34.5
+      "estimated_value": 196143,
+      "deal_pct": 34.4
     },
     {
       "year": 2024,
@@ -929,13 +929,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "661f1fe5331b",
       "vin": "WP0AB2A95RS220887",
       "image_url": "https://pictures.dealer.com/o/odanielporsche/1577/8e396b676fe13b182a29cb7551adbfb6x.jpg",
       "clean_title": false,
-      "estimated_value": 205425,
-      "deal_pct": 10.8
+      "estimated_value": 205019,
+      "deal_pct": 10.6
     },
     {
       "year": 2022,
@@ -950,12 +950,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-01",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "8c7c24db528f",
       "vin": "WP0AC2A93NS271067",
       "image_url": "https://pictures.dealer.com/d/driveadream3/1116/2abf2c06f913e92af1747b12fadc1952x.jpg",
       "clean_title": false,
-      "estimated_value": 195030,
+      "estimated_value": 194909,
       "deal_pct": -34.9
     },
     {
@@ -971,13 +971,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-04",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "aae76fe1884f",
       "vin": "WP0AC2A91PS270339",
       "image_url": "https://pictures.dealer.com/d/driveadream3/1593/9b9ac4e9470b6dacbaa1b5701403489dx.jpg",
       "clean_title": false,
-      "estimated_value": 199694,
-      "deal_pct": -17.7
+      "estimated_value": 199434,
+      "deal_pct": -17.8
     },
     {
       "year": 2025,
@@ -992,13 +992,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-29",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "c6523977399d",
       "vin": "WP0AA2A92SS207247",
       "image_url": "https://pictures.dealer.com/d/driveadream3/1417/8d4afee61337d51fe41721fb5341a8d4x.jpg",
       "clean_title": false,
-      "estimated_value": 201373,
-      "deal_pct": 33.0
+      "estimated_value": 200833,
+      "deal_pct": 32.8
     },
     {
       "year": 2025,
@@ -1013,13 +1013,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "1932374a3db2",
       "vin": "WP0AA2A92SS207331",
       "image_url": "https://pictures.dealer.com/d/driveadream3/1558/0f585739c422dff9df338409f8b1da96x.jpg",
       "clean_title": false,
-      "estimated_value": 216476,
-      "deal_pct": 37.2
+      "estimated_value": 215903,
+      "deal_pct": 37.0
     },
     {
       "year": 2025,
@@ -1034,13 +1034,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "262c60ac6653",
       "vin": "WP0AA2A94SS206861",
       "image_url": "https://pictures.dealer.com/d/driveadream3/0152/2a709ea8059e7539ace43c379adbf510x.jpg",
       "clean_title": false,
-      "estimated_value": 216084,
-      "deal_pct": 38.4
+      "estimated_value": 215511,
+      "deal_pct": 38.3
     },
     {
       "year": 2023,
@@ -1055,13 +1055,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "fcda51ff5cdf",
       "vin": "WP0AB2A92PS220228",
       "image_url": "https://pictures.dealer.com/d/driveadream3/1390/5efdb64c81f677a7f56439946c4c6c23x.jpg",
       "clean_title": false,
-      "estimated_value": 193724,
-      "deal_pct": 29.8
+      "estimated_value": 193469,
+      "deal_pct": 29.7
     },
     {
       "year": 2024,
@@ -1076,13 +1076,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-01",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "e9088de68319",
       "vin": "WP0AB2A93RS279209",
       "image_url": "https://pictures.dealer.com/d/driveadream3/1642/191b7e3158f38f8fcd947944e2cbc2f6x.jpg",
       "clean_title": false,
-      "estimated_value": 204920,
-      "deal_pct": 34.1
+      "estimated_value": 204514,
+      "deal_pct": 34.0
     },
     {
       "year": 2025,
@@ -1097,13 +1097,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "5e9a6dd4c246",
       "vin": "WP0AB2A95SS226002",
       "image_url": "https://pictures.dealer.com/d/driveadream3/1247/8cdbb51c688cd3c6366ca8c1b9af6adax.jpg",
       "clean_title": false,
-      "estimated_value": 210329,
-      "deal_pct": 12.0
+      "estimated_value": 209769,
+      "deal_pct": 11.8
     },
     {
       "year": 2025,
@@ -1118,13 +1118,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "8dbb75c5f021",
       "vin": "WP0AB2A99SS225144",
       "image_url": "https://pictures.dealer.com/d/driveadream3/1829/57ac468993301e9557cf30427b8a3645x.jpg",
       "clean_title": false,
-      "estimated_value": 216590,
-      "deal_pct": 8.1
+      "estimated_value": 216016,
+      "deal_pct": 7.9
     },
     {
       "year": 2021,
@@ -1139,12 +1139,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-03-25",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "ee0a20cf13ae",
       "vin": "WP0BB2A94MS235930",
       "image_url": "https://pictures.dealer.com/d/driveadream3/0999/f2d0843610a27b2ada7f65247ac0b0a9x.jpg",
       "clean_title": false,
-      "estimated_value": 168550,
+      "estimated_value": 168551,
       "deal_pct": 19.9
     },
     {
@@ -1160,13 +1160,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "6f95e75440f6",
       "vin": "WP0BB2A9XNS232483",
       "image_url": "https://pictures.dealer.com/d/driveadream3/0882/a6a632c506698439dc44f042b405ef30x.jpg",
       "clean_title": false,
-      "estimated_value": 189746,
-      "deal_pct": 23.6
+      "estimated_value": 189626,
+      "deal_pct": 23.5
     },
     {
       "year": 2025,
@@ -1181,13 +1181,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "41250b1df01f",
       "vin": "WP0CA2A90SS236285",
       "image_url": "https://pictures.dealer.com/d/driveadream3/1148/f239034cd8f85a1408d5fac2f8342e3bx.jpg",
       "clean_title": false,
-      "estimated_value": 216554,
-      "deal_pct": 36.3
+      "estimated_value": 215980,
+      "deal_pct": 36.1
     },
     {
       "year": 2025,
@@ -1202,13 +1202,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "a62c0933b9d9",
       "vin": "WP0CA2A92SS235493",
       "image_url": "https://pictures.dealer.com/d/driveadream3/0688/6de2facc4e5a78a62d6d82e82ae0756cx.jpg",
       "clean_title": false,
-      "estimated_value": 206961,
-      "deal_pct": 25.1
+      "estimated_value": 206409,
+      "deal_pct": 24.9
     },
     {
       "year": 2025,
@@ -1223,13 +1223,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-08",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "2478af7ea570",
       "vin": "WP0CA2A99SS235507",
       "image_url": "https://pictures.dealer.com/d/driveadream3/0389/fe8e8412cfaa927ae363751b2b18bfd8x.jpg",
       "clean_title": false,
-      "estimated_value": 211950,
-      "deal_pct": 37.2
+      "estimated_value": 211386,
+      "deal_pct": 37.1
     },
     {
       "year": 2025,
@@ -1244,13 +1244,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "f81a1e214d68",
       "vin": "WP0CA2A93SS235275",
       "image_url": "https://pictures.dealer.com/d/driveadream3/0141/e2156c2eea15dd349d21ce7bba6e5cd5x.jpg",
       "clean_title": false,
-      "estimated_value": 212114,
-      "deal_pct": 38.7
+      "estimated_value": 211550,
+      "deal_pct": 38.5
     },
     {
       "year": 2024,
@@ -1265,13 +1265,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "9e3f58a08120",
       "vin": "WP0AB2A92RS219812",
       "image_url": "https://pictures.dealer.com/r/rickcasealfaromeofcaar/0866/26571867d407fe04ffd4fcd990c04abcx.jpg",
       "clean_title": false,
-      "estimated_value": 199790,
-      "deal_pct": 9.4
+      "estimated_value": 199392,
+      "deal_pct": 9.3
     },
     {
       "year": 2015,
@@ -1286,13 +1286,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "e5d18397a5de",
       "vin": "WP0CD2A95FS178719",
       "image_url": "https://pictures.dealer.com/r/rickcasealfaromeofcaar/1167/d38ee6ffc29a17095ae24fd8c9e5fda9x.jpg",
       "clean_title": false,
-      "estimated_value": 178061,
-      "deal_pct": 20.8
+      "estimated_value": 178809,
+      "deal_pct": 21.2
     },
     {
       "year": 2024,
@@ -1307,13 +1307,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "4c63c0749172",
       "vin": "WP0AA2A93RS208532",
       "image_url": "https://pictures.dealer.com/d/driveadream3/0748/624c4ec69734d8368707c44fd46f5e53x.jpg",
       "clean_title": false,
-      "estimated_value": 204149,
-      "deal_pct": 38.3
+      "estimated_value": 203744,
+      "deal_pct": 38.2
     },
     {
       "year": 2025,
@@ -1328,13 +1328,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-07",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "59d4cc82be08",
       "vin": "WP0AA2A98SS206054",
       "image_url": "https://pictures.dealer.com/d/driveadream3/0867/81b57796164db39e452cba0af4af99fdx.jpg",
       "clean_title": false,
-      "estimated_value": 212282,
-      "deal_pct": 39.9
+      "estimated_value": 211718,
+      "deal_pct": 39.8
     },
     {
       "year": 2025,
@@ -1349,13 +1349,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:38Z",
       "id": "b1f702335512",
       "vin": "WP0AA2A93SS207581",
       "image_url": "https://pictures.dealer.com/s/sunrisechevroletforesthills/1539/88e3ede2a27d8ac2239bba4520209167x.jpg",
       "clean_title": false,
-      "estimated_value": 198825,
-      "deal_pct": 25.1
+      "estimated_value": 198291,
+      "deal_pct": 24.9
     },
     {
       "year": 2014,
@@ -1370,13 +1370,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "7213d51c1a35",
       "vin": "WP0AD2A96ES166620",
       "image_url": "https://pictures.dealer.com/h/huskerbmwvtg/0356/e60095412043ff4621fd009e8d15ed84x.jpg",
       "clean_title": false,
-      "estimated_value": 149290,
-      "deal_pct": 10.9
+      "estimated_value": 150008,
+      "deal_pct": 11.3
     },
     {
       "year": 2025,
@@ -1391,13 +1391,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "d48e04d1d7a0",
       "vin": "WP0AB2A98SS226303",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/stock_images/5/2025PRC01_640/2025PRC012020143_640_01.jpg",
       "clean_title": null,
-      "estimated_value": 214323,
-      "deal_pct": -2.6
+      "estimated_value": 213755,
+      "deal_pct": -2.9
     },
     {
       "year": 2022,
@@ -1412,12 +1412,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-28",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "25544bac5dc4",
       "vin": "WP0AB2A99NS222006",
       "image_url": "https://pictures.dealer.com/c/cortesefordfd/1738/b606ca2183ad8d3249d3efb705bce584x.jpg",
       "clean_title": false,
-      "estimated_value": 198934,
+      "estimated_value": 198812,
       "deal_pct": 12.0
     },
     {
@@ -1433,13 +1433,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-19",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "2b07fa7cb6c9",
       "vin": "WP0AD2A96HS166752",
       "image_url": "https://pictures.dealer.com/a/americasxtremeautollc3/0357/feeb15c3a1ec789c37f794fa90e3eb32x.jpg",
       "clean_title": false,
-      "estimated_value": 156272,
-      "deal_pct": 21.3
+      "estimated_value": 156701,
+      "deal_pct": 21.5
     },
     {
       "year": 2024,
@@ -1454,13 +1454,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "35fb6b53131c",
       "vin": "WP0CA2A91RS238542",
       "image_url": "https://pictures.dealer.com/a/americasxtremeautollc3/0577/8afea1af5ccf2c553858294464c8c022x.jpg",
       "clean_title": false,
-      "estimated_value": 213502,
-      "deal_pct": 43.3
+      "estimated_value": 213082,
+      "deal_pct": 43.2
     },
     {
       "year": 2022,
@@ -1475,12 +1475,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "4761211d4530",
       "vin": "WP0AB2A9XNS220748",
       "image_url": "https://images.dealer.com/autodata/us/large_stockphoto/2022/USD20PRC013B0.jpg",
       "clean_title": false,
-      "estimated_value": 152227,
+      "estimated_value": 152116,
       "deal_pct": 11.8
     },
     {
@@ -1496,13 +1496,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "cfef6ed295b6",
       "vin": "WP0BB2A95PS233172",
       "image_url": "https://pictures.dealer.com/c/crowneurocarsdublinmb/0033/9575d6d6e15a4b13469d33bce14ce5fex.jpg",
       "clean_title": false,
-      "estimated_value": 189609,
-      "deal_pct": -8.3
+      "estimated_value": 189358,
+      "deal_pct": -8.5
     },
     {
       "year": 2023,
@@ -1517,13 +1517,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-03-07",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "cda5c536b03d",
       "vin": "WP0AB2A91PS220429",
       "image_url": "https://pictures.dealer.com/r/randycurnowbuickgmcinc/1140/d94603211be1c5c806315b4406a6b59bx.jpg",
       "clean_title": false,
-      "estimated_value": 189934,
-      "deal_pct": -4.8
+      "estimated_value": 189682,
+      "deal_pct": -4.9
     },
     {
       "year": 2024,
@@ -1538,13 +1538,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-07",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "b047497a8059",
       "vin": "WP0AB2A9XRS221839",
       "image_url": "https://pictures.dealer.com/r/randycurnowbuickgmcinc/0314/b94d31397ea2c6f3202350351f71d247x.jpg",
       "clean_title": false,
-      "estimated_value": 210414,
-      "deal_pct": 4.9
+      "estimated_value": 209999,
+      "deal_pct": 4.8
     },
     {
       "year": 2022,
@@ -1559,13 +1559,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-02-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "28328196b3ad",
       "vin": "WP0CD2A93NS260625",
       "image_url": "https://pictures.dealer.com/r/randycurnowbuickgmcinc/0380/98a38e73e3f1ead872cc41fe0bfc746bx.jpg",
       "clean_title": false,
-      "estimated_value": 210486,
-      "deal_pct": -33.0
+      "estimated_value": 210363,
+      "deal_pct": -33.1
     },
     {
       "year": 2021,
@@ -1580,12 +1580,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "6402d640137b",
       "vin": "WP0AA2A98MS205313",
       "image_url": "https://pictures.dealer.com/b/bmwoffortwashingtonbmw/1205/2780c5076386ee1c06792296c5bce82fx.jpg",
       "clean_title": false,
-      "estimated_value": 151662,
+      "estimated_value": 151656,
       "deal_pct": 20.8
     },
     {
@@ -1601,13 +1601,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "ceda62799e1b",
       "vin": "WP0AC2A92NS268466",
       "image_url": "https://images.dealer.com/autodata/us/color/2022/USD20PRC017A0/U2.jpg",
       "clean_title": false,
-      "estimated_value": 203700,
-      "deal_pct": -37.3
+      "estimated_value": 203577,
+      "deal_pct": -37.4
     },
     {
       "year": 2022,
@@ -1622,13 +1622,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-07",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "a7a440f6496d",
       "vin": "WP0AC2A98NS270366",
       "image_url": "https://pictures.dealer.com/r/randycurnowbuickgmcinc/1021/c8f4aea828c2ec78225c4aebbf0dc3d4x.jpg",
       "clean_title": false,
-      "estimated_value": 179271,
-      "deal_pct": -50.6
+      "estimated_value": 179153,
+      "deal_pct": -50.7
     },
     {
       "year": 2018,
@@ -1643,13 +1643,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2025-11-05",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "8b9e4512b86a",
       "vin": "WP0AC2A94JS176138",
       "image_url": "https://pictures.dealer.com/r/randycurnowbuickgmcinc/0164/58465751fbc0c17bfdaddc66e62735d9x.jpg",
       "clean_title": false,
-      "estimated_value": 148336,
-      "deal_pct": -38.2
+      "estimated_value": 148637,
+      "deal_pct": -37.9
     },
     {
       "year": 2017,
@@ -1664,13 +1664,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-03-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "e9d046531f32",
       "vin": "WP0BB2A95HS136572",
       "image_url": "https://pictures.dealer.com/r/randycurnowbuickgmcinc/0109/2498fff15327c93d8ecac4e875d2c75ax.jpg",
       "clean_title": false,
-      "estimated_value": 133591,
-      "deal_pct": 4.2
+      "estimated_value": 133948,
+      "deal_pct": 4.4
     },
     {
       "year": 2016,
@@ -1685,13 +1685,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-16",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "c4b963d40074",
       "vin": "WP0AD2A90GS166101",
       "image_url": "https://pictures.dealer.com/r/randycurnowbuickgmcinc/0281/1e5fb830710e8b8f95d5ed9095a5908fx.jpg",
       "clean_title": false,
-      "estimated_value": 138468,
-      "deal_pct": 9.7
+      "estimated_value": 138937,
+      "deal_pct": 10.0
     },
     {
       "year": 2022,
@@ -1706,13 +1706,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "adf679625bb3",
       "vin": "WP0AC2A90NS270443",
       "image_url": "https://pictures.dealer.com/g/garberporscherochester/1693/e6047377c4e0d693fd3e22b8f6a01a17x.jpg",
       "clean_title": false,
-      "estimated_value": 194420,
-      "deal_pct": -44.4
+      "estimated_value": 194299,
+      "deal_pct": -44.5
     },
     {
       "year": 2021,
@@ -1727,12 +1727,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "63c6e9920d6d",
       "vin": "WP0BB2A91MS235920",
       "image_url": "https://images.dealer.com/autodata/us/color/2021/USD10PRC018B0/U2.jpg",
       "clean_title": false,
-      "estimated_value": 199086,
+      "estimated_value": 199102,
       "deal_pct": -1.9
     },
     {
@@ -1748,12 +1748,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "0faaecc5243c",
       "vin": "WP0AA2A99MS205501",
       "image_url": "https://pictures.dealer.com/g/garberporscherochester/1198/e1627b1db90225bf0582b18965b4fc7ex.jpg",
       "clean_title": false,
-      "estimated_value": 183987,
+      "estimated_value": 183995,
       "deal_pct": 31.0
     },
     {
@@ -1769,13 +1769,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "5b7e9c0bef49",
       "vin": "WP0AB2A98RS220432",
       "image_url": "https://pictures.dealer.com/g/garberporscherochester/1083/d97112809341d44e4bbce730c5b5b184x.jpg",
       "clean_title": false,
-      "estimated_value": 194937,
-      "deal_pct": 2.6
+      "estimated_value": 194546,
+      "deal_pct": 2.4
     },
     {
       "year": 2020,
@@ -1790,13 +1790,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "bd736f162fdd",
       "vin": "WP0AB2A91LS225835",
       "image_url": "https://images.dealer.com/ddc/vehicles/2020/Porsche/911/Coupe/trim_Carrera_S_a3bc28/color/White-0Q-221,224,221-640-en_US.jpg",
       "clean_title": false,
-      "estimated_value": 162372,
-      "deal_pct": 19.3
+      "estimated_value": 162482,
+      "deal_pct": 19.4
     },
     {
       "year": 2023,
@@ -1811,13 +1811,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "551c09b64505",
       "vin": "WP0AA2A93PS205112",
       "image_url": "https://pictures.dealer.com/e/envisionmbwestcovinamb/0725/59de437ddb1f1003353d4b8ad1621705x.jpg",
       "clean_title": false,
-      "estimated_value": 191088,
-      "deal_pct": 34.2
+      "estimated_value": 190835,
+      "deal_pct": 34.1
     },
     {
       "year": 2022,
@@ -1832,13 +1832,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "198f84531a7d",
       "vin": "WP0AB2A96NS220584",
       "image_url": "https://pictures.dealer.com/a/audioftysonscorneraoa/1766/0e5cc2fd2dcea5f93092ee3199e8f868x.jpg",
       "clean_title": false,
-      "estimated_value": 160337,
-      "deal_pct": 13.3
+      "estimated_value": 160223,
+      "deal_pct": 13.2
     },
     {
       "year": 2022,
@@ -1853,13 +1853,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "3dd223b1e994",
       "vin": "WP0AA2A98NS205684",
       "image_url": "https://images.dealer.com/ddc/vehicles/2022/Porsche/911/Coupe/trim_Carrera_547a46/color/Dolomite%20Silver%20Metallic-F0-164,165,158-640-en_US.jpg",
       "clean_title": false,
-      "estimated_value": 168096,
-      "deal_pct": 23.5
+      "estimated_value": 167980,
+      "deal_pct": 23.4
     },
     {
       "year": 2024,
@@ -1874,13 +1874,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-13",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "16ec84071bdb",
       "vin": "WP0AA2A97RS209280",
       "image_url": "https://pictures.dealer.com/h/houseofimportsmb/0505/2824bfd2b3eb29231366e8625403a11cx.jpg",
       "clean_title": false,
-      "estimated_value": 204446,
-      "deal_pct": 34.0
+      "estimated_value": 204040,
+      "deal_pct": 33.8
     },
     {
       "year": 2023,
@@ -1895,13 +1895,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-06",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "ed56cd76619c",
       "vin": "WP0AA2A94PS205264",
       "image_url": "https://assets.cai-media-management.com/resize/2048x2048/common-vehicle-media/0b02fff2-19b6-48c1-a861-a04c9d782c48.jpg",
       "clean_title": null,
-      "estimated_value": 187382,
-      "deal_pct": 32.2
+      "estimated_value": 187132,
+      "deal_pct": 32.1
     },
     {
       "year": 2024,
@@ -1916,13 +1916,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "cea1f0ecf813",
       "vin": "WP0AC2A92RS263838",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1402/a2b7fd499e190f1e5c3a8195452bbb41x.jpg",
       "clean_title": false,
-      "estimated_value": 201471,
-      "deal_pct": -41.5
+      "estimated_value": 201070,
+      "deal_pct": -41.7
     },
     {
       "year": 2024,
@@ -1937,13 +1937,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-10",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "86ce60b7c7b2",
       "vin": "WP0AB2A99RS225428",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0328/358f7b32faa16ef0dc389de5bf230892x.jpg",
       "clean_title": false,
-      "estimated_value": 211268,
-      "deal_pct": -122.5
+      "estimated_value": 210852,
+      "deal_pct": -122.9
     },
     {
       "year": 2024,
@@ -1958,13 +1958,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-17",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "3218eec5d038",
       "vin": "WP0AD2A97RS252010",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0731/24365bfdf8664bc492cdf67e613e10e0x.jpg",
       "clean_title": false,
-      "estimated_value": 211898,
-      "deal_pct": -40.6
+      "estimated_value": 211481,
+      "deal_pct": -40.9
     },
     {
       "year": 2025,
@@ -1979,13 +1979,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "aafeee1a38d7",
       "vin": "WP0AD2A98SS265421",
       "image_url": "https://pictures.dealer.com/g/gaatlantalr/1096/aa01dde16b4725ca97b587cda64c98c5x.jpg",
       "clean_title": false,
-      "estimated_value": 214847,
-      "deal_pct": -43.4
+      "estimated_value": 214278,
+      "deal_pct": -43.8
     },
     {
       "year": 2022,
@@ -2000,12 +2000,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "8a1721e9dc83",
       "vin": "WP0AB2A99NS220465",
       "image_url": "https://pictures.dealer.com/g/gaatlantalr/0017/05bf91c78d689f3ac806bfac9315a45dx.jpg",
       "clean_title": false,
-      "estimated_value": 166762,
+      "estimated_value": 166647,
       "deal_pct": 21.7
     },
     {
@@ -2021,12 +2021,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-01-31",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "5f88a95da60c",
       "vin": "WP0CD2A95MS263329",
       "image_url": "https://pictures.dealer.com/j/johnsonporsche/1322/bbb78a923f06b5c0542424dba7b6f2b0x.jpg",
       "clean_title": false,
-      "estimated_value": 163894,
+      "estimated_value": 163893,
       "deal_pct": -40.9
     },
     {
@@ -2042,13 +2042,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-01-24",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "d8e4d646c52c",
       "vin": "WP0AB2A98PS220332",
       "image_url": "https://pictures.dealer.com/j/johnsonporsche/0522/8f75ffba82d18146e40b71338d5c3fc9x.jpg",
       "clean_title": false,
-      "estimated_value": 168414,
-      "deal_pct": 11.0
+      "estimated_value": 168182,
+      "deal_pct": 10.9
     },
     {
       "year": 2022,
@@ -2063,12 +2063,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "ac0d91b637ea",
       "vin": "WP0BB2A90NS231522",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1791/804832ae50f4ebd0153bedf160b0c110x.jpg",
       "clean_title": false,
-      "estimated_value": 200980,
+      "estimated_value": 200858,
       "deal_pct": -4.5
     },
     {
@@ -2084,13 +2084,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "5c5f5c6c5298",
       "vin": "WP0AF2A99GS193288",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1990/c943435dd1f564db0062e40c23537b8ax.jpg",
       "clean_title": false,
-      "estimated_value": 298299,
-      "deal_pct": 27.9
+      "estimated_value": 295379,
+      "deal_pct": 27.2
     },
     {
       "year": 2023,
@@ -2105,13 +2105,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-30",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "66856c0ceb76",
       "vin": "WP0BB2A90PS234102",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1488/39cbd01eefec833024430618e4149d1dx.jpg",
       "clean_title": false,
-      "estimated_value": 191602,
-      "deal_pct": -7.5
+      "estimated_value": 191349,
+      "deal_pct": -7.7
     },
     {
       "year": 2015,
@@ -2126,13 +2126,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "1b334b95f375",
       "vin": "WP0AC2A96FS183373",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1762/e351ed9dfcb48271adebe55c1de350b9x.jpg",
       "clean_title": false,
-      "estimated_value": 133284,
-      "deal_pct": -18.5
+      "estimated_value": 133826,
+      "deal_pct": -18.1
     },
     {
       "year": 2014,
@@ -2147,13 +2147,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "2bdf0307faf9",
       "vin": "WP0AC2A94ES183225",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0549/857ec5047fbf37d4a60476715a047f7dx.jpg",
       "clean_title": false,
-      "estimated_value": 144824,
-      "deal_pct": -7.0
+      "estimated_value": 145519,
+      "deal_pct": -6.5
     },
     {
       "year": 2025,
@@ -2168,13 +2168,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-10",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "0b2e202fa121",
       "vin": "WP0AA2A94SS208996",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1144/db1ac63555000a71038a8238d4a28fb0x.jpg",
       "clean_title": false,
-      "estimated_value": 213840,
-      "deal_pct": 30.8
+      "estimated_value": 213273,
+      "deal_pct": 30.6
     },
     {
       "year": 2018,
@@ -2189,13 +2189,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "0dbdfb3fbba3",
       "vin": "WP0AA2A94JS106564",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1682/f031ec3caa80e967448f95ba8190a8bcx.jpg",
       "clean_title": false,
-      "estimated_value": 164234,
-      "deal_pct": 14.8
+      "estimated_value": 164575,
+      "deal_pct": 14.9
     },
     {
       "year": 2019,
@@ -2210,13 +2210,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "b856677152c2",
       "vin": "WP0BB2A90KS125096",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0564/eddd12fd5518d21157f59c499d308eaex.jpg",
       "clean_title": false,
-      "estimated_value": 114023,
-      "deal_pct": -21.9
+      "estimated_value": 114161,
+      "deal_pct": -21.7
     },
     {
       "year": 2022,
@@ -2231,12 +2231,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "f05e39abee02",
       "vin": "WP0AA2A91NS206479",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0738/b3e94731bfb984e6b580f812ff4099efx.jpg",
       "clean_title": false,
-      "estimated_value": 186294,
+      "estimated_value": 186175,
       "deal_pct": 32.6
     },
     {
@@ -2252,13 +2252,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "31af1f111d73",
       "vin": "WP0AD2A93GS166352",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0349/7d8762f387ec6cc418f9a531c8f0c10fx.jpg",
       "clean_title": false,
-      "estimated_value": 157840,
-      "deal_pct": 16.7
+      "estimated_value": 158384,
+      "deal_pct": 17.0
     },
     {
       "year": 2015,
@@ -2273,13 +2273,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "72a527c22519",
       "vin": "WP0BB2A90FS135567",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0277/dc5680a7ad4987944c9dbeae74420e06x.jpg",
       "clean_title": false,
-      "estimated_value": 166562,
-      "deal_pct": 19.6
+      "estimated_value": 167256,
+      "deal_pct": 19.9
     },
     {
       "year": 2017,
@@ -2294,13 +2294,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "7e235f24a5dd",
       "vin": "WP0BB2A93HS136277",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1205/8a6e484c5f479a2b2069d4aa5824b096x.jpg",
       "clean_title": false,
-      "estimated_value": 129031,
-      "deal_pct": -0.7
+      "estimated_value": 129374,
+      "deal_pct": -0.5
     },
     {
       "year": 2020,
@@ -2315,12 +2315,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-10",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "85d4aef2ff7b",
       "vin": "WP0AB2A93LS228042",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1983/055387d332007ce46ccd19bd19cac8abx.jpg",
       "clean_title": false,
-      "estimated_value": 160043,
+      "estimated_value": 160151,
       "deal_pct": 22.2
     },
     {
@@ -2336,13 +2336,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "0c36f67007bd",
       "vin": "WP0CB2A9XJS147206",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1522/de952295ccc41490fc591b97ef5dbac3x.jpg",
       "clean_title": false,
-      "estimated_value": 159346,
-      "deal_pct": 22.2
+      "estimated_value": 159674,
+      "deal_pct": 22.3
     },
     {
       "year": 2016,
@@ -2357,13 +2357,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "c1b703b92efb",
       "vin": "WP0BB2A95GS136764",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/894908d464aa4f3e96364f063442f5c5.jpg",
       "clean_title": null,
-      "estimated_value": 111033,
-      "deal_pct": -14.4
+      "estimated_value": 111397,
+      "deal_pct": -14.0
     },
     {
       "year": 2022,
@@ -2378,13 +2378,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-19",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "c59ac862b100",
       "vin": "WP0AD2A98NS254407",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/3e896a292bb94e4a93937eda7f0f5ec1.jpg",
       "clean_title": null,
-      "estimated_value": 139143,
-      "deal_pct": -39.1
+      "estimated_value": 139035,
+      "deal_pct": -39.2
     },
     {
       "year": 2016,
@@ -2399,13 +2399,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-18",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "bc22ea1e622e",
       "vin": "WP0CB2A97GS154574",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/ef34176afa9f4a4f82ea59cb00827deb.jpg",
       "clean_title": null,
-      "estimated_value": 150338,
-      "deal_pct": 18.5
+      "estimated_value": 150852,
+      "deal_pct": 18.8
     },
     {
       "year": 2021,
@@ -2420,12 +2420,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "feb039531678",
       "vin": "WP0AA2A97MS206520",
       "image_url": "https://pictures.dealer.com/m/mercedesbenzofflemingtonmb/0248/487a12bdb353d97a9670eb72d160defcx.jpg",
       "clean_title": false,
-      "estimated_value": 186266,
+      "estimated_value": 186275,
       "deal_pct": 33.5
     },
     {
@@ -2441,13 +2441,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "8c178fc902c5",
       "vin": "WP0AB2A93PS220240",
       "image_url": "https://pictures.dealer.com/p/paulmillerbmw/1838/e3e814a256cc906c0b52c9059018dee3x.jpg",
       "clean_title": false,
-      "estimated_value": 192746,
-      "deal_pct": 18.8
+      "estimated_value": 192492,
+      "deal_pct": 18.7
     },
     {
       "year": 2021,
@@ -2462,12 +2462,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "11a7a491728f",
       "vin": "WP0AD2A94MS257156",
       "image_url": "https://pictures.dealer.com/c/crownjaguarjag/0998/813ad4a4792c806fee5bcf9a596f0164x.jpg",
       "clean_title": false,
-      "estimated_value": 141950,
+      "estimated_value": 141940,
       "deal_pct": -47.0
     },
     {
@@ -2483,13 +2483,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "73b32b7e98a3",
       "vin": "WP0AC2A99PS270265",
       "image_url": "https://pictures.dealer.com/c/crownjaguarjag/0257/76571ee799d16d7af6f430e601d2fc8fx.jpg",
       "clean_title": false,
-      "estimated_value": 202205,
-      "deal_pct": -37.2
+      "estimated_value": 201943,
+      "deal_pct": -37.4
     },
     {
       "year": 2023,
@@ -2504,13 +2504,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-03",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "9e15a1885b90",
       "vin": "WP0AB2A91PS220317",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/3ee41f978b1a46599d1b7f59e827deb5.jpg",
       "clean_title": null,
-      "estimated_value": 185400,
-      "deal_pct": 2.9
+      "estimated_value": 185152,
+      "deal_pct": 2.8
     },
     {
       "year": 2022,
@@ -2525,13 +2525,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-17",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:45:08Z",
+      "scraped_at": "2026-05-24T09:36:39Z",
       "id": "68369d06481b",
       "vin": "WP0AC2A94NS268498",
       "image_url": "https://assets.cai-media-management.com/resize/1920x1920/common-vehicle-media/fae5d8d6-b9f8-4dd3-a1fd-374af68f031b.jpg",
       "clean_title": null,
-      "estimated_value": 200768,
-      "deal_pct": -34.5
+      "estimated_value": 200647,
+      "deal_pct": -34.6
     },
     {
       "year": 2022,
@@ -2546,13 +2546,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:09Z",
+      "scraped_at": "2026-05-24T09:36:40Z",
       "id": "9004b0af5fe4",
       "vin": "WP0AC2A9XNS271034",
       "image_url": "https://i.ebayimg.com/images/g/nhYAAeSwhANp3dQI/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 205633,
-      "deal_pct": -42.9
+      "estimated_value": 205511,
+      "deal_pct": -43.0
     },
     {
       "year": 2023,
@@ -2567,13 +2567,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:11Z",
+      "scraped_at": "2026-05-24T09:36:41Z",
       "id": "9756c43cdb89",
       "vin": "WP0AF2A92PS278120",
       "image_url": "https://i.ebayimg.com/images/g/O1wAAeSwi5hpyC56/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 332371,
-      "deal_pct": -18.8
+      "estimated_value": 327542,
+      "deal_pct": -20.6
     },
     {
       "year": 2022,
@@ -2588,12 +2588,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:11Z",
+      "scraped_at": "2026-05-24T09:36:41Z",
       "id": "36a8200e665a",
       "vin": "WP0AC2A97NS270097",
       "image_url": "https://i.ebayimg.com/images/g/aZcAAeSw-8pqESRp/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 203176,
+      "estimated_value": 203054,
       "deal_pct": -28.0
     },
     {
@@ -2609,34 +2609,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:12Z",
+      "scraped_at": "2026-05-24T09:36:42Z",
       "id": "3ae110217ab3",
       "vin": "WP0AC2A99FS184162",
       "image_url": "https://i.ebayimg.com/images/g/al0AAeSwNF5qBUD2/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 145247,
-      "deal_pct": 8.4
-    },
-    {
-      "year": 2016,
-      "variant": "GT3 RS",
-      "price": 214995,
-      "mileage": 20316,
-      "title": "2016 Porsche 911 GT3 RS",
-      "url": "https://www.ebay.com/itm/327169929532?_skw=Porsche+911+GT3&hash=item4c2cd8f13c:g:TbsAAeSwM4ZqBUC9",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:13Z",
-      "id": "fa79c712629c",
-      "vin": "WP0AF2A92GS192094",
-      "image_url": "https://i.ebayimg.com/images/g/TbsAAeSwM4ZqBUC9/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 269142,
-      "deal_pct": 20.1
+      "estimated_value": 145843,
+      "deal_pct": 8.8
     },
     {
       "year": 2024,
@@ -2651,13 +2630,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:14Z",
+      "scraped_at": "2026-05-24T09:36:42Z",
       "id": "4cf6786acd27",
       "vin": "WP0AF2A93RS272782",
       "image_url": "https://i.ebayimg.com/images/g/Uw8AAeSwyXRqDauf/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 351643,
-      "deal_pct": -50.7
+      "estimated_value": 346302,
+      "deal_pct": -53.0
+    },
+    {
+      "year": 2016,
+      "variant": "GT3 RS",
+      "price": 214995,
+      "mileage": 20316,
+      "title": "2016 Porsche 911 GT3 RS",
+      "url": "https://www.ebay.com/itm/327169929532?_skw=Porsche+911+GT3&hash=item4c2cd8f13c:g:TbsAAeSwM4ZqBUC9",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-24T09:36:43Z",
+      "id": "fa79c712629c",
+      "vin": "WP0AF2A92GS192094",
+      "image_url": "https://i.ebayimg.com/images/g/TbsAAeSwM4ZqBUC9/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 266495,
+      "deal_pct": 19.3
     },
     {
       "year": 2018,
@@ -2672,13 +2672,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:14Z",
+      "scraped_at": "2026-05-24T09:36:43Z",
       "id": "0cfda4eb4179",
       "vin": "WP0AC2A92JS175120",
       "image_url": "https://i.ebayimg.com/images/g/kz0AAeSwXf5p~dfB/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 177144,
-      "deal_pct": -24.2
+      "estimated_value": 177518,
+      "deal_pct": -23.9
     },
     {
       "year": 2023,
@@ -2693,12 +2693,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:15Z",
+      "scraped_at": "2026-05-24T09:36:44Z",
       "id": "a6f21485b5dd",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/2mUAAeSwvQ9qDJ2R/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 318451,
+      "estimated_value": 318437,
       "deal_pct": 10.5
     },
     {
@@ -2714,13 +2714,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:15Z",
+      "scraped_at": "2026-05-24T09:36:45Z",
       "id": "27a589126a54",
       "vin": "WP0AF2A9XKS164990",
       "image_url": "https://i.ebayimg.com/images/g/i9IAAeSw171p1~eH/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 263561,
-      "deal_pct": 8.9
+      "estimated_value": 260424,
+      "deal_pct": 7.8
     },
     {
       "year": 2014,
@@ -2735,34 +2735,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:16Z",
+      "scraped_at": "2026-05-24T09:36:45Z",
       "id": "84e7dcae3eb5",
       "vin": "WP0AC2A91ES183506",
       "image_url": "https://i.ebayimg.com/images/g/SJYAAeSwd-5p-lsQ/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 154063,
-      "deal_pct": 10.8
-    },
-    {
-      "year": 2022,
-      "variant": "GT3",
-      "price": 298888,
-      "mileage": 1373,
-      "title": "2022 Porsche 911 GT3",
-      "url": "https://www.ebay.com/itm/397974135446?_skw=Porsche+911+GT3&hash=item5ca91b6296:g:akwAAeSw3WpqDvGn",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:16Z",
-      "id": "b15666a6dcf4",
-      "vin": "WP0AC2A9XNS270871",
-      "image_url": "https://i.ebayimg.com/images/g/akwAAeSw3WpqDvGn/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 208003,
-      "deal_pct": -43.7
+      "estimated_value": 154807,
+      "deal_pct": 11.2
     },
     {
       "year": 2022,
@@ -2777,13 +2756,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:17Z",
+      "scraped_at": "2026-05-24T09:36:45Z",
       "id": "b30e22c9ec26",
       "vin": "WP0AC2A98NS269606",
       "image_url": "https://i.ebayimg.com/images/g/uM8AAeSwuC9pz7Pu/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 298399,
-      "deal_pct": 4.5
+      "estimated_value": 298584,
+      "deal_pct": 4.6
+    },
+    {
+      "year": 2022,
+      "variant": "GT3",
+      "price": 298888,
+      "mileage": 1373,
+      "title": "2022 Porsche 911 GT3",
+      "url": "https://www.ebay.com/itm/397974135446?_skw=Porsche+911+GT3&hash=item5ca91b6296:g:akwAAeSw3WpqDvGn",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-24T09:36:45Z",
+      "id": "b15666a6dcf4",
+      "vin": "WP0AC2A9XNS270871",
+      "image_url": "https://i.ebayimg.com/images/g/akwAAeSw3WpqDvGn/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 207880,
+      "deal_pct": -43.8
     },
     {
       "year": 2016,
@@ -2798,13 +2798,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:18Z",
+      "scraped_at": "2026-05-24T09:36:46Z",
       "id": "e6a95f37aa21",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/NU0AAeSwe5lp8r3y/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 241894,
-      "deal_pct": 19.7
+      "estimated_value": 239503,
+      "deal_pct": 18.9
     },
     {
       "year": 2022,
@@ -2819,13 +2819,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:18Z",
+      "scraped_at": "2026-05-24T09:36:47Z",
       "id": "739080445074",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/hroAAeSwzJ1qEW7-/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 205219,
-      "deal_pct": -68.1
+      "estimated_value": 205096,
+      "deal_pct": -68.2
     },
     {
       "year": 2025,
@@ -2840,13 +2840,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:18Z",
+      "scraped_at": "2026-05-24T09:36:47Z",
       "id": "8f92bd8f5fa2",
       "vin": "WP0AF2A92SS278224",
       "image_url": "https://i.ebayimg.com/images/g/ZOcAAeSw-jZqDN1F/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 324655,
-      "deal_pct": -25.4
+      "estimated_value": 319491,
+      "deal_pct": -27.4
     },
     {
       "year": 2022,
@@ -2861,12 +2861,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:19Z",
+      "scraped_at": "2026-05-24T09:36:47Z",
       "id": "bc2f70ec6592",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/egIAAeSwSoJpvJOg/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 285013,
+      "estimated_value": 285184,
       "deal_pct": 4.9
     },
     {
@@ -2882,13 +2882,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:19Z",
+      "scraped_at": "2026-05-24T09:36:47Z",
       "id": "7e7cbfad5ad5",
       "vin": "WP0AC2A97NS271055",
       "image_url": "https://i.ebayimg.com/images/g/cwQAAeSwYOtqDTJO/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 205661,
-      "deal_pct": -36.1
+      "estimated_value": 205538,
+      "deal_pct": -36.2
     },
     {
       "year": 2024,
@@ -2903,13 +2903,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:20Z",
+      "scraped_at": "2026-05-24T09:36:48Z",
       "id": "15f813887031",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/9KMAAeSwETJp7Foq/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 206902,
-      "deal_pct": -18.4
+      "estimated_value": 206492,
+      "deal_pct": -18.6
     },
     {
       "year": 2022,
@@ -2924,34 +2924,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:20Z",
+      "scraped_at": "2026-05-24T09:36:48Z",
       "id": "91ea4d2f629c",
       "vin": "WP0AC2A94NS269487",
       "image_url": "https://i.ebayimg.com/images/g/4r8AAeSwx-9qAzg2/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 306188,
+      "estimated_value": 306381,
       "deal_pct": -1.2
-    },
-    {
-      "year": 2018,
-      "variant": "GT3",
-      "price": 209800,
-      "mileage": 20283,
-      "title": "2018 Porsche 911 GT3 Coupe Lava Orange Bucket Seats Carbon Fiber Front PPF Roll",
-      "url": "https://www.ebay.com/itm/188413722838?_skw=Porsche+911+GT3&hash=item2bde5540d6:g:wwAAAeSwlKlqEZ7j",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:21Z",
-      "id": "7931660614ee",
-      "vin": "00000000000000000",
-      "image_url": "https://i.ebayimg.com/images/g/wwAAAeSwlKlqEZ7j/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 164687,
-      "deal_pct": -27.4
     },
     {
       "year": 2022,
@@ -2966,13 +2945,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:21Z",
+      "scraped_at": "2026-05-24T09:36:49Z",
       "id": "bb08d59ad574",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/ZAoAAeSwpB1qBgyY/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 171071,
-      "deal_pct": -50.8
+      "estimated_value": 170954,
+      "deal_pct": -50.9
+    },
+    {
+      "year": 2018,
+      "variant": "GT3",
+      "price": 209800,
+      "mileage": 20283,
+      "title": "2018 Porsche 911 GT3 Coupe Lava Orange Bucket Seats Carbon Fiber Front PPF Roll",
+      "url": "https://www.ebay.com/itm/188413722838?_skw=Porsche+911+GT3&hash=item2bde5540d6:g:wwAAAeSwlKlqEZ7j",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-24T09:36:49Z",
+      "id": "7931660614ee",
+      "vin": "00000000000000000",
+      "image_url": "https://i.ebayimg.com/images/g/wwAAAeSwlKlqEZ7j/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 165029,
+      "deal_pct": -27.1
     },
     {
       "year": 2024,
@@ -2987,13 +2987,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:22Z",
+      "scraped_at": "2026-05-24T09:36:49Z",
       "id": "46f08f76ddfa",
       "vin": "WP0AC2A94RS263100",
       "image_url": "https://i.ebayimg.com/images/g/4HkAAeSwCB9p7LQe/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 210204,
-      "deal_pct": -37.4
+      "estimated_value": 209790,
+      "deal_pct": -37.7
     },
     {
       "year": 2023,
@@ -3008,55 +3008,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:23Z",
+      "scraped_at": "2026-05-24T09:36:50Z",
       "id": "3be7f7e326e7",
       "vin": "WP0AC2A96PS270031",
       "image_url": "https://i.ebayimg.com/images/g/yWUAAeSwTU5p66kb/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 298685,
+      "estimated_value": 298663,
       "deal_pct": -0.1
-    },
-    {
-      "year": 2019,
-      "variant": "GT3 RS",
-      "price": 319980,
-      "mileage": 6100,
-      "title": "2019 Porsche 911 GT3 RS Lizard Green",
-      "url": "https://www.ebay.com/itm/366430690498?_skw=Porsche+911+GT3&hash=item5550f89cc2:g:pSAAAeSw3UtqEo~S",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:24Z",
-      "id": "7d78fe78a292",
-      "vin": "00000000000000000",
-      "image_url": "https://i.ebayimg.com/images/g/pSAAAeSw3UtqEo~S/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 320767,
-      "deal_pct": 0.2
-    },
-    {
-      "year": 2016,
-      "variant": "GT3 RS",
-      "price": 206995,
-      "mileage": 17285,
-      "title": "2016 Porsche 911 GT3 RS",
-      "url": "https://www.ebay.com/itm/327169930973?_skw=Porsche+911+GT3&hash=item4c2cd8f6dd:g:O08AAeSwo41qBUDZ",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:25Z",
-      "id": "2c7454b96d0a",
-      "vin": "WP0AF2A96GS192325",
-      "image_url": "https://i.ebayimg.com/images/g/O08AAeSwo41qBUDZ/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 277679,
-      "deal_pct": 25.5
     },
     {
       "year": 2019,
@@ -3071,13 +3029,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:25Z",
+      "scraped_at": "2026-05-24T09:36:51Z",
       "id": "de6632723d5a",
       "vin": "WP0AF2A93KS165205",
       "image_url": "https://i.ebayimg.com/images/g/NWAAAeSwgHhpxflK/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 320721,
-      "deal_pct": 12.7
+      "estimated_value": 316932,
+      "deal_pct": 11.7
     },
     {
       "year": 2023,
@@ -3092,13 +3050,55 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:26Z",
+      "scraped_at": "2026-05-24T09:36:52Z",
       "id": "131aace4da65",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/EWQAAeSwHNFqBgyY/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 260225,
+      "estimated_value": 260190,
       "deal_pct": 0.5
+    },
+    {
+      "year": 2016,
+      "variant": "GT3 RS",
+      "price": 206995,
+      "mileage": 17285,
+      "title": "2016 Porsche 911 GT3 RS",
+      "url": "https://www.ebay.com/itm/327169930973?_skw=Porsche+911+GT3&hash=item4c2cd8f6dd:g:O08AAeSwo41qBUDZ",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-24T09:36:52Z",
+      "id": "2c7454b96d0a",
+      "vin": "WP0AF2A96GS192325",
+      "image_url": "https://i.ebayimg.com/images/g/O08AAeSwo41qBUDZ/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 274952,
+      "deal_pct": 24.7
+    },
+    {
+      "year": 2019,
+      "variant": "GT3 RS",
+      "price": 319980,
+      "mileage": 6100,
+      "title": "2019 Porsche 911 GT3 RS Lizard Green",
+      "url": "https://www.ebay.com/itm/366430690498?_skw=Porsche+911+GT3&hash=item5550f89cc2:g:pSAAAeSw3UtqEo~S",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-24T09:36:52Z",
+      "id": "7d78fe78a292",
+      "vin": "00000000000000000",
+      "image_url": "https://i.ebayimg.com/images/g/pSAAAeSw3UtqEo~S/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 316978,
+      "deal_pct": -0.9
     },
     {
       "year": 2024,
@@ -3113,12 +3113,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:26Z",
+      "scraped_at": "2026-05-24T09:36:52Z",
       "id": "2a61e5082eab",
       "vin": "WP0AC2A95RS263347",
       "image_url": "https://i.ebayimg.com/images/g/eJsAAeSw6oxqDy3L/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 306951,
+      "estimated_value": 306720,
       "deal_pct": -2.6
     },
     {
@@ -3134,34 +3134,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:27Z",
+      "scraped_at": "2026-05-24T09:36:53Z",
       "id": "e066a7bad30e",
       "vin": "WP0AC2A98JS176448",
       "image_url": "https://i.ebayimg.com/images/g/E8wAAeSw37VqBUDT/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 153754,
-      "deal_pct": -36.6
-    },
-    {
-      "year": 2025,
-      "variant": "GT3 RS",
-      "price": 443900,
-      "mileage": 592,
-      "title": "2025 Porsche 911 GT3 RS",
-      "url": "https://www.ebay.com/itm/377203132115?_skw=Porsche+911+GT3&hash=item57d30f06d3:g:Oi4AAeSwM4Zp9ee0",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:28Z",
-      "id": "23c5f523bbc9",
-      "vin": "WP0AF2A97SS278932",
-      "image_url": "https://i.ebayimg.com/images/g/Oi4AAeSwM4Zp9ee0/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 359781,
-      "deal_pct": -23.4
+      "estimated_value": 154068,
+      "deal_pct": -36.3
     },
     {
       "year": 2022,
@@ -3176,13 +3155,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:28Z",
+      "scraped_at": "2026-05-24T09:36:53Z",
       "id": "4ace60174cf9",
       "vin": "WP0AC2A95NS269126",
       "image_url": "https://i.ebayimg.com/images/g/7HMAAeSwjapqDiEQ/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 210944,
-      "deal_pct": -22.7
+      "estimated_value": 210821,
+      "deal_pct": -22.8
     },
     {
       "year": 2022,
@@ -3197,12 +3176,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:29Z",
+      "scraped_at": "2026-05-24T09:36:54Z",
       "id": "da07ba46f60c",
       "vin": "WP0AC2A99NS270344",
       "image_url": "https://i.ebayimg.com/images/g/4YcAAeSwe69qBUDF/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 180729,
+      "estimated_value": 180610,
       "deal_pct": -35.6
     },
     {
@@ -3218,13 +3197,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:29Z",
+      "scraped_at": "2026-05-24T09:36:54Z",
       "id": "3cf9020fa750",
       "vin": "WP0AC2A98JS174733",
       "image_url": "https://i.ebayimg.com/images/g/GRkAAeSwfLxp~ops/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 164209,
-      "deal_pct": -24.8
+      "estimated_value": 164550,
+      "deal_pct": -24.6
     },
     {
       "year": 2018,
@@ -3239,13 +3218,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:29Z",
+      "scraped_at": "2026-05-24T09:36:54Z",
       "id": "ce46dcf46572",
       "vin": "WP0AC2A93JS175384",
       "image_url": "https://i.ebayimg.com/images/g/vAIAAeSw6YdqDJ3A/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 160410,
-      "deal_pct": -49.6
+      "estimated_value": 160741,
+      "deal_pct": -49.2
     },
     {
       "year": 2018,
@@ -3260,13 +3239,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:30Z",
+      "scraped_at": "2026-05-24T09:36:54Z",
       "id": "673e41a40176",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/XgIAAeSwXbZqEZ7R/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 164687,
-      "deal_pct": -27.4
+      "estimated_value": 165029,
+      "deal_pct": -27.1
     },
     {
       "year": 2015,
@@ -3281,13 +3260,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:31Z",
+      "scraped_at": "2026-05-24T09:36:55Z",
       "id": "df3792935ff2",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/psUAAeSw7IlqDv2r/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 157115,
-      "deal_pct": 4.6
+      "estimated_value": 157765,
+      "deal_pct": 5.0
     },
     {
       "year": 2018,
@@ -3302,34 +3281,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:32Z",
+      "scraped_at": "2026-05-24T09:36:56Z",
       "id": "0a0c5945c64b",
       "vin": "WP0AC2A99JS175101",
       "image_url": "https://i.ebayimg.com/images/g/mkoAAeSwyXRqDijb/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 185372,
-      "deal_pct": -21.3
-    },
-    {
-      "year": 2024,
-      "variant": "GT3 RS",
-      "price": 549996,
-      "mileage": 3829,
-      "title": "2024 Porsche 911 GT3 RS MANTHEY",
-      "url": "https://www.ebay.com/itm/236823155516?_skw=Porsche+911+GT3&hash=item3723c2933c:g:OEgAAeSwGBxpwRHL",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:32Z",
-      "id": "e8e65df36b2e",
-      "vin": "WP0AF2A95RS272394",
-      "image_url": "https://i.ebayimg.com/images/g/OEgAAeSwGBxpwRHL/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 344631,
-      "deal_pct": -59.6
+      "estimated_value": 185767,
+      "deal_pct": -21.1
     },
     {
       "year": 2022,
@@ -3344,34 +3302,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:33Z",
+      "scraped_at": "2026-05-24T09:36:56Z",
       "id": "03dd1d6a201d",
       "vin": "WP0AC2A9XNS270126",
       "image_url": "https://i.ebayimg.com/images/g/lkwAAeSwwRFqCbRS/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 199114,
-      "deal_pct": -40.6
-    },
-    {
-      "year": 2022,
-      "variant": "GT3 Touring",
-      "price": 282990,
-      "mileage": 1263,
-      "title": "2022 Porsche 911 GT3 Touring Package PCCB Front Lift 6 SPEED!!",
-      "url": "https://www.ebay.com/itm/377195952955?_skw=Porsche+911+GT3&hash=item57d2a17b3b:g:llQAAeSwgERpzGZi",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:33Z",
-      "id": "ae1a775ce208",
-      "vin": "00000000000000000",
-      "image_url": "https://i.ebayimg.com/images/g/llQAAeSwgERpzGZi/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 315636,
-      "deal_pct": 10.3
+      "estimated_value": 198993,
+      "deal_pct": -40.7
     },
     {
       "year": 2024,
@@ -3386,13 +3323,55 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:34Z",
+      "scraped_at": "2026-05-24T09:36:57Z",
       "id": "91a134b5a429",
       "vin": "WP0AF2A98RS273877",
       "image_url": "https://i.ebayimg.com/images/g/hcQAAeSw3Wpp~wXE/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 357295,
-      "deal_pct": -23.1
+      "estimated_value": 351872,
+      "deal_pct": -25.0
+    },
+    {
+      "year": 2024,
+      "variant": "GT3 RS",
+      "price": 549996,
+      "mileage": 3829,
+      "title": "2024 Porsche 911 GT3 RS MANTHEY",
+      "url": "https://www.ebay.com/itm/236823155516?_skw=Porsche+911+GT3&hash=item3723c2933c:g:OEgAAeSwGBxpwRHL",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-24T09:36:57Z",
+      "id": "e8e65df36b2e",
+      "vin": "WP0AF2A95RS272394",
+      "image_url": "https://i.ebayimg.com/images/g/OEgAAeSwGBxpwRHL/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 339394,
+      "deal_pct": -62.1
+    },
+    {
+      "year": 2022,
+      "variant": "GT3 Touring",
+      "price": 282990,
+      "mileage": 1263,
+      "title": "2022 Porsche 911 GT3 Touring Package PCCB Front Lift 6 SPEED!!",
+      "url": "https://www.ebay.com/itm/377195952955?_skw=Porsche+911+GT3&hash=item57d2a17b3b:g:llQAAeSwgERpzGZi",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-24T09:36:57Z",
+      "id": "ae1a775ce208",
+      "vin": "00000000000000000",
+      "image_url": "https://i.ebayimg.com/images/g/llQAAeSwgERpzGZi/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 315840,
+      "deal_pct": 10.4
     },
     {
       "year": 2019,
@@ -3407,13 +3386,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:34Z",
+      "scraped_at": "2026-05-24T09:36:57Z",
       "id": "1a6055042688",
       "vin": "WP0AC2A9XKS149205",
       "image_url": "https://i.ebayimg.com/images/g/OOsAAeSw37VqBMwe/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 184840,
-      "deal_pct": -51.5
+      "estimated_value": 185105,
+      "deal_pct": -51.3
     },
     {
       "year": 2023,
@@ -3428,12 +3407,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:35Z",
+      "scraped_at": "2026-05-24T09:36:58Z",
       "id": "f2d603e09ac6",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/aBQAAeSwdkBqEQlm/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 320386,
+      "estimated_value": 320373,
       "deal_pct": -23.3
     },
     {
@@ -3449,13 +3428,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:35Z",
+      "scraped_at": "2026-05-24T09:36:58Z",
       "id": "831e45085293",
       "vin": "WP0AC2A91NS269060",
       "image_url": "https://i.ebayimg.com/images/g/zGcAAeSwSlNpycOP/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 181923,
-      "deal_pct": -51.2
+      "estimated_value": 181804,
+      "deal_pct": -51.3
     },
     {
       "year": 2022,
@@ -3470,13 +3449,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:35Z",
+      "scraped_at": "2026-05-24T09:36:58Z",
       "id": "75f6a06c6acc",
       "vin": "WP0AC2A96NS268258",
       "image_url": "https://i.ebayimg.com/images/g/vRsAAeSwL4pps-t1/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 202449,
-      "deal_pct": -38.3
+      "estimated_value": 202327,
+      "deal_pct": -38.4
     },
     {
       "year": 2025,
@@ -3491,13 +3470,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:36Z",
+      "scraped_at": "2026-05-24T09:36:58Z",
       "id": "a2be545825fe",
       "vin": "WP0AC2A99SS274356",
       "image_url": "https://i.ebayimg.com/images/g/f2oAAeSwz5hqC6YM/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 327615,
-      "deal_pct": -9.1
+      "estimated_value": 327152,
+      "deal_pct": -9.3
     },
     {
       "year": 2019,
@@ -3512,13 +3491,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:36Z",
+      "scraped_at": "2026-05-24T09:36:59Z",
       "id": "7f9697ce0903",
       "vin": "WP0AF2A97KS165756",
       "image_url": "https://i.ebayimg.com/images/g/mgIAAeSwPmNp66kb/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 267982,
-      "deal_pct": -0.8
+      "estimated_value": 264795,
+      "deal_pct": -2.0
     },
     {
       "year": 2019,
@@ -3533,13 +3512,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:37Z",
+      "scraped_at": "2026-05-24T09:36:59Z",
       "id": "8783b16c99f0",
       "vin": "WP0AF2A91KS164571",
       "image_url": "https://i.ebayimg.com/images/g/9gQAAeSwSx9p8mrY/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 314261,
-      "deal_pct": 10.9
+      "estimated_value": 310546,
+      "deal_pct": 9.8
     },
     {
       "year": 2022,
@@ -3554,13 +3533,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:38Z",
+      "scraped_at": "2026-05-24T09:37:00Z",
       "id": "ae1185987fc7",
       "vin": "WP0AC2A98NS270139",
       "image_url": "https://i.ebayimg.com/images/g/vGAAAeSwKDVqDfon/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 192382,
-      "deal_pct": -39.8
+      "estimated_value": 192261,
+      "deal_pct": -39.9
     },
     {
       "year": 2016,
@@ -3575,13 +3554,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:38Z",
+      "scraped_at": "2026-05-24T09:37:01Z",
       "id": "25e29c2f2fb8",
       "vin": "WP0AF2A93GS192136",
       "image_url": "https://i.ebayimg.com/images/g/M0gAAeSw2CpqBUC4/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 300251,
-      "deal_pct": 28.4
+      "estimated_value": 297313,
+      "deal_pct": 27.7
     },
     {
       "year": 2023,
@@ -3596,13 +3575,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:39Z",
+      "scraped_at": "2026-05-24T09:37:01Z",
       "id": "ac2287b22332",
       "vin": "WP0AF2A99PS278244",
       "image_url": "https://i.ebayimg.com/images/g/YfcAAeSwAKZp6Jtv/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 336447,
-      "deal_pct": -30.8
+      "estimated_value": 331560,
+      "deal_pct": -32.7
     },
     {
       "year": 2018,
@@ -3617,13 +3596,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:39Z",
+      "scraped_at": "2026-05-24T09:37:01Z",
       "id": "4553204e4136",
       "vin": "WP0AC2A92JS174131",
       "image_url": "https://i.ebayimg.com/images/g/mfUAAeSwSVZp0lRr/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 162217,
-      "deal_pct": -20.2
+      "estimated_value": 162552,
+      "deal_pct": -19.9
     },
     {
       "year": 2018,
@@ -3638,13 +3617,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:40Z",
+      "scraped_at": "2026-05-24T09:37:01Z",
       "id": "96896c399f0f",
       "vin": "WP0AC2A9XJS174443",
       "image_url": "https://i.ebayimg.com/images/g/Z5YAAeSw5spqA7uh/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 189801,
-      "deal_pct": -26.4
+      "estimated_value": 190208,
+      "deal_pct": -26.2
     },
     {
       "year": 2022,
@@ -3659,13 +3638,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:40Z",
+      "scraped_at": "2026-05-24T09:37:02Z",
       "id": "542c7a65b353",
       "vin": "WP0AC2A97NS268446",
       "image_url": "https://i.ebayimg.com/images/g/GqEAAeSwANFp~gLR/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 196741,
-      "deal_pct": -42.3
+      "estimated_value": 196620,
+      "deal_pct": -42.4
     },
     {
       "year": 2022,
@@ -3680,12 +3659,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:41Z",
+      "scraped_at": "2026-05-24T09:37:02Z",
       "id": "6b991159fc19",
       "vin": "WP0AC2A99NS270540",
       "image_url": "https://i.ebayimg.com/images/g/qdsAAeSwaiJpzxyj/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 206493,
+      "estimated_value": 206370,
       "deal_pct": -30.8
     },
     {
@@ -3701,13 +3680,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:41Z",
+      "scraped_at": "2026-05-24T09:37:02Z",
       "id": "00106d835b0d",
       "vin": "WP0AF2A90GS193177",
       "image_url": "",
       "clean_title": null,
-      "estimated_value": 237042,
-      "deal_pct": 20.1
+      "estimated_value": 234697,
+      "deal_pct": 19.3
     },
     {
       "year": 2023,
@@ -3722,12 +3701,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:41Z",
+      "scraped_at": "2026-05-24T09:37:03Z",
       "id": "bfba6d1188cc",
       "vin": "WP0AC2A94PS270335",
       "image_url": "https://i.ebayimg.com/images/g/AikAAeSw7aZqDimQ/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 319256,
+      "estimated_value": 319243,
       "deal_pct": 1.3
     },
     {
@@ -3743,13 +3722,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:42Z",
+      "scraped_at": "2026-05-24T09:37:03Z",
       "id": "f0044612adb9",
       "vin": "WP0AC2A94NS268467",
       "image_url": "https://i.ebayimg.com/images/g/YSMAAeSw-8pp-Fhe/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 180442,
-      "deal_pct": -33.0
+      "estimated_value": 180324,
+      "deal_pct": -33.1
     },
     {
       "year": 2019,
@@ -3764,13 +3743,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:45:43Z",
+      "scraped_at": "2026-05-24T09:37:04Z",
       "id": "f713bc87187a",
       "vin": "WP0AC2A95KS149189",
       "image_url": "https://i.ebayimg.com/images/g/VP0AAeSwAxBp-zVX/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 176481,
-      "deal_pct": -22.3
+      "estimated_value": 176730,
+      "deal_pct": -22.2
     }
   ]
 };

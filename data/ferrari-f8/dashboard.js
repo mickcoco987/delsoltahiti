@@ -21,32 +21,32 @@ window.COTE = {
       "risk": "La transition vers le V6 hybride (296) cree de l'incertitude sur la cote moyen terme. Pas le placement le plus dynamique du catalogue."
     }
   },
-  "generated_at": "2026-05-24T08:44:39Z",
+  "generated_at": "2026-05-24T09:36:17Z",
   "sources": [
     "marketcheck",
     "ebay"
   ],
   "valuation": {
     "method": "regression log-lineaire robuste (millesime + kilometrage + version)",
-    "residual_pct": 10.1
+    "residual_pct": 9.9
   },
   "market": {
     "overall": {
-      "count": 119,
-      "avg_price": 419339,
-      "median_price": 408990,
+      "count": 118,
+      "avg_price": 419842,
+      "median_price": 408995,
       "min_price": 285000,
       "max_price": 699980,
-      "avg_mileage": 7085
+      "avg_mileage": 7089
     },
     "by_variant": {
       "Tributo": {
-        "count": 115,
-        "avg_price": 415577,
-        "median_price": 405988,
+        "count": 114,
+        "avg_price": 416065,
+        "median_price": 407489,
         "min_price": 285000,
         "max_price": 699980,
-        "avg_mileage": 7065
+        "avg_mileage": 7069
       },
       "Spider": {
         "count": 4,
@@ -67,12 +67,12 @@ window.COTE = {
         "avg_mileage": 9440
       },
       "2021": {
-        "count": 46,
-        "avg_price": 402166,
-        "median_price": 397496,
+        "count": 45,
+        "avg_price": 403103,
+        "median_price": 399995,
         "min_price": 295000,
         "max_price": 525000,
-        "avg_mileage": 8617
+        "avg_mileage": 8663
       },
       "2022": {
         "count": 33,
@@ -96,12 +96,12 @@ window.COTE = {
     {
       "date": "2026-05-24",
       "overall": {
-        "avg_price": 419339,
-        "median_price": 408990,
-        "count": 119
+        "avg_price": 419842,
+        "median_price": 408995,
+        "count": 118
       },
       "by_variant": {
-        "Tributo": 415577,
+        "Tributo": 416065,
         "Spider": 527493
       }
     }
@@ -120,13 +120,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-17",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "4ab957174f88",
       "vin": "ZFF93LMA4N0274376",
       "image_url": "https://content.homenetiol.com/2003378/2245179/0x0/d5466eb199984121af1eb26350d2e22c.jpg",
       "clean_title": null,
-      "estimated_value": 451013,
-      "deal_pct": 0.2
+      "estimated_value": 451424,
+      "deal_pct": 0.3
     },
     {
       "year": 2022,
@@ -141,13 +141,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-12",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "5652cb24fa78",
       "vin": "ZFF93LMA9N0271764",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/cb0b22f35e7b4a04bd3ab900a855bb36.jpg",
       "clean_title": null,
-      "estimated_value": 448922,
-      "deal_pct": 0.1
+      "estimated_value": 449320,
+      "deal_pct": 0.2
     },
     {
       "year": 2020,
@@ -162,13 +162,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "67d3e19effc4",
       "vin": "ZFF92LLA0L0257639",
       "image_url": "https://gcb.evs.onl/d4/3439/9069324/195843515/s/ada9c76e12aa4145a3281101f9b8328b.jpg",
       "clean_title": null,
-      "estimated_value": 335090,
-      "deal_pct": 3.6
+      "estimated_value": 335502,
+      "deal_pct": 3.7
     },
     {
       "year": 2021,
@@ -183,13 +183,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "6b7c41b6ddc5",
       "vin": "ZFF93LMA6M0267475",
       "image_url": "https://gcb.evs.onl/d4/3439/10779090/248039000/s/264ebe603e1740298de5831b3317fb05.jpg",
       "clean_title": null,
-      "estimated_value": 409119,
-      "deal_pct": -8.9
+      "estimated_value": 409664,
+      "deal_pct": -8.7
     },
     {
       "year": 2021,
@@ -204,13 +204,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-17",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "7e9cd41e7182",
       "vin": "ZFF93LMA4M0261111",
       "image_url": "https://pictures.dealer.com/j/jeffwylermercedes/0794/5c60347d10d26d3f47f2b4f8f0b0e4d6x.jpg",
       "clean_title": false,
-      "estimated_value": 301469,
-      "deal_pct": -7.3
+      "estimated_value": 301395,
+      "deal_pct": -7.4
     },
     {
       "year": 2020,
@@ -225,13 +225,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "79746e6b4ddc",
       "vin": "ZFF92LLA6L0253322",
       "image_url": "https://vehicle-images.carscommerce.inc/b1f7-110008925/ZFF92LLA6L0253322/2ecf826ce1e54e18a43eb3d08b723197.webp",
       "clean_title": true,
-      "estimated_value": 344196,
-      "deal_pct": 1.2
+      "estimated_value": 344667,
+      "deal_pct": 1.4
     },
     {
       "year": 2021,
@@ -246,12 +246,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-08",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "cfdbb4c4b3d0",
       "vin": "ZFF93LMA5M0262140",
       "image_url": "https://vehicle-images.carscommerce.inc/eddb-110007783/ZFF93LMA5M0262140/c25155f9991a5286427f0f0f5fa1fb7f.webp",
       "clean_title": false,
-      "estimated_value": 330413,
+      "estimated_value": 330488,
       "deal_pct": -10.4
     },
     {
@@ -267,13 +267,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "d78ccbbf607e",
       "vin": "ZFF92LLA6M0260675",
       "image_url": "http://cdn-ds.com/stock/2021-Ferrari-F8-Tributo-Base-Miami-FL/seo/VAMP91988-ZFF92LLA6M0260675/sz_98805/o_13714/ov_12/6c9f175ebce6a67d2abf12ccbc9dbdfc.jpg",
       "clean_title": false,
-      "estimated_value": 402949,
-      "deal_pct": 8.2
+      "estimated_value": 403454,
+      "deal_pct": 8.3
     },
     {
       "year": 2023,
@@ -288,13 +288,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-02-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "f050f91717ca",
       "vin": "ZFF93LMA9P0289197",
       "image_url": "https://cdn-ds.com/stock/2023-Ferrari-F8-Spider-Mansory-Miami-FL/seo/VAMP91988-ZFF93LMA9P0289197/sz_118904/o_13714/ov_12/df600efe0e30f6e594de8e961aa3d35b.jpg",
       "clean_title": false,
-      "estimated_value": 484539,
-      "deal_pct": -44.5
+      "estimated_value": 484711,
+      "deal_pct": -44.4
     },
     {
       "year": 2021,
@@ -309,13 +309,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-06",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "319aedd79be0",
       "vin": "ZFF92LLA9M0264378",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/4564/23429371/639106740243056460.jpg?auto_fix=false&quality=100&sharp_amount=false",
       "clean_title": false,
-      "estimated_value": 412484,
-      "deal_pct": 28.5
+      "estimated_value": 413052,
+      "deal_pct": 28.6
     },
     {
       "year": 2021,
@@ -330,13 +330,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "5e12e6358c20",
       "vin": "ZFF93LMA3M0264954",
       "image_url": "https://cfwww.hgreg.com/photos/by-size/912818A/3648x2048/content.homenetiol.com_2001243_2130496_0x0_e8506548733143c5aabc0f3acc07cd31.jpg",
       "clean_title": false,
-      "estimated_value": 400843,
-      "deal_pct": 1.5
+      "estimated_value": 401336,
+      "deal_pct": 1.6
     },
     {
       "year": 2023,
@@ -351,12 +351,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-03-29",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "41105cf86017",
       "vin": "ZFF93LMA8P0292379",
       "image_url": "https://gcb.evs.onl/d4/3011/9811713/222306351/s/7b4a5a3d779b45aca7bf0e571bff3d63.jpg",
       "clean_title": false,
-      "estimated_value": 487379,
+      "estimated_value": 487566,
       "deal_pct": -0.5
     },
     {
@@ -372,13 +372,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "a782428438ab",
       "vin": "ZFF92LLA7M0266579",
       "image_url": "https://gcb.evs.onl/d4/3011/10055807/238496727/o/ee62746768c94842a98ca7de2dba5b9c.jpg",
       "clean_title": false,
-      "estimated_value": 393577,
-      "deal_pct": 6.0
+      "estimated_value": 394023,
+      "deal_pct": 6.1
     },
     {
       "year": 2021,
@@ -393,13 +393,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-01",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "fad7afd6ed9e",
       "vin": "ZFF93LMAXM0266944",
       "image_url": "https://gcb.evs.onl/d4/3011/9021323/193112068/s/2ca8f34a2a844f819aebf614ed597535.jpg",
       "clean_title": false,
-      "estimated_value": 396132,
-      "deal_pct": -11.0
+      "estimated_value": 396594,
+      "deal_pct": -10.9
     },
     {
       "year": 2023,
@@ -414,13 +414,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "7a26aee5ef98",
       "vin": "ZFF93LMA3P0297182",
       "image_url": "https://pictures.dealer.com/p/porschesouthorlando/0416/03989a908c3600151f6da949b4c1f773x.jpg",
       "clean_title": false,
-      "estimated_value": 493770,
-      "deal_pct": -7.6
+      "estimated_value": 493993,
+      "deal_pct": -7.5
     },
     {
       "year": 2021,
@@ -435,13 +435,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-06",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "f308e233865f",
       "vin": "ZFF93LMA4M0261948",
       "image_url": "https://cloudflareimages.dealereprocess.com/resrc/images/c_limit,fl_lossy,w_auto/v1/dvp/4483/45391024469/Pre-Owned-2021-Ferrari-F8Spider-Convertible-ID45391024469-aHR0cDovL2ltYWdlcy51bml0c2ludmVudG9yeS5jb20vdXBsb2Fkcy9waG90b3MvMC8yMDI2LTA1LTA2LzEtMjc5NTcyOTEtNjlmYjJjNDI4NjVlMS5qcGc=",
       "clean_title": false,
-      "estimated_value": 394136,
-      "deal_pct": -6.6
+      "estimated_value": 394586,
+      "deal_pct": -6.4
     },
     {
       "year": 2020,
@@ -456,13 +456,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "89a0d52d20d5",
       "vin": "ZFF92LLA7L0257637",
       "image_url": "https://vehicle-images.carscommerce.inc/dbbb-11000909/ZFF92LLA7L0257637/38fcd971730ba0c91507dbba2d183628.jpg",
       "clean_title": false,
-      "estimated_value": 363691,
-      "deal_pct": 1.3
+      "estimated_value": 364292,
+      "deal_pct": 1.5
     },
     {
       "year": 2020,
@@ -477,13 +477,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "5c1bc7838ab8",
       "vin": "ZFF92LLAXL0254487",
       "image_url": "https://cloudflareimages.dealereprocess.com/resrc/images/c_limit,fl_lossy,w_auto/v1/dvp/4483/46333379699/Pre-Owned-2020-Ferrari-F8Tributo-Coupe-ID46333379699-aHR0cDovL2ltYWdlcy51bml0c2ludmVudG9yeS5jb20vdXBsb2Fkcy9waG90b3MvMC8yMDI2LTA1LTE5LzEtMjgxNDYyMDMtNmEwZDEwNmU2MTQ2ZS5qcGc=",
       "clean_title": false,
-      "estimated_value": 329704,
-      "deal_pct": 2.9
+      "estimated_value": 330081,
+      "deal_pct": 3.1
     },
     {
       "year": 2021,
@@ -498,13 +498,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-17",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "8a48944772fb",
       "vin": "ZFF93LMA7M0262091",
       "image_url": "https://images.app.ridemotive.com/gveu6rup0yb12c0s9v8tmqycz4lf",
       "clean_title": true,
-      "estimated_value": 420618,
-      "deal_pct": -14.1
+      "estimated_value": 421239,
+      "deal_pct": -13.9
     },
     {
       "year": 2023,
@@ -519,13 +519,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-17",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "fb07c7229aa1",
       "vin": "ZFF93LMAXP0292240",
       "image_url": "https://images.app.ridemotive.com/6lt23lp0fxbnmhl9k1mep7bo6wkx",
       "clean_title": true,
-      "estimated_value": 487751,
-      "deal_pct": -1.5
+      "estimated_value": 487941,
+      "deal_pct": -1.4
     },
     {
       "year": 2020,
@@ -540,13 +540,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-17",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "d11d6c4f74cf",
       "vin": "ZFF92LLA5L0254848",
       "image_url": "https://www.ilusso.com/imagetag/2425/main/f/Used-2020-Ferrari-F8-1773700374.jpg",
       "clean_title": false,
-      "estimated_value": 352199,
-      "deal_pct": -13.3
+      "estimated_value": 352723,
+      "deal_pct": -13.1
     },
     {
       "year": 2020,
@@ -561,13 +561,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-13",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "930f1c72cbe3",
       "vin": "ZFF92LLA0L0253154",
       "image_url": "https://gcb.evs.onl/d4/3003/10889082/253135570/o/c845152d75b848dbb731cea5efc37fbe.jpg",
       "clean_title": null,
-      "estimated_value": 377334,
-      "deal_pct": -0.7
+      "estimated_value": 378030,
+      "deal_pct": -0.5
     },
     {
       "year": 2021,
@@ -582,13 +582,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "2dd8b56f9f90",
       "vin": "ZFF93LMAXM0264062",
       "image_url": "https://vehicle-images.carscommerce.inc/7200-110007612/ZFF93LMAXM0264062/f7b4df0cefb39bb0d531759b25c7f084.webp",
       "clean_title": false,
-      "estimated_value": 407785,
-      "deal_pct": -13.2
+      "estimated_value": 408323,
+      "deal_pct": -13.0
     },
     {
       "year": 2021,
@@ -603,13 +603,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-03-17",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "450112c5b1c6",
       "vin": "ZFF92LLA8M0260676",
       "image_url": "https://cdn05.carsforsale.com/0086abf20682338ca37d3e0113204d8f14/2021-ferrari-f8-252520tributo-base.jpg?width=960&height=720&format=&sig=07e98d861492793f",
       "clean_title": false,
-      "estimated_value": 401112,
-      "deal_pct": 5.3
+      "estimated_value": 401606,
+      "deal_pct": 5.4
     },
     {
       "year": 2021,
@@ -624,13 +624,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-06",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "5e2cc4f06a52",
       "vin": "ZFF93LMA6M0264429",
       "image_url": "https://www.vegasautogallery.com/wp-content/themes/aanWordpress/images/vegasina_l.png",
       "clean_title": false,
-      "estimated_value": 412196,
-      "deal_pct": -7.5
+      "estimated_value": 412762,
+      "deal_pct": -7.3
     },
     {
       "year": 2020,
@@ -645,13 +645,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "a9faf3130d5e",
       "vin": "ZFF92LLA8L0254195",
       "image_url": "https://www.charlottemclaren.com/imagetag/5014/main/l/Used-2020-Ferrari-F8-Tributo.jpg",
       "clean_title": false,
-      "estimated_value": 360175,
-      "deal_pct": -11.1
+      "estimated_value": 360752,
+      "deal_pct": -10.9
     },
     {
       "year": 2022,
@@ -666,13 +666,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "b02bbe1a92ff",
       "vin": "ZFF93LMA3N0273798",
       "image_url": "https://www.charlottemclaren.com/imagetag/4851/main/l/Used-2022-Ferrari-F8-Spider.jpg",
       "clean_title": false,
-      "estimated_value": 403824,
-      "deal_pct": 3.4
+      "estimated_value": 403961,
+      "deal_pct": 3.5
     },
     {
       "year": 2021,
@@ -687,13 +687,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-10",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "0fe2754129ab",
       "vin": "ZFF92LLA2M0263136",
       "image_url": "https://vehicle-images.carscommerce.inc/f667-110005267/ZFF92LLA2M0263136/f7284d659e7d4dca2e04d978d7ae69a5.jpg",
       "clean_title": false,
-      "estimated_value": 406313,
-      "deal_pct": 5.2
+      "estimated_value": 406841,
+      "deal_pct": 5.4
     },
     {
       "year": 2022,
@@ -708,13 +708,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "3e7822c076aa",
       "vin": "ZFF93LMA4N0279979",
       "image_url": "https://vehicle-images.carscommerce.inc/4227-110013659/ZFF93LMA4N0279979/7f34d618daae1e3a3f992b5a77dc5881.jpg",
       "clean_title": false,
-      "estimated_value": 448249,
-      "deal_pct": -11.5
+      "estimated_value": 448643,
+      "deal_pct": -11.4
     },
     {
       "year": 2021,
@@ -729,13 +729,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "434bdd42e624",
       "vin": "ZFF92LLA2M0260866",
       "image_url": "https://vehicle-images.carscommerce.inc/226b-110013659/ZFF92LLA2M0260866/d216c54235cbd95aa015fda53215b990.jpg",
       "clean_title": false,
-      "estimated_value": 411042,
-      "deal_pct": 0.5
+      "estimated_value": 411601,
+      "deal_pct": 0.6
     },
     {
       "year": 2023,
@@ -750,13 +750,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "654857a08cb1",
       "vin": "ZFF93LMA5P0291948",
       "image_url": "https://vehicle-images.carscommerce.inc/3cab-110013659/ZFF93LMA5P0291948/0e9cd8b12f0832ef99ff8a9c82d095db.jpg",
       "clean_title": false,
-      "estimated_value": 495591,
-      "deal_pct": -0.9
+      "estimated_value": 495824,
+      "deal_pct": -0.8
     },
     {
       "year": 2022,
@@ -771,13 +771,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "0338f31786cd",
       "vin": "ZFF93LMAXN0274267",
       "image_url": "https://vehicle-images.carscommerce.inc/5cbe-110013659/ZFF93LMAXN0274267/873c2aafd638c6f1f7e69df8eda2fd65.png",
       "clean_title": false,
-      "estimated_value": 450883,
-      "deal_pct": -19.7
+      "estimated_value": 451293,
+      "deal_pct": -19.6
     },
     {
       "year": 2021,
@@ -792,13 +792,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-03",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "f09f08f39a1c",
       "vin": "ZFF92LLA3M0259144",
       "image_url": "https://cdn-ds.com/stock/2021-Ferrari-F8-Tributo-Base-Paramus-NJ/seo/VAMP23235LAMBOPARAMUS-ZFF92LLA3M0259144/sz_54927/6d119abf0dc8d868569cc57e3889cc98.jpg",
       "clean_title": false,
-      "estimated_value": 394170,
-      "deal_pct": 2.4
+      "estimated_value": 394620,
+      "deal_pct": 2.5
     },
     {
       "year": 2022,
@@ -813,13 +813,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-30",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "3086b9f8b3f7",
       "vin": "ZFF93LMA7N0276624",
       "image_url": "https://vtpimages.audi.com/carimg2/3105/4493343105.jpg",
       "clean_title": null,
-      "estimated_value": 446660,
-      "deal_pct": -3.0
+      "estimated_value": 447044,
+      "deal_pct": -2.9
     },
     {
       "year": 2022,
@@ -834,13 +834,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2025-04-25",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "f8c55da307c9",
       "vin": "ZFF92LLA0N0270605",
       "image_url": "https://cdn05.carsforsale.com/4b4eeb3feffff97d7cdd65b42a3f4e18/800x600/2022-ferrari-f8-tributo-base-2dr-coupe.jpg",
       "clean_title": false,
-      "estimated_value": 456266,
-      "deal_pct": 12.3
+      "estimated_value": 456708,
+      "deal_pct": 12.4
     },
     {
       "year": 2022,
@@ -855,12 +855,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-03",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "b8ebd6109d75",
       "vin": "ZFF93LMA7N0272198",
       "image_url": "https://vtpimages.audi.com/carimg2/5078/4489215078.jpg",
       "clean_title": null,
-      "estimated_value": 405530,
+      "estimated_value": 405676,
       "deal_pct": -3.3
     },
     {
@@ -876,12 +876,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "41bdd9a7bd5e",
       "vin": "ZFF92LLA3M0261086",
       "image_url": "https://www.ilussohouston.com/imagetag/6005/main/f/Used-2021-Ferrari-F8-Tributo-1779466113.jpg",
       "clean_title": false,
-      "estimated_value": 380534,
+      "estimated_value": 380899,
       "deal_pct": 8.1
     },
     {
@@ -897,13 +897,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "240cfa99d08d",
       "vin": "ZFF92LLA6L0255345",
       "image_url": "https://gcb.evs.onl/d4/3009/10157570/225972708/s/e62087ca40024045ba64db740e499b9c.jpg",
       "clean_title": null,
-      "estimated_value": 363599,
-      "deal_pct": 5.3
+      "estimated_value": 364199,
+      "deal_pct": 5.4
     },
     {
       "year": 2023,
@@ -918,12 +918,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-02-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "d36b8f74cdbd",
       "vin": "ZFF93LMA3P0289504",
       "image_url": "",
       "clean_title": null,
-      "estimated_value": 502441,
+      "estimated_value": 502713,
       "deal_pct": 8.5
     },
     {
@@ -939,13 +939,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-02-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "33383c5434e6",
       "vin": "ZFF93LMA3M0268521",
       "image_url": "",
       "clean_title": null,
-      "estimated_value": 419613,
-      "deal_pct": -7.2
+      "estimated_value": 420228,
+      "deal_pct": -7.1
     },
     {
       "year": 2020,
@@ -960,13 +960,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "a5d907dc7410",
       "vin": "ZFF92LLA4L0254209",
       "image_url": "https://images.app.ridemotive.com/1f9mjknttxhco800qp3qheg21m8w",
       "clean_title": false,
-      "estimated_value": 383382,
-      "deal_pct": 0.9
+      "estimated_value": 384121,
+      "deal_pct": 1.1
     },
     {
       "year": 2020,
@@ -981,13 +981,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "b3d41710e931",
       "vin": "ZFF92LLA2L0253477",
       "image_url": "https://www.alphagmc.com/inventoryphotos/21807/zff92lla2l0253477/ip/1.jpg",
       "clean_title": false,
-      "estimated_value": 347225,
-      "deal_pct": 7.9
+      "estimated_value": 347716,
+      "deal_pct": 8.0
     },
     {
       "year": 2022,
@@ -1002,12 +1002,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "86e032e2192e",
       "vin": "ZFF93LMA9N0278276",
       "image_url": "https://www.karmanaperville.com/wp-content/themes/aanWordpress/images/ina_l.jpg",
       "clean_title": false,
-      "estimated_value": 422231,
+      "estimated_value": 422471,
       "deal_pct": -13.6
     },
     {
@@ -1023,13 +1023,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "744c7fd9dda6",
       "vin": "ZFF93LMA9P0296814",
       "image_url": "https://gcb.evs.onl/d4/3009/10707007/242091072/o/d2d70f4d861e4dca977392825beb31e2.jpg",
       "clean_title": null,
-      "estimated_value": 500061,
-      "deal_pct": -5.8
+      "estimated_value": 500319,
+      "deal_pct": -5.7
     },
     {
       "year": 2021,
@@ -1044,13 +1044,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-29",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "5506be19efbe",
       "vin": "ZFF93LMA1M0261325",
       "image_url": "https://www.motorcarsites.com/dealers/images/vehicles/large/image_466291__20251029130858_92_236.jpg",
       "clean_title": false,
-      "estimated_value": 387476,
-      "deal_pct": 1.9
+      "estimated_value": 387884,
+      "deal_pct": 2.0
     },
     {
       "year": 2021,
@@ -1065,13 +1065,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2025-12-05",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "43b725637ed4",
       "vin": "ZFF93LMA4M0267510",
       "image_url": "https://speedartmotorsports.com/wp-content/uploads/2021/12/F8S_001-1280x720.jpg",
       "clean_title": null,
-      "estimated_value": 421674,
-      "deal_pct": -24.5
+      "estimated_value": 422302,
+      "deal_pct": -24.3
     },
     {
       "year": 2021,
@@ -1086,13 +1086,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "bc54c34c87a5",
       "vin": "ZFF92LLA8M0259432",
       "image_url": "https://cdn.dealerspike.com/imglib/v1/200x150/imglib/Assets/Inventory/57/8B/578B8C38-BBD7-4298-B1F9-7E7B1999E2D0.jpg",
       "clean_title": false,
-      "estimated_value": 396237,
-      "deal_pct": -0.9
+      "estimated_value": 396700,
+      "deal_pct": -0.8
     },
     {
       "year": 2021,
@@ -1107,13 +1107,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-12",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "c460a59a76f4",
       "vin": "ZFF92LLA0M0267394",
       "image_url": "https://gcb.evs.onl/d4/3000/8256324/171876134/s/ece15f8422a34fe4b47e47aafad3f93d.jpg",
       "clean_title": null,
-      "estimated_value": 401233,
-      "deal_pct": 15.8
+      "estimated_value": 401728,
+      "deal_pct": 15.9
     },
     {
       "year": 2020,
@@ -1128,13 +1128,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "ef0f9faba0b9",
       "vin": "ZFF92LLA2L0254483",
       "image_url": "https://gcb.evs.onl/d4/3037/9255806/204128221/s/d502b9b31e01403da153702d347f11cb.jpg",
       "clean_title": null,
-      "estimated_value": 353860,
-      "deal_pct": 5.9
+      "estimated_value": 354395,
+      "deal_pct": 6.0
     },
     {
       "year": 2023,
@@ -1149,12 +1149,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "fc5b86312037",
       "vin": "ZFF93LMA7P0293426",
       "image_url": "https://www.exoticshunter.com/imagetag/1238/main/f/Used-2023-Ferrari-F8-Spider-HUGE-430000-MSRP-Tasteful-Upgrades-Vossen-Wheels!-1778873350.jpg",
       "clean_title": null,
-      "estimated_value": 502535,
+      "estimated_value": 502808,
       "deal_pct": -15.4
     },
     {
@@ -1170,13 +1170,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "7c016d7ca8c3",
       "vin": "ZFF93LMAXN0284281",
       "image_url": "https://www.exoticshunter.com/imagetag/999/main/f/Used-2022-Ferrari-F8-Spider-Viola-Hong-Kong-512000-MSRP-Painted-Shields-+-ANRKY-1779152625.jpg",
       "clean_title": null,
-      "estimated_value": 441317,
-      "deal_pct": -39.4
+      "estimated_value": 441670,
+      "deal_pct": -39.2
     },
     {
       "year": 2020,
@@ -1191,13 +1191,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2022-02-28",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "1f9cb7c35f1c",
       "vin": "ZFF92LLA6L0257175",
       "image_url": "https://cdn.dealerspike.com/imglib/v1/1024x768/imglib/Assets/Inventory/39/08/3908B446-6DCE-4404-81C8-660BAD724E0A.jpg",
       "clean_title": false,
-      "estimated_value": 386806,
-      "deal_pct": 13.1
+      "estimated_value": 387569,
+      "deal_pct": 13.3
     },
     {
       "year": 2022,
@@ -1212,13 +1212,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "ee9604346ae7",
       "vin": "ZFF92LLA2N0279581",
       "image_url": "https://images.app.ridemotive.com/7u7pvbudnq1xbu5oa09vu0qgj2os",
       "clean_title": false,
-      "estimated_value": 458407,
-      "deal_pct": 12.8
+      "estimated_value": 458864,
+      "deal_pct": 12.9
     },
     {
       "year": 2020,
@@ -1233,13 +1233,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2025-05-08",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "bdb629636c82",
       "vin": "ZFF92LLA0L0253283",
       "image_url": "https://imagescf.dealercenter.net/1920/1080/202503-c26378699c0f4ba0a117f817bc20af8b.jpg",
       "clean_title": false,
-      "estimated_value": 385610,
-      "deal_pct": 26.1
+      "estimated_value": 386364,
+      "deal_pct": 26.2
     },
     {
       "year": 2021,
@@ -1254,13 +1254,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "8078f4384d79",
       "vin": "ZFF93LMA0M0266600",
       "image_url": "https://gcb.evs.onl/d4/2931/10904822/247445681/s/c4074a8dec57448caa9fae45fb47ca93.jpg",
       "clean_title": null,
-      "estimated_value": 394881,
-      "deal_pct": -8.9
+      "estimated_value": 395335,
+      "deal_pct": -8.8
     },
     {
       "year": 2023,
@@ -1275,12 +1275,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "e1974e4d7605",
       "vin": "ZFF93LMA4P0290161",
       "image_url": "https://www.exclusiveautomotivegroup.com/imagetag/4547/main/f/-1771864682.jpg",
       "clean_title": false,
-      "estimated_value": 443173,
+      "estimated_value": 443125,
       "deal_pct": 5.2
     },
     {
@@ -1296,12 +1296,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2023-05-06",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "c20e46207d33",
       "vin": "ZFF92LLA3N0278004",
       "image_url": "https://pictures.dealer.com/e/eastsidemotoring/1393/3912d8844ac3fcffbdaaf3378c2d78b4x.jpg",
       "clean_title": false,
-      "estimated_value": 457615,
+      "estimated_value": 458067,
       "deal_pct": 5.0
     },
     {
@@ -1317,13 +1317,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2024-08-08",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "c938e313f2e4",
       "vin": "ZFF92LLA5M0266564",
       "image_url": "https://imagescf.dealercenter.net/1920/1080/202208-273144e1bcb0457baeda8b2902a01fc6.jpg",
       "clean_title": false,
-      "estimated_value": 413758,
-      "deal_pct": -1.5
+      "estimated_value": 414334,
+      "deal_pct": -1.4
     },
     {
       "year": 2020,
@@ -1338,13 +1338,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2024-08-08",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "6e17cfe04493",
       "vin": "ZFF92LLA1L0252708",
       "image_url": "https://imagescf.dealercenter.net/1920/1080/202210-f22daee2a61842bdb8980a6f210bcef2.jpg",
       "clean_title": false,
-      "estimated_value": 380468,
-      "deal_pct": 0.1
+      "estimated_value": 381186,
+      "deal_pct": 0.3
     },
     {
       "year": 2023,
@@ -1359,12 +1359,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "33a1033b7410",
       "vin": "ZFF93LMA9P0289619",
       "image_url": "https://www.alfaromeoofgreenwich.com/imagetag/7670/main/f/Used-2023-Ferrari-F8-Spider.jpg",
       "clean_title": false,
-      "estimated_value": 494557,
+      "estimated_value": 494784,
       "deal_pct": -1.2
     },
     {
@@ -1380,13 +1380,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-16",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "17c50e989707",
       "vin": "ZFF93LMA1M0266492",
       "image_url": "https://vehicle-images.carscommerce.inc/7034-11002576/ZFF93LMA1M0266492/ea5fcbf58d211a39cc0bd08e36df1b71.webp",
       "clean_title": false,
-      "estimated_value": 412918,
-      "deal_pct": -9.1
+      "estimated_value": 413489,
+      "deal_pct": -8.9
     },
     {
       "year": 2022,
@@ -1401,13 +1401,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "c705f8ed1dbf",
       "vin": "ZFF92LLA3N0276088",
       "image_url": "https://cdn.dealeraccelerate.com/gpm/1/141/4331/w/2022-ferrari-f8-tributo",
       "clean_title": false,
-      "estimated_value": 456805,
-      "deal_pct": 5.9
+      "estimated_value": 457251,
+      "deal_pct": 6.0
     },
     {
       "year": 2021,
@@ -1422,13 +1422,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-03-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "da8fec8ed08b",
       "vin": "ZFF93LMA3M0258782",
       "image_url": "https://cdn.dealeraccelerate.com/gpm/1/130/3804/w/2021-ferrari-f8-spider",
       "clean_title": false,
-      "estimated_value": 397521,
-      "deal_pct": -2.1
+      "estimated_value": 397992,
+      "deal_pct": -2.0
     },
     {
       "year": 2020,
@@ -1443,13 +1443,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "9f705ee6abbb",
       "vin": "ZFF92LLA0L0254479",
       "image_url": "https://images.otf3.pixelmotiondemo.com/hnbNJ-20260523022906.webp",
       "clean_title": false,
-      "estimated_value": 373695,
-      "deal_pct": -7.0
+      "estimated_value": 374365,
+      "deal_pct": -6.8
     },
     {
       "year": 2023,
@@ -1464,13 +1464,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "07464a20ea2a",
       "vin": "ZFF93LMA7P0289618",
       "image_url": "https://images.otf3.pixelmotiondemo.com/qeZYc-20260523022925.webp",
       "clean_title": false,
-      "estimated_value": 483622,
-      "deal_pct": -17.9
+      "estimated_value": 483788,
+      "deal_pct": -17.8
     },
     {
       "year": 2022,
@@ -1485,13 +1485,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-03-31",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "4a12feec9d73",
       "vin": "ZFF93LMA7N0281001",
       "image_url": "https://images.otf3.pixelmotiondemo.com/Pdwvs-20260523023519.webp",
       "clean_title": false,
-      "estimated_value": 451608,
-      "deal_pct": 0.6
+      "estimated_value": 452022,
+      "deal_pct": 0.7
     },
     {
       "year": 2022,
@@ -1506,12 +1506,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-22",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "57395690ccee",
       "vin": "ZFF93LMA6N0271172",
       "image_url": "https://images.otf3.pixelmotiondemo.com/sqAyY-20260502001946.jpg",
       "clean_title": false,
-      "estimated_value": 450779,
+      "estimated_value": 451188,
       "deal_pct": -2.0
     },
     {
@@ -1527,13 +1527,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-26",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "23e2ff29c75a",
       "vin": "ZFF93LMA5N0279652",
       "image_url": "https://images.otf3.pixelmotiondemo.com/DgO2o-20260413214437.jpg",
       "clean_title": false,
-      "estimated_value": 443479,
-      "deal_pct": -1.5
+      "estimated_value": 443844,
+      "deal_pct": -1.4
     },
     {
       "year": 2022,
@@ -1548,13 +1548,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2025-09-12",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "4d173cafde78",
       "vin": "ZFF92LLA2N0268922",
       "image_url": "https://pistaauto.com/wp-content/uploads/2025/07/202507-0bddee6893214b888a9901d306ea6890-5.jpg",
       "clean_title": false,
-      "estimated_value": 443883,
-      "deal_pct": 23.4
+      "estimated_value": 444272,
+      "deal_pct": 23.5
     },
     {
       "year": 2023,
@@ -1569,12 +1569,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-05",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "6d99e0462354",
       "vin": "ZFF93LMA5P0291321",
       "image_url": "https://pictures.dealer.com/f/ferraridallas/0132/147dfcf3e2062e78e9817cbbda0f0803x.jpg",
       "clean_title": false,
-      "estimated_value": 494364,
+      "estimated_value": 494591,
       "deal_pct": -7.0
     },
     {
@@ -1590,13 +1590,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-15",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "33a94a635993",
       "vin": "ZFF92LLA9L0256196",
       "image_url": "https://images.dealer.com/ddc/vehicles/2020/Ferrari/F8%20Tributo/Coupe/trim_Base_32a096/color/Bianco%20Avus-BIA-228,224,218-640-en_US.jpg",
       "clean_title": false,
-      "estimated_value": 372375,
-      "deal_pct": -2.0
+      "estimated_value": 373036,
+      "deal_pct": -1.8
     },
     {
       "year": 2022,
@@ -1611,13 +1611,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-13",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "3475b6178377",
       "vin": "ZFF92LLA3N0278780",
       "image_url": "https://www.ferrarilasvegas.com/imagetag/501/main/l/Used-2022-Ferrari-F8-Tributo-1779503304.jpg",
       "clean_title": null,
-      "estimated_value": 448812,
-      "deal_pct": 12.0
+      "estimated_value": 449209,
+      "deal_pct": 12.1
     },
     {
       "year": 2022,
@@ -1632,13 +1632,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-12",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "a27153471046",
       "vin": "ZFF92LLAXN0276105",
       "image_url": "https://nkyauto.com/uploads/car/e2dc50614f88f834d0ded40cbccf06c1.jpg",
       "clean_title": false,
-      "estimated_value": 457418,
-      "deal_pct": 30.0
+      "estimated_value": 457868,
+      "deal_pct": 30.1
     },
     {
       "year": 2022,
@@ -1653,13 +1653,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-10",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "c07e421b4d1e",
       "vin": "ZFF92LLA7N0270892",
       "image_url": "https://images.dealer.com/ddc/vehicles/2022/Ferrari/F8%20Tributo/Coupe/trim_Base_b00205/color/Bianco%20Avus-BIA-228,224,218-640-en_US.jpg",
       "clean_title": false,
-      "estimated_value": 452230,
-      "deal_pct": 11.5
+      "estimated_value": 452648,
+      "deal_pct": 11.6
     },
     {
       "year": 2023,
@@ -1674,12 +1674,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-19",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "10bf0822239d",
       "vin": "ZFF93LMA5P0289682",
       "image_url": "https://vehicle-images.carscommerce.inc/371a-110011653/ZFF93LMA5P0289682/06447b60bead77857beff5e2a590c6e1.webp",
       "clean_title": false,
-      "estimated_value": 491140,
+      "estimated_value": 491349,
       "deal_pct": 4.4
     },
     {
@@ -1695,12 +1695,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-24",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "6fd47307d648",
       "vin": "ZFF93LMA6M0261014",
       "image_url": "https://vehicle-images.carscommerce.inc/269c-110011653/ZFF93LMA6M0261014/5b98f5ca187f87e883f32bdbc997ef1d.webp",
       "clean_title": false,
-      "estimated_value": 354233,
+      "estimated_value": 354441,
       "deal_pct": -4.4
     },
     {
@@ -1716,13 +1716,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-07",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "073fe04af386",
       "vin": "ZFF93LMA6M0268531",
       "image_url": "https://imagescf.dealercenter.net/719/480/202510-4cfaf3bfd0aa4c1f9176d8d82c7babf1.jpg",
       "clean_title": false,
-      "estimated_value": 380971,
-      "deal_pct": -1.8
+      "estimated_value": 381338,
+      "deal_pct": -1.7
     },
     {
       "year": 2021,
@@ -1737,13 +1737,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-10",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "3acecd8ac5df",
       "vin": "ZFF92LLA0M0260686",
       "image_url": "https://content.homenetiol.com/2001933/2134649/1280x1280/8af3cc108ba447cb9a60d9e8e2a441bf.jpg",
       "clean_title": null,
-      "estimated_value": 412799,
-      "deal_pct": -3.1
+      "estimated_value": 413369,
+      "deal_pct": -3.0
     },
     {
       "year": 2021,
@@ -1758,13 +1758,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-12",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "6f00cf42503e",
       "vin": "ZFF92LLA6M0266167",
       "image_url": "https://www.oneexoticstampa.com/imagetag/87/main/f/Used-2021-Ferrari-F8-Tributo-1016-Full-Carbon-Aero!-IPE-Exhaust!-ANRKY-Wheels!-Pure-800-Turbos!-Loaded!-1777062117.jpg",
       "clean_title": null,
-      "estimated_value": 398425,
-      "deal_pct": 5.4
+      "estimated_value": 398901,
+      "deal_pct": 5.5
     },
     {
       "year": 2021,
@@ -1779,13 +1779,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-06",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "ff92a54cbf46",
       "vin": "ZFF92LLA9M0261996",
       "image_url": "https://www.oneexoticstampa.com/imagetag/99/main/f/Used-2021-Ferrari-F8-Tributo-Ryft-Wheels!-Novitec-Springs!-Carbon-LED-Steering-Wheel!-Sport-Exhaust!-1777062073.jpg",
       "clean_title": null,
-      "estimated_value": 392226,
-      "deal_pct": 9.3
+      "estimated_value": 392664,
+      "deal_pct": 9.4
     },
     {
       "year": 2023,
@@ -1800,12 +1800,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-04",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "17780fe2456d",
       "vin": "ZFF93LMAXP0289659",
       "image_url": "https://cdn05.carsforsale.com/3f079c204a263b02b5dc38cd4dce50b5/800x600/2023-ferrari-f8-spider-base-2dr-convertible.jpg",
       "clean_title": false,
-      "estimated_value": 474643,
+      "estimated_value": 474760,
       "deal_pct": -0.1
     },
     {
@@ -1821,13 +1821,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "1d1b74902423",
       "vin": "ZFF92LLA1N0272752",
       "image_url": "https://vehicle-images.carscommerce.inc/b6dd-11002164/ZFF92LLA1N0272752/5f01e2783fe7fe5aa9d7fd15a85c5ee5.jpg",
       "clean_title": false,
-      "estimated_value": 435063,
-      "deal_pct": 5.9
+      "estimated_value": 435378,
+      "deal_pct": 6.0
     },
     {
       "year": 2020,
@@ -1842,13 +1842,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "824411a55ddb",
       "vin": "ZFF92LLA7L0256181",
       "image_url": "https://images.dealer.com/ddc/vehicles/2020/Ferrari/F8%20Tributo/Coupe/trim_Base_32a096/color/Blu%20Corsa-BLU-21,75,108--640-en_US.jpg",
       "clean_title": false,
-      "estimated_value": 372944,
-      "deal_pct": -9.7
+      "estimated_value": 373609,
+      "deal_pct": -9.5
     },
     {
       "year": 2022,
@@ -1863,13 +1863,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-16",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "d3bb4344bac4",
       "vin": "ZFF93LMA8N0270914",
       "image_url": "https://vehicle-images.carscommerce.inc/51ee-11002164/ZFF93LMA8N0270914/1473754b05e547e1f65c174e3d1c9def.jpg",
       "clean_title": false,
-      "estimated_value": 447759,
-      "deal_pct": -15.4
+      "estimated_value": 448150,
+      "deal_pct": -15.3
     },
     {
       "year": 2021,
@@ -1884,13 +1884,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-12",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "2b405fd053e7",
       "vin": "ZFF93LMA8M0259460",
       "image_url": "https://vehicle-images.carscommerce.inc/466a-11002164/ZFF93LMA8M0259460/2b8a8cc2a785143ea233f0a6b2a6f2e7.jpg",
       "clean_title": false,
-      "estimated_value": 403713,
-      "deal_pct": -11.0
+      "estimated_value": 404224,
+      "deal_pct": -10.9
     },
     {
       "year": 2021,
@@ -1905,13 +1905,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2025-12-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "93c53e13db94",
       "vin": "ZFF93LMA7M0268571",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/20116/20310790/638282964627718578.jpg?auto_fix=false&quality=100&sharp_amount=false",
       "clean_title": false,
-      "estimated_value": 418707,
-      "deal_pct": -0.3
+      "estimated_value": 419316,
+      "deal_pct": -0.1
     },
     {
       "year": 2020,
@@ -1926,13 +1926,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "76fec49865ab",
       "vin": "ZFF92LLA8L0256979",
       "image_url": "https://imagesdl.dealercenter.net/800/600/202605-c9401fcf93f54608ba66ca4e71421148.jpg",
       "clean_title": false,
-      "estimated_value": 353564,
-      "deal_pct": 3.9
+      "estimated_value": 354097,
+      "deal_pct": 4.0
     },
     {
       "year": 2022,
@@ -1947,13 +1947,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2025-12-10",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "21f4b387ada0",
       "vin": "ZFF93LMA1N0271189",
       "image_url": "https://goxee.s3.amazonaws.com/images/cars/717/890717/l/20251209195100_787194827.jpg",
       "clean_title": false,
-      "estimated_value": 451036,
-      "deal_pct": 22.4
+      "estimated_value": 451447,
+      "deal_pct": 22.5
     },
     {
       "year": 2021,
@@ -1968,13 +1968,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "986a2d13ac3f",
       "vin": "ZFF93LMA7M0262110",
       "image_url": "https://www.cavallinorossostlouis.com/inventoryphotos/12846/zff93lma7m0262110/ip/1.jpg",
       "clean_title": false,
-      "estimated_value": 382514,
-      "deal_pct": -7.2
+      "estimated_value": 382891,
+      "deal_pct": -7.1
     },
     {
       "year": 2023,
@@ -1989,12 +1989,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2025-03-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "240f0f6c1d97",
       "vin": "ZFF93LMA5P0297183",
       "image_url": "https://pictures.dealer.com/m/maseratidemo/1771/d8167a4d75ac678e3dafb6251dea1380x.jpg",
       "clean_title": false,
-      "estimated_value": 499744,
+      "estimated_value": 500000,
       "deal_pct": 8.0
     },
     {
@@ -2010,13 +2010,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2025-03-18",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "b7865428c458",
       "vin": "ZFF92LLA5L0253991",
       "image_url": "https://pictures.dealer.com/m/maseratidemo/1724/a6c2629a6c3504b48b575498998d3ff4x.jpg",
       "clean_title": false,
-      "estimated_value": 364845,
-      "deal_pct": 12.3
+      "estimated_value": 365455,
+      "deal_pct": 12.5
     },
     {
       "year": 2021,
@@ -2031,13 +2031,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-02-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "3d214ab22738",
       "vin": "ZFF92LLA0M0268609",
       "image_url": "https://cdn05.carsforsale.com/00aabbb5c82d7e3ffffd676e279ea53f9e/2021-ferrari-f8-252520tributo-base.jpg?width=640&height=480&format=&sig=545ec7fb03e8bb4f",
       "clean_title": false,
-      "estimated_value": 397221,
-      "deal_pct": 11.9
+      "estimated_value": 397690,
+      "deal_pct": 12.0
     },
     {
       "year": 2021,
@@ -2052,13 +2052,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "0d26f9b27ac8",
       "vin": "ZFF92LLA7M0267425",
       "image_url": "https://imagescf.dealercenter.net/1024/768/202602-a678a9b38b0a499890dd75603900bd4a/202512-975337554fa24da5bd29df5a96d1f494.jpg",
       "clean_title": false,
-      "estimated_value": 401054,
-      "deal_pct": 11.5
+      "estimated_value": 401548,
+      "deal_pct": 11.6
     },
     {
       "year": 2022,
@@ -2073,13 +2073,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-13",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "17de87574025",
       "vin": "ZFF92LLA4N0282000",
       "image_url": "https://www.ferrariofseattle.com/inventoryphotos/3043/zff92lla4n0282000/ip/1.jpg",
       "clean_title": false,
-      "estimated_value": 453391,
-      "deal_pct": 8.7
+      "estimated_value": 453817,
+      "deal_pct": 8.8
     },
     {
       "year": 2021,
@@ -2094,13 +2094,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-09",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "37ac41f2108f",
       "vin": "ZFF93LMA6M0260056",
       "image_url": "https://www.cauleyferrari.com/imagetag/655/main/f/Used-2021-Ferrari-F8-Spider-1779496651.jpg",
       "clean_title": null,
-      "estimated_value": 413466,
-      "deal_pct": -8.8
+      "estimated_value": 414040,
+      "deal_pct": -8.7
     },
     {
       "year": 2022,
@@ -2115,13 +2115,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-01",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "275c5a1213b5",
       "vin": "ZFF92LLAXN0281305",
       "image_url": "https://gcb.evs.onl/d4/3034/10706428/244704757/s/a1f031883e924325bc583cbf659a9f88.jpg",
       "clean_title": false,
-      "estimated_value": 459208,
-      "deal_pct": 8.6
+      "estimated_value": 459669,
+      "deal_pct": 8.7
     },
     {
       "year": 2023,
@@ -2136,12 +2136,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-08",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "7610728f3612",
       "vin": "ZFF93LMAXP0288849",
       "image_url": "https://gcb.evs.onl/d4/3024/10505047/239531461/s/4e484f6ef1174b4a84f28af9526a1268.jpg",
       "clean_title": false,
-      "estimated_value": 495266,
+      "estimated_value": 495498,
       "deal_pct": 1.1
     },
     {
@@ -2157,13 +2157,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-29",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "0f1bb0b94ccc",
       "vin": "ZFF93LMA1M0261101",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/a682b6266a9c4115ba1ed8d893a09206/8357f4563e_1280.jpg",
       "clean_title": null,
-      "estimated_value": 401609,
-      "deal_pct": -9.6
+      "estimated_value": 402107,
+      "deal_pct": -9.4
     },
     {
       "year": 2022,
@@ -2178,13 +2178,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-06",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "a626f5b634cd",
       "vin": "ZFF92LLA9N0275561",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/b0f6038bc0484bd89487fd4d6949ee10/03d16c1149_1280.jpg",
       "clean_title": null,
-      "estimated_value": 436945,
-      "deal_pct": 19.9
+      "estimated_value": 437271,
+      "deal_pct": 20.0
     },
     {
       "year": 2022,
@@ -2199,13 +2199,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-02-13",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "2a39dc28870d",
       "vin": "ZFF93LMA1N0276778",
       "image_url": "https://cdn05.carsforsale.com/00d2ec4e413eea7ec979517dd83cddd442/2022-ferrari-f8-252520spider-base.jpg?width=960&height=720&format=&sig=7b3a333d99480f1a",
       "clean_title": false,
-      "estimated_value": 441432,
-      "deal_pct": 11.7
+      "estimated_value": 441785,
+      "deal_pct": 11.8
     },
     {
       "year": 2022,
@@ -2220,13 +2220,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "7a0f61a17200",
       "vin": "ZFF92LLAXN0279909",
       "image_url": "https://vehicle-images.carscommerce.inc/da39-110009374/ZFF92LLAXN0279909/c2089111f40543f1b9b04bea4c2d11f9.webp",
       "clean_title": false,
-      "estimated_value": 458592,
-      "deal_pct": 6.2
+      "estimated_value": 459050,
+      "deal_pct": 6.3
     },
     {
       "year": 2022,
@@ -2241,13 +2241,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-14",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "5b8232309f94",
       "vin": "ZFF93LMA4N0273728",
       "image_url": "https://cdn05.carsforsale.com/6615f09b6baf3be89b51429011386167/800x600/2022-ferrari-f8-spider-base-2dr-convertible.jpg",
       "clean_title": true,
-      "estimated_value": 448178,
-      "deal_pct": -10.4
+      "estimated_value": 448572,
+      "deal_pct": -10.3
     },
     {
       "year": 2021,
@@ -2262,13 +2262,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-17",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "96abc23ef80b",
       "vin": "ZFF92LLA9M0263814",
       "image_url": "https://www.abzmotors.com/imagetag/2275/main/f/Used-2021-Ferrari-F8-Tributo-Base-1779494746.jpg",
       "clean_title": true,
-      "estimated_value": 406899,
-      "deal_pct": -4.4
+      "estimated_value": 407430,
+      "deal_pct": -4.3
     },
     {
       "year": 2021,
@@ -2283,13 +2283,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-05",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "4997de092e2c",
       "vin": "ZFF93LMA7M0264066",
       "image_url": "https://pictures.dealer.com/m/mclarenbostonnorwell/0673/2b96c373ec07f0083864a41dae160b14x.jpg",
       "clean_title": false,
-      "estimated_value": 410542,
-      "deal_pct": -8.3
+      "estimated_value": 411097,
+      "deal_pct": -8.1
     },
     {
       "year": 2021,
@@ -2304,13 +2304,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-20",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "d4afa55c7f0c",
       "vin": "ZFF92LLA7M0259423",
       "image_url": "https://images.unitsinventory.com/uploads/photos/0/2026-05-14/27458013-2a834859d351bef908714cf09483afc6.jpg",
       "clean_title": null,
-      "estimated_value": 410063,
-      "deal_pct": 3.7
+      "estimated_value": 410615,
+      "deal_pct": 3.8
     },
     {
       "year": 2022,
@@ -2325,12 +2325,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-19",
       "kind": "dealer",
-      "scraped_at": "2026-05-24T08:44:32Z",
+      "scraped_at": "2026-05-24T09:36:13Z",
       "id": "f17f4f9558db",
       "vin": "ZFF93LMA1N0270396",
       "image_url": "https://gcb.evs.onl/d4/3404/7931795/160567479/s/184db929c024493a88df42a3c64005fa.jpg",
       "clean_title": null,
-      "estimated_value": 435872,
+      "estimated_value": 436192,
       "deal_pct": 2.3
     },
     {
@@ -2346,13 +2346,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:34Z",
+      "scraped_at": "2026-05-24T09:36:14Z",
       "id": "24df26477f1f",
       "vin": "ZFF92LLA9N0275561",
       "image_url": "https://i.ebayimg.com/images/g/f8EAAeSw6oxqBUDu/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 436945,
-      "deal_pct": 19.9
+      "estimated_value": 437271,
+      "deal_pct": 20.0
     },
     {
       "year": 2021,
@@ -2367,13 +2367,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:34Z",
+      "scraped_at": "2026-05-24T09:36:14Z",
       "id": "8f0ebd023583",
       "vin": "ZFF92LLA3M0259144",
       "image_url": "https://i.ebayimg.com/images/g/avUAAeSwvb1qELsQ/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 394170,
-      "deal_pct": 2.4
+      "estimated_value": 394620,
+      "deal_pct": 2.5
     },
     {
       "year": 2023,
@@ -2388,13 +2388,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:34Z",
+      "scraped_at": "2026-05-24T09:36:15Z",
       "id": "7f4c0bf66ed5",
       "vin": "ZFF93LMA7P0293426",
       "image_url": "https://i.ebayimg.com/images/g/QesAAeSwTctqCEEA/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 579160,
-      "deal_pct": -0.1
+      "estimated_value": 579116,
+      "deal_pct": -0.2
     },
     {
       "year": 2021,
@@ -2409,13 +2409,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:35Z",
+      "scraped_at": "2026-05-24T09:36:15Z",
       "id": "f956479d2814",
       "vin": "ZFF92LLA7M0259423",
       "image_url": "https://i.ebayimg.com/images/g/OwQAAeSwKnpqC0rD/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 410063,
-      "deal_pct": 3.7
+      "estimated_value": 410615,
+      "deal_pct": 3.8
     },
     {
       "year": 2021,
@@ -2430,13 +2430,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:35Z",
+      "scraped_at": "2026-05-24T09:36:15Z",
       "id": "cdfd14b1f8d2",
       "vin": "ZFF93LMA1M0261101",
       "image_url": "https://i.ebayimg.com/images/g/9ZIAAeSwGnFpxflj/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 462846,
-      "deal_pct": 4.9
+      "estimated_value": 463133,
+      "deal_pct": 5.0
     },
     {
       "year": 2021,
@@ -2451,34 +2451,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:36Z",
+      "scraped_at": "2026-05-24T09:36:16Z",
       "id": "02c5dca50099",
       "vin": "ZFF92LLA3M0261086",
       "image_url": "https://i.ebayimg.com/images/g/TPcAAeSws11qEZ7f/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 380534,
+      "estimated_value": 380899,
       "deal_pct": 8.1
-    },
-    {
-      "year": 2021,
-      "variant": "Tributo",
-      "price": 359980,
-      "mileage": 6566,
-      "title": "2021 Ferrari F8 Tributo Base",
-      "url": "https://www.ebay.com/itm/366423748130?_skw=Ferrari+F8&hash=item55508eae22:g:X7kAAeSwvPRqDszy",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:36Z",
-      "id": "392303262785",
-      "vin": "00000000000000000",
-      "image_url": "https://i.ebayimg.com/images/g/X7kAAeSwvPRqDszy/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 402949,
-      "deal_pct": 10.7
     },
     {
       "year": 2020,
@@ -2493,13 +2472,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:37Z",
+      "scraped_at": "2026-05-24T09:36:16Z",
       "id": "13dcb66f5dd0",
       "vin": "ZFF92LLA5L0254848",
       "image_url": "https://i.ebayimg.com/images/g/kAAAAeSwqg1puoKU/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 352199,
-      "deal_pct": -13.3
+      "estimated_value": 352723,
+      "deal_pct": -13.1
     },
     {
       "year": 2020,
@@ -2514,13 +2493,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:37Z",
+      "scraped_at": "2026-05-24T09:36:16Z",
       "id": "d9aede6302ac",
       "vin": "ZFF92LLA8L0256979",
       "image_url": "https://i.ebayimg.com/images/g/bhQAAeSw3cFqDkbI/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 353564,
-      "deal_pct": 3.9
+      "estimated_value": 354097,
+      "deal_pct": 4.0
     },
     {
       "year": 2023,
@@ -2535,13 +2514,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:38Z",
+      "scraped_at": "2026-05-24T09:36:17Z",
       "id": "f9436d984a90",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/JZgAAeSwZU5qEl3J/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 558421,
-      "deal_pct": -25.3
+      "estimated_value": 558273,
+      "deal_pct": -25.4
     },
     {
       "year": 2020,
@@ -2556,13 +2535,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:38Z",
+      "scraped_at": "2026-05-24T09:36:17Z",
       "id": "849d6d22f2fc",
       "vin": "ZFF92LLA8L0254195",
       "image_url": "https://i.ebayimg.com/images/g/90wAAeSwB7dqBZva/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 360175,
-      "deal_pct": -11.1
+      "estimated_value": 360752,
+      "deal_pct": -10.9
     },
     {
       "year": 2022,
@@ -2577,12 +2556,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:39Z",
+      "scraped_at": "2026-05-24T09:36:17Z",
       "id": "b41a37aae8da",
       "vin": "ZFF93LMA3N0273798",
       "image_url": "https://i.ebayimg.com/images/g/BdcAAeSwM4ZqAvhV/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 465398,
+      "estimated_value": 465268,
       "deal_pct": 16.2
     },
     {
@@ -2598,13 +2577,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-24T08:44:39Z",
+      "scraped_at": "2026-05-24T09:36:17Z",
       "id": "e3b9ef6edb52",
       "vin": "ZFF92LLAXN0276105",
       "image_url": "https://i.ebayimg.com/images/g/hcsAAeSwDe5qENtG/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 456430,
-      "deal_pct": 31.0
+      "estimated_value": 456874,
+      "deal_pct": 31.1
     }
   ]
 };
