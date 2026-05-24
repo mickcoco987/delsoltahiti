@@ -1,0 +1,32 @@
+# Fichiers et dossiers exclus du deploiement Cloudflare Workers Static Assets.
+# Meme syntaxe que .gitignore.
+#
+# Sans ce fichier, "wrangler deploy" avec assets.directory = "." uploade
+# tout le repo, y compris .git/, .github/, le code source Python/Worker,
+# et les configurations internes — exposes publiquement sur l'URL du Worker.
+
+# Git / GitHub / Cloudflare internals
+.git/
+.github/
+.wrangler/
+
+# Code source qui n'a pas besoin d'etre servi
+scraper/
+worker/
+*.py
+.python-version
+.python-version-*
+
+# Configurations / docs / build
+wrangler.jsonc
+wrangler.toml
+package.json
+package-lock.json
+node_modules/
+*.md
+
+# Dossiers de tests / outils internes
+tests/
+.venv/
+__pycache__/
+*.pyc
