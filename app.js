@@ -980,7 +980,32 @@
     let html = '<div class="picker-inner">' +
       '<h2>Quelle voiture veux-tu suivre&nbsp;?</h2>' +
       '<p class="picker-sub">Sélectionne la marque puis le modèle. ' +
-      'Tu pourras changer à tout moment depuis le bouton en haut.</p>';
+      'Tu pourras changer à tout moment depuis le bouton en haut.</p>' +
+      '<section class="howto">' +
+      '<h3>Comment ça marche</h3>' +
+      '<ol class="howto-steps">' +
+      '<li><strong>Choisis ta voiture</strong> dans la liste ci-dessous. ' +
+      'Chaque modèle porte un verdict d\'investissement ' +
+      '(<span class="verdict-pill good">Excellent</span> ' +
+      '<span class="verdict-pill mid">Mou</span>) ' +
+      'visible avant même de cliquer.</li>' +
+      '<li><strong>Le tableau de bord</strong> du modèle s\'ouvre : ' +
+      'indicateurs de cote (prix moyen, fourchette, tendance 12 mois), ' +
+      'thèse d\'investissement détaillée, bonnes affaires détectées ' +
+      'sous la cote, évolution dans le temps et liste complète des ' +
+      'annonces suivies.</li>' +
+      '<li><strong>Filtre et trie</strong> les annonces : onglets ' +
+      'concessionnaires&nbsp;/ enchères, pills par version, et menu ' +
+      '« Trier par » (bonne affaire, prix, millésime, version groupée).</li>' +
+      '<li><strong>Mise à jour quotidienne</strong> automatique depuis ' +
+      'Marketcheck (concessionnaires US) et eBay Motors (enchères). ' +
+      'Le bouton ↻ en haut force un rafraîchissement immédiat.</li>' +
+      '</ol>' +
+      '<p class="howto-footnote">Les écarts à la cote sont calculés par ' +
+      'une régression robuste sur millésime, kilométrage et version. ' +
+      'Un écart fort est une <em>piste à investiguer</em>, pas un verdict ' +
+      '(options, état et historique d\'entretien échappent au modèle).</p>' +
+      '</section>';
 
     if (opts.warning) {
       html += '<div class="picker-warning">⚠ ' + esc(opts.warning) + '</div>';

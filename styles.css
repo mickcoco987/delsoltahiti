@@ -523,6 +523,49 @@ thead th.nosort { cursor: default; }
   font-size: 0.95rem;
 }
 
+/* Bloc "Comment ça marche" sur l'ecran d'accueil. */
+.howto {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 18px 22px 20px;
+  margin: 0 0 32px;
+}
+
+.howto h3 {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-faint);
+}
+
+.howto-steps {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.howto-steps li { margin-bottom: 8px; }
+.howto-steps li:last-child { margin-bottom: 0; }
+.howto-steps strong { color: var(--text); }
+.howto-steps .verdict-pill {
+  margin: 0 2px;
+  vertical-align: 1px;
+}
+
+.howto-footnote {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--text-faint);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 .picker-warning {
   background: rgba(255, 90, 60, 0.12);
   border: 1px solid rgba(255, 90, 60, 0.35);
