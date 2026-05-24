@@ -1,4 +1,4 @@
-"""Modeles de donnees du suivi de cote Ferrari 458 Italia."""
+"""Modeles de donnees du suivi de cote (multi-modeles)."""
 
 from __future__ import annotations
 
@@ -6,19 +6,7 @@ import hashlib
 import re
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
-from typing import Optional
-
-# Versions reconnues du modele 458 sur le marche US (millesimes 2010-2015).
-VARIANTS = ["Italia", "Spider", "Speciale", "Speciale A"]
-
-# VIN Ferrari : code constructeur "ZFF" + 14 caracteres (I, O, Q exclus).
-_VIN_RE = re.compile(r"ZFF[0-9A-HJ-NPR-Z]{14}", re.IGNORECASE)
-
-
-def extract_vin(text: str) -> str:
-    """Extrait un VIN Ferrari d'un texte libre (URL, titre). Vide si absent."""
-    match = _VIN_RE.search(str(text or ""))
-    return match.group(0).upper() if match else ""
+from typing import Optional, Sequence
 
 
 def utc_now_iso() -> str:
@@ -39,31 +27,39 @@ def parse_int(value) -> Optional[int]:
     return int(digits) if digits else None
 
 
-def parse_year(text) -> Optional[int]:
-    """Trouve un millesime plausible (2009-2016) dans un texte libre."""
-    match = re.search(r"\b(20[01]\d)\b", str(text or ""))
-    if match:
+def parse_year(text, year_range: Sequence[int] = (2000, 2030)) -> Optional[int]:
+    """Trouve un millesime plausible (dans la plage donnee) dans un texte libre."""
+    text = str(text or "")
+    lo, hi = year_range[0], year_range[1]
+    for match in re.finditer(r"\b(19[7-9]\d|20[0-4]\d)\b", text):
         year = int(match.group(1))
-        if 2009 <= year <= 2016:
+        if lo <= year <= hi:
             return year
     return None
 
 
-def classify_variant(text: str) -> str:
-    """Detecte la version a partir d'un titre/URL d'annonce."""
-    t = (text or "").lower()
-    if "speciale a" in t or "aperta" in t:
-        return "Speciale A"
-    if "speciale" in t:
-        return "Speciale"
-    if "spider" in t or "spyder" in t:
-        return "Spider"
-    return "Italia"
+def extract_vin(text: str, prefixes: Sequence[str] = ()) -> str:
+    """Extrait un VIN d'un texte libre, en testant chaque prefixe constructeur.
+
+    Renvoie le VIN trouve (17 caracteres, MAJ), sinon chaine vide. Les
+    caracteres I, O, Q sont interdits dans un VIN par la norme.
+    """
+    if not text or not prefixes:
+        return ""
+    body = str(text)
+    for prefix in prefixes:
+        pattern = re.compile(
+            re.escape(prefix) + r"[A-HJ-NPR-Z0-9]{14}", re.IGNORECASE,
+        )
+        match = pattern.search(body)
+        if match:
+            return match.group(0).upper()
+    return ""
 
 
 @dataclass
 class Listing:
-    """Une annonce de Ferrari 458 relevee sur le marche."""
+    """Une annonce relevee sur le marche, agnostique du modele."""
 
     year: int
     variant: str
@@ -76,29 +72,26 @@ class Listing:
     status: str = "for_sale"  # for_sale | sold
     sale_date: Optional[str] = None
     posted_at: Optional[str] = None  # date de mise en ligne (YYYY-MM-DD)
-    kind: str = "dealer"  # dealer | auction (= type de circuit de vente)
+    kind: str = "dealer"  # dealer | auction
     scraped_at: str = field(default_factory=utc_now_iso)
     id: str = ""
     vin: str = ""
     image_url: str = ""
-    clean_title: Optional[bool] = None  # titre propre (si la source le fournit)
+    clean_title: Optional[bool] = None
     # Champs calcules par le moteur de valuation (voir scraper/valuation.py).
     estimated_value: Optional[int] = None
     deal_pct: Optional[float] = None
 
     def __post_init__(self) -> None:
-        if self.variant not in VARIANTS:
-            self.variant = classify_variant(self.variant or self.title)
-        if not self.title:
-            self.title = f"{self.year} Ferrari 458 {self.variant}"
         if not self.id:
             self.id = self._compute_id()
-        # VIN fourni par la source, sinon extrait de l'URL ou du titre.
-        self.vin = self.vin.strip().upper() if self.vin \
-            else extract_vin(f"{self.url} {self.title}")
+        if self.vin:
+            self.vin = self.vin.strip().upper()
 
     def _compute_id(self) -> str:
-        basis = self.url or f"{self.source}|{self.title}|{self.year}|{self.price}|{self.mileage}"
+        basis = self.url or (
+            f"{self.source}|{self.title}|{self.year}|{self.price}|{self.mileage}"
+        )
         return hashlib.sha1(basis.encode("utf-8")).hexdigest()[:12]
 
     def to_dict(self) -> dict:

@@ -1,6 +1,7 @@
-name: Mise a jour de la cote 458
+name: Mise a jour de la cote supercars
 
-# Lance le scraper chaque jour, puis publie les donnees actualisees.
+# Lance le scraper chaque jour pour tous les modeles du catalogue,
+# puis publie les donnees actualisees.
 on:
   schedule:
     - cron: "17 6 * * *"   # tous les jours a 06h17 UTC
@@ -21,7 +22,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Scraper la cote (annonces + encheres)
+      - name: Scraper la cote pour tous les modeles
         env:
           # Cles d'API a definir dans :
           # Settings > Secrets and variables > Actions > New repository secret.
@@ -30,11 +31,12 @@ jobs:
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
         run: |
-          # --replace : chaque run = instantane reel du jour (purge l'echantillon).
-          # Si toutes les sources echouent, le scraper s'arrete avant l'ecriture
-          # (exit 1) et les donnees existantes sont conservees.
-          python -m scraper --source all --replace --verbose \
-            || echo "Sources live indisponibles — donnees existantes conservees."
+          # --model all : boucle sur tous les modeles du catalogue.
+          # --replace : chaque run = instantane reel du jour.
+          # Si toutes les sources echouent pour un modele, ses donnees existantes
+          # sont conservees.
+          python -m scraper --model all --source all --replace --verbose \
+            || echo "Sources live partiellement indisponibles — donnees existantes conservees pour les modeles concernes."
 
       - name: Publier les donnees actualisees
         run: |
@@ -42,7 +44,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/
-            git commit -m "chore: mise a jour automatique de la cote 458"
+            git commit -m "chore: mise a jour automatique de la cote supercars"
             git push
           else
             echo "Aucun changement de cote a publier."

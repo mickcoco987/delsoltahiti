@@ -1,0 +1,19 @@
+{
+  "model": "ferrari-458",
+  "points": [
+    {
+      "date": "2026-05-24",
+      "overall": {
+        "avg_price": 302261,
+        "median_price": 236000,
+        "count": 36
+      },
+      "by_variant": {
+        "Italia": 200556,
+        "Spider": 233818,
+        "Speciale": 446500,
+        "Speciale A": 987500
+      }
+    }
+  ]
+}
