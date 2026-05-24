@@ -22,7 +22,7 @@ window.COTE_CATALOG = {
         "class": "good"
       },
       "count": 68,
-      "generated_at": "2026-05-24T06:47:33Z"
+      "generated_at": "2026-05-24T06:55:13Z"
     },
     {
       "slug": "ferrari-f8",
@@ -43,7 +43,7 @@ window.COTE_CATALOG = {
         "class": "mid"
       },
       "count": 119,
-      "generated_at": "2026-05-24T06:47:39Z"
+      "generated_at": "2026-05-24T06:55:19Z"
     },
     {
       "slug": "lamborghini-huracan",
@@ -68,7 +68,7 @@ window.COTE_CATALOG = {
         "class": "good"
       },
       "count": 235,
-      "generated_at": "2026-05-24T06:47:59Z"
+      "generated_at": "2026-05-24T06:55:46Z"
     },
     {
       "slug": "porsche-911-gt3",
@@ -90,7 +90,7 @@ window.COTE_CATALOG = {
         "class": "good"
       },
       "count": 173,
-      "generated_at": "2026-05-24T06:48:24Z"
+      "generated_at": "2026-05-24T06:56:16Z"
     }
   ]
 };
