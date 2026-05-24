@@ -32,13 +32,13 @@
     {
       "date": "2026-05-24",
       "overall": {
-        "avg_price": 358042,
-        "median_price": 309995,
-        "count": 68
+        "avg_price": 356416,
+        "median_price": 314995,
+        "count": 71
       },
       "by_variant": {
-        "Italia": 299088,
-        "Spider": 344868,
+        "Italia": 300862,
+        "Spider": 342456,
         "Speciale": 1116527,
         "Speciale A": null
       }
