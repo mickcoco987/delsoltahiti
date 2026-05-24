@@ -594,6 +594,53 @@ thead th.nosort { cursor: default; }
 .model-card.no-data { opacity: 0.6; }
 .model-card.no-data .model-sub { color: var(--text-faint); }
 
+/* ---------- toggle "Grouper par version" + en-tetes de groupe ---------- */
+
+.card-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.group-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.group-toggle:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.group-toggle.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+tr.group-header td {
+  background: var(--bg-elev-2);
+  padding: 14px 12px 10px;
+  border-top: 2px solid var(--border);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+tr.group-header .group-count {
+  color: var(--text-faint);
+  font-size: 0.78rem;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
 /* ---------- carte "verdict investissement" ---------- */
 
 .investment-card {
