@@ -4,12 +4,12 @@
     {
       "date": "2026-05-24",
       "overall": {
-        "avg_price": 418589,
-        "median_price": 400303,
-        "count": 120
+        "avg_price": 418528,
+        "median_price": 400195,
+        "count": 119
       },
       "by_variant": {
-        "Tributo": 414834,
+        "Tributo": 414738,
         "Spider": 527493
       }
     }
