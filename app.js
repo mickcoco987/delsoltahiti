@@ -1213,6 +1213,69 @@
     }).filter(Boolean);
   }
 
+  /* ---------- autocomplete marque/modele via NHTSA vPIC (public) ----------
+   * https://vpic.nhtsa.dot.gov/api/Home/Index/LanguageSpecific
+   * Pas d'authentification, CORS ouvert, donnees exhaustives pour le marche US.
+   * Resultat mis en cache pour eviter de rejouer le fetch.
+   */
+  let _brandCache = null;
+  const _modelCache = new Map();
+
+  function fetchBrands() {
+    if (_brandCache) return Promise.resolve(_brandCache);
+    return fetch("https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json")
+      .then(function (r) { return r.ok ? r.json() : { Results: [] }; })
+      .then(function (j) {
+        _brandCache = (j.Results || [])
+          .map(function (m) { return titleCase(m.MakeName || ""); })
+          .filter(Boolean)
+          .sort();
+        return _brandCache;
+      })
+      .catch(function () { _brandCache = []; return []; });
+  }
+
+  function fetchModelsForBrand(brand) {
+    const key = String(brand || "").trim().toLowerCase();
+    if (!key) return Promise.resolve([]);
+    if (_modelCache.has(key)) return Promise.resolve(_modelCache.get(key));
+    const url = "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/" +
+      encodeURIComponent(brand) + "?format=json";
+    return fetch(url)
+      .then(function (r) { return r.ok ? r.json() : { Results: [] }; })
+      .then(function (j) {
+        const models = Array.from(new Set((j.Results || [])
+          .map(function (m) { return titleCase(m.Model_Name || ""); })
+          .filter(Boolean))).sort();
+        _modelCache.set(key, models);
+        return models;
+      })
+      .catch(function () { _modelCache.set(key, []); return []; });
+  }
+
+  function titleCase(s) {
+    return String(s).toLowerCase().replace(/\b([a-z])/g, function (m, c) {
+      return c.toUpperCase();
+    });
+  }
+
+  function fillDatalist(dl, values) {
+    if (!dl) return;
+    dl.innerHTML = values.map(function (v) {
+      return '<option value="' + esc(v) + '">';
+    }).join("");
+  }
+
+  function debounce(fn, ms) {
+    let t = null;
+    return function () {
+      const args = arguments;
+      const ctx = this;
+      clearTimeout(t);
+      t = setTimeout(function () { fn.apply(ctx, args); }, ms);
+    };
+  }
+
   function openAddModelModal() {
     let backdrop = document.getElementById("add-model-modal");
     if (backdrop) { backdrop.remove(); }
@@ -1272,6 +1335,22 @@
       $(k).addEventListener("input", function () { $(k).dataset.touched = "1"; });
     });
 
+    // Autocomplete : peuple la datalist des marques au chargement ; les modeles
+    // se rechargent (debounce 300ms) chaque fois que la marque change.
+    const brandList = backdrop.querySelector("#amm-brand-list");
+    const nameList = backdrop.querySelector("#amm-name-list");
+    fetchBrands().then(function (brands) { fillDatalist(brandList, brands); });
+
+    const refreshModels = debounce(function () {
+      const brand = $("brand").value.trim();
+      if (!brand) { fillDatalist(nameList, []); return; }
+      fetchModelsForBrand(brand).then(function (models) {
+        fillDatalist(nameList, models);
+      });
+    }, 300);
+    $("brand").addEventListener("input", refreshModels);
+    $("brand").addEventListener("change", refreshModels);
+
     backdrop.querySelector("#add-model-form").addEventListener("submit", function (e) {
       e.preventDefault();
       submitAddModel(backdrop);
@@ -1283,27 +1362,29 @@
     const cls = ["neutral", "good", "mid", "over"];
     return '' +
       '<fieldset><legend>Identité</legend>' +
-      '<label>Marque <input id="amm-brand" required maxlength="40" placeholder="Ferrari, Porsche…"></label>' +
-      '<label>Nom du modèle <input id="amm-name" required maxlength="60" placeholder="488 Pista"></label>' +
+      '<label>Marque <input id="amm-brand" list="amm-brand-list" required maxlength="40" placeholder="Ferrari, Porsche…" autocomplete="off"></label>' +
+      '<datalist id="amm-brand-list"></datalist>' +
+      '<label>Nom du modèle <input id="amm-name" list="amm-name-list" required maxlength="60" placeholder="488 Pista" autocomplete="off"></label>' +
+      '<datalist id="amm-name-list"></datalist>' +
       '<label>Nom court <input id="amm-short_name" maxlength="40" placeholder="488"></label>' +
       '<label>Slug <input id="amm-slug" required maxlength="40" pattern="[a-z0-9-]{3,40}" placeholder="ferrari-488-pista"></label>' +
       '</fieldset>' +
 
-      '<fieldset><legend>Plages de scoring</legend>' +
+      '<fieldset><legend>Plages de scoring <span class="legend-opt">(optionnel — vide = tout prendre)</span></legend>' +
       '<div class="row-2">' +
-      '<label>Année min <input id="amm-year_min" type="number" required min="1970" max="2030"></label>' +
-      '<label>Année max <input id="amm-year_max" type="number" required min="1970" max="2030"></label>' +
+      '<label>Année min <input id="amm-year_min" type="number" min="1970" max="2030" placeholder="1970"></label>' +
+      '<label>Année max <input id="amm-year_max" type="number" min="1970" max="2030" placeholder="' + (new Date().getFullYear() + 1) + '"></label>' +
       '</div>' +
       '<div class="row-2">' +
       '<label>Prix min ($) <input id="amm-price_min" type="number" required min="0" placeholder="60000"></label>' +
       '<label>Prix max ($) <input id="amm-price_max" type="number" required min="0" placeholder="500000"></label>' +
       '</div>' +
-      '<label>Kilométrage max (mi) <input id="amm-max_mileage" type="number" required min="1000" value="150000"></label>' +
+      '<label>Kilométrage max (mi) <input id="amm-max_mileage" type="number" min="1000" placeholder="999999 = aucun filtre"></label>' +
       '</fieldset>' +
 
-      '<fieldset><legend>Versions</legend>' +
-      '<label>Versions (une par ligne, la première = défaut) ' +
-      '<textarea id="amm-variants" required rows="4" placeholder="Pista&#10;Spider"></textarea></label>' +
+      '<fieldset><legend>Versions <span class="legend-opt">(optionnel)</span></legend>' +
+      '<label>Une par ligne, la première = défaut. Vide = une version unique « Standard ». ' +
+      '<textarea id="amm-variants" rows="4" placeholder="Pista&#10;Spider"></textarea></label>' +
       '</fieldset>' +
 
       '<fieldset><legend>Sources de données</legend>' +
@@ -1341,15 +1422,22 @@
     const v = function (id) {
       return backdrop.querySelector("#amm-" + id).value.trim();
     };
+    const currentYear = new Date().getFullYear();
+    const yearMin = v("year_min") ? parseInt(v("year_min"), 10) : 1970;
+    const yearMax = v("year_max") ? parseInt(v("year_max"), 10) : currentYear + 1;
+    const maxMileage = v("max_mileage") ? parseInt(v("max_mileage"), 10) : 999999;
+    const variants = csvList(v("variants"));
+    if (!variants.length) variants.push("Standard");
+
     const model = {
       slug: v("slug"),
       brand: v("brand"),
       name: v("name"),
       short_name: v("short_name") || v("name"),
-      year_range: [parseInt(v("year_min"), 10), parseInt(v("year_max"), 10)],
+      year_range: [yearMin, yearMax],
       price_range: [parseInt(v("price_min"), 10), parseInt(v("price_max"), 10)],
-      max_mileage: parseInt(v("max_mileage"), 10),
-      variants: csvList(v("variants")),
+      max_mileage: maxMileage,
+      variants: variants,
       title_filter: csvList(v("title_filter")),
       vin_prefixes: csvList(v("vin_prefixes")).map(function (p) {
         return p.toUpperCase();
@@ -1370,10 +1458,6 @@
     }
     if (model.price_range[0] >= model.price_range[1]) {
       showModalStatus(backdrop, "warn", "Prix min doit être < prix max.");
-      return;
-    }
-    if (!model.variants.length) {
-      showModalStatus(backdrop, "warn", "Renseigne au moins une version.");
       return;
     }
 
