@@ -589,31 +589,34 @@
         mark + "</th>";
     }).join("");
 
-    const rows = list.map((l) => {
-      const vin = vinOf(l);
-      const avis = avisFor(l);
-      return "<tr>" +
-        thumbCell(l) +
-        '<td class="num">' + linkedYear(l) + "</td>" +
-        "<td>" + variantTag(l.variant) + "</td>" +
-        '<td class="num">' + fmtUSD.format(l.price) + "</td>" +
-        '<td class="num" title="' + esc(bandTitle(l.estimated_value)) + '">' +
-        (l.estimated_value ? fmtUSD.format(l.estimated_value) : "—") + "</td>" +
-        '<td class="num">' + dealBadge(l.deal_pct) + "</td>" +
-        '<td class="num">' +
-        (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
-        "<td>" + esc(l.location || "—") + "</td>" +
-        '<td title="' + esc(l.posted_at || "") + '">' +
-        (relativeDays(l.posted_at) || "—") +
-        (isNew(l.posted_at) ? " " + newBadge() : "") + "</td>" +
-        '<td class="vin">' + vinLink(vin) + "</td>" +
-        "<td>" + titleCell(l) + "</td>" +
-        '<td><span class="avis ' + avis.cls + '">' + avis.txt + "</span></td>" +
-        "</tr>";
-    }).join("");
+    // Groupage par variante quand on trie sur `variant` (clic sur l'en-tete
+    // Version, ou toggle "Grouper" actif). Affiche un en-tete de section avec
+    // le nom + la couleur de la variante avant chaque groupe.
+    const grouped = sortKey === "variant" && activeVariant === "Toutes";
+    let body;
+    if (grouped) {
+      const groups = {};
+      const order = [];
+      list.forEach(function (l) {
+        if (!(l.variant in groups)) {
+          groups[l.variant] = [];
+          order.push(l.variant);
+        }
+        groups[l.variant].push(l);
+      });
+      body = order.map(function (v) {
+        const header = '<tr class="group-header"><td colspan="' + cols.length +
+          '">' + variantTag(v) + ' <span class="group-count">' +
+          groups[v].length + (groups[v].length > 1 ? " annonces" : " annonce") +
+          "</span></td></tr>";
+        return header + groups[v].map(renderRow).join("");
+      }).join("");
+    } else {
+      body = list.map(renderRow).join("");
+    }
 
     document.getElementById("listings-table").innerHTML =
-      "<table><thead><tr>" + head + "</tr></thead><tbody>" + rows +
+      "<table><thead><tr>" + head + "</tr></thead><tbody>" + body +
       "</tbody></table>";
 
     document.querySelectorAll("#listings-table thead th").forEach((th) => {
@@ -626,14 +629,70 @@
           sortKey = key;
           sortDir = key === "variant" || key === "location" ? 1 : -1;
         }
+        renderGroupToggle();
         renderTable();
       });
     });
   }
 
+  function renderRow(l) {
+    const vin = vinOf(l);
+    const avis = avisFor(l);
+    return "<tr>" +
+      thumbCell(l) +
+      '<td class="num">' + linkedYear(l) + "</td>" +
+      "<td>" + variantTag(l.variant) + "</td>" +
+      '<td class="num">' + fmtUSD.format(l.price) + "</td>" +
+      '<td class="num" title="' + esc(bandTitle(l.estimated_value)) + '">' +
+      (l.estimated_value ? fmtUSD.format(l.estimated_value) : "—") + "</td>" +
+      '<td class="num">' + dealBadge(l.deal_pct) + "</td>" +
+      '<td class="num">' +
+      (l.mileage ? fmtInt.format(l.mileage) + " mi" : "—") + "</td>" +
+      "<td>" + esc(l.location || "—") + "</td>" +
+      '<td title="' + esc(l.posted_at || "") + '">' +
+      (relativeDays(l.posted_at) || "—") +
+      (isNew(l.posted_at) ? " " + newBadge() : "") + "</td>" +
+      '<td class="vin">' + vinLink(vin) + "</td>" +
+      "<td>" + titleCell(l) + "</td>" +
+      '<td><span class="avis ' + avis.cls + '">' + avis.txt + "</span></td>" +
+      "</tr>";
+  }
+
   function variantTag(v) {
     return '<span class="tag" style="background:' +
       (VARIANT_COLORS[v] || PALETTE[0]) + '">' + esc(v) + "</span>";
+  }
+
+  /* Le toggle "Grouper par version" force sortKey=variant. Active/inactif
+     suit l'etat actuel : on lie le bouton a la valeur de sortKey. */
+  function renderGroupToggle() {
+    const btn = document.getElementById("group-toggle");
+    if (!btn) return;
+    const grouped = sortKey === "variant" && activeVariant === "Toutes";
+    btn.setAttribute("aria-pressed", grouped ? "true" : "false");
+    btn.textContent = grouped ? "✓ Groupé par version" : "Grouper par version";
+    btn.classList.toggle("active", grouped);
+    // Desactive le toggle quand on filtre deja sur une version unique
+    // (le groupage n'aurait alors qu'un seul groupe = sans interet).
+    btn.disabled = activeVariant !== "Toutes";
+    btn.style.opacity = btn.disabled ? "0.4" : "";
+    btn.style.cursor = btn.disabled ? "not-allowed" : "";
+    if (!btn.dataset.bound) {
+      btn.addEventListener("click", function () {
+        if (btn.disabled) return;
+        if (sortKey === "variant") {
+          // Toggle off : retour au tri par defaut (deal_pct desc).
+          sortKey = "deal_pct";
+          sortDir = -1;
+        } else {
+          sortKey = "variant";
+          sortDir = 1;
+        }
+        renderGroupToggle();
+        renderTable();
+      });
+      btn.dataset.bound = "1";
+    }
   }
 
   /* ---------- onglets et filtre par version ---------- */
@@ -814,6 +873,7 @@
     renderHistory();
     renderYearChart();
     renderScatter();
+    renderGroupToggle();
     renderTable();
   }
 

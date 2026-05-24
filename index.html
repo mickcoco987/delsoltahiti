@@ -72,7 +72,14 @@
     <section class="card">
       <div class="card-head">
         <h2>Annonces suivies</h2>
-        <span class="card-hint" id="table-count"></span>
+        <div class="card-head-actions">
+          <button id="group-toggle" class="group-toggle" type="button"
+                  aria-pressed="false"
+                  title="Trie les annonces par version et affiche un en-tête par variante">
+            Grouper par version
+          </button>
+          <span class="card-hint" id="table-count"></span>
+        </div>
       </div>
       <div id="listings-table" class="table-box"></div>
     </section>
