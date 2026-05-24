@@ -864,10 +864,24 @@
     }, 15000);
   }
 
-  function setupUpdateButton() {
+  /* Resout l'URL de base du Worker.
+   * - COTE_CONFIG.updateEndpoint vide ou absent => meme origine (cas Worker
+   *   avec Static Assets qui sert AUSSI le dashboard : preview appelle
+   *   preview, prod appelle prod, plus de CORS).
+   * - URL explicite => utilisee telle quelle.
+   * - null ou false explicite => Worker desactive (renvoie null, masque la
+   *   card "+ Ajouter une voiture" et neutralise le bouton de refresh).
+   */
+  function getApiBase() {
     const cfg = window.COTE_CONFIG || {};
+    if (cfg.updateEndpoint === null || cfg.updateEndpoint === false) return null;
+    return (cfg.updateEndpoint || window.location.origin).replace(/\/$/, "");
+  }
+
+  function setupUpdateButton() {
     const btn = document.querySelector(".update-btn");
-    if (!btn || !cfg.updateEndpoint) return;
+    const apiBase = getApiBase();
+    if (!btn || !apiBase) return;
     const original = btn.textContent.trim();
     const actionsHref = btn.getAttribute("href");
     btn.addEventListener("click", function (e) {
@@ -877,7 +891,7 @@
       btn.textContent = "⏳ Lancement…";
       showUpdateBanner("running",
         "Demande de mise à jour en cours…", actionsHref);
-      fetch(cfg.updateEndpoint, { method: "POST" })
+      fetch(apiBase, { method: "POST" })
         .then(function (r) { return r.json().catch(function () { return {}; }); })
         .then(function (d) {
           if (d && d.ok) {
@@ -1056,9 +1070,8 @@
   }
 
   function renderAddModelCard() {
-    const cfg = window.COTE_CONFIG || {};
-    if (!cfg.updateEndpoint) {
-      // Sans Worker configure, l'ajout depuis l'UI ne peut pas commit.
+    if (!getApiBase()) {
+      // Sans Worker accessible, l'ajout depuis l'UI ne peut pas commit.
       return '';
     }
     return '<div class="brand-block"><h3>Personnalisé</h3>' +
@@ -1426,10 +1439,10 @@
   }
 
   function submitAddModel(backdrop) {
-    const cfg = window.COTE_CONFIG || {};
-    if (!cfg.updateEndpoint) {
+    const apiBase = getApiBase();
+    if (!apiBase) {
       showModalStatus(backdrop, "warn",
-        "Worker non configuré (COTE_CONFIG.updateEndpoint manquant).");
+        "Worker désactivé (COTE_CONFIG.updateEndpoint = null).");
       return;
     }
     const v = function (id) {
@@ -1481,7 +1494,7 @@
     submitBtn.textContent = "⏳ Envoi…";
     showModalStatus(backdrop, "running", "Création en cours…");
 
-    fetch(cfg.updateEndpoint.replace(/\/$/, "") + "/add-model", {
+    fetch(apiBase + "/add-model", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(model),
