@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-05-28T10:34:16Z",
+  "generated_at": "2026-05-29T10:14:37Z",
   "sources": [
     "ebay"
   ],
@@ -30,38 +30,38 @@ window.COTE = {
   },
   "market": {
     "overall": {
-      "count": 3,
-      "avg_price": 155330,
-      "median_price": 155999,
-      "min_price": 139995,
-      "max_price": 169995,
-      "avg_mileage": 7078
+      "count": 4,
+      "avg_price": 148996,
+      "median_price": 152495,
+      "min_price": 134995,
+      "max_price": 155999,
+      "avg_mileage": 8288
     },
     "by_variant": {
       "Standard": {
-        "count": 3,
-        "avg_price": 155330,
-        "median_price": 155999,
-        "min_price": 139995,
-        "max_price": 169995,
-        "avg_mileage": 7078
+        "count": 4,
+        "avg_price": 148996,
+        "median_price": 152495,
+        "min_price": 134995,
+        "max_price": 155999,
+        "avg_mileage": 8288
       }
     },
     "by_year": {
       "2024": {
-        "count": 1,
-        "avg_price": 139995,
-        "median_price": 139995,
-        "min_price": 139995,
-        "max_price": 139995,
-        "avg_mileage": 11565
+        "count": 2,
+        "avg_price": 142495,
+        "median_price": 142495,
+        "min_price": 134995,
+        "max_price": 149995,
+        "avg_mileage": 11741
       },
       "2025": {
         "count": 2,
-        "avg_price": 162997,
-        "median_price": 162997,
-        "min_price": 155999,
-        "max_price": 169995,
+        "avg_price": 155497,
+        "median_price": 155497,
+        "min_price": 154995,
+        "max_price": 155999,
         "avg_mileage": 4835
       }
     }
@@ -121,13 +121,45 @@ window.COTE = {
       "by_variant": {
         "Standard": 155330
       }
+    },
+    {
+      "date": "2026-05-29",
+      "overall": {
+        "avg_price": 148996,
+        "median_price": 152495,
+        "count": 4
+      },
+      "by_variant": {
+        "Standard": 148996
+      }
     }
   ],
   "listings": [
     {
+      "year": 2025,
+      "variant": "Standard",
+      "price": 154995,
+      "mileage": 7748,
+      "title": "2025 Audi RS 6 Avant performance 4.0T quattro Avant-INSANE $170K MSRP-STEALTH",
+      "url": "https://www.ebay.com/itm/327182171971?_skw=Audi+Rs+6&hash=item4c2d93bf43:g:RlcAAeSwkxNqBUDf",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-05-29T10:14:27Z",
+      "id": "92faecba5bd8",
+      "vin": "WUA1DBF29SN906203",
+      "image_url": "https://i.ebayimg.com/images/g/RlcAAeSwkxNqBUDf/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 155964,
+      "deal_pct": 0.6
+    },
+    {
       "year": 2024,
       "variant": "Standard",
-      "price": 139995,
+      "price": 134995,
       "mileage": 11565,
       "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-$30K MODS-FULL PPF!",
       "url": "https://www.ebay.com/itm/327182168326?_skw=Audi+Rs+6&hash=item4c2d93b106:g:f9wAAeSwwRFqBUEM",
@@ -137,13 +169,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-28T10:34:05Z",
+      "scraped_at": "2026-05-29T10:14:28Z",
       "id": "860e1a683388",
       "vin": "WUA1DBF2XRN908021",
       "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 149009,
-      "deal_pct": 6.0
+      "estimated_value": 149061,
+      "deal_pct": 9.4
     },
     {
       "year": 2025,
@@ -158,34 +190,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-28T10:34:06Z",
+      "scraped_at": "2026-05-29T10:14:28Z",
       "id": "b8d965e0934d",
       "vin": "WUA1DBF25SN904545",
       "image_url": "https://i.ebayimg.com/images/g/K9cAAeSwLFVp8Mqm/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 159634,
-      "deal_pct": 2.3
+      "estimated_value": 159571,
+      "deal_pct": 2.2
     },
     {
-      "year": 2025,
+      "year": 2024,
       "variant": "Standard",
-      "price": 169995,
-      "mileage": 7748,
-      "title": "2025 Audi RS 6 Avant performance 4.0T quattro Avant-INSANE $170K MSRP-STEALTH",
-      "url": "https://www.ebay.com/itm/327182171971?_skw=Audi+Rs+6&hash=item4c2d93bf43:g:RlcAAeSwkxNqBUDf",
+      "price": 149995,
+      "mileage": 11917,
+      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-FACTORY MATTE PAINT",
+      "url": "https://www.ebay.com/itm/327183888446?_skw=Audi+Rs+6&hash=item4c2dadf03e:g:4G8AAeSw9MVqGQg1",
       "source": "ebay",
       "location": "US",
       "status": "for_sale",
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-05-28T10:34:09Z",
-      "id": "92faecba5bd8",
-      "vin": "WUA1DBF29SN906203",
-      "image_url": "https://i.ebayimg.com/images/g/RlcAAeSwkxNqBUDf/s-l225.jpg",
+      "scraped_at": "2026-05-29T10:14:32Z",
+      "id": "57574669fded",
+      "vin": "WUA1DBF2XRN905541",
+      "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 155999,
-      "deal_pct": -9.0
+      "estimated_value": 148849,
+      "deal_pct": -0.8
     }
   ]
 };
