@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-06-02T10:54:40Z",
+  "generated_at": "2026-06-03T11:23:02Z",
   "sources": [
     "ebay"
   ],
@@ -176,6 +176,17 @@ window.COTE = {
       "by_variant": {
         "Standard": 148996
       }
+    },
+    {
+      "date": "2026-06-03",
+      "overall": {
+        "avg_price": 148996,
+        "median_price": 152495,
+        "count": 4
+      },
+      "by_variant": {
+        "Standard": 148996
+      }
     }
   ],
   "listings": [
@@ -192,13 +203,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-06-02T10:54:33Z",
+      "scraped_at": "2026-06-03T11:22:53Z",
       "id": "57574669fded",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 148849,
       "deal_pct": -0.8
+    },
+    {
+      "year": 2025,
+      "variant": "Standard",
+      "price": 155999,
+      "mileage": 1922,
+      "title": "2025 Audi RS 6 Avant performance 4.0T quattro Avant",
+      "url": "https://www.ebay.com/itm/377229105507?_skw=Audi+Rs+6&hash=item57d49b5963:g:K9cAAeSwLFVp8Mqm",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-06-03T11:22:54Z",
+      "id": "30b5e3a4b0f3",
+      "vin": "WUA1DBF25SN904545",
+      "image_url": "https://i.ebayimg.com/images/g/K9cAAeSwLFVp8Mqm/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 159571,
+      "deal_pct": 2.2
     },
     {
       "year": 2025,
@@ -213,34 +245,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-06-02T10:54:34Z",
+      "scraped_at": "2026-06-03T11:22:55Z",
       "id": "92faecba5bd8",
       "vin": "WUA1DBF29SN906203",
       "image_url": "https://i.ebayimg.com/images/g/RlcAAeSwkxNqBUDf/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 155964,
       "deal_pct": 0.6
-    },
-    {
-      "year": 2025,
-      "variant": "Standard",
-      "price": 155999,
-      "mileage": 1922,
-      "title": "2025 Audi RS 6 Avant performance 4.0T quattro Avant",
-      "url": "https://www.ebay.com/itm/377212932926?_skw=Audi+Rs+6&hash=item57d3a4933e:g:K9cAAeSwLFVp8Mqm",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-06-02T10:54:35Z",
-      "id": "b8d965e0934d",
-      "vin": "WUA1DBF25SN904545",
-      "image_url": "https://i.ebayimg.com/images/g/K9cAAeSwLFVp8Mqm/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 159571,
-      "deal_pct": 2.2
     },
     {
       "year": 2024,
@@ -255,7 +266,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-06-02T10:54:35Z",
+      "scraped_at": "2026-06-03T11:22:56Z",
       "id": "860e1a683388",
       "vin": "WUA1DBF2XRN908021",
       "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
