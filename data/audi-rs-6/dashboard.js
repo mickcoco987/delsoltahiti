@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-06-10T10:32:25Z",
+  "generated_at": "2026-06-11T10:58:17Z",
   "sources": [
     "ebay"
   ],
@@ -264,9 +264,41 @@ window.COTE = {
       "by_variant": {
         "Standard": 146662
       }
+    },
+    {
+      "date": "2026-06-11",
+      "overall": {
+        "avg_price": 146662,
+        "median_price": 149995,
+        "count": 3
+      },
+      "by_variant": {
+        "Standard": 146662
+      }
     }
   ],
   "listings": [
+    {
+      "year": 2025,
+      "variant": "Standard",
+      "price": 154995,
+      "mileage": 7748,
+      "title": "2025 Audi RS 6 Avant performance 4.0T quattro Avant-INSANE $170K MSRP-STEALTH",
+      "url": "https://www.ebay.com/itm/327207269360?_skw=Audi+Rs+6&hash=item4c2f12b3f0:g:RlcAAeSwkxNqBUDf",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-06-11T10:58:10Z",
+      "id": "c1ce70f41a32",
+      "vin": "WUA1DBF29SN906203",
+      "image_url": "https://i.ebayimg.com/images/g/RlcAAeSwkxNqBUDf/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 156854,
+      "deal_pct": 1.2
+    },
     {
       "year": 2024,
       "variant": "Standard",
@@ -280,7 +312,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-06-10T10:32:18Z",
+      "scraped_at": "2026-06-11T10:58:11Z",
       "id": "39f66c0c382c",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
@@ -294,41 +326,20 @@ window.COTE = {
       "price": 134995,
       "mileage": 11565,
       "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-$30K MODS-FULL PPF!",
-      "url": "https://www.ebay.com/itm/327194791268?_skw=Audi+Rs+6&hash=item4c2e544d64:g:f9wAAeSwwRFqBUEM",
+      "url": "https://www.ebay.com/itm/327207268297?_skw=Audi+Rs+6&hash=item4c2f12afc9:g:f9wAAeSwwRFqBUEM",
       "source": "ebay",
       "location": "US",
       "status": "for_sale",
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-06-10T10:32:21Z",
-      "id": "4dbe356755d0",
+      "scraped_at": "2026-06-11T10:58:14Z",
+      "id": "0d984eb2bc60",
       "vin": "WUA1DBF2XRN908021",
       "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 149995,
       "deal_pct": 10.0
-    },
-    {
-      "year": 2025,
-      "variant": "Standard",
-      "price": 154995,
-      "mileage": 7748,
-      "title": "2025 Audi RS 6 Avant performance 4.0T quattro Avant-INSANE $170K MSRP-STEALTH",
-      "url": "https://www.ebay.com/itm/327194792569?_skw=Audi+Rs+6&hash=item4c2e545279:g:RlcAAeSwkxNqBUDf",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-06-10T10:32:21Z",
-      "id": "63542800ab60",
-      "vin": "WUA1DBF29SN906203",
-      "image_url": "https://i.ebayimg.com/images/g/RlcAAeSwkxNqBUDf/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 156854,
-      "deal_pct": 1.2
     }
   ]
 };
