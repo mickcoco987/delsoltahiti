@@ -312,6 +312,19 @@
         "GT3 Touring": 309181,
         "GT3 RS": 318742
       }
+    },
+    {
+      "date": "2026-06-17",
+      "overall": {
+        "avg_price": 246214,
+        "median_price": 234948,
+        "count": 134
+      },
+      "by_variant": {
+        "GT3": 233414,
+        "GT3 Touring": 300495,
+        "GT3 RS": 322385
+      }
     }
   ]
 }
