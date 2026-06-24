@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-06-23T10:02:25Z",
+  "generated_at": "2026-06-24T09:50:34Z",
   "sources": [
     "ebay"
   ],
@@ -30,21 +30,21 @@ window.COTE = {
   },
   "market": {
     "overall": {
-      "count": 4,
-      "avg_price": 127495,
-      "median_price": 132495,
+      "count": 3,
+      "avg_price": 126662,
+      "median_price": 134995,
       "min_price": 94995,
       "max_price": 149995,
-      "avg_mileage": 23377
+      "avg_mileage": 25118
     },
     "by_variant": {
       "Standard": {
-        "count": 4,
-        "avg_price": 127495,
-        "median_price": 132495,
+        "count": 3,
+        "avg_price": 126662,
+        "median_price": 134995,
         "min_price": 94995,
         "max_price": 149995,
-        "avg_mileage": 23377
+        "avg_mileage": 25118
       }
     },
     "by_year": {
@@ -57,12 +57,12 @@ window.COTE = {
         "avg_mileage": 51873
       },
       "2024": {
-        "count": 3,
-        "avg_price": 138328,
-        "median_price": 134995,
-        "min_price": 129995,
+        "count": 2,
+        "avg_price": 142495,
+        "median_price": 142495,
+        "min_price": 134995,
         "max_price": 149995,
-        "avg_mileage": 13878
+        "avg_mileage": 11741
       }
     }
   },
@@ -297,6 +297,17 @@ window.COTE = {
       "by_variant": {
         "Standard": 127495
       }
+    },
+    {
+      "date": "2026-06-24",
+      "overall": {
+        "avg_price": 126662,
+        "median_price": 134995,
+        "count": 3
+      },
+      "by_variant": {
+        "Standard": 126662
+      }
     }
   ],
   "listings": [
@@ -313,13 +324,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-06-23T10:02:20Z",
+      "scraped_at": "2026-06-24T09:50:28Z",
       "id": "af211b1bd489",
       "vin": "WUA1CBF20MN903678",
       "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 102804,
-      "deal_pct": 7.6
+      "estimated_value": 103212,
+      "deal_pct": 8.0
     },
     {
       "year": 2024,
@@ -334,34 +345,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-06-23T10:02:21Z",
+      "scraped_at": "2026-06-24T09:50:30Z",
       "id": "a24ba820d5aa",
       "vin": "WUA1DBF2XRN908021",
       "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 134334,
-      "deal_pct": -0.5
-    },
-    {
-      "year": 2024,
-      "variant": "Standard",
-      "price": 129995,
-      "mileage": 18153,
-      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-HUGE $147K MSRP!",
-      "url": "https://www.ebay.com/itm/327225999210?_skw=Audi+Rs+6&hash=item4c30307f6a:g:aRkAAeSwIeRqOfuG",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-06-23T10:02:21Z",
-      "id": "db611456cbdf",
-      "vin": "WUA1DBF25RN901834",
-      "image_url": "https://i.ebayimg.com/images/g/aRkAAeSwIeRqOfuG/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 130843,
-      "deal_pct": 0.6
+      "estimated_value": 135185,
+      "deal_pct": 0.1
     },
     {
       "year": 2024,
@@ -376,13 +366,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-06-23T10:02:22Z",
+      "scraped_at": "2026-06-24T09:50:31Z",
       "id": "facb149593b5",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 134147,
-      "deal_pct": -11.8
+      "estimated_value": 134995,
+      "deal_pct": -11.1
     }
   ]
 };
