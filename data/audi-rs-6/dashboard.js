@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-06-28T09:32:18Z",
+  "generated_at": "2026-06-29T11:23:20Z",
   "sources": [
     "ebay"
   ],
@@ -30,21 +30,21 @@ window.COTE = {
   },
   "market": {
     "overall": {
-      "count": 3,
-      "avg_price": 126662,
-      "median_price": 134995,
+      "count": 1,
+      "avg_price": 94995,
+      "median_price": 94995,
       "min_price": 94995,
-      "max_price": 149995,
-      "avg_mileage": 25118
+      "max_price": 94995,
+      "avg_mileage": 51873
     },
     "by_variant": {
       "Standard": {
-        "count": 3,
-        "avg_price": 126662,
-        "median_price": 134995,
+        "count": 1,
+        "avg_price": 94995,
+        "median_price": 94995,
         "min_price": 94995,
-        "max_price": 149995,
-        "avg_mileage": 25118
+        "max_price": 94995,
+        "avg_mileage": 51873
       }
     },
     "by_year": {
@@ -55,14 +55,6 @@ window.COTE = {
         "min_price": 94995,
         "max_price": 94995,
         "avg_mileage": 51873
-      },
-      "2024": {
-        "count": 2,
-        "avg_price": 142495,
-        "median_price": 142495,
-        "min_price": 134995,
-        "max_price": 149995,
-        "avg_mileage": 11741
       }
     }
   },
@@ -352,6 +344,17 @@ window.COTE = {
       "by_variant": {
         "Standard": 126662
       }
+    },
+    {
+      "date": "2026-06-29",
+      "overall": {
+        "avg_price": 94995,
+        "median_price": 94995,
+        "count": 1
+      },
+      "by_variant": {
+        "Standard": 94995
+      }
     }
   ],
   "listings": [
@@ -361,62 +364,20 @@ window.COTE = {
       "price": 94995,
       "mileage": 51873,
       "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-BIG $133K MSRP-CARBON CERAMICS!",
-      "url": "https://www.ebay.com/itm/327225999630?_skw=Audi+Rs+6&hash=item4c3030810e:g:yoAAAeSwCPVqMhQL",
+      "url": "https://www.ebay.com/itm/327237618497?_skw=Audi+Rs+6&hash=item4c30e1cb41:g:yoAAAeSwCPVqMhQL",
       "source": "ebay",
       "location": "US",
       "status": "for_sale",
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-06-28T09:32:11Z",
-      "id": "af211b1bd489",
+      "scraped_at": "2026-06-29T11:23:15Z",
+      "id": "c014198e280e",
       "vin": "WUA1CBF20MN903678",
       "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 103212,
-      "deal_pct": 8.0
-    },
-    {
-      "year": 2024,
-      "variant": "Standard",
-      "price": 134995,
-      "mileage": 11565,
-      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-$30K MODS-FULL PPF!",
-      "url": "https://www.ebay.com/itm/327225999722?_skw=Audi+Rs+6&hash=item4c3030816a:g:f9wAAeSwwRFqBUEM",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-06-28T09:32:13Z",
-      "id": "a24ba820d5aa",
-      "vin": "WUA1DBF2XRN908021",
-      "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 135185,
-      "deal_pct": 0.1
-    },
-    {
-      "year": 2024,
-      "variant": "Standard",
-      "price": 149995,
-      "mileage": 11917,
-      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-FACTORY MATTE PAINT",
-      "url": "https://www.ebay.com/itm/327225999215?_skw=Audi+Rs+6&hash=item4c30307f6f:g:4G8AAeSw9MVqGQg1",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-06-28T09:32:15Z",
-      "id": "facb149593b5",
-      "vin": "WUA1DBF2XRN905541",
-      "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 134995,
-      "deal_pct": -11.1
+      "estimated_value": 94995,
+      "deal_pct": 0.0
     }
   ]
 };
