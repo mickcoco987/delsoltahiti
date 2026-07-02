@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-07-01T10:13:05Z",
+  "generated_at": "2026-07-02T09:31:11Z",
   "sources": [
     "ebay"
   ],
@@ -385,9 +385,41 @@ window.COTE = {
       "by_variant": {
         "Standard": 126662
       }
+    },
+    {
+      "date": "2026-07-02",
+      "overall": {
+        "avg_price": 126662,
+        "median_price": 134995,
+        "count": 3
+      },
+      "by_variant": {
+        "Standard": 126662
+      }
     }
   ],
   "listings": [
+    {
+      "year": 2021,
+      "variant": "Standard",
+      "price": 94995,
+      "mileage": 51873,
+      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-BIG $133K MSRP-CARBON CERAMICS!",
+      "url": "https://www.ebay.com/itm/327237618497?_skw=Audi+Rs+6&hash=item4c30e1cb41:g:yoAAAeSwCPVqMhQL",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-07-02T09:31:06Z",
+      "id": "c014198e280e",
+      "vin": "WUA1CBF20MN903678",
+      "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 103212,
+      "deal_pct": 8.0
+    },
     {
       "year": 2024,
       "variant": "Standard",
@@ -401,7 +433,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-07-01T10:12:59Z",
+      "scraped_at": "2026-07-02T09:31:06Z",
       "id": "ee4f35d679df",
       "vin": "WUA1DBF2XRN908021",
       "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
@@ -422,34 +454,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-07-01T10:13:00Z",
+      "scraped_at": "2026-07-02T09:31:07Z",
       "id": "93e90a5782ce",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 134995,
       "deal_pct": -11.1
-    },
-    {
-      "year": 2021,
-      "variant": "Standard",
-      "price": 94995,
-      "mileage": 51873,
-      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-BIG $133K MSRP-CARBON CERAMICS!",
-      "url": "https://www.ebay.com/itm/327237618497?_skw=Audi+Rs+6&hash=item4c30e1cb41:g:yoAAAeSwCPVqMhQL",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-07-01T10:13:00Z",
-      "id": "c014198e280e",
-      "vin": "WUA1CBF20MN903678",
-      "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 103212,
-      "deal_pct": 8.0
     }
   ]
 };
