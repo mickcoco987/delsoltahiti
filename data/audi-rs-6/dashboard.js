@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-07-09T10:03:37Z",
+  "generated_at": "2026-07-10T09:52:17Z",
   "sources": [
     "ebay"
   ],
@@ -473,6 +473,17 @@ window.COTE = {
       "by_variant": {
         "Standard": 123995
       }
+    },
+    {
+      "date": "2026-07-10",
+      "overall": {
+        "avg_price": 123995,
+        "median_price": 131995,
+        "count": 3
+      },
+      "by_variant": {
+        "Standard": 123995
+      }
     }
   ],
   "listings": [
@@ -489,34 +500,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-07-09T10:03:31Z",
+      "scraped_at": "2026-07-10T09:52:10Z",
       "id": "d84fa6058fae",
       "vin": "WUA1CBF20MN903678",
       "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 100918,
       "deal_pct": 5.9
-    },
-    {
-      "year": 2024,
-      "variant": "Standard",
-      "price": 131995,
-      "mileage": 11893,
-      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-$30K MODS-FULL PPF!",
-      "url": "https://www.ebay.com/itm/327250494667?_skw=Audi+Rs+6&hash=item4c31a644cb:g:f9wAAeSwwRFqBUEM",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-07-09T10:03:32Z",
-      "id": "b2d8d3bd457b",
-      "vin": "WUA1DBF2XRN908021",
-      "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 132008,
-      "deal_pct": 0.0
     },
     {
       "year": 2024,
@@ -531,13 +521,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-07-09T10:03:34Z",
+      "scraped_at": "2026-07-10T09:52:12Z",
       "id": "1e134b26d93a",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 131995,
       "deal_pct": -9.8
+    },
+    {
+      "year": 2024,
+      "variant": "Standard",
+      "price": 131995,
+      "mileage": 11893,
+      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-$30K MODS-FULL PPF!",
+      "url": "https://www.ebay.com/itm/327250494667?_skw=Audi+Rs+6&hash=item4c31a644cb:g:f9wAAeSwwRFqBUEM",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-07-10T09:52:12Z",
+      "id": "b2d8d3bd457b",
+      "vin": "WUA1DBF2XRN908021",
+      "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 132008,
+      "deal_pct": 0.0
     }
   ]
 };
