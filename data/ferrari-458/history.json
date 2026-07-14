@@ -742,6 +742,20 @@
         "Speciale": 1302450,
         "Speciale A": null
       }
+    },
+    {
+      "date": "2026-07-14",
+      "overall": {
+        "avg_price": 425909,
+        "median_price": 399945,
+        "count": 96
+      },
+      "by_variant": {
+        "Italia": 371109,
+        "Spider": 448340,
+        "Speciale": 1302450,
+        "Speciale A": null
+      }
     }
   ]
 }
