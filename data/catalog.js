@@ -19,7 +19,7 @@ window.COTE_CATALOG = {
         "class": "neutral"
       },
       "count": 4,
-      "generated_at": "2026-07-20T09:33:14Z"
+      "generated_at": "2026-07-21T08:43:39Z"
     },
     {
       "slug": "ferrari-458",
@@ -41,8 +41,8 @@ window.COTE_CATALOG = {
         "verdict": "Excellent",
         "class": "good"
       },
-      "count": 109,
-      "generated_at": "2026-07-20T09:33:27Z"
+      "count": 103,
+      "generated_at": "2026-07-21T08:43:50Z"
     },
     {
       "slug": "ferrari-f8",
@@ -62,8 +62,8 @@ window.COTE_CATALOG = {
         "verdict": "Mou",
         "class": "mid"
       },
-      "count": 77,
-      "generated_at": "2026-07-20T09:33:34Z"
+      "count": 78,
+      "generated_at": "2026-07-21T08:43:56Z"
     },
     {
       "slug": "lamborghini-huracan",
@@ -87,8 +87,8 @@ window.COTE_CATALOG = {
         "verdict": "Solide",
         "class": "good"
       },
-      "count": 233,
-      "generated_at": "2026-07-20T09:33:59Z"
+      "count": 231,
+      "generated_at": "2026-07-21T08:44:17Z"
     },
     {
       "slug": "porsche-911-gt3",
@@ -109,14 +109,14 @@ window.COTE_CATALOG = {
         "verdict": "Excellent",
         "class": "good"
       },
-      "count": 175,
-      "generated_at": "2026-07-20T09:34:36Z"
+      "count": 169,
+      "generated_at": "2026-07-21T08:44:48Z"
     }
   ],
   "version": {
-    "sha": "683dbc6",
-    "sha_full": "683dbc61138c262c11850e30dce659fa2a471686",
+    "sha": "5b8c05d",
+    "sha_full": "5b8c05d405907b1e07677ff761ce9b439c0052c3",
     "branch": "main",
-    "built_at": "2026-07-20T09:34:36Z"
+    "built_at": "2026-07-21T08:44:48Z"
   }
 };
