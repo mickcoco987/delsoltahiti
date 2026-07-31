@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-07-30T08:48:40Z",
+  "generated_at": "2026-07-31T09:15:40Z",
   "sources": [
     "ebay"
   ],
@@ -704,30 +704,20 @@ window.COTE = {
       "by_variant": {
         "Standard": 119245
       }
+    },
+    {
+      "date": "2026-07-31",
+      "overall": {
+        "avg_price": 119245,
+        "median_price": 118495,
+        "count": 4
+      },
+      "by_variant": {
+        "Standard": 119245
+      }
     }
   ],
   "listings": [
-    {
-      "year": 2021,
-      "variant": "Standard",
-      "price": 94995,
-      "mileage": 51873,
-      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-BIG $133K MSRP-CARBON CERAMICS!",
-      "url": "https://www.ebay.com/itm/327280170546?_skw=Audi+Rs+6&hash=item4c336b1632:g:yoAAAeSwCPVqMhQL",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-07-30T08:48:34Z",
-      "id": "5e4664035fa4",
-      "vin": "WUA1CBF20MN903678",
-      "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 99070,
-      "deal_pct": 4.1
-    },
     {
       "year": 2024,
       "variant": "Standard",
@@ -741,13 +731,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-07-30T08:48:35Z",
+      "scraped_at": "2026-07-31T09:15:34Z",
       "id": "26259d770504",
       "vin": "WUA1DBF2XRN908021",
       "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 128209,
       "deal_pct": -3.0
+    },
+    {
+      "year": 2021,
+      "variant": "Standard",
+      "price": 94995,
+      "mileage": 51873,
+      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-BIG $133K MSRP-CARBON CERAMICS!",
+      "url": "https://www.ebay.com/itm/327280170546?_skw=Audi+Rs+6&hash=item4c336b1632:g:yoAAAeSwCPVqMhQL",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-07-31T09:15:35Z",
+      "id": "5e4664035fa4",
+      "vin": "WUA1CBF20MN903678",
+      "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 99070,
+      "deal_pct": 4.1
     },
     {
       "year": 2021,
@@ -762,7 +773,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-07-30T08:48:35Z",
+      "scraped_at": "2026-07-31T09:15:35Z",
       "id": "0e76f61d05a5",
       "vin": "WUA1CBF21MN902751",
       "image_url": "https://i.ebayimg.com/images/g/KwYAAeSwRi9qVFw~/s-l225.jpg",
@@ -783,7 +794,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-07-30T08:48:36Z",
+      "scraped_at": "2026-07-31T09:15:36Z",
       "id": "9e1065bdbd5d",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
