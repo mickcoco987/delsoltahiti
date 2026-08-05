@@ -693,6 +693,17 @@
       "by_variant": {
         "Standard": 119245
       }
+    },
+    {
+      "date": "2026-08-05",
+      "overall": {
+        "avg_price": 118495,
+        "median_price": 116995,
+        "count": 4
+      },
+      "by_variant": {
+        "Standard": 118495
+      }
     }
   ]
 }

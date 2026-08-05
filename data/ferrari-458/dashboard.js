@@ -23,32 +23,32 @@ window.COTE = {
       "risk": "La cote est deja haute sur les Italia standard : payer le prix fort sur un exemplaire moyen plafonne le potentiel d'upside."
     }
   },
-  "generated_at": "2026-08-04T09:06:20Z",
+  "generated_at": "2026-08-05T09:03:50Z",
   "sources": [
     "marketcheck",
     "ebay"
   ],
   "valuation": {
     "method": "regression log-lineaire robuste (millesime + kilometrage + version)",
-    "residual_pct": 7.3
+    "residual_pct": 7.5
   },
   "market": {
     "overall": {
-      "count": 108,
-      "avg_price": 450442,
-      "median_price": 419811,
+      "count": 109,
+      "avg_price": 448236,
+      "median_price": 419722,
       "min_price": 170977,
       "max_price": 1599999,
-      "avg_mileage": 17227
+      "avg_mileage": 17377
     },
     "by_variant": {
       "Italia": {
-        "count": 55,
-        "avg_price": 390574,
-        "median_price": 399995,
+        "count": 56,
+        "avg_price": 387350,
+        "median_price": 399063,
         "min_price": 185000,
         "max_price": 500448,
-        "avg_mileage": 17625
+        "avg_mileage": 17914
       },
       "Spider": {
         "count": 51,
@@ -101,16 +101,16 @@ window.COTE = {
         "avg_mileage": 20923
       },
       "2013": {
-        "count": 33,
-        "avg_price": 413039,
-        "median_price": 399995,
+        "count": 34,
+        "avg_price": 407655,
+        "median_price": 399990,
         "min_price": 229990,
         "max_price": 629995,
-        "avg_mileage": 20186
+        "avg_mileage": 20578
       },
       "2014": {
         "count": 27,
-        "avg_price": 469848,
+        "avg_price": 469107,
         "median_price": 479995,
         "min_price": 279977,
         "max_price": 769888,
@@ -1176,6 +1176,20 @@ window.COTE = {
         "Speciale": 1499500,
         "Speciale A": null
       }
+    },
+    {
+      "date": "2026-08-05",
+      "overall": {
+        "avg_price": 448236,
+        "median_price": 419722,
+        "count": 109
+      },
+      "by_variant": {
+        "Italia": 387350,
+        "Spider": 473865,
+        "Speciale": 1499500,
+        "Speciale A": null
+      }
     }
   ],
   "listings": [
@@ -1192,13 +1206,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-15",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "40950108da03",
       "vin": "ZFF67NFA3B0177259",
       "image_url": "https://www.exclusiveautomotivegroup.com/imagetag/4659/main/f/-1783955253.jpg",
       "clean_title": false,
-      "estimated_value": 285570,
-      "deal_pct": -15.6
+      "estimated_value": 283118,
+      "deal_pct": -16.6
     },
     {
       "year": 2012,
@@ -1213,13 +1227,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-23",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "6ab46259035b",
       "vin": "ZFF67NFA5C0184750",
       "image_url": "https://pictures.dealer.com/s/stevensonhendrickmazda/0147/bb986067ee9208701172d6d47a600c09x.jpg",
       "clean_title": false,
-      "estimated_value": 364382,
-      "deal_pct": 16.3
+      "estimated_value": 362269,
+      "deal_pct": 15.8
     },
     {
       "year": 2014,
@@ -1234,12 +1248,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-31",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "933512e394ac",
       "vin": "ZFF67NFA6E0196697",
       "image_url": "https://pictures.dealer.com/e/earthmotorcars/1915/8f8cad0c5c4cea6d96425cb08acaa499x.jpg",
       "clean_title": true,
-      "estimated_value": 473739,
+      "estimated_value": 473624,
       "deal_pct": -1.3
     },
     {
@@ -1255,13 +1269,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-09",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "498e890de093",
       "vin": "ZFF67NFA4A0175132",
       "image_url": "https://images.dealer.com/autodata/us/large_stockphoto-color/2010/USC00FRC151A0/NED.jpg",
       "clean_title": false,
-      "estimated_value": 303530,
-      "deal_pct": -31.9
+      "estimated_value": 300096,
+      "deal_pct": -33.4
     },
     {
       "year": 2011,
@@ -1276,13 +1290,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "d34535473640",
       "vin": "ZFF67NFA3B0177939",
       "image_url": "https://vehicle-images.carscommerce.inc/713b-11000909/ZFF67NFA3B0177939/9e05c558c87c170a43b1f3192ff6a14e.jpg",
       "clean_title": false,
-      "estimated_value": 384013,
-      "deal_pct": -28.9
+      "estimated_value": 380736,
+      "deal_pct": -30.0
     },
     {
       "year": 2013,
@@ -1297,13 +1311,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "516b622584c1",
       "vin": "ZFF67NFA1D0193009",
       "image_url": "https://vehicle-images.carscommerce.inc/a02f-110007616/ZFF67NFA1D0193009/50d5a606b761ffb4934972fd61396ebb.webp",
       "clean_title": true,
-      "estimated_value": 457550,
-      "deal_pct": 7.0
+      "estimated_value": 456174,
+      "deal_pct": 6.7
     },
     {
       "year": 2013,
@@ -1318,13 +1332,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "b64a5698236f",
       "vin": "ZFF67NFA7D0193337",
       "image_url": "https://vehicle-images.carscommerce.inc/641b-110007616/ZFF67NFA7D0193337/2c0cd6fd95c94e1ffb879981b5c3e066.webp",
       "clean_title": true,
-      "estimated_value": 445018,
-      "deal_pct": 3.7
+      "estimated_value": 443678,
+      "deal_pct": 3.4
     },
     {
       "year": 2013,
@@ -1339,13 +1353,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-03",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "ae695fdb1aec",
       "vin": "ZFF67NFA4D0195014",
       "image_url": "https://www.ryanfriedmanmotorcars.com/imagetag/3296/main/f/Used-2013-Ferrari-458-Italia-1785424761.jpg",
       "clean_title": true,
-      "estimated_value": 423093,
-      "deal_pct": -6.4
+      "estimated_value": 421814,
+      "deal_pct": -6.7
     },
     {
       "year": 2014,
@@ -1360,12 +1374,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-03",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "7e91c16bce90",
       "vin": "ZFF67NFA7E0203026",
       "image_url": "https://www.ryanfriedmanmotorcars.com/imagetag/3266/main/l/Used-2014-Ferrari-458-Italia-1783797502.jpg",
       "clean_title": true,
-      "estimated_value": 477713,
+      "estimated_value": 477598,
       "deal_pct": -0.5
     },
     {
@@ -1381,13 +1395,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-12",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "b0d058ebdeda",
       "vin": "ZFF67NFA7F0212150",
       "image_url": "https://www.ryanfriedmanmotorcars.com/imagetag/3265/main/l/Used-2015-Ferrari-458-Italia-1785349189.jpg",
       "clean_title": true,
-      "estimated_value": 521597,
-      "deal_pct": 4.1
+      "estimated_value": 522924,
+      "deal_pct": 4.4
     },
     {
       "year": 2011,
@@ -1402,13 +1416,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-31",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "1afbdd50b23b",
       "vin": "ZFF67NFA7B0180701",
       "image_url": "https://www.ryanfriedmanmotorcars.com/imagetag/3321/main/l/Used-2011-Ferrari-458-Italia-1785436949.jpg",
       "clean_title": false,
-      "estimated_value": 425617,
-      "deal_pct": -5.7
+      "estimated_value": 421992,
+      "deal_pct": -6.6
     },
     {
       "year": 2011,
@@ -1423,13 +1437,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-05",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "0c21e5ec405c",
       "vin": "ZFF67NFA4B0176685",
       "image_url": "https://photos4.motorcar.com/used-2011-ferrari-458_italia-2drcoupe-9871-12431478-1-400.jpg",
       "clean_title": false,
-      "estimated_value": 446050,
-      "deal_pct": 58.5
+      "estimated_value": 442255,
+      "deal_pct": 58.2
     },
     {
       "year": 2014,
@@ -1444,12 +1458,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-08",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "87f7f0fd74ca",
       "vin": "ZFF67NFA5E0201520",
       "image_url": "https://www.ilusso.com/imagetag/6160/main/f/Used-2014-Ferrari-458-Italia-1783486237.jpg",
       "clean_title": false,
-      "estimated_value": 395967,
+      "estimated_value": 395859,
       "deal_pct": 11.6
     },
     {
@@ -1465,13 +1479,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-19",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "4aa1ea9df92c",
       "vin": "ZFF67NFA8F0210746",
       "image_url": "https://vehicle-images.carscommerce.inc/1111-110013659/ZFF67NFA8F0210746/28da35c1222ea75e80d0ca899cd90098.jpg",
       "clean_title": false,
-      "estimated_value": 479712,
-      "deal_pct": -1.9
+      "estimated_value": 480924,
+      "deal_pct": -1.7
     },
     {
       "year": 2012,
@@ -1486,13 +1500,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "0a53b0db61b2",
       "vin": "ZFF67NFA4C0186389",
       "image_url": "https://images.app.ridemotive.com/s58vjs20cde3ghz5kczuhqmbgh3r",
       "clean_title": true,
-      "estimated_value": 286305,
-      "deal_pct": -8.2
+      "estimated_value": 284633,
+      "deal_pct": -8.9
     },
     {
       "year": 2011,
@@ -1507,13 +1521,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "912fe68b0dea",
       "vin": "ZFF67NFA3B0180775",
       "image_url": "https://images.app.ridemotive.com/uh91ngohfchd85x1p3fhk2l5bktg",
       "clean_title": false,
-      "estimated_value": 334624,
-      "deal_pct": -0.1
+      "estimated_value": 331760,
+      "deal_pct": -0.9
     },
     {
       "year": 2011,
@@ -1528,13 +1542,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-23",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "9c49bf93ab80",
       "vin": "ZFF67NFA3B0180274",
       "image_url": "https://vehicle-images.carscommerce.inc/3a8a-110007362/ZFF67NFA3B0180274/2b24b875440d90bb74eaeffe9e49e516.webp",
       "clean_title": false,
-      "estimated_value": 361405,
-      "deal_pct": 6.6
+      "estimated_value": 358317,
+      "deal_pct": 5.8
     },
     {
       "year": 2011,
@@ -1549,13 +1563,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-21",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "cb6c7c2f3fd9",
       "vin": "ZFF67NFA7B0176521",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/033339/478a242f3b5e4adf8f0ad78ec3d2e6f6/4eeaebc528_800.jpg",
       "clean_title": false,
-      "estimated_value": 247114,
-      "deal_pct": -5.2
+      "estimated_value": 244986,
+      "deal_pct": -6.1
     },
     {
       "year": 2012,
@@ -1570,13 +1584,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-29",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "bb51bb376319",
       "vin": "ZFF67NFA2C0183510",
       "image_url": "https://cdn.inventoryrsc.com/533419007_6a46dc0c8804ebaca72a2d70.jpg",
       "clean_title": false,
-      "estimated_value": 284454,
-      "deal_pct": -5.4
+      "estimated_value": 282792,
+      "deal_pct": -6.1
     },
     {
       "year": 2011,
@@ -1591,13 +1605,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "f6d013cfaca1",
       "vin": "ZFF67NFA4B0177707",
       "image_url": "https://images.squarespace-cdn.com/content/v1/62bd0c7b5c7e937a4ad7e256/1785447064238-H6NSECWX3XNZMRB9DZGW/1.jpg",
       "clean_title": false,
-      "estimated_value": 383152,
-      "deal_pct": -22.6
+      "estimated_value": 379029,
+      "deal_pct": -24.0
     },
     {
       "year": 2014,
@@ -1612,13 +1626,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "9dd6d25e174e",
       "vin": "ZFF67NFA7E0203611",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/025035/5c221fdd00774336ab33ffab6f633570/4c20f4ef84_800.jpg",
       "clean_title": false,
-      "estimated_value": 491977,
-      "deal_pct": -1.6
+      "estimated_value": 491862,
+      "deal_pct": -1.7
     },
     {
       "year": 2014,
@@ -1633,13 +1647,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-17",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "8b50802e59e7",
       "vin": "ZFF67NFA5E0203610",
       "image_url": "https://content.homenetiol.com/2001933/2134649/1280x1280/b64d8850216348768a33c92dab835059.jpg",
       "clean_title": null,
-      "estimated_value": 478803,
-      "deal_pct": -4.4
+      "estimated_value": 478688,
+      "deal_pct": -4.5
     },
     {
       "year": 2014,
@@ -1654,13 +1668,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-15",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "32ddc85cc370",
       "vin": "ZFF67NFA4E0197573",
       "image_url": "https://content.homenetiol.com/2001933/2134649/1280x1280/6832d3f16f694295aeb09be36261b0af.jpg",
       "clean_title": null,
-      "estimated_value": 333243,
-      "deal_pct": -5.0
+      "estimated_value": 333142,
+      "deal_pct": -5.1
     },
     {
       "year": 2010,
@@ -1675,13 +1689,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-06-20",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "42a7770509eb",
       "vin": "ZFF67NFA3A0174831",
       "image_url": "https://pictures.dealer.com/a/autosportne/1234/a3461b36a0c141d8a7496745b74712f3.jpg",
       "clean_title": false,
-      "estimated_value": 414487,
-      "deal_pct": -1.3
+      "estimated_value": 409821,
+      "deal_pct": -2.5
     },
     {
       "year": 2011,
@@ -1696,13 +1710,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-17",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "506b31e5ea9b",
       "vin": "ZFF67NFA3B0180436",
       "image_url": "https://pictures.dealer.com/a/autosportne/1234/2b94373270e347a5af4c4e8cca8b6a95.jpg",
       "clean_title": false,
-      "estimated_value": 469444,
-      "deal_pct": -2.2
+      "estimated_value": 465454,
+      "deal_pct": -3.1
     },
     {
       "year": 2010,
@@ -1717,13 +1731,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-23",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "352e871d228e",
       "vin": "ZFF67NFA6A0174810",
       "image_url": "https://pictures.dealer.com/a/autosportne/1234/dd348c29ca8342a995ec4f5bba6e8800.jpg",
       "clean_title": false,
-      "estimated_value": 462208,
-      "deal_pct": -1.7
+      "estimated_value": 457013,
+      "deal_pct": -2.8
     },
     {
       "year": 2010,
@@ -1738,13 +1752,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-03",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "e24d87d7036b",
       "vin": "ZFF67NFA4A0175762",
       "image_url": "https://inventory.dealersocket.com/api/photo/46yA0Wiw/1600x0/1785601274/u/ecl/g1p2/Yrno/H8Hk/uQd5/Dpve/Qw.jpg",
       "clean_title": null,
-      "estimated_value": 349038,
-      "deal_pct": -17.4
+      "estimated_value": 345098,
+      "deal_pct": -18.7
     },
     {
       "year": 2012,
@@ -1759,13 +1773,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-29",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "fa2514db565a",
       "vin": "ZFF67NFA7C0182983",
       "image_url": "https://inventory.dealersocket.com/api/photo/3JUm-Bfs/1600x0/1785213433/u/ecl/SrEb/tBGN/BQEI/XU9i/I1RG/bg.jpg",
       "clean_title": null,
-      "estimated_value": 421671,
-      "deal_pct": 0.5
+      "estimated_value": 419236,
+      "deal_pct": -0.1
     },
     {
       "year": 2015,
@@ -1780,13 +1794,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-06-14",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "1c73e12f824b",
       "vin": "ZFF67NFA2F0209737",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/11267/23307853/639185012385381245.jpg",
       "clean_title": false,
-      "estimated_value": 496481,
-      "deal_pct": 25.7
+      "estimated_value": 497739,
+      "deal_pct": 25.9
     },
     {
       "year": 2012,
@@ -1801,13 +1815,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-29",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "cf63743f91cb",
       "vin": "ZFF67NFA6C0183171",
       "image_url": "https://vehicle-images.carscommerce.inc/89c7-110009203/ZFF67NFA6C0183171/e10b49f38ab7f7aa2ddc3578e68697e4.webp",
       "clean_title": true,
-      "estimated_value": 380076,
-      "deal_pct": 21.1
+      "estimated_value": 377875,
+      "deal_pct": 20.6
     },
     {
       "year": 2012,
@@ -1822,13 +1836,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-28",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "2079607dec14",
       "vin": "ZFF67NFA6C0186412",
       "image_url": "https://images.app.ridemotive.com/rujfmg7zcyu9zg2u1a8jokgbjz1j",
       "clean_title": false,
-      "estimated_value": 425307,
-      "deal_pct": -2.4
+      "estimated_value": 422852,
+      "deal_pct": -3.0
     },
     {
       "year": 2011,
@@ -1843,13 +1857,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-28",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "dad0dfd68cf0",
       "vin": "ZFF67NFA7B0182223",
       "image_url": "https://images.app.ridemotive.com/fl76cnermlncas1s51euz3juwm86",
       "clean_title": false,
-      "estimated_value": 471261,
-      "deal_pct": -6.2
+      "estimated_value": 467256,
+      "deal_pct": -7.1
     },
     {
       "year": 2013,
@@ -1864,13 +1878,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-29",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "d36fe32fc793",
       "vin": "ZFF67NFAXD0194630",
       "image_url": "https://vehicle-images.carscommerce.inc/7319-110007625/ZFF67NFAXD0194630/6c86fa669a4f1eb1be777b91856bce6e.jpeg",
       "clean_title": true,
-      "estimated_value": 386383,
-      "deal_pct": -3.5
+      "estimated_value": 385210,
+      "deal_pct": -3.8
     },
     {
       "year": 2013,
@@ -1885,13 +1899,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-22",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "e7c88576253b",
       "vin": "ZFF67NFA0D0193907",
       "image_url": "https://gcb.evs.onl/d4/10126/12057483/283086829/s/3f7155dc40a04efebcf653937c675a5e.jpg",
       "clean_title": null,
-      "estimated_value": 385288,
-      "deal_pct": 9.4
+      "estimated_value": 384118,
+      "deal_pct": 9.1
     },
     {
       "year": 2014,
@@ -1906,12 +1920,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "4909c3924a6d",
       "vin": "ZFF67NFA6E0201817",
       "image_url": "https://www.totalwebmanager.com/TWM/Images/1137/126685/Medium/320165922157816.jpg",
       "clean_title": true,
-      "estimated_value": 543373,
+      "estimated_value": 543255,
       "deal_pct": 44.8
     },
     {
@@ -1927,13 +1941,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-09",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "7817d59ff47f",
       "vin": "ZFF67NFA1B0180581",
       "image_url": "https://www.ferrarisiliconvalley.com/inventoryphotos/10479/zff67nfa1b0180581/ip/1.jpg",
       "clean_title": false,
-      "estimated_value": 350944,
-      "deal_pct": -4.3
+      "estimated_value": 347943,
+      "deal_pct": -5.2
     },
     {
       "year": 2014,
@@ -1948,12 +1962,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-17",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "de61b8078659",
       "vin": "ZFF67NFA5E0203283",
       "image_url": "https://www.ferrarisiliconvalley.com/inventoryphotos/10479/zff67nfa5e0203283/ip/1.jpg",
       "clean_title": false,
-      "estimated_value": 513795,
+      "estimated_value": 513678,
       "deal_pct": 2.7
     },
     {
@@ -1969,13 +1983,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-06-20",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "1e553f16db03",
       "vin": "ZFF67NFA2F0208507",
       "image_url": "https://cdn05.carsforsale.com/7daa121e7eef768f7f3e4fa18213b41d/800x600/2015-ferrari-458-italia-base-2dr-coupe.jpg",
       "clean_title": true,
-      "estimated_value": 503531,
-      "deal_pct": 28.7
+      "estimated_value": 504808,
+      "deal_pct": 28.9
     },
     {
       "year": 2010,
@@ -1990,13 +2004,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-30",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "4f33b39f8bd1",
       "vin": "ZFF67NFA7A0176050",
       "image_url": "https://vehicle-images.carscommerce.inc/b4c9-11002164/ZFF67NFA7A0176050/e5c884cf472e492d9e84ac717f2fd38f.jpg",
       "clean_title": false,
-      "estimated_value": 446412,
-      "deal_pct": 10.8
+      "estimated_value": 441392,
+      "deal_pct": 9.8
     },
     {
       "year": 2013,
@@ -2011,13 +2025,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-30",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "ebe4b738431a",
       "vin": "ZFF67NFA1D0193544",
       "image_url": "https://vehicle-images.carscommerce.inc/523f-110014065/ZFF67NFA1D0193544/948635582bec217edaf2a7a2f6cc12ee.webp",
       "clean_title": false,
-      "estimated_value": 399758,
-      "deal_pct": -0.1
+      "estimated_value": 398546,
+      "deal_pct": -0.4
     },
     {
       "year": 2014,
@@ -2032,12 +2046,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-30",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "dcd74ac00f26",
       "vin": "ZFF67NFA5E0198361",
       "image_url": "https://vehicle-images.carscommerce.inc/7436-110014065/ZFF67NFA5E0198361/7bf5f6222e4291ac7e29f85be76609e0.webp",
       "clean_title": false,
-      "estimated_value": 453937,
+      "estimated_value": 453824,
       "deal_pct": 7.4
     },
     {
@@ -2053,13 +2067,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-30",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "8cff835fab1b",
       "vin": "ZFF67NFA5F0210607",
       "image_url": "https://vehicle-images.carscommerce.inc/edb3-110014065/ZFF67NFA5F0210607/355f8ae325f799dea604eea6fe13bf25.webp",
       "clean_title": false,
-      "estimated_value": 389019,
-      "deal_pct": -9.5
+      "estimated_value": 389988,
+      "deal_pct": -9.3
     },
     {
       "year": 2013,
@@ -2074,13 +2088,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-15",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "fef554ae24ee",
       "vin": "ZFF67NFA4D0191125",
       "image_url": "https://content.homenetiol.com/2000292/2162366/0x0/293c473721784da98ce376aaff2b45e6.jpg",
       "clean_title": false,
-      "estimated_value": 425467,
-      "deal_pct": 2.3
+      "estimated_value": 424183,
+      "deal_pct": 2.0
     },
     {
       "year": 2014,
@@ -2095,13 +2109,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-15",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "088230e12ac1",
       "vin": "ZFF67NFA7E0201518",
       "image_url": "https://content.homenetiol.com/2000292/2162366/0x0/8dcfa411312f4bfcafc41c8cb778679b.jpg",
       "clean_title": false,
-      "estimated_value": 381419,
-      "deal_pct": 12.0
+      "estimated_value": 381313,
+      "deal_pct": 11.9
     },
     {
       "year": 2014,
@@ -2116,12 +2130,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-18",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "44d26fddf4e8",
       "vin": "ZFF67NFA3E0199055",
       "image_url": "https://cdn05.carsforsale.com/6a06df5a2e0a5590d0186c609ec0a3c9/800x600/2014-ferrari-458-italia-base-2dr-coupe.jpg",
       "clean_title": false,
-      "estimated_value": 304838,
+      "estimated_value": 304741,
       "deal_pct": -1.7
     },
     {
@@ -2137,13 +2151,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-31",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "db0e3aeb755b",
       "vin": "ZFF68NHA1F0211652",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/043135/8e34bc1ae1ce4310acc4f317639a5dc1/fa5a73577e_1920.jpg",
       "clean_title": false,
-      "estimated_value": 617692,
-      "deal_pct": -18.2
+      "estimated_value": 613455,
+      "deal_pct": -19.0
     },
     {
       "year": 2013,
@@ -2158,13 +2172,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-28",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "4f7ee7b25fa6",
       "vin": "ZFF68NHAXD0191771",
       "image_url": "https://www.ferrarilasvegas.com/imagetag/1583/main/l/Used-2013-Ferrari-458-Spider-1785758745.jpg",
       "clean_title": null,
-      "estimated_value": 530093,
-      "deal_pct": 17.0
+      "estimated_value": 523541,
+      "deal_pct": 16.0
     },
     {
       "year": 2015,
@@ -2179,13 +2193,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2024-03-30",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "a8252a0fca8a",
       "vin": "ZFF68NHA8F0209008",
       "image_url": "http://autopleaseca.com/wp-content/uploads/2018/11/2015-458-ITALI.png",
       "clean_title": true,
-      "estimated_value": 653273,
-      "deal_pct": 59.4
+      "estimated_value": 648798,
+      "deal_pct": 59.1
     },
     {
       "year": 2013,
@@ -2200,13 +2214,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-25",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "358c5236cdc4",
       "vin": "ZFF68NHA4D0192222",
       "image_url": "https://www.chicagomotorcars.com/imagetag/13798/main/l/Used-2013-Ferrari-458-Spider-Racing-Seats-Carbon-Driver-Zone-LOW-Miles-TONS-of-Service-Records-LOADED-1784395768.jpg",
       "clean_title": false,
-      "estimated_value": 501387,
-      "deal_pct": -3.7
+      "estimated_value": 495185,
+      "deal_pct": -5.0
     },
     {
       "year": 2014,
@@ -2221,13 +2235,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-17",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "5b107ded153b",
       "vin": "ZFF68NHAXE0199175",
       "image_url": "https://images.app.ridemotive.com/soofz7mn53dfdx88425de3izqsp2",
       "clean_title": true,
-      "estimated_value": 400393,
-      "deal_pct": 14.9
+      "estimated_value": 396519,
+      "deal_pct": 14.1
     },
     {
       "year": 2013,
@@ -2242,13 +2256,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "6e3dc764ef27",
       "vin": "ZFF68NHA7D0190366",
       "image_url": "https://pictures.dealer.com/s/siennacollectiondms/0179/6da4cb75085048140166d2fb4c5420c0x.jpg",
       "clean_title": false,
-      "estimated_value": 325120,
-      "deal_pct": -0.2
+      "estimated_value": 321074,
+      "deal_pct": -1.5
     },
     {
       "year": 2013,
@@ -2263,13 +2277,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-25",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "b7d2d59417d9",
       "vin": "ZFF68NHA3D0192647",
       "image_url": "https://ik.imagekit.io/getmyauto/prodbucket/data/oqM/i/eNDYN/QQKBJ-1784937748_wDPdAroa.jpg",
       "clean_title": false,
-      "estimated_value": 506220,
-      "deal_pct": 25.0
+      "estimated_value": 499959,
+      "deal_pct": 24.0
     },
     {
       "year": 2014,
@@ -2284,13 +2298,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-22",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "c3bc73490b80",
       "vin": "ZFF68NHAXE0202964",
       "image_url": "https://www.vegasautogallery.com/imagetag/6375/main/l/Used-2014-Ferrari-458-Spider-Base-1783157118.jpg",
       "clean_title": false,
-      "estimated_value": 491931,
-      "deal_pct": -5.7
+      "estimated_value": 487189,
+      "deal_pct": -6.7
     },
     {
       "year": 2015,
@@ -2305,13 +2319,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "35219c81b54e",
       "vin": "ZFF68NHA0F0206510",
       "image_url": "https://vehicle-images.carscommerce.inc/8a99-110007616/ZFF68NHA0F0206510/fe4f1879682321410d05899aa6ba6084.webp",
       "clean_title": true,
-      "estimated_value": 655498,
-      "deal_pct": -5.5
+      "estimated_value": 651009,
+      "deal_pct": -6.2
     },
     {
       "year": 2013,
@@ -2326,13 +2340,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "47b175f6b2f8",
       "vin": "ZFF68NHA0D0194517",
       "image_url": "https://vehicle-images.carscommerce.inc/7dfa-110007616/ZFF68NHA0D0194517/38cd17159ee62d8c9c55d23f77559b16.webp",
       "clean_title": true,
-      "estimated_value": 429223,
-      "deal_pct": 7.8
+      "estimated_value": 423902,
+      "deal_pct": 6.6
     },
     {
       "year": 2013,
@@ -2347,13 +2361,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-05-13",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "b7b06d925f47",
       "vin": "ZFF68NHA7D0190545",
       "image_url": "https://cdn-thumbor.autodealersdigital.com/unsafe/fit-in/1000x750/filters:upscale():max_bytes(500000):quality(100):fill(blur):sharpen(0.7,0.5,true):format(jpg)/106757/8690500/517711785577170.jpg",
       "clean_title": false,
-      "estimated_value": 557048,
-      "deal_pct": 10.2
+      "estimated_value": 550168,
+      "deal_pct": 9.1
     },
     {
       "year": 2014,
@@ -2368,13 +2382,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "4a36cb929443",
       "vin": "ZFF68NHA9E0199619",
       "image_url": "https://www.ryanfriedmanmotorcars.com/imagetag/3282/main/l/Used-2014-Ferrari-458-Spider-1785116628.jpg",
       "clean_title": true,
-      "estimated_value": 544876,
-      "deal_pct": -10.1
+      "estimated_value": 539633,
+      "deal_pct": -11.2
     },
     {
       "year": 2014,
@@ -2389,13 +2403,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-30",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "81d532c973a7",
       "vin": "ZFF68NHA7E0198842",
       "image_url": "https://www.charlottemclaren.com/imagetag/5032/main/l/Used-2014-Ferrari-458-Spider.jpg",
       "clean_title": false,
-      "estimated_value": 465038,
-      "deal_pct": -7.5
+      "estimated_value": 460550,
+      "deal_pct": -8.6
     },
     {
       "year": 2015,
@@ -2410,13 +2424,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-28",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "2f30059696f5",
       "vin": "ZFF68NHA8F0205668",
       "image_url": "https://pictures.dealer.com/p/porschesouthorlando/0271/01e175242eab93ac1f2937d004456b6fx.jpg",
       "clean_title": false,
-      "estimated_value": 528867,
-      "deal_pct": 3.6
+      "estimated_value": 525225,
+      "deal_pct": 2.9
     },
     {
       "year": 2015,
@@ -2431,13 +2445,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-30",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "9eccf7cea116",
       "vin": "ZFF68NHA8F0205430",
       "image_url": "https://vehicle-images.carscommerce.inc/ae8e-110013659/ZFF68NHA8F0205430/091025342e0e5270b05b9ef3a62c1493.jpg",
       "clean_title": false,
-      "estimated_value": 618906,
-      "deal_pct": -9.7
+      "estimated_value": 614662,
+      "deal_pct": -10.5
     },
     {
       "year": 2014,
@@ -2452,13 +2466,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-16",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "7f15a9b0e232",
       "vin": "ZFF68NHAXE0200681",
       "image_url": "https://pictures.dealer.com/o/onelegacymotors/0758/00e96ad16280e6944dc8d28be3df1a37x.jpg",
       "clean_title": true,
-      "estimated_value": 495313,
-      "deal_pct": 3.1
+      "estimated_value": 490539,
+      "deal_pct": 2.2
     },
     {
       "year": 2015,
@@ -2473,13 +2487,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-31",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "fe766d260eb8",
       "vin": "ZFF68NHA5F0205644",
       "image_url": "https://www.marshallgoldmanoh.com/imagetag/5798/main/f/Used-2015-Ferrari-458-Spider-Daytona-Seats-Forged-Wheels-Sport-Exhaust-1785432423.jpg",
       "clean_title": null,
-      "estimated_value": 415972,
-      "deal_pct": 8.9
+      "estimated_value": 413090,
+      "deal_pct": 8.3
     },
     {
       "year": 2014,
@@ -2494,13 +2508,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-30",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "28f5ab335935",
       "vin": "ZFF68NHA1E0199937",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/1483/24133721/639208373555819568.jpg",
       "clean_title": false,
-      "estimated_value": 627003,
-      "deal_pct": -0.5
+      "estimated_value": 620985,
+      "deal_pct": -1.5
     },
     {
       "year": 2013,
@@ -2515,13 +2529,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-22",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "259b0412dffd",
       "vin": "ZFF68NHA2D0189397",
       "image_url": "https://500downnow.com/assets/2013-ferrari-458-spider-1-HUoyMw30.png",
       "clean_title": false,
-      "estimated_value": 434248,
-      "deal_pct": 42.4
+      "estimated_value": 428866,
+      "deal_pct": 41.7
     },
     {
       "year": 2012,
@@ -2536,13 +2550,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-27",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "6063464dddd9",
       "vin": "ZFF68NHA1C0188787",
       "image_url": "https://service.secureoffersites.com/images/GetEvoxImage?styleid=357176",
       "clean_title": null,
-      "estimated_value": 547666,
-      "deal_pct": 4.0
+      "estimated_value": 539406,
+      "deal_pct": 2.5
     },
     {
       "year": 2013,
@@ -2557,13 +2571,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-11",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "ed9de54ce04f",
       "vin": "ZFF68NHA5D0190818",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/025035/2b74abf3c2f44d0985fd0af4d46d4637/55b9eb2124_800.jpg",
       "clean_title": false,
-      "estimated_value": 603620,
-      "deal_pct": -4.4
+      "estimated_value": 596172,
+      "deal_pct": -5.7
     },
     {
       "year": 2014,
@@ -2578,13 +2592,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "e22975ff651f",
       "vin": "ZFF68NHA6E0199464",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/025035/64a42d5469934a17b8e80ffe62e1819a/46e141db6a_800.jpg",
       "clean_title": false,
-      "estimated_value": 626072,
-      "deal_pct": -11.8
+      "estimated_value": 620063,
+      "deal_pct": -12.9
     },
     {
       "year": 2014,
@@ -2599,13 +2613,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "8d42014f21e2",
       "vin": "ZFF68NHAXE0198463",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/025035/e6cfb5024bce4129854ee7bbc3b9edaa/838660e07e_800.jpg",
       "clean_title": false,
-      "estimated_value": 647422,
-      "deal_pct": -0.4
+      "estimated_value": 641212,
+      "deal_pct": -1.4
     },
     {
       "year": 2012,
@@ -2620,13 +2634,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "442297d1e5a2",
       "vin": "ZFF68NHA2C0187759",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/c2825f867ed64fddaad4f5eec3baccd8.jpg",
       "clean_title": null,
-      "estimated_value": 616677,
-      "deal_pct": -24.8
+      "estimated_value": 607389,
+      "deal_pct": -26.8
     },
     {
       "year": 2014,
@@ -2641,13 +2655,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "69c409926fda",
       "vin": "ZFF68NHA7E0200685",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/7362db59fa4c4aa2b5f6e61df4334242.jpg",
       "clean_title": null,
-      "estimated_value": 597955,
-      "deal_pct": -28.8
+      "estimated_value": 592211,
+      "deal_pct": -30.0
     },
     {
       "year": 2013,
@@ -2662,13 +2676,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-29",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "c48f604b93f1",
       "vin": "ZFF68NHA1D0196065",
       "image_url": "https://d2zlczhgypvorc.cloudfront.net/CC%203708%20-%202013%20Ferrari%20458%20Spider/_published/9c77c1dc-859c-4b76-9085-f121a2f427a3/hero-shot/CC3708_exterior_001.jpg",
       "clean_title": false,
-      "estimated_value": 393214,
-      "deal_pct": 23.7
+      "estimated_value": 388333,
+      "deal_pct": 22.7
     },
     {
       "year": 2013,
@@ -2683,13 +2697,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "47bb253163ca",
       "vin": "ZFF68NHA9D0190370",
       "image_url": "https://www.lapinmotorco.com/imagetag/747/main/f/Used-2013-Ferrari-458-Spider-Base-1785492054.jpg",
       "clean_title": null,
-      "estimated_value": 367167,
-      "deal_pct": -7.3
+      "estimated_value": 362605,
+      "deal_pct": -8.7
     },
     {
       "year": 2015,
@@ -2704,13 +2718,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "42dacea44497",
       "vin": "ZFF68NHA2F0205617",
       "image_url": "https://pictures.dealer.com/a/autosportne/1818/21622c05e87e8f0cb73db846e636938cx.jpg",
       "clean_title": false,
-      "estimated_value": 620390,
-      "deal_pct": -11.2
+      "estimated_value": 616135,
+      "deal_pct": -12.0
     },
     {
       "year": 2013,
@@ -2725,13 +2739,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-28",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "4aaa31302a5b",
       "vin": "ZFF68NHA8D0189341",
       "image_url": "https://content.homenetiol.com/2001933/2134649/1280x1280/eb565a80e08f42c18873e598264d3aa9.jpg",
       "clean_title": null,
-      "estimated_value": 517476,
-      "deal_pct": 13.0
+      "estimated_value": 511078,
+      "deal_pct": 12.0
     },
     {
       "year": 2015,
@@ -2746,13 +2760,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-06-17",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "ffb0a755baee",
       "vin": "ZFF68NHA5F0206079",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/19325/23991784/639172520977689119.jpg",
       "clean_title": false,
-      "estimated_value": 668439,
-      "deal_pct": 47.6
+      "estimated_value": 663863,
+      "deal_pct": 47.3
     },
     {
       "year": 2013,
@@ -2767,13 +2781,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-06-27",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "9f20810b0579",
       "vin": "ZFF68NHA6D0196062",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/6030/24031701/639185377932994731.jpg",
       "clean_title": false,
-      "estimated_value": 440008,
-      "deal_pct": 25.3
+      "estimated_value": 434555,
+      "deal_pct": 24.3
     },
     {
       "year": 2013,
@@ -2788,13 +2802,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-23",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "dc5f9d0da935",
       "vin": "ZFF68NHAXD0192192",
       "image_url": "https://imagesdl.dealercenter.net/800/600/202607-2ec14f9caa594e16a65b1faaf2ec7e6a.jpg",
       "clean_title": false,
-      "estimated_value": 285871,
-      "deal_pct": 2.8
+      "estimated_value": 282308,
+      "deal_pct": 1.5
     },
     {
       "year": 2015,
@@ -2809,13 +2823,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-27",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "90862631c8a0",
       "vin": "ZFF68NHAXF0210693",
       "image_url": "https://assets.cai-media-management.com/resize/1024x1024/common-vehicle-media/516b30d7-e31e-4beb-bfaf-7f60e22d6e4f.jpg",
       "clean_title": false,
-      "estimated_value": 472232,
-      "deal_pct": -16.5
+      "estimated_value": 468972,
+      "deal_pct": -17.3
     },
     {
       "year": 2012,
@@ -2830,13 +2844,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "16d8617bc911",
       "vin": "ZFF68NHA5C0187626",
       "image_url": "https://www.totalwebmanager.com/TWM/Images/1137/125177/Medium/1201610118829640.jpg",
       "clean_title": true,
-      "estimated_value": 600689,
-      "deal_pct": 55.1
+      "estimated_value": 591639,
+      "deal_pct": 54.4
     },
     {
       "year": 2012,
@@ -2851,13 +2865,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "c0cacb97008b",
       "vin": "ZFF68NHA5C0188341",
       "image_url": "https://www.totalwebmanager.com/TWM/Images/1137/210282/Medium/120182921291552.jpg",
       "clean_title": true,
-      "estimated_value": 372136,
-      "deal_pct": 54.1
+      "estimated_value": 366499,
+      "deal_pct": 53.3
     },
     {
       "year": 2014,
@@ -2872,13 +2886,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-04-02",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "8ed43453ca20",
       "vin": "ZFF68NHA5E0199990",
       "image_url": "https://www.totalwebmanager.com/TWM/Images/1137/206588/Medium/12018243182554467.jpg",
       "clean_title": true,
-      "estimated_value": 640723,
-      "deal_pct": 56.3
+      "estimated_value": 634575,
+      "deal_pct": 55.9
     },
     {
       "year": 2013,
@@ -2893,13 +2907,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-31",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "19b1c0456ddb",
       "vin": "ZFF68NHA7D0195874",
       "image_url": "https://www.dmautosales.com/galleria_images/1806/1806_main_l.jpg",
       "clean_title": false,
-      "estimated_value": 562297,
-      "deal_pct": 4.0
+      "estimated_value": 555352,
+      "deal_pct": 2.8
     },
     {
       "year": 2013,
@@ -2914,13 +2928,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-18",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "32533fa673a3",
       "vin": "ZFF68NHA8D0192028",
       "image_url": "https://www.exoticshunter.com/imagetag/154/main/f/Used-2013-Ferrari-458-Spider-FrontRear-Parking-Sensors-Front-Lift-Carbon-Dash-InsertsCentral-Bridge-1655238391.jpg",
       "clean_title": null,
-      "estimated_value": 408764,
-      "deal_pct": 8.3
+      "estimated_value": 403693,
+      "deal_pct": 7.1
     },
     {
       "year": 2013,
@@ -2935,13 +2949,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-06-06",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:10Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "4b9adcb134b0",
       "vin": "ZFF68NHA0D0191486",
       "image_url": "https://cdn.ebizautos.media/used-2013-ferrari-458_italia-2drconvertible-9707-23037118-5-640.jpg",
       "clean_title": false,
-      "estimated_value": 541442,
-      "deal_pct": 26.1
+      "estimated_value": 534752,
+      "deal_pct": 25.2
     },
     {
       "year": 2013,
@@ -2956,13 +2970,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-17",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:11Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "53e0d08477b0",
       "vin": "ZFF68NHA6D0192027",
       "image_url": "https://www.stradamotorsports.com/imagetag/452/main/l/Used-2013-Ferrari-458-Spider-1784582575.jpg",
       "clean_title": false,
-      "estimated_value": 490229,
-      "deal_pct": 18.4
+      "estimated_value": 484163,
+      "deal_pct": 17.4
     },
     {
       "year": 2013,
@@ -2977,13 +2991,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-06-04",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:11Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "66569dec98d8",
       "vin": "ZFF68NHA5D0191628",
       "image_url": "https://cdn05.carsforsale.com/059c3459ba69276b3288f2c258c66ff5/800x600/2013-ferrari-458-spider-base-2dr-convertible.jpg",
       "clean_title": false,
-      "estimated_value": 565528,
-      "deal_pct": 29.3
+      "estimated_value": 558544,
+      "deal_pct": 28.4
     },
     {
       "year": 2014,
@@ -2998,13 +3012,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-30",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:11Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "09de9f7a9b66",
       "vin": "ZFF68NHA5E0198211",
       "image_url": "https://www.cavallinorossostlouis.com/inventoryphotos/12846/zff68nha5e0198211/ip/1.jpg",
       "clean_title": false,
-      "estimated_value": 583530,
-      "deal_pct": 5.8
+      "estimated_value": 577922,
+      "deal_pct": 4.9
     },
     {
       "year": 2012,
@@ -3019,13 +3033,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-16",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:11Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "5bbda6f92200",
       "vin": "ZFF68NHA0C0187923",
       "image_url": "https://vehicle-images.carscommerce.inc/8862-11002164/ZFF68NHA0C0187923/5e9c6012ebf70532f4ec28f1772ae4fa.jpg",
       "clean_title": false,
-      "estimated_value": 595504,
-      "deal_pct": 7.9
+      "estimated_value": 586532,
+      "deal_pct": 6.5
     },
     {
       "year": 2012,
@@ -3040,13 +3054,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-30",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:11Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "60e94f2ca9d3",
       "vin": "ZFF68NHA1C0187297",
       "image_url": "https://vehicle-images.carscommerce.inc/5339-110014065/ZFF68NHA1C0187297/b281f84b401e901f6e99337b925e5bdf.webp",
       "clean_title": false,
-      "estimated_value": 530734,
-      "deal_pct": 2.0
+      "estimated_value": 522727,
+      "deal_pct": 0.5
     },
     {
       "year": 2013,
@@ -3061,13 +3075,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-25",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:11Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "47b37dac8c37",
       "vin": "ZFF68NHA4D0190518",
       "image_url": "https://imagesdl.dealercenter.net/800/600/202605-f4bdc6ab516c42ad85ce7091e7ef775b.jpg",
       "clean_title": null,
-      "estimated_value": 398323,
-      "deal_pct": 42.3
+      "estimated_value": 393380,
+      "deal_pct": 41.5
     },
     {
       "year": 2014,
@@ -3082,13 +3096,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-31",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:11Z",
+      "scraped_at": "2026-08-05T09:03:41Z",
       "id": "1fa1fd746c12",
       "vin": "ZFF68NHA8E0197473",
       "image_url": "https://pictures.dealer.com/p/paganidallas/1418/fb754cd960df06b1cca8154a60c20371x.jpg",
       "clean_title": false,
-      "estimated_value": 456171,
-      "deal_pct": 3.5
+      "estimated_value": 451767,
+      "deal_pct": 2.6
     },
     {
       "year": 2015,
@@ -3103,12 +3117,12 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-03",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:11Z",
+      "scraped_at": "2026-08-05T09:03:42Z",
       "id": "cc67542d92e4",
       "vin": "ZFF75VFA3F0205609",
       "image_url": "https://www.ilusso.com/imagetag/6131/main/f/Used-2015-Ferrari-458-Speciale-1783031651.jpg",
       "clean_title": false,
-      "estimated_value": 1448461,
+      "estimated_value": 1448453,
       "deal_pct": 3.4
     },
     {
@@ -3124,13 +3138,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": "2026-07-31",
       "kind": "dealer",
-      "scraped_at": "2026-08-04T09:06:11Z",
+      "scraped_at": "2026-08-05T09:03:42Z",
       "id": "578f3675192a",
       "vin": "ZFF75VFA3F0209725",
       "image_url": "https://images.otf3.pixelmotiondemo.com/YyK3M-20260730194309.jpg",
       "clean_title": false,
-      "estimated_value": 1545361,
+      "estimated_value": 1545370,
       "deal_pct": -3.5
+    },
+    {
+      "year": 2014,
+      "variant": "Italia",
+      "price": 499995,
+      "mileage": 8197,
+      "title": "2014 Ferrari 458 Italia ",
+      "url": "https://www.ebay.com/itm/267748058097?_skw=Ferrari+458&hash=item3e570723f1:g:JHkAAeSwtPhqWD75",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-05T09:03:43Z",
+      "id": "f76b33627f8f",
+      "vin": "ZFF67NFA5E0203610",
+      "image_url": "https://i.ebayimg.com/images/g/JHkAAeSwtPhqWD75/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 478688,
+      "deal_pct": -4.5
     },
     {
       "year": 2013,
@@ -3145,34 +3180,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:12Z",
+      "scraped_at": "2026-08-05T09:03:43Z",
       "id": "1a79e8eaed7b",
       "vin": "ZFF67NFA4D0194462",
       "image_url": "https://i.ebayimg.com/images/g/WTEAAeSwW1hqU8zW/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 394982,
-      "deal_pct": 10.1
-    },
-    {
-      "year": 2014,
-      "variant": "Italia",
-      "price": 349995,
-      "mileage": 30147,
-      "title": "2014 Ferrari 458 Italia ",
-      "url": "https://www.ebay.com/itm/267746919286?_skw=Ferrari+458&hash=item3e56f5c376:g:rt8AAeSw6FJqVu0Y",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:12Z",
-      "id": "d2560377a777",
-      "vin": "ZFF67NFA4E0197573",
-      "image_url": "https://i.ebayimg.com/images/g/rt8AAeSw6FJqVu0Y/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 333243,
-      "deal_pct": -5.0
+      "estimated_value": 393784,
+      "deal_pct": 9.8
     },
     {
       "year": 2015,
@@ -3187,160 +3201,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:13Z",
+      "scraped_at": "2026-08-05T09:03:43Z",
       "id": "c7adb38971d5",
       "vin": "ZFF67NFA2F0209737",
       "image_url": "https://i.ebayimg.com/images/g/36kAAeSwq55p2CnJ/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 496423,
-      "deal_pct": 25.7
-    },
-    {
-      "year": 2013,
-      "variant": "Italia",
-      "price": 349000,
-      "mileage": 20005,
-      "title": "2013 Ferrari 458 Italia ",
-      "url": "https://www.ebay.com/itm/298554487592?_skw=Ferrari+458&hash=item45833bf328:g:CdsAAeSwKzZqXCQy",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:14Z",
-      "id": "cb4ca3768553",
-      "vin": "ZFF67NFA0D0193907",
-      "image_url": "https://i.ebayimg.com/images/g/CdsAAeSwKzZqXCQy/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 385288,
-      "deal_pct": 9.4
-    },
-    {
-      "year": 2012,
-      "variant": "Italia",
-      "price": 199900,
-      "mileage": 30533,
-      "title": "2012 Ferrari 458 Challenge ",
-      "url": "https://www.ebay.com/itm/327288437233?_skw=Ferrari+458&hash=item4c33e939f1:g:muwAAeSwTAVqMTvj",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:14Z",
-      "id": "10a9dc802600",
-      "vin": "ZFF71NXX000185857",
-      "image_url": "https://i.ebayimg.com/images/g/muwAAeSwTAVqMTvj/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 316659,
-      "deal_pct": 36.9
-    },
-    {
-      "year": 2012,
-      "variant": "Italia",
-      "price": 294581,
-      "mileage": 30667,
-      "title": "2012 Ferrari 458 ",
-      "url": "https://www.ebay.com/itm/358793427534?_skw=Ferrari+458&hash=item5389c13a4e:g:1DUAAeSwSwhqVbYv",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:15Z",
-      "id": "a7e2e82756fb",
-      "vin": "ZFF67NFA0C0183134",
-      "image_url": "https://i.ebayimg.com/images/g/1DUAAeSwSwhqVbYv/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 315959,
-      "deal_pct": 6.8
-    },
-    {
-      "year": 2014,
-      "variant": "Italia",
-      "price": 499995,
-      "mileage": 8197,
-      "title": "2014 Ferrari 458 Italia ",
-      "url": "https://www.ebay.com/itm/267739007780?_skw=Ferrari+458&hash=item3e567d0b24:g:JHkAAeSwtPhqWD75",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:15Z",
-      "id": "43a43983f3d5",
-      "vin": "ZFF67NFA5E0203610",
-      "image_url": "https://i.ebayimg.com/images/g/JHkAAeSwtPhqWD75/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 478803,
-      "deal_pct": -4.4
-    },
-    {
-      "year": 2013,
-      "variant": "Spider",
-      "price": 629995,
-      "mileage": 6652,
-      "title": "2013 458 Spider ",
-      "url": "https://www.ebay.com/itm/117295893073?_skw=Ferrari+458&hash=item1b4f614a51:g:qzoAAeSwogFqUWRH",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:16Z",
-      "id": "f6ddfa72fda3",
-      "vin": "ZFF68NHA5D0190818",
-      "image_url": "https://i.ebayimg.com/images/g/qzoAAeSwogFqUWRH/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 603620,
-      "deal_pct": -4.4
-    },
-    {
-      "year": 2012,
-      "variant": "Italia",
-      "price": 299700,
-      "mileage": 37029,
-      "title": "2012 Ferrari 458 Italia Carbon fiber racing seats",
-      "url": "https://www.ebay.com/itm/377387782987?_skw=Ferrari+458&hash=item57de10934b:g:dWcAAeSwT0xqRx1Q",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:16Z",
-      "id": "f2db2117c217",
-      "vin": "00000000000000000",
-      "image_url": "https://i.ebayimg.com/images/g/dWcAAeSwT0xqRx1Q/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 284454,
-      "deal_pct": -5.4
-    },
-    {
-      "year": 2013,
-      "variant": "Spider",
-      "price": 399985,
-      "mileage": 17310,
-      "title": "2013 Ferrari 458 Spider Convertible 2D",
-      "url": "https://www.ebay.com/itm/307092695593?_skw=Ferrari+458&hash=item478026aa29:g:kwwAAeSwgxZqZEIH",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:17Z",
-      "id": "64a9dbb4ac4b",
-      "vin": "ZFF68NHA3D0192647",
-      "image_url": "https://i.ebayimg.com/images/g/kwwAAeSwgxZqZEIH/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 506220,
-      "deal_pct": 21.0
+      "estimated_value": 497681,
+      "deal_pct": 25.9
     },
     {
       "year": 2013,
@@ -3355,13 +3222,181 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:17Z",
+      "scraped_at": "2026-08-05T09:03:44Z",
       "id": "5b2a77cf318e",
       "vin": "ZFF68NHA8D0189341",
       "image_url": "https://i.ebayimg.com/images/g/WjEAAeSw1uFqbqrY/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 517476,
-      "deal_pct": 13.0
+      "estimated_value": 511078,
+      "deal_pct": 12.0
+    },
+    {
+      "year": 2013,
+      "variant": "Spider",
+      "price": 399985,
+      "mileage": 17310,
+      "title": "2013 Ferrari 458 Spider Convertible 2D",
+      "url": "https://www.ebay.com/itm/298560457491?_skw=Ferrari+458&hash=item4583970b13:g:kwwAAeSwgxZqZEIH",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-05T09:03:44Z",
+      "id": "3d8de0e1f242",
+      "vin": "ZFF68NHA3D0192647",
+      "image_url": "https://i.ebayimg.com/images/g/kwwAAeSwgxZqZEIH/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 499959,
+      "deal_pct": 20.0
+    },
+    {
+      "year": 2012,
+      "variant": "Italia",
+      "price": 294581,
+      "mileage": 30667,
+      "title": "2012 Ferrari 458 ",
+      "url": "https://www.ebay.com/itm/358793427534?_skw=Ferrari+458&hash=item5389c13a4e:g:1DUAAeSwSwhqVbYv",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-05T09:03:45Z",
+      "id": "a7e2e82756fb",
+      "vin": "ZFF67NFA0C0183134",
+      "image_url": "https://i.ebayimg.com/images/g/1DUAAeSwSwhqVbYv/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 314119,
+      "deal_pct": 6.2
+    },
+    {
+      "year": 2014,
+      "variant": "Italia",
+      "price": 349995,
+      "mileage": 30147,
+      "title": "2014 Ferrari 458 Italia ",
+      "url": "https://www.ebay.com/itm/267746919286?_skw=Ferrari+458&hash=item3e56f5c376:g:rt8AAeSw6FJqVu0Y",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-05T09:03:46Z",
+      "id": "d2560377a777",
+      "vin": "ZFF67NFA4E0197573",
+      "image_url": "https://i.ebayimg.com/images/g/rt8AAeSw6FJqVu0Y/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 333142,
+      "deal_pct": -5.1
+    },
+    {
+      "year": 2013,
+      "variant": "Italia",
+      "price": 230000,
+      "mileage": 33500,
+      "title": "2013 Ferrari 458 ",
+      "url": "https://www.ebay.com/itm/158154484310?_skw=Ferrari+458&hash=item24d2bdea56:g:k0MAAeSwZl5qT8iL",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-05T09:03:46Z",
+      "id": "c32d84af5eb3",
+      "vin": "ZFF68NHA4D0190518",
+      "image_url": "https://i.ebayimg.com/images/g/k0MAAeSwZl5qT8iL/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 307383,
+      "deal_pct": 25.2
+    },
+    {
+      "year": 2012,
+      "variant": "Italia",
+      "price": 299700,
+      "mileage": 37029,
+      "title": "2012 Ferrari 458 Italia Carbon fiber racing seats",
+      "url": "https://www.ebay.com/itm/377387782987?_skw=Ferrari+458&hash=item57de10934b:g:dWcAAeSwT0xqRx1Q",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-05T09:03:46Z",
+      "id": "f2db2117c217",
+      "vin": "00000000000000000",
+      "image_url": "https://i.ebayimg.com/images/g/dWcAAeSwT0xqRx1Q/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 282792,
+      "deal_pct": -6.0
+    },
+    {
+      "year": 2013,
+      "variant": "Spider",
+      "price": 629995,
+      "mileage": 6652,
+      "title": "2013 458 Spider ",
+      "url": "https://www.ebay.com/itm/117295893073?_skw=Ferrari+458&hash=item1b4f614a51:g:qzoAAeSwogFqUWRH",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-05T09:03:47Z",
+      "id": "f6ddfa72fda3",
+      "vin": "ZFF68NHA5D0190818",
+      "image_url": "https://i.ebayimg.com/images/g/qzoAAeSwogFqUWRH/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 596172,
+      "deal_pct": -5.7
+    },
+    {
+      "year": 2012,
+      "variant": "Italia",
+      "price": 199900,
+      "mileage": 30533,
+      "title": "2012 Ferrari 458 Challenge ",
+      "url": "https://www.ebay.com/itm/327288437233?_skw=Ferrari+458&hash=item4c33e939f1:g:muwAAeSwTAVqMTvj",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-05T09:03:47Z",
+      "id": "10a9dc802600",
+      "vin": "ZFF71NXX000185857",
+      "image_url": "https://i.ebayimg.com/images/g/muwAAeSwTAVqMTvj/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 314815,
+      "deal_pct": 36.5
+    },
+    {
+      "year": 2013,
+      "variant": "Italia",
+      "price": 349000,
+      "mileage": 20005,
+      "title": "2013 Ferrari 458 Italia ",
+      "url": "https://www.ebay.com/itm/298554487592?_skw=Ferrari+458&hash=item45833bf328:g:CdsAAeSwKzZqXCQy",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-05T09:03:47Z",
+      "id": "cb4ca3768553",
+      "vin": "ZFF67NFA0D0193907",
+      "image_url": "https://i.ebayimg.com/images/g/CdsAAeSwKzZqXCQy/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 384118,
+      "deal_pct": 9.1
     },
     {
       "year": 2013,
@@ -3376,13 +3411,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:18Z",
+      "scraped_at": "2026-08-05T09:03:48Z",
       "id": "72870493e050",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/CCUAAeSwrBNqWM7b/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 501387,
-      "deal_pct": -3.8
+      "estimated_value": 495185,
+      "deal_pct": -5.1
     },
     {
       "year": 2013,
@@ -3397,13 +3432,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:18Z",
+      "scraped_at": "2026-08-05T09:03:48Z",
       "id": "54645ca951e1",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/Hl0AAeSwFuJqWM6~/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 501387,
-      "deal_pct": -3.8
+      "estimated_value": 495185,
+      "deal_pct": -5.1
     },
     {
       "year": 2014,
@@ -3418,18 +3453,18 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:19Z",
+      "scraped_at": "2026-08-05T09:03:49Z",
       "id": "17b390779314",
       "vin": "ZFF67NFA5E0201520",
       "image_url": "https://i.ebayimg.com/images/g/CeoAAeSwvkBqTkRy/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 395967,
+      "estimated_value": 395859,
       "deal_pct": 11.6
     },
     {
       "year": 2014,
       "variant": "Italia",
-      "price": 499996,
+      "price": 479996,
       "mileage": 23802,
       "title": "2014 Ferrari 458",
       "url": "https://www.ebay.com/itm/236977044996?_skw=Ferrari+458&hash=item372ceebe04:g:Z3IAAeSwS89qGt3y",
@@ -3439,13 +3474,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-04T09:06:19Z",
+      "scraped_at": "2026-08-05T09:03:49Z",
       "id": "ec14f1afaea4",
       "vin": "ZFF68NHA7E0198842",
       "image_url": "https://i.ebayimg.com/images/g/Z3IAAeSwS89qGt3y/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 370049,
-      "deal_pct": -35.1
+      "estimated_value": 369944,
+      "deal_pct": -29.7
     }
   ]
 };
