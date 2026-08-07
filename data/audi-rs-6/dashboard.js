@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-08-06T09:04:41Z",
+  "generated_at": "2026-08-07T07:40:09Z",
   "sources": [
     "ebay"
   ],
@@ -31,18 +31,18 @@ window.COTE = {
   "market": {
     "overall": {
       "count": 4,
-      "avg_price": 115995,
+      "avg_price": 115245,
       "median_price": 114495,
-      "min_price": 94995,
+      "min_price": 91995,
       "max_price": 139995,
       "avg_mileage": 26312
     },
     "by_variant": {
       "Standard": {
         "count": 4,
-        "avg_price": 115995,
+        "avg_price": 115245,
         "median_price": 114495,
-        "min_price": 94995,
+        "min_price": 91995,
         "max_price": 139995,
         "avg_mileage": 26312
       }
@@ -50,9 +50,9 @@ window.COTE = {
     "by_year": {
       "2021": {
         "count": 2,
-        "avg_price": 97495,
-        "median_price": 97495,
-        "min_price": 94995,
+        "avg_price": 95995,
+        "median_price": 95995,
+        "min_price": 91995,
         "max_price": 99995,
         "avg_mileage": 40718
       },
@@ -781,30 +781,20 @@ window.COTE = {
       "by_variant": {
         "Standard": 115995
       }
+    },
+    {
+      "date": "2026-08-07",
+      "overall": {
+        "avg_price": 115245,
+        "median_price": 114495,
+        "count": 4
+      },
+      "by_variant": {
+        "Standard": 115245
+      }
     }
   ],
   "listings": [
-    {
-      "year": 2021,
-      "variant": "Standard",
-      "price": 94995,
-      "mileage": 51873,
-      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-BIG $133K MSRP-CARBON CERAMICS!",
-      "url": "https://www.ebay.com/itm/327292675073?_skw=Audi+Rs+6&hash=item4c3429e401:g:yoAAAeSwCPVqMhQL",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-06T09:04:34Z",
-      "id": "e4ad9c22f1cd",
-      "vin": "WUA1CBF20MN903678",
-      "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 95726,
-      "deal_pct": 0.8
-    },
     {
       "year": 2021,
       "variant": "Standard",
@@ -818,13 +808,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-06T09:04:39Z",
+      "scraped_at": "2026-08-07T07:40:06Z",
       "id": "acff1bf532e1",
       "vin": "WUA1CBF21MN902751",
       "image_url": "https://i.ebayimg.com/images/g/KwYAAeSwRi9qVFw~/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 105484,
       "deal_pct": 5.2
+    },
+    {
+      "year": 2021,
+      "variant": "Standard",
+      "price": 91995,
+      "mileage": 51873,
+      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-BIG $133K MSRP-CARBON CERAMICS!",
+      "url": "https://www.ebay.com/itm/327292675073?_skw=Audi+Rs+6&hash=item4c3429e401:g:yoAAAeSwCPVqMhQL",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-07T07:40:07Z",
+      "id": "e4ad9c22f1cd",
+      "vin": "WUA1CBF20MN903678",
+      "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 95726,
+      "deal_pct": 3.9
     },
     {
       "year": 2024,
@@ -839,7 +850,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-06T09:04:40Z",
+      "scraped_at": "2026-08-07T07:40:08Z",
       "id": "69653a937021",
       "vin": "WUA1DBF2XRN908021",
       "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
@@ -860,7 +871,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-06T09:04:40Z",
+      "scraped_at": "2026-08-07T07:40:08Z",
       "id": "9def12532e59",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
