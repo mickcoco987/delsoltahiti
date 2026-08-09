@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-08-08T07:13:49Z",
+  "generated_at": "2026-08-09T07:15:12Z",
   "sources": [
     "ebay"
   ],
@@ -803,6 +803,17 @@ window.COTE = {
       "by_variant": {
         "Standard": 115245
       }
+    },
+    {
+      "date": "2026-08-09",
+      "overall": {
+        "avg_price": 115245,
+        "median_price": 114495,
+        "count": 4
+      },
+      "by_variant": {
+        "Standard": 115245
+      }
     }
   ],
   "listings": [
@@ -819,7 +830,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-08T07:13:47Z",
+      "scraped_at": "2026-08-09T07:15:10Z",
       "id": "acff1bf532e1",
       "vin": "WUA1CBF21MN902751",
       "image_url": "https://i.ebayimg.com/images/g/KwYAAeSwRi9qVFw~/s-l225.jpg",
@@ -840,7 +851,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-08T07:13:48Z",
+      "scraped_at": "2026-08-09T07:15:11Z",
       "id": "e4ad9c22f1cd",
       "vin": "WUA1CBF20MN903678",
       "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
@@ -861,7 +872,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-08T07:13:48Z",
+      "scraped_at": "2026-08-09T07:15:11Z",
       "id": "69653a937021",
       "vin": "WUA1DBF2XRN908021",
       "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
@@ -882,7 +893,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-08T07:13:49Z",
+      "scraped_at": "2026-08-09T07:15:11Z",
       "id": "9def12532e59",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
