@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-08-20T07:04:56Z",
+  "generated_at": "2026-08-21T07:06:23Z",
   "sources": [
     "ebay"
   ],
@@ -31,8 +31,8 @@ window.COTE = {
   "market": {
     "overall": {
       "count": 4,
-      "avg_price": 115245,
-      "median_price": 114495,
+      "avg_price": 114495,
+      "median_price": 112995,
       "min_price": 91995,
       "max_price": 139995,
       "avg_mileage": 26312
@@ -40,8 +40,8 @@ window.COTE = {
     "by_variant": {
       "Standard": {
         "count": 4,
-        "avg_price": 115245,
-        "median_price": 114495,
+        "avg_price": 114495,
+        "median_price": 112995,
         "min_price": 91995,
         "max_price": 139995,
         "avg_mileage": 26312
@@ -58,9 +58,9 @@ window.COTE = {
       },
       "2024": {
         "count": 2,
-        "avg_price": 134495,
-        "median_price": 134495,
-        "min_price": 128995,
+        "avg_price": 132995,
+        "median_price": 132995,
+        "min_price": 125995,
         "max_price": 139995,
         "avg_mileage": 11905
       }
@@ -935,30 +935,20 @@ window.COTE = {
       "by_variant": {
         "Standard": 115245
       }
+    },
+    {
+      "date": "2026-08-21",
+      "overall": {
+        "avg_price": 114495,
+        "median_price": 112995,
+        "count": 4
+      },
+      "by_variant": {
+        "Standard": 114495
+      }
     }
   ],
   "listings": [
-    {
-      "year": 2024,
-      "variant": "Standard",
-      "price": 128995,
-      "mileage": 11893,
-      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-$30K MODS-FULL PPF!",
-      "url": "https://www.ebay.com/itm/327315563614?_skw=Audi+Rs+6&hash=item4c3587245e:g:f9wAAeSwwRFqBUEM",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-20T07:04:51Z",
-      "id": "7a6a0b808d36",
-      "vin": "WUA1DBF2XRN908021",
-      "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 123881,
-      "deal_pct": -4.1
-    },
     {
       "year": 2021,
       "variant": "Standard",
@@ -972,13 +962,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-20T07:04:51Z",
+      "scraped_at": "2026-08-21T07:06:17Z",
       "id": "c144a4b1eece",
       "vin": "WUA1CBF20MN903678",
       "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 95726,
-      "deal_pct": 3.9
+      "estimated_value": 94472,
+      "deal_pct": 2.6
     },
     {
       "year": 2021,
@@ -993,13 +983,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-20T07:04:51Z",
+      "scraped_at": "2026-08-21T07:06:17Z",
       "id": "b9c9e4c4711d",
       "vin": "WUA1CBF21MN902751",
       "image_url": "https://i.ebayimg.com/images/g/KwYAAeSwRi9qVFw~/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 105484,
-      "deal_pct": 5.2
+      "estimated_value": 104102,
+      "deal_pct": 3.9
     },
     {
       "year": 2024,
@@ -1014,13 +1004,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-20T07:04:52Z",
+      "scraped_at": "2026-08-21T07:06:18Z",
       "id": "ea0054e9c7fd",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 123870,
-      "deal_pct": -13.0
+      "estimated_value": 122247,
+      "deal_pct": -14.5
+    },
+    {
+      "year": 2024,
+      "variant": "Standard",
+      "price": 125995,
+      "mileage": 11893,
+      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-$30K MODS-FULL PPF!",
+      "url": "https://www.ebay.com/itm/327315563614?_skw=Audi+Rs+6&hash=item4c3587245e:g:f9wAAeSwwRFqBUEM",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-21T07:06:21Z",
+      "id": "7a6a0b808d36",
+      "vin": "WUA1DBF2XRN908021",
+      "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 122258,
+      "deal_pct": -3.1
     }
   ]
 };

@@ -1424,6 +1424,22 @@
         "STO": 483222,
         "Tecnica": 376188
       }
+    },
+    {
+      "date": "2026-08-21",
+      "overall": {
+        "avg_price": 300014,
+        "median_price": 279938,
+        "count": 242
+      },
+      "by_variant": {
+        "LP610-4": 256805,
+        "Spyder": 248345,
+        "Performante": 373818,
+        "EVO": 305354,
+        "STO": 483020,
+        "Tecnica": 376336
+      }
     }
   ]
 }
