@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-08-23T07:00:12Z",
+  "generated_at": "2026-08-24T07:19:20Z",
   "sources": [
     "ebay"
   ],
@@ -968,51 +968,20 @@ window.COTE = {
       "by_variant": {
         "Standard": 114495
       }
+    },
+    {
+      "date": "2026-08-24",
+      "overall": {
+        "avg_price": 114495,
+        "median_price": 112995,
+        "count": 4
+      },
+      "by_variant": {
+        "Standard": 114495
+      }
     }
   ],
   "listings": [
-    {
-      "year": 2021,
-      "variant": "Standard",
-      "price": 99995,
-      "mileage": 29563,
-      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-OVER $50K MODS-DARWIN PRO KIT!",
-      "url": "https://www.ebay.com/itm/327314010966?_skw=Audi+Rs+6&hash=item4c356f7356:g:KwYAAeSwRi9qVFw~",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-23T07:00:03Z",
-      "id": "b9c9e4c4711d",
-      "vin": "WUA1CBF21MN902751",
-      "image_url": "https://i.ebayimg.com/images/g/KwYAAeSwRi9qVFw~/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 104102,
-      "deal_pct": 3.9
-    },
-    {
-      "year": 2021,
-      "variant": "Standard",
-      "price": 91995,
-      "mileage": 51873,
-      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-BIG $133K MSRP-CARBON CERAMICS!",
-      "url": "https://www.ebay.com/itm/327314012268?_skw=Audi+Rs+6&hash=item4c356f786c:g:yoAAAeSwCPVqMhQL",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-08-23T07:00:04Z",
-      "id": "c144a4b1eece",
-      "vin": "WUA1CBF20MN903678",
-      "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 94472,
-      "deal_pct": 2.6
-    },
     {
       "year": 2024,
       "variant": "Standard",
@@ -1026,7 +995,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-23T07:00:04Z",
+      "scraped_at": "2026-08-24T07:19:11Z",
       "id": "ea0054e9c7fd",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
@@ -1047,13 +1016,55 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-08-23T07:00:08Z",
+      "scraped_at": "2026-08-24T07:19:16Z",
       "id": "7a6a0b808d36",
       "vin": "WUA1DBF2XRN908021",
       "image_url": "https://i.ebayimg.com/images/g/f9wAAeSwwRFqBUEM/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 122258,
       "deal_pct": -3.1
+    },
+    {
+      "year": 2021,
+      "variant": "Standard",
+      "price": 99995,
+      "mileage": 29563,
+      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-OVER $50K MODS-DARWIN PRO KIT!",
+      "url": "https://www.ebay.com/itm/327323520718?_skw=Audi+Rs+6&hash=item4c36008ece:g:KwYAAeSwRi9qVFw~",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-24T07:19:16Z",
+      "id": "44d8e384c597",
+      "vin": "WUA1CBF21MN902751",
+      "image_url": "https://i.ebayimg.com/images/g/KwYAAeSwRi9qVFw~/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 104102,
+      "deal_pct": 3.9
+    },
+    {
+      "year": 2021,
+      "variant": "Standard",
+      "price": 91995,
+      "mileage": 51873,
+      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-BIG $133K MSRP-CARBON CERAMICS!",
+      "url": "https://www.ebay.com/itm/327323521697?_skw=Audi+Rs+6&hash=item4c360092a1:g:yoAAAeSwCPVqMhQL",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-08-24T07:19:16Z",
+      "id": "499b38061f66",
+      "vin": "WUA1CBF20MN903678",
+      "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 94472,
+      "deal_pct": 2.6
     }
   ]
 };
