@@ -24,12 +24,12 @@
       "risk": "L'acceleration du marche electrifie peut tirer vers le bas la cote des thermiques d'entree de gamme (LP610-4, EVO base)."
     }
   },
-  "generated_at": "2026-09-01T11:38:49Z",
+  "generated_at": "2026-09-02T11:18:04Z",
   "sources": [
     "marketcheck",
     "ebay"
   ],
-  "count": 233,
+  "count": 234,
   "listings": [
     {
       "year": 2023,
@@ -44,13 +44,13 @@
       "sale_date": null,
       "posted_at": "2026-08-22",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "6b2a9b189aad",
       "vin": "ZHWUT5ZFXPLA23320",
       "image_url": "https://cfwww.hgreg.com/photos/by-size/913324A/3648x2048/content.homenetiol.com_2001243_2130496_0x0_957d34081ea246ce8c965b5791be1ec0.jpg",
       "clean_title": false,
-      "estimated_value": 309963,
-      "deal_pct": 0.8
+      "estimated_value": 309678,
+      "deal_pct": 0.7
     },
     {
       "year": 2022,
@@ -65,12 +65,12 @@
       "sale_date": null,
       "posted_at": "2026-08-18",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "7e1ec1702bcc",
       "vin": "ZHWUA6ZX7NLA18853",
       "image_url": "https://cfwww.hgreg.com/photos/by-size/CSA18853/3648x2048/content.homenetiol.com_2001243_2130496_0x0_82ad4153e041428fb7c7ba3a437e46c2.jpg",
       "clean_title": true,
-      "estimated_value": 483292,
+      "estimated_value": 483325,
       "deal_pct": -1.7
     },
     {
@@ -86,13 +86,13 @@
       "sale_date": null,
       "posted_at": "2026-03-12",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "6eb2798dade2",
       "vin": "ZHWUG7ZF5PLA24665",
       "image_url": "https://cloudflareimages.dealereprocess.com/resrc/images/c_limit,f_auto,fl_lossy,w_auto/v1/dvp/522/6502711794-aHR0cDovL2ltYWdlcy51bml0c2ludmVudG9yeS5jb20vdXBsb2Fkcy9waG90b3MvMC8yMDIzLTEwLTE3LzEtMTQ3NjI1NzYtNjUyZTU2YWY0MzFjYi5qcGc=",
       "clean_title": false,
-      "estimated_value": 337588,
-      "deal_pct": -14.3
+      "estimated_value": 336410,
+      "deal_pct": -14.7
     },
     {
       "year": 2017,
@@ -107,13 +107,13 @@
       "sale_date": null,
       "posted_at": "2026-05-23",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "57a43a402234",
       "vin": "ZHWUC2ZF0HLA07966",
       "image_url": "https://cdn-ds.com/stock/2017-Lamborghini-Huracan--Saint-Augustine-FL/seo/VAMP18104-ZHWUC2ZF0HLA07966/sz_29590/o_10744/ov_11/22333949921c43bb2a56eec8151b6aec.jpg",
       "clean_title": false,
-      "estimated_value": 270416,
-      "deal_pct": 21.3
+      "estimated_value": 270251,
+      "deal_pct": 21.2
     },
     {
       "year": 2020,
@@ -128,12 +128,12 @@
       "sale_date": null,
       "posted_at": "2026-08-15",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "5deb4a96f717",
       "vin": "ZHWUT4ZF2LLA12803",
       "image_url": "https://content.homenetiol.com/2000292/2162366/0x0/893898aeb8e44149a6668d87b56e4e31.jpg",
       "clean_title": false,
-      "estimated_value": 252304,
+      "estimated_value": 252377,
       "deal_pct": -10.0
     },
     {
@@ -149,12 +149,12 @@
       "sale_date": null,
       "posted_at": "2026-08-23",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "c94db5dda5e3",
       "vin": "ZHWUF5ZF8MLA17342",
       "image_url": "https://content.homenetiol.com/2000292/2162366/0x0/4b49c626814a4da7b3cb7ce935a403b7.jpg",
       "clean_title": false,
-      "estimated_value": 293767,
+      "estimated_value": 293795,
       "deal_pct": 4.4
     },
     {
@@ -170,12 +170,12 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "152ff9cc5fff",
       "vin": "ZHWUT4ZF4NLA19903",
       "image_url": "https://content.homenetiol.com/2000292/2162366/0x0/a25e65cc88a64921bdf071a935ef516f.jpg",
       "clean_title": false,
-      "estimated_value": 314338,
+      "estimated_value": 314240,
       "deal_pct": 1.1
     },
     {
@@ -191,13 +191,13 @@
       "sale_date": null,
       "posted_at": "2026-08-16",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "fa7204f48ef8",
       "vin": "ZHWUT4ZF9LLA14225",
       "image_url": "https://content.homenetiol.com/2000292/2162366/0x0/fdaa31ac029d440a90054b516974e393.jpg",
       "clean_title": false,
-      "estimated_value": 280827,
-      "deal_pct": -3.6
+      "estimated_value": 280982,
+      "deal_pct": -3.5
     },
     {
       "year": 2015,
@@ -212,13 +212,13 @@
       "sale_date": null,
       "posted_at": "2026-08-15",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "222dee69052d",
       "vin": "ZHWUC1ZF0FLA02046",
       "image_url": "https://content.homenetiol.com/2000292/2162366/0x0/9a01c4df59b44e49bf73c76209ed104d.jpg",
       "clean_title": false,
-      "estimated_value": 190290,
-      "deal_pct": -11.0
+      "estimated_value": 190227,
+      "deal_pct": -11.1
     },
     {
       "year": 2015,
@@ -233,12 +233,12 @@
       "sale_date": null,
       "posted_at": "2026-08-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "cad228fc202d",
       "vin": "ZHWUC1ZF1FLA00709",
       "image_url": "https://cdn05.carsforsale.com/7e7db5d8a6621740c987710a8bb397d5/2015-lamborghini-huracan-lp-252520610-4.jpg?width=640&height=480&format=&sig=7d58a1a1d06ff00b",
       "clean_title": false,
-      "estimated_value": 237814,
+      "estimated_value": 237866,
       "deal_pct": 3.3
     },
     {
@@ -254,12 +254,12 @@
       "sale_date": null,
       "posted_at": "2026-08-25",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "97a7cbddd9da",
       "vin": "ZHWUF5ZFXPLA22739",
       "image_url": "https://pictures.dealer.com/l/lamborghiniofohio/0810/345255533cbefa4eb6a811d6615dc660x.jpg",
       "clean_title": false,
-      "estimated_value": 335165,
+      "estimated_value": 334921,
       "deal_pct": -0.9
     },
     {
@@ -275,12 +275,12 @@
       "sale_date": null,
       "posted_at": "2026-08-31",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "e5ec76e15762",
       "vin": "ZHWUA6ZX5NLA18317",
       "image_url": "http://cdn-ds.com/stock/2022-Lamborghini-Huracan-Sto-Coupe-North-Miami-Beach-FL/seo/ICC80512-ZHWUA6ZX5NLA18317/sz_109673/75314305886909c1d61f27f8508fe30f.jpg",
       "clean_title": false,
-      "estimated_value": 504430,
+      "estimated_value": 504519,
       "deal_pct": -5.4
     },
     {
@@ -296,13 +296,13 @@
       "sale_date": null,
       "posted_at": "2026-08-30",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "f6d6c95b3157",
       "vin": "ZHWUR2ZF9KLA12590",
       "image_url": "https://images.dealer.com/unavailable_stockphoto.png",
       "clean_title": false,
-      "estimated_value": 280981,
-      "deal_pct": -0.3
+      "estimated_value": 280515,
+      "deal_pct": -0.5
     },
     {
       "year": 2018,
@@ -317,13 +317,13 @@
       "sale_date": null,
       "posted_at": "2026-08-07",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "ffb245cbf674",
       "vin": "ZHWUS4ZF6JLA10746",
       "image_url": "http://cdn-ds.com/stock/2018-Lamborghini-Huracan-Performante-Spyder-North-Miami-Beach-FL/seo/ICC80512-ZHWUS4ZF6JLA10746/sz_101638/055909a0f8a222c9f8e58a4dd517caa0.jpg",
       "clean_title": false,
-      "estimated_value": 389921,
-      "deal_pct": -5.6
+      "estimated_value": 392693,
+      "deal_pct": -4.8
     },
     {
       "year": 2019,
@@ -338,13 +338,13 @@
       "sale_date": null,
       "posted_at": "2025-11-13",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "104dc7222d0c",
       "vin": "ZHWUR2ZF0KLA11862",
       "image_url": "https://cdn09.carsforsale.com/images/nophoto-xs.jpg",
       "clean_title": false,
-      "estimated_value": 274635,
-      "deal_pct": 16.3
+      "estimated_value": 274164,
+      "deal_pct": 16.1
     },
     {
       "year": 2023,
@@ -359,12 +359,12 @@
       "sale_date": null,
       "posted_at": "2026-07-17",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "fe4bb94d594f",
       "vin": "ZHWUA6ZX3PLA23793",
       "image_url": "https://images.otf3.pixelmotiondemo.com/ygHTG-20260618021627.jpg",
       "clean_title": false,
-      "estimated_value": 520084,
+      "estimated_value": 519917,
       "deal_pct": 3.4
     },
     {
@@ -380,13 +380,13 @@
       "sale_date": null,
       "posted_at": "2026-08-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "b8f2b654f322",
       "vin": "ZHWUF4ZF2LLA13019",
       "image_url": "https://ik.imagekit.io/getmyauto/prodbucket/data/Mpn/i/PJMJZ/6a8f76d35dfae_0.jpg",
       "clean_title": false,
-      "estimated_value": 273067,
-      "deal_pct": -13.5
+      "estimated_value": 273199,
+      "deal_pct": -13.4
     },
     {
       "year": 2018,
@@ -401,13 +401,13 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "5e66aadd6817",
       "vin": "ZHWUD4ZF7JLA09017",
       "image_url": "https://images.app.ridemotive.com/5g6galb86m1hd37w7s1hqqzrvlmb",
       "clean_title": true,
-      "estimated_value": 367529,
-      "deal_pct": 2.4
+      "estimated_value": 370088,
+      "deal_pct": 3.1
     },
     {
       "year": 2018,
@@ -422,13 +422,13 @@
       "sale_date": null,
       "posted_at": "2026-08-24",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "5fbc890885e2",
       "vin": "ZHWUD4ZF2JLA08437",
       "image_url": "https://imagescf.dealercenter.net/1920/1080/202607-73e86a894362498582738aeb9493ebb1.jpg",
       "clean_title": false,
-      "estimated_value": 391391,
-      "deal_pct": 59.1
+      "estimated_value": 394178,
+      "deal_pct": 59.4
     },
     {
       "year": 2023,
@@ -443,13 +443,13 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "d6f272edcd76",
       "vin": "ZHWUF5ZF6PLA22012",
       "image_url": "https://images.otf3.pixelmotiondemo.com/7cU9Q-20260831054909.jpg",
       "clean_title": false,
-      "estimated_value": 293549,
-      "deal_pct": 1.2
+      "estimated_value": 293240,
+      "deal_pct": 1.1
     },
     {
       "year": 2015,
@@ -464,13 +464,13 @@
       "sale_date": null,
       "posted_at": "2026-08-22",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "cd760780948c",
       "vin": "ZHWUC1ZF9FLA02868",
       "image_url": "https://pictures.dealer.com/l/lamborghiniofphiladelphia/1339/b2052ac8c0c9f62e78d019181a1b5669x.jpg",
       "clean_title": false,
-      "estimated_value": 243804,
-      "deal_pct": -4.8
+      "estimated_value": 243872,
+      "deal_pct": -4.7
     },
     {
       "year": 2016,
@@ -485,12 +485,12 @@
       "sale_date": null,
       "posted_at": "2026-08-22",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "25350f1b36fc",
       "vin": "ZHWUR1ZF4GLA05404",
       "image_url": "https://pictures.dealer.com/l/lamborghiniofphiladelphia/0852/99ee8d34d122386b8ae59771963511c4x.jpg",
       "clean_title": false,
-      "estimated_value": 256069,
+      "estimated_value": 256025,
       "deal_pct": -0.8
     },
     {
@@ -506,13 +506,13 @@
       "sale_date": null,
       "posted_at": "2026-08-23",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "be5a1dba1ed4",
       "vin": "ZHWUC1ZF8FLA02926",
       "image_url": "https://vimg.remora.inc/534807/zhwuc1zf8fla02926-2015-lamborghini-huracan-lp610-4-grigio-lynx-metallic-1-112902.avif",
       "clean_title": true,
-      "estimated_value": 254167,
-      "deal_pct": -2.3
+      "estimated_value": 254265,
+      "deal_pct": -2.2
     },
     {
       "year": 2020,
@@ -527,12 +527,12 @@
       "sale_date": null,
       "posted_at": "2026-08-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "0b322bc2b91d",
       "vin": "ZHWUT4ZF1LLA14042",
       "image_url": "https://pictures.dealer.com/c/cartopiallcnorthplainfield/1637/a8e644016926daf00842a3f11f720f4fx.jpg",
       "clean_title": false,
-      "estimated_value": 296983,
+      "estimated_value": 297189,
       "deal_pct": 8.8
     },
     {
@@ -548,12 +548,12 @@
       "sale_date": null,
       "posted_at": "2026-08-23",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "e55ebd075975",
       "vin": "ZHWUB6ZF9PLA25004",
       "image_url": "https://pictures.dealer.com/l/lamborghinigreenwich/1327/9b99df2978d5ac19d2cdbae79e3fdfc7x.jpg",
       "clean_title": false,
-      "estimated_value": 380983,
+      "estimated_value": 380997,
       "deal_pct": 1.2
     },
     {
@@ -569,12 +569,12 @@
       "sale_date": null,
       "posted_at": "2026-08-30",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "b165737e2d98",
       "vin": "ZHWUF5ZFXLLA13999",
       "image_url": "https://www.exoticshunter.com/imagetag/722/main/f/Used-2020-Lamborghini-Huracan-EVO-Blu-Aegeus-Matte-Paint-w-Orange-Leather-+-Sensonum-Audio-1781118932.jpg",
       "clean_title": false,
-      "estimated_value": 289079,
+      "estimated_value": 289260,
       "deal_pct": 10.1
     },
     {
@@ -590,12 +590,12 @@
       "sale_date": null,
       "posted_at": "2026-08-21",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "73b307cc0fa2",
       "vin": "ZHWUB6ZF8PLA25513",
       "image_url": "https://pictures.dealer.com/l/lamborghiniofphiladelphia/1773/145e053c82230c5f36e3eaf98f84e8a8x.jpg",
       "clean_title": false,
-      "estimated_value": 379423,
+      "estimated_value": 379433,
       "deal_pct": 2.5
     },
     {
@@ -611,12 +611,12 @@
       "sale_date": null,
       "posted_at": "2025-08-21",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "26dd41058835",
       "vin": "ZHWUC2ZF1HLA06356",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/20060/22396117/638786510561297305.jpg",
       "clean_title": false,
-      "estimated_value": 258173,
+      "estimated_value": 257987,
       "deal_pct": 38.0
     },
     {
@@ -632,13 +632,13 @@
       "sale_date": null,
       "posted_at": "2026-08-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "2b341de63a13",
       "vin": "ZHWUS4ZF8JLA11008",
       "image_url": "https://cdn05.carsforsale.com/00ecb2b72111f61c22d4e4745fd6dc77ee/800x600/2018-lamborghini-huracan-lp-640-4-performante-spyder-awd-2dr-convertible.jpg",
       "clean_title": false,
-      "estimated_value": 374898,
-      "deal_pct": 37.3
+      "estimated_value": 377527,
+      "deal_pct": 37.8
     },
     {
       "year": 2015,
@@ -653,12 +653,12 @@
       "sale_date": null,
       "posted_at": "2026-07-16",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "40b52099b979",
       "vin": "ZHWUC1ZF6FLA02018",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1769/c0e5f11f5917d4c369c7fe012f12251dx.jpg",
       "clean_title": true,
-      "estimated_value": 240569,
+      "estimated_value": 240629,
       "deal_pct": -24.7
     },
     {
@@ -674,12 +674,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "fdd29f506a12",
       "vin": "ZHWUC1ZF4FLA02146",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0459/76d98fcdee06401014f03030a3593abdx.jpg",
       "clean_title": false,
-      "estimated_value": 224288,
+      "estimated_value": 224304,
       "deal_pct": -5.2
     },
     {
@@ -695,12 +695,12 @@
       "sale_date": null,
       "posted_at": "2026-08-19",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "c9290d62132b",
       "vin": "ZHWUC1ZF9FLA01610",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0706/8e02067cb11d11774f04da891378e12ax.jpg",
       "clean_title": true,
-      "estimated_value": 202582,
+      "estimated_value": 202545,
       "deal_pct": -2.7
     },
     {
@@ -716,12 +716,12 @@
       "sale_date": null,
       "posted_at": "2026-07-02",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "3d4009b1421f",
       "vin": "ZHWUC1ZF7HLA05416",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0437/73fe9cc3461c271cb97e334ca2d51399x.jpg",
       "clean_title": true,
-      "estimated_value": 251769,
+      "estimated_value": 251571,
       "deal_pct": -19.2
     },
     {
@@ -737,12 +737,12 @@
       "sale_date": null,
       "posted_at": "2026-08-19",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "621c2bb32baa",
       "vin": "ZHWUC2ZF7HLA06233",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0453/632bbd0c6625274fe3c5a6555759c41ax.jpg",
       "clean_title": false,
-      "estimated_value": 253211,
+      "estimated_value": 253016,
       "deal_pct": 3.2
     },
     {
@@ -758,12 +758,12 @@
       "sale_date": null,
       "posted_at": "2026-08-06",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "dc5b1e42e445",
       "vin": "ZHWUR2ZF9HLA06944",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1541/c26b252319786ec47c882ccb0f5ba9edx.jpg",
       "clean_title": true,
-      "estimated_value": 260792,
+      "estimated_value": 260610,
       "deal_pct": 9.1
     },
     {
@@ -779,13 +779,13 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "085e0029b164",
       "vin": "ZHWUD4ZF9JLA10105",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0148/39bba402012e18eb85a1818a1a47a9f7x.jpg",
       "clean_title": true,
-      "estimated_value": 343099,
-      "deal_pct": -6.4
+      "estimated_value": 345429,
+      "deal_pct": -5.7
     },
     {
       "year": 2018,
@@ -800,13 +800,13 @@
       "sale_date": null,
       "posted_at": "2026-08-23",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "04dbb7891c82",
       "vin": "ZHWUC2ZF7JLA08988",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0635/f08c314557c7470d7a09b5fef9d976bbx.jpg",
       "clean_title": true,
-      "estimated_value": 257241,
-      "deal_pct": 8.7
+      "estimated_value": 256906,
+      "deal_pct": 8.6
     },
     {
       "year": 2023,
@@ -821,13 +821,13 @@
       "sale_date": null,
       "posted_at": "2026-08-05",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "bdd0c481c3dd",
       "vin": "ZHWUT5ZF2PLA22985",
       "image_url": "https://cdn05.carsforsale.com/00dc0573e39f5ed3ab06b1a74101331fbb/800x600/2023-lamborghini-huracan-evo-spyder-2dr-convertible.jpg",
       "clean_title": true,
-      "estimated_value": 319440,
-      "deal_pct": -9.6
+      "estimated_value": 319170,
+      "deal_pct": -9.7
     },
     {
       "year": 2023,
@@ -842,12 +842,12 @@
       "sale_date": null,
       "posted_at": "2026-07-08",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "7812d10f183a",
       "vin": "ZHWUB6ZFXPLA21849",
       "image_url": "https://static.overfuel.com/photos/357/1719808/639059826018108847.webp?w=1920&q=80",
       "clean_title": false,
-      "estimated_value": 374884,
+      "estimated_value": 374883,
       "deal_pct": -12.8
     },
     {
@@ -863,13 +863,13 @@
       "sale_date": null,
       "posted_at": "2026-06-25",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "e36c74c55479",
       "vin": "ZHWUR2ZF3HLA07880",
       "image_url": "https://cdn.dealeraccelerate.com/fusion/1/1607/78451/2017-lamborghini-huracan-lp-580-2-spyder",
       "clean_title": false,
-      "estimated_value": 269202,
-      "deal_pct": 7.2
+      "estimated_value": 269035,
+      "deal_pct": 7.1
     },
     {
       "year": 2019,
@@ -884,13 +884,13 @@
       "sale_date": null,
       "posted_at": "2026-08-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "29d9ed8fa5fb",
       "vin": "ZHWUR2ZF1KLA11515",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1608/fca31ba27df9bee5975bae184890966ax.jpg",
       "clean_title": true,
-      "estimated_value": 281975,
-      "deal_pct": 12.2
+      "estimated_value": 281510,
+      "deal_pct": 12.1
     },
     {
       "year": 2019,
@@ -905,13 +905,13 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:24Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "7f44ca7d4bbb",
       "vin": "ZHWUS4ZF6KLA11543",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1569/7d2be7a04f284bf861dc7e6d9ee0b6d4x.jpg",
       "clean_title": true,
-      "estimated_value": 346759,
-      "deal_pct": 5.1
+      "estimated_value": 348923,
+      "deal_pct": 5.7
     },
     {
       "year": 2022,
@@ -926,12 +926,12 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "117b48a70774",
       "vin": "ZHWUA6ZX6NLA20724",
       "image_url": "",
       "clean_title": false,
-      "estimated_value": 505345,
+      "estimated_value": 505436,
       "deal_pct": 1.1
     },
     {
@@ -947,13 +947,13 @@
       "sale_date": null,
       "posted_at": "2026-08-22",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "11588fb07ac6",
       "vin": "ZHWUF4ZF8LLA13767",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0107/371bbd5b15050c26f0d70f6cca84b576x.jpg",
       "clean_title": true,
-      "estimated_value": 269300,
-      "deal_pct": -6.6
+      "estimated_value": 269422,
+      "deal_pct": -6.5
     },
     {
       "year": 2022,
@@ -968,12 +968,12 @@
       "sale_date": null,
       "posted_at": "2026-08-19",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "4ddf741135ee",
       "vin": "ZHWUA6ZX8NLA18876",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/0797/a6eea2ca788225210be1eec85df8be25x.jpg",
       "clean_title": false,
-      "estimated_value": 482430,
+      "estimated_value": 482461,
       "deal_pct": -0.5
     },
     {
@@ -989,12 +989,12 @@
       "sale_date": null,
       "posted_at": "2026-08-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "2a1dd41c28b6",
       "vin": "ZHWUF5ZF0MLA16038",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/26234/24233909/639232938653687129.jpg",
       "clean_title": false,
-      "estimated_value": 288991,
+      "estimated_value": 289006,
       "deal_pct": 6.6
     },
     {
@@ -1010,12 +1010,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "e5a68ad96850",
       "vin": "ZHWUF5ZF1MLA17764",
       "image_url": "https://pictures.dealer.com/w/webuyitcarscavecreek/1498/f7747933c5a466135520d44f9a8a1835x.jpg",
       "clean_title": true,
-      "estimated_value": 279157,
+      "estimated_value": 279148,
       "deal_pct": 0.1
     },
     {
@@ -1031,13 +1031,13 @@
       "sale_date": null,
       "posted_at": "2026-08-22",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "5894eed91783",
       "vin": "ZHWUC1ZF8FLA00822",
       "image_url": "https://images.otf3.pixelmotiondemo.com/MFVIu-20260704000008.jpg",
       "clean_title": false,
-      "estimated_value": 232669,
-      "deal_pct": -3.2
+      "estimated_value": 232707,
+      "deal_pct": -3.1
     },
     {
       "year": 2021,
@@ -1052,13 +1052,13 @@
       "sale_date": null,
       "posted_at": "2026-07-19",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "be26e87c4233",
       "vin": "ZHWUF5ZFXMLA16774",
       "image_url": "https://images.otf3.pixelmotiondemo.com/SFnPf-20260529085227.jpg",
       "clean_title": false,
-      "estimated_value": 309186,
-      "deal_pct": -0.3
+      "estimated_value": 309254,
+      "deal_pct": -0.2
     },
     {
       "year": 2022,
@@ -1073,12 +1073,12 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "dd6edf8d3333",
       "vin": "ZHWUA6ZXXNLA18345",
       "image_url": "https://images.otf3.pixelmotiondemo.com/7mBFJ-20260828203400.jpg",
       "clean_title": false,
-      "estimated_value": 504287,
+      "estimated_value": 504375,
       "deal_pct": -13.0
     },
     {
@@ -1094,12 +1094,12 @@
       "sale_date": null,
       "posted_at": "2026-07-21",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "7c24f2bc901a",
       "vin": "ZHWUF5ZF5NLA21205",
       "image_url": "https://images.otf3.pixelmotiondemo.com/VRET1-20260717203919.jpg",
       "clean_title": false,
-      "estimated_value": 322857,
+      "estimated_value": 322778,
       "deal_pct": -6.9
     },
     {
@@ -1115,12 +1115,12 @@
       "sale_date": null,
       "posted_at": "2026-08-15",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "60beb4154408",
       "vin": "ZHWUF5ZF5MLA17315",
       "image_url": "https://images.otf3.pixelmotiondemo.com/oEF25-20260814203959.jpg",
       "clean_title": false,
-      "estimated_value": 317488,
+      "estimated_value": 317579,
       "deal_pct": -10.2
     },
     {
@@ -1136,12 +1136,12 @@
       "sale_date": null,
       "posted_at": "2026-08-31",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "ee9988adfd34",
       "vin": "ZHWUA6ZX6MLA17854",
       "image_url": "https://static.overfuel.com/photos/129/1891632/82162456-29ac-4b27-bc27-d9b07d11655c.webp?w=1920&q=80",
       "clean_title": false,
-      "estimated_value": 476907,
+      "estimated_value": 477198,
       "deal_pct": -15.3
     },
     {
@@ -1157,13 +1157,13 @@
       "sale_date": null,
       "posted_at": "2026-08-31",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "245e97722c1e",
       "vin": "ZHWUD4ZF7JLA10443",
       "image_url": "https://static.overfuel.com/photos/129/1894914/6b301b1d-0f5a-42db-a357-4f54dcb0fe6f.webp?w=1920&q=80",
       "clean_title": false,
-      "estimated_value": 382899,
-      "deal_pct": -22.7
+      "estimated_value": 385604,
+      "deal_pct": -21.9
     },
     {
       "year": 2021,
@@ -1178,13 +1178,13 @@
       "sale_date": null,
       "posted_at": "2026-08-25",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "a619ddaa703b",
       "vin": "ZHWUT5ZF6MLA15890",
       "image_url": "https://images.app.ridemotive.com/hfavz1f75j0fapden6qedjnvzfya",
       "clean_title": true,
-      "estimated_value": 316808,
-      "deal_pct": -1.3
+      "estimated_value": 316897,
+      "deal_pct": -1.2
     },
     {
       "year": 2020,
@@ -1199,12 +1199,12 @@
       "sale_date": null,
       "posted_at": "2026-08-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "c70e4570d234",
       "vin": "ZHWUF4ZF1LLA13979",
       "image_url": "https://pictures.dealer.com/p/parkplaceporschedallasretail/0135/112f1778d86b44527bb7a5e58c2eed89x.jpg",
       "clean_title": true,
-      "estimated_value": 304048,
+      "estimated_value": 304276,
       "deal_pct": -3.6
     },
     {
@@ -1220,13 +1220,13 @@
       "sale_date": null,
       "posted_at": "2026-08-30",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "c94fc36e05aa",
       "vin": "ZHWUT5ZF2NLA18772",
       "image_url": "https://vehicle-images.carscommerce.inc/2941-110011070/ZHWUT5ZF2NLA18772/b6d2dba8a6160546b3a8224a9d6474f6.webp",
       "clean_title": false,
-      "estimated_value": 294331,
-      "deal_pct": -8.4
+      "estimated_value": 294191,
+      "deal_pct": -8.5
     },
     {
       "year": 2017,
@@ -1241,13 +1241,13 @@
       "sale_date": null,
       "posted_at": "2026-08-25",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "2452cfabc0f6",
       "vin": "ZHWUC2ZF8HLA05902",
       "image_url": "https://vtpimages.audi.com/carimg2/3236/4716533236.jpg?im=Resize,width=640,height=480",
       "clean_title": false,
-      "estimated_value": 267715,
-      "deal_pct": 6.1
+      "estimated_value": 267545,
+      "deal_pct": 6.0
     },
     {
       "year": 2015,
@@ -1262,12 +1262,12 @@
       "sale_date": null,
       "posted_at": "2026-08-14",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "7e61c6237241",
       "vin": "ZHWUC1ZF3FLA01182",
       "image_url": "https://imagescf.dealercenter.net/1920/1080/202608-d947fb0b22ca4b48ac363b1f20426f46.jpg",
       "clean_title": false,
-      "estimated_value": 211262,
+      "estimated_value": 211246,
       "deal_pct": 5.3
     },
     {
@@ -1283,12 +1283,12 @@
       "sale_date": null,
       "posted_at": "2026-08-19",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "c00e26752166",
       "vin": "ZHWUC1ZF3FLA02302",
       "image_url": "https://static.overfuel.com/photos/994/1534077/1LRBVZLVFH7DFZLFRRSW.webp?w=1920&q=80",
       "clean_title": false,
-      "estimated_value": 222683,
+      "estimated_value": 222695,
       "deal_pct": 5.7
     },
     {
@@ -1304,13 +1304,13 @@
       "sale_date": null,
       "posted_at": "2026-07-09",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "51dbd20b7450",
       "vin": "ZHWUT5ZF6NLA20377",
       "image_url": "https://pictures.dealer.com/m/manhattanporsche/0917/00d64ec6e55ac34e48cc7bb633aac9cdx.jpg",
       "clean_title": true,
-      "estimated_value": 322466,
-      "deal_pct": -11.6
+      "estimated_value": 322385,
+      "deal_pct": -11.7
     },
     {
       "year": 2015,
@@ -1325,12 +1325,12 @@
       "sale_date": null,
       "posted_at": "2026-08-18",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "7977558bbc01",
       "vin": "ZHWUC1ZF6FLA02603",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/012912/d42f2f278bac4c74bf94b8f313b98ddc/b27fd8f9d0_800.jpg",
       "clean_title": true,
-      "estimated_value": 202307,
+      "estimated_value": 202270,
       "deal_pct": 1.2
     },
     {
@@ -1346,12 +1346,12 @@
       "sale_date": null,
       "posted_at": "2026-08-14",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "3ec3b5a61842",
       "vin": "ZHWUT4ZF0LLA14310",
       "image_url": "https://imagescf.dealercenter.net/1024/768/202607-e51cd64285f54228ba5dee2dcc28f11a.jpg",
       "clean_title": false,
-      "estimated_value": 287105,
+      "estimated_value": 287280,
       "deal_pct": -6.5
     },
     {
@@ -1367,13 +1367,13 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "8e2db38a14c7",
       "vin": "ZHWUC2ZF5JLA10402",
       "image_url": "https://pictures.dealer.com/s/siennacollectiondms/1812/ca708e888f3946ebe65f420e700091d9x.jpg",
       "clean_title": false,
-      "estimated_value": 263722,
-      "deal_pct": -10.0
+      "estimated_value": 263394,
+      "deal_pct": -10.1
     },
     {
       "year": 2023,
@@ -1388,12 +1388,12 @@
       "sale_date": null,
       "posted_at": "2026-08-13",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "ce3df10dd6b1",
       "vin": "ZHWUB6ZF4PLA24956",
       "image_url": "https://www.lamborghinihouston.com/static/dealer-12175/lamborghini.png",
       "clean_title": false,
-      "estimated_value": 372278,
+      "estimated_value": 372271,
       "deal_pct": 4.6
     },
     {
@@ -1409,13 +1409,13 @@
       "sale_date": null,
       "posted_at": "2026-08-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "d9b6e5e00314",
       "vin": "ZHWUF5ZF1PLA23472",
       "image_url": "https://www.lamborghinihouston.com/static/dealer-12175/lamborghini.png",
       "clean_title": false,
-      "estimated_value": 339895,
-      "deal_pct": -1.5
+      "estimated_value": 339660,
+      "deal_pct": -1.6
     },
     {
       "year": 2021,
@@ -1430,12 +1430,12 @@
       "sale_date": null,
       "posted_at": "2026-08-16",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "bdadb5a8b315",
       "vin": "ZHWUT5ZF1MLA16977",
       "image_url": "https://www.lamborghinihouston.com/inventoryphotos/3232/zhwut5zf1mla16977/ip/1.jpg",
       "clean_title": false,
-      "estimated_value": 286948,
+      "estimated_value": 286958,
       "deal_pct": -1.1
     },
     {
@@ -1451,12 +1451,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "68dff1aec170",
       "vin": "ZHWUA6ZX1NLA18251",
       "image_url": "https://pictures.dealer.com/s/siennacollectiondms/0308/a0d2a1d119c3e06433e84266fd93cd1ex.jpg",
       "clean_title": false,
-      "estimated_value": 472198,
+      "estimated_value": 472204,
       "deal_pct": 4.2
     },
     {
@@ -1472,12 +1472,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "091f53ca03c1",
       "vin": "ZHWUF5ZF7NLA20864",
       "image_url": "https://pictures.dealer.com/s/siennacollectiondms/1146/d7c8e6175e708d78909bed45524aa255x.jpg",
       "clean_title": false,
-      "estimated_value": 329691,
+      "estimated_value": 329627,
       "deal_pct": -0.5
     },
     {
@@ -1493,12 +1493,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "e63344642e44",
       "vin": "ZHWUF5ZF3NLA18691",
       "image_url": "https://pictures.dealer.com/s/siennacollectiondms/1699/ad0cc6e22e07af9330f03ce5c52e0f32x.jpg",
       "clean_title": false,
-      "estimated_value": 326416,
+      "estimated_value": 326345,
       "deal_pct": -4.5
     },
     {
@@ -1514,12 +1514,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "58e9b249388a",
       "vin": "ZHWUB6ZF0PLA24856",
       "image_url": "https://pictures.dealer.com/s/siennacollectiondms/1555/b7ad64bf3dfb94d297bc72a3dde9cf29x.jpg",
       "clean_title": false,
-      "estimated_value": 371075,
+      "estimated_value": 371064,
       "deal_pct": -5.1
     },
     {
@@ -1535,12 +1535,12 @@
       "sale_date": null,
       "posted_at": "2026-06-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "8d4c0fbd6b49",
       "vin": "ZHWUR1ZF0GLA04105",
       "image_url": "https://www.exclusiveautomotivegroup.com/imagetag/4560/main/f/-1787150775.jpg",
       "clean_title": false,
-      "estimated_value": 252890,
+      "estimated_value": 252839,
       "deal_pct": 1.1
     },
     {
@@ -1556,12 +1556,12 @@
       "sale_date": null,
       "posted_at": "2026-08-18",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "84d0179ebd94",
       "vin": "ZHWUC2ZF6GLA04357",
       "image_url": "https://cdn05.carsforsale.com/00a02bf77683d75a944ae1eb1fd1dca376/800x600/2016-lamborghini-huracan-lp-580-2-2dr-coupe.jpg",
       "clean_title": false,
-      "estimated_value": 240686,
+      "estimated_value": 240608,
       "deal_pct": 6.5
     },
     {
@@ -1577,13 +1577,13 @@
       "sale_date": null,
       "posted_at": "2026-07-18",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "155ff5bcf953",
       "vin": "ZHWUC1ZF1FLA02895",
       "image_url": "https://cdn05.carsforsale.com/09000446ca5446e0eb6b4cafaefc0e74/800x600/2015-lamborghini-huracan-lp-610-4-awd-2dr-coupe.jpg",
       "clean_title": false,
-      "estimated_value": 171517,
-      "deal_pct": -4.9
+      "estimated_value": 171415,
+      "deal_pct": -5.0
     },
     {
       "year": 2019,
@@ -1598,13 +1598,13 @@
       "sale_date": null,
       "posted_at": "2026-08-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "4486781cec1e",
       "vin": "ZHWUC2ZF0KLA11393",
       "image_url": "https://cdn05.carsforsale.com/008496e97172bd07ede68d543175d232e9/800x600/2019-lamborghini-huracan-lp-580-2-2dr-coupe.jpg",
       "clean_title": false,
-      "estimated_value": 297090,
-      "deal_pct": 9.1
+      "estimated_value": 296638,
+      "deal_pct": 9.0
     },
     {
       "year": 2021,
@@ -1619,12 +1619,12 @@
       "sale_date": null,
       "posted_at": "2026-04-23",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "a58002ef11a2",
       "vin": "ZHWUF5ZF3MLA17488",
       "image_url": "https://www.fairfaxmotors.com/Content/images/car.jpg",
       "clean_title": false,
-      "estimated_value": 276080,
+      "estimated_value": 276064,
       "deal_pct": 9.5
     },
     {
@@ -1640,13 +1640,13 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "3555a5c11c25",
       "vin": "ZHWUC2ZF7HLA06636",
       "image_url": "https://imagescf.dealercenter.net/1366/1025/202502-e1e8c7423e474dcd8d92f1786f8be9c9/202608-5a8b7976155649d49d7271a24b1c37c8.jpg",
       "clean_title": false,
-      "estimated_value": 253331,
-      "deal_pct": 5.7
+      "estimated_value": 253136,
+      "deal_pct": 5.6
     },
     {
       "year": 2018,
@@ -1661,13 +1661,13 @@
       "sale_date": null,
       "posted_at": "2026-08-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "68e31e4fcd78",
       "vin": "ZHWUR2ZFXJLA09650",
       "image_url": "https://imagescf.dealercenter.net/1366/1025/202502-e1e8c7423e474dcd8d92f1786f8be9c9/202607-d565c943499949cd8c65d1e8fcf8703c.jpg",
       "clean_title": false,
-      "estimated_value": 220612,
-      "deal_pct": 11.6
+      "estimated_value": 220240,
+      "deal_pct": 11.5
     },
     {
       "year": 2022,
@@ -1682,13 +1682,13 @@
       "sale_date": null,
       "posted_at": "2026-08-16",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "71351138d5a0",
       "vin": "ZHWUF5ZF4NLA18909",
       "image_url": "https://imagescf.dealercenter.net/1024/768/202608-f5fa151a05094309bcc20ad6190d9836.jpg",
       "clean_title": false,
-      "estimated_value": 320487,
-      "deal_pct": 15.8
+      "estimated_value": 320403,
+      "deal_pct": 15.7
     },
     {
       "year": 2015,
@@ -1703,12 +1703,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "5430a3659f0c",
       "vin": "ZHWUC1ZF9FLA02806",
       "image_url": "https://s3-public-media.bentleyindianapolis.com/wp-content/uploads/vehicles/A02806F/full-photo-view/KP101070.webp",
       "clean_title": false,
-      "estimated_value": 191091,
+      "estimated_value": 191030,
       "deal_pct": -9.9
     },
     {
@@ -1724,12 +1724,12 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "63f3f5c3fcb8",
       "vin": "ZHWUC2ZF2GLA04131",
       "image_url": "https://s3-public-media.bentleyindianapolis.com/wp-content/uploads/vehicles/GLA04131/full-photo-view/IMG_5967.png",
       "clean_title": true,
-      "estimated_value": 236332,
+      "estimated_value": 236245,
       "deal_pct": 9.0
     },
     {
@@ -1745,13 +1745,13 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "4192f2e19ff5",
       "vin": "ZHWUR2ZF8HLA06806",
       "image_url": "https://s3-public-media.bentleyindianapolis.com/wp-content/uploads/vehicles/A06806F/full-photo-view/KP108364.webp",
       "clean_title": false,
-      "estimated_value": 239017,
-      "deal_pct": 5.9
+      "estimated_value": 238799,
+      "deal_pct": 5.8
     },
     {
       "year": 2015,
@@ -1766,12 +1766,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "3f232043d879",
       "vin": "ZHWUC1ZF6FLA02097",
       "image_url": "https://s3-public-media.bentleyindianapolis.com/wp-content/uploads/vehicles/A02097F/full-photo-view/KP105729.webp",
       "clean_title": true,
-      "estimated_value": 226955,
+      "estimated_value": 226978,
       "deal_pct": -3.5
     },
     {
@@ -1787,12 +1787,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "4d4c17e1f2cc",
       "vin": "ZHWUR2ZF9HLA06488",
       "image_url": "https://s3-public-media.bentleyindianapolis.com/wp-content/uploads/vehicles/A06488F/full-photo-view/KP109204.webp",
       "clean_title": false,
-      "estimated_value": 245551,
+      "estimated_value": 245343,
       "deal_pct": 6.3
     },
     {
@@ -1808,13 +1808,13 @@
       "sale_date": null,
       "posted_at": "2026-07-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:38Z",
       "id": "c3bdce4caf57",
       "vin": "ZHWUR1ZFXHLA06283",
       "image_url": "https://static.overfuel.com/photos/503/1801445/b86b1329-f435-4849-a0fc-98a772a351aa.webp?w=1920&q=80",
       "clean_title": false,
-      "estimated_value": 252928,
-      "deal_pct": 3.9
+      "estimated_value": 252732,
+      "deal_pct": 3.8
     },
     {
       "year": 2020,
@@ -1829,13 +1829,13 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "563da7ff2957",
       "vin": "ZHWUT5ZF2LLA15450",
       "image_url": "https://s3-public-media.bentleyindianapolis.com/wp-content/uploads/vehicles/A15450F/full-photo-view/KP107370.avif",
       "clean_title": true,
-      "estimated_value": 297313,
-      "deal_pct": 3.1
+      "estimated_value": 297520,
+      "deal_pct": 3.2
     },
     {
       "year": 2021,
@@ -1850,12 +1850,12 @@
       "sale_date": null,
       "posted_at": "2026-08-03",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "412cc3c7d4a4",
       "vin": "ZHWUT5ZF8MLA15924",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/stock_images/2/32856.jpg",
       "clean_title": null,
-      "estimated_value": 283157,
+      "estimated_value": 283158,
       "deal_pct": -0.6
     },
     {
@@ -1871,12 +1871,12 @@
       "sale_date": null,
       "posted_at": "2026-06-10",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "807601812ce9",
       "vin": "ZHWUT5ZF2MLA16597",
       "image_url": "https://i0.wp.com/cars805.com/wp-content/uploads/2024/06/2021-lamborghini-huracan-evo-spyder.webp",
       "clean_title": false,
-      "estimated_value": 301585,
+      "estimated_value": 301633,
       "deal_pct": 13.8
     },
     {
@@ -1892,13 +1892,13 @@
       "sale_date": null,
       "posted_at": "2026-07-14",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "630cbd3683f1",
       "vin": "ZHWUC2ZFXJLA10718",
       "image_url": "http://cdn-ds.com/stock/2018-Lamborghini-Huracan-LP580-2-Paramus-NJ/seo/VAMP23235LAMBOPARAMUS-ZHWUC2ZFXJLA10718/sz_1/086ee773cc875522381bd0d08eec4c60.jpg",
       "clean_title": false,
-      "estimated_value": 268634,
-      "deal_pct": 7.0
+      "estimated_value": 268313,
+      "deal_pct": 6.9
     },
     {
       "year": 2023,
@@ -1913,12 +1913,12 @@
       "sale_date": null,
       "posted_at": "2026-06-10",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "a927f3e16fe4",
       "vin": "ZHWUA6ZX6PLA24257",
       "image_url": "https://i0.wp.com/cars805.com/wp-content/uploads/2024/06/Screenshot-2024-06-18-132220.png",
       "clean_title": false,
-      "estimated_value": 515394,
+      "estimated_value": 515217,
       "deal_pct": 19.5
     },
     {
@@ -1934,13 +1934,13 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "43d2d445008a",
       "vin": "ZHWUR2ZF3JLA10980",
       "image_url": "https://images.dealer.com/unavailable_stockphoto.png",
       "clean_title": true,
-      "estimated_value": 244759,
-      "deal_pct": 5.8
+      "estimated_value": 244410,
+      "deal_pct": 5.7
     },
     {
       "year": 2020,
@@ -1955,13 +1955,13 @@
       "sale_date": null,
       "posted_at": "2026-08-24",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "621805a942fb",
       "vin": "ZHWUF4ZF7LLA15199",
       "image_url": "https://vehicle-images.carscommerce.inc/c8b0-110005754/ZHWUF4ZF7LLA15199/1b13b1eeab74b8d89664b6cd91ea2f05.webp",
       "clean_title": false,
-      "estimated_value": 276957,
-      "deal_pct": -4.9
+      "estimated_value": 277101,
+      "deal_pct": -4.8
     },
     {
       "year": 2022,
@@ -1976,13 +1976,13 @@
       "sale_date": null,
       "posted_at": "2026-08-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "2e5cc608445b",
       "vin": "ZHWUF5ZF1NLA18110",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/25327/24232115/639232685075293592.jpg",
       "clean_title": false,
-      "estimated_value": 314345,
-      "deal_pct": 4.6
+      "estimated_value": 314247,
+      "deal_pct": 4.5
     },
     {
       "year": 2019,
@@ -1997,13 +1997,13 @@
       "sale_date": null,
       "posted_at": "2026-08-19",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "6286e382de4f",
       "vin": "ZHWUR2ZFXKLA12131",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/25327/24193776/639224171245163439.jpg",
       "clean_title": false,
-      "estimated_value": 232397,
-      "deal_pct": 1.0
+      "estimated_value": 231902,
+      "deal_pct": 0.8
     },
     {
       "year": 2015,
@@ -2018,13 +2018,13 @@
       "sale_date": null,
       "posted_at": "2026-08-31",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "5c5bca9fb970",
       "vin": "ZHWUC1ZF7FLA00679",
       "image_url": "https://imagescf.dealercenter.net/1116/836/202607-7ed2bc0a24aa4ed99a354b835b0b191b.jpg",
       "clean_title": false,
-      "estimated_value": 239985,
-      "deal_pct": -6.3
+      "estimated_value": 240043,
+      "deal_pct": -6.2
     },
     {
       "year": 2019,
@@ -2039,13 +2039,13 @@
       "sale_date": null,
       "posted_at": "2026-08-12",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "72260ecac15c",
       "vin": "ZHWUR2ZF3KLA11516",
       "image_url": "http://images.dealersync.com/3196/Photos/1511719/wm_f741b54d5a024cf7803294db592dd664_1511719.jpg?_=06a126daab22c6b2bae4ac6258ae32449f2aae2b",
       "clean_title": false,
-      "estimated_value": 262728,
-      "deal_pct": 10.6
+      "estimated_value": 262249,
+      "deal_pct": 10.4
     },
     {
       "year": 2023,
@@ -2060,12 +2060,12 @@
       "sale_date": null,
       "posted_at": "2026-08-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "c3dd3d3ab0e6",
       "vin": "ZHWUB6ZF8PLA22417",
       "image_url": "https://cdn.inventoryrsc.com/540166989_6a6bf2743753df857023e853.jpg",
       "clean_title": false,
-      "estimated_value": 381167,
+      "estimated_value": 381182,
       "deal_pct": -4.9
     },
     {
@@ -2081,13 +2081,13 @@
       "sale_date": null,
       "posted_at": "2026-08-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "82e81bd0cfab",
       "vin": "ZHWUR2ZF4HLA08357",
       "image_url": "https://cdn.inventoryrsc.com/546611675_6a9236f1122f48dc295728a2.jpg",
       "clean_title": false,
-      "estimated_value": 244401,
-      "deal_pct": 5.9
+      "estimated_value": 244191,
+      "deal_pct": 5.8
     },
     {
       "year": 2016,
@@ -2102,12 +2102,12 @@
       "sale_date": null,
       "posted_at": "2026-08-07",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "4cf88d2be023",
       "vin": "ZHWUC2ZF0GLA04774",
       "image_url": "https://pictures.dealer.com/o/ogaracoachcompanywestlakevillage/0676/1c45113cbaee8804ef4ce42c02022786x.jpg",
       "clean_title": false,
-      "estimated_value": 252955,
+      "estimated_value": 252904,
       "deal_pct": -0.9
     },
     {
@@ -2123,12 +2123,12 @@
       "sale_date": null,
       "posted_at": "2026-08-25",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "5a04b473a76f",
       "vin": "ZHWUR1ZF8GLA05129",
       "image_url": "https://kearnsstatic.azureedge.net/photos/134284503567622567-zhwur1zf8gla05129.jpg.webp",
       "clean_title": true,
-      "estimated_value": 247978,
+      "estimated_value": 247916,
       "deal_pct": -0.4
     },
     {
@@ -2144,13 +2144,13 @@
       "sale_date": null,
       "posted_at": "2026-08-18",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "853e2d0162e1",
       "vin": "ZHWUC1ZF9HLA07684",
       "image_url": "https://images.app.ridemotive.com/lpie5671eq7hhxq19778kpecerp5",
       "clean_title": true,
-      "estimated_value": 255845,
-      "deal_pct": -9.4
+      "estimated_value": 255654,
+      "deal_pct": -9.5
     },
     {
       "year": 2023,
@@ -2165,12 +2165,12 @@
       "sale_date": null,
       "posted_at": "2026-08-13",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "0298a490fe23",
       "vin": "ZHWUB6ZF5PLA22682",
       "image_url": "https://images.app.ridemotive.com/lskitnhp4upgoakkuk3tquvbihiu",
       "clean_title": true,
-      "estimated_value": 365966,
+      "estimated_value": 365943,
       "deal_pct": 1.7
     },
     {
@@ -2186,13 +2186,13 @@
       "sale_date": null,
       "posted_at": "2026-08-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "3a981bcb0955",
       "vin": "ZHWUD4ZF0JLA09098",
       "image_url": "https://images.app.ridemotive.com/68cljdrpbp2tvd8fy6htcxod19jj",
       "clean_title": true,
-      "estimated_value": 396633,
-      "deal_pct": -8.4
+      "estimated_value": 399470,
+      "deal_pct": -7.6
     },
     {
       "year": 2016,
@@ -2207,12 +2207,12 @@
       "sale_date": null,
       "posted_at": "2026-08-04",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "b7242fbff46e",
       "vin": "ZHWUC2ZF7GLA03928",
       "image_url": "https://www.charlottemclaren.com/imagetag/2248/main/l/Used-2016-Lamborghini-Huracan-LP-580-2.jpg",
       "clean_title": false,
-      "estimated_value": 214790,
+      "estimated_value": 214659,
       "deal_pct": 2.2
     },
     {
@@ -2228,12 +2228,12 @@
       "sale_date": null,
       "posted_at": "2026-08-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "6139f4167b3c",
       "vin": "ZHWUF5ZF5NLA20765",
       "image_url": "http://cdn-ds.com/stock/2022-Lamborghini-Huracan-EVO-RWD-West-Palm-Beach-FL/seo/ECL9929-ZHWUF5ZF5NLA20765/sz_418955/9450047a9c815756eb3edf1b54331d92.jpg",
       "clean_title": false,
-      "estimated_value": 327712,
+      "estimated_value": 327643,
       "deal_pct": -1.3
     },
     {
@@ -2249,13 +2249,13 @@
       "sale_date": null,
       "posted_at": "2026-08-09",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "bbd631b04a5b",
       "vin": "ZHWUC2ZF5KLA11390",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/26778/23169121/639198631645235080.jpg",
       "clean_title": false,
-      "estimated_value": 278282,
-      "deal_pct": 10.5
+      "estimated_value": 277814,
+      "deal_pct": 10.4
     },
     {
       "year": 2020,
@@ -2270,13 +2270,13 @@
       "sale_date": null,
       "posted_at": "2026-07-15",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "cc554b423257",
       "vin": "ZHWUF5ZFXLLA14943",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/e56f1c0b5fd9429086efbaffdb465241/d0918ec0b7_1280.jpg",
       "clean_title": null,
-      "estimated_value": 284621,
-      "deal_pct": 1.6
+      "estimated_value": 284789,
+      "deal_pct": 1.7
     },
     {
       "year": 2020,
@@ -2291,12 +2291,12 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "646dcd4a3fb8",
       "vin": "ZHWUT4ZF6LLA14134",
       "image_url": "https://www.charlottemclaren.com/imagetag/5068/main/l/Used-2020-Lamborghini-Huracan-EVO-Spyder.jpg",
       "clean_title": false,
-      "estimated_value": 241262,
+      "estimated_value": 241305,
       "deal_pct": 0.5
     },
     {
@@ -2312,12 +2312,12 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "dc1b6d763525",
       "vin": "ZHWUT5ZF1NLA20738",
       "image_url": "https://www.charlottemclaren.com/imagetag/5000/main/l/Used-2022-Lamborghini-Huracan-EVO-Spyder.jpg",
       "clean_title": false,
-      "estimated_value": 283347,
+      "estimated_value": 283186,
       "deal_pct": 8.2
     },
     {
@@ -2333,13 +2333,13 @@
       "sale_date": null,
       "posted_at": "2026-08-11",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "2364d200370e",
       "vin": "ZHWUF5ZF5LLA15045",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/8d549f19a93c4df3ac1c727dc19bee4f/4a4983c137_1280.jpg",
       "clean_title": null,
-      "estimated_value": 300268,
-      "deal_pct": 0.1
+      "estimated_value": 300484,
+      "deal_pct": 0.2
     },
     {
       "year": 2015,
@@ -2354,12 +2354,12 @@
       "sale_date": null,
       "posted_at": "2026-08-11",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "cfb06a4a1504",
       "vin": "ZHWUC1ZF4FLA03121",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/0a71ac6193ec45d989c95ec04e9d7be9/c5282164aa_1280.jpg",
       "clean_title": null,
-      "estimated_value": 212783,
+      "estimated_value": 212771,
       "deal_pct": 1.3
     },
     {
@@ -2375,13 +2375,13 @@
       "sale_date": null,
       "posted_at": "2026-07-30",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "3c2a3e534237",
       "vin": "ZHWUF5ZF2NLA20979",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/0cd052a563934480bf042fc86f336eb7/b3360bf223_1280.jpg",
       "clean_title": null,
-      "estimated_value": 321235,
-      "deal_pct": -2.7
+      "estimated_value": 321152,
+      "deal_pct": -2.8
     },
     {
       "year": 2016,
@@ -2396,12 +2396,12 @@
       "sale_date": null,
       "posted_at": "2026-08-11",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "cd68a0d2ad04",
       "vin": "ZHWUC1ZF4GLA04237",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/6e5e8012ea754ee5b65908792a8bf34a/afbdd5132a_1280.jpg",
       "clean_title": null,
-      "estimated_value": 242903,
+      "estimated_value": 242829,
       "deal_pct": -0.9
     },
     {
@@ -2417,12 +2417,12 @@
       "sale_date": null,
       "posted_at": "2026-08-07",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "c8295711cf65",
       "vin": "ZHWUF5ZF4MLA16057",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/923e3b0c3db34746a68ce96f375cd12e/a7915a7123_1280.jpg",
       "clean_title": null,
-      "estimated_value": 282574,
+      "estimated_value": 282573,
       "deal_pct": 8.0
     },
     {
@@ -2438,12 +2438,12 @@
       "sale_date": null,
       "posted_at": "2026-07-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "de4cdd608837",
       "vin": "ZHWUF5ZF9MLA16975",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/28cc6665d09c45e6b722a85a14aa0d03/3fc33cf715_1280.jpg",
       "clean_title": null,
-      "estimated_value": 291188,
+      "estimated_value": 291209,
       "deal_pct": 9.0
     },
     {
@@ -2459,12 +2459,12 @@
       "sale_date": null,
       "posted_at": "2026-08-06",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "707e60ba2a46",
       "vin": "ZHWUF5ZF5MLA16214",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/777ecd6c00da4dbaa16820dbbcdf170f/7b285dadf6_1280.jpg",
       "clean_title": null,
-      "estimated_value": 314985,
+      "estimated_value": 315068,
       "deal_pct": -7.9
     },
     {
@@ -2480,13 +2480,13 @@
       "sale_date": null,
       "posted_at": "2026-08-06",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "c0fc9f23f73b",
       "vin": "ZHWUT5ZFXNLA18695",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/911986563e8f459fa22f3d5fad8f08a2/07b2acabce_1280.jpg",
       "clean_title": null,
-      "estimated_value": 328433,
-      "deal_pct": -5.0
+      "estimated_value": 328366,
+      "deal_pct": -5.1
     },
     {
       "year": 2020,
@@ -2501,12 +2501,12 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "8cc02124ea57",
       "vin": "ZHWUT5ZFXLLA15180",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/1653465683a84c82950b1ea8a0f71692/1831d9aa37_640.jpg",
       "clean_title": null,
-      "estimated_value": 230069,
+      "estimated_value": 230083,
       "deal_pct": -4.3
     },
     {
@@ -2522,12 +2522,12 @@
       "sale_date": null,
       "posted_at": "2026-08-11",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "b56bb3d6950e",
       "vin": "ZHWUT5ZF9MLA17066",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/44dd5b4d733c4245b16988fd8b2349bb/2f4545b2bc_1280.jpg",
       "clean_title": null,
-      "estimated_value": 263156,
+      "estimated_value": 263109,
       "deal_pct": 8.8
     },
     {
@@ -2543,13 +2543,13 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "3f6517e59e9c",
       "vin": "ZHWUT4ZF0LLA12735",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/b6ee7df281654572ba1cfe2d1ceb954a/41eb49c4a1_1280.jpg",
       "clean_title": null,
-      "estimated_value": 278633,
-      "deal_pct": 3.1
+      "estimated_value": 278783,
+      "deal_pct": 3.2
     },
     {
       "year": 2020,
@@ -2564,12 +2564,12 @@
       "sale_date": null,
       "posted_at": "2026-08-30",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "95ca08672964",
       "vin": "ZHWUT4ZFXLLA14007",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/042615/f4f12cca76814b0eb7be8ae22a894a0e/370371a6e4_1280.jpg",
       "clean_title": null,
-      "estimated_value": 282253,
+      "estimated_value": 282413,
       "deal_pct": -2.7
     },
     {
@@ -2585,13 +2585,13 @@
       "sale_date": null,
       "posted_at": "2026-05-21",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "7b0d7478fb61",
       "vin": "ZHWUC2ZF7HLA07026",
       "image_url": "https://imagescf.dealercenter.net/1920/1080/202410-bf1b5261a6c648958ebd8b170ec196ad/202605-637be2a255a44df29f27fec6e22ae1d6.jpg",
       "clean_title": false,
-      "estimated_value": 270033,
-      "deal_pct": 20.4
+      "estimated_value": 269868,
+      "deal_pct": 20.3
     },
     {
       "year": 2021,
@@ -2606,12 +2606,12 @@
       "sale_date": null,
       "posted_at": "2026-08-12",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "daf5f74120d0",
       "vin": "ZHWUT5ZF2MLA16518",
       "image_url": "https://www.westcoastexoticcars.com/imagetag/2893/main/l/Used-2021-Lamborghini-Huracan-EVO-1784067120.jpg",
       "clean_title": false,
-      "estimated_value": 311007,
+      "estimated_value": 311079,
       "deal_pct": 6.8
     },
     {
@@ -2627,13 +2627,13 @@
       "sale_date": null,
       "posted_at": "2026-08-22",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "2134039bae90",
       "vin": "ZHWUC2ZF4HLA08103",
       "image_url": "https://www.westcoastexoticcars.com/imagetag/2950/main/l/Used-2017-Lamborghini-Huracan-LP580-2-1787935280.jpg",
       "clean_title": false,
-      "estimated_value": 257189,
-      "deal_pct": 10.6
+      "estimated_value": 257001,
+      "deal_pct": 10.5
     },
     {
       "year": 2021,
@@ -2648,13 +2648,13 @@
       "sale_date": null,
       "posted_at": "2026-08-19",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "26748652310f",
       "vin": "ZHWUA6ZX3MLA17567",
       "image_url": "https://www.westcoastexoticcars.com/imagetag/2936/main/l/Used-2021-Lamborghini-Huracan-STO-1787939881.jpg",
       "clean_title": false,
-      "estimated_value": 472571,
-      "deal_pct": 1.7
+      "estimated_value": 472848,
+      "deal_pct": 1.8
     },
     {
       "year": 2022,
@@ -2669,12 +2669,12 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "d8d3c02803f4",
       "vin": "ZHWUT5ZF5NLA19284",
       "image_url": "https://static.overfuel.com/photos/671/1736521/77132e37-ac42-4082-b676-d82c7f45bead.webp?w=1920&q=80",
       "clean_title": false,
-      "estimated_value": 283330,
+      "estimated_value": 283169,
       "deal_pct": 4.0
     },
     {
@@ -2690,13 +2690,13 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "5a0e7935e3b8",
       "vin": "ZHWUC1ZF0GLA04008",
       "image_url": "",
       "clean_title": false,
-      "estimated_value": 233417,
-      "deal_pct": -0.2
+      "estimated_value": 233324,
+      "deal_pct": -0.3
     },
     {
       "year": 2015,
@@ -2711,12 +2711,12 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "cd727e4a7864",
       "vin": "ZHWUC1ZF4FLA03183",
       "image_url": "https://static.overfuel.com/photos/671/1844208/51d7365a-6385-4c9d-b9a7-2536e206fa22.webp?w=1920&q=80",
       "clean_title": false,
-      "estimated_value": 208488,
+      "estimated_value": 208465,
       "deal_pct": -4.8
     },
     {
@@ -2732,12 +2732,12 @@
       "sale_date": null,
       "posted_at": "2026-08-21",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "1e9274daffbc",
       "vin": "ZHWUB6ZF3PLA22714",
       "image_url": "https://cdn-img.vincue.net/image/opt-dealerid210046-photoid2641360221-ovvl_406078_topbottom-16CSZ-ltid2/2641360221.jpg",
       "clean_title": null,
-      "estimated_value": 380484,
+      "estimated_value": 380496,
       "deal_pct": 3.9
     },
     {
@@ -2753,13 +2753,13 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "87433603ec92",
       "vin": "ZHWUT4ZFXLLA13908",
       "image_url": "https://www.charlottemclaren.com/imagetag/5098/main/l/Used-2020-Lamborghini-Huracan-EVO-Spyder.jpg",
       "clean_title": false,
-      "estimated_value": 295877,
-      "deal_pct": -25.1
+      "estimated_value": 296079,
+      "deal_pct": -25.0
     },
     {
       "year": 2021,
@@ -2774,12 +2774,12 @@
       "sale_date": null,
       "posted_at": "2026-08-14",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "6a692c220482",
       "vin": "ZHWUT5ZF0MLA17487",
       "image_url": "https://vehicle-images.carscommerce.inc/1a73-110005267/ZHWUT5ZF0MLA17487/79bd811765836b3e50d4a02e335eb6fa.jpg",
       "clean_title": false,
-      "estimated_value": 303592,
+      "estimated_value": 303645,
       "deal_pct": -2.1
     },
     {
@@ -2795,13 +2795,13 @@
       "sale_date": null,
       "posted_at": "2026-08-09",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "3db70e48c780",
       "vin": "ZHWUR2ZFXKLA11349",
       "image_url": "https://vehicle-images.carscommerce.inc/dd80-11000909/ZHWUR2ZFXKLA11349/32ae43e7cb254f498b14ae62ed00eeba.jpg",
       "clean_title": false,
-      "estimated_value": 247715,
-      "deal_pct": 4.0
+      "estimated_value": 247227,
+      "deal_pct": 3.8
     },
     {
       "year": 2023,
@@ -2816,12 +2816,12 @@
       "sale_date": null,
       "posted_at": "2026-08-15",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "611012a6e371",
       "vin": "ZHWUB6ZF4PLA23998",
       "image_url": "https://vehicle-images.carscommerce.inc/d93f-11000909/ZHWUB6ZF4PLA23998/4800ee2f0d416a985539c9ac7759b894.jpg",
       "clean_title": false,
-      "estimated_value": 364476,
+      "estimated_value": 364449,
       "deal_pct": 4.0
     },
     {
@@ -2837,13 +2837,13 @@
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "a8748deec7fe",
       "vin": "ZHWUG7ZF8PLA23767",
       "image_url": "https://vehicle-images.carscommerce.inc/e2a2-11000909/ZHWUG7ZF8PLA23767/2ad9ce58ad9c40a2fc07ce751fb88d3e.jpg",
       "clean_title": false,
-      "estimated_value": 324531,
-      "deal_pct": -13.4
+      "estimated_value": 323367,
+      "deal_pct": -13.8
     },
     {
       "year": 2023,
@@ -2858,12 +2858,12 @@
       "sale_date": null,
       "posted_at": "2026-08-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "278beb9d3c5e",
       "vin": "ZHWUB6ZF7PLA22215",
       "image_url": "https://vehicle-images.carscommerce.inc/aaa7-11000909/ZHWUB6ZF7PLA22215/cea0591b622531b658af1a487a1738c6.jpg",
       "clean_title": false,
-      "estimated_value": 377379,
+      "estimated_value": 377384,
       "deal_pct": 10.2
     },
     {
@@ -2879,13 +2879,13 @@
       "sale_date": null,
       "posted_at": "2026-08-09",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "3541ce280b89",
       "vin": "ZHWUC2ZF8JLA09437",
       "image_url": "https://vehicle-images.carscommerce.inc/36a1-11000909/ZHWUC2ZF8JLA09437/4204e23c85360212bf7f507401296f70.jpg",
       "clean_title": false,
-      "estimated_value": 253371,
-      "deal_pct": 5.3
+      "estimated_value": 253031,
+      "deal_pct": 5.2
     },
     {
       "year": 2018,
@@ -2900,13 +2900,13 @@
       "sale_date": null,
       "posted_at": "2026-08-21",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "03441bb5c277",
       "vin": "ZHWUC2ZF6JLA10750",
       "image_url": "https://vehicle-images.carscommerce.inc/9022-11000909/ZHWUC2ZF6JLA10750/5f9cd2b7eaac97f5e57649dbf84a961c.jpg",
       "clean_title": false,
-      "estimated_value": 260244,
-      "deal_pct": 10.2
+      "estimated_value": 259912,
+      "deal_pct": 10.1
     },
     {
       "year": 2017,
@@ -2921,13 +2921,13 @@
       "sale_date": null,
       "posted_at": "2026-08-21",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "9efde93d87b6",
       "vin": "ZHWUR2ZF3HLA08141",
       "image_url": "https://vehicle-images.carscommerce.inc/e2ca-11000909/ZHWUR2ZF3HLA08141/eda8d2002e0bf71a7483c70ac83b2ab7.jpg",
       "clean_title": false,
-      "estimated_value": 248651,
-      "deal_pct": 7.5
+      "estimated_value": 248448,
+      "deal_pct": 7.4
     },
     {
       "year": 2018,
@@ -2942,13 +2942,13 @@
       "sale_date": null,
       "posted_at": "2026-08-21",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "1f73664b8c3a",
       "vin": "ZHWUR2ZF7JLA08911",
       "image_url": "https://vehicle-images.carscommerce.inc/350d-11000909/ZHWUR2ZF7JLA08911/75ea6e794213f851dda37dbd52072c36.jpg",
       "clean_title": false,
-      "estimated_value": 247395,
-      "deal_pct": 7.4
+      "estimated_value": 247049,
+      "deal_pct": 7.3
     },
     {
       "year": 2016,
@@ -2963,12 +2963,12 @@
       "sale_date": null,
       "posted_at": "2026-08-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "750d03c2788d",
       "vin": "ZHWUC2ZF6GLA04004",
       "image_url": "https://vehicle-images.carscommerce.inc/845b-11000909/ZHWUC2ZF6GLA04004/0a1d912662c226d67f3a333d5cb383b0.jpg",
       "clean_title": false,
-      "estimated_value": 233067,
+      "estimated_value": 232973,
       "deal_pct": 5.6
     },
     {
@@ -2984,13 +2984,13 @@
       "sale_date": null,
       "posted_at": "2026-08-31",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "30fa937ed722",
       "vin": "ZHWUF5ZF2LLA14435",
       "image_url": "https://www.performanceluxurysport.com/inventoryphotos/14634/zhwuf5zf2lla14435/ip/1.jpg",
       "clean_title": false,
-      "estimated_value": 295778,
-      "deal_pct": -0.2
+      "estimated_value": 295980,
+      "deal_pct": -0.1
     },
     {
       "year": 2019,
@@ -3005,13 +3005,13 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "7646f494282b",
       "vin": "ZHWUS4ZF2KLA11507",
       "image_url": "https://www.performanceluxurysport.com/inventoryphotos/14634/zhwus4zf2kla11507/ip/1.jpg",
       "clean_title": false,
-      "estimated_value": 392291,
-      "deal_pct": -2.7
+      "estimated_value": 394861,
+      "deal_pct": -2.1
     },
     {
       "year": 2015,
@@ -3026,12 +3026,12 @@
       "sale_date": null,
       "posted_at": "2026-08-31",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "bf4611fceb4c",
       "vin": "ZHWUC1ZF6FLA03086",
       "image_url": "https://vtpimages.audi.com/carimg2/7769/4647847769.jpg?im=Resize,width=640,height=480",
       "clean_title": false,
-      "estimated_value": 242545,
+      "estimated_value": 242609,
       "deal_pct": -1.2
     },
     {
@@ -3047,12 +3047,12 @@
       "sale_date": null,
       "posted_at": "2026-08-08",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "fb3e291aa4c8",
       "vin": "ZHWUC1ZF3FLA01070",
       "image_url": "https://static.overfuel.com/photos/491/1768736/2de76892-8039-4068-854d-3e7ae090c455.webp?w=1920&q=80",
       "clean_title": false,
-      "estimated_value": 188397,
+      "estimated_value": 188329,
       "deal_pct": -7.9
     },
     {
@@ -3068,12 +3068,12 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "0f0afb4e645a",
       "vin": "ZHWUC1ZF0FLA03066",
       "image_url": "https://pictures.dealer.com/k/ksacurakearnymesaadw/0033/81a76ade4441986d5533c34922d9f9aax.jpg",
       "clean_title": false,
-      "estimated_value": 239603,
+      "estimated_value": 239659,
       "deal_pct": -4.3
     },
     {
@@ -3089,13 +3089,13 @@
       "sale_date": null,
       "posted_at": "2026-08-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "e11e0f96e1a4",
       "vin": "ZHWUT5ZF6MLA17283",
       "image_url": "https://pictures.dealer.com/m/mbboston/0038/369e88994a460c95c613bca3dd6b3562x.jpg",
       "clean_title": false,
-      "estimated_value": 316962,
-      "deal_pct": 0.1
+      "estimated_value": 317051,
+      "deal_pct": 0.2
     },
     {
       "year": 2015,
@@ -3110,12 +3110,12 @@
       "sale_date": null,
       "posted_at": "2026-08-02",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "c3d72bb902de",
       "vin": "ZHWUC1ZF3FLA02672",
       "image_url": "https://hillsboroautomart.com/service/picture/39821/A02672/198224b819157a1126aa4e1f3c68c8b330b60cc8?",
       "clean_title": false,
-      "estimated_value": 224496,
+      "estimated_value": 224513,
       "deal_pct": 4.2
     },
     {
@@ -3131,13 +3131,13 @@
       "sale_date": null,
       "posted_at": "2026-04-21",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "04e04854770d",
       "vin": "ZHWUT5ZF2PLA21996",
       "image_url": "https://autosportofpalmbeach.com/service/picture/30254/33224/894304938e1c6c26957b247486c2ca5b9d89b2c9?",
       "clean_title": false,
-      "estimated_value": 331752,
-      "deal_pct": -2.2
+      "estimated_value": 331503,
+      "deal_pct": -2.3
     },
     {
       "year": 2021,
@@ -3152,12 +3152,12 @@
       "sale_date": null,
       "posted_at": "2026-08-25",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "0a30145346cf",
       "vin": "ZHWUT5ZF6MLA16554",
       "image_url": "https://images.app.ridemotive.com/ezrd9f6octwyalpt3p8vauueh4hf",
       "clean_title": false,
-      "estimated_value": 298264,
+      "estimated_value": 298303,
       "deal_pct": 4.3
     },
     {
@@ -3173,12 +3173,12 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "019330f048ff",
       "vin": "ZHWUF5ZF7MLA16568",
       "image_url": "https://www.marshallgoldmanoh.com/imagetag/5963/main/f/Used-2021-Lamborghini-Huracan-EVO-RWD-EVOTRIM-Bicolor-Interior-Forged-Carbon-Interior-Package-1787848936.jpg",
       "clean_title": null,
-      "estimated_value": 306588,
+      "estimated_value": 306649,
       "deal_pct": -1.1
     },
     {
@@ -3194,13 +3194,13 @@
       "sale_date": null,
       "posted_at": "2026-08-18",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "ed8f3f2a319f",
       "vin": "ZHWUC2ZF2JLA10471",
       "image_url": "https://www.abzmotors.com/imagetag/3859/main/f/Used-2018-Lamborghini-Huracan-LP580-2-1788149125.jpg",
       "clean_title": true,
-      "estimated_value": 251669,
-      "deal_pct": 6.6
+      "estimated_value": 251327,
+      "deal_pct": 6.5
     },
     {
       "year": 2020,
@@ -3215,12 +3215,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "82b3170ca17f",
       "vin": "ZHWUT5ZFXLLA14921",
       "image_url": "https://pictures.dealer.com/l/lamborghinidenverlittleton/0566/8a5af75a5d9b607455a251d3b8fb4ae8x.jpg",
       "clean_title": false,
-      "estimated_value": 294172,
+      "estimated_value": 294369,
       "deal_pct": 1.3
     },
     {
@@ -3236,12 +3236,12 @@
       "sale_date": null,
       "posted_at": "2026-08-18",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "0e32c8109630",
       "vin": "ZHWUC1ZF1GLA03708",
       "image_url": "https://cdn.dealrimages.com/OO%2F9J%2FLO%2FCVMDU3MABB6RND.jpg?h=2500",
       "clean_title": false,
-      "estimated_value": 264362,
+      "estimated_value": 264338,
       "deal_pct": -9.7
     },
     {
@@ -3257,13 +3257,13 @@
       "sale_date": null,
       "posted_at": "2026-08-21",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "373da2ef8179",
       "vin": "ZHWUA6ZX8PLA25300",
       "image_url": "https://pictures.dealer.com/l/lamborghinidenverlittleton/0484/acf55da1228c3bbc23f9f0607ecdc06ax.jpg",
       "clean_title": false,
-      "estimated_value": 478989,
-      "deal_pct": 6.0
+      "estimated_value": 478737,
+      "deal_pct": 5.9
     },
     {
       "year": 2023,
@@ -3278,12 +3278,12 @@
       "sale_date": null,
       "posted_at": "2026-08-01",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "dd7666cc9b88",
       "vin": "ZHWUB6ZF7PLA25566",
       "image_url": "https://pictures.dealer.com/l/lamborghinidenverlittleton/1968/fbf166bc8455eecb46d292feb5b4f072x.jpg",
       "clean_title": false,
-      "estimated_value": 355904,
+      "estimated_value": 355857,
       "deal_pct": -0.2
     },
     {
@@ -3299,12 +3299,12 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "06f2fc4d4c73",
       "vin": "ZHWUT5ZF4LLA15143",
       "image_url": "https://www.rossocorsagallery.com/workspace/photo/car/sale/1000621/1000621_607211310076982.jpg",
       "clean_title": false,
-      "estimated_value": 241585,
+      "estimated_value": 241629,
       "deal_pct": -6.4
     },
     {
@@ -3320,13 +3320,13 @@
       "sale_date": null,
       "posted_at": "2026-08-28",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "3b8b7e4e212f",
       "vin": "ZHWUD4ZF6JLA08750",
       "image_url": "https://assets.cai-media-management.com/resize/1420x1420/common-vehicle-media/ef18bf7c-419d-421e-bc18-631041fdf50e.jpg",
       "clean_title": false,
-      "estimated_value": 368781,
-      "deal_pct": 8.9
+      "estimated_value": 371352,
+      "deal_pct": 9.5
     },
     {
       "year": 2020,
@@ -3341,13 +3341,13 @@
       "sale_date": null,
       "posted_at": "2026-05-24",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "c3bc6ce47a7d",
       "vin": "ZHWUF4ZF6LLA12701",
       "image_url": "http://cdn.ebizautos.media/used-2020-lamborghini-huracan_evo--14354-22989252-1-640.jpg",
       "clean_title": false,
-      "estimated_value": 301869,
-      "deal_pct": -35.8
+      "estimated_value": 302090,
+      "deal_pct": -35.7
     },
     {
       "year": 2017,
@@ -3362,12 +3362,12 @@
       "sale_date": null,
       "posted_at": "2026-08-20",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "901fa5c7ecab",
       "vin": "ZHWUR2ZF8HLA07793",
       "image_url": "https://www.ilusso.com/imagetag/6331/main/f/Used-2017-Lamborghini-Huracan-LP-580-2-Spyder-1787204794.jpg",
       "clean_title": false,
-      "estimated_value": 261055,
+      "estimated_value": 260873,
       "deal_pct": 8.4
     },
     {
@@ -3383,12 +3383,12 @@
       "sale_date": null,
       "posted_at": "2026-08-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "ef1e76b39dd6",
       "vin": "ZHWUT5ZF6MLA16389",
       "image_url": "https://automanager.blob.core.windows.net/wmphotos/035458/ff8f68bf99c647e0b7ff3e5e3a35886c/1db29fefc1_800.jpg",
       "clean_title": false,
-      "estimated_value": 248126,
+      "estimated_value": 248046,
       "deal_pct": -5.2
     },
     {
@@ -3404,13 +3404,13 @@
       "sale_date": null,
       "posted_at": "2026-08-05",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "2b46dcd2ae13",
       "vin": "ZHWUC2ZF1HLA06194",
       "image_url": "https://www.ilusso.com/imagetag/6271/main/f/Used-2017-Lamborghini-Huracan-LP-580-2-1785854173.jpg",
       "clean_title": false,
-      "estimated_value": 251224,
-      "deal_pct": 2.5
+      "estimated_value": 251025,
+      "deal_pct": 2.4
     },
     {
       "year": 2017,
@@ -3425,13 +3425,13 @@
       "sale_date": null,
       "posted_at": "2026-07-07",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "09814256d46f",
       "vin": "ZHWUR2ZF5HLA07508",
       "image_url": "https://www.ilusso.com/imagetag/6151/main/f/Used-2017-Lamborghini-Huracan-LP-580-2-Spyder-1783359023.jpg",
       "clean_title": false,
-      "estimated_value": 253497,
-      "deal_pct": 5.4
+      "estimated_value": 253302,
+      "deal_pct": 5.3
     },
     {
       "year": 2015,
@@ -3446,12 +3446,12 @@
       "sale_date": null,
       "posted_at": "2026-08-08",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "8b60757e72df",
       "vin": "ZHWUC1ZF0FLA01611",
       "image_url": "https://www.ilusso.com/imagetag/6140/main/f/Used-2015-Lamborghini-Huracan-LP-610-4-1784742064.jpg",
       "clean_title": false,
-      "estimated_value": 212479,
+      "estimated_value": 212466,
       "deal_pct": -18.8
     },
     {
@@ -3467,12 +3467,12 @@
       "sale_date": null,
       "posted_at": "2026-07-29",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "26b34fae7e33",
       "vin": "ZHWUC1ZF3GLA04259",
       "image_url": "https://www.ilusso.com/imagetag/3750/main/f/Used-2016-Lamborghini-Huracan-LP-610-4-1787087199.jpg",
       "clean_title": false,
-      "estimated_value": 232576,
+      "estimated_value": 232480,
       "deal_pct": -2.8
     },
     {
@@ -3488,12 +3488,12 @@
       "sale_date": null,
       "posted_at": "2026-08-02",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "ef0b9fdf9c18",
       "vin": "ZHWUB6ZF5PLA25713",
       "image_url": "http://cdn.ebizautos.media/used-2023-lamborghini-huracan_tecnica-coupe-14354-23033457-1-640.jpg",
       "clean_title": false,
-      "estimated_value": 385189,
+      "estimated_value": 385213,
       "deal_pct": -7.2
     },
     {
@@ -3509,12 +3509,12 @@
       "sale_date": null,
       "posted_at": "2026-07-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "1634a6cd7e48",
       "vin": "ZHWUC1ZF1FLA00743",
       "image_url": "http://cdn.ebizautos.media/used-2015-lamborghini-huracan-2drcoupelp6104-14354-23058615-1-640.jpg",
       "clean_title": false,
-      "estimated_value": 246885,
+      "estimated_value": 246962,
       "deal_pct": -5.3
     },
     {
@@ -3530,12 +3530,12 @@
       "sale_date": null,
       "posted_at": "2026-08-22",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "ba40c3defc17",
       "vin": "ZHWUB6ZF1PLA23067",
       "image_url": "https://www.ilusso.com/imagetag/6342/main/f/Used-2023-Lamborghini-Huracan-Tecnica-1787597731.jpg",
       "clean_title": false,
-      "estimated_value": 382337,
+      "estimated_value": 382354,
       "deal_pct": 4.8
     },
     {
@@ -3551,13 +3551,13 @@
       "sale_date": null,
       "posted_at": "2026-07-10",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "1ebf0d9ff21f",
       "vin": "ZHWUF5ZF9PLA21484",
       "image_url": "https://www.ilusso.com/imagetag/6172/main/f/Used-2023-Lamborghini-Huracan-EVO-RWD-1783714601.jpg",
       "clean_title": false,
-      "estimated_value": 339943,
-      "deal_pct": -5.6
+      "estimated_value": 339709,
+      "deal_pct": -5.7
     },
     {
       "year": 2016,
@@ -3572,12 +3572,12 @@
       "sale_date": null,
       "posted_at": "2026-08-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "d836cf3f049a",
       "vin": "ZHWUR1ZFXGLA05214",
       "image_url": "https://imagescdn.dealercarsearch.com/Media/1483/23963913/639165349163918391.jpg",
       "clean_title": false,
-      "estimated_value": 232026,
+      "estimated_value": 231929,
       "deal_pct": -1.3
     },
     {
@@ -3593,12 +3593,12 @@
       "sale_date": null,
       "posted_at": "2026-08-25",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "3ec6632a619f",
       "vin": "ZHWUR1ZF3GLA05278",
       "image_url": "https://pictures.dealer.com/l/lasolasautohaus/0534/e186b9f269941f08b5cd3bb0f88294b4x.jpg",
       "clean_title": false,
-      "estimated_value": 253516,
+      "estimated_value": 253466,
       "deal_pct": 1.4
     },
     {
@@ -3614,12 +3614,12 @@
       "sale_date": null,
       "posted_at": "2026-08-19",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "0aa1c1e256fd",
       "vin": "ZHWUF5ZF6MLA15962",
       "image_url": "https://cdn.ebizautos.media/used-2021-lamborghini-huracan_evo-couperwd-13549-23024455-5-640.jpg",
       "clean_title": false,
-      "estimated_value": 321096,
+      "estimated_value": 321197,
       "deal_pct": 12.9
     },
     {
@@ -3635,13 +3635,13 @@
       "sale_date": null,
       "posted_at": "2026-07-22",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "e4310f45e629",
       "vin": "ZHWEC1ZF7JLA09010",
       "image_url": "https://imagescf.dealercenter.net/1024/768/202606-6a273f99063449fba41b6c74dca17428.jpg",
       "clean_title": false,
-      "estimated_value": 273131,
-      "deal_pct": 26.8
+      "estimated_value": 272815,
+      "deal_pct": 26.7
     },
     {
       "year": 2016,
@@ -3656,13 +3656,13 @@
       "sale_date": null,
       "posted_at": "2026-08-11",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "5d87d98fd523",
       "vin": "ZHWUR1ZF6GLA04982",
       "image_url": "https://imagescf.dealercenter.net/1920/1080/202608-30041032dae4485bb1afb3f41a6ea497.jpg",
       "clean_title": false,
-      "estimated_value": 217757,
-      "deal_pct": 3.6
+      "estimated_value": 217633,
+      "deal_pct": 3.5
     },
     {
       "year": 2023,
@@ -3677,13 +3677,13 @@
       "sale_date": null,
       "posted_at": "2026-08-08",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "f5e2c548c0a9",
       "vin": "ZHWUG7ZF0PLA24735",
       "image_url": "https://www.naplesluxuryimports.com/inventoryphotos/903/zhwug7zf0pla24735/ip/1.jpg",
       "clean_title": false,
-      "estimated_value": 335233,
-      "deal_pct": 1.2
+      "estimated_value": 334057,
+      "deal_pct": 0.9
     },
     {
       "year": 2015,
@@ -3698,12 +3698,12 @@
       "sale_date": null,
       "posted_at": "2026-07-27",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "6c367eee6056",
       "vin": "ZHWUC1ZF7FLA00813",
       "image_url": "https://www.motorcarsites.com/dealers/images/vehicles/large/image_526046_37_img_7819.jpg",
       "clean_title": false,
-      "estimated_value": 203101,
+      "estimated_value": 203066,
       "deal_pct": -8.3
     },
     {
@@ -3719,13 +3719,13 @@
       "sale_date": null,
       "posted_at": "2026-08-26",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "1806dcf0c509",
       "vin": "ZHWUS4ZF6KLA11915",
       "image_url": "https://www.mclarenscottsdale.com/imagetag/2340/main/l/Used-2019-LAMBORGHINI-HURACAN-LP-640-4-Performante-Spyder-1786126801.jpg",
       "clean_title": false,
-      "estimated_value": 366002,
-      "deal_pct": 9.8
+      "estimated_value": 368336,
+      "deal_pct": 10.4
     },
     {
       "year": 2022,
@@ -3740,13 +3740,13 @@
       "sale_date": null,
       "posted_at": "2026-08-19",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "338e8c557bef",
       "vin": "ZHWUF5ZF2NLA21162",
       "image_url": "http://cdn-ds.com/stock/2022-Lamborghini-Huracan-EVO-Base-Front-Lift-Carbon-Bucket-Seats-Carbon-Ceramic-Portland-OR/seo/VAMP15926-ZHWUF5ZF2NLA21162/sz_1/ebf9969587eb1a2113abeb01f898b2fa.jpg",
       "clean_title": true,
-      "estimated_value": 310919,
-      "deal_pct": -4.5
+      "estimated_value": 310813,
+      "deal_pct": -4.6
     },
     {
       "year": 2023,
@@ -3761,12 +3761,12 @@
       "sale_date": null,
       "posted_at": "2026-08-30",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "850e627049b2",
       "vin": "ZHWUB6ZF1PLA25482",
       "image_url": "https://images.dealer.com/ddc/vehicles/2023/Lamborghini/Huracan%20Tecnica/Coupe/trim_Base_a472a2/color/Marrone%20Alcestis%20Metallic-0Y0Y-4,6,7-640-en_US.jpg",
       "clean_title": true,
-      "estimated_value": 378635,
+      "estimated_value": 378643,
       "deal_pct": 2.2
     },
     {
@@ -3782,34 +3782,34 @@
       "sale_date": null,
       "posted_at": "2026-08-30",
       "kind": "dealer",
-      "scraped_at": "2026-09-01T11:38:25Z",
+      "scraped_at": "2026-09-02T11:17:39Z",
       "id": "cf37f63eb89f",
       "vin": "ZHWUR1ZF6HLA05695",
       "image_url": "https://pictures.dealer.com/b/bentleygoldcoastgroup/0214/2cd2e65acd07e0220148b38d888ae13ex.jpg",
       "clean_title": true,
-      "estimated_value": 267793,
-      "deal_pct": -2.8
+      "estimated_value": 267624,
+      "deal_pct": -2.9
     },
     {
       "year": 2016,
       "variant": "LP610-4",
-      "price": 175000,
+      "price": 145000,
       "mileage": 10000,
       "title": "2016 Lamborghini Huracan Super Trofeo",
-      "url": "https://www.ebay.com/itm/327326337851?_skw=Lamborghini+Huracan&hash=item4c362b8b3b:g:qFEAAeSwyIRqjf3h",
+      "url": "https://www.ebay.com/itm/327337962279?_skw=Lamborghini+Huracan&hash=item4c36dceb27:g:qFEAAeSwyIRqjf3h",
       "source": "ebay",
       "location": "US",
       "status": "for_sale",
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:26Z",
-      "id": "92a3d528b179",
+      "scraped_at": "2026-09-02T11:17:40Z",
+      "id": "c851f0ef1c8d",
       "vin": "ZHWEC1ZF4GLA05232",
       "image_url": "https://i.ebayimg.com/images/g/qFEAAeSwyIRqjf3h/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 256380,
-      "deal_pct": 31.7
+      "estimated_value": 256337,
+      "deal_pct": 43.4
     },
     {
       "year": 2015,
@@ -3824,13 +3824,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:27Z",
+      "scraped_at": "2026-09-02T11:17:41Z",
       "id": "0eaf1bace9bb",
       "vin": "ZHWUC1ZF6FLA00706",
       "image_url": "https://i.ebayimg.com/images/g/rLkAAeSwiOxqhfVG/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 231180,
-      "deal_pct": -19.0
+      "estimated_value": 231214,
+      "deal_pct": -18.9
     },
     {
       "year": 2017,
@@ -3845,13 +3845,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:27Z",
+      "scraped_at": "2026-09-02T11:17:41Z",
       "id": "5d871982ba08",
       "vin": "ZHWUC2ZF0HLA08017",
       "image_url": "https://i.ebayimg.com/images/g/sj4AAeSwgqhqlez~/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 174053,
-      "deal_pct": 5.3
+      "estimated_value": 173758,
+      "deal_pct": 5.1
     },
     {
       "year": 2018,
@@ -3866,13 +3866,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:28Z",
+      "scraped_at": "2026-09-02T11:17:42Z",
       "id": "be4656071ce1",
       "vin": "ZHWUC2ZF8JLA10541",
       "image_url": "https://i.ebayimg.com/images/g/2wMAAeSw92lqiioV/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 253209,
-      "deal_pct": 25.0
+      "estimated_value": 252869,
+      "deal_pct": 24.9
     },
     {
       "year": 2017,
@@ -3887,34 +3887,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:28Z",
+      "scraped_at": "2026-09-02T11:17:42Z",
       "id": "054c271d1e25",
       "vin": "ZHWUR1ZF6HLA05731",
       "image_url": "https://i.ebayimg.com/images/g/LYwAAeSwN0tqh9fg/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 216873,
-      "deal_pct": -1.4
-    },
-    {
-      "year": 2024,
-      "variant": "STO",
-      "price": 519900,
-      "mileage": 527,
-      "title": "2024 Lamborghini Huracan STO Coupe",
-      "url": "https://www.ebay.com/itm/298601846351?_skw=Lamborghini+Huracan&hash=item45860e964f:g:3xsAAeSw9jhqfjVb",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:29Z",
-      "id": "37ed31aa512e",
-      "vin": "ZHWUA6ZX9RLA26734",
-      "image_url": "https://i.ebayimg.com/images/g/3xsAAeSw9jhqfjVb/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 538409,
-      "deal_pct": 3.4
+      "estimated_value": 216623,
+      "deal_pct": -1.6
     },
     {
       "year": 2021,
@@ -3929,13 +3908,55 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:29Z",
+      "scraped_at": "2026-09-02T11:17:43Z",
       "id": "132e45f20707",
       "vin": "ZHWUT5ZF6MLA17784",
       "image_url": "https://i.ebayimg.com/images/g/YNEAAeSwrhNqUQt1/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 299117,
-      "deal_pct": 14.7
+      "estimated_value": 299158,
+      "deal_pct": 14.8
+    },
+    {
+      "year": 2024,
+      "variant": "LP610-4",
+      "price": 359980,
+      "mileage": 1557,
+      "title": "2024 Lamborghini Huracan Sterrato",
+      "url": "https://www.ebay.com/itm/117390663534?_skw=Lamborghini+Huracan&hash=item1b55075f6e:g:EvIAAeSwiSJpz~mU",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-09-02T11:17:43Z",
+      "id": "724f172fefbb",
+      "vin": "ZHWUG7ZF2RLA27963",
+      "image_url": "https://i.ebayimg.com/images/g/EvIAAeSwiSJpz~mU/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 344381,
+      "deal_pct": -4.5
+    },
+    {
+      "year": 2024,
+      "variant": "STO",
+      "price": 519900,
+      "mileage": 527,
+      "title": "2024 Lamborghini Huracan STO Coupe",
+      "url": "https://www.ebay.com/itm/298601846351?_skw=Lamborghini+Huracan&hash=item45860e964f:g:3xsAAeSw9jhqfjVb",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-09-02T11:17:44Z",
+      "id": "37ed31aa512e",
+      "vin": "ZHWUA6ZX9RLA26734",
+      "image_url": "https://i.ebayimg.com/images/g/3xsAAeSw9jhqfjVb/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 537973,
+      "deal_pct": 3.4
     },
     {
       "year": 2020,
@@ -3950,34 +3971,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:30Z",
+      "scraped_at": "2026-09-02T11:17:44Z",
       "id": "8301ff91c165",
       "vin": "ZHWUF4ZF6LLA12701",
       "image_url": "https://i.ebayimg.com/images/g/0u8AAeSwxChqFAoh/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 294959,
-      "deal_pct": -39.0
-    },
-    {
-      "year": 2023,
-      "variant": "LP610-4",
-      "price": 412998,
-      "mileage": 1841,
-      "title": "2023 Lamborghini Huracan Coupe",
-      "url": "https://www.ebay.com/itm/800527914587?_skw=Lamborghini+Huracan&hash=itemba632e965b:g:nFgAAeSw0WlqG~Kp",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:30Z",
-      "id": "16551d104a3d",
-      "vin": "ZHWUB6ZF5PLA25713",
-      "image_url": "https://i.ebayimg.com/images/g/nFgAAeSw0WlqG~Kp/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 334477,
-      "deal_pct": -23.5
+      "estimated_value": 294337,
+      "deal_pct": -39.3
     },
     {
       "year": 2017,
@@ -3992,13 +3992,55 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:31Z",
+      "scraped_at": "2026-09-02T11:17:45Z",
       "id": "20cc58d1db0d",
       "vin": "ZHWUR2ZF3HLA07099",
       "image_url": "https://i.ebayimg.com/images/g/t90AAeSwWhdqka1q/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 238213,
+      "estimated_value": 238239,
       "deal_pct": 0.7
+    },
+    {
+      "year": 2023,
+      "variant": "LP610-4",
+      "price": 412998,
+      "mileage": 1841,
+      "title": "2023 Lamborghini Huracan Coupe",
+      "url": "https://www.ebay.com/itm/800527914587?_skw=Lamborghini+Huracan&hash=itemba632e965b:g:nFgAAeSw0WlqG~Kp",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-09-02T11:17:45Z",
+      "id": "16551d104a3d",
+      "vin": "ZHWUB6ZF5PLA25713",
+      "image_url": "https://i.ebayimg.com/images/g/nFgAAeSw0WlqG~Kp/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 333302,
+      "deal_pct": -23.9
+    },
+    {
+      "year": 2018,
+      "variant": "Performante",
+      "price": 410000,
+      "mileage": 15000,
+      "title": "2018 Lamborghini Huracan PERFORMANTE",
+      "url": "https://www.ebay.com/itm/257717181757?_skw=Lamborghini+Huracan&hash=item3c01241d3d:g:7OUAAeSwQKZql0MO",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-09-02T11:17:45Z",
+      "id": "e94eec3e2354",
+      "vin": "ZHWUD4ZFXJLA08413",
+      "image_url": "https://i.ebayimg.com/images/g/7OUAAeSwQKZql0MO/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 378197,
+      "deal_pct": -8.4
     },
     {
       "year": 2021,
@@ -4013,13 +4055,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:31Z",
+      "scraped_at": "2026-09-02T11:17:46Z",
       "id": "ae65e5b3b4f0",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/BKkAAeSwAbdqa~y8/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 287042,
-      "deal_pct": -15.0
+      "estimated_value": 286253,
+      "deal_pct": -15.3
     },
     {
       "year": 2023,
@@ -4034,12 +4076,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:32Z",
+      "scraped_at": "2026-09-02T11:17:46Z",
       "id": "43c841734f13",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/oIMAAeSwwzRqYXBn/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 504606,
+      "estimated_value": 504406,
       "deal_pct": 12.8
     },
     {
@@ -4055,13 +4097,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:32Z",
+      "scraped_at": "2026-09-02T11:17:47Z",
       "id": "d4ad28d4a5fc",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/yGYAAeSw9~xqdofO/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 320844,
-      "deal_pct": -2.8
+      "estimated_value": 319684,
+      "deal_pct": -3.2
     },
     {
       "year": 2023,
@@ -4076,13 +4118,55 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:33Z",
+      "scraped_at": "2026-09-02T11:17:47Z",
       "id": "0734dc0e14dd",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/p7kAAeSw6PpqW9Oh/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 303017,
-      "deal_pct": -8.9
+      "estimated_value": 301879,
+      "deal_pct": -9.3
+    },
+    {
+      "year": 2022,
+      "variant": "STO",
+      "price": 499980,
+      "mileage": 2500,
+      "title": "2022 Lamborghini Huracan STO",
+      "url": "https://www.ebay.com/itm/117390622942?_skw=Lamborghini+Huracan&hash=item1b5506c0de:g:h6UAAeSw9fJqlzpP",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-09-02T11:17:48Z",
+      "id": "e56f33b10a05",
+      "vin": "ZHWUA6ZX4NLA20978",
+      "image_url": "https://i.ebayimg.com/images/g/h6UAAeSw9fJqlzpP/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 500069,
+      "deal_pct": 0.0
+    },
+    {
+      "year": 2023,
+      "variant": "STO",
+      "price": 699980,
+      "mileage": 750,
+      "title": "2023 Lamborghini Huracan STO",
+      "url": "https://www.ebay.com/itm/117390643232?_skw=Lamborghini+Huracan&hash=item1b55071020:g:4ZkAAeSwf4JqUQUs",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-09-02T11:17:48Z",
+      "id": "36e76d20b3dd",
+      "vin": "ZHWUA6ZX9PLA24656",
+      "image_url": "https://i.ebayimg.com/images/g/4ZkAAeSwf4JqUQUs/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 520840,
+      "deal_pct": -34.4
     },
     {
       "year": 2019,
@@ -4097,13 +4181,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:33Z",
+      "scraped_at": "2026-09-02T11:17:48Z",
       "id": "60b8db0798f9",
       "vin": "ZHWUS4ZFXKLA12632",
       "image_url": "https://i.ebayimg.com/images/g/5J0AAeSw289qK3-Y/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 358622,
-      "deal_pct": 12.2
+      "estimated_value": 360891,
+      "deal_pct": 12.7
     },
     {
       "year": 2017,
@@ -4118,12 +4202,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:33Z",
+      "scraped_at": "2026-09-02T11:17:49Z",
       "id": "e976a1902a30",
       "vin": "ZHWUR1ZF9HLA08008",
       "image_url": "https://i.ebayimg.com/images/g/7ugAAeSw7VBqR7BU/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 251828,
+      "estimated_value": 251891,
       "deal_pct": -3.9
     },
     {
@@ -4139,13 +4223,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:34Z",
+      "scraped_at": "2026-09-02T11:17:49Z",
       "id": "710cb63d3e44",
       "vin": "ZHWUS4ZF2KLA12320",
       "image_url": "https://i.ebayimg.com/images/g/YsQAAeSwCjpqkuP5/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 416639,
-      "deal_pct": -8.0
+      "estimated_value": 419430,
+      "deal_pct": -7.3
     },
     {
       "year": 2023,
@@ -4160,12 +4244,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:34Z",
+      "scraped_at": "2026-09-02T11:17:50Z",
       "id": "a6efef841bf8",
       "vin": "ZHWUB6ZFXPLA21849",
       "image_url": "https://i.ebayimg.com/images/g/o1UAAeSwIxJqPork/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 374884,
+      "estimated_value": 374883,
       "deal_pct": -12.8
     },
     {
@@ -4181,18 +4265,18 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:35Z",
+      "scraped_at": "2026-09-02T11:17:50Z",
       "id": "28a63c098092",
       "vin": "ZHWCD4ZF2JLA08630",
       "image_url": "https://i.ebayimg.com/images/g/DJYAAeSwtwVqj9nk/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 378499,
-      "deal_pct": -0.1
+      "estimated_value": 381163,
+      "deal_pct": 0.6
     },
     {
       "year": 2017,
       "variant": "LP610-4",
-      "price": 210220,
+      "price": 208158,
       "mileage": 36388,
       "title": "2017 Lamborghini Huracan LP 580-2 Coupe 2D",
       "url": "https://www.ebay.com/itm/257713180351?_skw=Lamborghini+Huracan&hash=item3c00e70ebf:g:q8UAAeSwWkZqlgze",
@@ -4202,34 +4286,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:35Z",
+      "scraped_at": "2026-09-02T11:17:51Z",
       "id": "7914ba5ea14c",
       "vin": "ZHWUC2ZF6HLA07924",
       "image_url": "https://i.ebayimg.com/images/g/q8UAAeSwWkZqlgze/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 229232,
-      "deal_pct": 8.3
-    },
-    {
-      "year": 2021,
-      "variant": "LP610-4",
-      "price": 309999,
-      "mileage": 8915,
-      "title": "2021 Lamborghini Huracan *CARBON SPORT SEATS * FULL PPF*",
-      "url": "https://www.ebay.com/itm/237029918248?_skw=Lamborghini+Huracan&hash=item3730158628:g:AlwAAeSwnKhqMviy",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:36Z",
-      "id": "a3d431c275de",
-      "vin": "ZHWUF5ZFXMLA16774",
-      "image_url": "https://i.ebayimg.com/images/g/AlwAAeSwnKhqMviy/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 302109,
-      "deal_pct": -2.6
+      "estimated_value": 228998,
+      "deal_pct": 9.1
     },
     {
       "year": 2021,
@@ -4244,13 +4307,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:36Z",
+      "scraped_at": "2026-09-02T11:17:51Z",
       "id": "cc10d4e4001a",
       "vin": "ZHWUF5ZF5MLA17315",
       "image_url": "https://i.ebayimg.com/images/g/3T8AAeSwnCZqf2-~/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 310221,
-      "deal_pct": -12.8
+      "estimated_value": 309428,
+      "deal_pct": -13.1
     },
     {
       "year": 2022,
@@ -4265,13 +4328,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:36Z",
+      "scraped_at": "2026-09-02T11:17:51Z",
       "id": "bab4fa3bd635",
       "vin": "ZHWUA6ZXXNLA18345",
       "image_url": "https://i.ebayimg.com/images/g/NsIAAeSw02Jqkeft/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 325672,
-      "deal_pct": -75.0
+      "estimated_value": 324692,
+      "deal_pct": -75.6
     },
     {
       "year": 2015,
@@ -4286,34 +4349,34 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:37Z",
+      "scraped_at": "2026-09-02T11:17:52Z",
       "id": "80c3e312bcf6",
       "vin": "ZHWUC1ZF8FLA00822",
       "image_url": "https://i.ebayimg.com/images/g/PkIAAeSwwHZqSGcT/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 232669,
-      "deal_pct": -3.2
+      "estimated_value": 232707,
+      "deal_pct": -3.1
     },
     {
-      "year": 2022,
+      "year": 2021,
       "variant": "LP610-4",
-      "price": 344999,
-      "mileage": 6779,
-      "title": "2022 Lamborghini Huracan *CARBON SPORT SEATS * FRONT PPF*",
-      "url": "https://www.ebay.com/itm/237041597415?_skw=Lamborghini+Huracan&hash=item3730c7bbe7:g:hksAAeSwFJVqWoPW",
+      "price": 309999,
+      "mileage": 8915,
+      "title": "2021 Lamborghini Huracan *CARBON SPORT SEATS * FULL PPF*",
+      "url": "https://www.ebay.com/itm/237043184838?_skw=Lamborghini+Huracan&hash=item3730dff4c6:g:AlwAAeSwnKhqMviy",
       "source": "ebay",
       "location": "US",
       "status": "for_sale",
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:37Z",
-      "id": "2d865dadaef0",
-      "vin": "ZHWUF5ZF5NLA21205",
-      "image_url": "https://i.ebayimg.com/images/g/hksAAeSwFJVqWoPW/s-l225.jpg",
+      "scraped_at": "2026-09-02T11:17:52Z",
+      "id": "38df94db03cd",
+      "vin": "ZHWUF5ZFXMLA16774",
+      "image_url": "https://i.ebayimg.com/images/g/AlwAAeSwnKhqMviy/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 315467,
-      "deal_pct": -9.4
+      "estimated_value": 301317,
+      "deal_pct": -2.9
     },
     {
       "year": 2016,
@@ -4328,12 +4391,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:37Z",
+      "scraped_at": "2026-09-02T11:17:53Z",
       "id": "9e48805659dc",
       "vin": "ZHWUC1ZF3GLA04259",
       "image_url": "https://i.ebayimg.com/images/g/-bsAAeSweAVqha5V/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 232576,
+      "estimated_value": 232480,
       "deal_pct": -2.8
     },
     {
@@ -4349,13 +4412,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:38Z",
+      "scraped_at": "2026-09-02T11:17:53Z",
       "id": "72d7a2f168b8",
       "vin": "ZHWUF5ZF9PLA21484",
       "image_url": "https://i.ebayimg.com/images/g/tpYAAeSw3yhqUjDF/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 339943,
-      "deal_pct": -5.6
+      "estimated_value": 339709,
+      "deal_pct": -5.7
     },
     {
       "year": 2017,
@@ -4370,13 +4433,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:38Z",
+      "scraped_at": "2026-09-02T11:17:54Z",
       "id": "637db24a2302",
       "vin": "ZHWUC2ZF1HLA06194",
       "image_url": "https://i.ebayimg.com/images/g/ND8AAeSwkN9qch7X/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 251224,
-      "deal_pct": 2.5
+      "estimated_value": 251025,
+      "deal_pct": 2.4
     },
     {
       "year": 2023,
@@ -4391,12 +4454,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:39Z",
+      "scraped_at": "2026-09-02T11:17:54Z",
       "id": "edf4401b54ae",
       "vin": "ZHWUB6ZF1PLA23067",
       "image_url": "https://i.ebayimg.com/images/g/gscAAeSwW6dqjWFv/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 382337,
+      "estimated_value": 382354,
       "deal_pct": 4.8
     },
     {
@@ -4412,12 +4475,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:39Z",
+      "scraped_at": "2026-09-02T11:17:55Z",
       "id": "43c283de6b7c",
       "vin": "ZHWUR2ZF8HLA07793",
       "image_url": "https://i.ebayimg.com/images/g/KW4AAeSwQUJqiLt0/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 245162,
+      "estimated_value": 245207,
       "deal_pct": 2.5
     },
     {
@@ -4433,12 +4496,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:40Z",
+      "scraped_at": "2026-09-02T11:17:55Z",
       "id": "a112c20fd6b2",
       "vin": "ZHWUR2ZF5HLA07508",
       "image_url": "https://i.ebayimg.com/images/g/LQwAAeSwy1BqTAtL/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 238064,
+      "estimated_value": 238090,
       "deal_pct": -0.8
     },
     {
@@ -4454,12 +4517,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:40Z",
+      "scraped_at": "2026-09-02T11:17:55Z",
       "id": "553e42e12d65",
       "vin": "ZHWUC1ZF0FLA01611",
       "image_url": "https://i.ebayimg.com/images/g/PkgAAeSwN~dqRln8/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 212479,
+      "estimated_value": 212466,
       "deal_pct": -18.8
     },
     {
@@ -4467,20 +4530,20 @@
       "variant": "LP610-4",
       "price": 289989,
       "mileage": 4365,
-      "title": "2016 Lamborghini Huracan LP610-4 FREE NATIONWIDE ENCLOSED DELIVERY!",
-      "url": "https://www.ebay.com/itm/147530874406?_skw=Lamborghini+Huracan&hash=item2259867e26:g:MpEAAeSwl85qaKAd",
+      "title": "2016 Lamborghini Huracan LP610-4 1 OF 2 EVER MADE! 1 OWNER COLLECTOR OWNED! WOW!",
+      "url": "https://www.ebay.com/itm/147541998838?_skw=Lamborghini+Huracan&hash=item225a303cf6:g:MpEAAeSwl85qaKAd",
       "source": "ebay",
       "location": "US",
       "status": "for_sale",
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:41Z",
-      "id": "27ac045b4797",
+      "scraped_at": "2026-09-02T11:17:56Z",
+      "id": "0c87ddfc3c21",
       "vin": "ZHWUC1ZF1GLA03708",
       "image_url": "https://i.ebayimg.com/images/g/MpEAAeSwl85qaKAd/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 264362,
+      "estimated_value": 264338,
       "deal_pct": -9.7
     },
     {
@@ -4496,55 +4559,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:41Z",
+      "scraped_at": "2026-09-02T11:17:56Z",
       "id": "e11eb8b252b1",
       "vin": "ZHWUF5ZF8NLA21229",
       "image_url": "https://i.ebayimg.com/images/g/bXMAAeSwWhdqkAN-/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 319723,
-      "deal_pct": -25.0
-    },
-    {
-      "year": 2021,
-      "variant": "LP610-4",
-      "price": 299813,
-      "mileage": 17404,
-      "title": "2021 Lamborghini Huracan Rare Matte Silver over Orange! PPF! Loaded! Beautiful",
-      "url": "https://www.ebay.com/itm/820053523795?_skw=Lamborghini+Huracan&hash=itembeeeffbd53:g:YFcAAeSwislqkAN9",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:42Z",
-      "id": "ee4172b33815",
-      "vin": "ZHWUT5ZFXMLA16203",
-      "image_url": "https://i.ebayimg.com/images/g/YFcAAeSwislqkAN9/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 288473,
-      "deal_pct": -3.9
-    },
-    {
-      "year": 2021,
-      "variant": "LP610-4",
-      "price": 289813,
-      "mileage": 12384,
-      "title": "2021 Lamborghini Huracan Red Carbon Seats! Loaded!",
-      "url": "https://www.ebay.com/itm/820058615860?_skw=Lamborghini+Huracan&hash=itembeef4d7034:g:xm0AAeSweAVqg3qw",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:42Z",
-      "id": "7c3ccfdca673",
-      "vin": "ZHWUF5ZF3MLA16213",
-      "image_url": "https://i.ebayimg.com/images/g/xm0AAeSweAVqg3qw/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 296461,
-      "deal_pct": 2.2
+      "estimated_value": 318747,
+      "deal_pct": -25.4
     },
     {
       "year": 2021,
@@ -4559,13 +4580,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:43Z",
+      "scraped_at": "2026-09-02T11:17:57Z",
       "id": "a08d816aea5d",
       "vin": "ZHWUF5ZF3MLA16406",
       "image_url": "https://i.ebayimg.com/images/g/zdEAAeSwoAJqg3rX/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 296756,
-      "deal_pct": -1.0
+      "estimated_value": 295965,
+      "deal_pct": -1.3
     },
     {
       "year": 2018,
@@ -4580,13 +4601,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:43Z",
+      "scraped_at": "2026-09-02T11:17:57Z",
       "id": "c8e09092f017",
       "vin": "ZHWUC2ZF3JLA09801",
       "image_url": "https://i.ebayimg.com/images/g/yKIAAeSwpyFqg3rQ/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 407677,
-      "deal_pct": 33.8
+      "estimated_value": 408469,
+      "deal_pct": 33.9
     },
     {
       "year": 2021,
@@ -4601,12 +4622,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:43Z",
+      "scraped_at": "2026-09-02T11:17:58Z",
       "id": "ff917d9750ec",
       "vin": "ZHWUF5ZF4MLA16057",
       "image_url": "https://i.ebayimg.com/images/g/l7gAAeSwQhRqPfCr/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 282574,
+      "estimated_value": 282573,
       "deal_pct": 8.0
     },
     {
@@ -4622,13 +4643,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:44Z",
+      "scraped_at": "2026-09-02T11:17:58Z",
       "id": "3ff015e504de",
       "vin": "ZHWUT5ZFXNLA18695",
       "image_url": "https://i.ebayimg.com/images/g/EwMAAeSwhANqBUDQ/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 328433,
-      "deal_pct": -5.0
+      "estimated_value": 328366,
+      "deal_pct": -5.1
     },
     {
       "year": 2017,
@@ -4643,13 +4664,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:44Z",
+      "scraped_at": "2026-09-02T11:17:58Z",
       "id": "eea95728d765",
       "vin": "ZHWUC2ZF7HLA07026",
       "image_url": "https://i.ebayimg.com/images/g/VWkAAeSwZeRqDefW/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 270033,
-      "deal_pct": 20.4
+      "estimated_value": 269868,
+      "deal_pct": 20.3
     },
     {
       "year": 2021,
@@ -4664,13 +4685,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:45Z",
+      "scraped_at": "2026-09-02T11:17:59Z",
       "id": "b5f77b2afeb6",
       "vin": "ZHWUA6ZX6MLA17854",
       "image_url": "https://i.ebayimg.com/images/g/0C8AAeSwvnpqfnI0/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 307990,
-      "deal_pct": -78.6
+      "estimated_value": 307197,
+      "deal_pct": -79.0
     },
     {
       "year": 2018,
@@ -4685,13 +4706,34 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:45Z",
+      "scraped_at": "2026-09-02T11:17:59Z",
       "id": "857bef9f6157",
       "vin": "ZHWUD4ZF7JLA10443",
       "image_url": "https://i.ebayimg.com/images/g/U6oAAeSwvr5qhZmB/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 382899,
-      "deal_pct": -20.1
+      "estimated_value": 385604,
+      "deal_pct": -19.3
+    },
+    {
+      "year": 2024,
+      "variant": "EVO",
+      "price": 419912,
+      "mileage": 3072,
+      "title": "2024 Lamborghini Huracan EVO Spyder AWD Lift Sportivo Int Akrapovic Exhaust",
+      "url": "https://www.ebay.com/itm/158247570643?_skw=Lamborghini+Huracan&hash=item24d84a4cd3:g:EBwAAeSwJM5qbKgz",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-09-02T11:18:00Z",
+      "id": "e5d7c6fa85eb",
+      "vin": "00000000000000000",
+      "image_url": "https://i.ebayimg.com/images/g/EBwAAeSwJM5qbKgz/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 350543,
+      "deal_pct": -19.8
     },
     {
       "year": 2016,
@@ -4706,12 +4748,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:46Z",
+      "scraped_at": "2026-09-02T11:18:00Z",
       "id": "26e37fbb54ca",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/dRMAAeSwTQpqTSta/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 232802,
+      "estimated_value": 232707,
       "deal_pct": -3.1
     },
     {
@@ -4727,34 +4769,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:46Z",
+      "scraped_at": "2026-09-02T11:18:01Z",
       "id": "94e7e7c39d53",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/4pIAAeSw131qiLt5/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 235582,
+      "estimated_value": 235628,
       "deal_pct": -22.6
-    },
-    {
-      "year": 2024,
-      "variant": "EVO",
-      "price": 419912,
-      "mileage": 3072,
-      "title": "2024 Lamborghini Huracan EVO Spyder AWD Lift Sportivo Int Akrapovic Exhaust",
-      "url": "https://www.ebay.com/itm/820055531765?_skw=Lamborghini+Huracan&hash=itembeef1e60f5:g:EBwAAeSwJM5qbKgz",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:46Z",
-      "id": "5dbfa274f78c",
-      "vin": "00000000000000000",
-      "image_url": "https://i.ebayimg.com/images/g/EBwAAeSwJM5qbKgz/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 350959,
-      "deal_pct": -19.6
     },
     {
       "year": 2023,
@@ -4769,13 +4790,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:47Z",
+      "scraped_at": "2026-09-02T11:18:01Z",
       "id": "0ca0a22d5254",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/zWYAAeSwVZ5qg3rH/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 328332,
-      "deal_pct": -52.3
+      "estimated_value": 327163,
+      "deal_pct": -52.8
     },
     {
       "year": 2018,
@@ -4790,13 +4811,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:47Z",
+      "scraped_at": "2026-09-02T11:18:01Z",
       "id": "6e029f7ed0c0",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/1pQAAeSwzIxqbKgx/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 343425,
-      "deal_pct": -10.6
+      "estimated_value": 345759,
+      "deal_pct": -9.9
     },
     {
       "year": 2019,
@@ -4811,13 +4832,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:47Z",
+      "scraped_at": "2026-09-02T11:18:02Z",
       "id": "c29182b60fcc",
       "vin": "00000000000000000",
       "image_url": "https://i.ebayimg.com/images/g/ajUAAeSwMtBqO-y9/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 262786,
-      "deal_pct": 8.7
+      "estimated_value": 262578,
+      "deal_pct": 8.6
     },
     {
       "year": 2020,
@@ -4832,13 +4853,34 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:48Z",
+      "scraped_at": "2026-09-02T11:18:03Z",
       "id": "80bbc25e1cbf",
       "vin": "ZHWUT5ZF4LLA15143",
       "image_url": "https://i.ebayimg.com/images/g/DvAAAeSw3jFqX9Qc/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 236088,
-      "deal_pct": -8.9
+      "estimated_value": 235460,
+      "deal_pct": -9.1
+    },
+    {
+      "year": 2018,
+      "variant": "LP610-4",
+      "price": 245895,
+      "mileage": 13051,
+      "title": "2018 Lamborghini Huracan LP580-2",
+      "url": "https://www.ebay.com/itm/158241290486?_skw=Lamborghini+Huracan&hash=item24d7ea78f6:g:WTYAAeSwoS9qRCB9",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-09-02T11:18:03Z",
+      "id": "39bb07972e6d",
+      "vin": "ZHWUC2ZFXJLA10718",
+      "image_url": "https://i.ebayimg.com/images/g/WTYAAeSwoS9qRCB9/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 268313,
+      "deal_pct": 8.4
     },
     {
       "year": 2020,
@@ -4853,13 +4895,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:48Z",
+      "scraped_at": "2026-09-02T11:18:03Z",
       "id": "6752991c2f5e",
       "vin": "ZHWUF4ZF8LLA13042",
       "image_url": "https://i.ebayimg.com/images/g/Eb4AAeSwhDJqhggw/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 277519,
-      "deal_pct": -4.5
+      "estimated_value": 276892,
+      "deal_pct": -4.7
     },
     {
       "year": 2021,
@@ -4874,34 +4916,13 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:49Z",
+      "scraped_at": "2026-09-02T11:18:04Z",
       "id": "37483a8dfd7d",
       "vin": "ZHWUF5ZF8MLA17857",
       "image_url": "https://i.ebayimg.com/images/g/Q64AAeSwTgpqhQhg/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 284104,
-      "deal_pct": -1.2
-    },
-    {
-      "year": 2018,
-      "variant": "LP610-4",
-      "price": 249895,
-      "mileage": 13051,
-      "title": "2018 Lamborghini Huracan LP580-2",
-      "url": "https://www.ebay.com/itm/158241290486?_skw=Lamborghini+Huracan&hash=item24d7ea78f6:g:WTYAAeSwoS9qRCB9",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:49Z",
-      "id": "39bb07972e6d",
-      "vin": "ZHWUC2ZFXJLA10718",
-      "image_url": "https://i.ebayimg.com/images/g/WTYAAeSwoS9qRCB9/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 268634,
-      "deal_pct": 7.0
+      "estimated_value": 283316,
+      "deal_pct": -1.5
     },
     {
       "year": 2017,
@@ -4916,12 +4937,12 @@
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-01T11:38:49Z",
+      "scraped_at": "2026-09-02T11:18:04Z",
       "id": "a5b3b2e595a9",
       "vin": "ZHWUR1ZF7HLA05690",
       "image_url": "https://i.ebayimg.com/images/g/oEMAAeSwTkFpr0tC/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 240509,
+      "estimated_value": 240541,
       "deal_pct": -8.1
     }
   ]
