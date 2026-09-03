@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-09-02T11:17:11Z",
+  "generated_at": "2026-09-03T11:12:48Z",
   "sources": [
     "ebay"
   ],
@@ -30,46 +30,38 @@ window.COTE = {
   },
   "market": {
     "overall": {
-      "count": 4,
-      "avg_price": 88484,
-      "median_price": 95995,
-      "min_price": 21950,
-      "max_price": 139995,
-      "avg_mileage": 40134
+      "count": 3,
+      "avg_price": 106995,
+      "median_price": 96995,
+      "min_price": 88995,
+      "max_price": 134995,
+      "avg_mileage": 31133
     },
     "by_variant": {
       "Standard": {
-        "count": 4,
-        "avg_price": 88484,
-        "median_price": 95995,
-        "min_price": 21950,
-        "max_price": 139995,
-        "avg_mileage": 40134
+        "count": 3,
+        "avg_price": 106995,
+        "median_price": 96995,
+        "min_price": 88995,
+        "max_price": 134995,
+        "avg_mileage": 31133
       }
     },
     "by_year": {
-      "2003": {
-        "count": 1,
-        "avg_price": 21950,
-        "median_price": 21950,
-        "min_price": 21950,
-        "max_price": 21950,
-        "avg_mileage": 67137
-      },
       "2021": {
         "count": 2,
-        "avg_price": 95995,
-        "median_price": 95995,
-        "min_price": 91995,
-        "max_price": 99995,
+        "avg_price": 92995,
+        "median_price": 92995,
+        "min_price": 88995,
+        "max_price": 96995,
         "avg_mileage": 40740
       },
       "2024": {
         "count": 1,
-        "avg_price": 139995,
-        "median_price": 139995,
-        "min_price": 139995,
-        "max_price": 139995,
+        "avg_price": 134995,
+        "median_price": 134995,
+        "min_price": 134995,
+        "max_price": 134995,
         "avg_mileage": 11917
       }
     }
@@ -1086,55 +1078,45 @@ window.COTE = {
       "by_variant": {
         "Standard": 88484
       }
+    },
+    {
+      "date": "2026-09-03",
+      "overall": {
+        "avg_price": 106995,
+        "median_price": 96995,
+        "count": 3
+      },
+      "by_variant": {
+        "Standard": 106995
+      }
     }
   ],
   "listings": [
     {
-      "year": 2003,
-      "variant": "Standard",
-      "price": 21950,
-      "mileage": 67137,
-      "title": "2003 Audi RS6 Quattro AWD Bi Turbo Low 67K Serviced RS 6 CARFAX WE SHIP!",
-      "url": "https://www.ebay.com/itm/198597390159?_skw=Audi+Rs+6&hash=item2e3d53af4f:g:oJEAAeSwcZxqkBlc",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-09-02T11:17:03Z",
-      "id": "90ca0c93d64f",
-      "vin": "WUAPV54B53N905224",
-      "image_url": "https://i.ebayimg.com/images/g/oJEAAeSwcZxqkBlc/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 51516,
-      "deal_pct": 57.4
-    },
-    {
       "year": 2021,
       "variant": "Standard",
-      "price": 99995,
+      "price": 96995,
       "mileage": 29608,
       "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-OVER $50K MODS-DARWIN PRO KIT!",
-      "url": "https://www.ebay.com/itm/327334401199?_skw=Audi+Rs+6&hash=item4c36a694af:g:KwYAAeSwRi9qVFw~",
+      "url": "https://www.ebay.com/itm/327334401199?_skw=Audi+Rs+6&hash=item4c36a694af:g:evMAAeSwS7ZqmOW0",
       "source": "ebay",
       "location": "US",
       "status": "for_sale",
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-02T11:17:05Z",
-      "id": "2cad03e57903",
+      "scraped_at": "2026-09-03T11:12:44Z",
+      "id": "6b72d993875b",
       "vin": "WUA1CBF21MN902751",
-      "image_url": "https://i.ebayimg.com/images/g/KwYAAeSwRi9qVFw~/s-l225.jpg",
+      "image_url": "https://i.ebayimg.com/images/g/evMAAeSwS7ZqmOW0/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 100270,
-      "deal_pct": 0.3
+      "estimated_value": 96995,
+      "deal_pct": 0.0
     },
     {
       "year": 2021,
       "variant": "Standard",
-      "price": 91995,
+      "price": 88995,
       "mileage": 51873,
       "title": "2021 Audi RS 6 Avant 4.0T quattro Avant-BIG $133K MSRP-CARBON CERAMICS!",
       "url": "https://www.ebay.com/itm/327334402832?_skw=Audi+Rs+6&hash=item4c36a69b10:g:yoAAAeSwCPVqMhQL",
@@ -1144,18 +1126,18 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-02T11:17:05Z",
+      "scraped_at": "2026-09-03T11:12:44Z",
       "id": "4f3095f9b9fb",
       "vin": "WUA1CBF20MN903678",
       "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 91720,
-      "deal_pct": -0.3
+      "estimated_value": 88357,
+      "deal_pct": -0.7
     },
     {
       "year": 2024,
       "variant": "Standard",
-      "price": 139995,
+      "price": 134995,
       "mileage": 11917,
       "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-FACTORY MATTE PAINT",
       "url": "https://www.ebay.com/itm/327335937332?_skw=Audi+Rs+6&hash=item4c36be0534:g:4G8AAeSw9MVqGQg1",
@@ -1165,13 +1147,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-02T11:17:05Z",
+      "scraped_at": "2026-09-03T11:12:45Z",
       "id": "45d5c9741160",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 116698,
-      "deal_pct": -20.0
+      "estimated_value": 113206,
+      "deal_pct": -19.2
     }
   ]
 };
