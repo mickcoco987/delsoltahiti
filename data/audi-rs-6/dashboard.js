@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-09-28T13:52:24Z",
+  "generated_at": "2026-09-29T12:50:52Z",
   "sources": [
     "ebay"
   ],
@@ -1380,30 +1380,20 @@ window.COTE = {
       "by_variant": {
         "Standard": 101852
       }
+    },
+    {
+      "date": "2026-09-29",
+      "overall": {
+        "avg_price": 101852,
+        "median_price": 99995,
+        "count": 7
+      },
+      "by_variant": {
+        "Standard": 101852
+      }
     }
   ],
   "listings": [
-    {
-      "year": 2024,
-      "variant": "Standard",
-      "price": 129995,
-      "mileage": 11917,
-      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-FACTORY MATTE PAINT",
-      "url": "https://www.ebay.com/itm/327368891023?_skw=Audi+Rs+6&hash=item4c38b4da8f:g:4G8AAeSw9MVqGQg1",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-09-28T13:52:13Z",
-      "id": "50bae024f71b",
-      "vin": "WUA1DBF2XRN905541",
-      "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 124867,
-      "deal_pct": -4.1
-    },
     {
       "year": 2021,
       "variant": "Standard",
@@ -1417,7 +1407,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-28T13:52:14Z",
+      "scraped_at": "2026-09-29T12:50:44Z",
       "id": "2a5fd29e0c2d",
       "vin": "WUA1CAF24MN906089",
       "image_url": "https://i.ebayimg.com/images/g/oUIAAeSwBuBqpMZ2/s-l225.jpg",
@@ -1438,7 +1428,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-28T13:52:14Z",
+      "scraped_at": "2026-09-29T12:50:44Z",
       "id": "81edfa9952af",
       "vin": "WUA1CBF20MN904510",
       "image_url": "https://i.ebayimg.com/images/g/nkkAAeSwNsRqpMaG/s-l225.jpg",
@@ -1459,13 +1449,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-28T13:52:15Z",
+      "scraped_at": "2026-09-29T12:50:45Z",
       "id": "5a8a8c250572",
       "vin": "WUA1CBF20MN903678",
       "image_url": "https://i.ebayimg.com/images/g/yoAAAeSwCPVqMhQL/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 83034,
       "deal_pct": -3.6
+    },
+    {
+      "year": 2024,
+      "variant": "Standard",
+      "price": 129995,
+      "mileage": 11917,
+      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-FACTORY MATTE PAINT",
+      "url": "https://www.ebay.com/itm/327379250724?_skw=Audi+Rs+6&hash=item4c3952ee24:g:4G8AAeSw9MVqGQg1",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-09-29T12:50:45Z",
+      "id": "e93b0c16a8b0",
+      "vin": "WUA1DBF2XRN905541",
+      "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 124867,
+      "deal_pct": -4.1
     },
     {
       "year": 2022,
@@ -1480,7 +1491,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-28T13:52:16Z",
+      "scraped_at": "2026-09-29T12:50:45Z",
       "id": "8b1194adc1cc",
       "vin": "WUA1CBF21NN900659",
       "image_url": "https://i.ebayimg.com/images/g/mFcAAeSw3HxqpMas/s-l225.jpg",
@@ -1501,7 +1512,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-28T13:52:16Z",
+      "scraped_at": "2026-09-29T12:50:46Z",
       "id": "ca0393a9bab1",
       "vin": "WUA1CBF21PN903225",
       "image_url": "https://i.ebayimg.com/images/g/oQ0AAeSwqR1qpMau/s-l225.jpg",
@@ -1522,7 +1533,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-09-28T13:52:17Z",
+      "scraped_at": "2026-09-29T12:50:46Z",
       "id": "f86f72817dbe",
       "vin": "WUA1CBF21MN902751",
       "image_url": "https://i.ebayimg.com/images/g/evMAAeSwS7ZqmOW0/s-l225.jpg",
