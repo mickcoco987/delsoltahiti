@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-10-01T13:11:55Z",
+  "generated_at": "2026-10-02T12:32:49Z",
   "sources": [
     "ebay"
   ],
@@ -1413,6 +1413,17 @@ window.COTE = {
       "by_variant": {
         "Standard": 106995
       }
+    },
+    {
+      "date": "2026-10-02",
+      "overall": {
+        "avg_price": 106995,
+        "median_price": 102995,
+        "count": 5
+      },
+      "by_variant": {
+        "Standard": 106995
+      }
     }
   ],
   "listings": [
@@ -1429,7 +1440,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-01T13:11:48Z",
+      "scraped_at": "2026-10-02T12:32:44Z",
       "id": "2a5fd29e0c2d",
       "vin": "WUA1CAF24MN906089",
       "image_url": "https://i.ebayimg.com/images/g/oUIAAeSwBuBqpMZ2/s-l225.jpg",
@@ -1450,7 +1461,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-01T13:11:49Z",
+      "scraped_at": "2026-10-02T12:32:44Z",
       "id": "f86f72817dbe",
       "vin": "WUA1CBF21MN902751",
       "image_url": "https://i.ebayimg.com/images/g/evMAAeSwS7ZqmOW0/s-l225.jpg",
@@ -1471,7 +1482,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-01T13:11:49Z",
+      "scraped_at": "2026-10-02T12:32:44Z",
       "id": "e93b0c16a8b0",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
@@ -1492,7 +1503,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-01T13:11:50Z",
+      "scraped_at": "2026-10-02T12:32:45Z",
       "id": "8b1194adc1cc",
       "vin": "WUA1CBF21NN900659",
       "image_url": "https://i.ebayimg.com/images/g/mFcAAeSw3HxqpMas/s-l225.jpg",
@@ -1513,7 +1524,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-01T13:11:50Z",
+      "scraped_at": "2026-10-02T12:32:45Z",
       "id": "ca0393a9bab1",
       "vin": "WUA1CBF21PN903225",
       "image_url": "https://i.ebayimg.com/images/g/oQ0AAeSwqR1qpMau/s-l225.jpg",
