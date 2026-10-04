@@ -1596,6 +1596,18 @@
         "Tributo": 574213,
         "Spider": 636875
       }
+    },
+    {
+      "date": "2026-10-04",
+      "overall": {
+        "avg_price": 579436,
+        "median_price": 612382,
+        "count": 218
+      },
+      "by_variant": {
+        "Tributo": 575234,
+        "Spider": 640665
+      }
     }
   ]
 }
