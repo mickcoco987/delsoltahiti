@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-10-07T13:20:56Z",
+  "generated_at": "2026-10-08T13:27:12Z",
   "sources": [
     "ebay"
   ],
@@ -1479,30 +1479,20 @@ window.COTE = {
       "by_variant": {
         "Standard": 105195
       }
+    },
+    {
+      "date": "2026-10-08",
+      "overall": {
+        "avg_price": 105195,
+        "median_price": 102995,
+        "count": 5
+      },
+      "by_variant": {
+        "Standard": 105195
+      }
     }
   ],
   "listings": [
-    {
-      "year": 2021,
-      "variant": "Standard",
-      "price": 85995,
-      "mileage": 51873,
-      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant",
-      "url": "https://www.ebay.com/itm/327385665836?_skw=Audi+Rs+6&hash=item4c39b4d12c:g:THUAAeSwButqwHQv",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-10-07T13:20:49Z",
-      "id": "8a1d356648bf",
-      "vin": "WUA1CBF20MN903678",
-      "image_url": "https://i.ebayimg.com/images/g/THUAAeSwButqwHQv/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 87330,
-      "deal_pct": 1.5
-    },
     {
       "year": 2021,
       "variant": "Standard",
@@ -1516,7 +1506,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-07T13:20:50Z",
+      "scraped_at": "2026-10-08T13:27:07Z",
       "id": "98291b367ee8",
       "vin": "WUA1CAF24MN906089",
       "image_url": "https://i.ebayimg.com/images/g/oUIAAeSwBuBqpMZ2/s-l225.jpg",
@@ -1537,13 +1527,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-07T13:20:50Z",
+      "scraped_at": "2026-10-08T13:27:08Z",
       "id": "fb1966cffa3f",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 112881,
       "deal_pct": -15.2
+    },
+    {
+      "year": 2021,
+      "variant": "Standard",
+      "price": 85995,
+      "mileage": 51873,
+      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant",
+      "url": "https://www.ebay.com/itm/327394157990?_skw=Audi+Rs+6&hash=item4c3a3665a6:g:THUAAeSwButqwHQv",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-10-08T13:27:08Z",
+      "id": "c90f192f638f",
+      "vin": "WUA1CBF20MN903678",
+      "image_url": "https://i.ebayimg.com/images/g/THUAAeSwButqwHQv/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 87330,
+      "deal_pct": 1.5
     },
     {
       "year": 2022,
@@ -1558,7 +1569,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-07T13:20:51Z",
+      "scraped_at": "2026-10-08T13:27:09Z",
       "id": "05f587d5c87d",
       "vin": "WUA1CBF21NN900659",
       "image_url": "https://i.ebayimg.com/images/g/mFcAAeSw3HxqpMas/s-l225.jpg",
@@ -1579,7 +1590,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-07T13:20:51Z",
+      "scraped_at": "2026-10-08T13:27:09Z",
       "id": "affbf90d087c",
       "vin": "WUA1CBF21PN903225",
       "image_url": "https://i.ebayimg.com/images/g/oQ0AAeSwqR1qpMau/s-l225.jpg",
