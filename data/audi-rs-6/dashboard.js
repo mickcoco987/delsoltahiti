@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-10-12T15:22:02Z",
+  "generated_at": "2026-10-13T14:09:42Z",
   "sources": [
     "ebay"
   ],
@@ -1534,51 +1534,20 @@ window.COTE = {
       "by_variant": {
         "Standard": 105195
       }
+    },
+    {
+      "date": "2026-10-13",
+      "overall": {
+        "avg_price": 105195,
+        "median_price": 102995,
+        "count": 5
+      },
+      "by_variant": {
+        "Standard": 105195
+      }
     }
   ],
   "listings": [
-    {
-      "year": 2024,
-      "variant": "Standard",
-      "price": 129995,
-      "mileage": 11917,
-      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-FACTORY MATTE PAINT",
-      "url": "https://www.ebay.com/itm/327390704100?_skw=Audi+Rs+6&hash=item4c3a01b1e4:g:4G8AAeSw9MVqGQg1",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-10-12T15:21:54Z",
-      "id": "fb1966cffa3f",
-      "vin": "WUA1DBF2XRN905541",
-      "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 112881,
-      "deal_pct": -15.2
-    },
-    {
-      "year": 2021,
-      "variant": "Standard",
-      "price": 85995,
-      "mileage": 51873,
-      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant",
-      "url": "https://www.ebay.com/itm/327394157990?_skw=Audi+Rs+6&hash=item4c3a3665a6:g:THUAAeSwButqwHQv",
-      "source": "ebay",
-      "location": "US",
-      "status": "for_sale",
-      "sale_date": null,
-      "posted_at": null,
-      "kind": "auction",
-      "scraped_at": "2026-10-12T15:21:55Z",
-      "id": "c90f192f638f",
-      "vin": "WUA1CBF20MN903678",
-      "image_url": "https://i.ebayimg.com/images/g/THUAAeSwButqwHQv/s-l225.jpg",
-      "clean_title": null,
-      "estimated_value": 87330,
-      "deal_pct": 1.5
-    },
     {
       "year": 2021,
       "variant": "Standard",
@@ -1592,13 +1561,55 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-12T15:21:55Z",
+      "scraped_at": "2026-10-13T14:09:36Z",
       "id": "01f3ba59c36f",
       "vin": "WUA1CAF24MN906089",
       "image_url": "https://i.ebayimg.com/images/g/oUIAAeSwBuBqpMZ2/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 100347,
       "deal_pct": -2.6
+    },
+    {
+      "year": 2021,
+      "variant": "Standard",
+      "price": 85995,
+      "mileage": 51873,
+      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant",
+      "url": "https://www.ebay.com/itm/327402399448?_skw=Audi+Rs+6&hash=item4c3ab426d8:g:THUAAeSwButqwHQv",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-10-13T14:09:37Z",
+      "id": "e87415059f2b",
+      "vin": "WUA1CBF20MN903678",
+      "image_url": "https://i.ebayimg.com/images/g/THUAAeSwButqwHQv/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 87330,
+      "deal_pct": 1.5
+    },
+    {
+      "year": 2024,
+      "variant": "Standard",
+      "price": 129995,
+      "mileage": 11917,
+      "title": "2024 Audi RS 6 Avant 4.0T quattro Avant performance-FACTORY MATTE PAINT",
+      "url": "https://www.ebay.com/itm/327402415530?_skw=Audi+Rs+6&hash=item4c3ab465aa:g:4G8AAeSw9MVqGQg1",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-10-13T14:09:37Z",
+      "id": "207ec9909e99",
+      "vin": "WUA1DBF2XRN905541",
+      "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 112881,
+      "deal_pct": -15.2
     },
     {
       "year": 2022,
@@ -1613,7 +1624,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-12T15:21:56Z",
+      "scraped_at": "2026-10-13T14:09:38Z",
       "id": "9d0a47772b32",
       "vin": "WUA1CBF21NN900659",
       "image_url": "https://i.ebayimg.com/images/g/mFcAAeSw3HxqpMas/s-l225.jpg",
@@ -1634,7 +1645,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-12T15:21:57Z",
+      "scraped_at": "2026-10-13T14:09:38Z",
       "id": "07463a13d3db",
       "vin": "WUA1CBF21PN903225",
       "image_url": "https://i.ebayimg.com/images/g/oQ0AAeSwqR1qpMau/s-l225.jpg",
