@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-10-18T11:02:18Z",
+  "generated_at": "2026-10-19T13:11:48Z",
   "sources": [
     "ebay"
   ],
@@ -30,31 +30,31 @@ window.COTE = {
   },
   "market": {
     "overall": {
-      "count": 4,
-      "avg_price": 106995,
-      "median_price": 101495,
-      "min_price": 97995,
+      "count": 5,
+      "avg_price": 102795,
+      "median_price": 98995,
+      "min_price": 85995,
       "max_price": 126995,
-      "avg_mileage": 20052
+      "avg_mileage": 26416
     },
     "by_variant": {
       "Standard": {
-        "count": 4,
-        "avg_price": 106995,
-        "median_price": 101495,
-        "min_price": 97995,
+        "count": 5,
+        "avg_price": 102795,
+        "median_price": 98995,
+        "min_price": 85995,
         "max_price": 126995,
-        "avg_mileage": 20052
+        "avg_mileage": 26416
       }
     },
     "by_year": {
       "2021": {
-        "count": 1,
-        "avg_price": 98995,
-        "median_price": 98995,
-        "min_price": 98995,
+        "count": 2,
+        "avg_price": 92495,
+        "median_price": 92495,
+        "min_price": 85995,
         "max_price": 98995,
-        "avg_mileage": 19300
+        "avg_mileage": 35586
       },
       "2022": {
         "count": 1,
@@ -1600,6 +1600,17 @@ window.COTE = {
       "by_variant": {
         "Standard": 106995
       }
+    },
+    {
+      "date": "2026-10-19",
+      "overall": {
+        "avg_price": 102795,
+        "median_price": 98995,
+        "count": 5
+      },
+      "by_variant": {
+        "Standard": 102795
+      }
     }
   ],
   "listings": [
@@ -1616,13 +1627,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-18T11:02:13Z",
+      "scraped_at": "2026-10-19T13:11:42Z",
       "id": "207ec9909e99",
       "vin": "WUA1DBF2XRN905541",
       "image_url": "https://i.ebayimg.com/images/g/4G8AAeSw9MVqGQg1/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 109429,
-      "deal_pct": -16.1
+      "estimated_value": 108497,
+      "deal_pct": -17.0
     },
     {
       "year": 2021,
@@ -1637,13 +1648,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-18T11:02:13Z",
+      "scraped_at": "2026-10-19T13:11:42Z",
       "id": "40112d6abb3e",
       "vin": "WUA1CAF24MN906089",
       "image_url": "https://i.ebayimg.com/images/g/oUIAAeSwBuBqpMZ2/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 97142,
-      "deal_pct": -1.9
+      "estimated_value": 96450,
+      "deal_pct": -2.6
     },
     {
       "year": 2023,
@@ -1658,13 +1669,34 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-18T11:02:14Z",
+      "scraped_at": "2026-10-19T13:11:43Z",
       "id": "0f1dea13377a",
       "vin": "WUA1CBF21PN903225",
       "image_url": "https://i.ebayimg.com/images/g/oQ0AAeSwqR1qpMau/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 99419,
-      "deal_pct": 1.4
+      "estimated_value": 98629,
+      "deal_pct": 0.6
+    },
+    {
+      "year": 2021,
+      "variant": "Standard",
+      "price": 85995,
+      "mileage": 51873,
+      "title": "2021 Audi RS 6 Avant 4.0T quattro Avant",
+      "url": "https://www.ebay.com/itm/327412076790?_skw=Audi+Rs+6&hash=item4c3b47d0f6:g:THUAAeSwButqwHQv",
+      "source": "ebay",
+      "location": "US",
+      "status": "for_sale",
+      "sale_date": null,
+      "posted_at": null,
+      "kind": "auction",
+      "scraped_at": "2026-10-19T13:11:43Z",
+      "id": "b76482d82340",
+      "vin": "WUA1CBF20MN903678",
+      "image_url": "https://i.ebayimg.com/images/g/THUAAeSwButqwHQv/s-l225.jpg",
+      "clean_title": null,
+      "estimated_value": 83938,
+      "deal_pct": -2.5
     },
     {
       "year": 2022,
@@ -1679,13 +1711,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-10-18T11:02:14Z",
+      "scraped_at": "2026-10-19T13:11:44Z",
       "id": "c2b7a84db0b8",
       "vin": "WUA1CBF21NN900659",
       "image_url": "https://i.ebayimg.com/images/g/mFcAAeSw3HxqpMas/s-l225.jpg",
       "clean_title": null,
-      "estimated_value": 99752,
-      "deal_pct": -4.3
+      "estimated_value": 98995,
+      "deal_pct": -5.1
     }
   ]
 };
