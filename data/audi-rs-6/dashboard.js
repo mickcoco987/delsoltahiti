@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-11-05T14:37:26Z",
+  "generated_at": "2026-11-06T14:14:19Z",
   "sources": [
     "ebay"
   ],
@@ -31,19 +31,19 @@ window.COTE = {
   "market": {
     "overall": {
       "count": 3,
-      "avg_price": 100328,
+      "avg_price": 99662,
       "median_price": 98995,
       "min_price": 97995,
-      "max_price": 103995,
+      "max_price": 101995,
       "avg_mileage": 22763
     },
     "by_variant": {
       "Standard": {
         "count": 3,
-        "avg_price": 100328,
+        "avg_price": 99662,
         "median_price": 98995,
         "min_price": 97995,
-        "max_price": 103995,
+        "max_price": 101995,
         "avg_mileage": 22763
       }
     },
@@ -58,10 +58,10 @@ window.COTE = {
       },
       "2022": {
         "count": 1,
-        "avg_price": 103995,
-        "median_price": 103995,
-        "min_price": 103995,
-        "max_price": 103995,
+        "avg_price": 101995,
+        "median_price": 101995,
+        "min_price": 101995,
+        "max_price": 101995,
         "avg_mileage": 20405
       },
       "2023": {
@@ -1790,6 +1790,17 @@ window.COTE = {
       "by_variant": {
         "Standard": 100328
       }
+    },
+    {
+      "date": "2026-11-06",
+      "overall": {
+        "avg_price": 99662,
+        "median_price": 98995,
+        "count": 3
+      },
+      "by_variant": {
+        "Standard": 99662
+      }
     }
   ],
   "listings": [
@@ -1806,7 +1817,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-11-05T14:37:21Z",
+      "scraped_at": "2026-11-06T14:14:15Z",
       "id": "f34b1708fe45",
       "vin": "WUA1CAF24MN906089",
       "image_url": "https://i.ebayimg.com/images/g/oUIAAeSwBuBqpMZ2/s-l225.jpg",
@@ -1827,7 +1838,7 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-11-05T14:37:21Z",
+      "scraped_at": "2026-11-06T14:14:15Z",
       "id": "e73b318889e0",
       "vin": "WUA1CBF21PN903225",
       "image_url": "https://i.ebayimg.com/images/g/oQ0AAeSwqR1qpMau/s-l225.jpg",
@@ -1838,7 +1849,7 @@ window.COTE = {
     {
       "year": 2022,
       "variant": "Standard",
-      "price": 103995,
+      "price": 101995,
       "mileage": 20405,
       "title": "2022 Audi RS 6 Avant 4.0T quattro Avant-OVER $40K MODS-FRESH WRAP!",
       "url": "https://www.ebay.com/itm/327431419801?_skw=Audi+Rs+6&hash=item4c3c6ef799:g:mFcAAeSw3HxqpMas",
@@ -1848,13 +1859,13 @@ window.COTE = {
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-11-05T14:37:23Z",
+      "scraped_at": "2026-11-06T14:14:16Z",
       "id": "3b8e23505551",
       "vin": "WUA1CBF21NN900659",
       "image_url": "https://i.ebayimg.com/images/g/mFcAAeSw3HxqpMas/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 98995,
-      "deal_pct": -5.1
+      "deal_pct": -3.0
     }
   ]
 };
