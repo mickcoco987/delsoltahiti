@@ -20,7 +20,7 @@ window.COTE = {
       "risk": ""
     }
   },
-  "generated_at": "2026-11-13T14:32:41Z",
+  "generated_at": "2026-11-14T13:29:11Z",
   "sources": [
     "ebay"
   ],
@@ -1862,6 +1862,17 @@ window.COTE = {
       "by_variant": {
         "Standard": 101995
       }
+    },
+    {
+      "date": "2026-11-14",
+      "overall": {
+        "avg_price": 101995,
+        "median_price": 101995,
+        "count": 1
+      },
+      "by_variant": {
+        "Standard": 101995
+      }
     }
   ],
   "listings": [
@@ -1871,15 +1882,15 @@ window.COTE = {
       "price": 101995,
       "mileage": 20405,
       "title": "2022 Audi RS 6 Avant 4.0T quattro Avant-OVER $40K MODS-FRESH WRAP!",
-      "url": "https://www.ebay.com/itm/327444081468?_skw=Audi+Rs+6&hash=item4c3d302b3c:g:mFcAAeSw3HxqpMas",
+      "url": "https://www.ebay.com/itm/327455362992?_skw=Audi+Rs+6&hash=item4c3ddc4fb0:g:mFcAAeSw3HxqpMas",
       "source": "ebay",
       "location": "US",
       "status": "for_sale",
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-11-13T14:32:37Z",
-      "id": "d2f205eb98fe",
+      "scraped_at": "2026-11-14T13:29:08Z",
+      "id": "4df7638073d1",
       "vin": "WUA1CBF21NN900659",
       "image_url": "https://i.ebayimg.com/images/g/mFcAAeSw3HxqpMas/s-l225.jpg",
       "clean_title": null,
