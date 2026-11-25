@@ -19,7 +19,7 @@
       "risk": ""
     }
   },
-  "generated_at": "2026-11-24T17:41:34Z",
+  "generated_at": "2026-11-25T17:11:14Z",
   "sources": [
     "ebay"
   ],
@@ -31,17 +31,17 @@
       "price": 109000,
       "mileage": 8915,
       "title": "2021 Audi RS 6 Avant 4.0 TFSI quattro",
-      "url": "https://www.ebay.com/itm/840138890702?_skw=Audi+Rs+6&hash=itemc39c2e1dce:g:9dkAAeSw14Nq~JaB",
+      "url": "https://www.ebay.com/itm/840162627956?_skw=Audi+Rs+6&hash=itemc39d985174:g:gGQAAeSwqIZrBeAm",
       "source": "ebay",
       "location": "US",
       "status": "for_sale",
       "sale_date": null,
       "posted_at": null,
       "kind": "auction",
-      "scraped_at": "2026-11-24T17:41:29Z",
-      "id": "099ae9d8577e",
+      "scraped_at": "2026-11-25T17:11:07Z",
+      "id": "511dbd87a8d8",
       "vin": "WUA1CBF22MN904413",
-      "image_url": "https://i.ebayimg.com/images/g/9dkAAeSw14Nq~JaB/s-l225.jpg",
+      "image_url": "https://i.ebayimg.com/images/g/gGQAAeSwqIZrBeAm/s-l225.jpg",
       "clean_title": null,
       "estimated_value": 109000,
       "deal_pct": 0.0
