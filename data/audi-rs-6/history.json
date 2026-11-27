@@ -1936,6 +1936,17 @@
       "by_variant": {
         "Standard": 109000
       }
+    },
+    {
+      "date": "2026-11-27",
+      "overall": {
+        "avg_price": 109000,
+        "median_price": 109000,
+        "count": 1
+      },
+      "by_variant": {
+        "Standard": 109000
+      }
     }
   ]
 }
